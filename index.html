@@ -1,1 +1,112 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIviary — Discover AI Tools</title>
+<link rel="icon" type="image/x-icon" href="/static/favicon.ico">
 
+<!-- TailwindCSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Google Fonts -->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
+    .category-btn { transition: all 0.3s ease; }
+    .category-btn.active { background: rgba(255,255,255,0.2); border-color: white; }
+    .model-tile { transition: all 0.4s cubic-bezier(0.175,0.885,0.32,1.275); transform-origin: center; }
+    .model-tile:hover { transform: scale(1.05); z-index: 10; }
+    .search-input { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); }
+    .search-input:focus { background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.4); }
+    @keyframes pulse-glow {
+      0%,100% { opacity: 0.4; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.1); }
+    }
+    .animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
+    .bg-gradient-radial { background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%); }
+    .scale-110 { transform: scale(1.1); transition: transform 0.2s ease-in-out; }
+</style>
+</head>
+<body class="text-white">
+
+<!-- Hero Section -->
+<section class="relative h-screen flex flex-col items-center justify-center text-center text-white bg-cover bg-center" style="background-image: url('image-AI.jpg');">
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm"></div>
+
+    <!-- Logo -->
+    <div class="absolute top-6 left-8 flex items-center space-x-3 z-10">
+        <div class="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center">
+            <i data-feather="zap" class="w-4 h-4"></i>
+        </div>
+        <span class="text-xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">AIviary</span>
+    </div>
+
+    <!-- All Models Button -->
+    <div class="absolute top-6 right-6 z-10">
+        <a id="allModelsBtn" href="category.html?category=all"
+           class="px-5 py-2 bg-purple-600 hover:bg-purple-500 text-white rounded-lg text-sm font-medium shadow-lg transition transform duration-200 flex items-center justify-center">
+            All Models
+        </a>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 max-w-2xl px-6">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
+            Discover the World's Smartest AI Tools
+        </h1>
+        <p class="text-lg md:text-xl text-gray-200 mb-8">
+            If you're new to AI or looking for new inspiration... keep scrolling!
+        </p>
+
+        <!-- Search Bar -->
+        <div class="relative w-full max-w-xl mx-auto">
+            <input type="text" id="searchInput" placeholder="Search AI tools... or try 'All'"
+                   class="w-full px-5 py-3 rounded-full search-input text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-400 transition-all duration-300">
+            <i data-feather="search" class="absolute right-4 top-3 w-6 h-6 text-gray-300"></i>
+        </div>
+    </div>
+
+    <!-- Scroll Down Indicator -->
+    <div class="absolute bottom-6 text-gray-300 animate-bounce z-10">
+        <i data-feather="chevron-down" class="w-6 h-6"></i>
+    </div>
+
+    <!-- Glow Overlay -->
+    <div class="absolute inset-0 flex items-center justify-center">
+        <div class="w-124 h-16 rounded-full bg-gradient-radial from-white/60 via-transparent to-transparent animate-pulse-glow"></div>
+        <div class="absolute bottom-0 inset-x-0 h-30 bg-gradient-to-t from-black/60 to-transparent"></div>
+    </div>
+</section>
+
+<!-- Main Content -->
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Categories -->
+    <div class="mb-8">
+        <h2 class="text-2xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+            Browse Categories
+        </h2>
+        <div id="categoryGrid" class="grid grid-cols-3 gap-6 mb-8">
+            <!-- JS will inject category cards here -->
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-black bg-opacity-20 backdrop-blur-lg border-t border-white border-opacity-10 mt-16">
+    <!-- Footer content same as before -->
+</footer>
+
+<!-- JS Scripts -->
+<script src="https://unpkg.com/fuse.js@6.6.2/dist/fuse.min.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+
+<!-- Shared data and functions -->
+<script src="js/data.js"></script>
+<script src="js/models.js"></script>
+
+<!-- Page-specific script -->
+<script src="js/home.js"></script>
+</body>
+</html>
