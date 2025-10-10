@@ -1,1 +1,110 @@
-
+[
+    {
+        "id": 1,
+        "name": "Grammarly AI",
+        "category": "writing",
+        "type": "Browser Extension",
+        "description": "Advanced AI-powered writing assistant that helps you write clear, mistake-free content.",
+        "image": "assets/images/placeholder.png",
+        "link": "https://www.grammarly.com"
+    },
+    {
+        "id": 2,
+        "name": "ChatGPT",
+        "category": "chatbots",
+        "type": "Web App",
+        "description": "Revolutionary conversational AI that can answer questions, write content, generate ideas, and assist with tasks.",
+        "image": "assets/images/placeholder.png",
+        "link": "https://chat.openai.com"
+    },
+    {
+        "id": 3,
+        "name": "Midjourney",
+        "category": "creativity",
+        "type": "Web App",
+        "description": "AI art generator that transforms text descriptions into stunning visual artwork.",
+        "image": "assets/images/placeholder.png",
+        "link": "https://www.midjourney.com"
+    },
+    {
+        "id": 4,
+        "name": "GitHub Copilot",
+        "category": "coding",
+        "type": "Desktop App",
+        "description": "AI pair programmer that helps you write better code faster by suggesting lines or functions in your editor.",
+        "image": "assets/images/placeholder.png",
+        "link": "https://github.com/features/copilot"
+    },
+    {
+        "id": 5,
+        "name": "Jasper AI",
+        "category": "business",
+        "type": "Web App",
+        "description": "AI content creation platform for businesses and marketers to generate high-quality marketing copy.",
+        "image": "assets/images/placeholder.png",
+        "link": "https://www.jasper.ai"
+    },
+    {
+        "id": 6,
+        "name": "Notion AI",
+        "category": "writing",
+        "type": "Web App",
+        "description": "Integrated AI assistant within Notion that helps with writing, brainstorming, editing, and summarizing notes.",
+        "image": "assets/images/placeholder.png",
+        "link": "https://www.notion.so/product/ai"
+    },
+    {
+        "id": 7,
+        "name": "DALL-E 2",
+        "category": "creativity",
+        "type": "Web App",
+        "description": "Create realistic images and art from natural language descriptions.",
+        "image": "assets/images/placeholder.png",
+        "link": "https://openai.com/dall-e-2"
+    },
+    {
+        "id": 8,
+        "name": "Khan Academy AI",
+        "category": "learning",
+        "type": "Web App",
+        "description": "Personalized AI tutor that adapts to your learning style and helps you master subjects.",
+        "image": "assets/images/placeholder.png",
+        "link": "https://www.khanacademy.org"
+    },
+    {
+        "id": 9,
+        "name": "Bloomberg Terminal AI",
+        "category": "finance",
+        "type": "Desktop App",
+        "description": "Advanced financial analytics and AI-powered insights for professional traders and investors.",
+        "image": "assets/images/placeholder.png",
+        "link": "https://www.bloomberg.com/professional"
+    },
+    {
+        "id": 10,
+        "name": "Replika",
+        "category": "everyday",
+        "type": "Mobile App",
+        "description": "AI companion that cares about you, learns from conversations, and helps with emotional support.",
+        "image": "assets/images/placeholder.png",
+        "link": "https://replika.ai"
+    },
+    {
+        "id": 11,
+        "name": "DeepMind AlphaFold",
+        "category": "science",
+        "type": "Research Tool",
+        "description": "AI system that predicts protein structures with incredible accuracy, accelerating scientific discovery.",
+        "image": "assets/images/placeholder.png",
+        "link": "https://www.deepmind.com/research/highlighted-research/alphafold"
+    },
+    {
+        "id": 12,
+        "name": "Soundraw",
+        "category": "music",
+        "type": "Web App",
+        "description": "AI music generator that creates royalty-free background music for your creative projects.",
+        "image": "assets/images/placeholder.png",
+        "link": "https://soundraw.io"
+    }
+]
