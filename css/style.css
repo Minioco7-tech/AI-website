@@ -1,0 +1,156 @@
+/* ===============================
+   AIviary Website Stylesheet
+   =============================== */
+
+/* -------- Fonts & Globals -------- */
+body {
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Smooth transitions for UI elements */
+a, button, input, select {
+  transition: all 0.3s ease;
+}
+
+/* Remove outline for better aesthetic (but keep accessibility) */
+button:focus, input:focus, select:focus {
+  outline: 2px solid #a855f7;
+  outline-offset: 2px;
+}
+
+/* -------- Navbar -------- */
+nav {
+  backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.25);
+}
+
+nav a {
+  text-decoration: none;
+}
+
+/* -------- Hero Section -------- */
+header h1 {
+  background: linear-gradient(to right, #fff, #d8b4fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header form input {
+  font-size: 1rem;
+}
+
+header form button {
+  font-weight: 600;
+}
+
+/* -------- Category Grid -------- */
+#categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.category-card {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.category-card .thumb {
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.category-card .content {
+  padding: 1rem;
+}
+
+.category-card h3 {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.category-card p {
+  color: #ccc;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* -------- Buttons -------- */
+button, .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: #a855f7;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #c084fc;
+}
+
+/* -------- Footer -------- */
+footer {
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+}
+
+footer a {
+  text-decoration: none;
+  color: #ccc;
+}
+
+footer a:hover {
+  color: white;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+/* -------- Animations -------- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -------- Utility -------- */
+.text-gradient {
+  background: linear-gradient(to right, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.shadow-soft {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
