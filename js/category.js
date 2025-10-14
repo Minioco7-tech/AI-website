@@ -49,7 +49,7 @@ function displayModels(models) {
         card.className = 'odel-tile flex flex-col h-full bg-[#2A2A2A] rounded-lg overflow-hidden transition transform duration-300 cursor-pointer border border-white border-opacity-10';
         
         card.innerHTML = `
-            <a href="model.html?id=${encodeURIComponent(model.id)}" class="block bg-[#1a1f25] hover:bg-[#222831] transition-all rounded-xl overflow-hidden group"> 
+            <a href="model.html?id=${encodeURIComponent(model.name)}" class="block bg-[#1a1f25] hover:bg-[#222831] transition-all rounded-xl overflow-hidden group"> 
                 <div class="w-full h-40 sm:h-48 bg-cover bg-center rounded-lg" style="background-image: url('${model.image}')"></div>
                 <div class="flex flex-col flex-1 p-4">
                     <h3 class="text-purple-400 text-lg sm:text-xl font-bold leading-snug mb-2">${model.name}</h3>
