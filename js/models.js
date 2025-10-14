@@ -1,44 +1,70 @@
 // models.js — Fetch & render models
 
-let modelsData = [];
+async function loadModel() {
+  const params = new URLSearchParams(window.location.search);
+  const modelId = params.get("id");
 
-async function fetchModels() {
-    if (modelsData.length) return modelsData;
-    const response = await fetch('./models.json');
-    if (!response.ok) throw new Error(`Failed to load models.json (status: ${response.status})`);
-    modelsData = await response.json();
-    return modelsData;
-}
+  if (!modelId) {
+    document.getElementById("modelTitle").textContent = "Model not found";
+    return;
+  }
 
-function displayModels(models, containerId) {
-    const container = document.getElementById(containerId);
-    if (!container) return;
-    container.innerHTML = '';
+  try {
+    const response = await fetch("./models.json");
+    if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
+    const models = await response.json();
 
-    models.forEach(model => {
-        const card = document.createElement('div');
-        card.className = 'model-tile bg-black bg-opacity-30 rounded-xl overflow-hidden hover:scale-105 transition transform duration-300 border border-white border-opacity-10';
-        card.innerHTML = `
-            <div class="w-full h-40 bg-cover bg-center" style="background-image: url('${model.image}')"></div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold mb-2">${model.name}</h3>
-                <p class="text-sm text-gray-300 mb-3 line-clamp-2">${model.description}</p>
-                <div class="flex justify-between items-center text-xs text-gray-400">
-                    <span>${getCategoryName(model.category)}</span>
-                    <a href="model.html?id=${encodeURIComponent(model.id)}" class="text-purple-400 hover:text-purple-300">View →</a>
-                </div>
-            </div>
-        `;
-        container.appendChild(card);
-    });
-}
-
-function sortModels(models, criteria) {
-    const sorted = [...models];
-    switch(criteria) {
-        case 'az': sorted.sort((a,b)=>a.name.localeCompare(b.name)); break;
-        case 'za': sorted.sort((a,b)=>b.name.localeCompare(a.name)); break;
-        default: break;
+    const model = models.find(m => m.id === modelId);
+    if (!model) {
+      document.getElementById("modelTitle").textContent = "Model not found";
+      return;
     }
-    return sorted;
+
+    // Fill model info
+    document.getElementById("modelTitle").textContent = model.name;
+    document.getElementById("modelDescription").textContent = model.description;
+    document.getElementById("tryModelBtn").href = model.url || "#";
+    document.getElementById("modelNameText").textContent = model.name;
+
+    // Rating (show stars dynamically)
+    const ratingContainer = document.getElementById("modelRating");
+    const rating = Math.round(model.rating || 4.5);
+    for (let i = 1; i <= 5; i++) {
+      const star = document.createElement("i");
+      star.setAttribute("data-feather", i <= rating ? "star" : "star");
+      star.classList.add(i <= rating ? "text-yellow-400" : "text-gray-500");
+      ratingContainer.appendChild(star);
+    }
+
+    // Related models
+    const relatedModels = models
+      .filter(m => m.category === model.category && m.id !== model.id)
+      .slice(0, 3);
+
+    const grid = document.getElementById("relatedModelsGrid");
+    grid.innerHTML = "";
+
+    relatedModels.forEach(rm => {
+      const card = document.createElement("a");
+      card.href = `model.html?id=${rm.id}`;
+      card.className =
+        "bg-[#1C1E22] rounded-lg overflow-hidden flex flex-col transition hover:scale-[1.02] border border-white border-opacity-10";
+      card.innerHTML = `
+        <div class="h-40 bg-cover bg-center" style="background-image: url('${rm.image}')"></div>
+        <div class="p-4 flex flex-col flex-grow">
+          <h4 class="text-white font-bold text-lg mb-2">${rm.name}</h4>
+          <p class="text-gray-400 text-sm flex-grow mb-4">${rm.description}</p>
+          <span class="text-[#00BFFF] font-semibold text-sm">View Model →</span>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+
+    feather.replace();
+
+  } catch (err) {
+    console.error("Failed to load model:", err);
+  }
 }
+
+document.addEventListener("DOMContentLoaded", loadModel);
