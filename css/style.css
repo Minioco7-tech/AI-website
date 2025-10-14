@@ -116,38 +116,47 @@ footer p {
 .shadow-soft {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+
 /* -------- Model-Tile (Unified Tile Design) -------- */
 ..model-tile {
   background: #2A2A2A;
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: 0.75rem;
   overflow: hidden;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: pointer;
 }
 
 .model-tile:hover {
   transform: scale(1.05);
+  z-index: 10;
 }
 
-.model-tile .thumb,
-.model-tile .w-full.h-40 {
-  height: 10rem; /* h-40 in Tailwind */
+.model-tile .thumb {
+  width: 100%;
+  aspect-ratio: 16/9; /* Maintain video-like ratio as in Stitch homepage */
   background-size: cover;
   background-position: center;
 }
 
-.model-tile .p-4 {
-  padding: 1rem;
-}
-
 .model-tile h3 {
+  font-size: 1.125rem; /* text-lg */
   font-weight: 600;
-  font-size: 1.125rem;
-  color: #E0E0E0;
+  color: white;
+  margin-bottom: 0.25rem;
 }
 
 .model-tile p {
   font-size: 0.875rem;
-  color: #ccc;
+  color: #E0E0E0;
+}
+
+.model-tile .icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem; /* 12 in Tailwind = 48px? */
+  height: 3rem;
+  border-radius: 9999px;
+  margin-bottom: 0.75rem;
 }
