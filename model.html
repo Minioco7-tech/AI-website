@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIviary — Model</title>
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-[#0A0C10] text-white flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="fixed w-full z-50 top-0 bg-black/20 backdrop-blur-lg border-b border-white border-opacity-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <!-- Left: Logo -->
+      <a href="index.html" class="flex items-center space-x-3">
+        <div class="w-8 h-8 bg-gradient-to-r from-[#00BFFF] to-blue-400 rounded-lg flex items-center justify-center">
+          <i data-feather="zap" class="w-4 h-4"></i>
+        </div>
+        <span class="text-xl font-bold text-white">AIviary</span>
+      </a>
+
+      <!-- Center: Nav -->
+      <nav class="hidden sm:flex items-center space-x-6">
+        <a href="index.html" class="text-white hover:text-purple-400 transition">Home</a>
+        <a href="about.html" class="text-white hover:text-purple-400 transition">About</a>
+      </nav>
+
+      <!-- Right: All Models -->
+      <div>
+        <a href="category.html?category=all" class="btn-primary px-4 py-2 rounded-lg text-sm font-medium shadow-lg transition hover:scale-105">All Models</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="pt-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex-1">
+
+    <!-- Breadcrumb -->
+    <nav id="breadcrumb" class="text-sm text-gray-400 mb-6 flex flex-wrap gap-2">
+      <a href="index.html" class="hover:text-white">Home</a> /
+      <a href="category.html?category=all" class="hover:text-white">Models</a> /
+      <span id="modelNameText" class="text-white font-medium"></span>
+    </nav>
+
+    <!-- Model Info -->
+    <section id="modelDetails" class="mb-12">
+      <h1 id="modelTitle" class="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-[#00BFFF] to-blue-400 bg-clip-text text-transparent"></h1>
+      <p id="modelDescription" class="text-gray-300 text-lg leading-relaxed mb-4"></p>
+      <div id="modelRating" class="flex items-center space-x-2 text-yellow-400 mb-6"></div>
+      <a id="tryModelBtn" href="#" target="_blank" class="inline-block bg-gradient-to-r from-[#00BFFF] to-blue-400 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:scale-105 transition">
+        Try this Model
+      </a>
+    </section>
+
+    <!-- Related Models -->
+    <section>
+      <h2 class="text-2xl font-bold mb-6">Related Models</h2>
+      <div id="relatedModelsGrid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black bg-opacity-20 backdrop-blur-lg border-t border-white border-opacity-10 mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="md:col-span-2">
+          <div class="flex items-center space-x-3 mb-4">
+            <div class="w-8 h-8 bg-gradient-to-r from-[#00BFFF] to-blue-400 rounded-lg flex items-center justify-center">
+              <i data-feather="zap" class="w-4 h-4"></i>
+            </div>
+            <span class="text-xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">AIviary</span>
+          </div>
+          <p class="text-[#E0E0E0] leading-relaxed">
+            Discover and explore the world's most innovative AI tools.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4">Legal</h4>
+          <div class="space-y-2">
+            <a href="#" class="block text-[#E0E0E0] hover:text-white transition">Privacy Policy</a>
+            <a href="#" class="block text-[#E0E0E0] hover:text-white transition">Terms of Use</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4">Connect</h4>
+          <div class="space-y-2">
+            <a href="#" class="block text-[#E0E0E0] hover:text-white transition">GitHub</a>
+            <a href="#" class="block text-[#E0E0E0] hover:text-white transition">Contact</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-white border-opacity-10 mt-8 pt-8 text-center">
+        <p class="text-gray-400">&copy; 2025 AIviary. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="js/model.js"></script>
+</body>
+</html>
+
