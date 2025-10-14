@@ -46,7 +46,7 @@ function displayModels(models) {
     
     models.forEach(model => {
         const card = document.createElement('a');
-        card.className = 'model-tile flex flex-col gap-4 p-5 bg-white dark:bg-accent-dark rounded-xl shadow-sm hover:shadow-lg transition-transform transform hover:scale-105 cursor-pointer';
+        card.className = 'model-tile bg-[#2A2A2A] rounded-lg overflow-hidden transition transform duration-300 cursor-pointer border border-white border-opacity-10';
         
         card.innerHTML = `
             <div class="w-full h-40 bg-cover bg-center rounded-lg" style="background-image: url('${model.image}')"></div>
