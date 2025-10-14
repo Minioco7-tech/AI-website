@@ -40,31 +40,37 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
  // Render homepage categories grid
-  function renderCategories() {
-      if (!categoryGrid) return;
-      categoryGrid.innerHTML = '';
-      categoryGrid.className = 'grid gap-6 sm:grid-cols-2 lg:grid-cols-3';
+ function renderCategories() {
+    if (!categoryGrid) return;
+    categoryGrid.innerHTML = '';
+    categoryGrid.className = 'grid gap-6 sm:grid-cols-2 lg:grid-cols-3';
   
-      categories.forEach(cat => {
-          const card = document.createElement('div');
-          card.className = `cursor-pointer rounded-xl p-4 sm:p-6 flex flex-col items-center justify-center hover:scale-105 transform transition-all duration-300 shadow-lg`;
-          card.innerHTML = `
-              <div class="w-full h-32 bg-cover bg-center relative overflow-hidden ${cat.colorFrom} ${cat.colorTo}" style="background-image: url('${cat.image}');">
-                  <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center p-4">   
-                      <i data-feather="${cat.icon}" class="w-8 h-8 mb-2"></i>
-                      <span class="text-white font-semibold text-center text-sm sm:text-base md:text-sm lg:text-base break-words truncate">${cat.name}</span>
-                  </div>
-              </div>
-          `;
-          card.addEventListener('click', () => {
-              window.location.href = `category.html?category=${encodeURIComponent(cat.key)}`;
-          });
-          categoryGrid.appendChild(card);
+    categories.forEach(cat => {
+      const card = document.createElement('div');
+      card.className = `
+        model-tile bg-black bg-opacity-30 rounded-xl overflow-hidden 
+        border border-white border-opacity-10 transition transform duration-300 cursor-pointer
+      `;
+  
+      card.innerHTML = `
+        <div class="w-full h-40 bg-cover bg-center" style="background-image: url('${cat.image}')"></div>
+        <div class="p-4 flex flex-col items-center justify-center text-center">
+          <div class="bg-gradient-to-r ${cat.colorFrom} ${cat.colorTo} rounded-full p-3 mb-3 flex items-center justify-center">
+            <i data-feather="${cat.icon}" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-lg font-semibold">${cat.name}</h3>
+        </div>
+      `;
+  
+      card.addEventListener('click', () => {
+        window.location.href = `category.html?category=${encodeURIComponent(cat.key)}`;
       });
   
-      feather.replace();
+      categoryGrid.appendChild(card);
+    });
+  
+    feather.replace();
   }
-
   // -----------------------
   // Fuzzy Search (Fuse.js)
   // -----------------------
