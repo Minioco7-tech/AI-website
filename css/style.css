@@ -6,7 +6,7 @@
 body {
   font-family: 'Inter', sans-serif;
   color: #fff;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-colour: #0A0C10;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -19,7 +19,7 @@ a, button, input, select {
 
 /* Remove outline for better aesthetic (but keep accessibility) */
 button:focus, input:focus, select:focus {
-  outline: 2px solid #a855f7;
+  outline: 2px solid #00BFFF;
   outline-offset: 2px;
 }
 
@@ -59,23 +59,29 @@ button, .btn {
 }
 
 .btn-primary {
-  background-color: #a855f7;
+  background-color: #00BFFF;
   color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .btn-primary:hover {
-  background-color: #c084fc;
+  background-color: #0099e6;
 }
 
 /* -------- Footer -------- */
 footer {
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
 }
 
 footer a {
   text-decoration: none;
-  color: #ccc;
+  color: #E0E0E0;
 }
 
 footer a:hover {
@@ -111,19 +117,17 @@ footer p {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 /* -------- Model-Tile (Unified Tile Design) -------- */
-.model-tile {
-  background: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+..model-tile {
+  background: #2A2A2A;
+  border: 1px solid rgba(255,255,255,0.1);
   border-radius: 0.75rem;
   overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transform-origin: center;
+  transition: transform 0.3s ease;
   cursor: pointer;
 }
 
 .model-tile:hover {
   transform: scale(1.05);
-  z-index: 10;
 }
 
 .model-tile .thumb,
@@ -140,6 +144,7 @@ footer p {
 .model-tile h3 {
   font-weight: 600;
   font-size: 1.125rem;
+  color: #E0E0E0;
 }
 
 .model-tile p {
