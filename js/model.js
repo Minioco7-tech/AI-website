@@ -42,20 +42,22 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     document.getElementById("tryButton").onclick = () => window.open(model.link, "_blank");
 
-    // Related models
+    // Related models (reuse same tile as category.html)
     const related = models.filter(m => m.category === model.category && m.name !== model.name).slice(0, 6);
 
     if (related.length === 0) {
       relatedGrid.innerHTML = '<p class="text-gray-400">No other models in this category yet.</p>';
     } else {
       relatedGrid.innerHTML = related.map(r => `
-        <a href="model.html?model=${encodeURIComponent(r.name)}"
-           class="model-tile group flex flex-col overflow-hidden hover:scale-105 transition-transform bg-[#293338] rounded-xl">
-          <div class="thumb" style="background-image: url('${r.image}')"></div>
-          <div class="p-4 flex flex-col flex-grow">
-            <h4 class="text-white font-bold text-lg mb-2">${r.name}</h4>
-            <p class="text-gray-300 text-sm flex-grow">${r.description}</p>
-            <span class="text-primary font-semibold mt-2 self-start">View Model →</span>
+        <a href="model.html?model=${encodeURIComponent(r.name)}" 
+           class="block bg-[#1a1f25] hover:bg-[#222831] transition-all rounded-xl overflow-hidden group shadow-md hover:shadow-lg">
+          <div class="w-full h-48 bg-cover bg-center" style="background-image: url('${r.image}')"></div>
+          <div class="p-4 flex flex-col text-left">
+            <h3 class="text-lg font-semibold text-purple-400 mb-2 group-hover:text-purple-300">${r.name}</h3>
+            <p class="text-gray-300 text-sm mb-3 line-clamp-3">${r.description}</p>
+            <span class="inline-block bg-purple-600/40 text-white text-xs font-medium px-3 py-1 rounded-full self-start">
+              ${r.category}
+            </span>
           </div>
         </a>
       `).join("");
