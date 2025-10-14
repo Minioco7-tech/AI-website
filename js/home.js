@@ -47,10 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
     categories.forEach(cat => {
       const card = document.createElement('div');
-      card.className = `
-        model-tile bg-black bg-opacity-30 rounded-xl overflow-hidden 
-        border border-white border-opacity-10 transition transform duration-300 cursor-pointer
-      `;
+      card.className = `model-tile bg-[#2A2A2A] rounded-lg overflow-hidden transition transform duration-300 cursor-pointer border border-white border-opacity-10`;
   
       card.innerHTML = `
         <div class="w-full h-40 bg-cover bg-center" style="background-image: url('${cat.image}')"></div>
@@ -60,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <i data-feather="${cat.icon}" class="w-5 h-5"></i>
               </div>
               <h3 class="text-lg font-semibold">${cat.name}</h3>
+              <p class="text-[#E0E0E0] text-sm">Description of ${cat.name}</p>
             </div>
           </div>
         `;
