@@ -34,7 +34,7 @@ const categoryColors = {
   learning: 'bg-gradient-to-r from-[#22D3EE] to-[#3B82F6]',      // cyan/blue
   business: 'bg-gradient-to-r from-[#10B981] to-[#059669]',      // emerald/green
   chatbots: 'bg-gradient-to-r from-[#F59E0B] to-[#D97706]',      // amber
-  audio: 'bg-gradient-to-r from-[#E11D48] to-[#DB2777]',         // red/pink
+  music: 'bg-gradient-to-r from-[#E11D48] to-[#DB2777]',         // red/pink
   coding: 'bg-gradient-to-r from-[#8B5CF6] to-[#6366F1]',        // violet/indigo
   science: 'bg-gradient-to-r from-[#14B8A6] to-[#06B6D4]',       // teal
   finance: 'bg-gradient-to-r from-[#FACC15] to-[#EAB308]',       // yellow
