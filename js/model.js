@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", async () => {
            class="block bg-[#1a1f25] hover:bg-[#222831] transition-all rounded-xl overflow-hidden group shadow-md hover:shadow-lg">
           <div class="w-full h-48 bg-cover bg-center" style="background-image: url('${r.image}')"></div>
           <div class="p-4 flex flex-col text-left">
-            <h3 class="text-lg font-semibold text-purple-400 mb-2 group-hover:text-purple-300">${r.name}</h3>
+            <h3 class="text-lg font-semibold text-gray-300 mb-2 group-hover:text-purple-300">${r.name}</h3>
             <p class="text-gray-300 text-sm mb-3 line-clamp-3">${r.description}</p>
             <span class="inline-block bg-purple-600/40 text-white text-xs font-medium px-3 py-1 rounded-full self-start">
               ${r.category}
