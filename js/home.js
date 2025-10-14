@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
  function renderCategories() {
     if (!categoryGrid) return;
     categoryGrid.innerHTML = '';
-    categoryGrid.className = 'grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'';
+    categoryGrid.className = 'grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3';
   
     categories.forEach(cat => {
       const card = document.createElement('div');
