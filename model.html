@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIviary — Model</title>
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-[#0A0C10] text-white flex flex-col min-h-screen">
+
+  <!-- Header -->
+  <header class="fixed w-full z-50 top-0 bg-black/20 backdrop-blur-lg border-b border-white border-opacity-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center space-x-3">
+        <div class="w-8 h-8 bg-gradient-to-r from-[#00BFFF] to-blue-400 rounded-lg flex items-center justify-center">
+          <i data-feather="zap" class="w-4 h-4"></i>
+        </div>
+        <span class="text-xl font-bold text-white">AIviary</span>
+      </a>
+      <div class="flex items-center space-x-3">
+        <a href="about.html" class="text-white hover:text-[#00BFFF] transition">About</a>
+        <a href="index.html" class="btn-primary px-4 py-2 rounded-lg text-sm font-medium shadow-lg transition hover:scale-105">Home</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 py-28 sm:py-32 lg:py-36">
+    <div id="modelContent" class="flex flex-col gap-6"></div>
+  </main>
+
+  <!-- Related Models --> 
+  <section class="max-w-6xl mx-auto px-4 py-8 border-t border-white border-opacity-10"> 
+    <h2 class="text-2xl font-bold mb-6">Related Models</h2> 
+    <div id="relatedModelsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div> 
+  </section> 
+
+  <!-- Model JS --> 
+  <script src="js/model.js"></script> 
+</body>
+</html>
