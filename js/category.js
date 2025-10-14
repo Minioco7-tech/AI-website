@@ -63,6 +63,7 @@ function displayModels(models) {
         const colorClass = categoryColors[model.category.toLowerCase()] || 'bg-black/20';
         
         const card = document.createElement('a');
+        card.href = `model.html?id=${encodeURIComponent(model.id)}`;
         card.className = 'model-tile flex flex-col h-full bg-[#2A2A2A] rounded-lg overflow-hidden transition transform duration-300 cursor-pointer border border-white border-opacity-10';
         
         card.innerHTML = `
