@@ -7,6 +7,7 @@ const loadingState = document.getElementById('loadingState');
 const categoryTitle = document.getElementById('categoryTitle');
 const randomiseBtn = document.getElementById('randomiseBtn');
 const sortBySelect = document.getElementById('sortBy');
+const colorClass = categoryColors[model.category.toLowerCase()] || 'bg-black/20';
 
 // Global array to store currently displayed models
 let currentModels = [];
@@ -25,6 +26,21 @@ const categories = [
     { key: 'finance', name: 'Finance & Analytics' },
     { key: 'everyday', name: 'Everyday Life' }
 ];
+
+// Category color map
+const categoryColors = {
+  all: 'bg-gradient-to-r from-[#00BFFF] to-blue-400',
+  writing: 'bg-gradient-to-r from-[#A855F7] to-[#6366F1]',       // purple/indigo
+  creativity: 'bg-gradient-to-r from-[#EC4899] to-[#F59E0B]',    // pink/orange
+  learning: 'bg-gradient-to-r from-[#22D3EE] to-[#3B82F6]',      // cyan/blue
+  business: 'bg-gradient-to-r from-[#10B981] to-[#059669]',      // emerald/green
+  chatbots: 'bg-gradient-to-r from-[#F59E0B] to-[#D97706]',      // amber
+  audio: 'bg-gradient-to-r from-[#E11D48] to-[#DB2777]',         // red/pink
+  coding: 'bg-gradient-to-r from-[#8B5CF6] to-[#6366F1]',        // violet/indigo
+  science: 'bg-gradient-to-r from-[#14B8A6] to-[#06B6D4]',       // teal
+  finance: 'bg-gradient-to-r from-[#FACC15] to-[#EAB308]',       // yellow
+  everyday: 'bg-gradient-to-r from-[#60A5FA] to-[#3B82F6]'       // light blue
+};
 
 // Get category name from key
 function getCategoryName(catKey) {
@@ -46,16 +62,18 @@ function displayModels(models) {
     
     models.forEach(model => {
         const card = document.createElement('a');
-        card.className = 'odel-tile flex flex-col h-full bg-[#2A2A2A] rounded-lg overflow-hidden transition transform duration-300 cursor-pointer border border-white border-opacity-10';
+        card.className = 'model-tile flex flex-col h-full bg-[#2A2A2A] rounded-lg overflow-hidden transition transform duration-300 cursor-pointer border border-white border-opacity-10';
         
         card.innerHTML = `
             <a href="model.html?id=${encodeURIComponent(model.name)}" class="block bg-[#1a1f25] hover:bg-[#222831] transition-all rounded-xl overflow-hidden group"> 
-                <div class="w-full h-40 sm:h-48 bg-cover bg-center rounded-lg" style="background-image: url('${model.image}')"></div>
+                <div class="w-full h-40 sm:h-48 bg-cover bg-center rounded-t-lg" style="background-image: url('${model.image}')"></div>
                 <div class="flex flex-col flex-1 p-4">
                     <h3 class="text-purple-400 text-lg sm:text-xl font-bold leading-snug mb-2">${model.name}</h3>
                     <p class="textgray-200 dark:text-gray-300 text-sm sm:text-base font-normal leading-normal mb-3 line-clamp-2">${model.description}</p>
                     <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-black/20 text-white">${getCategoryName(model.category)}</span>
+                        <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-black/20 text-white">${getCategoryName(model.category)}
+                            ${getCategoryName(model.category)}
+                        </span>
                     </div>
                 </div>
             </a>
