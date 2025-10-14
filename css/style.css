@@ -154,3 +154,42 @@ footer p {
 .shadow-soft {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+/* -------- Model-Tile (Category Tile) Styling -------- */
+.model-tile {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-origin: center;
+  cursor: pointer;
+}
+
+.model-tile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  z-index: 10;
+}
+
+.model-tile .thumb {
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+}
+
+.model-tile .content {
+  padding: 1rem;
+  text-align: center;
+}
+
+.model-tile h3 {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.model-tile p {
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.4;
+}
