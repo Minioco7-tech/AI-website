@@ -39,19 +39,23 @@
 
   <!-- Main Models Grid -->
   <main class="pt-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div>
-    <!-- Sort Dropdown -->
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6">
+      <!-- Left: Category title -->
+      <h2 id="categoryTitle" class="text-2xl font-bold mb-4 sm:mb-0">Category</h2>
+    
+      <!-- Right: Sort + Random -->
+      <div class="flex flex-col sm:flex-row gap-2 sm:gap-4">
         <select id="sortBy" class="appearance-none px-3 py-2 bg-black bg-opacity-30 border border-white border-opacity-10 text-white text-sm rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 cursor-pointer">
           <option value="relevance">Relevance</option>
           <option value="az">A → Z</option>
           <option value="za">Z → A</option>
         </select>
-
-        <!-- Randomise Button -->
-        <button id="randomiseBtn" class="btn-primary px-4 py-2 rounded-lg text-sm font-medium shadow-lg transition hover:scale-105">
-          <i data-feather="shuffle" class="w-4 h-4"></i>
-          <span>Randomise</span>
+    
+        <button id="randomiseBtn" class="btn-primary px-4 py-2 rounded-lg text-sm font-medium shadow-lg transition hover:scale-105 flex items-center justify-center">
+          <i data-feather="shuffle" class="w-4 h-4 mr-1"></i>
+          Randomise
         </button>
+      </div>
     </div>
    
     <div id="modelsGrid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
