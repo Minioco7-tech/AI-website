@@ -46,13 +46,13 @@ function displayModels(models) {
     
     models.forEach(model => {
         const card = document.createElement('a');
-        card.className = 'model-tile bg-[#2A2A2A] rounded-lg overflow-hidden transition transform duration-300 cursor-pointer border border-white border-opacity-10';
+        card.className = 'odel-tile flex flex-col h-full bg-[#2A2A2A] rounded-lg overflow-hidden transition transform duration-300 cursor-pointer border border-white border-opacity-10';
         
         card.innerHTML = `
-            <div class="w-full h-40 bg-cover bg-center rounded-lg" style="background-image: url('${model.image}')"></div>
-            <div class="flex flex-col flex-1">
-                <h3 class="text-purple-400 text-xl font-bold leading-snug mb-2">${model.name}</h3>
-                <p class="textgray-200 dark:text-gray-300 text-sm font-normal leading-normal mb-3 line-clamp-2">${model.description}</p>
+            <div class="w-full h-40 sm:h-48 bg-cover bg-center rounded-lg" style="background-image: url('${model.image}')"></div>
+            <div class="flex flex-col flex-1 p-4">
+                <h3 class="text-purple-400 text-lg sm:text-xl font-bold leading-snug mb-2">${model.name}</h3>
+                <p class="textgray-200 dark:text-gray-300 text-sm sm:text-base font-normal leading-normal mb-3 line-clamp-2">${model.description}</p>
                 <div class="flex flex-wrap gap-2 mt-auto">
                     <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-black/20 text-white">${getCategoryName(model.category)}</span>
                 </div>
