@@ -3,76 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Model Details</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.0/dist/tailwind.min.css" rel="stylesheet">
-  <script src="https://unpkg.com/feather-icons"></script>
-  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <title>AIviary — Model Details</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-[#0E0E10] text-gray-100 min-h-screen flex flex-col">
-  <!-- Navbar -->
-  <header class="border-b border-white/10 bg-[#121212]/80 backdrop-blur-md">
-    <div class="container mx-auto flex justify-between items-center py-4 px-6">
-      <a href="index.html" class="text-2xl font-bold text-white hover:text-purple-400 transition">
-        AI Model Hub
-      </a>
-      <nav class="hidden sm:flex space-x-6">
-        <a href="index.html" class="hover:text-purple-400 transition">Home</a>
-        <a href="category.html" class="hover:text-purple-400 transition">Categories</a>
-      </nav>
-    </div>
+<body class="text-white bg-[#1a1a1a] flex flex-col min-h-screen">
+
+  <!-- Header / Nav -->
+  <header class="bg-black bg-opacity-20 backdrop-blur-lg border-b border-white border-opacity-10 p-4 flex justify-between items-center">
+    <a href="index.html" class="text-gray-300 hover:text-white">← Home</a>
+    <a id="backToCategory" href="#" class="text-purple-400 hover:text-white hidden">
+      ← Back to <span id="categoryName"></span>
+    </a>
   </header>
 
-  <!-- Main Content -->
-  <main class="flex-grow container mx-auto px-4 py-10">
-    <!-- Model Section -->
-    <section id="modelSection" class="flex flex-col lg:flex-row items-start gap-10">
-      <!-- Image -->
-      <div id="modelImage" 
-           class="w-full lg:w-1/2 h-64 sm:h-80 lg:h-[420px] bg-cover bg-center rounded-2xl shadow-md border border-white/10">
-      </div>
-
-      <!-- Info -->
-      <div class="flex flex-col w-full lg:w-1/2 space-y-4">
-        <h1 id="modelName" class="text-3xl sm:text-4xl font-bold text-purple-400"></h1>
-        <p id="modelDescription" class="text-gray-300 text-base leading-relaxed"></p>
-
-        <div class="flex flex-wrap gap-3 mt-4">
-          <span id="modelCategory" class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-gray-700/40 text-gray-300"></span>
-          <span id="modelType" class="inline-block px-3 py-1 text-sm font-medium rounded-full bg-gray-700/40 text-gray-300"></span>
-        </div>
-
-        <a id="modelLink" href="#" target="_blank" 
-           class="mt-6 inline-flex items-center gap-2 px-5 py-3 bg-purple-600 hover:bg-purple-700 transition rounded-lg text-white font-semibold w-fit shadow-lg">
-          <i data-feather="external-link" class="w-5 h-5"></i>
-          Visit Model
-        </a>
-      </div>
-    </section>
-
-    <!-- Divider -->
-    <hr class="my-12 border-white/10">
-
-    <!-- Related Models -->
-    <section>
-      <h2 class="text-2xl font-semibold text-white mb-6">Related Models</h2>
-      <div id="relatedModels" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <!-- Related models injected by JS -->
-      </div>
-    </section>
+  <!-- Model Details -->
+  <main class="max-w-4xl mx-auto px-4 py-8 flex-grow">
+    <div class="text-center">
+      <h1 id="modelName" class="text-3xl font-bold mb-4">Loading...</h1>
+      <div id="modelImage" class="mx-auto mb-4 w-64 h-40 bg-cover bg-center rounded-lg"></div>
+      <p id="modelDescription" class="text-gray-300 mb-4">Loading description...</p>
+      <span id="modelCategory" class="text-purple-300 font-semibold mb-6 inline-block"></span>
+      <button
+        id="tryButton"
+        class="bg-purple-500 hover:bg-purple-600 text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300"
+      >
+        Try Now
+      </button>
+    </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="border-t border-white/10 bg-[#121212]/80 backdrop-blur-md">
-    <div class="container mx-auto px-6 py-6 text-center text-gray-400 text-sm">
-      © 2025 AI Model Hub. All rights reserved.
-    </div>
-  </footer>
+  <!-- Related Models -->
+  <section class="max-w-6xl mx-auto px-4 py-8 border-t border-white border-opacity-10">
+    <h2 class="text-2xl font-bold mb-4">Related Models</h2>
+    <div id="relatedModelsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </section>
 
-  <!-- Scripts -->
-  <script src="model.js"></script>
-  <script>
-    feather.replace();
-  </script>
+  <!-- Model JS -->
+  <script src="js/model.js"></script>
 </body>
 </html>
