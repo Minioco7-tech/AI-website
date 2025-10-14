@@ -39,24 +39,22 @@ function getCategoryFromUrl() {
     return params.get('category') || 'all';
 }
 
-// ------------------------------
-// Helper Functions
-// ------------------------------
-
 // Display models in the grid
 function displayModels(models) {
     modelsGrid.innerHTML = '';
     modelsGrid.className = 'grid gap-6 sm:grid-cols-2 lg:grid-cols-3';
+    
     models.forEach(model => {
         const card = document.createElement('a');
-        card.className = 'model-tile bg-black bg-opacity-30 rounded-xl overflow-hidden hover:scale-105 transition transform duration-300 border border-white border-opacity-10';
+        card.className = 'model-tile flex flex-col gap-4 p-5 bg-white dark:bg-accent-dark rounded-xl shadow-sm hover:shadow-lg transition-transform transform hover:scale-105 cursor-pointer';
+        
         card.innerHTML = `
-            <div class="w-full h-40 bg-cover bg-center" style="background-image: url('${model.image}')"></div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold mb-2">${model.name}</h3>
-                <p class="text-sm text-gray-300 mb-3 line-clamp-2">${model.description}</p>
-                <div class="flex justify-between items-center text-xs text-gray-400">
-                    <span>${getCategoryName(model.category)}</span>
+            <div class="w-full h-40 bg-cover bg-center rounded-lg" style="background-image: url('${model.image}')"></div>
+            <div class="flex flex-col flex-1">
+                <h3 class="text-purple-400 text-xl font-bold leading-snug mb-2">${model.name}</h3>
+                <p class="textgray-200 dark:text-gray-300 text-sm font-normal leading-normal mb-3 line-clamp-2">${model.description}</p>
+                <div class="flex flex-wrap gap-2 mt-auto">
+                    <span class="inline-block px-3 py-1 text-xs font-medium rounded-full bg-black/20 text-white">${getCategoryName(model.category)}</span>
                 </div>
             </div>
         `;
@@ -96,11 +94,11 @@ function shuffleArray(array) {
 // ------------------------------
 async function loadCategoryModels() {
     const categoryKey = getCategoryFromUrl();
-    categoryTitle.textContent = getCategoryName(categoryKey);
+    if(document.getElementById('categoryTitle')) document.getElementById('categoryTitle').textContent = getCategoryName(categoryKey);
 
     try {
         const response = await fetch('./models.json');
-        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+        if(!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
         const modelsData = await response.json();
 
         const filteredModels = categoryKey.toLowerCase() === 'all'
@@ -109,16 +107,12 @@ async function loadCategoryModels() {
 
         currentModels = filteredModels;
         displayModels(currentModels);
-        loadingState.classList.add('hidden');
     } catch(err) {
         console.error('Failed to load models:', err);
-        loadingState.innerHTML = '<p class="text-red-400 text-lg mt-6">Failed to load models. Please refresh.</p>';
+        modelsGrid.innerHTML = '<p class="text-red-400 text-lg mt-6">Failed to load models. Please refresh.</p>';
     }
 }
 
-// ------------------------------
-// Event Listeners
-// ------------------------------
 sortBySelect.addEventListener('change', () => {
     if (!currentModels.length) return;
     const sortedModels = sortModels(currentModels, sortBySelect.value);
@@ -129,17 +123,10 @@ sortBySelect.addEventListener('change', () => {
 randomiseBtn.addEventListener('click', () => {
     if (!currentModels.length) return;
     currentModels = shuffleArray(currentModels);
-    modelsGrid.innerHTML = '';
-    requestAnimationFrame(() => {
-        displayModels(currentModels);
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        setTimeout(() => { document.body.style.transform = 'translateZ(0)'; }, 100);
-    });
+    displayModels(currentModels);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// ------------------------------
-// Initialize
-// ------------------------------
 document.addEventListener('DOMContentLoaded', () => {
     loadCategoryModels();
     feather.replace();
