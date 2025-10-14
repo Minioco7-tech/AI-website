@@ -48,50 +48,6 @@ header form button {
   font-weight: 600;
 }
 
-/* -------- Category Grid -------- */
-#categoryGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.category-card {
-  background: rgba(0, 0, 0, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 1rem;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.category-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-}
-
-.category-card .thumb {
-  height: 150px;
-  background-size: cover;
-  background-position: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.category-card .content {
-  padding: 1rem;
-}
-
-.category-card h3 {
-  font-weight: 600;
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-}
-
-.category-card p {
-  color: #ccc;
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
-
 /* -------- Buttons -------- */
 button, .btn {
   display: inline-flex;
