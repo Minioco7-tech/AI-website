@@ -1,73 +1,46 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  // Replace Feather icons
+  // Feather icons
   if (window.feather) feather.replace();
 
-  // Get model name from URL
   const params = new URLSearchParams(window.location.search);
   const modelName = params.get("model");
 
   if (!modelName) {
-    document.body.innerHTML = '<p class="text-gray-300 text-center mt-8">No model specified.</p>';
+    document.getElementById("modelContent").innerHTML = '<p class="text-gray-300 text-center mt-8">No model specified.</p>';
     return;
   }
 
   try {
-    // Load models dataset
     const response = await fetch("models.json");
     if (!response.ok) throw new Error("Failed to fetch models.json");
     const models = await response.json();
 
-    // Find model by name
     const model = models.find(m => m.name === modelName);
     if (!model) {
-      document.body.innerHTML = '<p class="text-gray-300 text-center mt-8">Model not found.</p>';
+      document.getElementById("modelContent").innerHTML = '<p class="text-gray-300 text-center mt-8">Model not found.</p>';
       return;
     }
 
-    // Populate main content (hero section)
-    const mainDiv = document.getElementById("modelContent");
-    mainDiv.innerHTML = `
-      <div class="flex flex-col sm:flex-row flex-wrap justify-between gap-4 p-4">
-        <div class="flex min-w-72 flex-col gap-3">
-          <p class="text-white text-4xl font-black leading-tight tracking-[-0.033em]">${model.name}</p>
-          <p class="text-[#9dafb8] text-base font-normal leading-normal">${model.description}</p>
-          <div class="flex items-center gap-2 mt-2">
-            <div class="flex text-primary">
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star</span>
-              <span class="material-symbols-outlined">star_half</span>
-            </div>
-            <span class="text-[#9dafb8] text-sm">(123 reviews)</span>
+    // Populate model main content
+    const modelDiv = document.getElementById("modelContent");
+    modelDiv.innerHTML = `
+      <div class="flex flex-col gap-4">
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+          <div>
+            <h1 class="text-4xl font-bold text-white">${model.name}</h1>
+            <p class="text-[#9dafb8] mt-2">${model.description}</p>
           </div>
+          <button id="tryButton" class="btn-primary px-6 py-3 text-white font-bold rounded-lg">
+            Try this Model
+          </button>
         </div>
-        <button id="tryButton" class="flex min-w-[140px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] self-start sm:self-center">
-          <span class="truncate">Try this Model</span>
-        </button>
-      </div>
-      <div class="pb-3">
-        <div class="flex border-b border-[#3c4b53] px-4 gap-8">
-          <a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary text-white pb-[13px] pt-4" href="#">
-            <p class="text-white text-sm font-bold leading-normal tracking-[0.015em]">Description</p>
-          </a>
-          <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#9dafb8] pb-[13px] pt-4 hover:text-white transition-colors" href="#">
-            <p class="text-sm font-bold leading-normal tracking-[0.015em]">Use Cases</p>
-          </a>
-          <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#9dafb8] pb-[13px] pt-4 hover:text-white transition-colors" href="#">
-            <p class="text-sm font-bold leading-normal tracking-[0.015em]">Technical Specs</p>
-          </a>
-          <a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#9dafb8] pb-[13px] pt-4 hover:text-white transition-colors" href="#">
-            <p class="text-sm font-bold leading-normal tracking-[0.015em]">Reviews</p>
-          </a>
-        </div>
+        <div class="mt-4 text-sm text-gray-400">Category: <span class="text-primary font-semibold">${model.category}</span></div>
       </div>
     `;
 
-    // Set Try button functionality
     document.getElementById("tryButton").onclick = () => window.open(model.link, "_blank");
 
-    // Related models (same category, exclude current)
+    // Related models
     const related = models.filter(m => m.category === model.category && m.name !== model.name).slice(0, 6);
     const relatedGrid = document.getElementById("relatedModelsGrid");
 
@@ -89,6 +62,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   } catch (err) {
     console.error("Error showing models grid:", err);
-    document.body.innerHTML = '<p class="text-gray-300 text-center mt-8">Error showing models grid.</p>';
+    document.getElementById("modelContent").innerHTML = '<p class="text-gray-300 text-center mt-8">Error showing models grid.</p>';
   }
 });
