@@ -4,8 +4,6 @@ import { fetchJSON, getCategoryName, getRandomModels } from './utils.js';
 document.addEventListener('DOMContentLoaded', () => {
   feather.replace();
 
-  const modelsGrid = document.getElementById('modelsGrid');
-  const loadingState = document.getElementById('loadingState');
   const searchInput = document.getElementById('searchInput');
   const allModelsBtn = document.getElementById('allModelsBtn');
   const categoryGrid = document.getElementById('categoryGrid');
@@ -47,16 +45,17 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderCategories() {
     if (!categoryGrid) return;
     categoryGrid.innerHTML = '';
+    categoryGrid.className = 'grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3';
 
     categories.forEach(cat => {
       const card = document.createElement('div');
-      card.className = `cursor-pointer rounded-xl p-4 sm:p-6 flex flex-col items-center justify-center hover:scale-105 transform transition-all duration-300 shadow-lg`;
+      card.className = 'model-tile bg-black bg-opacity-30 rounded-xl overflow-hidden hover:scale-105 transition transform duration-300 border border-white border-opacity-10';
       card.innerHTML = `
-        <div class="w-full h-32 bg-cover bg-center relative overflow-hidden ${cat.colorFrom} ${cat.colorTo}" 
+        <div class="w-full h-40 bg-cover bg-center style="background-image: url('${cat.image}');"></div> 
              style="background-image: url('${cat.image}');">
-          <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center p-4">   
+           <div class="p-4 flex flex-col items-center justify-center">
             <i data-feather="${cat.icon}" class="w-8 h-8 mb-2"></i>
-            <span class="text-white font-semibold text-center text-sm sm:text-base md:text-sm lg:text-base break-words truncate">${cat.name}</span>
+            <h3 class="text-white font-semibold text-lg">${cat.name}</h3>
           </div>
         </div>
       `;
@@ -67,39 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     feather.replace();
-  }
-
-  // -----------------------
-  // Fetch and show models
-  // -----------------------
-  async function fetchModels() {
-    modelsData = await fetchJSON('./models.json');
-    if (!modelsData.length) return;
-    setupFuse();
-    displayModels(getRandomModels(modelsData, 12));
-    if (loadingState) loadingState.classList.add('hidden');
-  }
-
-  function displayModels(models) {
-    if (!modelsGrid) return;
-    modelsGrid.innerHTML = '';
-
-    models.forEach(model => {
-      const tile = document.createElement('div');
-      tile.className = 'model-tile group cursor-pointer bg-black bg-opacity-20 rounded-xl overflow-hidden border border-white border-opacity-10 hover:border-opacity-30 transition-all duration-300';
-      tile.innerHTML = `
-        <div class="w-full h-32 bg-cover bg-center" style="background-image: url('${model.image}')"></div>
-        <div class="p-3">
-          <h3 class="text-white font-semibold text-sm mb-1">${model.name}</h3>
-          <p class="text-gray-300 text-xs line-clamp-2">${model.description.substring(0,80)}...</p>
-          <span class="text-xs px-2 py-1 bg-purple-500 bg-opacity-20 text-purple-300 rounded-full">${getCategoryName(model.category)}</span>
-        </div>
-      `;
-      tile.addEventListener('click', () => {
-        window.location.href = `model.html?id=${encodeURIComponent(model.id)}`;
-      });
-      modelsGrid.appendChild(tile);
-    });
   }
 
   // -----------------------
@@ -133,5 +99,4 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize
   // -----------------------
   renderCategories();
-  fetchModels();
 });
