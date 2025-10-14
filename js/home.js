@@ -54,13 +54,15 @@ document.addEventListener('DOMContentLoaded', () => {
   
       card.innerHTML = `
         <div class="w-full h-40 bg-cover bg-center" style="background-image: url('${cat.image}')"></div>
-        <div class="p-4 flex flex-col items-center justify-center text-center">
-          <div class="bg-gradient-to-r ${cat.colorFrom} ${cat.colorTo} rounded-full p-3 mb-3 flex items-center justify-center">
-            <i data-feather="${cat.icon}" class="w-5 h-5"></i>
+          <div class="p-4">
+            <div class="flex flex-col items-center justify-center text-center">
+              <div class="bg-gradient-to-r ${cat.colorFrom} ${cat.colorTo} rounded-full p-3 mb-3 flex items-center justify-center">
+                <i data-feather="${cat.icon}" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-lg font-semibold">${cat.name}</h3>
+            </div>
           </div>
-          <h3 class="text-lg font-semibold">${cat.name}</h3>
-        </div>
-      `;
+        `;
   
       card.addEventListener('click', () => {
         window.location.href = `category.html?category=${encodeURIComponent(cat.key)}`;
