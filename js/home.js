@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Lazy-load category image via data-bg attribute
       card.innerHTML = `
-        <div class="thumb-wrapper rounded-lg overflow-hidden p-4 bg-[#2A2A2A]">
+        <div class="thumb-wrapper rounded-lg overflow-hidden p-1 bg-[#2A2A2A]">
           <div class="thumb bg-cover bg-center w-full h-full rounded-lg transition-transform duration-300"
                style="background-image: url('${cat.image}');">
           </div>
