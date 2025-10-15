@@ -167,7 +167,7 @@ footer p {
 .category-thumb-wrapper {
   background-color: #2A2A2A; /* same as tile background */
   border-radius: 0.75rem; /* match tile rounding */
-  padding: 6px; /* creates the uniform gap */
+  padding: 12px; /* creates the uniform gap */
   aspect-ratio: 16 / 9; /* keeps consistent shape */
   overflow: hidden; /* ensures image respects rounded corners */
 }
