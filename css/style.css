@@ -128,6 +128,9 @@ footer p {
   overflow: hidden;
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .model-tile:hover {
@@ -166,10 +169,12 @@ footer p {
 /* -------- Category Image (Inset style) -------- */
 .category-thumb-wrapper {
   background-color: #2A2A2A; /* same as tile background */
-  border-radius: 0.75rem; /* match tile rounding */
-  padding: 12px; /* creates the uniform gap */
-  aspect-ratio: 16 / 9; /* keeps consistent shape */
-  overflow: hidden; /* ensures image respects rounded corners */
+  border-radius: 0.75rem;     /* matches tile rounding */
+  padding: 6px;               /* uniform gap between tile and image */
+  aspect-ratio: 16 / 9;       /* keeps consistent shape */
+  width: 100%;
+  overflow: hidden;           /* respects rounded corners */
+  margin-bottom: 0.75rem;     /* spacing between image and icon */
 }
 
 .category-thumb {
