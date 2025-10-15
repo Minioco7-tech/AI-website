@@ -1,8 +1,9 @@
+// home.js — Optimized homepage functionality
 import { fetchJSON, getCategoryName, getRandomModels } from './utils.js';
 
-// home.js — full homepage functionality
 document.addEventListener('DOMContentLoaded', () => {
-  feather.replace();
+  // Initialize Feather icons once
+  feather.replace({ width: 20, height: 20 });
 
   const searchInput = document.getElementById('searchInput');
   const allModelsBtn = document.getElementById('allModelsBtn');
@@ -23,34 +24,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Categories
+  // Categories data
   const categories = [
-    { key: 'all', name: 'All', icon: 'globe', colorFrom: 'from-purple-500', colorTo: 'to-pink-500', image: 'image-AI.jpg' },
-    { key: 'writing', name: 'Writing', icon: 'edit-3', colorFrom: 'from-purple-500', colorTo: 'to-pink-500', image: 'Images/writing/writing.webp' },
-    { key: 'design', name: 'Design', icon: 'pen-tool', colorFrom: 'from-green-400', colorTo: 'to-blue-500', image: 'Images/design/design.webp' },
-    { key: 'learning', name: 'Learning', icon: 'book', colorFrom: 'from-yellow-400', colorTo: 'to-orange-500', image: 'Images/learning/learning.webp' },
-    { key: 'business', name: 'Business', icon: 'briefcase', colorFrom: 'from-indigo-400', colorTo: 'to-purple-500', image: 'Images/business/business.webp' },
-    { key: 'chatbots', name: 'Chatbots', icon: 'message-circle', colorFrom: 'from-pink-400', colorTo: 'to-red-500', image: 'Images/chatbots/chatbot.webp' },
-    { key: 'music', name: 'Music', icon: 'volume-2', colorFrom: 'from-teal-400', colorTo: 'to-blue-400', image: 'Images/music/music.webp' },
-    { key: 'coding', name: 'Coding', icon: 'code', colorFrom: 'from-blue-400', colorTo: 'to-indigo-500', image: 'Images/coding/coding.webp' },
-    { key: 'science', name: 'Science', icon: 'cpu', colorFrom: 'from-red-400', colorTo: 'to-yellow-500', image: 'Images/science/science.webp' },
-    { key: 'finance', name: 'Finance', icon: 'bar-chart-2', colorFrom: 'from-green-400', colorTo: 'to-teal-500', image: 'Images/finance/finance.webp' },
-    { key: 'speech', name: 'Speech', icon: 'smile', colorFrom: 'from-gray-400', colorTo: 'to-gray-600', image: 'Images/speech/speech.webp' },
-    { key: 'health', name: 'Health', icon: 'heart', colorFrom: 'from-gray-400', colorTo: 'to-gray-600', image: 'Images/health/health.webp' }
+    { key: 'all', name: 'All', icon: 'globe', colorFrom: 'from-purple-500', colorTo: 'to-pink-500', image: 'images/all/all.webp' },
+    { key: 'writing', name: 'Writing', icon: 'edit-3', colorFrom: 'from-purple-500', colorTo: 'to-pink-500', image: 'images/writing/writing.webp' },
+    { key: 'design', name: 'Design', icon: 'pen-tool', colorFrom: 'from-green-400', colorTo: 'to-blue-500', image: 'images/design/design.webp' },
+    { key: 'learning', name: 'Learning', icon: 'book', colorFrom: 'from-yellow-400', colorTo: 'to-orange-500', image: 'images/learning/learning.webp' },
+    { key: 'business', name: 'Business', icon: 'briefcase', colorFrom: 'from-indigo-400', colorTo: 'to-purple-500', image: 'images/business/business.webp' },
+    { key: 'chatbots', name: 'Chatbots', icon: 'message-circle', colorFrom: 'from-pink-400', colorTo: 'to-red-500', image: 'images/chatbots/chatbots.webp' },
+    { key: 'music', name: 'Music', icon: 'volume-2', colorFrom: 'from-teal-400', colorTo: 'to-blue-400', image: 'images/music/music.webp' },
+    { key: 'coding', name: 'Coding', icon: 'code', colorFrom: 'from-blue-400', colorTo: 'to-indigo-500', image: 'images/coding/coding.webp' },
+    { key: 'science', name: 'Science', icon: 'cpu', colorFrom: 'from-red-400', colorTo: 'to-yellow-500', image: 'images/science/science.webp' },
+    { key: 'finance', name: 'Finance', icon: 'bar-chart-2', colorFrom: 'from-green-400', colorTo: 'to-teal-500', image: 'images/finance/finance.webp' },
+    { key: 'speech', name: 'Speech', icon: 'smile', colorFrom: 'from-gray-400', colorTo: 'to-gray-600', image: 'images/speech/speech.webp' },
+    { key: 'health', name: 'Health', icon: 'heart', colorFrom: 'from-gray-400', colorTo: 'to-gray-600', image: 'images/health/health.webp' }
   ];
 
- // Render homepage categories grid
- function renderCategories() {
+  // -----------------------
+  // Render Categories with Lazy Loading
+  // -----------------------
+  function renderCategories() {
     if (!categoryGrid) return;
     categoryGrid.innerHTML = '';
     categoryGrid.className = 'grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3';
-  
+
     categories.forEach(cat => {
       const card = document.createElement('div');
-      card.className = `model-tile bg-[#2A2A2A] rounded-lg overflow-hidden transition transform duration-300 cursor-pointer border border-white border-opacity-10`;
-  
+      card.className = 'model-tile bg-[#2A2A2A] rounded-lg overflow-hidden transition transform duration-300 cursor-pointer border border-white border-opacity-10';
+
+      // Lazy-load category image via data-bg attribute
       card.innerHTML = `
-        <div class="thumb lazy-bg" style="background-image: url('${cat.image}')"></div>
+        <div class="thumb lazy-bg" data-bg="${cat.image}"></div>
         <div class="p-4">
           <div class="flex flex-col items-center text-center">
             <div class="icon-circle bg-gradient-to-r ${cat.colorFrom} ${cat.colorTo} rounded-full p-3 mb-3 flex items-center justify-center">
@@ -61,16 +65,32 @@ document.addEventListener('DOMContentLoaded', () => {
           </div>
         </div>
       `;
-  
+
       card.addEventListener('click', () => {
         window.location.href = `category.html?category=${encodeURIComponent(cat.key)}`;
       });
-  
+
       categoryGrid.appendChild(card);
     });
-  
-    feather.replace();
+
+    // Lazy-load images using IntersectionObserver
+    const lazyBackgrounds = document.querySelectorAll('.lazy-bg');
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          el.style.backgroundImage = `url('${el.dataset.bg}')`;
+          observer.unobserve(el);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    lazyBackgrounds.forEach(el => observer.observe(el));
+
+    // Replace Feather icons once after adding all tiles
+    feather.replace({ width: 20, height: 20 });
   }
+
   // -----------------------
   // Fuzzy Search (Fuse.js)
   // -----------------------
@@ -84,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // -----------------------
-  // Search input
+  // Search input handler
   // -----------------------
   if (searchInput) {
     searchInput.addEventListener('keydown', e => {
@@ -99,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // -----------------------
-  // Initialize
+  // Initialize homepage
   // -----------------------
   renderCategories();
 });
