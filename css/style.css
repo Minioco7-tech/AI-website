@@ -184,6 +184,7 @@ footer p {
   background-size: cover;
   background-position: center;
   transition: transform 0.3s ease;
+  transform-origin: center center;
 }
 
 .category-thumb:hover {
