@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { key: 'business', name: 'Business', icon: 'briefcase', colorFrom: 'from-indigo-400', colorTo: 'to-purple-500', image: 'image-AI.jpg' },
     { key: 'chatbots', name: 'Chatbots', icon: 'message-circle', colorFrom: 'from-pink-400', colorTo: 'to-red-500', image: 'image-AI.jpg' },
     { key: 'music', name: 'Music', icon: 'volume-2', colorFrom: 'from-teal-400', colorTo: 'to-blue-400', image: 'image-AI.jpg' },
-    { key: 'coding', name: 'Coding', icon: 'code', colorFrom: 'from-blue-400', colorTo: 'to-indigo-500', image: 'images/coding/coding.webp' },
+    { key: 'coding', name: 'Coding', icon: 'code', colorFrom: 'from-blue-400', colorTo: 'to-indigo-500', image: 'image-AI.jpg' },
     { key: 'science', name: 'Science', icon: 'cpu', colorFrom: 'from-red-400', colorTo: 'to-yellow-500', image: 'image-AI.jpg' },
     { key: 'finance', name: 'Finance', icon: 'bar-chart-2', colorFrom: 'from-green-400', colorTo: 'to-teal-500', image: 'image-AI.jpg' },
     { key: 'speech', name: 'Speech', icon: 'smile', colorFrom: 'from-gray-400', colorTo: 'to-gray-600', image: 'image-AI.jpg' },
