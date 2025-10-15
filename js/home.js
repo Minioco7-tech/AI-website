@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
       card.className = `model-tile bg-[#2A2A2A] rounded-lg overflow-hidden transition transform duration-300 cursor-pointer border border-white border-opacity-10`;
   
       card.innerHTML = `
-        <div class="thumb" style="background-image: url('${cat.image}')"></div>
+        <div class="thumb lazy-bg" style="background-image: url('${cat.image}')"></div>
         <div class="p-4">
           <div class="flex flex-col items-center text-center">
             <div class="icon-circle bg-gradient-to-r ${cat.colorFrom} ${cat.colorTo} rounded-full p-3 mb-3 flex items-center justify-center">
