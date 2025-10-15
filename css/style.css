@@ -146,14 +146,7 @@ footer p {
   padding: 0.75rem; /* gap inside tile */
   background-color: #2A2A2A; /* matches tile background */
 }
-.model-tile .thumb-wrapper {
-  width: 100%;
-  aspect-ratio: 16/9;
-  overflow: hidden;
-  border-radius: 0.75rem;
-  padding: 0.25rem; /* gap inside tile */
-  background-color: #2A2A2A; /* matches tile background */
-}
+
 .model-tile .thumb {
   width: 100%;
   height: 100%;
