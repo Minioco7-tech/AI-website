@@ -163,3 +163,24 @@ footer p {
   border-radius: 9999px;
   margin-bottom: 0.75rem;
 }
+/* -------- Category Image (Inset style) -------- */
+.category-thumb-wrapper {
+  background-color: #2A2A2A; /* same as tile background */
+  border-radius: 0.75rem; /* match tile rounding */
+  padding: 6px; /* creates the uniform gap */
+  aspect-ratio: 16 / 9; /* keeps consistent shape */
+  overflow: hidden; /* ensures image respects rounded corners */
+}
+
+.category-thumb {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.75rem;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+.category-thumb:hover {
+  transform: scale(1.05);
+}
