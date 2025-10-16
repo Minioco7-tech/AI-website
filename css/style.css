@@ -147,6 +147,11 @@ footer p {
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: 0.75rem;
   overflow: hidden;
+  backdrop-filter: blur(12px) saturate(140%); /* gives frosted glass look */
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.4),       /* soft shadow for depth */
+    inset 0 1px 0 rgba(255, 255, 255, 0.08); /* faint top highlight for 3D effect */
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: pointer;
   display: flex;
@@ -200,13 +205,15 @@ footer p {
 }
 /* -------- Category Image (Inset style) -------- */
 .category-thumb-wrapper {
-  background-color: #2A2A2A; /* same as tile background */
+  background-color: rgba(42, 42, 42, 0.35); /* same as tile background */
   border-radius: 0.75rem;     /* matches tile rounding */
   padding: 6px;               /* uniform gap between tile and image */
   aspect-ratio: 16 / 9;       /* keeps consistent shape */
   width: 100%;
   overflow: hidden;           /* respects rounded corners */
-  margin-bottom: 0.75rem;     /* spacing between image and icon */
+  margin-bottom: 0.75rem; /* spacing between image and icon */
+   backdrop-filter: blur(12px) saturate(140%); /* gives frosted glass look */
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
 }
 
 .category-thumb {
