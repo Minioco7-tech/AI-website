@@ -51,8 +51,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       relatedGrid.innerHTML = related.map(r => `
         <a href="model.html?model=${encodeURIComponent(r.name)}"
            class="model-tile block overflow-hidden group">
-           
-          <img src="${r.image}" alt="${r.name}" class="object-cover w-full h-48" />
           
           <div class="p-4 flex flex-col text-left">
             <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-[#00BFFF] transition">
