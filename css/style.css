@@ -143,10 +143,15 @@ footer p {
 
 /* -------- Model-Tile (Unified Tile Design) -------- */
 .model-tile {
-  background: #2A2A2A;
+  background: rgba(42, 42, 42, 0.35);
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: 0.75rem;
   overflow: hidden;
+  backdrop-filter: blur(12px) saturate(140%); /* gives frosted glass look */
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.4),       /* soft shadow for depth */
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: pointer;
   display: flex;
