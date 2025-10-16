@@ -12,6 +12,20 @@ body {
   flex-direction: column;
 }
 
+/* Subtle overlay gradient for main content sections */
+.main-gradient {
+  position: absolute;      /* So it sits behind content */
+  inset: 0;                /* top/right/bottom/left = 0 */
+  pointer-events: none;    /* So it doesn’t block clicks */
+  background: linear-gradient(
+    to bottom, 
+    rgba(0, 0, 0, 0.8),        /* black at top */
+    rgba(13, 26, 43, 0.1),     /* subtle hero tint middle */
+    rgba(13, 26, 43, 0.05)     /* very slight tint at bottom */
+  );
+  z-index: 0;              /* Behind all content */
+}
+
 /* Smooth transitions for UI elements */
 a, button, input, select {
   transition: all 0.3s ease;
