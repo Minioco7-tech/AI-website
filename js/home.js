@@ -24,15 +24,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  document.getElementById('searchForm').addEventListener('submit', (e) => {
-    e.preventDefault(); // Prevent page reload
-    const query = document.getElementById('searchInput').value.trim();
+  document.getElementById("searchForm").addEventListener("submit", (e) => {
+    e.preventDefault(); // prevent page reload
+    const query = document.getElementById("searchInput").value.trim();
+    
+    if (!query) return;
   
-    if (query) {
-      console.log("Search for:", query);
-      // TODO: call your search/filter logic here
-    }
+    // Redirect to category or search page (your logic)
+    window.location.href = `category.html?search=${encodeURIComponent(query)}`;
   });
+
 
   // Categories data
   const categories = [
