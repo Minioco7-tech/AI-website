@@ -170,9 +170,6 @@ footer p {
   overflow: hidden;
   border-radius: 0.75rem;
   padding: 0.50rem;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
   /* subtle shadow inside for depth */
   box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.03);
 }
@@ -208,6 +205,7 @@ footer p {
   margin-bottom: 0.75rem;
 }
 /* -------- Category Image (Inset style) -------- */
+
 .category-thumb-wrapper {
   background-color: rgba(42, 42, 42, 0.35); /* same as tile background */
   border-radius: 0.75rem;     /* matches tile rounding */
@@ -233,3 +231,4 @@ footer p {
 .category-thumb:hover {
   transform: scale(1.05);
 }
+
