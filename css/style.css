@@ -166,11 +166,19 @@ footer p {
 
 .model-tile .thumb-wrapper {
   width: 100%;
-  aspect-ratio: 16/9; /* Maintain video-like ratio as in Stitch homepage */
+  aspect-ratio: 16/9;
   overflow: hidden;
   border-radius: 0.75rem;
-  padding: 0.50rem; /* gap inside tile */
-  background-color: #2A2A2A; /* matches tile background */
+  padding: 0.50rem;
+
+  /* 💎 Glassmorphic look — matches parent */
+  background: rgba(255, 255, 255, 0.05); /* subtle transparency */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  /* subtle shadow inside for depth */
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.03);
 }
 
 .model-tile .thumb {
