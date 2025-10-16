@@ -6,7 +6,12 @@
 body {
   font-family: 'Inter', sans-serif;
   color: #fff;
-  background-color: #0A0C10;
+  background: linear-gradient(
+    to bottom, 
+    rgba(0, 0, 0, 0.8),        /* black at top */
+    rgba(9, 209, 180, 0.1),     /* subtle hero tint middle */
+    rgba(9, 209, 180, 0.05)/* very slight tint at bottom */
+  );/* background-color: #0A0C10; */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
