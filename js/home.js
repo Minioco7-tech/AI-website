@@ -24,6 +24,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  document.getElementById('searchForm').addEventListener('submit', (e) => {
+    e.preventDefault(); // Prevent page reload
+    const query = document.getElementById('searchInput').value.trim();
+  
+    if (query) {
+      console.log("Search for:", query);
+      // TODO: call your search/filter logic here
+    }
+  });
+
   // Categories data
   const categories = [
     { key: 'all', name: 'All', icon: 'globe', colorFrom: 'from-purple-500', colorTo: 'to-pink-500', image: 'Images/all/all.webp' },
