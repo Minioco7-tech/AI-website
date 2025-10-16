@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     categories.forEach(cat => {
       const card = document.createElement('div');
-      card.className = 'model-tile bg-[#2A2A2A] rounded-lg overflow-hidden transition transform duration-300 cursor-pointer border border-white border-opacity-10';
+      card.className = 'card-style rounded-lg overflow-hidden transition transform duration-300 cursor-pointer border border-white border-opacity-10';
 
       // Lazy-load category image via data-bg attribute
       card.innerHTML = `
