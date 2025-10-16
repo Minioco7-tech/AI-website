@@ -43,16 +43,11 @@
 
   <!-- Hero Section -->
   <section 
-    class="relative h-screen flex flex-col items-center justify-center text-center text-white bg-cover bg-center"
-    style="background-image: url('image-AI.jpg');"
+    class="relative h-screen flex flex-col items-center justify-center text-center text-white bg-cover bg-center overflow-hidden"
+    style="background-image: url('Images/background/background.webp');"
   >
-
-    <div class="absolute inset-0 w-full h-full bg-cover bg-center rounded-none"
-      style ="background-image: url('Images/background/background.webp');">
-    </div>
-
-    <!-- Overlay -->
-    <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm"></div>
+    <!-- Dark gradient + blur overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/85 via-black/70 to-black/90 backdrop-blur-sm"></div>
 
     <!-- Hero Content -->
     <div class="relative z-10 max-w-2xl px-6">
@@ -69,7 +64,7 @@
           type="text"
           id="searchInput"
           placeholder="Search AI tools... or try 'All'"
-          class="w-full px-5 py-3 rounded-full bg-[#2A2A2A] text-white placeholder-[#E0E0E0]/60 focus:outline-none focus:ring-2 focus:ring-[#00BFFF]transition-all duration-300"
+          class="w-full px-5 py-3 rounded-full bg-[#2A2A2A]/80 text-white placeholder-[#E0E0E0]/60 focus:outline-none focus:ring-2 focus:ring-[#00BFFF] transition-all duration-300"
         >
         <i data-feather="search" class="absolute right-4 top-3 w-6 h-6 text-[#E0E0E0]"></i>
       </div>
