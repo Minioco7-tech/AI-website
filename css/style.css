@@ -236,6 +236,15 @@ footer p {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+#relatedCarousel {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+#relatedCarousel > .model-tile {
+  scroll-snap-align: center;
+}
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
