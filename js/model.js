@@ -48,25 +48,44 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (related.length === 0) {
       relatedGrid.innerHTML = '<p class="text-gray-400">No other models in this category yet.</p>';
     } else {
-      relatedGrid.innerHTML = related.map(r => `
+        // Build the carousel
+      const carousel = document.getElementById("relatedCarousel");
+      carousel.innerHTML = related.map(r => `
         <a href="model.html?model=${encodeURIComponent(r.name)}"
-           class="model-tile block overflow-hidden group">
+           class="model-tile flex-shrink-0 w-80 snap-center group">
           
+          <!-- Image -->
+          <div class="thumb-wrapper">
+            <div class="thumb" style="background-image: url('${r.image}')"></div>
+          </div>
+    
+          <!-- Text -->
           <div class="p-4 flex flex-col text-left">
             <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-[#00BFFF] transition">
               ${r.name}
             </h3>
-            <p class="text-gray-300 text-sm mb-3 line-clamp-3">
-              ${r.description}
-            </p>
+            <p class="text-gray-300 text-sm mb-3 line-clamp-3">${r.description}</p>
             <span class="inline-block bg-[#00BFFF]/30 text-white text-xs font-medium px-3 py-1 rounded-full self-start backdrop-blur-sm">
               ${r.category}
             </span>
           </div>
         </a>
       `).join("");
+    
+      // Scroll behavior for arrows
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+    
+      const scrollAmount = 320; // roughly one card width + gap
+    
+      prevBtn.addEventListener("click", () => {
+        carousel.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+      });
+    
+      nextBtn.addEventListener("click", () => {
+        carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      });
     }
-
   } catch (err) {
     console.error("Error showing models grid:", err);
     modelDiv.innerHTML = '<p class="text-gray-300 text-center mt-8">Error showing models grid.</p>';
