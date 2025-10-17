@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     } else {
       carousel.innerHTML = related.map(r => `
         <a href="model.html?model=${encodeURIComponent(r.name)}"
-           class="model-tile flex-shrink-0 w-80 snap-center group">
+           class="model-tile flex-shrink-0 w-[90%] sm:w-[60%] md:w-[30%] snap-center group mx-auto">
           
           <div class="thumb-wrapper">
             <div class="thumb" style="background-image: url('${r.image}')"></div>
