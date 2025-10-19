@@ -54,18 +54,19 @@ document.addEventListener("DOMContentLoaded", async () => {
     } else {
       carousel.innerHTML = related.map(r => `
         <a href="model.html?model=${encodeURIComponent(r.name)}"
-           class="model-tile flex-shrink-0 md:h-[280px] w-[70%] sm:w-[50%] md:w-[25%] snap-center group mx-auto pb-6">
-          
-          <div class="thumb-wrapper">
-            <div class="thumb" style="background-image: url('${r.image}')"></div>
-          </div>
-      
-          <div class="p-4 flex flex-col text-left">
-            <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-[#00BFFF] transition">${r.name}</h3>
-            <p class="text-gray-300 text-sm mb-3 line-clamp-3">${r.description}</p>
-            <span class="inline-block bg-[#00BFFF]/30 text-white text-xs font-medium px-3 py-1 rounded-full self-start backdrop-blur-sm">
-              ${r.category}
-            </span>
+           class="model-tile flex-shrink-0 w-[90%] sm:w-[60%] md:w-[28%] snap-center group mx-auto pb-6">
+          <div class="flex flex-col h-[80%]">
+            <div class="thumb-wrapper">
+              <div class="thumb" style="background-image: url('${r.image}')"></div>
+            </div>
+        
+            <div class="p-4 flex flex-col text-left">
+              <h3 class="text-lg font-semibold text-white mb-2 group-hover:text-[#00BFFF] transition">${r.name}</h3>
+              <p class="text-gray-300 text-sm mb-3 line-clamp-3">${r.description}</p>
+              <span class="inline-block bg-[#00BFFF]/30 text-white text-xs font-medium px-3 py-1 rounded-full self-start backdrop-blur-sm">
+                ${r.category}
+              </span>
+            </div>
           </div>
         </a>
       `).join("");
