@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </nav>
     
             <!-- All Models Button -->
-            <a href="home.html?" class="btn-primary px-4 py-2 rounded-lg text-sm font-medium shadow-lg transition hover:scale-105">
+            <a href="index.html?" class="btn-primary px-4 py-2 rounded-lg text-sm font-medium shadow-lg transition hover:scale-105">
               Home
             </a>
           </div>
