@@ -19,10 +19,17 @@ document.addEventListener("DOMContentLoaded", () => {
             </a>
       
             <!-- Right: All Models + Sort + Random -->
-            <div class="flex items-center space-x-3">
-              <a href="about.html" class="text-white hover:text-#00BFFF transition">About</a>
-              <a href="index.html" class="btn-primary px-4 py-2 rounded-lg text-sm font-medium shadow-lg transition hover:scale-105">Home</a>
-            </div>
+            <div class="flex items-center space-x-6">
+            <!-- Nav links -->
+            <nav class="flex space-x-4 backdrop-blur-lg px-4 py-1 rounded-lg flex-row md:space-x-4 space-y-2 md:space-y-0">
+              <a href="about.html" class="text-white hover:text-[#00BFFF] transition-colors">About</a>
+            </nav>
+    
+            <!-- All Models Button -->
+            <a href="index.html?" class="btn-primary px-4 py-2 rounded-lg text-sm font-medium shadow-lg transition hover:scale-105">
+              Home
+            </a>
+          </div>
           </div>
         </div>
         <!-- Subtle Separator -->
