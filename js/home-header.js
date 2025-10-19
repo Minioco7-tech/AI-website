@@ -1,6 +1,6 @@
 // header.js
 document.addEventListener("DOMContentLoaded", () => {
-  const headerContainer = document.getElementById("header");
+  const headerContainer = document.getElementById("home-header");
 
   if (!headerContainer) {
     console.error("Header container (#header) not found.");
