@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About AIviary</title>
+<link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    body {
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        color: white;
+    }
+</style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+<!-- Navigation -->
+<nav class="bg-black bg-opacity-20 backdrop-blur-lg border-b border-white border-opacity-10 sticky top-0 z-50 p-4 flex justify-between items-center">
+  <a href="index.html" class="flex items-center space-x-3 group">
+    <div class="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+      <i data-feather="zap" class="w-4 h-4"></i>
+    </div>
+    <span class="text-xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent group-hover:opacity-80 transition-opacity duration-300">
+      AIviary
+    </span>
+  </a>
+  <a href="index.html" class="px-4 py-2 bg-purple-600 hover:bg-purple-500 text-white rounded-lg text-sm font-medium shadow-lg transition transform duration-200">
+    Home
+  </a>
+</nav>
+
+<main class="flex-1 max-w-5xl mx-auto px-6 py-12 space-y-12">
+
+  <!-- About Section -->
+  <section class="space-y-6">
+    <h1 class="text-4xl font-bold text-center bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
+      About AIviary
+    </h1>
+    <p class="text-gray-300 text-center text-lg leading-relaxed">
+      AIviary is your one-stop platform for discovering the world’s smartest AI tools. Whether you’re a creator, student, or business professional, AIviary makes it simple to explore and find AI models tailored to your needs. We aggregate models from multiple sources into a single, easy-to-browse library.
+    </p>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="space-y-6">
+    <h2 class="text-2xl font-semibold text-center">How It Works</h2>
+    <p class="text-gray-300 text-center text-lg leading-relaxed">
+      Browse categories, search for a task, or explore random models to find the perfect AI tool. Each model links directly to its source—whether it’s a dedicated website or a platform like Hugging Face—so you can start using it immediately. AIviary does not host or run any AI models; we provide a curated directory to simplify your discovery process.
+    </p>
+  </section>
+
+  <!-- Future Updates & Version History -->
+  <section class="space-y-6">
+    <h2 class="text-2xl font-semibold text-center">Future Updates & Version History</h2>
+    <p class="text-gray-300 text-center">
+      AIviary is constantly evolving. Here’s a glimpse of what’s coming and what we’ve already launched:
+    </p>
+    <ul class="list-disc list-inside text-gray-300 space-y-2 max-w-2xl mx-auto">
+        <li><strong>v1.0</strong> – Initial public launch: core categories, search, random model discovery.</li>
+        <li><strong>v1.1</strong> – Improved search relevance and category filtering, minor UI tweaks.</li>
+        <li><strong>v1.2</strong> – Added new AI categories and expanded model dataset.</li>
+        <li><strong>v2.0 (Planned)</strong> – Personalized recommendations, user accounts, and bookmarking models.</li>
+        <li><strong>v2.1 (Planned)</strong> – Monetization features: affiliate links, ads, and optional premium content.</li>
+    </ul>
+    <p class="text-gray-400 text-sm text-center">
+      Future updates are designed to be simple to use while improving the discovery experience. Stay tuned!
+    </p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="space-y-6">
+    <h2 class="text-2xl font-semibold text-center">Contact & Connect</h2>
+    <p class="text-gray-300 text-center text-lg leading-relaxed">
+      Have questions, suggestions, or just want to say hello? Reach out via our social channels or email. We’d love to hear from you!
+    </p>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-black bg-opacity-20 backdrop-blur-lg border-t border-white border-opacity-10 mt-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="md:col-span-2">
+              <div class="flex items-center space-x-3 mb-4">
+                  <div class="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center">
+                      <i data-feather="zap" class="w-4 h-4"></i>
+                  </div>
+                  <span class="text-xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                      AIviary
+                  </span>
+              </div>
+              <p class="text-gray-300 leading-relaxed">
+                  Discover and explore the world's most innovative AI tools. From creative writing assistants to advanced analytics platforms, find the perfect AI companion for your needs.
+              </p>
+          </div>
+
+          <div>
+              <h4 class="text-lg font-semibold text-white mb-4">Legal</h4>
+              <div class="space-y-2">
+                  <a href="#" class="block text-gray-300 hover:text-white transition-colors duration-200">Disclaimer</a>
+                  <a href="#" class="block text-gray-300 hover:text-white transition-colors duration-200">Privacy Policy</a>
+                  <a href="#" class="block text-gray-300 hover:text-white transition-colors duration-200">Terms of Use</a>
+                  <a href="#" class="block text-gray-300 hover:text-white transition-colors duration-200">DMCA</a>
+              </div>
+          </div>
+
+          <div>
+              <h4 class="text-lg font-semibold text-white mb-4">Connect</h4>
+              <div class="space-y-2">
+                  <a href="#" class="block text-gray-300 hover:text-white transition-colors duration-200">GitHub</a>
+                  <a href="#" class="block text-gray-300 hover:text-white transition-colors duration-200">Twitter</a>
+                  <a href="#" class="block text-gray-300 hover:text-white transition-colors duration-200">Contact</a>
+              </div>
+          </div>
+      </div>
+
+      <div class="border-t border-white border-opacity-10 mt-8 pt-8 text-center">
+          <p class="text-gray-400">
+              &copy; 2025 AIviary. All AI tools belong to their respective owners.
+          </p>
+      </div>
+  </div>
+</footer>
+
+<script>
+  feather.replace();
+</script>
+
+</body>
+</html>
