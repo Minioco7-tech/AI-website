@@ -117,7 +117,7 @@ async function loadCategoryModels() {
     if(document.getElementById('categoryTitle')) document.getElementById('categoryTitle').textContent = getCategoryName(categoryKey);
 
     try {
-        const response = await fetch('../models.json');
+        const response = await fetch('./models.json');
         if(!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
         const modelsData = await response.json();
 
