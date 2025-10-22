@@ -37,16 +37,16 @@ export const categoryColors = {
 
 export const categories = [
   { key: 'all', name: 'All Models' },
-  { key: 'writing', name: 'Writing & Productivity' },
-  { key: 'creativity', name: 'Creativity & Design' },
-  { key: 'learning', name: 'Learning & Research' },
+  { key: 'productivity', name: 'Writing & Productivity' }, 
+  { key: 'creativity', name: 'Creativity & Design' }, 
+  { key: 'learning', name: 'Learning & Research' }, 
   { key: 'business', name: 'Business & Marketing' },
   { key: 'chatbots', name: 'Chatbots & Agents' },
-  { key: 'audio', name: 'Audio & Music' },
-  { key: 'coding', name: 'Coding & Dev Tools' },
-  { key: 'science', name: 'Science & Health' },
-  { key: 'finance', name: 'Finance & Analytics' },
-  { key: 'everyday', name: 'Everyday Life' }
+  { key: 'audio', name: 'Audio & Music' }, 
+  { key: 'coding', name: 'Coding & Dev Tools' }, 
+  { key: 'science', name: 'Science & Health' }, 
+  { key: 'documents', name: 'Documents & Reports' }, 
+  { key: 'spreadsheets', name: 'Spreadsheets & Data'} 
 ];
 
 export function getCategoryName(key) {
