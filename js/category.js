@@ -45,7 +45,7 @@ function displayModels(models) {
     modelsGrid.innerHTML = '';
     modelsGrid.className = 'grid gap-6 sm:grid-cols-2 lg:grid-cols-3';
     
-     models.forEach(model => {
+    models.forEach(model => {
         // Use the universal createModelCard function
         const card = createModelCard(model);
         modelsGrid.appendChild(card);
