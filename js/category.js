@@ -39,8 +39,8 @@ async function loadModels() {
       categoryKey === 'all'
         ? modelsData
         : modelsData.filter(m =>
-            Array.isArray(m.categories)
-              ? m.categories.some(c => c.toLowerCase() === categoryKey)
+            Array.isArray(m.category)
+              ? m.category.some(c => c.toLowerCase() === categoryKey)
               : m.category?.toLowerCase() === categoryKey
           );
 
