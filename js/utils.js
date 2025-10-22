@@ -24,7 +24,7 @@ export function getRandomModels(models, n) {
 export const categoryColors = {
   all: 'bg-gradient-to-r from-[#00BFFF] to-blue-400',
   productivity: 'bg-gradient-to-r from-[#A855F7] to-[#6366F1]',       // purple/indigo
-  creativity: 'bg-gradient-to-r from-[#EC4899] to-[#F59E0B]',    // pink/orange
+  design: 'bg-gradient-to-r from-[#EC4899] to-[#F59E0B]',    // pink/orange
   learning: 'bg-gradient-to-r from-[#22D3EE] to-[#3B82F6]',      // cyan/blue
   business: 'bg-gradient-to-r from-[#10B981] to-[#059669]',      // emerald/green
   chatbots: 'bg-gradient-to-r from-[#F59E0B] to-[#D97706]',      // amber
@@ -38,7 +38,7 @@ export const categoryColors = {
 export const categories = [
   { key: 'all', name: 'All Models' },
   { key: 'productivity', name: 'Writing & Productivity' }, 
-  { key: 'creativity', name: 'Creativity & Design' }, 
+  { key: 'design', name: 'Creativity & Design' }, 
   { key: 'learning', name: 'Learning & Research' }, 
   { key: 'business', name: 'Business & Marketing' },
   { key: 'chatbots', name: 'Chatbots & Agents' },
