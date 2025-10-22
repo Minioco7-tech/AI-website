@@ -1,7 +1,7 @@
 // ------------------------------
 // Category Page JS
 // ------------------------------
-import { createModelCard } from './js/modelCard.js';
+import { createModelCard } from '../modelCard.js';
 
 const modelsGrid = document.getElementById('modelsGrid');
 const loadingState = document.getElementById('loadingState');
