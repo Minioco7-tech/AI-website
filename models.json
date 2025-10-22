@@ -137,7 +137,7 @@
     {
       "id": 16,
       "name": "Midjourney",
-      "category": "creativity",
+      "category": "design",
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -146,7 +146,7 @@
     {
       "id": 17,
       "name": "DALL-E 3",
-      "category": "creativity",
+      "category": "design",
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -155,7 +155,7 @@
     {
       "id": 18,
       "name": "Canva",
-      "category": "creativity",
+      "category": "design",
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -164,7 +164,7 @@
     {
       "id": 19,
       "name": "Playground",
-      "category": "creativity",
+      "category": "design",
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -173,7 +173,7 @@
     {
       "id": 20,
       "name": "Leonardo",
-      "category": "creativity",
+      "category": "design",
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -448,5 +448,5 @@
       "description": "N/A",
       "image": "assets/images/placeholder.png",
       "link": "https://inkforall.com/"
-    },
+    }
 ]
