@@ -6,7 +6,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://elevenlabs.io",
+      "link": "https://elevenlabs.io"
     },
     {
       "id": 2,
@@ -15,7 +15,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://podcast.adobe.com/en",
+      "link": "https://podcast.adobe.com/en"
     },
     {
       "id": 3,
@@ -24,7 +24,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link":"https://cleanvoice.ai/",
+      "link":"https://cleanvoice.ai/"
     },
     {
       "id": 4,
@@ -33,7 +33,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://www.resemble.ai/",
+      "link": "https://www.resemble.ai/"
     },
     {
       "id": 5,
@@ -42,7 +42,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://podcastle.ai/ai-voices",
+      "link": "https://podcastle.ai/ai-voices"
     },
     {
       "id": 6,
@@ -51,7 +51,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://chat.openai.com",
+      "link": "https://chat.openai.com"
     },
     {
       "id": 7,
@@ -60,7 +60,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://gemini.google.com",
+      "link": "https://gemini.google.com"
     },
     {
       "id": 8,
@@ -69,7 +69,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://www.meta.ai",
+      "link": "https://www.meta.ai"
     },
     {
       "id": 9,
@@ -78,7 +78,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",    
-      "link": "https://www.perplexity.ai",
+      "link": "https://www.perplexity.ai"
     },
     {
       "id": 10,
@@ -87,7 +87,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://claude.ai",
+      "link": "https://claude.ai"
     },
     {
       "id": 11,
@@ -96,7 +96,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://openai.com/index/openai-codex",
+      "link": "https://openai.com/index/openai-codex"
     },
     {
       "id": 12,
@@ -105,7 +105,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://www.codium.ai/qodo/",
+      "link": "https://www.codium.ai/qodo/"
     },
     {
       "id": 13,
@@ -114,7 +114,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://stitch.withgoogle.com/",
+      "link": "https://stitch.withgoogle.com/"
     },
     {
       "id": 14,
@@ -123,7 +123,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://www.blackbox.ai/",
+      "link": "https://www.blackbox.ai/"
     },
     {
       "id": 15,
@@ -132,7 +132,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://huggingface.co/spaces/enzostvs/deepsite",
+      "link": "https://huggingface.co/spaces/enzostvs/deepsite"
     },
     {
       "id": 16,
@@ -141,7 +141,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://www.midjourney.com/home",
+      "link": "https://www.midjourney.com/home"
     },
     {
       "id": 17,
@@ -150,7 +150,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://openai.com/index/dall-e-3/",
+      "link": "https://openai.com/index/dall-e-3/"
     },
     {
       "id": 18,
@@ -159,7 +159,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://www.canva.com/ai-image-generator/?msockid=0a20bcbb87566ef007cfae3e86b66fa1",
+      "link": "https://www.canva.com/ai-image-generator/?msockid=0a20bcbb87566ef007cfae3e86b66fa1"
     },
     {
       "id": 19,
@@ -168,7 +168,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://playground.com/",
+      "link": "https://playground.com/"
     },
     {
       "id": 20,
@@ -176,8 +176,8 @@
       "category": "creativity",
       "type": "N/A",
       "description": "N/A",
-      "image":,
-      "link": "https://leonardo.ai/",
+      "image": "assets/images/placeholder.png",
+      "link": "https://leonardo.ai/"
     },
     {
       "id": 21,
@@ -186,7 +186,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://quillbot.com/",
+      "link": "https://quillbot.com/"
     },
     {
       "id": 22,
@@ -195,7 +195,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://scribehow.com/",
+      "link": "https://scribehow.com/"
     },
     {
       "id": 23,
@@ -204,7 +204,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://www.scholarcy.com/",
+      "link": "https://www.scholarcy.com/"
     },
     {
       "id": 24,
@@ -213,7 +213,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://paperpal.com/",
+      "link": "https://paperpal.com/"
     },
     {
       "id": 25,
@@ -231,7 +231,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://www.alpha-sense.com/",
+      "link": "https://www.alpha-sense.com/"
     },
     {
       "id": 27,
@@ -240,7 +240,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://numer.ai/",
+      "link": "https://numer.ai/"
     },
     {
       "id": 28,
@@ -249,7 +249,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://www.datarails.com/",
+      "link": "https://www.datarails.com/"
     },
     {
       "id": 29,
@@ -258,7 +258,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://www.workiva.com/uk/",
+      "link": "https://www.workiva.com/uk/"
     },
     {
       "id": 30,
@@ -267,7 +267,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://www.zeta-alpha.com/",
+      "link": "https://www.zeta-alpha.com/"
     },
     {
       "id": 31,
@@ -276,7 +276,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://www.khanacademy.org/",
+      "link": "https://www.khanacademy.org/"
     },
     {
       "id": 32,
@@ -285,16 +285,16 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://www.mindgrasp.ai/?utm_source=chatgpt.com",
+      "link": "https://www.mindgrasp.ai/?utm_source=chatgpt.com"
     },
     {
       "id": 33,
-      "name": "Scholarcy",
+      "name": "OpenRead",
       "category": "learning",
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://www.scholarcy.com/",
+      "link": "https://www.openread.academy/"
     },
     {
       "id": 34,
@@ -303,7 +303,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://www.explainpaper.com/",
+      "link": "https://www.explainpaper.com/"
     },
     {
       "id": 35,
@@ -312,7 +312,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://elicit.com/",
+      "link": "https://elicit.com/"
     },
     {
       "id": 36,
@@ -321,7 +321,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://deepmind.google/science/alphafold/",
+      "link": "https://deepmind.google/science/alphafold/"
     },
     {
       "id": 37,
@@ -330,7 +330,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://scispace.com/",
+      "link": "https://scispace.com/"
     },
     {
       "id": 38,
@@ -339,7 +339,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://www.scigraph.com/",
+      "link": "https://www.scigraph.com/"
     },
     {
       "id": 39,
@@ -348,7 +348,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://www.labguru.com/",
+      "link": "https://www.labguru.com/"
     },
     {
       "id": 40,
@@ -357,7 +357,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://www.pinecone.io/",
+      "link": "https://www.pinecone.io/"
     },
     {
       "id": 41,
@@ -366,7 +366,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://gptexcel.uk/?utm_source=chatgpt.com",
+      "link": "https://gptexcel.uk/?utm_source=chatgpt.com"
     },
     {
       "id": 42,
@@ -375,7 +375,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://datagpt.com/",
+      "link": "https://datagpt.com/"
     },
     {
       "id": 43,
@@ -384,16 +384,16 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://arcwise.app/",
+      "link": "https://arcwise.app/"
     },
     {
       "id": 44,
       "name": "Google Workspace",
-      "category": "spreadhseets",
+      "category": "spreadsheets",
       "type": "N/A",
       "description": "N/A", 
       "image": "assets/images/placeholder.png",
-      "link": "https://workspace.google.com/",
+      "link": "https://workspace.google.com/"
     },
     {
       "id": 45,
@@ -402,7 +402,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://www.formulabot.com/",
+      "link": "https://www.formulabot.com/"
     },
     {
       "id": 46,
@@ -411,7 +411,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://www.grammarly.com/?msockid=0a20bcbb87566ef007cfae3e86b66fa1",
+      "link": "https://www.grammarly.com/?msockid=0a20bcbb87566ef007cfae3e86b66fa1"
     },
     {
       "id": 47,
@@ -420,7 +420,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://writer.com/",
+      "link": "https://writer.com/"
     },
     {
       "id": 48,
@@ -429,7 +429,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://copysmith.ai/",
+      "link": "https://copysmith.ai/"
     },
     {
       "id": 49,
@@ -438,7 +438,7 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://www.hyperwriteai.com/",
+      "link": "https://www.hyperwriteai.com/"
     },
     {
       "id": 50,
@@ -447,6 +447,6 @@
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
-      "link": "https://inkforall.com/",
+      "link": "https://inkforall.com/"
     },
 ]
