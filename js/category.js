@@ -2,8 +2,8 @@
 // Category Page JS (Modular + Shared Card Design)
 // ------------------------------
 
-import { createModelCard } from './modelCard.js';
-import { getCategoryName } from './utils.js';
+import { createModelCard } from './js/modelCard.js';
+import { getCategoryName } from './js/utils.js';
 
 const modelsGrid = document.getElementById('modelsGrid');
 const loadingState = document.getElementById('loadingState');
@@ -30,7 +30,7 @@ async function loadModels() {
   try {
     if (loadingState) loadingState.classList.remove('hidden');
 
-    const response = await fetch('./data/models.json');
+    const response = await fetch('./models.json');
     if (!response.ok) throw new Error(`HTTP error! ${response.status}`);
     const modelsData = await response.json();
 
