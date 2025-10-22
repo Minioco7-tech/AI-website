@@ -57,7 +57,7 @@ function getCategoryFromUrl() {
 // Display models in the grid
 function displayModels(models) {
     modelsGrid.innerHTML = '';
-    modelsGrid.className = 'grid gap-6 sm:grid-cols-2 lg:grid-cols-3';
+    modelsGrid.className = 'grid gap-6 sm:grid-cols-2 lg:grid-cols-3 px-4';
     
     models.forEach(model => {
         const colorClass = categoryColors[model.category.toLowerCase()] || 'bg-black/20';
