@@ -23,16 +23,16 @@ export function getRandomModels(models, n) {
 
 export const categoryColors = {
   all: 'bg-gradient-to-r from-[#00BFFF] to-blue-400',
-  writing: 'bg-gradient-to-r from-[#A855F7] to-[#6366F1]',
-  creativity: 'bg-gradient-to-r from-[#EC4899] to-[#F59E0B]',
-  learning: 'bg-gradient-to-r from-[#22D3EE] to-[#3B82F6]',
-  business: 'bg-gradient-to-r from-[#10B981] to-[#059669]',
-  chatbots: 'bg-gradient-to-r from-[#F59E0B] to-[#D97706]',
-  audio: 'bg-gradient-to-r from-[#E11D48] to-[#DB2777]',
-  coding: 'bg-gradient-to-r from-[#8B5CF6] to-[#6366F1]',
-  science: 'bg-gradient-to-r from-[#14B8A6] to-[#06B6D4]',
-  finance: 'bg-gradient-to-r from-[#FACC15] to-[#EAB308]',
-  everyday: 'bg-gradient-to-r from-[#60A5FA] to-[#3B82F6]'
+  productivity: 'bg-gradient-to-r from-[#A855F7] to-[#6366F1]',       // purple/indigo
+  creativity: 'bg-gradient-to-r from-[#EC4899] to-[#F59E0B]',    // pink/orange
+  learning: 'bg-gradient-to-r from-[#22D3EE] to-[#3B82F6]',      // cyan/blue
+  business: 'bg-gradient-to-r from-[#10B981] to-[#059669]',      // emerald/green
+  chatbots: 'bg-gradient-to-r from-[#F59E0B] to-[#D97706]',      // amber
+  audio: 'bg-gradient-to-r from-[#E11D48] to-[#DB2777]',         // red/pink
+  coding: 'bg-gradient-to-r from-[#8B5CF6] to-[#6366F1]',        // violet/indigo
+  science: 'bg-gradient-to-r from-[#14B8A6] to-[#06B6D4]',       // teal
+  documents: 'bg-gradient-to-r from-[#FACC15] to-[#EAB308]',       // yellow
+  spreadsheets: 'bg-gradient-to-r from-[#60A5FA] to-[#3B82F6]'       // light blue
 };
 
 export const categories = [
