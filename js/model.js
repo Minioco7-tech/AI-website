@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", async () => {
+  console.log("Model JS loaded");
+
   // Feather icons
   if (window.feather) feather.replace();
 
@@ -6,7 +8,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   const modelName = params.get("model");
 
   const modelDiv = document.getElementById("modelContent");
-  const relatedGrid = document.getElementById("relatedModelsGrid");
+  if (!modelDiv) {
+    console.error("modelContent element not found");
+    return;
+  }
 
   if (!modelName) {
     modelDiv.innerHTML = '<p class="text-gray-300 text-center mt-8">No model specified.</p>';
@@ -18,16 +23,16 @@ document.addEventListener("DOMContentLoaded", async () => {
   // ------------------------------
   const categoryColors = {
     all: 'bg-gradient-to-r from-[#00BFFF] to-blue-400',
-    productivity: 'bg-gradient-to-r from-[#A855F7] to-[#6366F1]',       // purple/indigo
-    design: 'bg-gradient-to-r from-[#EC4899] to-[#F59E0B]',    // pink/orange
-    learning: 'bg-gradient-to-r from-[#22D3EE] to-[#3B82F6]',      // cyan/blue
-    business: 'bg-gradient-to-r from-[#10B981] to-[#059669]',      // emerald/green
-    chatbots: 'bg-gradient-to-r from-[#F59E0B] to-[#D97706]',      // amber
-    audio: 'bg-gradient-to-r from-[#E11D48] to-[#DB2777]',         // red/pink
-    coding: 'bg-gradient-to-r from-[#8B5CF6] to-[#6366F1]',        // violet/indigo
-    science: 'bg-gradient-to-r from-[#14B8A6] to-[#06B6D4]',       // teal
-    documents: 'bg-gradient-to-r from-[#FACC15] to-[#EAB308]',       // yellow
-    spreadsheets: 'bg-gradient-to-r from-[#60A5FA] to-[#3B82F6]'       // light blue
+    productivity: 'bg-gradient-to-r from-[#A855F7] to-[#6366F1]',
+    design: 'bg-gradient-to-r from-[#EC4899] to-[#F59E0B]',
+    learning: 'bg-gradient-to-r from-[#22D3EE] to-[#3B82F6]',
+    business: 'bg-gradient-to-r from-[#10B981] to-[#059669]',
+    chatbots: 'bg-gradient-to-r from-[#F59E0B] to-[#D97706]',
+    audio: 'bg-gradient-to-r from-[#E11D48] to-[#DB2777]',
+    coding: 'bg-gradient-to-r from-[#8B5CF6] to-[#6366F1]',
+    science: 'bg-gradient-to-r from-[#14B8A6] to-[#06B6D4]',
+    documents: 'bg-gradient-to-r from-[#FACC15] to-[#EAB308]',
+    spreadsheets: 'bg-gradient-to-r from-[#60A5FA] to-[#3B82F6]'
   };
 
   function getCategoryName(catKey) {
@@ -48,14 +53,14 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   // ------------------------------
-  // Shared card builder (from category.js)
+  // Shared card builder
   // ------------------------------
   function createModelCard(model) {
     const colorClass = categoryColors[model.category?.toLowerCase()] || 'bg-black/20';
 
     return `
       <a href="model.html?model=${encodeURIComponent(model.name)}"
-         class="model-tile flex flex-col flex-shrink-0 w-[90%] sm:w-[60%] md:w-[28%] 
+         class="model-tile flex flex-col flex-shrink-0 w-full sm:w-[80%] md:w-[28%] max-w-xs md:max-w-[320px]
                 rounded-lg overflow-hidden snap-center group mx-auto pb-6 
                 transition transform duration-300 hover:scale-[1.03] border border-white border-opacity-10">
 
@@ -100,7 +105,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           <h1 class="text-3xl sm:text-4xl font-bold text-white">${model.name}</h1>
           <p class="text-gray-300 mt-2">${model.description}</p>
           <div class="mt-2 text-sm text-gray-400">
-            Category: <span class="text-primary font-semibold">${model.category}</span>
+            Category: <span class="text-primary font-semibold">${getCategoryName(model.category)}</span>
           </div>
         </div>
         <button id="tryButton" class="btn-primary px-6 py-3 text-white font-bold rounded-lg whitespace-nowrap">
@@ -112,51 +117,51 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.getElementById("tryButton").onclick = () => window.open(model.link, "_blank");
 
     // ------------------------------
-  // Related models carousel
-  // ------------------------------
-  const related = models.filter(m => m.category === model.category && m.name !== model.name).slice(0, 12); // max 12 related
-  const carousel = document.getElementById("relatedCarousel");
-  
-  if (!carousel) throw new Error("relatedCarousel element not found");
-  
-  if (related.length === 0) {
-    carousel.innerHTML = '<p class="text-gray-400">No other models in this category yet.</p>';
-  } else {
-    // Inject cards
-    carousel.innerHTML = related.map(createModelCard).join("");
-  
-    // Feather icons for arrows
-    if (window.feather) feather.replace();
-  
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
-  
-    // Helper: get total card width including gap
-    function getCardWidth() {
-      const card = carousel.querySelector(".model-tile");
-      if (!card) return 300; // fallback
-      const style = window.getComputedStyle(card);
-      const marginRight = parseInt(style.marginRight) || 0;
-      return card.offsetWidth + marginRight;
+    // Related models carousel
+    // ------------------------------
+    const related = models.filter(m => m.category === model.category && m.name !== model.name).slice(0, 12);
+    const carousel = document.getElementById("relatedCarousel");
+    if (!carousel) throw new Error("relatedCarousel element not found");
+
+    if (related.length === 0) {
+      carousel.innerHTML = '<p class="text-gray-400">No other models in this category yet.</p>';
+    } else {
+      carousel.innerHTML = related.map(createModelCard).join("");
+
+      if (window.feather) feather.replace();
+
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+
+      function getCardWidth() {
+        const card = carousel.querySelector(".model-tile");
+        if (!card) return 300;
+        const style = window.getComputedStyle(card);
+        const marginRight = parseInt(style.marginRight) || 0;
+        return card.offsetWidth + marginRight;
+      }
+
+      function scrollDesktop(direction = "next") {
+        const scrollAmount = getCardWidth() * 3;
+        carousel.scrollBy({ left: direction === "next" ? scrollAmount : -scrollAmount, behavior: "smooth" });
+      }
+
+      prevBtn?.addEventListener("click", () => scrollDesktop("prev"));
+      nextBtn?.addEventListener("click", () => scrollDesktop("next"));
+
+      // Show/hide arrows on desktop
+      function updateArrows() {
+        if (!prevBtn || !nextBtn) return;
+        const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+        prevBtn.style.display = carousel.scrollLeft > 0 ? "flex" : "none";
+        nextBtn.style.display = carousel.scrollLeft < maxScroll ? "flex" : "none";
+      }
+      carousel.addEventListener("scroll", updateArrows);
+      updateArrows(); // initial
     }
-  
-    // Scroll by 3 cards on desktop
-    function scrollDesktop(direction = "next") {
-      const scrollAmount = getCardWidth() * 3;
-      carousel.scrollBy({ left: direction === "next" ? scrollAmount : -scrollAmount, behavior: "smooth" });
-    }
-  
-    prevBtn?.addEventListener("click", () => scrollDesktop("prev"));
-    nextBtn?.addEventListener("click", () => scrollDesktop("next"));
-  
-    // Optional: show/hide arrows if at start/end
-    function updateArrows() {
-      if (!prevBtn || !nextBtn) return;
-      const maxScroll = carousel.scrollWidth - carousel.clientWidth;
-      prevBtn.style.display = carousel.scrollLeft > 0 ? "flex" : "none";
-      nextBtn.style.display = carousel.scrollLeft < maxScroll ? "flex" : "none";
-    }
-    carousel.addEventListener("scroll", updateArrows);
-    updateArrows(); // initial
+
+  } catch (err) {
+    console.error("Error showing models grid:", err);
+    modelDiv.innerHTML = '<p class="text-gray-300 text-center mt-8">Error showing models grid.</p>';
   }
 });
