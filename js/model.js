@@ -84,18 +84,18 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     document.getElementById("tryButton").onclick = () => window.open(model.link, "_blank");
 
-    // ------------------------------
-// Related Models Carousel
-// ------------------------------
-const related = models
-  .filter(m => m.category === model.category && m.name !== model.name)
-  .slice(0, 12); // max 12 related
-
-const carousel = document.getElementById("relatedCarousel");
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
-
-if (!carousel) {
+  // ------------------------------
+  // Related Models Carousel
+  // ------------------------------
+  const related = models
+    .filter(m => m.category === model.category && m.name !== model.name)
+    .slice(0, 12); // max 12 related
+  
+  const carousel = document.getElementById("relatedCarousel");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+  
+  if (!carousel) {
     console.error("relatedCarousel element not found");
   } else if (related.length === 0) {
     carousel.innerHTML = '<p class="text-gray-400 text-center w-full">No other models in this category yet.</p>';
@@ -103,21 +103,22 @@ if (!carousel) {
     // Inject cards
     carousel.innerHTML = related.map(createModelCard).join("");
   
-    // Feather icons for arrows
     if (window.feather) feather.replace();
   
-    // Center if fewer than 3
-    if (related.length < 3) {
+    // Center if fewer than 3 on desktop
+    if (related.length < 3 && window.innerWidth >= 768) {
       carousel.classList.add("justify-center");
     } else {
       carousel.classList.remove("justify-center");
     }
   
     // ------------------------------
-    // Scroll Behavior
+    // Scroll Behavior (Responsive)
     // ------------------------------
+    function getVisibleCards() {
+      return window.innerWidth >= 768 ? 3 : 1; // desktop: 3, mobile: 1
+    }
   
-    // Helper: get total card width including gap
     function getCardWidth() {
       const card = carousel.querySelector(".model-tile");
       if (!card) return 300; // fallback
@@ -126,29 +127,44 @@ if (!carousel) {
       return card.offsetWidth + marginRight;
     }
   
-    // Scroll by 3 cards (desktop)
-    function scrollDesktop(direction = "next") {
-      const scrollAmount = getCardWidth() * 3;
+    function scrollCarousel(direction = "next") {
+      const scrollAmount = getCardWidth() * getVisibleCards();
       carousel.scrollBy({
         left: direction === "next" ? scrollAmount : -scrollAmount,
         behavior: "smooth"
       });
     }
   
-    prevBtn?.addEventListener("click", () => scrollDesktop("prev"));
-    nextBtn?.addEventListener("click", () => scrollDesktop("next"));
+    prevBtn?.addEventListener("click", () => scrollCarousel("prev"));
+    nextBtn?.addEventListener("click", () => scrollCarousel("next"));
   
-    // Optional: hide arrows at start/end
-    function updateArrows() {
-      if (!prevBtn || !nextBtn) return;
-      const maxScroll = carousel.scrollWidth - carousel.clientWidth;
-      prevBtn.style.display = carousel.scrollLeft > 0 ? "flex" : "none";
-      nextBtn.style.display = carousel.scrollLeft < maxScroll - 5 ? "flex" : "none";
+    // Hide buttons on mobile
+    function updateArrowVisibility() {
+      const isMobile = window.innerWidth < 768;
+      if (isMobile) {
+        prevBtn.style.display = "none";
+        nextBtn.style.display = "none";
+      } else {
+        const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+        prevBtn.style.display = carousel.scrollLeft > 0 ? "flex" : "none";
+        nextBtn.style.display = carousel.scrollLeft < maxScroll - 5 ? "flex" : "none";
+      }
     }
   
-    carousel.addEventListener("scroll", updateArrows);
-    updateArrows(); // initial
+    carousel.addEventListener("scroll", updateArrowVisibility);
+    window.addEventListener("resize", () => {
+      updateArrowVisibility();
+      // Optional: auto-center if resizing from mobile <-> desktop
+      if (related.length < getVisibleCards()) {
+        carousel.classList.add("justify-center");
+      } else {
+        carousel.classList.remove("justify-center");
+      }
+    });
+  
+    updateArrowVisibility();
   }
+
 
 
   } catch (err) {
