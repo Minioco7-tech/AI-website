@@ -2,56 +2,101 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AIviary — Discover AI Tools</title>
-  <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AIviary — Model</title>
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/feather-icons"></script>
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Carousel controls and dots */
+    .carousel-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 1rem;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .carousel-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.4);
+      border: none;
+      color: white;
+      font-size: 1.75rem;
+      cursor: pointer;
+      padding: 0.5rem 0.75rem;
+      z-index: 10;
+      border-radius: 9999px;
+    }
+
+    .left-arrow {
+      left: 0.5rem;
+    }
+
+    .right-arrow {
+      right: 0.5rem;
+    }
+
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .carousel-dot {
+      width: 10px;
+      height: 10px;
+      background: #666;
+      border-radius: 50%;
+      margin: 0 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .carousel-dot.active {
+      background-color: white;
+    }
+  </style>
 </head>
 
 <body class="bg-[#0A0C10] text-white flex flex-col min-h-screen">
-
   <!-- Header -->
-    <div id="header"></div>
+  <div id="header"></div>
 
-    <!-- Main Section: Model Detail -->
-    <main>
-        <section id="model-detail" class="model-detail-container">
-            <!-- Model details will be injected by model.js -->
-        </section>
+  <main class="pt-28 pb-16 max-w-5xl w-full mx-auto px-4 sm:px-6 lg:px-8 fade-in">
+    <!-- Model Detail Section -->
+    <section id="model-details" class="mb-16"></section>
 
-        <!-- Related Models Carousel -->
-        <section id="related-models" class="related-models-section">
-            <h2>Related Models</h2>
+    <!-- Related Models Carousel -->
+    <section id="related-models">
+      <h2 class="text-2xl font-bold text-white mb-6">Related Models</h2>
+      <div class="carousel-container">
+        <button class="carousel-arrow left-arrow">&#10094;</button>
+        <div class="overflow-hidden w-full">
+          <div class="carousel-track" id="carousel-track">
+            <!-- Cards inserted via JS -->
+          </div>
+        </div>
+        <button class="carousel-arrow right-arrow">&#10095;</button>
+      </div>
+      <div class="carousel-dots mt-4" id="carousel-dots"></div>
+    </section>
+  </main>
 
-            <div class="carousel-container">
-                <button class="carousel-btn prev-btn">&#10094;</button>
-                
-                <div class="carousel-track" id="carousel-track">
-                    <!-- Related model cards will be injected here -->
-                </div>
+  <!-- Footer -->
+  <div id="footer"></div>
 
-                <button class="carousel-btn next-btn">&#10095;</button>
-            </div>
-
-            <div class="carousel-dots" id="carousel-dots">
-                <!-- Dot indicators will be dynamically inserted -->
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <div id="footer"></div>
-
-    <!-- Scripts -->
-    <script src="js/utils.js"></script>
-    <script type="module" src="js/header.js"></script>
-    <script type="module" src="js/footer.js"></script>
-    <script src="js/modelCard.js"></script>
-    <script src="js/model.js"></script>
-    <script>
-      feather.replace();
-    </script>
+  <!-- Scripts -->
+  <script type="module" src="js/header.js"></script>
+  <script type="module" src="js/footer.js"></script>
+  <script type="module" src="js/modelCard.js"></script>
+  <script type="module" src="js/utils.js"></script>
+  <script type="module" src="js/model.js"></script>
 </body>
 </html>
