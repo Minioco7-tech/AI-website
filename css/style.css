@@ -247,6 +247,17 @@ footer p {
 #relatedCarousel > .model-tile {
   scroll-snap-align: center;
 }
+
+/* Responsive model-tile width */
+#relatedCarousel .model-tile {
+  flex: 0 0 100%; /* Mobile: 1 card per view */
+}
+
+@media (min-width: 768px) {
+  #relatedCarousel .model-tile {
+    flex: 0 0 calc(33.333% - 1rem); /* 3 cards per view on desktop, minus gap */
+  }
+}
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
