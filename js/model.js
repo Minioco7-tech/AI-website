@@ -1,3 +1,5 @@
+import { fetchJSON, categoryColors, getCategoryName } from './utils.js';
+
 document.addEventListener("DOMContentLoaded", async () => {
   console.log("Model JS loaded");
 
@@ -17,41 +19,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     modelDiv.innerHTML = '<p class="text-gray-300 text-center mt-8">No model specified.</p>';
     return;
   }
-
-  // ------------------------------
-  // Category colors + name map
-  // ------------------------------
-  const categoryColors = {
-    all: 'bg-gradient-to-r from-[#00BFFF] to-blue-400',
-    productivity: 'bg-gradient-to-r from-[#A855F7] to-[#6366F1]',
-    design: 'bg-gradient-to-r from-[#EC4899] to-[#F59E0B]',
-    learning: 'bg-gradient-to-r from-[#22D3EE] to-[#3B82F6]',
-    business: 'bg-gradient-to-r from-[#10B981] to-[#059669]',
-    chatbots: 'bg-gradient-to-r from-[#F59E0B] to-[#D97706]',
-    audio: 'bg-gradient-to-r from-[#E11D48] to-[#DB2777]',
-    coding: 'bg-gradient-to-r from-[#8B5CF6] to-[#6366F1]',
-    science: 'bg-gradient-to-r from-[#14B8A6] to-[#06B6D4]',
-    documents: 'bg-gradient-to-r from-[#FACC15] to-[#EAB308]',
-    spreadsheets: 'bg-gradient-to-r from-[#60A5FA] to-[#3B82F6]'
-  };
-
-  function getCategoryName(catKey) {
-    const categories = {
-      all: 'All Models',
-      productivity: 'Writing & Productivity',
-      design: 'Creativity & Design',
-      learning: 'Learning & Research',
-      business: 'Business & Marketing',
-      chatbots: 'Chatbots & Agents',
-      audio: 'Audio & Music',
-      coding: 'Coding & Dev Tools',
-      science: 'Science & Health',
-      documents: 'Finance & Analytics',
-      spreadsheets: 'Everyday Life'
-    };
-    return categories[catKey?.toLowerCase()] || catKey;
-  }
-
+  
   // ------------------------------
   // Shared card builder
   // ------------------------------
@@ -88,9 +56,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   // Fetch + display model
   // ------------------------------
   try {
-    const response = await fetch("models.json");
-    if (!response.ok) throw new Error("Failed to fetch models.json");
-    const models = await response.json();
+    const response = await fetchJSON("models.json");
 
     const model = models.find(m => m.name === modelName);
     if (!model) {
