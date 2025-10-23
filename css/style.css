@@ -265,6 +265,14 @@ footer p {
   transition: transform 0.2s ease;
 }
 
+.left-arrow {
+   left: 0.25rem;
+}
+
+.right-arrow {
+   right: 0.25rem;
+}
+
 .carousel-arrow:hover {
   transform: scale(1.1);
 }
