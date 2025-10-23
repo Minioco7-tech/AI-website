@@ -251,14 +251,6 @@ footer p {
   width: 100%;
 }
 
-.carousel-track {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 1rem;
-  transition: transform 0.3s ease-in-out;
-  scroll-behavior: smooth;
-}
-
 .carousel-arrow {
   position: absolute;
   top: 50%;
@@ -273,16 +265,21 @@ footer p {
   transition: transform 0.2s ease;
 }
 
-.left-arrow {
-   left: 0.5rem;
-}
-
-.right-arrow {
-   right: 0.5rem;
-}
-
 .carousel-arrow:hover {
   transform: scale(1.1);
+}
+
+.carousel-track-wrapper {
+  overflow: hidden;
+  flex: 1;
+}
+
+.carousel-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  transition: transform 0.3s ease-in-out;
+  scroll-behavior: smooth;
 }
 
 .carousel-dots {
