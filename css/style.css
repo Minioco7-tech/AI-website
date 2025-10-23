@@ -281,6 +281,36 @@ footer p {
     right: 0;
     background: linear-gradient(to left, #0A0C10, transparent);
   }
+   
+
+/* Mobile carousel specific */
+#carouselTrack {
+  width: 100%;
+}
+
+#carouselTrack .model-tile {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 640px) {
+  #carouselTrack .model-tile {
+    flex: 0 0 calc(33.333% - 1rem); /* Show 3 cards per view on desktop */
+  }
+}
+
+#carouselIndicators .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+#carouselIndicators .dot.active {
+  background-color: white;
+}
+
 }
 
 .scrollbar-hide {
