@@ -1,5 +1,5 @@
 // utils.js — shared helper functions for all pages
-
+console.log("✅ utils.js loaded");
 // Fetch a JSON file safely
 export async function fetchJSON(path) {
   try {
