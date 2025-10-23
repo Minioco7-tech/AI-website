@@ -63,7 +63,7 @@ function getMatchedCategory(keywords) {
 // Display models in the grid
 function displayModels(models) {
     resultsGrid.innerHTML = '';
-    resultsGrid.classname = 'grid gap-6 sm:grid-cols-2 lg:grid-cols-3';
+    resultsGrid.className = 'grid gap-6 sm:grid-cols-2 lg:grid-cols-3';
     
     models.forEach(model => {
         const modelSlug = encodeURIComponent(model.name.trim());
