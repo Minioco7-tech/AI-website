@@ -157,8 +157,7 @@ footer p {
   display: flex;
   flex-direction: column;
   width:100%;
-  max-width: 90%;
-  margin: 0 auto;
+  max-width: 100%;
   align-items: stretch;
 }
 
