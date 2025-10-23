@@ -21,25 +21,21 @@
   </main>
 
   <!-- Related Models --> 
-  <section class="mt-16 px-4 md:px-8 relative z-0">
-    <h2 class="text-2xl font-bold mb-4 sm:mb-0">Related Models</h2>
+  <div class="relative w-full flex items-center justify-center mt-12">
+    <!-- Prev Button -->
+    <button id="prevBtn" class="hidden md:flex items-center justify-center absolute left-0 z-10 bg-black/40 hover:bg-black/60 text-white p-3 rounded-full transition">
+      <i data-feather="chevron-left" class="w-6 h-6"></i>
+    </button>
     <!-- Carousel Container -->
-    <div class="relative overflow-x-auto overflow-y-visible py-16">
-      <!-- Scrollable track -->
-      <div id="relatedCarousel" class="flex gap-6 scroll-smooth snap-x snap-mandatory overflow-x-auto scrollbar-hide mt-12 px-2 md:px-0 justify-start md:justify-center">
-        <!-- JS dynamically injects .model-tile cards here -->
-      </div>
-    
-      <!-- Desktop arrows -->
-      <button id="prevBtn" class="hidden md:flex absolute top-1/2 left-0 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-3 rounded-full backdrop-blur-md">
-        <i data-feather="chevron-left" class="w-5 h-5"></i>
-      </button>
-      <button id="nextBtn" class="hidden md:flex absolute top-1/2 right-0 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-3 rounded-full backdrop-blur-md">
-        <i data-feather="chevron-right" class="w-5 h-5"></i>
-      </button>
+    <div id="relatedCarousel" class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide px-4 sm:px-8 md:px-12 max-w-6xl">
+      <!-- Cards injected here -->
     </div>
-  </section>
-
+    <!-- Next Button -->
+    <button id="nextBtn" class="hidden md:flex items-center justify-center absolute right-0 z-10 bg-black/40 hover:bg-black/60 text-white p-3 rounded-full transition">
+      <i data-feather="chevron-right" class="w-6 h-6"></i>
+    </button>
+  </div>
+  
   <!-- Footer -->
   <div id="footer"></div>
   <!-- Model JS --> 
