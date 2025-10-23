@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   // Fetch + display model
   // ------------------------------
   try {
-    const response = await fetchJSON("models.json");
+    const models = await fetchJSON("models.json");
     if (!models || models.length === 0) throw new Error("No models loaded");
 
     const model = models.find(m => m.name === modelName);
