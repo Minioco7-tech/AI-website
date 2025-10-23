@@ -239,64 +239,38 @@ footer p {
   display: none;
 }
 
-#relatedCarousel {
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-}
+/* -------------------------------
+   Layout - Mobile vs Desktop
+----------------------------------*/
 
-#relatedCarousel > .model-tile {
-  scroll-snap-align: center;
-}
-
-/* Responsive model-tile width */
-#relatedCarousel .model-tile {
-  flex: 0 0 100%; /* Mobile: 1 card per view */
-}
-
-@media (min-width: 768px) {
-  #relatedCarousel .model-tile {
-    flex: 0 0 calc(33.333% - 1rem); /* 3 cards per view on desktop, minus gap */
-  }
-}
-
-/* Optional: Add smooth edge fade on mobile scroll */
-@media (max-width: 767px) {
-  #relatedCarousel::before,
-  #relatedCarousel::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 30px;
-    pointer-events: none;
-    z-index: 5;
-  }
-
-  #relatedCarousel::before {
-    left: 0;
-    background: linear-gradient(to right, #0A0C10, transparent);
-  }
-
-  #relatedCarousel::after {
-    right: 0;
-    background: linear-gradient(to left, #0A0C10, transparent);
-  }
-   
-
-/* Mobile carousel specific */
-#carouselTrack {
-  width: 100%;
-}
-
+/* Mobile: One card per view */
 #carouselTrack .model-tile {
   flex: 0 0 100%;
   max-width: 100%;
 }
 
-@media (min-width: 640px) {
-  #carouselTrack .model-tile {
-    flex: 0 0 calc(33.333% - 1rem); /* Show 3 cards per view on desktop */
+/* Desktop: 3 cards per view */
+@media (min-width: 768px) {
+  #relatedCarousel {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
   }
+
+  #relatedCarousel .model-tile {
+    flex: 0 0 calc(33.333% - 1rem);
+    max-width: calc(33.333% - 1rem);
+  }
+}
+
+/* -------------------------------
+   Carousel Dots
+----------------------------------*/
+#carouselIndicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 #carouselIndicators .dot {
@@ -309,11 +283,4 @@ footer p {
 
 #carouselIndicators .dot.active {
   background-color: white;
-}
-
-}
-
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
