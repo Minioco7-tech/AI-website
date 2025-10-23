@@ -260,13 +260,25 @@ footer p {
 }
 
 .carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   background: transparent;
   border: none;
   color: white;
   font-size: 2rem;
   cursor: pointer;
+  padding: 0.5rem 0.75rem;
   z-index: 1;
   transition: transform 0.2s ease;
+}
+
+.left-arrow {
+   left: 0.5rem;
+}
+
+.right-arrow {
+   right: 0.5rem;
 }
 
 .carousel-arrow:hover {
