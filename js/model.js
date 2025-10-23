@@ -1,4 +1,5 @@
 import { fetchJSON, categoryColors, getCategoryName } from './utils.js';
+console.log("✅ model.js imports:", { fetchJSON, categoryColors, getCategoryName });
 
 document.addEventListener("DOMContentLoaded", async () => {
   console.log("Model JS loaded");
