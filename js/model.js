@@ -3,7 +3,7 @@ import { fetchJSON, getCategoryName, categoryColors } from './utils.js';
 import { createModelCard } from './modelCard.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
-  const modelId = new URLSearchParams(window.location.search).get('id');
+  const modelName = new URLSearchParams(window.location.search).get('model');
   const modelDetailsEl = document.getElementById('model-details');
   const track = document.getElementById('carousel-track');
   const dotsContainer = document.getElementById('carousel-dots');
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const rightArrow = document.querySelector('.right-arrow');
 
   const models = await fetchJSON('models.json');
-  const model = models.find(m => m.id.toString() === modelId);
+  const model = models.find(m => m.name.toLowerCase() === modelName?.toLowerCase());
 
   if (!model) {
     modelDetailsEl.innerHTML = `<p class="text-red-400 text-lg">Model not found.</p>`;
