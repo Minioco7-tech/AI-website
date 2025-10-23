@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIviary — Discover AI Tools</title>
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-[#0A0C10] text-white flex flex-col min-h-screen">
+
+  <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Main Section: Model Detail -->
+    <main>
+        <section id="model-detail" class="model-detail-container">
+            <!-- Model details will be injected by model.js -->
+        </section>
+
+        <!-- Related Models Carousel -->
+        <section id="related-models" class="related-models-section">
+            <h2>Related Models</h2>
+
+            <div class="carousel-container">
+                <button class="carousel-btn prev-btn">&#10094;</button>
+                
+                <div class="carousel-track" id="carousel-track">
+                    <!-- Related model cards will be injected here -->
+                </div>
+
+                <button class="carousel-btn next-btn">&#10095;</button>
+            </div>
+
+            <div class="carousel-dots" id="carousel-dots">
+                <!-- Dot indicators will be dynamically inserted -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script type="module" src="js/header.js"></script>
+    <script type="module" src="js/footer.js"></script>
+    <script src="js/modelCard.js"></script>
+    <script src="js/model.js"></script>
+</body>
+</html>
