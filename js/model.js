@@ -1,101 +1,108 @@
-document.addEventListener("DOMContentLoaded", async () => {
-    const modelId = parseInt(getModelIdFromURL());
-    const modelDetailContainer = document.getElementById("model-detail");
-    const carouselTrack = document.getElementById("carousel-track");
-    const carouselDots = document.getElementById("carousel-dots");
+// js/model.js
+import { fetchJSON, getCategoryName, categoryColors } from './utils.js';
+import { createModelCard } from './modelCard.js';
 
-    const response = await fetch("models.json");
-    const models = await response.json();
+document.addEventListener('DOMContentLoaded', async () => {
+  const modelId = new URLSearchParams(window.location.search).get('id');
+  const modelDetailsEl = document.getElementById('model-details');
+  const track = document.getElementById('carousel-track');
+  const dotsContainer = document.getElementById('carousel-dots');
+  const leftArrow = document.querySelector('.left-arrow');
+  const rightArrow = document.querySelector('.right-arrow');
 
-    const currentModel = models.find(model => model.id === modelId);
-    if (!currentModel) {
-        modelDetailContainer.innerHTML = "<p>Model not found.</p>";
-        return;
+  const models = await fetchJSON('models.json');
+  const model = models.find(m => m.id.toString() === modelId);
+
+  if (!model) {
+    modelDetailsEl.innerHTML = `<p class="text-red-400 text-lg">Model not found.</p>`;
+    return;
+  }
+
+  // Render model detail
+  modelDetailsEl.innerHTML = `
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-3xl font-bold text-purple-400 mb-4">${model.name}</h1>
+      <img src="${model.image}" alt="${model.name}" class="rounded-lg w-full mb-6 max-h-64 object-cover">
+      <div class="mb-4">
+        <a href="${model.link}" target="_blank" class="btn-primary px-4 py-2 text-sm font-medium">Visit Model ↗</a>
+      </div>
+      <span class="inline-block mb-4 px-4 py-1 rounded-full text-sm font-medium text-white ${categoryColors[model.category.toLowerCase()] || 'bg-black/20'}">
+        ${getCategoryName(model.category)}
+      </span>
+      <p class="text-gray-200 text-base leading-relaxed whitespace-pre-line">
+        ${model.description !== 'N/A' ? model.description : 'No description provided.'}
+      </p>
+    </div>
+  `;
+
+  // Related models
+  const relatedModels = models.filter(m => m.category === model.category && m.id !== model.id);
+
+  // Carousel setup
+  let currentIndex = 0;
+  const isMobile = window.innerWidth <= 768;
+  const modelsPerView = isMobile ? 1 : 3;
+
+  function renderCarouselItems() {
+    track.innerHTML = '';
+    const view = relatedModels.slice(currentIndex, currentIndex + modelsPerView);
+    view.forEach(model => {
+      const card = createModelCard(model);
+      track.appendChild(card);
+    });
+  }
+
+  function renderDots() {
+    const totalDots = Math.max(1, relatedModels.length - modelsPerView + 1);
+    dotsContainer.innerHTML = '';
+    for (let i = 0; i < totalDots; i++) {
+      const dot = document.createElement('span');
+      dot.className = 'carousel-dot' + (i === currentIndex ? ' active' : '');
+      dotsContainer.appendChild(dot);
     }
+  }
 
-    renderModelDetail(currentModel);
-    const relatedModels = getRelatedModels(currentModel, models);
-    setupCarousel(relatedModels);
+  function updateDots() {
+    dotsContainer.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+      dot.classList.toggle('active', i === currentIndex);
+    });
+  }
 
-    // ---- Helper Functions ----
-
-    function getModelIdFromURL() {
-        const urlParams = new URLSearchParams(window.location.search);
-        return urlParams.get("id");
+  function slideLeft() {
+    if (currentIndex > 0) {
+      currentIndex--;
+      renderCarouselItems();
+      updateDots();
     }
+  }
 
-    function renderModelDetail(model) {
-        const description = model.description && model.description !== "N/A"
-            ? model.description
-            : "No description provided for this model.";
-
-        modelDetailContainer.innerHTML = `
-            <div class="p-4 max-w-4xl mx-auto fade-in">
-                <h1 class="text-3xl font-bold mb-4">${model.name}</h1>
-                <img src="${model.image}" alt="${model.name}" class="w-full max-w-md mx-auto rounded-lg mb-6">
-                <p class="text-lg text-gray-200 leading-relaxed mb-6">${description}</p>
-                ${model.link ? `<a href="${model.link}" target="_blank" class="btn btn-primary px-6 py-2 text-lg">Visit Official Site</a>` : ""}
-            </div>
-        `;
+  function slideRight() {
+    if (currentIndex < relatedModels.length - modelsPerView) {
+      currentIndex++;
+      renderCarouselItems();
+      updateDots();
     }
+  }
 
-    function getRelatedModels(current, allModels) {
-        // Example: match category and exclude the current model
-        return allModels.filter(m => m.category === current.category && m.id !== current.id).slice(0, 10);
-    }
+  leftArrow.addEventListener('click', slideLeft);
+  rightArrow.addEventListener('click', slideRight);
 
-    function setupCarousel(models) {
-        models.forEach((model, index) => {
-            const card = createModelCard(model); // from modelCard.js
-            card.classList.add("carousel-item");
-            carouselTrack.appendChild(card);
+  // Swipe detection
+  if (isMobile) {
+    let startX = 0;
+    track.addEventListener('touchstart', e => {
+      startX = e.touches[0].clientX;
+    });
 
-            const dot = document.createElement("span");
-            dot.classList.add("carousel-dot");
-            if (index === 0) dot.classList.add("active");
-            dot.dataset.index = index;
-            carouselDots.appendChild(dot);
-        });
+    track.addEventListener('touchend', e => {
+      const endX = e.changedTouches[0].clientX;
+      const diff = endX - startX;
+      if (Math.abs(diff) > 30) {
+        diff < 0 ? slideRight() : slideLeft();
+      }
+    });
+  }
 
-        let currentIndex = 0;
-        const updateCarousel = (index) => {
-            const itemWidth = carouselTrack.children[0].offsetWidth;
-            carouselTrack.style.transform = `translateX(-${itemWidth * index}px)`;
-
-            [...carouselDots.children].forEach(dot => dot.classList.remove("active"));
-            if (carouselDots.children[index]) {
-                carouselDots.children[index].classList.add("active");
-            }
-        };
-
-        document.querySelector(".prev-btn")?.addEventListener("click", () => {
-            currentIndex = (currentIndex - 1 + models.length) % models.length;
-            updateCarousel(currentIndex);
-        });
-
-        document.querySelector(".next-btn")?.addEventListener("click", () => {
-            currentIndex = (currentIndex + 1) % models.length;
-            updateCarousel(currentIndex);
-        });
-
-        [...carouselDots.children].forEach(dot => {
-            dot.addEventListener("click", () => {
-                currentIndex = parseInt(dot.dataset.index);
-                updateCarousel(currentIndex);
-            });
-        });
-
-        // Mobile swipe support
-        let startX = 0;
-        carouselTrack.addEventListener("touchstart", e => startX = e.touches[0].clientX);
-        carouselTrack.addEventListener("touchend", e => {
-            const diffX = e.changedTouches[0].clientX - startX;
-            if (diffX > 50) {
-                currentIndex = (currentIndex - 1 + models.length) % models.length;
-            } else if (diffX < -50) {
-                currentIndex = (currentIndex + 1) % models.length;
-            }
-            updateCarousel(currentIndex);
-        });
-    }
+  renderCarouselItems();
+  renderDots();
 });
