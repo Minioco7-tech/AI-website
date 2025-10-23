@@ -112,28 +112,50 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.getElementById("tryButton").onclick = () => window.open(model.link, "_blank");
 
     // ------------------------------
-    // Related models carousel
-    // ------------------------------
-    const related = models.filter(m => m.category === model.category && m.name !== model.name).slice(0, 6);
-    const carousel = document.getElementById("relatedCarousel");
-    if (!carousel) throw new Error("relatedCarousel element not found");
-
-    if (related.length === 0) {
-      carousel.innerHTML = '<p class="text-gray-400">No other models in this category yet.</p>';
-    } else {
-      carousel.innerHTML = related.map(createModelCard).join("");
-    }
-
-    // Scroll arrows
+  // Related models carousel
+  // ------------------------------
+  const related = models.filter(m => m.category === model.category && m.name !== model.name).slice(0, 12); // max 12 related
+  const carousel = document.getElementById("relatedCarousel");
+  
+  if (!carousel) throw new Error("relatedCarousel element not found");
+  
+  if (related.length === 0) {
+    carousel.innerHTML = '<p class="text-gray-400">No other models in this category yet.</p>';
+  } else {
+    // Inject cards
+    carousel.innerHTML = related.map(createModelCard).join("");
+  
+    // Feather icons for arrows
+    if (window.feather) feather.replace();
+  
     const prevBtn = document.getElementById("prevBtn");
     const nextBtn = document.getElementById("nextBtn");
-    const scrollAmount = 320;
-
-    prevBtn?.addEventListener("click", () => carousel.scrollBy({ left: -scrollAmount, behavior: "smooth" }));
-    nextBtn?.addEventListener("click", () => carousel.scrollBy({ left: scrollAmount, behavior: "smooth" }));
-
-  } catch (err) {
-    console.error("Error showing models grid:", err);
-    modelDiv.innerHTML = '<p class="text-gray-300 text-center mt-8">Error showing models grid.</p>';
+  
+    // Helper: get total card width including gap
+    function getCardWidth() {
+      const card = carousel.querySelector(".model-tile");
+      if (!card) return 300; // fallback
+      const style = window.getComputedStyle(card);
+      const marginRight = parseInt(style.marginRight) || 0;
+      return card.offsetWidth + marginRight;
+    }
+  
+    // Scroll by 3 cards on desktop
+    function scrollDesktop(direction = "next") {
+      const scrollAmount = getCardWidth() * 3;
+      carousel.scrollBy({ left: direction === "next" ? scrollAmount : -scrollAmount, behavior: "smooth" });
+    }
+  
+    prevBtn?.addEventListener("click", () => scrollDesktop("prev"));
+    nextBtn?.addEventListener("click", () => scrollDesktop("next"));
+  
+    // Optional: show/hide arrows if at start/end
+    function updateArrows() {
+      if (!prevBtn || !nextBtn) return;
+      const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+      prevBtn.style.display = carousel.scrollLeft > 0 ? "flex" : "none";
+      nextBtn.style.display = carousel.scrollLeft < maxScroll ? "flex" : "none";
+    }
+    carousel.addEventListener("scroll", updateArrows);
+    updateArrows(); // initial
   }
-});
