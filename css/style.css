@@ -258,6 +258,31 @@ footer p {
     flex: 0 0 calc(33.333% - 1rem); /* 3 cards per view on desktop, minus gap */
   }
 }
+
+/* Optional: Add smooth edge fade on mobile scroll */
+@media (max-width: 767px) {
+  #relatedCarousel::before,
+  #relatedCarousel::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 30px;
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  #relatedCarousel::before {
+    left: 0;
+    background: linear-gradient(to right, #0A0C10, transparent);
+  }
+
+  #relatedCarousel::after {
+    right: 0;
+    background: linear-gradient(to left, #0A0C10, transparent);
+  }
+}
+
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
