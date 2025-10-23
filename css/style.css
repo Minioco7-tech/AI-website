@@ -156,7 +156,9 @@ footer p {
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width:100%;
+  max-width: 100%;
+  align-items: stretch;
 }
 
 .model-tile:hover {
