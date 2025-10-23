@@ -111,13 +111,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     // ---------------------
     function renderMobileCarousel() {
       if (!carouselTrack || !indicatorsContainer) return;
-  
+    
       carouselTrack.innerHTML = related.map(createModelCard).join("");
-  
+    
       indicatorsContainer.innerHTML = related.map((_, idx) => `
         <div class="dot ${idx === 0 ? 'active' : ''}"></div>
       `).join("");
-  
+    
       updateMobileCarousel();
     }
   
@@ -161,46 +161,46 @@ document.addEventListener("DOMContentLoaded", async () => {
     // DESKTOP SCROLL LOGIC
     // ---------------------
     function renderDesktopCarousel() {
-      carousel.innerHTML = related.map(createModelCard).join("");
-  
+      const desktopCarousel = document.getElementById("relatedCarousel");
+      if (!desktopCarousel) return;
+    
+      desktopCarousel.innerHTML = related.map(createModelCard).join("");
+    
       if (window.feather) feather.replace();
-  
-      if (related.length < 3) {
-        carousel.classList.add("justify-center");
-      } else {
-        carousel.classList.remove("justify-center");
-      }
-  
+    
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+    
       function getVisibleCards() {
         return 3;
       }
-  
+    
       function getCardWidth() {
-        const card = carousel.querySelector(".model-tile");
+        const card = desktopCarousel.querySelector(".model-tile");
         if (!card) return 300;
         const style = window.getComputedStyle(card);
         const marginRight = parseInt(style.marginRight) || 0;
         return card.offsetWidth + marginRight;
       }
-  
+    
       function scrollCarousel(direction = "next") {
         const scrollAmount = getCardWidth() * getVisibleCards();
-        carousel.scrollBy({
+        desktopCarousel.scrollBy({
           left: direction === "next" ? scrollAmount : -scrollAmount,
           behavior: "smooth"
         });
       }
-  
+    
       prevBtn?.addEventListener("click", () => scrollCarousel("prev"));
       nextBtn?.addEventListener("click", () => scrollCarousel("next"));
-  
+    
       function updateArrowVisibility() {
-        const maxScroll = carousel.scrollWidth - carousel.clientWidth;
-        prevBtn.style.display = carousel.scrollLeft > 0 ? "flex" : "none";
-        nextBtn.style.display = carousel.scrollLeft < maxScroll - 5 ? "flex" : "none";
+        const maxScroll = desktopCarousel.scrollWidth - desktopCarousel.clientWidth;
+        prevBtn.style.display = desktopCarousel.scrollLeft > 0 ? "flex" : "none";
+        nextBtn.style.display = desktopCarousel.scrollLeft < maxScroll - 5 ? "flex" : "none";
       }
-  
-      carousel.addEventListener("scroll", updateArrowVisibility);
+    
+      desktopCarousel.addEventListener("scroll", updateArrowVisibility);
       window.addEventListener("resize", updateArrowVisibility);
       updateArrowVisibility();
     }
