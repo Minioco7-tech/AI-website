@@ -159,3 +159,4 @@ document.addEventListener("DOMContentLoaded", async () => {
     carousel.addEventListener("scroll", updateArrows);
     updateArrows(); // initial
   }
+});
