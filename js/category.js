@@ -64,7 +64,7 @@ function displayModels(models) {
         
         const card = document.createElement('a');
         card.href = `model.html?model=${encodeURIComponent(model.name)}`;
-        card.className = 'model-tile flex flex-col w-full rounded-lg overflow-hidden snap-center group mx-auto pb-6 transition transform duration-300 hover:scale-[1.03] border border-white border-opacity-10';
+        card.className = 'model-tile flex flex-col w-full rounded-lg overflow-hidden snap-center group pb-6 transition transform duration-300 hover:scale-[1.03] border border-white border-opacity-10';
         
         card.innerHTML = `
             <div class="w-full h-40 sm:h-48 bg-cover bg-center rounded-t-lg" style="background-image: url('${model.image}')"></div>
