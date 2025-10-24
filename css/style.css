@@ -299,6 +299,10 @@ footer p {
 
 /* Responsive tweaks */
 @media screen and (max-width: 768px) {
+  .carousel-container {
+     overflow-x: visible;
+  }
+   
   .carousel-wrapper {
     gap: 0.5rem;
   }
@@ -310,7 +314,8 @@ footer p {
 
   .carousel-track {
      scroll-snap-type: x mandatory;
-     overflow: x-auto;
+     overflow: visible;
+     padding: 1rem
   }
 
   .model-tile {
@@ -318,5 +323,10 @@ footer p {
     max-width: 85vw;
     margin: 0 auto;
     scroll-snap-align: center;
+  }
+   
+  .carousel-container,
+  .carousel-track {
+    overflow: visible;
   }
 }
