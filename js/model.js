@@ -46,8 +46,13 @@ document.addEventListener('DOMContentLoaded', async () => {
   function renderCarouselItems(items = relatedModels.slice(currentIndex * modelsPerView, currentIndex * modelsPerView + modelsPerView)) {
     track.innerHTML = '';
     items.forEach(model => {
+      const wrapper = document.createElement(model);
+
+      wrapper.className = 'flex-shrink-0 w-[85vw] sm:w-[28%]';
       const card = createModelCard(model);
-      track.appendChild(card);
+      wrapper.appendChild(card);
+      
+      track.appendChild(wrapper);
     });
   }
 
