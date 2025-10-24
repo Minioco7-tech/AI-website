@@ -16,6 +16,28 @@ export function createModelCard(model) {
 
   const colorClass = categoryColors[model.category?.toLowerCase()] || 'bg-black/20';
 
+  // Categories array
+  const categories = [
+      { key: 'all', name: 'All Models' },
+      { key: 'productivity', name: 'Writing & Productivity' }, 
+      { key: 'design', name: 'Creativity & Design' }, 
+      { key: 'learning', name: 'Learning & Research' }, 
+      { key: 'business', name: 'Business & Marketing' },
+      { key: 'chatbots', name: 'Chatbots & Agents' },
+      { key: 'audio', name: 'Audio & Music' }, 
+      { key: 'coding', name: 'Coding & Dev Tools' }, 
+      { key: 'science', name: 'Science & Health' }, 
+      { key: 'documents', name: 'Documents & Reports' }, 
+      { key: 'spreadsheets', name: 'Spreadsheets & Data'} 
+  ];
+
+  // Get category name from key
+  function getCategoryName(catKey) {
+      const map = {};
+      categories.forEach(c => map[c.key.toLowerCase()] = c.name);
+      return map[catKey.toLowerCase()] || catKey;
+  }
+
   const card = document.createElement('a');
   card.href = `model.html?model=${encodeURIComponent(model.name)}`;
 
@@ -35,7 +57,7 @@ export function createModelCard(model) {
       <p class="text-gray-200 text-sm sm:text-base font-normal leading-normal mb-3 line-clamp-2">${model.description}</p>
       <div class="flex flex-wrap gap-2 mt-auto">
         <span class="inline-block px-3 py-1 text-xs font-medium rounded-full text-white ${colorClass}">
-          ${model.category}
+          ${getCategoryName(model.category)}
         </span>
       </div>
     </div>
