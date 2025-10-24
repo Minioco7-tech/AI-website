@@ -55,10 +55,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       // card.classList.add('flex-shrink-0', 'w-[85vw]', 'sm:w-[calc(33.333%-0.75rem)]', 'max-w-full');
       card.classList.add(
         'flex-shrink-0',
-        'w-[90vw]',         // Mobile: 1 card fills most of screen
-        'sm:w-[47vw]',      // Small screens: 2 cards side-by-side
-        'md:w-[31vw]',      // Medium: ~3 cards fit nicely
-        'lg:w-[30vw]',      // Desktop: ~3 full cards
+        'w-[90vw]',        // 1 card fills most of the screen on mobile
+        'sm:w-[calc(100%/3-1rem)]', // 3 cards fit on desktop with spacing
         'max-w-full',
         'mx-auto'
       );
