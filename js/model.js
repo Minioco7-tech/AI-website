@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       card.classList.add(
         'flex-shrink-0',
         'snap-center',
-        'w-[70vw]',        // 1 card fills most of the screen on mobile
+        'w-[200vw]',        // 1 card fills most of the screen on mobile
         'sm:w-[calc(100%/3-1rem)]', // 3 cards fit on desktop with spacing
         'max-w-full',
       );
