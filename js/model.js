@@ -55,13 +55,14 @@ document.addEventListener('DOMContentLoaded', async () => {
       // card.classList.add('flex-shrink-0', 'w-[85vw]', 'sm:w-[calc(33.333%-0.75rem)]', 'max-w-full');
       card.classList.add(
         'flex-shrink-0',
-        'w-full',              // fallback width
-        'max-w-[80vw]',        // on mobile, max 90% of viewport
-        'sm:w-[100px]',        // at sm breakpoint (≥640px), fixed width
-        'md:w-[250px]',        // at md breakpoint (≥768px), slightly wider
-        'lg:w-[280px]',        // on desktop, optimal fixed width
-        'mx-auto'              // center card inside carousel
+        'w-[60vw]',         // Mobile: 1 card fills most of screen
+        'sm:w-[47vw]',      // Small screens: 2 cards side-by-side
+        'md:w-[31vw]',      // Medium: ~3 cards fit nicely
+        'lg:w-[30vw]',      // Desktop: ~3 full cards
+        'max-w-full',
+        'mx-auto'
       );
+
       card.querySelector('div[style]').loading = 'lazy';
 
       track.appendChild(card);
