@@ -43,23 +43,42 @@ document.addEventListener('DOMContentLoaded', async () => {
   const isMobile = window.innerWidth <= 768;
   const modelsPerView = isMobile ? 1 : 3;
 
-  function renderCarouselItems() {
+  function renderCarouselItems(items = relatedModels.slice(currentIndex * modelsPerView, currentIndex * modelsPerView + modelsPerView)) {
     track.innerHTML = '';
-    const view = relatedModels.slice(currentIndex, currentIndex + modelsPerView);
-    view.forEach(model => {
+    items.forEach(model => {
       const card = createModelCard(model);
       track.appendChild(card);
     });
   }
 
   function renderDots() {
-    const totalDots = Math.max(1, relatedModels.length - modelsPerView + 1);
+    const totalDots = Math.max(1, Math.ceil(relatedModels.length / modelsPerView));
     dotsContainer.innerHTML = '';
+    
     for (let i = 0; i < totalDots; i++) {
       const dot = document.createElement('span');
       dot.className = 'carousel-dot' + (i === currentIndex ? ' active' : '');
+      dot.dataset.index = i; // store target index for click
+
+      dot.addEventListener('click', () => {
+        currentIndex = i;
+        animateSlide():
+      });
       dotsContainer.appendChild(dot);
     }
+  }
+
+  function animateSlide() {
+    const offset = currentIndex * modelsPerView;
+    const items = relatedModels.slice(offset, offset + modelsPerView);
+  
+    // Create sliding animation effect
+    track.style.opacity = 0;
+    setTimeout(() => {
+      renderCarouselItems(items);
+      updateDots();
+      track.style.opacity = 1;
+    }, 200); // short delay to simulate fade
   }
 
   function updateDots() {
@@ -71,16 +90,15 @@ document.addEventListener('DOMContentLoaded', async () => {
   function slideLeft() {
     if (currentIndex > 0) {
       currentIndex--;
-      renderCarouselItems();
-      updateDots();
+      animateSlide();
     }
   }
 
   function slideRight() {
-    if (currentIndex < relatedModels.length - modelsPerView) {
+    const maxIndex = Math.ceil(relatedModels.length / modelsPerView) - 1;
+    if (currentIndex < maxIndex) {
       currentIndex++;
-      renderCarouselItems();
-      updateDots();
+      animateSlide();
     }
   }
 
