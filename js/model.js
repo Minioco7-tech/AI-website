@@ -44,14 +44,21 @@ document.addEventListener('DOMContentLoaded', async () => {
   const modelsPerView = isMobile ? 1 : 3;
 
   function renderCarouselItems(items = relatedModels.slice(currentIndex * modelsPerView, currentIndex * modelsPerView + modelsPerView)) {
-    track.innerHTML = '';
+    track.innerHTML = ''; // Clear carousel
+  
     items.forEach(model => {
-      const wrapper = document.createElement(model);
-
-      wrapper.className = 'flex-shrink-0 w-[85vw] sm:w-[28%]';
-      const card = createModelCard(model);
-      wrapper.appendChild(card);
+      const wrapper = document.createElement('div');
       
+      // Add Tailwind utility classes for responsive sizing
+      wrapper.className = 'flex-shrink-0 w-[85vw] sm:w-[28%]';
+  
+      // Get the model card from your shared component
+      const card = createModelCard(model);
+  
+      // Append the card inside the wrapper
+      wrapper.appendChild(card);
+  
+      // Add wrapper to carousel track
       track.appendChild(wrapper);
     });
   }
