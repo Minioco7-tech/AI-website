@@ -9,6 +9,18 @@ document.addEventListener('DOMContentLoaded', async () => {
   const leftArrow = document.querySelector('.left-arrow');
   const rightArrow = document.querySelector('.right-arrow');
 
+  const lazyBackgrounds = document.querySelectorAll('.lazy-bg');
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        el.style.backgroundImage = `url('${el.dataset.bg}')`;
+        observer.unobserve(el);
+      }
+    });
+  });
+  lazyBackgrounds.forEach(el => observer.observe(el));
+
   // Fetch models
   const models = await fetchJSON('models.json');
   const model = models.find(m => m.name.toLowerCase() === modelName?.toLowerCase());
