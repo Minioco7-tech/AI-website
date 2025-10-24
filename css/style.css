@@ -164,6 +164,7 @@ footer p {
 .model-tile:hover {
   transform: scale(1.05);
   z-index: 10;
+  overflow: visible;
 }
 
 .model-tile .thumb-wrapper {
@@ -215,7 +216,7 @@ footer p {
   padding: 6px;               /* uniform gap between tile and image */
   aspect-ratio: 16 / 9;       /* keeps consistent shape */
   width: 100%;
-  overflow: hidden;           /* respects rounded corners */
+  overflow: visible;           /* respects rounded corners */
   margin-bottom: 0.75rem; /* spacing between image and icon */
    backdrop-filter: blur(12px) saturate(140%); /* gives frosted glass look */
   -webkit-backdrop-filter: blur(12px) saturate(140%);
@@ -264,8 +265,9 @@ footer p {
 }
 
 .carousel-container {
-  overflow: hidden;
+  overflow: visible;
   flex: 1;
+  position:relative;
 }
 
 .carousel-track {
@@ -273,6 +275,7 @@ footer p {
   gap: 1rem;
   transition: transform 0.3s ease-in-out;
   scroll-behavior: smooth;
+  padding: 1.5rem 0;
 }
 
 .carousel-dots {
@@ -306,12 +309,14 @@ footer p {
   }
 
   .carousel-track {
-     scroll-snap-type: x mandatory
+     scroll-snap-type: x mandatory;
+     overflow: x-auto;
   }
 
   .model-tile {
     min-width: 85vw;
     max-width: 85vw;
     margin: 0 auto;
+    scroll-snap-align: center;
   }
 }
