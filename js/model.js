@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Display model details
   modelDetailsEl.innerHTML = `
     <div class="max-w-3xl mx-auto">
-      <h1 class="text-3xl font-bold text-purple-400 mb-4">${model.name}</h1>
+      <h1 class="text-3xl font-bold text-white mb-4">${model.name}</h1>
       <img src="${model.image}" alt="${model.name}" class="rounded-lg w-full mb-6 max-h-64 object-cover" loading="lazy">
       <div class="mb-4">
         <a href="${model.link}" target="_blank" class="btn-primary px-4 py-2 text-sm font-medium">Try Model ↗</a>
@@ -67,10 +67,10 @@ document.addEventListener('DOMContentLoaded', async () => {
       // card.classList.add('flex-shrink-0', 'w-[85vw]', 'sm:w-[calc(33.333%-0.75rem)]', 'max-w-full');
       card.classList.add(
         'flex-shrink-0',
+        'snap-center',
         'w-[90vw]',        // 1 card fills most of the screen on mobile
         'sm:w-[calc(100%/3-1rem)]', // 3 cards fit on desktop with spacing
         'max-w-full',
-        'mx-auto'
       );
 
       card.querySelector('div[style]').loading = 'lazy';
