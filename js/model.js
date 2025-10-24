@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
       dot.addEventListener('click', () => {
         currentIndex = i;
-        animateSlide():
+        animateSlide();
       });
       dotsContainer.appendChild(dot);
     }
