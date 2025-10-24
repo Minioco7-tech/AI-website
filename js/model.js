@@ -68,9 +68,12 @@ document.addEventListener('DOMContentLoaded', async () => {
       card.classList.add(
         'flex-shrink-0',
         'snap-center',
-        'w-[20vw]',        // 1 card fills most of the screen on mobile
-        'sm:w-[calc(100%/3-1rem)]', // 3 cards fit on desktop with spacing
-        'max-w-full',
+        'w-[90vw]',        // 1 card fills most of the screen on mobile
+        'max-w-[400px]',
+        'sm-w-[300px]',
+        'md-w-[320px]',
+        'lg:w-[calc(100%/3-1rem)]', // 3 cards fit on desktop with spacing
+        'mx-auto',
       );
 
       card.querySelector('div[style]').loading = 'lazy';
