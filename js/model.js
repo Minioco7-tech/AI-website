@@ -52,8 +52,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       const card = createModelCard(model);
 
       // Ensure width fits within carousel without stretching
-      card.classList.add('flex-shrink-0');
-      card.style.width = isMobile ? '85vw' : 'calc(100% / 3 - 0.75rem)'; // subtract gap
+      card.classList.add('flex-shrink-0', 'w-[85vw]', 'sm:w-[calc(33.333%-0.75rem)]', 'max-w-full');
       card.querySelector('div[style]').loading = 'lazy';
 
       track.appendChild(card);
