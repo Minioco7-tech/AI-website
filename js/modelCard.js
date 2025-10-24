@@ -26,10 +26,6 @@ export function createModelCard(model) {
     overflow-hidden 
     border border-white/10
     transition transform duration-300 hover:scale-[1.03]
-    w-[85vw] sm:w-[calc(33.33%-1rem)] 
-    max-w-full 
-    snap-center 
-    flex-shrink-0
   `;
 
   card.innerHTML = `
