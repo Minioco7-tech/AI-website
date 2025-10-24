@@ -240,51 +240,36 @@ footer p {
 }
 
 /* Carousel Styling for model.html */
-
-.carousel-container {
+.carousel-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  overflow: hidden;
-  position: relative;
   width: 100%;
 }
 
 .carousel-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   background: transparent;
   border: none;
   color: white;
   font-size: 2rem;
   cursor: pointer;
-  padding: 0.5rem 0.75rem;
-  z-index: 1;
+  padding: 0.25rem;
   transition: transform 0.2s ease;
-}
-
-.left-arrow {
-   left: 0.25rem;
-}
-
-.right-arrow {
-   right: 0.25rem;
+  flex-shrink: 0;
 }
 
 .carousel-arrow:hover {
   transform: scale(1.1);
 }
 
-.carousel-track-wrapper {
+.carousel-container {
   overflow: hidden;
   flex: 1;
 }
 
 .carousel-track {
   display: flex;
-  flex-wrap: nowrap;
   gap: 1rem;
   transition: transform 0.3s ease-in-out;
   scroll-behavior: smooth;
@@ -311,7 +296,7 @@ footer p {
 
 /* Responsive tweaks */
 @media screen and (max-width: 768px) {
-  .carousel-container {
+  .carousel-wrapper {
     gap: 0.5rem;
   }
 
@@ -321,8 +306,7 @@ footer p {
   }
 
   .carousel-track {
-    overflow-x: hidden;
-    gap: 1rem;
+     scroll-snap-type: x mandatory
   }
 
   .model-tile {
