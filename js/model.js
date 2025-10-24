@@ -52,7 +52,16 @@ document.addEventListener('DOMContentLoaded', async () => {
       const card = createModelCard(model);
 
       // Ensure width fits within carousel without stretching
-      card.classList.add('flex-shrink-0', 'w-[85vw]', 'sm:w-[calc(33.333%-0.75rem)]', 'max-w-full');
+      // card.classList.add('flex-shrink-0', 'w-[85vw]', 'sm:w-[calc(33.333%-0.75rem)]', 'max-w-full');
+      card.classList.add(
+        'flex-shrink-0',
+        'w-full',              // fallback width
+        'max-w-[90vw]',        // on mobile, max 90% of viewport
+        'sm:w-[280px]',        // at sm breakpoint (≥640px), fixed width
+        'md:w-[300px]',        // at md breakpoint (≥768px), slightly wider
+        'lg:w-[320px]',        // on desktop, optimal fixed width
+        'mx-auto'              // center card inside carousel
+      );
       card.querySelector('div[style]').loading = 'lazy';
 
       track.appendChild(card);
