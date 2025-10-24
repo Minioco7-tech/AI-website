@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       <h1 class="text-3xl font-bold text-purple-400 mb-4">${model.name}</h1>
       <img src="${model.image}" alt="${model.name}" class="rounded-lg w-full mb-6 max-h-64 object-cover">
       <div class="mb-4">
-        <a href="${model.link}" target="_blank" class="btn-primary px-4 py-2 text-sm font-medium">Visit Model ↗</a>
+        <a href="${model.link}" target="_blank" class="btn-primary px-4 py-2 text-sm font-medium">Try Model ↗</a>
       </div>
       <span class="inline-block mb-4 px-4 py-1 rounded-full text-sm font-medium text-white ${categoryColors[model.category.toLowerCase()] || 'bg-black/20'}">
         ${getCategoryName(model.category)}
