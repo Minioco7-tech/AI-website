@@ -66,7 +66,7 @@ async function loadCategoryModels() {
   const categoryKey = getCategoryFromUrl();
   if (categoryTitle) categoryTitle.textContent = getCategoryName(categoryKey);
 
-  const modelsData = await fetchJSON('/AI-website/models.json');
+  const modelsData = await fetchJSON('./models.json');
 
   const filteredModels =
     categoryKey.toLowerCase() === 'all'
