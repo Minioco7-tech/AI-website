@@ -2,7 +2,7 @@ import {
   fetchJSON,
   getCategoryName,
   getUniqueCategories,
-  filterBySelectedCategries,
+  filterBySelectedCategories,
   renderCategoryFilters,
   sortModels,
   shuffleArray
