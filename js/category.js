@@ -2,6 +2,8 @@ import {
   fetchJSON,
   getCategoryName,
   getUniqueCategories,
+  filterBySelectedCategries,
+  renderCategoryFilters,
   sortModels,
   shuffleArray
 } from './utils.js';
@@ -20,6 +22,10 @@ let selectedCategories = new Set();
 // ------------------------------
 // Helpers
 // ------------------------------
+function updateFilteredModels() {
+  const filtered = filterBySelectedCategories(currentModels, selectedCategories);
+  displayModels(filtered);
+}
 
 function getCategoryFromUrl() {
   const params = new URLSearchParams(window.location.search);
@@ -53,56 +59,6 @@ function initLazyBackgrounds() {
 }
 
 // ------------------------------
-// Category Filter System
-// ------------------------------
-
-function renderCategoryFilters(models) {
-  if (!filterContainer) return;
-
-  filterContainer.innerHTML = '';
-  const uniqueCategories = getUniqueCategories(models);
-
-  uniqueCategories.forEach(cat => {
-    const label = document.createElement('label');
-    label.className = 'inline-flex items-center gap-1 text-sm text-white';
-
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    checkbox.value = cat;
-    checkbox.className = 'accent-blue-400';
-
-    checkbox.addEventListener('change', () => {
-      if (checkbox.checked) {
-        selectedCategories.add(cat);
-      } else {
-        selectedCategories.delete(cat);
-      }
-      updateFilteredModels();
-    });
-
-    label.appendChild(checkbox);
-    label.append(` ${getCategoryName(cat)}`);
-    filterContainer.appendChild(label);
-  });
-}
-
-function filterBySelectedCategories(models) {
-  if (selectedCategories.size === 0) return models;
-
-  return models.filter(model => {
-    const cats = Array.isArray(model.category)
-      ? model.category.map(c => c.toLowerCase())
-      : [model.category.toLowerCase()];
-    return [...selectedCategories].some(cat => cats.includes(cat));
-  });
-}
-
-function updateFilteredModels() {
-  const filtered = filterBySelectedCategories(currentModels);
-  displayModels(filtered);
-}
-
-// ------------------------------
 // Load Category Models
 // ------------------------------
 
@@ -121,7 +77,7 @@ async function loadCategoryModels() {
 
   currentModels = filteredModels;
 
-  renderCategoryFilters(modelsData); // all unique cats
+  renderCategoryFilters(filterContainer, modelsData, selectedCategories, updateFilteredModels); // all unique cats
   updateFilteredModels();
 }
 
