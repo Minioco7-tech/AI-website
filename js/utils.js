@@ -79,3 +79,8 @@ export function shuffleArray(array) {
   return shuffled;
 }
 
+export function getUniqueCategories(models) {
+  const all = models.flatMap(m => m.category || []);
+  return [...new Set(all.map(cat => cat.toLowerCase()))];
+}
+
