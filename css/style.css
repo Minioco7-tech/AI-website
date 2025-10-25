@@ -313,4 +313,11 @@ footer p {
      transform: scale(1);
      transition: opacity 0.2s ease, transform 0.2s ease;
    }
+   .carousel-dot:hover {
+     background-color: #aaa;
+   }
+   
+   .carousel-dot {
+     cursor: pointer;
+   }
 }
