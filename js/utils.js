@@ -54,3 +54,28 @@ export function getCategoryName(key) {
   return match ? match.name : key;
 }
 
+export function sortModels(models, criteria) {
+  const sorted = [...models];
+  switch (criteria) {
+    case 'az':
+      sorted.sort((a, b) => a.name.localeCompare(b.name));
+      break;
+    case 'za':
+      sorted.sort((a, b) => b.name.localeCompare(a.name));
+      break;
+    case 'relevance':
+    default:
+      break;
+  }
+  return sorted;
+}
+
+export function shuffleArray(array) {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
