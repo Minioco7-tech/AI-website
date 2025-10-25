@@ -1,41 +1,46 @@
-// ------------------------------
-// Category Page JS
-// ------------------------------
-
+import {
+  fetchJSON,
+  getCategoryName,
+  getUniqueCategories,
+  sortModels,
+  shuffleArray
+} from './utils.js';
 import { createModelCard } from './modelCard.js';
-import { fetchJSON, categoryColors, getCategoryName, sortModels, shuffleArray } from './utils.js';
 
+// DOM Elements
 const modelsGrid = document.getElementById('modelsGrid');
-const loadingState = document.getElementById('loadingState');
 const categoryTitle = document.getElementById('categoryTitle');
 const randomiseBtn = document.getElementById('randomiseBtn');
 const sortBySelect = document.getElementById('sortBy');
+const filterContainer = document.getElementById('categoryFilters');
 
-// Global array to store currently displayed models
 let currentModels = [];
+let selectedCategories = new Set();
 
-// Get category from URL
+// ------------------------------
+// Helpers
+// ------------------------------
+
 function getCategoryFromUrl() {
-    const params = new URLSearchParams(window.location.search);
-    return params.get('category') || 'all';
+  const params = new URLSearchParams(window.location.search);
+  return params.get('category') || 'all';
 }
 
-// Display models in the grid
 function displayModels(models) {
-    modelsGrid.innerHTML = '';
-    modelsGrid.className = 'grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3';
-    
-    models.forEach(model => {
-        const colorClass = categoryColors[model.category.toLowerCase()] || 'bg-black/20';
-        
-        const card = createModelCard(model);
-        modelsGrid.appendChild(card);
-    });
+  modelsGrid.innerHTML = '';
+  modelsGrid.className = 'grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3';
+
+  models.forEach(model => {
+    const card = createModelCard(model);
+    modelsGrid.appendChild(card);
+  });
+
+  initLazyBackgrounds();
 }
 
 function initLazyBackgrounds() {
   const lazyBackgrounds = document.querySelectorAll('.lazy-bg');
-  const observer = new IntersectionObserver((entries) => {
+  const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const el = entry.target;
@@ -48,42 +53,98 @@ function initLazyBackgrounds() {
 }
 
 // ------------------------------
-// Fetch Models
+// Category Filter System
 // ------------------------------
-async function loadCategoryModels() {
-    const categoryKey = getCategoryFromUrl();
-    if(document.getElementById('categoryTitle')) document.getElementById('categoryTitle').textContent = getCategoryName(categoryKey);
 
-    try {
-        const modelsData = await fetchJSON('/AI-website/models.json');
+function renderCategoryFilters(models) {
+  if (!filterContainer) return;
 
-        const filteredModels = categoryKey.toLowerCase() === 'all'
-            ? modelsData
-            : modelsData.filter(m => m.category.toLowerCase() === categoryKey.toLowerCase());
+  filterContainer.innerHTML = '';
+  const uniqueCategories = getUniqueCategories(models);
 
-        currentModels = filteredModels;
-        displayModels(currentModels);
-    } catch(err) {
-        console.error('Failed to load models:', err);
-        modelsGrid.innerHTML = '<p class="text-red-400 text-lg mt-6">Failed to load models. Please refresh.</p>';
-    }
+  uniqueCategories.forEach(cat => {
+    const label = document.createElement('label');
+    label.className = 'inline-flex items-center gap-1 text-sm text-white';
+
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.value = cat;
+    checkbox.className = 'accent-blue-400';
+
+    checkbox.addEventListener('change', () => {
+      if (checkbox.checked) {
+        selectedCategories.add(cat);
+      } else {
+        selectedCategories.delete(cat);
+      }
+      updateFilteredModels();
+    });
+
+    label.appendChild(checkbox);
+    label.append(` ${getCategoryName(cat)}`);
+    filterContainer.appendChild(label);
+  });
 }
 
+function filterBySelectedCategories(models) {
+  if (selectedCategories.size === 0) return models;
+
+  return models.filter(model => {
+    const cats = Array.isArray(model.category)
+      ? model.category.map(c => c.toLowerCase())
+      : [model.category.toLowerCase()];
+    return [...selectedCategories].some(cat => cats.includes(cat));
+  });
+}
+
+function updateFilteredModels() {
+  const filtered = filterBySelectedCategories(currentModels);
+  displayModels(filtered);
+}
+
+// ------------------------------
+// Load Category Models
+// ------------------------------
+
+async function loadCategoryModels() {
+  const categoryKey = getCategoryFromUrl();
+  if (categoryTitle) categoryTitle.textContent = getCategoryName(categoryKey);
+
+  const modelsData = await fetchJSON('/AI-website/models.json');
+
+  const filteredModels =
+    categoryKey.toLowerCase() === 'all'
+      ? modelsData
+      : modelsData.filter(m =>
+          (m.category || []).map(c => c.toLowerCase()).includes(categoryKey.toLowerCase())
+        );
+
+  currentModels = filteredModels;
+
+  renderCategoryFilters(modelsData); // all unique cats
+  updateFilteredModels();
+}
+
+// ------------------------------
+// Events
+// ------------------------------
+
 sortBySelect.addEventListener('change', () => {
-    if (!currentModels.length) return;
-    const sortedModels = sortModels(currentModels, sortBySelect.value);
-    displayModels(sortedModels);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  if (!currentModels.length) return;
+  const sorted = sortModels(currentModels, sortBySelect.value);
+  currentModels = sorted;
+  updateFilteredModels();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
 randomiseBtn.addEventListener('click', () => {
-    if (!currentModels.length) return;
-    currentModels = shuffleArray(currentModels);
-    displayModels(currentModels);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  if (!currentModels.length) return;
+  currentModels = shuffleArray(currentModels);
+  updateFilteredModels();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    loadCategoryModels();
-    feather.replace();
+  loadCategoryModels();
+  feather.replace();
 });
