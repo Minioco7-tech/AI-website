@@ -51,7 +51,7 @@ export function createModelCard(model) {
   `;
 
   card.innerHTML = `
-    <div class="w-full aspect-video bg-cover bg-center rounded-t-lg lazy-bg" data-bg="${model.image}" style="background-image: url('${model.image}');"></div>
+    <div class="w-full aspect-video bg-cover bg-center rounded-t-lg lazy-bg" style="background-image: url('${model.image}');"></div>
     <div class="flex flex-col flex-1 p-4">
       <h3 class="text-purple-400 text-lg sm:text-xl font-bold leading-snug mb-2">${model.name}</h3>
       <p class="text-gray-200 text-sm sm:text-base font-normal leading-normal mb-3 line-clamp-2">${model.description}</p>
