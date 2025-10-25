@@ -30,10 +30,6 @@ const categorySynonyms = {
     health: ['health', 'fitness', 'wellbeing', 'medical', 'care', 'wellness']
 };
 
-// ------------------------------
-// Helper Functions
-// ------------------------------
-
 // Check if any keyword matches a category
 function getMatchedCategory(keywords) {
     for (const [key, synonyms] of Object.entries(categorySynonyms)) {
@@ -78,6 +74,20 @@ function shuffleArray(array) {
         [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
     }
     return shuffled;
+}
+
+function initLazyBackgrounds() {
+  const lazyBackgrounds = document.querySelectorAll('.lazy-bg');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        el.style.backgroundImage = `url('${el.dataset.bg}')`;
+        observer.unobserve(el);
+      }
+    });
+  });
+  lazyBackgrounds.forEach(el => observer.observe(el));
 }
 
 // ------------------------------
