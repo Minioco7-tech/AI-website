@@ -1,75 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AIviary — Discover AI Tools</title>
-  <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://unpkg.com/feather-icons"></script>
-  <link rel="stylesheet" href="css/style.css" />
-</head>
+import { fetchJSON, modelHasCategory } from './utils.js';
 
-<body class="bg-[#0A0C10] text-white flex flex-col min-h-screen">
-  <div id="home-header"></div>
+document.addEventListener('DOMContentLoaded', () => {
+  const searchInput = document.getElementById('searchInput');
+  const categoryGrid = document.getElementById('categoryGrid');
+  const searchForm = document.getElementById('searchForm');
 
-  <!-- Hero Section -->
-  <section 
-    class="relative h-screen flex flex-col items-center justify-center text-center text-white bg-cover bg-center overflow-hidden"
-    style="background-image: url('Images/background/background.webp');"
-  >
-    <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-black/75"></div>
+  // Define categories to display
+  const categories = [
+    { key: 'all', name: 'All', icon: 'globe', colorFrom: 'from-purple-500', colorTo: 'to-pink-500', image: 'Images/all/all.webp' },
+    { key: 'productivity', name: 'Productivity', icon: 'edit-3', colorFrom: 'from-purple-500', colorTo: 'to-pink-500', image: 'Images/writing/writing.webp' },
+    { key: 'design', name: 'Design', icon: 'pen-tool', colorFrom: 'from-green-400', colorTo: 'to-blue-500', image: 'Images/design/design.webp' },
+    { key: 'learning', name: 'Learning', icon: 'book', colorFrom: 'from-yellow-400', colorTo: 'to-orange-500', image: 'Images/learning/learning.webp' },
+    { key: 'business', name: 'Business', icon: 'briefcase', colorFrom: 'from-indigo-400', colorTo: 'to-purple-500', image: 'Images/business/business.webp' },
+    { key: 'chatbots', name: 'Chatbots', icon: 'message-circle', colorFrom: 'from-pink-400', colorTo: 'to-red-500', image: 'Images/chatbots/chatbot.webp' },
+    { key: 'audio', name: 'Audio', icon: 'volume-2', colorFrom: 'from-teal-400', colorTo: 'to-blue-400', image: 'Images/music/music.webp' },
+    { key: 'coding', name: 'Coding', icon: 'code', colorFrom: 'from-blue-400', colorTo: 'to-indigo-500', image: 'Images/coding/coding.webp' },
+    { key: 'science', name: 'Science', icon: 'cpu', colorFrom: 'from-red-400', colorTo: 'to-yellow-500', image: 'Images/science/science.webp' },
+    { key: 'documents', name: 'Documents', icon: 'file-text', colorFrom: 'from-green-400', colorTo: 'to-teal-500', image: 'Images/finance/finance.webp' },
+    { key: 'spreadsheets', name: 'Spreadsheets', icon: 'grid', colorFrom: 'from-gray-400', colorTo: 'to-gray-600', image: 'Images/speech/speech.webp' }
+  ];
 
-    <div class="relative z-10 max-w-2xl px-6">
-      <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6 bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
-        Discover the World's Smartest AI Tools
-      </h1>
-      <p class="text-[#E0E0E0] text-lg md:text-xl mb-8">
-        If you're new to AI or looking for new inspiration... keep scrolling!
-      </p>
+  // Load models and display category tiles
+  async function loadModelsAndRenderCategories() {
+    try {
+      const models = await fetchJSON('./models.json');
 
-      <!-- Search Bar -->
-      <form id="searchForm" class="relative w-full max-w-xl mx-auto">
-        <input
-          type="text"
-          id="searchInput"
-          placeholder="Search AI tools... or try 'All'"
-          class="w-full px-5 py-3 pr-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 
-                 text-white placeholder-white/60 shadow-lg 
-                 focus:outline-none focus:ring-2 focus:ring-[#00BFFF] transition-all duration-300"
-        >
-        <button
-          type="submit"
-          class="absolute right-3 top-1/2 -translate-y-1/2 text-white/70 hover:text-white focus:outline-none"
-          aria-label="Search"
-        >
-          <i data-feather="search" class="w-6 h-6"></i>
-        </button>
-      </form>
-    </div>
+      // Filter categories that actually have related models
+      const categoriesWithModels = categories.filter(cat => {
+        if (cat.key === 'all') return true;
+        return models.some(model => modelHasCategory(model, cat.key));
+      });
 
-    <div class="absolute bottom-6 text-gray-300 animate-bounce z-10">
-      <i data-feather="chevron-down" class="w-6 h-6"></i>
-    </div>
+      renderCategoryTiles(categoriesWithModels);
+    } catch (err) {
+      console.error('Error loading models or rendering categories:', err);
+    }
+  }
 
-    <div class="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-black/80 to-transparent"></div>
-  </section>
+  function renderCategoryTiles(categories) {
+    categoryGrid.innerHTML = '';
 
-  <!-- Main Content -->
-  <main class="relative container flex-grow mx-auto px-4 py-12 text-center">
-    <h2 class="text-3xl font-bold mb-8">Explore AI Categories</h2>
-    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-screen h-20 sm:h-40 md:h-48 bg-gradient-to-b from-black to-transparent pointer-events-none"></div>
-    <div id="categoryGrid" class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mb-12"></div>
-  </main>
+    categories.forEach(cat => {
+      const card = document.createElement('div');
+      card.className = 'model-tile rounded-lg overflow-hidden transition transform duration-300 cursor-pointer border border-white border-opacity-10';
 
-  <div id="footer"></div>
+      card.innerHTML = `
+        <div class="thumb-wrapper rounded-lg overflow-hidden p-1">
+          <div class="thumb bg-cover bg-center w-full h-full rounded-lg transition-transform duration-300"
+               style="background-image: url('${cat.image}');"></div>
+        </div>
+        <div class="p-4">
+          <div class="flex flex-col items-center text-center">
+            <div class="icon-circle bg-gradient-to-r ${cat.colorFrom} ${cat.colorTo} rounded-full p-3 mb-3 flex items-center justify-center">
+              <i data-feather="${cat.icon}" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-lg font-semibold">${cat.name}</h3>
+            <p>${cat.description || 'Explore tools in this category.'}</p>
+          </div>
+        </div>
+      `;
 
-  <!-- Scripts -->
-  <script type="module" src="js/home.js"></script>
-  <script type="module" src="js/home-header.js"></script>
-  <script type="module" src="js/footer.js"></script>
-  <script>
+      card.addEventListener('click', () => {
+        window.location.href = `category.html?category=${encodeURIComponent(cat.key)}`;
+      });
+
+      categoryGrid.appendChild(card);
+    });
+
     feather.replace();
-  </script>
-</body>
-</html>
+  }
+
+  // Search form redirect
+  if (searchForm) {
+    searchForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const query = searchInput.value.trim();
+      if (query) {
+        window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+      }
+    });
+  }
+
+  loadModelsAndRenderCategories();
+});
