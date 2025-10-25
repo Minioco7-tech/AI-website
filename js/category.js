@@ -3,6 +3,7 @@
 // ------------------------------
 
 import { createModelCard } from './modelCard.js';
+import { fetchJSON, categoryColors, getCategoryName } from './utils.js';
 
 const modelsGrid = document.getElementById('modelsGrid');
 const loadingState = document.getElementById('loadingState');
@@ -12,43 +13,6 @@ const sortBySelect = document.getElementById('sortBy');
 
 // Global array to store currently displayed models
 let currentModels = [];
-
-// Categories array
-const categories = [
-    { key: 'all', name: 'All Models' },
-    { key: 'productivity', name: 'Writing & Productivity' }, 
-    { key: 'design', name: 'Creativity & Design' }, 
-    { key: 'learning', name: 'Learning & Research' }, 
-    { key: 'business', name: 'Business & Marketing' },
-    { key: 'chatbots', name: 'Chatbots & Agents' },
-    { key: 'audio', name: 'Audio & Music' }, 
-    { key: 'coding', name: 'Coding & Dev Tools' }, 
-    { key: 'science', name: 'Science & Health' }, 
-    { key: 'documents', name: 'Documents & Reports' }, 
-    { key: 'spreadsheets', name: 'Spreadsheets & Data'} 
-];
-
-// Category color map
-const categoryColors = {
-  all: 'bg-gradient-to-r from-[#00BFFF] to-blue-400',
-  productivity: 'bg-gradient-to-r from-[#A855F7] to-[#6366F1]',       // purple/indigo
-  design: 'bg-gradient-to-r from-[#EC4899] to-[#F59E0B]',    // pink/orange
-  learning: 'bg-gradient-to-r from-[#22D3EE] to-[#3B82F6]',      // cyan/blue
-  business: 'bg-gradient-to-r from-[#10B981] to-[#059669]',      // emerald/green
-  chatbots: 'bg-gradient-to-r from-[#F59E0B] to-[#D97706]',      // amber
-  audio: 'bg-gradient-to-r from-[#E11D48] to-[#DB2777]',         // red/pink
-  coding: 'bg-gradient-to-r from-[#8B5CF6] to-[#6366F1]',        // violet/indigo
-  science: 'bg-gradient-to-r from-[#14B8A6] to-[#06B6D4]',       // teal
-  documents: 'bg-gradient-to-r from-[#FACC15] to-[#EAB308]',       // yellow
-  spreadsheets: 'bg-gradient-to-r from-[#60A5FA] to-[#3B82F6]'       // light blue
-};
-
-// Get category name from key
-function getCategoryName(catKey) {
-    const map = {};
-    categories.forEach(c => map[c.key.toLowerCase()] = c.name);
-    return map[catKey.toLowerCase()] || catKey;
-}
 
 // Get category from URL
 function getCategoryFromUrl() {
@@ -96,6 +60,20 @@ function shuffleArray(array) {
     return shuffled;
 }
 
+function initLazyBackgrounds() {
+  const lazyBackgrounds = document.querySelectorAll('.lazy-bg');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        el.style.backgroundImage = `url('${el.dataset.bg}')`;
+        observer.unobserve(el);
+      }
+    });
+  });
+  lazyBackgrounds.forEach(el => observer.observe(el));
+}
+
 // ------------------------------
 // Fetch Models
 // ------------------------------
@@ -104,9 +82,7 @@ async function loadCategoryModels() {
     if(document.getElementById('categoryTitle')) document.getElementById('categoryTitle').textContent = getCategoryName(categoryKey);
 
     try {
-        const response = await fetch('/AI-website/models.json');
-        if(!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
-        const modelsData = await response.json();
+        const modelsData = await fetchJSON('/AI-website/models.json');
 
         const filteredModels = categoryKey.toLowerCase() === 'all'
             ? modelsData
