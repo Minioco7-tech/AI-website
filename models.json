@@ -2,7 +2,7 @@
     {
       "id": 1,
       "name": "ElevenLabs",
-      "category": "audio",
+      "category": ["audio"],
       "type": "N/A",
       "description": "N/A",
       "image": "Images/writing/writing.webp",
@@ -11,7 +11,7 @@
     {
       "id": 2,
       "name": "Adobe Podcast",
-      "category": "audio",
+      "category": ["audio"],
       "type": "N/A",
       "description": "N/A",
       "image": "Images/writing/writing.webp",
@@ -20,7 +20,7 @@
     {
       "id": 3,
       "name": "Cleanvoice AI",
-      "category": "audio",
+      "category": ["audio"],
       "type": "N/A",
       "description": "N/A",
       "image": "Images/writing/writing.webp",
@@ -29,7 +29,7 @@
     {
       "id": 4,
       "name": "Resemble AI",
-      "category": "audio",
+      "category": ["audio"],
       "type": "N/A",
       "description": "N/A",
       "image": "Images/writing/writing.webp",
@@ -38,7 +38,7 @@
     {
       "id": 5,
       "name": "Podcastle AI",
-      "category": "audio",
+      "category": ["audio"],
       "type": "N/A",
       "description": "N/A",
       "image": "Images/writing/writing.webp",
@@ -47,7 +47,7 @@
     {
       "id": 6,
       "name": "ChatGPT",
-      "category": "chatbots",
+      "category": ["chatbots"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -56,7 +56,7 @@
     {
       "id": 7,
       "name": "Google Gemini",
-      "category": "chatbots",
+      "category": ["chatbots"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -65,7 +65,7 @@
     {
       "id": 8,
       "name": "Meta AI",
-      "category": "chatbots",
+      "category": ["chatbots"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -74,7 +74,7 @@
     {
       "id": 9,
       "name": "Perplexity AI",
-      "category": "chatbots",
+      "category": ["chatbots"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",    
@@ -83,7 +83,7 @@
     {
       "id": 10,
       "name": "Claude",
-      "category": "chatbots",
+      "category": ["chatbots"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -92,7 +92,7 @@
     {
       "id": 11,
       "name": "Codex AI",
-      "category": "coding",
+      "category": ["coding"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -101,7 +101,7 @@
     {
       "id": 12,
       "name": "Codium AI", 
-      "category": "coding",
+      "category": ["coding"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -110,7 +110,7 @@
     {
       "id": 13,
       "name": "Stitch", 
-      "category": "coding",
+      "category": ["coding"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -119,7 +119,7 @@
     {
       "id": 14,
       "name": "Blackbox AI",
-      "category": "coding",
+      "category": ["coding"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -128,7 +128,7 @@
     {
       "id": 15,
       "name": "DeepSite", 
-      "category": "coding",
+      "category": ["coding"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -137,7 +137,7 @@
     {
       "id": 16,
       "name": "Midjourney",
-      "category": "design",
+      "category": ["design"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -146,7 +146,7 @@
     {
       "id": 17,
       "name": "DALL-E 3",
-      "category": "design",
+      "category": ["design"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -155,7 +155,7 @@
     {
       "id": 18,
       "name": "Canva",
-      "category": "design",
+      "category": ["design"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -164,7 +164,7 @@
     {
       "id": 19,
       "name": "Playground",
-      "category": "design",
+      "category": ["design"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -173,7 +173,7 @@
     {
       "id": 20,
       "name": "Leonardo",
-      "category": "design",
+      "category": ["design"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -182,7 +182,7 @@
     {
       "id": 21,
       "name": "QuillBot",
-      "category": "documents",
+      "category": ["design"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -191,7 +191,7 @@
     {
       "id": 22,
       "name": "Scribe",
-      "category": "documents",
+      "category": ["documents"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -200,7 +200,7 @@
     {
       "id": 23,
       "name": "Scholarcy",
-      "category": "documents",
+      "category": ["documents"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -209,7 +209,7 @@
     {
       "id": 24,
       "name": "Paperpal",
-      "category": "documents",
+      "category": ["documents"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -218,7 +218,7 @@
     {
       "id": 25,
       "name": "Wordtune",
-      "category": "documents",
+      "category": ["documents"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -227,7 +227,7 @@
     {
       "id": 26,
       "name": "AlphaSense",
-      "category": "business",
+      "category": ["business"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -236,7 +236,7 @@
     {
       "id": 27,
       "name": "Numer AI",
-      "category": "business",
+      "category": ["business"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -245,7 +245,7 @@
     {
       "id": 28,
       "name": "Datarails",
-      "category": "business",
+      "category": ["business"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -254,7 +254,7 @@
     {
       "id": 29,
       "name": "Workiva",
-      "category": "business",
+      "category": ["business"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -263,7 +263,7 @@
     {
       "id": 30,
       "name": "Zeta Alpha",
-      "category": "business",
+      "category": ["business"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -272,7 +272,7 @@
     {
       "id": 31,
       "name": "Khanmigo",
-      "category": "learning",
+      "category": ["learning"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -281,7 +281,7 @@
     {
       "id": 32,
       "name": "MindGrasp",
-      "category": "learning",
+      "category": ["learning"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -290,7 +290,7 @@
     {
       "id": 33,
       "name": "OpenRead",
-      "category": "learning",
+      "category": ["learning"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -299,7 +299,7 @@
     {
       "id": 34,
       "name": "Explainpaper",
-      "category": "learning",
+      "category": ["learning"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -308,7 +308,7 @@
     {
       "id": 35,
       "name": "Elicit",
-      "category": "learning",
+      "category": ["learning"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -317,7 +317,7 @@
     {
       "id": 36,
       "name": "AlphaFold",
-      "category": "science",
+      "category": ["science"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -326,7 +326,7 @@
     {
       "id": 37,
       "name": "SciSpace",
-      "category": "science",
+      "category": ["science"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -335,7 +335,7 @@
     {
       "id": 38,
       "name": "SciGraph",
-      "category": "science",
+      "category": ["science"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -344,7 +344,7 @@
     {
       "id": 39,
       "name": "labguru",
-      "category": "science",
+      "category": ["science"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -353,7 +353,7 @@
     {
       "id": 40,
       "name": "pincone AI",
-      "category": "science",
+      "category": ["science"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -362,7 +362,7 @@
     {
       "id": 41,
       "name": "GPTexcel",
-      "category": "spreadsheets",
+      "category": ["spreadsheets"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -371,7 +371,7 @@
     {
       "id": 42,
       "name": "DataGPT",
-      "category": "spreadsheets",
+      "category": ["spreadsheets"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -380,7 +380,7 @@
     {
       "id": 43,
       "name": "Arcwise",
-      "category": "spreadsheets",
+      "category": ["spreadsheets"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -389,7 +389,7 @@
     {
       "id": 44,
       "name": "Google Workspace",
-      "category": "spreadsheets",
+      "category": ["spreadsheets"],
       "type": "N/A",
       "description": "N/A", 
       "image": "assets/images/placeholder.png",
@@ -398,7 +398,7 @@
     {
       "id": 45,
       "name": "formulabot",
-      "category": "spreadsheets",
+      "category": ["spreadsheets"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -407,7 +407,7 @@
     {
       "id": 46,
       "name": "Grammarly AI",
-      "category": "productivity",
+      "category": ["productivity"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -416,7 +416,7 @@
     {
       "id": 47,
       "name": "Writer",
-      "category": "productivity",
+      "category": ["productivity"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -425,7 +425,7 @@
     {
       "id": 48,
       "name": "Copysmith",
-      "category": "productivity",
+      "category": ["productivity"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -434,7 +434,7 @@
     {
       "id": 49,
       "name": "Hyperwrite",
-      "category": "productivity",
+      "category": ["productivity"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
@@ -443,7 +443,7 @@
     {
       "id": 50,
       "name": "Inkforall",
-      "category": "productivity",
+      "category": ["productivity"],
       "type": "N/A",
       "description": "N/A",
       "image": "assets/images/placeholder.png",
