@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIviary — Discover AI Tools</title>
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-[#0A0C10] text-white flex flex-col min-h-screen">
+  <div id="home-header"></div>
+
+  <!-- Hero Section -->
+  <section 
+    class="relative h-screen flex flex-col items-center justify-center text-center text-white bg-cover bg-center overflow-hidden"
+    style="background-image: url('Images/background/background.webp');"
+  >
+    <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-black/75"></div>
+
+    <div class="relative z-10 max-w-2xl px-6">
+      <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6 bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
+        Discover the World's Smartest AI Tools
+      </h1>
+      <p class="text-[#E0E0E0] text-lg md:text-xl mb-8">
+        If you're new to AI or looking for new inspiration... keep scrolling!
+      </p>
+
+      <!-- Search Bar -->
+      <form id="searchForm" class="relative w-full max-w-xl mx-auto">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search AI tools... or try 'All'"
+          class="w-full px-5 py-3 pr-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 
+                 text-white placeholder-white/60 shadow-lg 
+                 focus:outline-none focus:ring-2 focus:ring-[#00BFFF] transition-all duration-300"
+        >
+        <button
+          type="submit"
+          class="absolute right-3 top-1/2 -translate-y-1/2 text-white/70 hover:text-white focus:outline-none"
+          aria-label="Search"
+        >
+          <i data-feather="search" class="w-6 h-6"></i>
+        </button>
+      </form>
+    </div>
+
+    <div class="absolute bottom-6 text-gray-300 animate-bounce z-10">
+      <i data-feather="chevron-down" class="w-6 h-6"></i>
+    </div>
+
+    <div class="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-black/80 to-transparent"></div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="relative container flex-grow mx-auto px-4 py-12 text-center">
+    <h2 class="text-3xl font-bold mb-8">Explore AI Categories</h2>
+    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-screen h-20 sm:h-40 md:h-48 bg-gradient-to-b from-black to-transparent pointer-events-none"></div>
+    <div id="categoryGrid" class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mb-12"></div>
+  </main>
+
+  <div id="footer"></div>
+
+  <!-- Scripts -->
+  <script type="module" src="js/home.js"></script>
+  <script type="module" src="js/home-header.js"></script>
+  <script type="module" src="js/footer.js"></script>
+  <script>
+    feather.replace();
+  </script>
+</body>
+</html>
