@@ -260,7 +260,18 @@ footer p {
 }
 
 .carousel-arrow:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+.carousel-arrow:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.carousel-arrow:active {
+  transform: scale(0.9);
+  filter: brightness(0.85);
 }
 
 .carousel-container {
@@ -284,8 +295,15 @@ footer p {
   transition: background-color 0.3s ease;
 }
 
-.carousel-dot.active {
+.carousel-dot:active {
   background-color: white;
+  transform: scale(0.9);
+  
+}
+
+.carousel-dot:hover {
+   background-color: #aaa;
+   transform: scale(1.1);
 }
 
 /* Responsive tweaks */
@@ -312,9 +330,6 @@ footer p {
      opacity: 1;
      transform: scale(1);
      transition: opacity 0.2s ease, transform 0.2s ease;
-   }
-   .carousel-dot:hover {
-     background-color: #aaa;
    }
    
    .carousel-dot {
