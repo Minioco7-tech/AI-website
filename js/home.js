@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // -----------------------
   function setupFuse() {
     fuse = new Fuse(modelsData, {
-      keys: ['name', 'description', 'category'],
+      keys: ['name', 'description', 'category[]'],
       threshold: 0.4,
       ignoreLocation: true,
       isCaseSensitive: false
