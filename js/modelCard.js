@@ -52,7 +52,7 @@ export function createModelCard(model) {
 
   card.innerHTML = `
     <div class="thumb-wrapper rounded-lg overflow-hidden p-1">
-      <div class="w-full aspect-video bg-cover bg-center rounded-lg lazy-bg" 
+      <div class="thumb bg-cover bg-center w-full h-full rounded-lg transition-transfrom lazy-bg" 
            style="background-image: url('${model.image}');">
       </div>
     </div>
