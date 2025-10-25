@@ -269,14 +269,6 @@ footer p {
   position:relative;
 }
 
-.carousel-track {
-  display: flex;
-  gap: 1rem;
-  transition: transform 0.3s ease-in-out;
-  scroll-behavior: smooth;
-  padding: 1.5rem 0;
-}
-
 .carousel-dots {
   display: flex;
   justify-content: center;
@@ -310,22 +302,15 @@ footer p {
     font-size: 1.5rem;
     padding: 0.25rem;
   }
-
-  .carousel-track {
-     scroll-snap-type: x mandatory;
-     overflow: visible;
-     padding: 1rem
-  }
-
-  .model-tile {
-    min-width: 85vw;
-    max-width: 85vw;
-    margin: 0 auto;
-    scroll-snap-align: center;
-  }
+  .carousel-grid.fade-out {
+     opacity: 0;
+     transform: scale(0.95);
+     transition: opacity 0.2s ease, transform 0.2s ease;
+   }
    
-  .carousel-container,
-  .carousel-track {
-    overflow: visible;
-  }
+   .carousel-grid.fade-in {
+     opacity: 1;
+     transform: scale(1);
+     transition: opacity 0.2s ease, transform 0.2s ease;
+   }
 }
