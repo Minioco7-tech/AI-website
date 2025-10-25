@@ -1,20 +1,13 @@
-import {
-  fetchJSON,
-  getCategoryName,
-  getUniqueCategories,
-  filterBySelectedCategories,
-  renderCategoryFilters,
-  sortModels,
-  shuffleArray
-} from './utils.js';
+import { fetchJSON, categoryColors, getCategoryName, sortModels, shuffleArray } from './utils.js';
 import { createModelCard } from './modelCard.js';
 
 // DOM Elements
 const modelsGrid = document.getElementById('modelsGrid');
+const loadingState = document.getElementById('loadingState');
 const categoryTitle = document.getElementById('categoryTitle');
 const randomiseBtn = document.getElementById('randomiseBtn');
 const sortBySelect = document.getElementById('sortBy');
-const filterContainer = document.getElementById('categoryFilters');
+
 
 let currentModels = [];
 let selectedCategories = new Set();
