@@ -79,14 +79,24 @@ async function fetchAndDisplayResults() {
       .filter(Boolean)
       .filter(word => !stopwords.includes(word));
 
-    let filtered = [];
     const matchedCategory = getMatchedCategory(keywords);
+    let filtered = [];
 
-    if (['all', 'everything', 'all tools', 'catalogue', 'all models', 'show all models'].includes(searchQuery)) {
+    console.log('🔍 Search query:', searchQuery);
+    console.log('🧩 Keywords:', keywords);
+    console.log('🎯 Matched category:', matchedCategory);
+
+    
+    if (['all', 'everything', 'all tools', 'catalogue', 'all models', 'show all models'].includes(searchQuery.toLowerCase())) {
       filtered = models;
-    } else if (matchedCategory) {
-      filtered = models.filter(m => m.category.toLowerCase() === matchedCategory);
-    } else {
+    } 
+    else if (matchedCategory) {
+      filtered = models.filter(m => {
+        const cats = Array.isArray(m.category) ? m.category : [m.category];
+        return cats.map(c => c.toLowerCase()).includes(matchedCategory);
+      });
+    }
+    else {
       const fuse = new Fuse(models, {
         keys: ['name', 'description', 'category', 'type'],
         threshold: 0.4,
