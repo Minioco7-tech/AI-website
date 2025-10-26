@@ -12,17 +12,19 @@ let currentModels = [];
 let selectedCategories = new Set();
 
 const categorySynonyms = {
-  writing: ['writing', 'writer', 'content', 'copy', 'text', 'document', 'email'],
-  design: ['design', 'art', 'image', 'photo', 'logo', 'graphic', 'visual'],
-  learning: ['learning', 'education', 'research', 'study', 'teach', 'knowledge'],
-  business: ['business', 'marketing', 'sales', 'brand', 'startup', 'work', 'help'],
-  chatbots: ['chat', 'bot', 'assistant', 'agent', 'conversation', 'support'],
-  music: ['music', 'audio', 'sound', 'song', 'beat', 'voice', 'sing'],
-  coding: ['code', 'coding', 'developer', 'programming', 'software', 'tech'],
-  science: ['science', 'health', 'medicine', 'bio', 'lab', 'research'],
-  finance: ['finance', 'money', 'analytics', 'data', 'economy', 'bank', 'invest'],
-  health: ['health', 'fitness', 'wellbeing', 'medical', 'care', 'wellness']
+  productivity: ['writing', 'writer', 'content', 'copy', 'text', 'document', 'email', 'productivity', 'work', 'tasks', 'organization'],
+  design: ['design', 'art', 'image', 'photo', 'logo', 'graphic', 'visual', 'presentation', 'poster'],
+  learning: ['learning', 'education', 'research', 'study', 'teach', 'knowledge', 'school', 'student', 'academy'],
+  business: ['business', 'marketing', 'sales', 'brand', 'startup', 'work', 'help', 'promotion', 'strategy'],
+  chatbots: ['chat', 'bot', 'assistant', 'agent', 'conversation', 'support', 'talk', 'reply', 'ai chat'],
+  audio: ['audio', 'music', 'sound', 'song', 'beat', 'voice', 'record', 'podcast', 'edit'],
+  coding: ['code', 'coding', 'developer', 'programming', 'software', 'tech', 'script', 'debug', 'build'],
+  science: ['science', 'health', 'medicine', 'bio', 'lab', 'research', 'medical', 'data', 'analysis'],
+  documents: ['document', 'pdf', 'report', 'summary', 'notes', 'paper', 'doc', 'docs', 'write-up'],
+  spreadsheets: ['spreadsheet', 'excel', 'sheet', 'data', 'table', 'formula', 'analytics', 'numbers'],
+  all: ['all', 'everything', 'catalogue', 'all tools', 'show all', 'overview']
 };
+
 
 // Check if any keyword matches a category
 function getMatchedCategory(keywords) {
