@@ -17,14 +17,16 @@
   <div id="header"></div> 
   <!-- Main Content -->
   <main class="flex-grow pt-24 pb-16 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
-
-    <!-- Page Header -->
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8">
-      <h2 id="categoryTitle" class="text-3xl font-bold mb-4 sm:mb-0">Search Results</h2>
-      <p id="matchedCategoryTag" class="text-sm text-gray-400 mt-2 italic hidden">
-        <!-- Category tag will go here -->
-      </p>
-
+      <!-- Title and search description logic--> 
+      <div class="flex flex-col">
+        <h2 id="categoryTitle" class="text-3xl font-bold">Search Results</h2>
+        <p id="matchedCategoryTag"
+           class="text-sm text-gray-400 mt-1 hidden sm:mt-2 transition-opacity duration-300">
+           <!-- JS inserts text here -->
+        </p>
+      </div>
+      <!-- Sort by dropdown and randomise button logic -->
       <div class="flex items-center space-x-4">
         <!-- Sort Dropdown -->
         <div class="relative">
