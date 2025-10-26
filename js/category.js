@@ -117,7 +117,7 @@ async function loadCategoryModels() {
 
   currentModels = filteredModels;
 
-  renderCategoryFilters(modelsData); // all unique cats
+  // renderCategoryFilters(modelsData); // all unique cats
   updateFilteredModels();
 }
 
