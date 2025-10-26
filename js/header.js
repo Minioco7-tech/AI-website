@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </form>
 
           <!-- Nav (desktop) -->
-          <div id="navActions "class="flex sm:flex items-center space-x-6">
+          <div id="navActions" class="flex sm:flex items-center space-x-6">
             <nav class="flex space-x-4 backdrop-blur-lg px-4 py-1 rounded-lg">
               <a href="about.html" class="text-white hover:text-[#00BFFF] transition-colors">About</a>
             </nav>
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
 
         <!-- Mobile search bar -->
-        <div id="mobileSearchContainer" class="hidden sm:hidden w-full flex items-center gap-2 mt-3">
+        <div id="mobileSearchContainer" class="sm:hidden w-full items-center gap-2 mt-3" style="display: none;">
           <button id="closeSearchBtn" class="text-white">
             <i data-feather="x"></i>
           </button>
@@ -93,18 +93,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const navActions = document.getElementById("navActions");
 
   function showMobileSearch() {
-    mobileSearchContainer.classList.remove("hidden");
+    mobileSearchContainer.style.display = "flex"; // overrides display: none
     navActions.classList.add("hidden");
+  
     setTimeout(() => {
       mobileSearchContainer.classList.add("mobile-search-active");
     }, 10);
+  
     mobileSearchInput.focus();
   }
   
   function hideMobileSearch() {
     mobileSearchContainer.classList.remove("mobile-search-active");
+  
     setTimeout(() => {
-      mobileSearchContainer.classList.add("hidden");
+      mobileSearchContainer.style.display = "none";
       navActions.classList.remove("hidden");
     }, 250);
   }
