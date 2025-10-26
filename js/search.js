@@ -66,59 +66,47 @@ function initLazyBackgrounds() {
 async function fetchAndDisplayResults() {
   try {
     const params = new URLSearchParams(window.location.search);
-      const searchQuery = params.get('q')?.trim().toLowerCase() || '';
-      queryText.textContent = searchQuery;
+    const searchQuery = params.get('q')?.trim().toLowerCase() || '';
+    queryText.textContent = searchQuery;
 
-      const response = await fetch('./models.json');
-      if (!response.ok) throw new Error('Failed to load models.json');
-      const models = await response.json();
+    const models = await fetchJSON('./models.json');
 
-      const keywords = searchQuery
-          .split(/\s+/)
-          .map(w => w.toLowerCase())
-          .filter(Boolean)
-          .filter(word => !stopwords.includes(word));
+    const keywords = searchQuery
+      .split(/\s+/)
+      .map(w => w.toLowerCase())
+      .filter(Boolean)
+      .filter(word => !stopwords.includes(word));
 
-      let filtered = [];
-      const matchedCategory = getMatchedCategory(keywords);
+    let filtered = [];
+    const matchedCategory = getMatchedCategory(keywords);
 
-      // Show all models for general queries
-      if (['all', 'everything', 'all tools', 'catalogue', 'all models', 'show all models'].includes(searchQuery)) {
-          filtered = models;
-      } 
-      // Match category
-      else if (matchedCategory) {
-          filtered = models.filter(m => m.category.toLowerCase() === matchedCategory);
-      } 
-      // Fuzzy search with Fuse.js
-      else {
-          const fuse = new Fuse(models, {
-              keys: ['name', 'description', 'category', 'type'],
-              threshold: 0.4,
-              ignoreLocation: true,
-              includeScore: true
-          });
-          filtered = fuse.search(searchQuery).map(result => result.item);
-      }
+    if (['all', 'everything', 'all tools', 'catalogue', 'all models', 'show all models'].includes(searchQuery)) {
+      filtered = models;
+    } else if (matchedCategory) {
+      filtered = models.filter(m => m.category.toLowerCase() === matchedCategory);
+    } else {
+      const fuse = new Fuse(models, {
+        keys: ['name', 'description', 'category', 'type'],
+        threshold: 0.4,
+        ignoreLocation: true,
+        includeScore: true
+      });
+      filtered = fuse.search(searchQuery).map(result => result.item);
+    }
 
-      currentModels = filtered;
+    currentModels = sortModels(filtered, sortBySelect.value).sort(() => 0.5 - Math.random());
 
-      // Apply sorting and minor shuffle
-      currentModels = sortModels(currentModels, sortBySelect.value).sort(() => 0.5 - Math.random());
-
-      // Display results
-      if (currentModels.length === 0) {
-          noResults.classList.remove('hidden');
-      } else {
-          noResults.classList.add('hidden');
-          displayModels(currentModels);
-      }
-
-      // Replace Feather icons
-      feather.replace();
-  } catch (err) {
-      console.error('Search failed:', err);
+    if (currentModels.length === 0) {
       noResults.classList.remove('hidden');
+    } else {
+      noResults.classList.add('hidden');
+      displayModels(currentModels);
+    }
+
+    feather.replace();
+  } catch (err) {
+    console.error('Search failed:', err);
+    noResults.classList.remove('hidden');
   }
 }
 
