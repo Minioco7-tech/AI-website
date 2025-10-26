@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
   headerContainer.innerHTML = `
     <header class="bg-black bg-opacity-20 backdrop-blur-lg w-full fixed top-0 left-0 z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-16">  
-          <!-- Logo (left) -->
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo -->
           <div class="flex items-center space-x-3">
             <div class="w-8 h-8 bg-gradient-to-r from-[#00BFFF] to-blue-400 rounded-lg flex items-center justify-center">
               <i data-feather="zap" class="w-4 h-4 text-white"></i>
@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
             <span class="text-xl font-bold text-white">AIviary</span>
           </div>
 
-          <!-- Search Bar (centered) -->
-          <form id="searchForm" class="relative w-full max-w-md mx-auto">
+          <!-- Centered Search Bar (Desktop Only) -->
+          <form id="searchForm" class="relative hidden sm:block w-full max-w-md mx-auto">
             <input
               type="text"
               id="searchInput"
@@ -36,30 +36,46 @@ document.addEventListener("DOMContentLoaded", () => {
               <i data-feather="search" class="w-5 h-5"></i>
             </button>
           </form>
-    
-          <!-- Right section: nav + button -->
-          <div class="flex items-center space-x-6">
-            <!-- Nav links -->
-            <nav class="flex space-x-4 backdrop-blur-lg px-4 py-1 rounded-lg flex-row md:space-x-4 space-y-2 md:space-y-0">
-              <a href="about.html" class="text-white hover:text-[#00BFFF] transition-colors">About</a>
+
+          <!-- Right Nav and Mobile Search Trigger -->
+          <div class="flex items-center space-x-4 sm:space-x-6">
+            <nav class="flex space-x-4 px-4 py-1 rounded-lg">
+              <a href="about.html" class="text-white hover:text-[#00BFFF] text-sm transition-colors">About</a>
             </nav>
-    
-            <!-- All Models Button -->
-            <a href="index.html?" class="btn-primary px-4 py-2 rounded-lg text-sm font-medium shadow-lg transition hover:scale-105">
+            <a href="index.html" class="btn-primary px-4 py-2 rounded-lg text-sm font-medium shadow-lg transition hover:scale-105">
               Home
             </a>
+            <!-- Mobile search icon -->
+            <button id="openMobileSearch" class="sm:hidden text-white focus:outline-none">
+              <i data-feather="search" class="w-5 h-5"></i>
+            </button>
           </div>
-
         </div>
+
+        <!-- Mobile Search Bar -->
+        <div id="mobileSearchContainer" class="hidden sm:hidden mt-2 flex items-center gap-2 w-full">
+          <button id="closeSearchBtn" class="text-white">
+            <i data-feather="x" class="w-5 h-5"></i>
+          </button>
+          <form id="mobileSearchForm" class="flex-grow">
+            <input
+              type="text"
+              id="mobileSearchInput"
+              placeholder="Search AI tools..."
+              class="w-full px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-[#00BFFF]"
+            />
+          </form>
+        </div>
+
         <!-- Subtle Separator -->
-        <div class="border-t border-white border-opacity-10"></div>
+        <div class="border-t border-white border-opacity-10 mt-2"></div>
       </div>
     </header>
   `;
-  // Feather icons
+
   if (window.feather) feather.replace();
 
-  // Search logic: navigate to search page with query
+  // Desktop search logic
   const searchForm = document.getElementById("searchForm");
   const searchInput = document.getElementById("searchInput");
 
@@ -72,10 +88,31 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // Mobile search logic
+  const openMobileSearch = document.getElementById("openMobileSearch");
+  const closeSearchBtn = document.getElementById("closeSearchBtn");
+  const mobileSearchContainer = document.getElementById("mobileSearchContainer");
+  const mobileSearchForm = document.getElementById("mobileSearchForm");
+  const mobileSearchInput = document.getElementById("mobileSearchInput");
+
+  if (openMobileSearch && closeSearchBtn && mobileSearchContainer && mobileSearchForm && mobileSearchInput) {
+    openMobileSearch.addEventListener("click", () => {
+      mobileSearchContainer.classList.remove("hidden");
+      mobileSearchInput.focus();
+    });
+
+    closeSearchBtn.addEventListener("click", () => {
+      mobileSearchContainer.classList.add("hidden");
+      mobileSearchInput.value = '';
+    });
+
+    mobileSearchForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const query = mobileSearchInput.value.trim();
+      if (query) {
+        window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+      }
+    });
+  }
 });
-  
-  
-
-
-
-    
