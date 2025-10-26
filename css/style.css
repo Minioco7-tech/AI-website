@@ -350,3 +350,17 @@ body:not(.home-page) #searchInput:hover {
   border-color: #00BFFF;
 }
 
+/* Mobile search bar animation */
+.mobile-search-enter {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.3s ease;
+}
+
+.mobile-search-active {
+  opacity: 1 !important;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+
