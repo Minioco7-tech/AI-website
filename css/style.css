@@ -364,3 +364,23 @@ body:not(.home-page) #searchInput:hover {
   pointer-events: auto;
 }
 
+#breadcrumb {
+  font-size: 0.875rem;
+  color: #ccc;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  justify-content: center;
+  text-align: center;
+}
+
+#breadcrumb span {
+  color: #888;
+}
+
+#breadcrumb .active {
+  color: #fff;
+  font-weight: 500;
+}
+
+
