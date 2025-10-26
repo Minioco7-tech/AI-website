@@ -1,5 +1,6 @@
 import { fetchJSON, getCategoryName, categoryColors } from './utils.js';
 import { createModelCard } from './modelCard.js';
+import { setBreadcrumb } from './breadcrumb.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
   const modelName = new URLSearchParams(window.location.search).get('model');
@@ -30,6 +31,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     modelDetailsEl.innerHTML = `<p class="text-red-400 text-lg">Model not found.</p>`;
     return;
   }
+
+  const categoryName = getCategoryName(model.category);
+  setBreadcrumb(['Home', categoryName, model.name]);
 
   // Display model details
   modelDetailsEl.innerHTML = `
