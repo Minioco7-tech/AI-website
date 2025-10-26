@@ -74,7 +74,10 @@ async function fetchAndDisplayResults() {
     const searchQuery = params.get('q')?.trim().toLowerCase() || '';
     queryText.textContent = searchQuery;
 
-    setBreadcrumb(['Home', searchQuery.charAt(0).toUpperCase() + searchQuery.slice(1)]);
+    renderBreadcrumb([
+      { label: 'Home', href: 'index.html' },
+      { label: searchQuery.charAt(0).toUpperCase() + searchQuery.slice(1) }
+    ]);
 
     const models = await fetchJSON('./models.json');
 
