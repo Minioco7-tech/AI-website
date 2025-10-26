@@ -351,16 +351,16 @@ body:not(.home-page) #searchInput:hover {
 }
 
 /* Mobile search bar animation */
-.mobile-search-enter {
+#mobileSearchContainer {
   opacity: 0;
   transform: scale(0.95);
   transition: all 0.3s ease;
+  pointer-events: none;
 }
 
-.mobile-search-active {
-  opacity: 1 !important;
+#mobileSearchContainer.mobile-search-active {
+  opacity: 1;
   transform: scale(1);
   pointer-events: auto;
 }
-
 
