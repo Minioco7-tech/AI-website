@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
 
         <!-- Mobile search bar -->
-        <div id="mobileSearchContainer" class="mobile-search-enter hidden sm:hidden w-full flex items-center gap-2 mt-3">
+        <div id="mobileSearchContainer" class="hidden sm:hidden w-full flex items-center gap-2 mt-3">
           <button id="closeSearchBtn" class="text-white">
             <i data-feather="x"></i>
           </button>
