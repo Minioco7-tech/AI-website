@@ -1,15 +1,31 @@
-/**
- * Injects breadcrumb links dynamically.
- * Last item is bold and white, earlier steps are grey.
- */
-export function setBreadcrumb(pathArray) {
-  const container = document.getElementById('breadcrumb');
-  if (!container) return;
+export function renderBreadcrumb(items) {
+  const breadcrumbEl = document.getElementById('breadcrumb');
+  if (!breadcrumbEl) return;
 
-  const html = pathArray.map((item, index) => {
-    const isLast = index === pathArray.length - 1;
-    return `<span class="${isLast ? 'text-white' : 'text-gray-400'}">${item}</span>`;
-  }).join('<span class="mx-1 text-gray-500">/</span>');
+  breadcrumbEl.innerHTML = ''; // Clear existing content
 
-  container.innerHTML = html;
+  items.forEach((item, index) => {
+    const isLast = index === items.length - 1;
+
+    // Add separator (except before first item)
+    if (index > 0) {
+      const separator = document.createElement('span');
+      separator.textContent = '/';
+      separator.classList.add('mx-1', 'text-gray-500');
+      breadcrumbEl.appendChild(separator);
+    }
+
+    if (!isLast && item.href) {
+      const link = document.createElement('a');
+      link.href = item.href;
+      link.textContent = item.label;
+      link.className = 'text-gray-400 hover:text-white transition';
+      breadcrumbEl.appendChild(link);
+    } else {
+      const span = document.createElement('span');
+      span.textContent = item.label;
+      span.className = 'active';
+      breadcrumbEl.appendChild(span);
+    }
+  });
 }
