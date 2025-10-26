@@ -372,7 +372,7 @@ body:not(.home-page) #searchInput:hover {
   gap: 0.25rem;
   text-align: left;
   justify-content: flex-start; /* ✅ align left */
-  margin-top: 1rem;            /* ✅ consistent spacing */
+  margin-top: 0.5rem;            /* ✅ consistent spacing */
   margin-bottom: 1rem;
 }
 
