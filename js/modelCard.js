@@ -25,7 +25,7 @@ export function createModelCard(model) {
   card.innerHTML = `
     <div class="thumb-wrapper rounded-lg overflow-hidden p-1">
         <div class="thumb bg-cover bg-center w-full h-full rounded-lg transition-transform duration-300"
-              style="background-image: url('${cat.image}');">
+              style="background-image: url('${model.image}');">
         </div>
     </div>
     <div class="flex flex-col flex-1 p-4">
