@@ -71,6 +71,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         grid.appendChild(card);
       });
 
+      // Initialize lazy loading for the newly added cards
+      const lazyBackgrounds = document.querySelectorAll('.lazy-bg');
+      lazyBackgrounds.forEach(el => observer.observe(el));
+
       updateDots();
       grid.classList.remove('opacity-0', 'scale-95');
     }, 150);
