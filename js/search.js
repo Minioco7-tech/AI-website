@@ -6,6 +6,8 @@ const noResults = document.getElementById('noResults');
 const queryText = document.getElementById('queryText');
 const randomiseBtn = document.getElementById('randomiseBtn');
 const sortBySelect = document.getElementById('sortBy');
+const matchedCategoryTag = document.getElementById('matchedCategoryTag');
+
 
 const stopwords = ['i','want','to','a','the','and','for','of','in','on','is','with','my','you','it','this','that','at'];
 let currentModels = [];
@@ -80,6 +82,17 @@ async function fetchAndDisplayResults() {
       .filter(word => !stopwords.includes(word));
 
     const matchedCategory = getMatchedCategory(keywords);
+    // DOM refs
+    const matchedCategoryTag = document.getElementById('matchedCategoryTag');
+    
+    // After getting matchedCategory:
+    if (matchedCategory && matchedCategory !== 'all') {
+      matchedCategoryTag.classList.remove('hidden');
+      matchedCategoryTag.textContent = `Showing results related to “${getCategoryName(matchedCategory)}”`;
+    } else {
+      matchedCategoryTag.classList.add('hidden');
+    }
+
     let filtered = [];
 
     console.log('🔍 Search query:', searchQuery);
