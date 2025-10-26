@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
             <span class="text-xl font-bold text-white">AIviary</span>
           </div>
 
-          <!-- Centered Search Bar (Desktop Only) -->
-          <form id="searchForm" class="relative hidden sm:block w-full max-w-md mx-auto">
+          <!-- Search (desktop) -->
+          <form id="searchForm" class="hidden sm:flex relative w-full max-w-md mx-auto">
             <input
               type="text"
               id="searchInput"
@@ -37,48 +37,44 @@ document.addEventListener("DOMContentLoaded", () => {
             </button>
           </form>
 
-          <!-- Right Nav and Mobile Search Trigger -->
-          <div class="flex items-center space-x-4 sm:space-x-6">
-            <nav class="flex space-x-4 px-4 py-1 rounded-lg">
-              <a href="about.html" class="text-white hover:text-[#00BFFF] text-sm transition-colors">About</a>
+          <!-- Nav (desktop) -->
+          <div class="hidden sm:flex items-center space-x-6">
+            <nav class="flex space-x-4 backdrop-blur-lg px-4 py-1 rounded-lg">
+              <a href="about.html" class="text-white hover:text-[#00BFFF] transition-colors">About</a>
             </nav>
-            <a href="index.html" class="btn-primary px-4 py-2 rounded-lg text-sm font-medium shadow-lg transition hover:scale-105">
-              Home
-            </a>
-            <!-- Mobile search icon -->
-            <button id="openMobileSearch" class="sm:hidden text-white focus:outline-none">
-              <i data-feather="search" class="w-5 h-5"></i>
-            </button>
+            <a href="index.html" class="btn-primary px-4 py-2 rounded-lg text-sm font-medium shadow-lg transition hover:scale-105">Home</a>
           </div>
-        </div>
 
-        <!-- Mobile Search Bar -->
-        <div id="mobileSearchContainer" class="hidden sm:hidden mt-2 flex items-center gap-2 w-full">
-          <button id="closeSearchBtn" class="text-white">
-            <i data-feather="x" class="w-5 h-5"></i>
+          <!-- Search icon (mobile) -->
+          <button id="mobileSearchIcon" class="sm:hidden text-white">
+            <i data-feather="search"></i>
           </button>
-          <form id="mobileSearchForm" class="flex-grow">
-            <input
-              type="text"
-              id="mobileSearchInput"
-              placeholder="Search AI tools..."
-              class="w-full px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-[#00BFFF]"
-            />
-          </form>
         </div>
 
-        <!-- Subtle Separator -->
+        <!-- Mobile search bar -->
+        <div id="mobileSearchContainer" class="mobile-search-enter hidden sm:hidden w-full flex items-center gap-2 mt-3">
+          <button id="closeSearchBtn" class="text-white">
+            <i data-feather="x"></i>
+          </button>
+          <input
+            type="text"
+            id="mobileSearchInput"
+            placeholder="Search AI tools..."
+            class="flex-grow px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-[#00BFFF]"
+          />
+        </div>
+
         <div class="border-t border-white border-opacity-10 mt-2"></div>
       </div>
     </header>
   `;
 
+  // Replace feather icons
   if (window.feather) feather.replace();
 
-  // Desktop search logic
+  // Desktop search submit
   const searchForm = document.getElementById("searchForm");
   const searchInput = document.getElementById("searchInput");
-
   if (searchForm && searchInput) {
     searchForm.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -90,29 +86,47 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Mobile search logic
-  const openMobileSearch = document.getElementById("openMobileSearch");
-  const closeSearchBtn = document.getElementById("closeSearchBtn");
+  const mobileSearchIcon = document.getElementById("mobileSearchIcon");
   const mobileSearchContainer = document.getElementById("mobileSearchContainer");
-  const mobileSearchForm = document.getElementById("mobileSearchForm");
+  const closeSearchBtn = document.getElementById("closeSearchBtn");
   const mobileSearchInput = document.getElementById("mobileSearchInput");
 
-  if (openMobileSearch && closeSearchBtn && mobileSearchContainer && mobileSearchForm && mobileSearchInput) {
-    openMobileSearch.addEventListener("click", () => {
-      mobileSearchContainer.classList.remove("hidden");
-      mobileSearchInput.focus();
-    });
+  function showMobileSearch() {
+    mobileSearchContainer.classList.remove("hidden");
+    setTimeout(() => {
+      mobileSearchContainer.classList.add("mobile-search-active");
+    }, 10); // allow DOM to apply base class first
+    mobileSearchInput.focus();
+  }
 
-    closeSearchBtn.addEventListener("click", () => {
+  function hideMobileSearch() {
+    mobileSearchContainer.classList.remove("mobile-search-active");
+    setTimeout(() => {
       mobileSearchContainer.classList.add("hidden");
-      mobileSearchInput.value = '';
-    });
+    }, 250); // allow animation to complete
+  }
 
-    mobileSearchForm.addEventListener("submit", (e) => {
+  mobileSearchIcon?.addEventListener("click", (e) => {
+    e.stopPropagation(); // prevent triggering body click
+    showMobileSearch();
+  });
+
+  closeSearchBtn?.addEventListener("click", hideMobileSearch);
+
+  // Submit from mobile input
+  mobileSearchInput?.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
       e.preventDefault();
       const query = mobileSearchInput.value.trim();
       if (query) {
         window.location.href = `search.html?q=${encodeURIComponent(query)}`;
       }
-    });
-  }
+    }
+  });
+
+  // Click outside to close
+  document.body.addEventListener("click", (e) => {
+    const isClickInside = mobileSearchContainer?.contains(e.target) || mobileSearchIcon?.contains(e.target);
+    if (!isClickInside) hideMobileSearch();
+  });
 });
