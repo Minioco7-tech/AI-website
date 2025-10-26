@@ -1,5 +1,6 @@
 import { fetchJSON, categoryColors, getCategoryName, sortModels, shuffleArray } from './utils.js';
 import { createModelCard } from './modelCard.js';
+import { setBreadcrumb } from './breadcrumb.js';
 
 // DOM Elements
 const modelsGrid = document.getElementById('modelsGrid');
@@ -104,7 +105,10 @@ function updateFilteredModels() {
 
 async function loadCategoryModels() {
   const categoryKey = getCategoryFromUrl();
+  const categoryName = getCategoryName(categoryKey);
   if (categoryTitle) categoryTitle.textContent = getCategoryName(categoryKey);
+
+  setBreadcrumb(['Home', categoryName]);
 
   const modelsData = await fetchJSON('./models.json');
 
