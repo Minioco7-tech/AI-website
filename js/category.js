@@ -108,7 +108,11 @@ async function loadCategoryModels() {
   const categoryName = getCategoryName(categoryKey);
   if (categoryTitle) categoryTitle.textContent = getCategoryName(categoryKey);
 
-  setBreadcrumb(['Home', categoryName]);
+  renderBreadcrumb([
+    { label: 'Home', href: 'index.html' },
+    { label: 'All Models', href: 'category.html?category=all' },
+    { label: 'Model Name' } // last item = current page
+  ]);
 
   const modelsData = await fetchJSON('./models.json');
 
