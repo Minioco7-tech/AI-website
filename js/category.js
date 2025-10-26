@@ -111,9 +111,10 @@ async function loadCategoryModels() {
   const filteredModels =
     categoryKey.toLowerCase() === 'all'
       ? modelsData
-      : modelsData.filter(m =>
-          (m.category || []).map(c => c.toLowerCase()).includes(categoryKey.toLowerCase())
-        );
+      : modelsData.filter(m => {
+        const cats = Array.isArray(m.category) ? m.category : [m.category];
+        return cats.map(c => c.toLowerCase()).includes(categoryKey.toLowerCase());
+      });
 
   currentModels = filteredModels;
 
