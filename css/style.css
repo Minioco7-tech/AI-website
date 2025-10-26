@@ -386,4 +386,16 @@ body:not(.home-page) #searchInput:hover {
   font-weight: 500;
 }
 
+#breadcrumb a {
+  color: #888;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+#breadcrumb a:hover {
+  color: #00BFFF; /* Tailwind-inspired blue hover */
+  text-decoration: underline;
+}
+
+
 
