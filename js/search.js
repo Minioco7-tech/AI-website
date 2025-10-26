@@ -1,5 +1,6 @@
 import { fetchJSON, categoryColors, getCategoryName, shuffleArray, sortModels } from './utils.js';
 import { createModelCard } from './modelCard.js';
+import { setBreadcrumb } from './breadcrumb.js';
 
 const resultsGrid = document.getElementById('resultsGrid');
 const noResults = document.getElementById('noResults');
@@ -72,6 +73,8 @@ async function fetchAndDisplayResults() {
     const params = new URLSearchParams(window.location.search);
     const searchQuery = params.get('q')?.trim().toLowerCase() || '';
     queryText.textContent = searchQuery;
+
+    setBreadcrumb(['Home', searchQuery.charAt(0).toUpperCase() + searchQuery.slice(1)]);
 
     const models = await fetchJSON('./models.json');
 
