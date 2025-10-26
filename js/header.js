@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </form>
 
           <!-- Nav (desktop) -->
-          <div class="hidden sm:flex items-center space-x-6">
+          <div id="navActions "class="flex sm:flex items-center space-x-6">
             <nav class="flex space-x-4 backdrop-blur-lg px-4 py-1 rounded-lg">
               <a href="about.html" class="text-white hover:text-[#00BFFF] transition-colors">About</a>
             </nav>
@@ -90,20 +90,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileSearchContainer = document.getElementById("mobileSearchContainer");
   const closeSearchBtn = document.getElementById("closeSearchBtn");
   const mobileSearchInput = document.getElementById("mobileSearchInput");
+  const navActions = document.getElementById("navActions");
 
   function showMobileSearch() {
     mobileSearchContainer.classList.remove("hidden");
+    navActions.classList.add("hidden");
     setTimeout(() => {
       mobileSearchContainer.classList.add("mobile-search-active");
-    }, 10); // allow DOM to apply base class first
+    }, 10);
     mobileSearchInput.focus();
   }
-
+  
   function hideMobileSearch() {
     mobileSearchContainer.classList.remove("mobile-search-active");
     setTimeout(() => {
       mobileSearchContainer.classList.add("hidden");
-    }, 250); // allow animation to complete
+      navActions.classList.remove("hidden");
+    }, 250);
   }
 
   mobileSearchIcon?.addEventListener("click", (e) => {
