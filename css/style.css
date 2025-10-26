@@ -337,3 +337,16 @@ footer p {
      cursor: pointer;
    }
 }
+
+/* ========== Search Bar Glow for Non-Index Pages ========== */
+
+/* Apply only when body does NOT have .home-page class (i.e., not index.html) */
+body:not(.home-page) #searchInput {
+  transition: all 0.3s ease;
+}
+
+body:not(.home-page) #searchInput:hover {
+  box-shadow: 0 0 8px #00BFFF;
+  border-color: #00BFFF;
+}
+
