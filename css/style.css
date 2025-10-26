@@ -370,8 +370,10 @@ body:not(.home-page) #searchInput:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 0.25rem;
-  justify-content: center;
-  text-align: center;
+  text-align: left;
+  justify-content: flex-start; /* ✅ align left */
+  margin-top: 1rem;            /* ✅ consistent spacing */
+  margin-bottom: 1rem;
 }
 
 #breadcrumb span {
