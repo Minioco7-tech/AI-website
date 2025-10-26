@@ -33,7 +33,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   const categoryName = getCategoryName(model.category);
-  setBreadcrumb(['Home', categoryName, model.name]);
+  renderBreadcrumb([
+    { label: 'Home', href: 'index.html' },
+    { label: 'All Models', href: 'category.html?category=all' },
+    { label: 'Model Name' } // last item = current page
+  ]);
 
   // Display model details
   modelDetailsEl.innerHTML = `
