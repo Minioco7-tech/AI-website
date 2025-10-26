@@ -374,6 +374,7 @@ body:not(.home-page) #searchInput:hover {
   justify-content: flex-start; /* ✅ align left */
   margin-top: 0.5rem;            /* ✅ consistent spacing */
   margin-bottom: 1rem;
+  background-color: transparent;
 }
 
 #breadcrumb span {
