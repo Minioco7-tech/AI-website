@@ -30,6 +30,7 @@ function getMatchedCategory(keywords) {
     if (keywords.some(word => synonyms.includes(word))) return key;
   }
   return null;
+}
 
 // ------------------------------
 // Core Display Logic
@@ -42,7 +43,8 @@ function displayModels(models) {
   models.forEach(model => {
     const card = createModelCard(model);
     resultsGrid.appendChild(card);
-});
+  });
+}
 
 function initLazyBackgrounds() {
   const lazyBackgrounds = document.querySelectorAll('.lazy-bg');
@@ -140,6 +142,7 @@ randomiseBtn.addEventListener('click', () => {
       displayModels(currentModels);
       window.scrollTo({ top: 0, behavior: 'smooth' });
       setTimeout(() => { document.body.style.transform = 'translateZ(0)'; }, 100);
+  });
 });
 
 document.addEventListener('DOMContentLoaded', fetchAndDisplayResults);
