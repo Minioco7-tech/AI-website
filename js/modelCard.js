@@ -2,8 +2,14 @@ import { categoryColors, getCategoryName } from './utils.js';
 
 export function createModelCard(model) {
   const card = document.createElement('a');
-  card.href = `model.html?model=${encodeURIComponent(model.name)}`;
-
+  // Get current path to append as breadcrumb trail
+  const currentUrl = new URL(window.location.href);
+  const breadcrumbSource = currentUrl.searchParams.get('q') || currentUrl.searchParams.get('category') || 'all';
+  const breadcrumbTrail = encodeURIComponent(breadcrumbSource);
+  
+  // Build model page link with breadcrumb
+  card.href = `model.html?model=${encodeURIComponent(model.name)}&breadcrumb=${breadcrumbTrail}`;
+  
   card.className = `
     model-tile 
     flex flex-col
