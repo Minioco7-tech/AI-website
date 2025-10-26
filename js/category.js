@@ -1,6 +1,6 @@
 import { fetchJSON, categoryColors, getCategoryName, sortModels, shuffleArray } from './utils.js';
 import { createModelCard } from './modelCard.js';
-import { setBreadcrumb } from './breadcrumb.js';
+import { renderBreadcrumb } from './breadcrumb.js';
 
 // DOM Elements
 const modelsGrid = document.getElementById('modelsGrid');
