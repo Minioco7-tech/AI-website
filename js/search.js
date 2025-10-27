@@ -44,7 +44,6 @@ function getMatchedCategory(keywords) {
 function displayModels(models) {
   resultsGrid.innerHTML = '';
   resultsGrid.className = 'grid gap-6 sm:grid-cols-2 lg:grid-cols-3';
-    
   models.forEach(model => {
     const card = createModelCard(model);
     resultsGrid.appendChild(card);
@@ -74,9 +73,14 @@ async function fetchAndDisplayResults() {
     const searchQuery = params.get('q')?.trim().toLowerCase() || '';
     queryText.textContent = searchQuery;
 
+    // ✅ Store search info in session
+    sessionStorage.setItem('breadcrumbSource', 'search');
+    sessionStorage.setItem('breadcrumbSearchQuery', searchQuery);
+
+    // ✅ Breadcrumb
     renderBreadcrumb([
       { label: 'Home', href: 'index.html' },
-      { label: searchQuery.charAt(0).toUpperCase() + searchQuery.slice(1) }
+      { label: 'Search Results' }
     ]);
 
     const models = await fetchJSON('./models.json');
@@ -89,7 +93,7 @@ async function fetchAndDisplayResults() {
 
     const matchedCategory = getMatchedCategory(keywords);
     // DOM refs
-    const matchedCategoryTag = document.getElementById('matchedCategoryTag');
+    // const matchedCategoryTag = document.getElementById('matchedCategoryTag');
     
     // After getting matchedCategory:
     if (matchedCategory && matchedCategory !== 'all') {
@@ -100,11 +104,6 @@ async function fetchAndDisplayResults() {
     }
 
     let filtered = [];
-
-    console.log('🔍 Search query:', searchQuery);
-    console.log('🧩 Keywords:', keywords);
-    console.log('🎯 Matched category:', matchedCategory);
-
     
     if (['all', 'everything', 'all tools', 'catalogue', 'all models', 'show all models'].includes(searchQuery.toLowerCase())) {
       filtered = models;
