@@ -32,13 +32,24 @@ document.addEventListener('DOMContentLoaded', async () => {
     return;
   }
 
-  const categoryName = getCategoryName(model.category);
-  renderBreadcrumb([
-    { label: 'Home', href: 'index.html' },
-    { label: 'All Models', href: 'category.html?category=all' },
-    { label: 'Model Name' } // last item = current page
-  ]);
+  // Determine breadcrumb based on previous navigation
+  let breadcrumbItems = [{ label: 'Home', href: 'index.html' }];
+  const source = sessionStorage.getItem('breadcrumbSource');
 
+  if (source === 'category') {
+    const catName = sessionStorage.getItem('breadcrumbCategory') || getCategoryName(model.category);
+    breadcrumbItems.push({ label: catName, href: `category.html?category=${encodeURIComponent(model.category)}` });
+  } else if (source === 'search') {
+    const query = sessionStorage.getItem('breadcrumbSearchQuery') || 'Search Results';
+    breadcrumbItems.push({ label: 'Search Results', href: `search.html?q=${encodeURIComponent(query)}` });
+  } else {
+    // Default fallback
+    breadcrumbItems.push({ label: getCategoryName(model.category), href: `category.html?category=${encodeURIComponent(model.category)}` });
+  }
+
+  breadcrumbItems.push({ label: model.name });
+  renderBreadcrumb(breadcrumbItems);
+  
   // Display model details
   modelDetailsEl.innerHTML = `
     <div class="max-w-3xl mx-auto">
