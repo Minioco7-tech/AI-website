@@ -136,3 +136,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!isClickInside) hideMobileSearch();
   });
 });
+
+document.addEventListener('click', (e) => {
+  if (e.target.closest('a[href="index.html"]')) {
+    sessionStorage.removeItem('breadcrumbSource');
+    sessionStorage.removeItem('breadcrumbCategory');
+    sessionStorage.removeItem('breadcrumbSearchQuery');
+  }
+});
