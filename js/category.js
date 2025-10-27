@@ -34,6 +34,11 @@ function displayModels(models) {
   initLazyBackgrounds();
 }
 
+function updateFilteredModels() {
+  const filtered = filterBySelectedCategories(currentModels);
+  displayModels(filtered);
+}
+
 function initLazyBackgrounds() {
   const lazyBackgrounds = document.querySelectorAll('.lazy-bg');
   const observer = new IntersectionObserver(entries => {
@@ -93,12 +98,6 @@ function filterBySelectedCategories(models) {
   });
 }
 
-function updateFilteredModels() {
-  const filtered = filterBySelectedCategories(currentModels);
-  displayModels(filtered);
-}
-
-
 // ------------------------------
 // Load Category Models
 // ------------------------------
@@ -106,14 +105,19 @@ function updateFilteredModels() {
 async function loadCategoryModels() {
   const categoryKey = getCategoryFromUrl();
   const categoryName = getCategoryName(categoryKey);
-  if (categoryTitle) categoryTitle.textContent = getCategoryName(categoryKey);
 
+  // Store breadcrumb source
+  sessionStorage.setItem('breadcrumbSource', 'category');
+  sessionStorage.setItem('breadcrumbCategory', categoryName);
+  
+  if (categoryTitle) categoryTitle.textContent = categoryName;
+
+  // Set breadcrumb
   renderBreadcrumb([
     { label: 'Home', href: 'index.html' },
-    { label: 'All Models', href: 'category.html?category=all' },
-    { label: 'Model Name' } // last item = current page
+    { label: categoryName }
   ]);
-
+  
   const modelsData = await fetchJSON('./models.json');
 
   const filteredModels =
