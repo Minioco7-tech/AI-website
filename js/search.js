@@ -1,4 +1,4 @@
-import { fetchJSON, categoryColors, getCategoryName, shuffleArray, sortModels } from './utils.js';
+import { fetchJSON, categoryColors, getCategoryName, shuffleArray, sortModels, getPaginatedModels, renderPagination, MODELS_PER_PAGE } from './utils.js';
 import { createModelCard } from './modelCard.js';
 import { renderBreadcrumb } from './breadcrumb.js';
 
@@ -13,6 +13,7 @@ const matchedCategoryTag = document.getElementById('matchedCategoryTag');
 const stopwords = ['i','want','to','a','the','and','for','of','in','on','is','with','my','you','it','this','that','at'];
 let currentModels = [];
 let selectedCategories = new Set();
+let currentPage = 1;
 
 const categorySynonyms = {
   productivity: ['writing', 'writer', 'content', 'copy', 'text', 'document', 'email', 'productivity', 'work', 'tasks', 'organization'],
@@ -42,12 +43,23 @@ function getMatchedCategory(keywords) {
 // ------------------------------
 
 function displayModels(models) {
+  const paginated = getPaginatedModels(models, currentPage, MODELS_PER_PAGE);
+  
   resultsGrid.innerHTML = '';
   resultsGrid.className = 'grid gap-6 sm:grid-cols-2 lg:grid-cols-3';
-  models.forEach(model => {
+  paginated.forEach(model => {
     const card = createModelCard(model);
     resultsGrid.appendChild(card);
   });
+  renderPagination({
+    totalItems: models.length,
+    currentPage,
+    onPageChange: (page) => {
+      currentPage = page;
+      displayModels(models);
+    }
+  });
+  initLazyBackgrounds?.();
 }
 
 function initLazyBackgrounds() {
@@ -147,20 +159,16 @@ async function fetchAndDisplayResults() {
 
 sortBySelect.addEventListener('change', () => {
   if (!currentModels.length) return;
-  const sortedModels = sortModels(currentModels, sortBySelect.value);
-  displayModels(sortedModels);
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  currentPage = 1;
+  currentModels = sortModels(currentModels, sortBySelect.value);
+  displayModels(currentModels);
 });
 
 randomiseBtn.addEventListener('click', () => {
   if (!currentModels.length) return;
+  currentPage = 1;
   currentModels = shuffleArray(currentModels);
-  resultsGrid.innerHTML = '';
-  requestAnimationFrame(() => {
-      displayModels(currentModels);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      setTimeout(() => { document.body.style.transform = 'translateZ(0)'; }, 100);
-  });
+  displayModels(currentModels);
 });
 
 document.addEventListener('DOMContentLoaded', fetchAndDisplayResults);
