@@ -29,9 +29,9 @@ export const categoryColors = {
   business: 'bg-gradient-to-r from-[#10B981] to-[#059669]',      // emerald/green
   chatbots: 'bg-gradient-to-r from-[#F59E0B] to-[#D97706]',      // amber
   audio: 'bg-gradient-to-r from-[#E11D48] to-[#DB2777]',         // red/pink
-  coding: 'bg-gradient-to-r from-[#8B5CF6] to-[#6366F1]',        // violet/indigo
+  coding: 'bg-gradient-to-r from-[#020024] to-[#090979]',        // violet/indigo
   science: 'bg-gradient-to-r from-[#14B8A6] to-[#06B6D4]',       // teal
-  documents: 'bg-gradient-to-r from-[#FACC15] to-[#EAB308]',       // yellow
+  documents: 'bg-gradient-to-r from-[#36FFB8] to-[#00FF2F]',       // yellow
   spreadsheets: 'bg-gradient-to-r from-[#60A5FA] to-[#3B82F6]'       // light blue
 };
 
