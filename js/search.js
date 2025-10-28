@@ -1,4 +1,4 @@
-import { fetchJSON, categoryColors, getCategoryName, shuffleArray, sortModels, getPaginatedModels, renderPagination, MODELS_PER_PAGE } from './utils.js';
+import { fetchJSON, categoryColors, getCategoryName, shuffleArray, sortModels, getPaginatedModels, renderPagination, MODELS_PER_PAGE, normalizeCategories} from './utils.js';
 import { createModelCard } from './modelCard.js';
 import { renderBreadcrumb } from './breadcrumb.js';
 
@@ -122,8 +122,8 @@ async function fetchAndDisplayResults() {
     } 
     else if (matchedCategory) {
       filtered = models.filter(m => {
-        const cats = Array.isArray(m.category) ? m.category : [m.category];
-        return cats.map(c => c.toLowerCase()).includes(matchedCategory);
+        const cats = normalizeCategories(m.category).map(c => c.toLowerCase());
+        return cats.includes(matchedCategory);
       });
     }
     else {
