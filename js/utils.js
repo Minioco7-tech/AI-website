@@ -123,3 +123,8 @@ export function renderPagination({ totalItems, currentPage, onPageChange, contai
     container.appendChild(button);
   }
 }
+
+export function normalizeCategories(categoryField) {
+  if (!categoryField) return [];
+  return Array.isArray(categoryField) ? categoryField : [categoryField];
+}
