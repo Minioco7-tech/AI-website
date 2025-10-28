@@ -74,7 +74,7 @@
     {
       "id": 9,
       "name": "Perplexity AI",
-      "category": ["chatbots", "productivity", "documents"],
+      "category": ["chatbots", "writing", "documents"],
       "type": "N/A",
       "description": "Perplexity AI merges search and conversation, answering questions with citations and concise summaries. It is seful for research, study and general knowledge exploration.",
       "image": "assets/images/placeholder.png",    
@@ -389,7 +389,7 @@
     {
       "id": 44,
       "name": "Google Workspace",
-      "category": ["spreadsheets", "documents", "productivity"],
+      "category": ["spreadsheets", "documents", "writing"],
       "type": "N/A",
       "description": "Google Workspace integrates AI across Docs, Sheets and Slides to enhance collaboration, automate workflows and boost productivity.", 
       "image": "assets/images/placeholder.png",
@@ -398,7 +398,7 @@
     {
       "id": 45,
       "name": "formulabot",
-      "category": ["spreadsheets", "productivity"],
+      "category": ["spreadsheets", "writing"],
       "type": "N/A",
       "description": "Formulabot translates user requests into spreadsheet formulas instantly. Allowing non-technical users to automate complex data tasks seamlessly.",
       "image": "assets/images/placeholder.png",
