@@ -1,4 +1,4 @@
-import { fetchJSON, categoryColors, getCategoryName, sortModels, shuffleArray } from './utils.js';
+import { fetchJSON, categoryColors, getCategoryName, sortModels, shuffleArray, getPaginatedModels, renderPagination, MODELS_PER_PAGE } from './utils.js';
 import { createModelCard } from './modelCard.js';
 import { renderBreadcrumb } from './breadcrumb.js';
 
@@ -12,6 +12,7 @@ const sortBySelect = document.getElementById('sortBy');
 
 let currentModels = [];
 let selectedCategories = new Set();
+let currentPage = 1;
 
 // ------------------------------
 // Helpers
@@ -23,14 +24,24 @@ function getCategoryFromUrl() {
 }
 
 function displayModels(models) {
+  const paginated = getPaginatedModels(models, currentPage, MODELS_PER_PAGE);
+  
   modelsGrid.innerHTML = '';
   modelsGrid.className = 'grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3';
 
-  models.forEach(model => {
+  paginated.forEach(model => {
     const card = createModelCard(model);
     modelsGrid.appendChild(card);
   });
 
+  renderPagination({
+    totalItems: models.length,
+    currentPage,
+    onPageChange: (page) => {
+      currentPage = page;
+      displayModels(models);
+    }
+  });
   initLazyBackgrounds();
 }
 
@@ -140,17 +151,16 @@ async function loadCategoryModels() {
 
 sortBySelect.addEventListener('change', () => {
   if (!currentModels.length) return;
-  const sorted = sortModels(currentModels, sortBySelect.value);
-  currentModels = sorted;
-  updateFilteredModels();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  currentPage = 1;
+  currentModels = sortModels(currentModels, sortBySelect.value);
+  displayModels(currentModels);
 });
 
 randomiseBtn.addEventListener('click', () => {
   if (!currentModels.length) return;
+  currentPage = 1;
   currentModels = shuffleArray(currentModels);
-  updateFilteredModels();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  displayModels(currentModels);
 });
 
 document.addEventListener('DOMContentLoaded', () => {
