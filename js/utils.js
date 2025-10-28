@@ -83,3 +83,40 @@ export function getUniqueCategories(models) {
   const all = models.flatMap(m => m.category || []);
   return [...new Set(all.map(cat => cat.toLowerCase()))];
 }
+
+// ------------------------------
+// Pagination Utilities
+// ------------------------------
+
+export const MODELS_PER_PAGE = 21;
+
+export function getPaginatedModels(models, currentPage, perPage = MODELS_PER_PAGE) {
+  const start = (currentPage - 1) * perPage;
+  const end = start + perPage;
+  return models.slice(start, end);
+}
+
+export function renderPagination({ totalItems, currentPage, onPageChange, containerId = 'pagination', perPage = MODELS_PER_PAGE }) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  const totalPages = Math.ceil(totalItems / perPage);
+  container.innerHTML = '';
+
+  if (totalPages <= 1) return;
+
+  for (let page = 1; page <= totalPages; page++) {
+    const button = document.createElement('button');
+    button.textContent = page;
+    button.className = `px-3 py-1 rounded-md border border-white/10 text-sm ${
+      page === currentPage ? 'bg-white text-black' : 'bg-black/20 text-white hover:bg-white/10'
+    }`;
+    button.addEventListener('click', () => {
+      if (typeof onPageChange === 'function') {
+        onPageChange(page);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+    container.appendChild(button);
+  }
+}
