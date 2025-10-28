@@ -1,4 +1,4 @@
-import { fetchJSON, categoryColors, getCategoryName, sortModels, shuffleArray, getPaginatedModels, renderPagination, MODELS_PER_PAGE } from './utils.js';
+import { fetchJSON, categoryColors, getCategoryName, sortModels, shuffleArray, getPaginatedModels, renderPagination, MODELS_PER_PAGE, normalizeCategories } from './utils.js';
 import { createModelCard } from './modelCard.js';
 import { renderBreadcrumb } from './breadcrumb.js';
 
