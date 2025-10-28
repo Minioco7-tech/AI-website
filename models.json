@@ -2,7 +2,7 @@
     {
       "id": 1,
       "name": "ElevenLabs",
-      "category": ["audio", "design", "productivity"],
+      "category": ["audio", "design"],
       "type": "N/A",
       "description": "ElevenLabs provides lifelike voice generation and cloning. Enables creators to craft unique, expressive voices for videos, podcasts, games, and accessibility applications with remarkable realism.",
       "image": "Images/writing/writing.webp",
@@ -11,7 +11,7 @@
     {
       "id": 2,
       "name": "Adobe Podcast",
-      "category": ["audio", "productivity", "documents"],
+      "category": ["audio", "design"],
       "type": "N/A",
       "description": "Adobe Podcast simplifies audio creation with AI-driven tools for cleaning sound, enhancing voice quality and automating editing. Ideal for podcasters and professionals who need polished audio without complex software.",
       "image": "Images/writing/writing.webp",
@@ -20,7 +20,7 @@
     {
       "id": 3,
       "name": "Cleanvoice AI",
-      "category": ["audio", "productivity"],
+      "category": ["audio", "design"],
       "type": "N/A",
       "description": "Cleanvoice AI automatically removes filler words, background noise, stutters and awkward pauses from recordings. Helping creators produce smooth, professional audio content faster.",
       "image": "Images/writing/writing.webp",
@@ -29,7 +29,7 @@
     {
       "id": 4,
       "name": "Resemble AI",
-      "category": ["audio", "productivity", "design"],
+      "category": ["audio", "design"],
       "type": "N/A",
       "description": "Resemble AI offers custom voice synthesis for branding, entertainment and customer interaction. Users can clone or design unique synthetic voices that maintain emotional tone and clarity across multiple languages.",
       "image": "Images/writing/writing.webp",
@@ -38,7 +38,7 @@
     {
       "id": 5,
       "name": "Podcastle AI",
-      "category": ["audio", "productivity", "documents"],
+      "category": ["audio", "writing", "documents"],
       "type": "N/A",
       "description": "Podcastle AI provides a full-service podcast production suite with AI tools for recording, editing, transcribing and enhancing voice quality. All within an intuitive web interface.",
       "image": "Images/writing/writing.webp",
@@ -47,7 +47,7 @@
     {
       "id": 6,
       "name": "ChatGPT",
-      "category": ["chatbots", "coding", "productivity", "documents"],
+      "category": ["chatbots", "coding", "writing", "documents"],
       "type": "N/A",
       "description": "ChatGPT is a conversational AI that assists with writing, brainstorming, coding, learning and creative ideation. It understands context and tone, helping users generate content, explanations, and insights in natural language.",
       "image": "assets/images/placeholder.png",
@@ -56,7 +56,7 @@
     {
       "id": 7,
       "name": "Google Gemini",
-      "category": ["chatbots", "productivity", "design"],
+      "category": ["chatbots", "writing", "design"],
       "type": "N/A",
       "description": "Google Gemini combines language, image and reasoning capabilities to deliver contextual understanding and creative assistance. Helps users to analyse data, generate ideas and complete complex tasks efficiently.",
       "image": "assets/images/placeholder.png",
@@ -65,7 +65,7 @@
     {
       "id": 8,
       "name": "Meta AI",
-      "category": ["chatbots", "productivity"],
+      "category": ["chatbots", "writing", "learning"],
       "type": "N/A",
       "description": "Meta AI is an intelligent conversational assistant integrated across Meta platforms. It supports casual chats, creative writing and learning tasks through natural interaction.",
       "image": "assets/images/placeholder.png",
@@ -83,7 +83,7 @@
     {
       "id": 10,
       "name": "Claude",
-      "category": ["chatbots", "productivity", "documents"],
+      "category": ["chatbots", "writing", "documents"],
       "type": "N/A",
       "description": "Claude, from Anthropic, is an advanced assistant focused on safe and helpful reasoning. It supports writing, summarisation, coding and task automation in a natural manner.",
       "image": "assets/images/placeholder.png",
@@ -92,16 +92,16 @@
     {
       "id": 11,
       "name": "Codex AI",
-      "category": ["coding", "productivity"],
+      "category": ["coding"],
       "type": "N/A",
-      "description": "Codex AI translates human language into code, assisting developers in automating repetitive programming tasks, writing functions and learning syntax in multiple languages.",
+      "description": "Codex AI translates human language into code. Assisting developers in automating repetitive programming tasks, writing functions and learning syntax in multiple languages.",
       "image": "assets/images/placeholder.png",
       "link": "https://openai.com/index/openai-codex"
     },
     {
       "id": 12,
       "name": "Codium AI", 
-      "category": ["coding", "productivity"],
+      "category": ["coding"],
       "type": "N/A",
       "description": "Codium AI - now Qodo - enhances code reliability by generating intelligent test cases and suggesting improvements. It integrates seamlessly into development workflows for cleaner, safer and faster code.",
       "image": "assets/images/placeholder.png",
@@ -110,7 +110,7 @@
     {
       "id": 13,
       "name": "Stitch", 
-      "category": ["coding", "productivity", "design"],
+      "category": ["coding", "design"],
       "type": "N/A",
       "description": "Stitch helps developers collaborate and generate code using natural language. It bridges the gap between design and development, allowing users to prototype or build projects quickly.",
       "image": "assets/images/placeholder.png",
@@ -119,7 +119,7 @@
     {
       "id": 14,
       "name": "Blackbox AI",
-      "category": ["coding", "productivity"],
+      "category": ["coding"],
       "type": "N/A",
       "description": "Blackbox AI searches, explains and writes code snippets across repositories. It accelerates debugging, learning and documentation for developers using various frameworks and languages.",
       "image": "assets/images/placeholder.png",
@@ -128,7 +128,7 @@
     {
       "id": 15,
       "name": "DeepSite", 
-      "category": ["coding", "productivity", "design"],
+      "category": ["coding", "design"],
       "type": "N/A",
       "description": "DeepSite transforms text prompts into live websites or prototypes. It merges web design and automation, allowing creators to launch responsive pages with minimal coding knowledge.",
       "image": "assets/images/placeholder.png",
@@ -137,7 +137,7 @@
     {
       "id": 16,
       "name": "Midjourney",
-      "category": ["design", "productivity"],
+      "category": ["design"],
       "type": "N/A",
       "description": "Midjourney converts text prompts into artistic imagery. Producing unique visual compositions for storytelling, branding and concept design.",
       "image": "assets/images/placeholder.png",
@@ -146,7 +146,7 @@
     {
       "id": 17,
       "name": "DALL-E 3",
-      "category": ["design", "productivity"],
+      "category": ["design"],
       "type": "N/A",
       "description": "DALL-E 3 generates detailed, coherent images from natural language prompts. Empowering designers, educators and marketers to visualise concepts with precision.",
       "image": "assets/images/placeholder.png",
@@ -155,7 +155,7 @@
     {
       "id": 18,
       "name": "Canva",
-      "category": ["design", "productivity", "documents"],
+      "category": ["design", "documents"],
       "type": "N/A",
       "description": "Canva integrates AI into its design suite for image generation, layout suggestions and smart templates. It enables non-designers to produce professional visuals quickly.",
       "image": "assets/images/placeholder.png",
@@ -164,7 +164,7 @@
     {
       "id": 19,
       "name": "Playground",
-      "category": ["design", "chatbots", "productivity"],
+      "category": ["design", "chatbots"],
       "type": "N/A",
       "description": "Playground provides a creative sandbox for testing text-to-image and text-generation models. Encouraging experimentation and visual exploration for artists and developers alike.",
       "image": "assets/images/placeholder.png",
@@ -173,7 +173,7 @@
     {
       "id": 20,
       "name": "Leonardo",
-      "category": ["design", "productivity"],
+      "category": ["design"],
       "type": "N/A",
       "description": "Leonardo AI specialises in generating game assets, illustrations and digital art. It focuses on style consistency and custom model training for designers and studios.",
       "image": "assets/images/placeholder.png",
@@ -182,7 +182,7 @@
     {
       "id": 21,
       "name": "QuillBot",
-      "category": ["documents", "productivity"],
+      "category": ["documents", "writing"],
       "type": "N/A",
       "description": "QuillBot refines writing through paraphrasing, tone adjustments and summarisation. It enhances clarity and consistency across academic, professional and creative writing.",
       "image": "assets/images/placeholder.png",
@@ -191,7 +191,7 @@
     {
       "id": 22,
       "name": "Scribe",
-      "category": ["documents", "productivity"],
+      "category": ["documents", "writing"],
       "type": "N/A",
       "description": "Scribe records digital workflows and auto-creates illustrated guides. It’s perfect for training, documentation and onboarding with minimal manual effort.",
       "image": "assets/images/placeholder.png",
@@ -200,7 +200,7 @@
     {
       "id": 23,
       "name": "Scholarcy",
-      "category": ["documents", "Science", "productivity"],
+      "category": ["documents", "Science", "writing"],
       "type": "N/A",
       "description": "Scholarcy summarises academic papers and highlights key arguments, making research digestion faster for students and professionals alike.",
       "image": "assets/images/placeholder.png",
@@ -209,7 +209,7 @@
     {
       "id": 24,
       "name": "Paperpal",
-      "category": ["documents", "productivity"],
+      "category": ["documents", "writing"],
       "type": "N/A",
       "description": "Paperpal helps researchers and writers improve language, clarity and formatting in manuscripts using AI-driven editing and style feedback.",
       "image": "assets/images/placeholder.png",
@@ -218,7 +218,7 @@
     {
       "id": 25,
       "name": "Wordtune",
-      "category": ["documents", "productivity"],
+      "category": ["documents", "writing"],
       "type": "N/A",
       "description": "Wordtune rewrites and improves text to sound natural, concise, and engaging. It allows the user to adapt tone for emails, reports, essays and blogs.",
       "image": "assets/images/placeholder.png",
@@ -227,7 +227,7 @@
     {
       "id": 26,
       "name": "AlphaSense",
-      "category": ["business", "documents", "productivity"],
+      "category": ["business", "documents"],
       "type": "N/A",
       "description": "AlphaSense enables professionals to analyse corporate data, reports and transcripts using semantic search. It reveals market insights and trends through natural-language understanding.",
       "image": "assets/images/placeholder.png",
@@ -236,7 +236,7 @@
     {
       "id": 27,
       "name": "Numer AI",
-      "category": ["business", "science", "productivity"],
+      "category": ["business", "science"],
       "type": "N/A",
       "description": "Numer AI crowdsources machine-learning models for stock prediction, allowing data scientists to contribute models that compete on real financial data.",
       "image": "assets/images/placeholder.png",
@@ -245,7 +245,7 @@
     {
       "id": 28,
       "name": "Datarails",
-      "category": ["business", "spreadsheets", "productivity"],
+      "category": ["business", "spreadsheets", "documents"],
       "type": "N/A",
       "description": "Datarails automates financial planning and reporting by integrating spreadsheets with real-time data insights. Helping finance professionals make faster, data-driven decisions.",
       "image": "assets/images/placeholder.png",
@@ -254,7 +254,7 @@
     {
       "id": 29,
       "name": "Workiva",
-      "category": ["business", "spreadsheets", "productivity"],
+      "category": ["business", "spreadsheets", "documents"],
       "type": "N/A",
       "description": "Workiva streamlines corporate compliance, reporting and audit processes through AI-powered automation and collaboration tools for large organisations.",
       "image": "assets/images/placeholder.png",
@@ -272,7 +272,7 @@
     {
       "id": 31,
       "name": "Khanmigo",
-      "category": ["learning", "productivity"],
+      "category": ["learning"],
       "type": "N/A",
       "description": "Khanmigo is a personalised AI tutor guiding students through lessons, problem-solving and writing exercises with real-time feedback and encouragement.",
       "image": "assets/images/placeholder.png",
@@ -281,7 +281,7 @@
     {
       "id": 32,
       "name": "MindGrasp",
-      "category": ["learning", "documents", "productivity"],
+      "category": ["learning", "documents"],
       "type": "N/A",
       "description": "NMindGrasp turns videos, lectures and documents into concise notes and summaries. Helping learners retain key information more effectively.",
       "image": "assets/images/placeholder.png",
@@ -290,7 +290,7 @@
     {
       "id": 33,
       "name": "OpenRead",
-      "category": ["learning", "documents", "productivity"],
+      "category": ["learning", "documents"],
       "type": "N/A",
       "description": "OpenRead provides AI-powered comprehension tools for reading and analysing study materials. Making complex topics easier to understand.",
       "image": "assets/images/placeholder.png",
@@ -308,7 +308,7 @@
     {
       "id": 35,
       "name": "Elicit",
-      "category": ["learning", "science", "productivity"],
+      "category": ["learning", "science", "writing"],
       "type": "N/A",
       "description": "Elicit automates research discovery and synthesis by generating hypotheses, summarising studies and suggesting related work.",
       "image": "assets/images/placeholder.png",
@@ -317,7 +317,7 @@
     {
       "id": 36,
       "name": "AlphaFold",
-      "category": ["science", "productivity"],
+      "category": ["science"],
       "type": "N/A",
       "description": "AlphaFold predicts 3D protein structures from amino acid sequences, transforming biological research and accelerating drug discovery.",
       "image": "assets/images/placeholder.png",
@@ -326,7 +326,7 @@
     {
       "id": 37,
       "name": "SciSpace",
-      "category": ["science", "documents", "productivity"],
+      "category": ["science", "documents"],
       "type": "N/A",
       "description": "SciSpace helps users read, summarise and explore academic papers... through AI explanations, visualisations and semantic linking.",
       "image": "assets/images/placeholder.png",
@@ -344,7 +344,7 @@
     {
       "id": 39,
       "name": "labguru",
-      "category": ["science", "productivity"],
+      "category": ["science", "writing"],
       "type": "N/A",
       "description": "Labguru automates lab workflows... from experiment tracking to inventory and data analysis. It esures efficient scientific collaboration.",
       "image": "assets/images/placeholder.png",
@@ -353,7 +353,7 @@
     {
       "id": 40,
       "name": "pincone AI",
-      "category": ["science", "coding", "productivity"],
+      "category": ["science", "coding"],
       "type": "N/A",
       "description": "Pinecone AI offers a vector-database for semantic search and retrieval. Foundational for LLMs, recommendation engines and AI research.",
       "image": "assets/images/placeholder.png",
@@ -362,7 +362,7 @@
     {
       "id": 41,
       "name": "GPTexcel",
-      "category": ["spreadsheets", "productivity"],
+      "category": ["spreadsheets", "business"],
       "type": "N/A",
       "description": "GPTexcel automates spreadsheet tasks like formula creation, chart building and data summarisation using natural language prompts.",
       "image": "assets/images/placeholder.png",
@@ -371,7 +371,7 @@
     {
       "id": 42,
       "name": "DataGPT",
-      "category": ["spreadsheets", "business", "productivity"],
+      "category": ["spreadsheets", "business"],
       "type": "N/A",
       "description": "DataGPT lets users chat directly with their data. Generating visual reports and insights automatically through AI analysis.",
       "image": "assets/images/placeholder.png",
@@ -380,7 +380,7 @@
     {
       "id": 43,
       "name": "Arcwise",
-      "category": ["spreadsheets", "productivity"],
+      "category": ["spreadsheets", "business"],
       "type": "N/A",
       "description": "Arcwise simplifies data manipulation by transforming plain-English instructions into spreadsheet actions and advanced formulas.",
       "image": "assets/images/placeholder.png",
@@ -407,7 +407,7 @@
     {
       "id": 46,
       "name": "Grammarly AI",
-      "category": ["documents", "productivity"],
+      "category": ["documents", "writing"],
       "type": "N/A",
       "description": "Grammarly AI improves writing clarity, tone and correctness in real-time. Offering stylistic and structural suggestions tailored to the writer’s intent.",
       "image": "assets/images/placeholder.png",
@@ -416,7 +416,7 @@
     {
       "id": 47,
       "name": "Writer",
-      "category": ["documents", "productivity"],
+      "category": ["documents", "writing"],
       "type": "N/A",
       "description": "Writer empowers teams to create brand-consistent content with tone, terminology and grammar guidance powered by enterprise AI.",
       "image": "assets/images/placeholder.png",
@@ -425,7 +425,7 @@
     {
       "id": 48,
       "name": "Copysmith",
-      "category": ["documents", "productivity", "design"],
+      "category": ["documents", "writing", "design"],
       "type": "N/A",
       "description": "Copysmith generates marketing copy, ads and product descriptions quickly. Allowing marketers to scale content creation with consistent messaging.",
       "image": "assets/images/placeholder.png",
@@ -434,7 +434,7 @@
     {
       "id": 49,
       "name": "Hyperwrite",
-      "category": ["documents", "productivity"],
+      "category": ["documents", "writing"],
       "type": "N/A",
       "description": "Hyperwrite acts as a personal writing companion. Assisting with brainstorming, drafting and improving text while adapting to your voice.",
       "image": "assets/images/placeholder.png",
@@ -443,7 +443,7 @@
     {
       "id": 50,
       "name": "Inkforall",
-      "category": ["documents", "productivity", "design"],
+      "category": ["documents", "writing", "design"],
       "type": "N/A",
       "description": "Inkforall combines SEO optimisation with AI-assisted content creation. Helping writers produce high-ranking, engaging material for blogs and websites.",
       "image": "assets/images/placeholder.png",
