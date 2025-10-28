@@ -200,7 +200,7 @@
     {
       "id": 23,
       "name": "Scholarcy",
-      "category": ["documents", "Science", "writing"],
+      "category": ["documents", "science", "writing"],
       "type": "N/A",
       "description": "Scholarcy summarises academic papers and highlights key arguments, making research digestion faster for students and professionals alike.",
       "image": "assets/images/placeholder.png",
