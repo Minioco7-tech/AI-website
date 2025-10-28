@@ -1,4 +1,4 @@
-import { fetchJSON, getCategoryName, categoryColors } from './utils.js';
+import { fetchJSON, getCategoryName, categoryColors, normalizeCategories } from './utils.js';
 import { createModelCard } from './modelCard.js';
 import { renderBreadcrumb } from './breadcrumb.js';
 
@@ -32,23 +32,34 @@ document.addEventListener('DOMContentLoaded', async () => {
     return;
   }
 
+  const modelCategories = normalizeCategories(model.category);
+  const firstCategory = modelCategories[0] || 'all';
+
   // Determine breadcrumb based on previous navigation
   let breadcrumbItems = [{ label: 'Home', href: 'index.html' }];
   const source = sessionStorage.getItem('breadcrumbSource');
 
   if (source === 'category') {
-    const catName = sessionStorage.getItem('breadcrumbCategory') || getCategoryName(model.category);
-    breadcrumbItems.push({ label: catName, href: `category.html?category=${encodeURIComponent(model.category)}` });
+    const catName = sessionStorage.getItem('breadcrumbCategory') || getCategoryName(firstCategory);
+    breadcrumbItems.push({ label: catName, href: `category.html?category=${encodeURIComponent(firstCategory)}` });
   } else if (source === 'search') {
     const query = sessionStorage.getItem('breadcrumbSearchQuery') || 'Search Results';
     breadcrumbItems.push({ label: 'Search Results', href: `search.html?q=${encodeURIComponent(query)}` });
   } else {
     // Default fallback
-    breadcrumbItems.push({ label: getCategoryName(model.category), href: `category.html?category=${encodeURIComponent(model.category)}` });
+    breadcrumbItems.push({ label: getCategoryName(firstCategory), href: `category.html?category=${encodeURIComponent(firstCategory)}` });
   }
 
   breadcrumbItems.push({ label: model.name });
   renderBreadcrumb(breadcrumbItems);
+
+  // Build category pills HTML
+  const categoryPills = modelCategories.map(cat => {
+    const colorClass = categoryColors[cat] || 'bg-black/20';
+    return `<span class="inline-block px-4 py-1 rounded-full text-sm font-medium text-white ${colorClass}">
+              ${getCategoryName(cat)}
+            </span>`;
+  }).join('');
   
   // Display model details
   modelDetailsEl.innerHTML = `
@@ -58,17 +69,22 @@ document.addEventListener('DOMContentLoaded', async () => {
       <div class="mb-4">
         <a href="${model.link}" target="_blank" class="btn-primary px-4 py-2 text-sm font-medium">Try Model</a>
       </div>
-      <span class="inline-block mb-4 px-4 py-1 rounded-full text-sm font-medium text-white ${categoryColors[model.category.toLowerCase()] || 'bg-black/20'}">
-        ${getCategoryName(model.category)}
-      </span>
+      <div class="flex flex-wrap gap-2 mb-4">
+        ${categoryPills}
+      </div>
       <p class="text-gray-200 text-base leading-relaxed whitespace-pre-line">
         ${model.description !== 'N/A' ? model.description : 'No description provided.'}
       </p>
     </div>
   `;
 
-  // Filter related models
-  const relatedModels = models.filter(m => m.category === model.category && m.id !== model.id);
+  // Filter related models based on ANY shared category
+  const relatedModels = models.filter(m => {
+    if (m.id === model.id) return false;
+
+    const mCats = normalizeCategories(m.category);
+    return mCats.some(cat => modelCategories.includes(cat));
+  });
 
   // Responsive settings
   const isMobile = window.innerWidth <= 768;
