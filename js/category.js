@@ -102,9 +102,7 @@ function filterBySelectedCategories(models) {
   if (selectedCategories.size === 0) return models;
 
   return models.filter(model => {
-    const cats = Array.isArray(model.category)
-      ? model.category.map(c => c.toLowerCase())
-      : [model.category.toLowerCase()];
+    const cats = normalizeCategories(model.category).map(c => c.toLowerCase());
     return [...selectedCategories].some(cat => cats.includes(cat));
   });
 }
