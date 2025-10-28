@@ -1,4 +1,4 @@
-import { categoryColors, getCategoryName } from './utils.js';
+import { categoryColors, getCategoryName, normalizeCategories } from './utils.js';
 
 export function createModelCard(model) {
   const card = document.createElement('a');
@@ -19,7 +19,7 @@ export function createModelCard(model) {
     transition transform duration-300 hover:scale-[1.03]
   `;
 
-  const categories = Array.isArray(model.category) ? model.category : [model.category];
+  const categories = normalizeCategories(model.category);
 
   const badges = categories.map(cat => {
     const colorClass = categoryColors[cat.toLowerCase()] || 'bg-black/20';
