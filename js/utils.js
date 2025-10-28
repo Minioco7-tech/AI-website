@@ -80,9 +80,12 @@ export function shuffleArray(array) {
 }
 
 export function getUniqueCategories(models) {
-  const all = models.flatMap(m => m.category || []);
+  const all = models.flatMap(m =>
+    Array.isArray(m.category) ? m.category : [m.category]
+  );
   return [...new Set(all.map(cat => cat.toLowerCase()))];
 }
+
 
 // ------------------------------
 // Pagination Utilities
