@@ -202,3 +202,14 @@ export function filterModelsByCategories(models, selectedCategories) {
     return required.every(cat => modelCats.includes(cat));
   });
 }
+
+// Detect clicks outside an element to close dropdown
+export function closeOnOutsideClick(triggerEl, dropdownEl, callback) {
+  function outsideClickHandler(e) {
+    if (!triggerEl.contains(e.target) && !dropdownEl.contains(e.target)) {
+      callback?.();
+      document.removeEventListener('click', outsideClickHandler);
+    }
+  }
+  document.addEventListener('click', outsideClickHandler);
+}
