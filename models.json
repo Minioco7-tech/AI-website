@@ -47,7 +47,7 @@
     {
       "id": 6,
       "name": "ChatGPT",
-      "category": "assistants", "documents", "development", "jobs"],
+      "category": ["assistants", "documents", "development", "jobs"],
       "type": "N/A",
       "description": "ChatGPT is a conversational AI that assists with writing, brainstorming, coding, learning and creative ideation. It understands context and tone, helping users generate content, explanations, and insights in natural language.",
       "image": "assets/images/placeholder.png",
@@ -283,7 +283,7 @@
       "name": "MindGrasp",
       "category": ["learning", "documents"],
       "type": "N/A",
-      "description": "NMindGrasp turns videos, lectures and documents into concise notes and summaries. Helping learners retain key information more effectively.",
+      "description": "MindGrasp turns videos, lectures and documents into concise notes and summaries. Helping learners retain key information more effectively.",
       "image": "assets/images/placeholder.png",
       "link": "https://www.mindgrasp.ai/?utm_source=chatgpt.com"
     },
