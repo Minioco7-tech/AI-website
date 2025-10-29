@@ -24,16 +24,16 @@ export function getRandomModels(models, n) {
 export const categoryColors = {
   all: 'bg-gradient-to-r from-[#00BFFF] to-blue-400',
   learning: 'bg-gradient-to-r from-[#A855F7] to-[#6366F1]',       // purple/indigo
-  research: 'bg-gradient-to-r from-[#EC4899] to-[#F59E0B]',    // pink/orange
+  research: 'bg-gradient-to-r from-[#EC4899] to-[#F59E0B]',       // pink/orange
   documents: 'bg-gradient-to-r from-[#22D3EE] to-[#3B82F6]',      // cyan/blue
-  office: 'bg-gradient-to-r from-[#10B981] to-[#059669]',      // emerald/green
-  data: 'bg-gradient-to-r from-[#F59E0B] to-[#D97706]',      // amber
-  finance: 'bg-gradient-to-r from-[#E11D48] to-[#DB2777]',         // red/pink
-  assistants: 'bg-gradient-to-r from-[#3B82F6] to-[#090979]',        // violet/indigo
-  design: 'bg-gradient-to-r from-[#14B8A6] to-[#06B6D4]',       // teal
-  audio: 'bg-gradient-to-r from-[#F59E0B] to-[#E11D48]',       // yellow
-  jobs: 'bg-gradient-to-r from-[#60A5FA] to-[#3B82F6]',
-  development: 'bg-gradient-to-r from-[#3B82F6] to-[#60A5FA]'  
+  office: 'bg-gradient-to-r from-[#10B981] to-[#059669]',         // emerald/green
+  data: 'bg-gradient-to-r from-[#F59E0B] to-[#D97706]',           // amber
+  finance: 'bg-gradient-to-r from-[#E11D48] to-[#DB2777]',        // red/pink
+  assistants: 'bg-gradient-to-r from-[#6366F1] to-[#8B5CF6]',     // indigo → violet (new)
+  design: 'bg-gradient-to-r from-[#14B8A6] to-[#06B6D4]',         // teal
+  audio: 'bg-gradient-to-r from-[#F59E0B] to-[#E11D48]',          // yellow → red
+  jobs: 'bg-gradient-to-r from-[#2563EB] to-[#1D4ED8]',           // vibrant blue (new)
+  development: 'bg-gradient-to-r from-[#0F172A] to-[#1E3A8A]'     // slate → dark blue (new)
 };
 
 export const categories = [
