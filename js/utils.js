@@ -23,30 +23,32 @@ export function getRandomModels(models, n) {
 
 export const categoryColors = {
   all: 'bg-gradient-to-r from-[#00BFFF] to-blue-400',
-  writing: 'bg-gradient-to-r from-[#A855F7] to-[#6366F1]',       // purple/indigo
-  design: 'bg-gradient-to-r from-[#EC4899] to-[#F59E0B]',    // pink/orange
-  learning: 'bg-gradient-to-r from-[#22D3EE] to-[#3B82F6]',      // cyan/blue
-  business: 'bg-gradient-to-r from-[#10B981] to-[#059669]',      // emerald/green
-  chatbots: 'bg-gradient-to-r from-[#F59E0B] to-[#D97706]',      // amber
-  audio: 'bg-gradient-to-r from-[#E11D48] to-[#DB2777]',         // red/pink
-  coding: 'bg-gradient-to-r from-[#3B82F6] to-[#090979]',        // violet/indigo
-  science: 'bg-gradient-to-r from-[#14B8A6] to-[#06B6D4]',       // teal
-  documents: 'bg-gradient-to-r from-[#F59E0B] to-[#E11D48]',       // yellow
-  spreadsheets: 'bg-gradient-to-r from-[#60A5FA] to-[#3B82F6]'       // light blue
+  learning: 'bg-gradient-to-r from-[#A855F7] to-[#6366F1]',       // purple/indigo
+  research: 'bg-gradient-to-r from-[#EC4899] to-[#F59E0B]',    // pink/orange
+  documents: 'bg-gradient-to-r from-[#22D3EE] to-[#3B82F6]',      // cyan/blue
+  office: 'bg-gradient-to-r from-[#10B981] to-[#059669]',      // emerald/green
+  data: 'bg-gradient-to-r from-[#F59E0B] to-[#D97706]',      // amber
+  finance: 'bg-gradient-to-r from-[#E11D48] to-[#DB2777]',         // red/pink
+  assistants: 'bg-gradient-to-r from-[#3B82F6] to-[#090979]',        // violet/indigo
+  design: 'bg-gradient-to-r from-[#14B8A6] to-[#06B6D4]',       // teal
+  audio: 'bg-gradient-to-r from-[#F59E0B] to-[#E11D48]',       // yellow
+  jobs: 'bg-gradient-to-r from-[#60A5FA] to-[#3B82F6]',
+  development: 'bg-gradient-to-r from-[#3B82F6] to-[#60A5FA]'  
 };
 
 export const categories = [
   { key: 'all', name: 'All Models' },
-  { key: 'writing', name: 'Writing' }, 
-  { key: 'design', name: 'Creativity & Design' }, 
-  { key: 'learning', name: 'Learning & Research' }, 
-  { key: 'business', name: 'Business & Marketing' },
-  { key: 'chatbots', name: 'Chatbots & Agents' },
-  { key: 'audio', name: 'Audio & Music' }, 
-  { key: 'coding', name: 'Coding & Dev Tools' }, 
-  { key: 'science', name: 'Science' }, 
-  { key: 'documents', name: 'Documents & Reports' }, 
-  { key: 'spreadsheets', name: 'Spreadsheets & Data'} 
+  { key: 'learning', name: 'Learning' }, 
+  { key: 'research', name: 'Research' }, 
+  { key: 'documents', name: 'Witing & Documents' }, 
+  { key: 'office', name: 'Office Tools' },
+  { key: 'data', name: 'Data & Analytics' }, 
+  { key: 'finance', name: 'Finance & Operations' }, 
+  { key: 'assistants', name: 'Assistants' }, 
+  { key: 'design', name: 'Design & Media' }, 
+  { key: 'audio', name: 'Audio & Voice' }, 
+  { key: 'jobs', name: 'Career & Job Tools'},
+  { key: 'development', name: 'Development & Code'} 
 ];
 
 export function getCategoryName(key) {
