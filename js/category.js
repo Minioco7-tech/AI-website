@@ -1,4 +1,15 @@
-import { fetchJSON, categoryColors, getCategoryName, sortModels, shuffleArray, getPaginatedModels, renderPagination, MODELS_PER_PAGE, normalizeCategories } from './utils.js';
+import { fetchJSON, 
+        categoryColors, 
+        getCategoryName, 
+        sortModels, 
+        shuffleArray, 
+        getPaginatedModels, 
+        renderPagination, 
+        MODELS_PER_PAGE, 
+        normalizeCategories, 
+        filterModelsByCategories 
+} from './utils.js';
+
 import { createModelCard } from './modelCard.js';
 import { renderBreadcrumb } from './breadcrumb.js';
 
@@ -45,11 +56,6 @@ function displayModels(models) {
   initLazyBackgrounds();
 }
 
-function updateFilteredModels() {
-  const filtered = filterBySelectedCategories(currentModels);
-  displayModels(filtered);
-}
-
 function initLazyBackgrounds() {
   const lazyBackgrounds = document.querySelectorAll('.lazy-bg');
   const observer = new IntersectionObserver(entries => {
@@ -67,16 +73,18 @@ function initLazyBackgrounds() {
 // ------------------------------
 // Category Filter System
 // ------------------------------
+function updateFilteredModels() {
+  const filtered = filterModelsByCategories(currentModels, selectedCategories);
+  displayModels(filtered);
+}
 
 function renderCategoryFilters(models) {
-  if (!filterContainer) return;
-
-  filterContainer.innerHTML = '';
+  filterCategoriesContainer.innerHTML = '';
   const uniqueCategories = getUniqueCategories(models);
 
   uniqueCategories.forEach(cat => {
     const label = document.createElement('label');
-    label.className = 'inline-flex items-center gap-1 text-sm text-white';
+    label.className = 'inline-flex items-center gap-2 text-sm text-white';
 
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
@@ -94,7 +102,7 @@ function renderCategoryFilters(models) {
 
     label.appendChild(checkbox);
     label.append(` ${getCategoryName(cat)}`);
-    filterContainer.appendChild(label);
+    filterCategoriesContainer.appendChild(label);
   });
 }
 
@@ -130,16 +138,16 @@ async function loadCategoryModels() {
   const modelsData = await fetchJSON('./models.json');
 
   const filteredModels =
-    categoryKey.toLowerCase() === 'all'
+    categoryKey === 'all'
       ? modelsData
       : modelsData.filter(m => {
-        const cats = Array.isArray(m.category) ? m.category : [m.category];
-        return cats.map(c => c.toLowerCase()).includes(categoryKey.toLowerCase());
-      });
+          const cats = normalizeCategories(m.category).map(c => c.toLowerCase());
+          return cats.includes(categoryKey.toLowerCase());
+        });
 
   currentModels = filteredModels;
-
-  // renderCategoryFilters(modelsData); // all unique cats
+  selectedCategories.clear(); // reset filters on nav
+  renderCategoryFilters(modelsData);
   updateFilteredModels();
 }
 
