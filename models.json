@@ -449,4 +449,175 @@
       "image": "assets/images/placeholder.png",
       "link": "https://inkforall.com/"
     }
+    {
+      "id": 51,
+      "name": "MindLuster",
+      "category": ["learning", "research"],
+      "type": "N/A",
+      "description": "MindLuster offers an extensive collection of free online courses in various subjects. Allowing learners to build skills and earn certificates.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.mindluster.com/"
+    },
+    {
+      "id": 52,
+      "name": "React Bits",
+      "category": ["development", "design"],
+      "type": "N/A",
+      "description": "React Bits provides reusable animated UI components for React developers. Helping to build visually dynamic and responsive interfaces quickly.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.reactbits.dev/"
+    },
+    {
+      "id": 53,
+      "name": "Wondershare",
+      "category": ["design", "office"],
+      "type": "N/A",
+      "description": "Wondershare provides an ecosystem of creative software for editing, file management and publishing. Supporting digital creators and professionals.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.wondershare.net/"
+    },
+    {
+      "id": 54,
+      "name": "Code Beautify",
+      "category": ["development", "office"],
+      "type": "N/A",
+      "description": "Code Beautify hosts online tools for formatting, validating and converting code and data. Simplifying debugging and data cleaning processes.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://codebeautify.org/"
+    },
+    {
+      "id": 55,
+      "name": "10015",
+      "category": ["office", "development"],
+      "type": "N/A",
+      "description": "10015 is a hub of free online tools for text, images and development tasks. Offering all-in-one convenience for quick productivity.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://10015.io/"
+    },
+    {
+      "id": 56,
+      "name": "Paperanimator",
+      "category": ["design"],
+      "type": "N/A",
+      "description": "Paperanimator allows artists to draw frame-by-frame animations in a digital format. Blending traditional creativity with AI assistance.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.paperanimator.org/"
+    },
+    {
+      "id": 57,
+      "name": "TinyWow",
+      "category": ["documents", "office"],
+      "type": "N/A",
+      "description": "TinyWow offers free browser-based utilities for document editing, image optimisation and quick file conversion. All powered by AI.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://tinywow.com/"
+    },
+    {
+      "id": 58,
+      "name": "Natively",
+      "category": ["development", "design"],
+      "type": "N/A",
+      "description": "Natively helps developers create high-performance web applications with native functionality using modern build frameworks.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://natively.dev"
+    },
+    {
+      "id": 59,
+      "name": "Learn Anything",
+      "category": ["learning", "research"],
+      "type": "N/A",
+      "description": "Learn Anything maps interconnected learning paths across topics. Helping users plan efficient routes to mastery through visual knowledge graphs.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.learnanything.com/"
+    },
+    {
+      "id": 60,
+      "name": "Higgsfield ",
+      "category": ["research", "development"],
+      "type": "N/A",
+      "description": "Higgsfield applies AI to data science workflows. Automating technical analysis, visualisation and predictive modelling.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://higgsfield.ai/"
+    },
+    {
+      "id": 61,
+      "name": "AnimeJS",
+      "category": ["development", "design"],
+      "type": "N/A",
+      "description": "AnimeJS is a lightweight JavaScript animation engine. Letting developers build rich, interactive motion effects with simple syntax.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://animejs.com/"
+    },
+    {
+      "id": 62,
+      "name": "Gambo AI",
+      "category": ["design", "media"],
+      "type": "N/A",
+      "description": "Gambo AI helps designers and marketers create high-quality visual assets. Supporting branding, advertising and storytelling projects.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.gambo.ai/"
+    },
+    {
+      "id": 63,
+      "name": "Jitter",
+      "category": ["design", "media"],
+      "type": "N/A",
+      "description": "Jitter is a motion design tool for creating smooth UI animations and short video content. Perfect for digital designers and creators.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://jitter.video/"
+    },
+    {
+      "id": 64,
+      "name": "Emergent ",
+      "category": ["assistants", "development"],
+      "type": "N/A",
+      "description": "Emergent integrates AI tools for coding, planning and team automation. Helping users streamline development workflows efficiently.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://app.emergent.sh/landing"
+    },
+    {
+      "id": 65,
+      "name": "InterviewAI",
+      "category": ["documents", "finance", "jobs"],
+      "type": "N/A",
+      "description": "InterviewAI simulates interview scenarios with realistic questions and feedback. Helping users practice and improve performance before real interviews.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.interviewai.io/"
+    },
+    {
+      "id": 66,
+      "name": "LogoDiffusion",
+      "category": ["design", "jobs"],
+      "type": "N/A",
+      "description": "LogoDiffusion generates unique brand logos using AI diffusion models. Allowing users to design professional visuals instantly.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://logodiffusion.com/"
+    },
+    {
+      "id": 67,
+      "name": "Anara",
+      "category": ["design"],
+      "type": "N/A",
+      "description": "Anara provides AI-powered creative collaboration tools that assist designers and teams in producing cohesive branding and visual projects.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://anara.com/"
+    },
+    {
+      "id": 68,
+      "name": "Claid",
+      "category": ["design"],
+      "type": "N/A",
+      "description": "Claid enhances and generates visual content using AI. Perfect for image editing, upscaling and creative automation.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://claid.ai/"
+    },
+    {
+      "id": 69,
+      "name": "HireFlow",
+      "category": ["finance", "documents", "jobs"],
+      "type": "N/A",
+      "description": "HireFlow streamlines recruitment by automating candidate sourcing, outreach and evaluation. Helping companies and applicants connect faster.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.hireflow.net/"
+    },
 ]
