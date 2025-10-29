@@ -130,3 +130,15 @@ export function normalizeCategories(categoryField) {
   if (!categoryField) return [];
   return Array.isArray(categoryField) ? categoryField : [categoryField];
 }
+
+export function filterModelsByCategories(models, selectedCategories) {
+  if (!selectedCategories || selectedCategories.size === 0) return models;
+
+  const required = [...selectedCategories].map(cat => cat.toLowerCase());
+
+  return models.filter(model => {
+    const modelCats = normalizeCategories(model.category).map(c => c.toLowerCase());
+    return required.every(cat => modelCats.includes(cat));
+  });
+}
+
