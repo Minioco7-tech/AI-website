@@ -128,17 +128,19 @@ function updateFilteredModels() {
 // ✅ Render checkboxes for category filters
 // ------------------------------
 function renderCategoryFilters(models) {
-  filterCategoriesContainer.innerHTML = '';
+  const container = document.getElementById('filterCategories');
+  const dropdownWrapper = document.getElementById('filterDropdown');
+  const toggleButton = document.getElementById('filterDropdownToggle');
+
+  container.innerHTML = '';
   const uniqueCategories = getUniqueCategories(models);
 
   uniqueCategories.forEach(cat => {
     const label = document.createElement('label');
-    label.className = 'inline-flex items-center gap-2 text-sm text-white';
 
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.value = cat;
-    checkbox.className = 'accent-blue-400';
 
     checkbox.addEventListener('change', () => {
       if (checkbox.checked) {
@@ -151,10 +153,22 @@ function renderCategoryFilters(models) {
 
     label.appendChild(checkbox);
     label.append(` ${getCategoryName(cat)}`);
-    filterCategoriesContainer.appendChild(label);
+    container.appendChild(label);
+  });
+
+  // Toggle dropdown open/close
+  toggleButton.addEventListener('click', (e) => {
+    e.stopPropagation();
+    dropdownWrapper.classList.toggle('open');
+
+    // Close on outside click
+    if (dropdownWrapper.classList.contains('open')) {
+      closeOnOutsideClick(toggleButton, container, () => {
+        dropdownWrapper.classList.remove('open');
+      });
+    }
   });
 }
-
 
 // ------------------------------
 // ✅ Fetch models.json, run fuzzy search, and display results
