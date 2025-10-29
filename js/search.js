@@ -1,4 +1,14 @@
-import { fetchJSON, categoryColors, getCategoryName, shuffleArray, sortModels, getPaginatedModels, renderPagination, MODELS_PER_PAGE, normalizeCategories} from './utils.js';
+import { fetchJSON, 
+        categoryColors, 
+        getCategoryName, 
+        shuffleArray, 
+        sortModels, 
+        getPaginatedModels, 
+        renderPagination, 
+        MODELS_PER_PAGE, 
+        normalizeCategories
+} from './utils.js';
+
 import { createModelCard } from './modelCard.js';
 import { renderBreadcrumb } from './breadcrumb.js';
 
@@ -8,7 +18,7 @@ const queryText = document.getElementById('queryText');
 const randomiseBtn = document.getElementById('randomiseBtn');
 const sortBySelect = document.getElementById('sortBy');
 const matchedCategoryTag = document.getElementById('matchedCategoryTag');
-
+const filterCategoriesContainer = document.getElementById('filterCategories');
 
 const stopwords = ['i','want','to','a','the','and','for','of','in','on','is','with','my','you','it','this','that','at'];
 let currentModels = [];
@@ -74,6 +84,42 @@ function initLazyBackgrounds() {
     });
   });
   lazyBackgrounds.forEach(el => observer.observe(el));
+}
+
+// ------------------------------
+// Filter Logic
+// ------------------------------
+function updateFilteredModels() {
+  const filtered = filterModelsByCategories(currentModels, selectedCategories);
+  displayModels(filtered);
+}
+
+function renderCategoryFilters(models) {
+  filterCategoriesContainer.innerHTML = '';
+  const uniqueCategories = getUniqueCategories(models);
+
+  uniqueCategories.forEach(cat => {
+    const label = document.createElement('label');
+    label.className = 'inline-flex items-center gap-2 text-sm text-white';
+
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.value = cat;
+    checkbox.className = 'accent-blue-400';
+
+    checkbox.addEventListener('change', () => {
+      if (checkbox.checked) {
+        selectedCategories.add(cat);
+      } else {
+        selectedCategories.delete(cat);
+      }
+      updateFilteredModels();
+    });
+
+    label.appendChild(checkbox);
+    label.append(` ${getCategoryName(cat)}`);
+    filterCategoriesContainer.appendChild(label);
+  });
 }
 
 // ------------------------------
