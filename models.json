@@ -448,7 +448,7 @@
       "description": "Inkforall combines SEO optimisation with AI-assisted content creation. Helping writers produce high-ranking, engaging material for blogs and websites.",
       "image": "assets/images/placeholder.png",
       "link": "https://inkforall.com/"
-    }
+    },
     {
       "id": 51,
       "name": "MindLuster",
@@ -532,7 +532,7 @@
     },
     {
       "id": 60,
-      "name": "Higgsfield ",
+      "name": "Higgsfield",
       "category": ["research", "development"],
       "type": "N/A",
       "description": "Higgsfield applies AI to data science workflows. Automating technical analysis, visualisation and predictive modelling.",
@@ -568,7 +568,7 @@
     },
     {
       "id": 64,
-      "name": "Emergent ",
+      "name": "Emergent",
       "category": ["assistants", "development"],
       "type": "N/A",
       "description": "Emergent integrates AI tools for coding, planning and team automation. Helping users streamline development workflows efficiently.",
@@ -619,5 +619,5 @@
       "description": "HireFlow streamlines recruitment by automating candidate sourcing, outreach and evaluation. Helping companies and applicants connect faster.",
       "image": "assets/images/placeholder.png",
       "link": "https://www.hireflow.net/"
-    },
+    }
 ]
