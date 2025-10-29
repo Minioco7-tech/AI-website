@@ -19,6 +19,7 @@ const loadingState = document.getElementById('loadingState');
 const categoryTitle = document.getElementById('categoryTitle');
 const randomiseBtn = document.getElementById('randomiseBtn');
 const sortBySelect = document.getElementById('sortBy');
+const filterCategoriesContainer = document.getElementById('filterCategories');
 
 
 let currentModels = [];
