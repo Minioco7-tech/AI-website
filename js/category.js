@@ -13,7 +13,8 @@ import {
   MODELS_PER_PAGE,
   normalizeCategories,
   filterModelsByCategories,
-  getUniqueCategories
+  getUniqueCategories,
+  closeOnOutsideClick
 } from './utils.js';
 
 import { createModelCard } from './modelCard.js';
@@ -105,35 +106,47 @@ function updateFilteredModels() {
 // ✅ Render dynamic category filters as checkboxes
 // ------------------------------
 function renderCategoryFilters(models) {
-  filterCategoriesContainer.innerHTML = '';
+  const container = document.getElementById('filterCategories');
+  const dropdownWrapper = document.getElementById('filterDropdown');
+  const toggleButton = document.getElementById('filterDropdownToggle');
 
-  const uniqueCategories = getUniqueCategories(models); // ['audio', 'design', ...]
+  container.innerHTML = '';
+  const uniqueCategories = getUniqueCategories(models);
 
   uniqueCategories.forEach(cat => {
     const label = document.createElement('label');
-    label.className = 'inline-flex items-center gap-2 text-sm text-white';
 
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.value = cat;
-    checkbox.className = 'accent-blue-400';
 
-    // Update selectedCategories set on change
     checkbox.addEventListener('change', () => {
       if (checkbox.checked) {
         selectedCategories.add(cat);
       } else {
         selectedCategories.delete(cat);
       }
-      updateFilteredModels(); // Re-filter model list
+      updateFilteredModels();
     });
 
     label.appendChild(checkbox);
     label.append(` ${getCategoryName(cat)}`);
-    filterCategoriesContainer.appendChild(label);
+    container.appendChild(label);
+  });
+
+  // Toggle dropdown open/close
+  toggleButton.addEventListener('click', (e) => {
+    e.stopPropagation();
+    dropdownWrapper.classList.toggle('open');
+
+    // Close on outside click
+    if (dropdownWrapper.classList.contains('open')) {
+      closeOnOutsideClick(toggleButton, container, () => {
+        dropdownWrapper.classList.remove('open');
+      });
+    }
   });
 }
-
 
 // ------------------------------
 // ✅ Main loader: load all models, filter to category
