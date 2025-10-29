@@ -52,10 +52,17 @@
         </button>
       </div>
     </div>
-    <!-- 🔍 Filter UI -->
-    <div id="filterBox" class="mb-6">
-      <div class="mb-2 text-sm font-semibold">Filter by Category:</div>
-      <div id="filterCategories" class="flex flex-wrap gap-4"></div>
+    <!-- 🔍 Category Dropdown -->
+    <div class="filter-dropdown mb-6" id="filterDropdown">
+      <button class="filter-dropdown-toggle" id="filterDropdownToggle">
+        Filter by Category
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 inline-block ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div class="filter-dropdown-menu" id="filterCategories">
+        <!-- checkboxes dynamically rendered -->
+      </div>
     </div>
     <!-- Model grid load -->
     <div id="modelsGrid" class="grid w-full gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
