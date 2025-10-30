@@ -143,11 +143,6 @@ function renderCategoryFilters(models) {
 // =============================
 // ✅ FILTER LOGIC
 // =============================
-function updateFilteredModels() {
-  const filtered = filterModelsByCategories(currentModels, selectedCategories);
-  displayModels(filtered);
-}
-
 function renderCategoryFilters(models) {
   filterCategoriesContainer.innerHTML = '';
   const uniqueCategories = getUniqueCategories(models);
