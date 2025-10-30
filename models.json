@@ -551,7 +551,7 @@
     {
       "id": 62,
       "name": "Gambo AI",
-      "category": ["design", "media"],
+      "category": ["design", "audio"],
       "type": "N/A",
       "description": "Gambo AI helps designers and marketers create high-quality visual assets. Supporting branding, advertising and storytelling projects.",
       "image": "assets/images/placeholder.png",
@@ -560,7 +560,7 @@
     {
       "id": 63,
       "name": "Jitter",
-      "category": ["design", "media"],
+      "category": ["design", "audio"],
       "type": "N/A",
       "description": "Jitter is a motion design tool for creating smooth UI animations and short video content. Perfect for digital designers and creators.",
       "image": "assets/images/placeholder.png",
