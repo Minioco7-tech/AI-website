@@ -14,7 +14,8 @@ import {
   normalizeCategories,
   filterModelsByCategories,
   getUniqueCategories,
-  scoreModelRelevance
+  scoreModelRelevance, 
+  expandQueryTokens
 } from './utils.js';
 
 import { createModelCard } from './modelCard.js';
@@ -38,15 +39,6 @@ const filterCategoriesContainer = document.getElementById('filterCategories');
 let currentModels = [];
 let selectedCategories = new Set();
 let currentPage = 1;
-
-// ============================================================================
-// Stopwords removed from query to improve search
-// ============================================================================
-const stopwords = [
-  "i","want","to","a","the","and","for","of","in","on","is",
-  "with","my","you","it","this","that","at","how","can"
-];
-
 
 // ------------------------------
 // ✅ Display search results in grid with pagination
@@ -205,18 +197,7 @@ async function fetchAndDisplayResults() {
 
     const models = await fetchJSON('./models.json');
 
-    // Break query into keywords, remove stopwords
-    const stopwords = ['i','want','to','a','the','and','for','of','in','on','is','with','my','you','it','this','that','at'];
-    const keywords = searchQuery
-      .split(/\s+/)
-      .map(w => w.toLowerCase())
-      .filter(Boolean)
-      .filter(word => !stopwords.includes(word));
-
-        // Tokenize + remove stopwords
-    const tokens = searchQuery
-      .split(/\s+/)
-      .filter(w => !!w && !stopwords.includes(w));
+    const tokens = expandQueryTokens(searchQuery);
 
     // Score each model semantically (utils.js)
     let results = models.map(model => ({
