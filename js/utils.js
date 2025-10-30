@@ -213,3 +213,54 @@ export function closeOnOutsideClick(triggerEl, dropdownEl, callback) {
   }
   document.addEventListener('click', outsideClickHandler);
 }
+
+
+// ============================================================================
+// ✅ Semantic search logic
+// Imported in: search.js
+// ============================================================================
+export function scoreModelRelevance(model, tokens) {
+  let score = 0;
+  const name = model.name.toLowerCase();
+  const desc = model.description.toLowerCase();
+  const categories = normalizeCategories(model.category).map(c => c.toLowerCase());
+
+  // Semantic category keyword map
+  const semanticKeywords = {
+    design: ["video", "image", "visual", "brand", "creative", "logo", "animation", "poster", "art"],
+    documents: ["writing", "text", "document", "grammar", "summarise", "pdf", "edit", "content"],
+    learning: ["study", "learn", "course", "tutor", "lesson", "training", "education"],
+    research: ["paper", "study", "analysis", "experiment", "summary", "insight", "science"],
+    development: ["code", "developer", "script", "function", "api", "automation", "software"],
+    data: ["spreadsheet", "chart", "analysis", "dataset", "numbers", "data", "visualisation"],
+    assistants: ["assistant", "chat", "conversation", "helper", "ideation", "task", "prompt"],
+    finance: ["budget", "stock", "money", "accounting", "report", "financial", "compliance"],
+    office: ["productivity", "spreadsheet", "presentation", "workflow", "document", "team"],
+    audio: ["voice", "audio", "sound", "record", "speech", "transcription", "podcast"],
+    jobs: ["career", "resume", "interview", "job", "application", "writing", "cover letter"]
+  };
+
+  // Score based on category match
+  tokens.forEach(token => {
+    if (categories.includes(token)) score += 3;
+  });
+
+  // Score based on name and description match
+  tokens.forEach(token => {
+    if (name.includes(token)) score += 2;
+    if (desc.includes(token)) score += 2;
+  });
+
+  // Score based on semantic keyword map
+  for (const [cat, keywords] of Object.entries(semanticKeywords)) {
+    const catMatch = categories.includes(cat);
+    const tokenMatch = tokens.some(token => keywords.includes(token));
+    if (catMatch && tokenMatch) score += 4;
+  }
+
+  // Bonus for multiple matching categories
+  const matchingCats = categories.filter(cat => tokens.includes(cat));
+  score += matchingCats.length;
+
+  return score;
+}
