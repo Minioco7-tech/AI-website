@@ -13,7 +13,8 @@ import {
   MODELS_PER_PAGE,
   normalizeCategories,
   filterModelsByCategories,
-  getUniqueCategories
+  getUniqueCategories,
+  scoreModelRelevance
 } from './utils.js';
 
 import { createModelCard } from './modelCard.js';
@@ -38,36 +39,13 @@ let currentModels = [];
 let selectedCategories = new Set();
 let currentPage = 1;
 
-// ------------------------------
-// ✅ Search intent category matching via synonyms
-// Example: typing "writing" → matches 'documents'
-// Used to auto-suggest category from fuzzy input
-// ------------------------------
-const categorySynonyms = {
-  productivity: ['writing', 'writer', 'content', 'copy', 'text', 'document', 'email', 'productivity', 'work', 'tasks', 'organization'],
-  design: ['design', 'art', 'image', 'photo', 'logo', 'graphic', 'visual', 'presentation', 'poster'],
-  learning: ['learning', 'education', 'research', 'study', 'teach', 'knowledge', 'school', 'student', 'academy'],
-  business: ['business', 'marketing', 'sales', 'brand', 'startup', 'work', 'help', 'promotion', 'strategy'],
-  chatbots: ['chat', 'bot', 'assistant', 'agent', 'conversation', 'support', 'talk', 'reply', 'ai chat'],
-  audio: ['audio', 'music', 'sound', 'song', 'beat', 'voice', 'record', 'podcast', 'edit'],
-  coding: ['code', 'coding', 'developer', 'programming', 'software', 'tech', 'script', 'debug', 'build'],
-  science: ['science', 'health', 'medicine', 'bio', 'lab', 'research', 'medical', 'data', 'analysis'],
-  documents: ['document', 'pdf', 'report', 'summary', 'notes', 'paper', 'doc', 'docs', 'write-up'],
-  spreadsheets: ['spreadsheet', 'excel', 'sheet', 'data', 'table', 'formula', 'analytics', 'numbers'],
-  all: ['all', 'everything', 'catalogue', 'all tools', 'show all', 'overview']
-};
-
-/**
- * Check if a keyword matches a known category based on synonym map.
- * @param {string[]} keywords - words extracted from search query
- * @returns {string|null} - matched category key
- */
-function getMatchedCategory(keywords) {
-  for (const [key, synonyms] of Object.entries(categorySynonyms)) {
-    if (keywords.some(word => synonyms.includes(word))) return key;
-  }
-  return null;
-}
+// ============================================================================
+// Stopwords removed from query to improve search
+// ============================================================================
+const stopwords = [
+  "i","want","to","a","the","and","for","of","in","on","is",
+  "with","my","you","it","this","that","at","how","can"
+];
 
 
 // ------------------------------
@@ -170,9 +148,46 @@ function renderCategoryFilters(models) {
   });
 }
 
-// ------------------------------
+// =============================
+// ✅ FILTER LOGIC
+// =============================
+function updateFilteredModels() {
+  const filtered = filterModelsByCategories(currentModels, selectedCategories);
+  displayModels(filtered);
+}
+
+function renderCategoryFilters(models) {
+  filterCategoriesContainer.innerHTML = '';
+  const uniqueCategories = getUniqueCategories(models);
+
+  uniqueCategories.forEach(cat => {
+    const label = document.createElement('label');
+    label.className = 'inline-flex items-center gap-2 text-sm text-white';
+
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.value = cat;
+    checkbox.className = 'accent-blue-400';
+
+    checkbox.addEventListener('change', () => {
+      if (checkbox.checked) {
+        selectedCategories.add(cat);
+      } else {
+        selectedCategories.delete(cat);
+      }
+      updateFilteredModels();
+    });
+
+    label.appendChild(checkbox);
+    label.append(` ${getCategoryName(cat)}`);
+    filterCategoriesContainer.appendChild(label);
+  });
+}
+
+
+// ============================================================
 // ✅ Fetch models.json, run fuzzy search, and display results
-// ------------------------------
+// ============================================================
 async function fetchAndDisplayResults() {
   try {
     const params = new URLSearchParams(window.location.search);
@@ -198,60 +213,52 @@ async function fetchAndDisplayResults() {
       .filter(Boolean)
       .filter(word => !stopwords.includes(word));
 
-    const matchedCategory = getMatchedCategory(keywords);
+        // Tokenize + remove stopwords
+    const tokens = searchQuery
+      .split(/\s+/)
+      .filter(w => !!w && !stopwords.includes(w));
 
-    // Show matched category tag (optional UX)
-    if (matchedCategory && matchedCategory !== 'all') {
-      matchedCategoryTag.classList.remove('hidden');
-      matchedCategoryTag.textContent = `Showing results related to “${getCategoryName(matchedCategory)}”`;
-    } else {
-      matchedCategoryTag.classList.add('hidden');
+    // Score each model semantically (utils.js)
+    let results = models.map(model => ({
+      ...model,
+      _score: scoreModelRelevance(model, tokens)
+    }));
+
+    // Drop irrelevant models
+    results = results.filter(m => m._score > 0);
+
+    // Sort highest score first
+    results.sort((a, b) => b._score - a._score);
+
+    // Fallback: if no semantic hits, show models that contain tokens anywhere
+    if (results.length === 0 && tokens.length > 0) {
+      results = models.filter(m =>
+        m.description.toLowerCase().includes(tokens[0]) ||
+        m.name.toLowerCase().includes(tokens[0])
+      );
     }
 
-    let filtered = [];
+    // Store state for sorting + filtering
+    currentModels = sortModels(results, sortBySelect.value).sort(() => 0.5 - Math.random());
 
-    // ------------------------------
-    // 🔎 Handle different search cases:
-    // ------------------------------
-    if (['all', 'everything', 'all tools', 'catalogue', 'all models', 'show all models'].includes(searchQuery.toLowerCase())) {
-      filtered = models;
-    } 
-    else if (matchedCategory) {
-      filtered = models.filter(m => {
-        const cats = normalizeCategories(m.category).map(c => c.toLowerCase());
-        return cats.includes(matchedCategory);
-      });
-    } 
-    else {
-      // Fuse.js fuzzy search for free-text search
-      const fuse = new Fuse(models, {
-        keys: ['name', 'description', 'category', 'type'],
-        threshold: 0.4,
-        ignoreLocation: true,
-        includeScore: true
-      });
-      filtered = fuse.search(searchQuery).map(result => result.item);
-    }
+    // Render category filter checkboxes
+    renderCategoryFilters(models);
 
-    // Sort + randomise initial load (optional)
-    currentModels = sortModels(filtered, sortBySelect.value).sort(() => 0.5 - Math.random());
-
-    // Display UI
+    // No results UI
     if (currentModels.length === 0) {
       noResults.classList.remove('hidden');
     } else {
       noResults.classList.add('hidden');
-      renderCategoryFilters(models); // checkbox filters
       displayModels(currentModels);
     }
 
     feather.replace();
+
   } catch (err) {
     console.error('Search failed:', err);
     noResults.classList.remove('hidden');
   }
 }
-
 
 // ------------------------------
 // 🔁 Event Listeners
