@@ -264,3 +264,55 @@ export function scoreModelRelevance(model, tokens) {
 
   return score;
 }
+
+// ============================================================================
+// ✅ Smart Query Expansion: Stemming, Plurals, Synonyms
+// Used in: search.js
+// ============================================================================
+const synonymMap = {
+  learn: ["teaching", "education", "study", "tutor"],
+  video: ["videos", "media", "movie", "clip"],
+  audio: ["sound", "voice", "speech", "podcast"],
+  design: ["visual", "logo", "branding", "creative", "poster", "art"],
+  document: ["writing", "grammar", "paraphrase", "summarise", "text"],
+  job: ["career", "work", "interview", "resume", "application"],
+  research: ["paper", "insight", "study", "experiment", "analysis"],
+  data: ["spreadsheet", "numbers", "analytics", "visualisation"],
+  finance: ["budget", "money", "stock", "report", "accounting"],
+  assistant: ["chat", "helper", "bot", "task", "prompt"],
+  development: ["code", "developer", "script", "automation", "software"]
+};
+
+// Basic stemmer and plural reducer
+function stemWord(word) {
+  return word.replace(/(ing|ed|es|s)$/, '');
+}
+
+// Expand tokens with synonyms and stems
+export function expandQueryTokens(rawInput) {
+  const stopwords = [
+    "i", "want", "to", "a", "the", "and", "for", "of", "in", "on", "is",
+    "with", "my", "you", "it", "this", "that", "at", "how", "can"
+  ];
+
+  const tokens = rawInput
+    .toLowerCase()
+    .split(/[^a-z0-9]+/g)
+    .filter(Boolean)
+    .filter(word => !stopwords.includes(word))
+    .map(stemWord);
+
+  const expanded = new Set(tokens);
+
+  for (const token of tokens) {
+    for (const [base, synonyms] of Object.entries(synonymMap)) {
+      if (base === token || synonyms.includes(token)) {
+        expanded.add(base);
+        synonyms.forEach(syn => expanded.add(syn));
+      }
+    }
+  }
+
+  return Array.from(expanded);
+}
+
