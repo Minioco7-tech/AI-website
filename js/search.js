@@ -197,7 +197,7 @@ async function fetchAndDisplayResults() {
     // Score each model semantically (utils.js)
     let results = models.map(model => ({
       ...model,
-      _score: scoreModelRelevance(model, tokens)
+      _score: scoreModelRelevance(model, tokens, searchQuery)  
     }));
 
     // Drop irrelevant models
