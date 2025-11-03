@@ -448,6 +448,17 @@ body:not(.home-page) #searchInput:hover {
   margin-right: 0.5rem;
 }
 
+/* Carousel Dot Click Animation */
+.carousel-dot.clicked {
+  animation: dotPop 0.25s ease;
+}
+
+@keyframes dotPop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+  100% { transform: scale(1); }
+}
+
 
 
 
