@@ -6,7 +6,8 @@ import {
   fetchJSON,
   getCategoryName,
   categoryColors,
-  normalizeCategories
+  normalizeCategories,
+  scoreModelRelevance
 } from './utils.js';
 
 import { createModelCard } from './modelCard.js';
@@ -115,11 +116,21 @@ document.addEventListener('DOMContentLoaded', async () => {
   // ✅ Related Models Carousel
   // Show other models that share ANY category
   // ------------------------------
-  const relatedModels = models.filter(m => {
-    if (m.id === model.id) return false; // skip current model
-    const mCats = normalizeCategories(m.category);
-    return mCats.some(cat => modelCategories.includes(cat));
-  });
+  const relatedModels = models
+    .filter(m => m.id !== model.id) // skip current
+    .map(m => {
+      const mCats = normalizeCategories(m.category);
+      const sharesCategory = mCats.some(cat => modelCategories.includes(cat));
+      if (!sharesCategory) return null;
+
+      const tokens = [...model.name.toLowerCase().split(/\s+/), ...modelCategories];
+      const score = scoreModelRelevance(m, tokens, model.name);
+      return { model: m, score };
+    })
+    .filter(Boolean)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 12)
+    .map(entry => entry.model);
 
 
   // ------------------------------
