@@ -13,6 +13,11 @@ import {
 import { createModelCard } from './modelCard.js';
 import { renderBreadcrumb } from './breadcrumb.js';
 
+let relatedModels = [];
+let currentIndex = 0;
+let modelsPerView = 3;
+let observer;
+
 
 // ------------------------------
 // ✅ DOM References
@@ -136,9 +141,15 @@ document.addEventListener('DOMContentLoaded', async () => {
   // ------------------------------
   // ✅ Carousel State & Setup
   // ------------------------------
-  const isMobile = window.innerWidth <= 768;
-  const modelsPerView = isMobile ? 1 : 3;
-  let currentIndex = 0;
+  modelsPerView = window.innerWidth <= 768 ? 1 : 3;
+  currentIndex = 0;
+
+  renderGridPage();
+  renderDots();
+  window.addEventListener('resize', () => {
+    modelsPerView = window.innerWidth <= 768 ? 1 : 3;
+    renderDots();
+  });
 
   function renderGridPage() {
     grid.classList.add('opacity-0', 'scale-95');
@@ -162,11 +173,23 @@ document.addEventListener('DOMContentLoaded', async () => {
     }, 150);
   }
 
-  function renderDots() {
-    const totalDots = Math.ceil(relatedModels.length / modelsPerView);
-    dotsContainer.innerHTML = '';
+  // ======================================================
+  // ✅ Render dots based on mobile or desktop screen size
+  // ======================================================
 
-    for (let i = 0; i < totalDots; i++) {
+  function renderDots() {
+    if (window.innerWidth <= 768) {
+      renderDotsMobile();
+    } else {
+      renderDotsDesktop();
+    }
+  }
+  
+  function renderDotsDesktop() {
+    const totalPages = Math.ceil(relatedModels.length / modelsPerView);
+    dotsContainer.innerHTML = '';
+  
+    for (let i = 0; i < totalPages; i++) {
       const dot = document.createElement('span');
       dot.className = `carousel-dot w-3 h-3 rounded-full ${i === currentIndex ? 'bg-white' : 'bg-white/30'} cursor-pointer`;
       dot.dataset.index = i;
@@ -177,13 +200,43 @@ document.addEventListener('DOMContentLoaded', async () => {
       dotsContainer.appendChild(dot);
     }
   }
-
-  function updateDots() {
-    dotsContainer.querySelectorAll('.carousel-dot').forEach((dot, i) => {
-      dot.className = `carousel-dot w-3 h-3 rounded-full ${i === currentIndex ? 'bg-white' : 'bg-white/30'} cursor-pointer`;
-    });
+  
+  function renderDotsMobile() {
+    const totalPages = Math.ceil(relatedModels.length / modelsPerView);
+    const maxDots = 5;
+    const middleIndex = Math.floor(maxDots / 2);
+    dotsContainer.innerHTML = '';
+  
+    for (let i = 0; i < maxDots; i++) {
+      const pageIndex = currentIndex - middleIndex + i;
+      const dot = document.createElement('span');
+      dot.dataset.index = pageIndex;
+  
+      if (pageIndex === currentIndex) {
+        dot.className = 'carousel-dot w-3 h-3 rounded-full bg-white cursor-pointer';
+      } else if (Math.abs(pageIndex - currentIndex) === 1) {
+        dot.className = 'carousel-dot w-3 h-3 rounded-full bg-white/50 cursor-pointer';
+      } else {
+        dot.className = 'carousel-dot w-3 h-3 rounded-full bg-white/20 cursor-pointer';
+      }
+  
+      if (pageIndex < 0 || pageIndex >= totalPages) {
+        dot.style.opacity = 0;
+        dot.style.pointerEvents = 'none';
+      } else {
+        dot.addEventListener('click', () => {
+          currentIndex = pageIndex;
+          renderGridPage();
+        });
+      }
+  
+      dotsContainer.appendChild(dot);
+    }
   }
 
+  function updateDots() {
+    renderDots(); // Re-render dots based on updated index
+  }
   // Arrows navigation
   leftArrow.addEventListener('click', () => {
     if (currentIndex > 0) {
@@ -200,14 +253,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   });
 
-  // Swipe gestures for mobile
-  if (isMobile) {
+  if (window.innerWidth <= 768) {
     let startX = 0;
-
     grid.addEventListener('touchstart', e => {
       startX = e.touches[0].clientX;
     });
-
     grid.addEventListener('touchend', e => {
       const endX = e.changedTouches[0].clientX;
       const diff = endX - startX;
@@ -216,6 +266,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
     });
   }
+});
 
   // Init carousel
   renderGridPage();
