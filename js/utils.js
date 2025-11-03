@@ -222,6 +222,9 @@ export function closeOnOutsideClick(triggerEl, dropdownEl, callback) {
 // ============================================================================
 // ✅ Advanced Semantic Relevance Scoring
 // ============================================================================
+// ============================================================================
+// ✅ Advanced Semantic Relevance Scoring
+// ============================================================================
 export function scoreModelRelevance(model, tokens, rawQuery = "") {
   let score = 0;
 
@@ -244,6 +247,83 @@ export function scoreModelRelevance(model, tokens, rawQuery = "") {
     multiTokenAffinity: 3,
     partialWordMatch: 1
   };
+
+  // ------------------------------
+  // Synonym affinity map (aligned with expandQueryTokens)
+  // ------------------------------
+  const semanticKeywords = {
+    design: ["video", "image", "visual", "brand", "creative", "logo", "animation", "poster", "art", "media"],
+    documents: ["writing", "text", "document", "grammar", "paraphrase", "summarise", "pdf", "edit", "content"],
+    learning: ["study", "learn", "course", "tutor", "lesson", "training", "education"],
+    research: ["paper", "study", "analysis", "experiment", "summary", "insight", "science"],
+    development: ["code", "developer", "script", "function", "api", "automation", "software", "build"],
+    data: ["spreadsheet", "chart", "analysis", "dataset", "numbers", "data", "visualisation", "analytics"],
+    assistants: ["assistant", "chat", "conversation", "helper", "ideation", "task", "prompt"],
+    finance: ["budget", "stock", "money", "accounting", "report", "financial", "compliance"],
+    office: ["productivity", "spreadsheet", "presentation", "workflow", "document", "team"],
+    audio: ["voice", "audio", "sound", "record", "speech", "transcription", "podcast"],
+    jobs: ["career", "resume", "interview", "job", "application", "writing", "cover"]
+  };
+
+  // ------------------------------
+  // ✅ Exact phrase match boost
+  // ------------------------------
+  if (rawQuery && desc.includes(rawQuery)) {
+    score += WEIGHTS.exactPhraseMatch;
+  }
+
+  // ------------------------------
+  // ✅ Exact model name match
+  // ------------------------------
+  if (rawQuery && name === rawQuery) {
+    score += WEIGHTS.exactNameMatch;
+  }
+
+  // ------------------------------
+  // ✅ Per-token matching
+  // ------------------------------
+  tokens.forEach(token => {
+    // Name contains token
+    if (name.includes(token)) score += WEIGHTS.nameWordMatch;
+
+    // Description contains token
+    if (desc.includes(token)) score += WEIGHTS.descriptionWordMatch;
+
+    // Category contains token
+    if (categories.includes(token)) score += WEIGHTS.categoryMatch;
+
+    // Partial word affinity
+    if (token.length > 3 && (name.includes(token.slice(0,3)) || desc.includes(token.slice(0,3)))) {
+      score += WEIGHTS.partialWordMatch;
+    }
+  });
+
+  // ------------------------------
+  // ✅ Semantic category affinity (synonym alignment)
+  // ------------------------------
+  for (const [cat, keywords] of Object.entries(semanticKeywords)) {
+    const catMatch = categories.includes(cat);
+
+    const tokenMatch = tokens.some(t => keywords.includes(t));
+    if (catMatch && tokenMatch) score += WEIGHTS.categorySynonymAffinity;
+  }
+
+  // ------------------------------
+  // ✅ Multiple overlapping categories
+  // ------------------------------
+  const matches = categories.filter(cat => tokens.includes(cat));
+  score += matches.length * 1.5;
+
+  // ------------------------------
+  // ✅ Multi-token affinity (compound intent)
+  // e.g. "design marketing video" should boost design tools capable of video output
+  // ------------------------------
+  if (tokens.length > 2) {
+    score += WEIGHTS.multiTokenAffinity;
+  }
+
+  return score;
+}
 
   // ------------------------------
   // Synonym affinity map (aligned with expandQueryTokens)
