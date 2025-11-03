@@ -266,8 +266,4 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
     });
   }
-
-  // Init carousel
-  renderGridPage();
-  renderDots();
 });
