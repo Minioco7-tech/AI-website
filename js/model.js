@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // ✅ Related Models Carousel
   // Show other models that share ANY category
   // ------------------------------
-  const relatedModels = models
+  relatedModels = models
     .filter(m => m.id !== model.id) // skip current
     .map(m => {
       const mCats = normalizeCategories(m.category);
@@ -151,27 +151,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderDots();
   });
 
-  function renderGridPage() {
-    grid.classList.add('opacity-0', 'scale-95');
-
-    setTimeout(() => {
-      grid.innerHTML = '';
-      const start = currentIndex * modelsPerView;
-      const pageModels = relatedModels.slice(start, start + modelsPerView);
-
-      pageModels.forEach(model => {
-        const card = createModelCard(model);
-        grid.appendChild(card);
-      });
-
-      // Re-observe new backgrounds
-      const lazyBackgrounds = document.querySelectorAll('.lazy-bg');
-      lazyBackgrounds.forEach(el => observer.observe(el));
-
-      updateDots();
-      grid.classList.remove('opacity-0', 'scale-95');
-    }, 150);
-  }
   // Arrows navigation
   leftArrow.addEventListener('click', () => {
     if (currentIndex > 0) {
@@ -206,6 +185,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 // ======================
 // ✅ Carousel Functions
 // ======================
+
 function renderGridPage() {
   grid.classList.add('opacity-0', 'scale-95');
 
@@ -219,6 +199,7 @@ function renderGridPage() {
       grid.appendChild(card);
     });
 
+    // Re-observe new backgrounds
     const lazyBackgrounds = document.querySelectorAll('.lazy-bg');
     lazyBackgrounds.forEach(el => observer.observe(el));
 
