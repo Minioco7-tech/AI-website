@@ -172,71 +172,6 @@ document.addEventListener('DOMContentLoaded', async () => {
       grid.classList.remove('opacity-0', 'scale-95');
     }, 150);
   }
-
-  // ======================================================
-  // ✅ Render dots based on mobile or desktop screen size
-  // ======================================================
-
-  function renderDots() {
-    if (window.innerWidth <= 768) {
-      renderDotsMobile();
-    } else {
-      renderDotsDesktop();
-    }
-  }
-  
-  function renderDotsDesktop() {
-    const totalPages = Math.ceil(relatedModels.length / modelsPerView);
-    dotsContainer.innerHTML = '';
-  
-    for (let i = 0; i < totalPages; i++) {
-      const dot = document.createElement('span');
-      dot.className = `carousel-dot w-3 h-3 rounded-full ${i === currentIndex ? 'bg-white' : 'bg-white/30'} cursor-pointer`;
-      dot.dataset.index = i;
-      dot.addEventListener('click', () => {
-        currentIndex = i;
-        renderGridPage();
-      });
-      dotsContainer.appendChild(dot);
-    }
-  }
-  
-  function renderDotsMobile() {
-    const totalPages = Math.ceil(relatedModels.length / modelsPerView);
-    const maxDots = 5;
-    const middleIndex = Math.floor(maxDots / 2);
-    dotsContainer.innerHTML = '';
-  
-    for (let i = 0; i < maxDots; i++) {
-      const pageIndex = currentIndex - middleIndex + i;
-      const dot = document.createElement('span');
-      dot.dataset.index = pageIndex;
-  
-      if (pageIndex === currentIndex) {
-        dot.className = 'carousel-dot w-3 h-3 rounded-full bg-white cursor-pointer';
-      } else if (Math.abs(pageIndex - currentIndex) === 1) {
-        dot.className = 'carousel-dot w-3 h-3 rounded-full bg-white/50 cursor-pointer';
-      } else {
-        dot.className = 'carousel-dot w-3 h-3 rounded-full bg-white/20 cursor-pointer';
-      }
-  
-      if (pageIndex < 0 || pageIndex >= totalPages) {
-        dot.style.opacity = 0;
-        dot.style.pointerEvents = 'none';
-      } else {
-        dot.addEventListener('click', () => {
-          currentIndex = pageIndex;
-          renderGridPage();
-        });
-      }
-  
-      dotsContainer.appendChild(dot);
-    }
-  }
-
-  function updateDots() {
-    renderDots(); // Re-render dots based on updated index
-  }
   // Arrows navigation
   leftArrow.addEventListener('click', () => {
     if (currentIndex > 0) {
@@ -267,3 +202,101 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   }
 });
+
+// ======================
+// ✅ Carousel Functions
+// ======================
+function renderGridPage() {
+  grid.classList.add('opacity-0', 'scale-95');
+
+  setTimeout(() => {
+    grid.innerHTML = '';
+    const start = currentIndex * modelsPerView;
+    const pageModels = relatedModels.slice(start, start + modelsPerView);
+
+    pageModels.forEach(model => {
+      const card = createModelCard(model);
+      grid.appendChild(card);
+    });
+
+    const lazyBackgrounds = document.querySelectorAll('.lazy-bg');
+    lazyBackgrounds.forEach(el => observer.observe(el));
+
+    updateDots();
+    grid.classList.remove('opacity-0', 'scale-95');
+  }, 150);
+}
+
+function renderDots() {
+  if (window.innerWidth <= 768) {
+    renderDotsMobile();
+  } else {
+    renderDotsDesktop();
+  }
+}
+
+function renderDotsDesktop() {
+  const totalPages = Math.ceil(relatedModels.length / modelsPerView);
+  dotsContainer.innerHTML = '';
+
+  for (let i = 0; i < totalPages; i++) {
+    const dot = document.createElement('span');
+    dot.className = `carousel-dot w-3 h-3 rounded-full ${i === currentIndex ? 'bg-white' : 'bg-white/30'} cursor-pointer`;
+    dot.dataset.index = i;
+    dot.addEventListener('click', () => {
+      if (i !== currentIndex) {
+        currentIndex = i;
+        renderGridPage();
+      }
+    });
+    dotsContainer.appendChild(dot);
+  }
+}
+
+function renderDotsMobile() {
+  const totalPages = Math.ceil(relatedModels.length / modelsPerView);
+  const maxDots = 5;
+  const middleIndex = Math.floor(maxDots / 2);
+  dotsContainer.innerHTML = '';
+
+  for (let i = 0; i < maxDots; i++) {
+    const pageIndex = currentIndex - middleIndex + i;
+
+    const dot = document.createElement('span');
+    dot.dataset.index = pageIndex;
+
+    dot.className = getDotClass(pageIndex, currentIndex);
+
+    if (pageIndex < 0 || pageIndex >= totalPages) {
+      dot.style.opacity = 0;
+      dot.style.pointerEvents = 'none';
+    } else {
+      dot.addEventListener('click', () => {
+        if (pageIndex !== currentIndex) {
+          dot.classList.add('clicked');
+          setTimeout(() => dot.classList.remove('clicked'), 250);
+          currentIndex = pageIndex;
+          renderGridPage();
+        }
+      });
+    }
+
+    dotsContainer.appendChild(dot);
+  }
+}
+
+function getDotClass(dotIndex, currentIndex) {
+  const distance = Math.abs(dotIndex - currentIndex);
+
+  if (dotIndex === currentIndex) {
+    return 'carousel-dot w-3 h-3 rounded-full bg-white cursor-pointer';
+  } else if (distance === 1) {
+    return 'carousel-dot w-3 h-3 rounded-full bg-white/50 cursor-pointer';
+  } else {
+    return 'carousel-dot w-3 h-3 rounded-full bg-white/20 cursor-pointer';
+  }
+}
+
+function updateDots() {
+  renderDots();
+}
