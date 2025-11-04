@@ -50,7 +50,7 @@ This creates a connection between your front-end and your Supabase backend.
 
 ---
 
-🧱 Step 2 — Database Schema
+### 🧱 Step 2 — Database Schema
 Tables Overview
 Table	Purpose
 models	Stores all AI model data (replaces models.json)
@@ -93,7 +93,7 @@ CREATE TABLE ratings (
 
 ---
 
-🔐 Step 3 — Authentication Setup
+### 🔐 Step 3 — Authentication Setup
 Supabase handles user auth automatically.
 
 Example JavaScript Integration
@@ -120,7 +120,7 @@ Once authenticated, user.id can be used to reference their saved models or ratin
 
 ---
 
-💾 Step 4 — Replacing models.json
+### 💾 Step 4 — Replacing models.json
 After migrating to Supabase, the dataset should load dynamically:
 
 Old (current front-end)
@@ -137,7 +137,7 @@ You can then reuse existing display functions (createModelCard(), displayModels(
 
 ---
 
-⚡ Step 5 — Security & Policies
+### ⚡ Step 5 — Security & Policies
 Use Row-Level Security (RLS) to protect user data.
 
 Example:
@@ -157,7 +157,7 @@ These ensure users can only view or edit their own saved models.
 
 ---
 
-📊 Step 6 — Optional Supabase Edge Functions
+### 📊 Step 6 — Optional Supabase Edge Functions
 You can later add custom logic for:
 
 Calculating model popularity
@@ -172,7 +172,7 @@ Edge Functions use Deno and integrate seamlessly with your database.
 
 ---
 
-💼 Step 7 — Deployment Plan
+### 💼 Step 7 — Deployment Plan
 Keep the main site on GitHub Pages.
 
 Host backend logic entirely in Supabase (no separate server needed).
@@ -181,7 +181,7 @@ Optionally, connect a custom subdomain like api.aiaviary.com for API routes.
 
 ---
 
-🧠 Future Migration (Phase 3–4)
+### 🧠 Future Migration (Phase 3–4)
 Once you’re ready to expand beyond Supabase:
 
 Move backend logic into Node.js + Express for deeper customization.
@@ -194,7 +194,7 @@ Maintain Supabase as the primary database or migrate to a managed PostgreSQL ins
 
 ---
 
-✅ Summary
+### ✅ Summary
 Area	Technology	Status
 Database	Supabase PostgreSQL	🧩 Planned
 Auth	Supabase Auth (email + OAuth)	🧩 Planned
@@ -205,7 +205,7 @@ API Layer	Supabase + optional Node.js endpoints	Future
 
 ---
 
-📘 References
+### 📘 References
 Supabase Documentation
 
 JavaScript Client Library
