@@ -40,9 +40,9 @@ document.addEventListener("DOMContentLoaded", () => {
           <!-- Nav (desktop) -->
           <div id="navActions" class="flex sm:flex items-center space-x-6">
             <nav class="flex space-x-4 backdrop-blur-lg px-4 py-1 rounded-lg">
-              <a href="about.html" class="text-white hover:text-[#00BFFF] transition-colors">About</a>
+              <a href="about.html" rel="noopener noreferrer" class="text-white hover:text-[#00BFFF] transition-colors">About</a>
             </nav>
-            <a href="index.html" class="btn-primary px-4 py-2 rounded-lg text-sm font-medium shadow-lg transition hover:scale-105">Home</a>
+            <a href="index.html" rel="noopener noreferrer" class="btn-primary px-4 py-2 rounded-lg text-sm font-medium shadow-lg transition hover:scale-105">Home</a>
           </div>
 
           <!-- Search icon (mobile) -->
