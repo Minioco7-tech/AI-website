@@ -18,6 +18,7 @@ export function renderBreadcrumb(items) {
     if (!isLast && item.href) {
       const link = document.createElement('a');
       link.href = item.href;
+      link.rel = 'noopener noreferrer';
       link.textContent = item.label;
       link.className = 'text-gray-400 hover:text-white transition';
       breadcrumbEl.appendChild(link);
