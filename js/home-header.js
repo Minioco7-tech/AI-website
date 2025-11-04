@@ -23,11 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="flex items-center space-x-6">
             <!-- Nav links -->
             <nav class="flex space-x-4 backdrop-blur-lg px-4 py-1 rounded-lg flex-row md:space-x-4 space-y-2 md:space-y-0">
-              <a href="about.html" class="text-white hover:text-[#00BFFF] transition-colors">About</a>
+              <a href="about.html" rel="noopener noreferrer" class="text-white hover:text-[#00BFFF] transition-colors">About</a>
             </nav>
     
             <!-- All Models Button -->
-            <a href="category.html?category=all" class="btn-primary px-4 py-2 rounded-lg text-sm font-medium shadow-lg transition hover:scale-105">
+            <a href="category.html?category=all" rel="noopener noreferrer" class="btn-primary px-4 py-2 rounded-lg text-sm font-medium shadow-lg transition hover:scale-105">
               All Models
             </a>
           </div>
