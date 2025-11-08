@@ -59,7 +59,7 @@ export const categories = [
   { key: 'all', name: 'All Models' },
   { key: 'learning', name: 'Learning' },
   { key: 'research', name: 'Research' },
-  { key: 'documents', name: 'Witing & Documents' },
+  { key: 'documents', name: 'Writing & Documents' },
   { key: 'office', name: 'Office Tools' },
   { key: 'data', name: 'Data & Analytics' },
   { key: 'finance', name: 'Finance & Operations' },
@@ -398,6 +398,31 @@ export function renderSingleDropdown(containerId, { title = "", content = "" } =
       </details>
     </div>
   `;
+
+  if (typeof feather !== 'undefined') feather.replace();
+}
+
+// Render an array of dropdowns into one container, reusing renderSingleDropdown
+// items: Array<{ title: string, content: string(HTML) }>
+export function renderDropdowns(containerId, items = []) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  // one pass DOM write for perf
+  const frag = document.createDocumentFragment();
+
+  items.forEach((item, idx) => {
+    const mount = document.createElement('div');
+    mount.id = `${containerId}-${idx}`;
+    frag.appendChild(mount);
+  });
+
+  container.innerHTML = ''; // clear once
+  container.appendChild(frag);
+
+  items.forEach((item, idx) => {
+    renderSingleDropdown(`${containerId}-${idx}`, item);
+  });
 
   if (typeof feather !== 'undefined') feather.replace();
 }
