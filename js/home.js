@@ -110,70 +110,146 @@ document.addEventListener('DOMContentLoaded', () => {
   // -----------------------
   // AI Guide
   // -----------------------
-  function renderAIPromptGuide() {
-    const guideContent = `
-      <div>
-        <h4 class="font-bold text-white mb-2">1. Be Specific and Clear</h4>
-        <p class="text-sm">Vague prompts lead to vague results. Provide as much detail as possible. Instead of "Write about dogs," try:</p>
-        <p class="mt-2 text-sm italic bg-[#1A1C20] p-3 rounded-md">
-          <strong>Example:</strong> "Write a 500-word blog post about the benefits of adopting a senior dog, focusing on their calm demeanor and lower energy levels."
-        </p>
-      </div>
+  function renderAIGuides() {
+    const guides = [
+      {
+        title: 'How to Prompt AI Tools Correctly',
+        content: `
+          <div>
+            <h4 class="font-bold text-white mb-2">1. Be Specific and Clear</h4>
+            <p class="text-sm">Vague prompts lead to vague results. Provide as much detail as possible. Instead of "Write about dogs," try:</p>
+            <p class="mt-2 text-sm italic bg-[#1A1C20] p-3 rounded-md">
+              <strong>Example:</strong> "Write a 500-word blog post about the benefits of adopting a senior dog, focusing on their calm demeanor and lower energy levels."
+            </p>
+          </div>
   
-      <div>
-        <h4 class="font-bold text-white mb-2">2. Provide Context</h4>
-        <p class="text-sm">Give the AI background info: who it’s for, your goal, and the relationship.</p>
-        <p class="mt-2 text-sm italic bg-[#1A1C20] p-3 rounded-md">
-          <strong>Example:</strong> "Draft a professional email to a potential client named Jane Doe. I met her at a networking event last week. The goal is to schedule a 15-minute follow-up call to discuss our web design services."
-        </p>
-      </div>
+          <div>
+            <h4 class="font-bold text-white mb-2">2. Provide Context</h4>
+            <p class="text-sm">Give the AI background info: who it’s for, your goal, and the relationship.</p>
+            <p class="mt-2 text-sm italic bg-[#1A1C20] p-3 rounded-md">
+              <strong>Example:</strong> "Draft a professional email to a potential client named Jane Doe. I met her at a networking event last week. The goal is to schedule a 15-minute follow-up call to discuss our web design services."
+            </p>
+          </div>
   
-      <div>
-        <h4 class="font-bold text-white mb-2">3. Define the Format</h4>
-        <p class="text-sm">Tell the AI exactly how you want the output — list, paragraph, table, JSON, etc.</p>
-        <p class="mt-2 text-sm italic bg-[#1A1C20] p-3 rounded-md">
-          <strong>Example:</strong> "Generate a list of 5 creative project ideas for a graphic designer. Format the output as a numbered list with a brief, one-sentence description for each idea."
-        </p>
-      </div>
+          <div>
+            <h4 class="font-bold text-white mb-2">3. Define the Format</h4>
+            <p class="text-sm">Tell the AI exactly how you want the output — list, paragraph, table, or JSON.</p>
+            <p class="mt-2 text-sm italic bg-[#1A1C20] p-3 rounded-md">
+              <strong>Example:</strong> "Generate a list of 5 creative project ideas for a graphic designer. Format the output as a numbered list with a one-sentence description for each idea."
+            </p>
+          </div>
   
-      <div>
-        <h4 class="font-bold text-white mb-2">4. For Image Generation: Use Descriptive Adjectives</h4>
-        <p class="text-sm">Be vivid. Include subject, style, lighting, and composition.</p>
-        <p class="mt-2 text-sm italic bg-[#1A1C20] p-3 rounded-md">
-          <strong>Example:</strong> "A photorealistic image of a red fox sitting in a snowy forest at sunrise, cinematic lighting, detailed fur, sharp focus."
-        </p>
-      </div>
+          <div>
+            <h4 class="font-bold text-white mb-2">4. For Image Generation: Use Descriptive Adjectives</h4>
+            <p class="text-sm">Be vivid — include subject, style, lighting, and composition.</p>
+            <p class="mt-2 text-sm italic bg-[#1A1C20] p-3 rounded-md">
+              <strong>Example:</strong> "A photorealistic image of a red fox sitting in a snowy forest at sunrise, cinematic lighting, detailed fur, sharp focus."
+            </p>
+          </div>
   
-      <div>
-        <h4 class="font-bold text-white mb-2">5. Iterate and Refine</h4>
-        <p class="text-sm">Your first prompt won’t be perfect. Use feedback loops — ask the AI to adjust tone, length, or structure.</p>
-        <p class="mt-2 text-sm italic bg-[#1A1C20] p-3 rounded-md">
-          <strong>Example:</strong> "That’s a good start — can you make the tone more formal and limit it to 100 words?"
-        </p>
-      </div>
+          <div>
+            <h4 class="font-bold text-white mb-2">5. Iterate and Refine</h4>
+            <p class="text-sm">Use feedback loops — ask the AI to adjust tone, format, or complexity.</p>
+            <p class="mt-2 text-sm italic bg-[#1A1C20] p-3 rounded-md">
+              <strong>Example:</strong> "That’s a good start — can you make it sound more formal and limit it to 100 words?"
+            </p>
+          </div>
+        `
+      },
+      {
+        title: 'Choosing the Right AI Tool for Your Task',
+        content: `
+          <div>
+            <h4 class="font-bold text-white mb-2">1. Start With Your Goal</h4>
+            <p class="text-sm">Decide what you want to achieve — writing, design, research, or coding — then pick tools built for that.</p>
+            <ul class="list-disc ml-6 mt-3 space-y-1 text-sm text-gray-300">
+              <li>Writing → Grammarly, Jasper, ChatGPT</li>
+              <li>Design → Leonardo AI, Runway, Midjourney</li>
+              <li>Data & Analysis → Notion AI, Perplexity, Excel Copilot</li>
+            </ul>
+          </div>
   
-      <div>
-        <h4 class="font-bold text-white mb-2">🧩 Prompt Checklist</h4>
-        <ul class="list-disc ml-6 mt-2 space-y-1 text-sm text-gray-300">
-          <li>✅ Audience and goal are clear</li>
-          <li>✅ Format and tone specified</li>
-          <li>✅ Context provided</li>
-          <li>✅ Role assigned (optional)</li>
-          <li>✅ Example given (optional)</li>
-        </ul>
-      </div>
-    `;
+          <div>
+            <h4 class="font-bold text-white mb-2">2. Test Before You Commit</h4>
+            <p class="text-sm">Most tools offer free plans — test their outputs before subscribing.</p>
+          </div>
   
-    renderSingleDropdown('aiPromptGuide', {
-      title: 'How to Prompt AI Tools Correctly',
-      content: guideContent
+          <div>
+            <h4 class="font-bold text-white mb-2">3. Check Integrations</h4>
+            <p class="text-sm">Choose tools that work with what you already use — Google Docs, Notion, Figma, or Slack.</p>
+          </div>
+  
+          <div>
+            <h4 class="font-bold text-white mb-2">4. Compare Cost vs. Time Saved</h4>
+            <p class="text-sm">Focus on the value: if a tool saves 2 hours a week, it often pays for itself.</p>
+          </div>
+        `
+      },
+      {
+        title: 'Using AI Safely and Ethically',
+        content: `
+          <div>
+            <h4 class="font-bold text-white mb-2">1. Protect Your Data</h4>
+            <p class="text-sm">Never share private or sensitive data unless the tool explicitly states strong privacy protection.</p>
+          </div>
+  
+          <div>
+            <h4 class="font-bold text-white mb-2">2. Check Data Policies</h4>
+            <p class="text-sm">Look for lines like “Your data is not used to train our models.” That’s a good sign.</p>
+          </div>
+  
+          <div>
+            <h4 class="font-bold text-white mb-2">3. Verify Facts</h4>
+            <p class="text-sm">AI can hallucinate — always verify information before publishing or sharing.</p>
+          </div>
+  
+          <div>
+            <h4 class="font-bold text-white mb-2">4. Be Transparent</h4>
+            <p class="text-sm">If you use AI-generated work, credit it or disclose when appropriate. This builds trust.</p>
+          </div>
+        `
+      },
+      {
+        title: 'Using AI to Boost Your Career',
+        content: `
+          <div>
+            <h4 class="font-bold text-white mb-2">1. Optimize Your Resume</h4>
+            <p class="text-sm">AI tools like Teal and Kickresume can reword your CV to match specific job descriptions.</p>
+          </div>
+  
+          <div>
+            <h4 class="font-bold text-white mb-2">2. Write Better Cover Letters</h4>
+            <p class="text-sm">Use AI for structure and grammar — but always personalize your story and tone.</p>
+          </div>
+  
+          <div>
+            <h4 class="font-bold text-white mb-2">3. Practice Interviews</h4>
+            <p class="text-sm">Ask chatbots to simulate interviews and rate your answers.</p>
+            <p class="mt-2 text-sm italic bg-[#1A1C20] p-3 rounded-md">
+              <strong>Example:</strong> "Pretend you’re an interviewer for a marketing role. Ask me 5 questions and score my answers."
+            </p>
+          </div>
+  
+          <div>
+            <h4 class="font-bold text-white mb-2">4. Build an Online Brand</h4>
+            <p class="text-sm">Use AI to polish your LinkedIn headline, write portfolio blurbs, or brainstorm post ideas.</p>
+          </div>
+        `
+      }
+    ];
+
+    // Render all dropdowns into a single container
+    const container = document.getElementById('aiGuidesContainer');
+    if (!container) return;
+  
+    guides.forEach((guide, i) => {
+      const section = document.createElement('div');
+      section.id = `aiGuide-${i}`;
+      container.appendChild(section);
+      renderSingleDropdown(section.id, guide);
     });
   }
   
-  // existing calls
-  renderCategories();
-  renderAIPromptGuide();
-
   // -----------------------
   // Fuzzy Search (Fuse.js)
   // -----------------------
@@ -205,6 +281,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize homepage
   // -----------------------
   renderCategories();
-  renderAIGuide();
+  renderAIGuides();
 
 });
