@@ -375,70 +375,29 @@ export function expandQueryTokens(rawInput) {
 // items: [{ title: string, content: string(HTML) }]
 // options: { heading?: string, singleOpen?: boolean }
 // =====================================================
-export function renderAccordion(containerId, { heading = "", items = [], singleOpen = true } = {}) {
+// --- Single Accordion Renderer (One Dropdown, Netflix Style) ---
+export function renderSingleDropdown(containerId, { title = "", content = "" } = {}) {
   const el = document.getElementById(containerId);
   if (!el) return;
 
   el.innerHTML = `
-    ${heading ? `
-      <h2 class="text-3xl font-bold mb-8 text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-        ${heading}
-      </h2>` : ''}
+    <div class="p-4">
+      <details class="group rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden">
+        <summary class="flex cursor-pointer list-none items-center justify-between px-6 py-5">
+          <h3 class="text-white text-lg font-semibold">${title}</h3>
+          <span class="inline-flex items-center justify-center text-white transition-transform duration-300 group-open:rotate-180">
+            <i data-feather="chevron-down" class="w-6 h-6"></i>
+          </span>
+        </summary>
 
-    <div class="space-y-4">
-      ${items.map((it, i) => `
-        <details class="group rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden" data-idx="${i}">
-          <summary class="flex cursor-pointer list-none items-center justify-between px-6 py-5">
-            <h3 class="text-white text-lg font-semibold">${it.title}</h3>
-            <span class="inline-flex items-center justify-center transition-transform duration-300 group-open:rotate-180">
-              <i data-feather="chevron-down" class="w-6 h-6"></i>
-            </span>
-          </summary>
-
-          <div class="border-t border-white/10">
-            <!-- animated wrapper for smooth open/close -->
-            <div class="acc-content px-6 py-5 text-[#E0E0E0] max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
-              ${it.content}
-            </div>
+        <div class="border-t border-white/10">
+          <div class="px-6 py-6 text-[#E0E0E0] space-y-8">
+            ${content}
           </div>
-        </details>
-      `).join('')}
+        </div>
+      </details>
     </div>
   `;
 
-  // Smooth height animation + single-open behavior (optional)
-  const itemsEls = Array.from(el.querySelectorAll('details'));
-  itemsEls.forEach(d => {
-    const wrapper = d.querySelector('.acc-content');
-
-    // initialize closed
-    wrapper.style.maxHeight = '0px';
-
-    d.addEventListener('toggle', () => {
-      // single open = close others
-      if (singleOpen && d.open) {
-        itemsEls.forEach(other => {
-          if (other !== d) {
-            other.open = false;
-            const w = other.querySelector('.acc-content');
-            if (w) w.style.maxHeight = '0px';
-          }
-        });
-      }
-
-      // animate this one
-      if (d.open) {
-        // read scrollHeight after next frame to allow transition
-        requestAnimationFrame(() => {
-          wrapper.style.maxHeight = wrapper.scrollHeight + 'px';
-        });
-      } else {
-        wrapper.style.maxHeight = '0px';
-      }
-    }, { passive: true });
-  });
-
-  // Refresh Feather icons once after injection
   if (typeof feather !== 'undefined') feather.replace();
 }
-
