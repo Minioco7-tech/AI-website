@@ -1,5 +1,5 @@
 // home.js — Optimized homepage functionality
-import { fetchJSON, getCategoryName, getRandomModels } from './utils.js';
+import { fetchJSON, getCategoryName, getRandomModels, renderAccordion } from './utils.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize Feather icons once
@@ -108,6 +108,121 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // -----------------------
+  // AI Guide
+  // -----------------------
+  const aiPromptGuideItems = [
+    {
+      title: "1) Be specific and clear",
+      content: `
+        <p class="text-sm">Vague prompts lead to vague results. Add audience, goal, length, tone, and constraints.</p>
+        <div class="mt-3 space-y-2">
+          <p class="text-sm italic bg-[#1A1C20] p-3 rounded-md">
+            <strong>Good:</strong> “Write a 500-word blog post for beginner designers on ‘AI in branding’. 
+            Keep a friendly tone, add 3 bullet takeaways, and end with a 1-sentence CTA.”
+          </p>
+          <p class="text-sm line-through text-gray-400">Bad: “Write about AI.”</p>
+        </div>
+      `
+    },
+    {
+      title: "2) Provide context (who/what/why/where)",
+      content: `
+        <p class="text-sm">Tell the model who you are, who it’s for, and what outcome you need.</p>
+        <p class="mt-2 text-sm italic bg-[#1A1C20] p-3 rounded-md">
+          <strong>Example:</strong> “Draft a professional email to <em>Jane Doe</em> (met at a networking event last week). 
+          Goal: book a 15-minute follow-up call about our web design services. Keep it concise (under 120 words).”
+        </p>
+      `
+    },
+    {
+      title: "3) Define structure and format",
+      content: `
+        <p class="text-sm">Ask for lists, tables, JSON, outlines, or sections—whatever fits your workflow.</p>
+        <p class="mt-2 text-sm italic bg-[#1A1C20] p-3 rounded-md">
+          <strong>Example:</strong> “Give 5 project ideas for a graphic designer <em>as a numbered list</em>, 
+          each with a one-sentence description and a suggested tool.”
+        </p>
+      `
+    },
+    {
+      title: "4) Assign a role or perspective",
+      content: `
+        <p class="text-sm">Roles set expectations and improve results.</p>
+        <ul class="list-disc ml-6 mt-3 space-y-1 text-sm text-gray-300">
+          <li>“Act as a hiring manager for a data analyst role.”</li>
+          <li>“You are a science tutor explaining in simple terms.”</li>
+          <li>“Be a senior UX writer refining microcopy.”</li>
+        </ul>
+      `
+    },
+    {
+      title: "5) Iterate and refine (treat it like a conversation)",
+      content: `
+        <p class="text-sm">Use the first draft to steer the next one.</p>
+        <ul class="list-disc ml-6 mt-3 space-y-1 text-sm text-gray-300">
+          <li>“Shorten to 80–100 words.”</li>
+          <li>“Make the tone more formal and remove emojis.”</li>
+          <li>“Add an example relevant to teachers.”</li>
+        </ul>
+      `
+    },
+    {
+      title: "6) Image prompts: describe subject, style, light, lens",
+      content: `
+        <p class="text-sm">Paint the scene with adjectives and shot details.</p>
+        <p class="mt-2 text-sm italic bg-[#1A1C20] p-3 rounded-md">
+          <strong>Example:</strong> “Photorealistic red fox sitting in a snowy forest at sunrise, 
+          cinematic rim light, detailed fur, shallow depth of field, 85mm composition.”
+        </p>
+      `
+    },
+    {
+      title: "7) Add guardrails and constraints",
+      content: `
+        <p class="text-sm">Give boundaries: length, do/don’t lists, style guides.</p>
+        <ul class="list-disc ml-6 mt-3 space-y-1 text-sm text-gray-300">
+          <li>“Max 5 bullets, each under 12 words.”</li>
+          <li>“Avoid jargon; write for 12-year-olds.”</li>
+          <li>“Cite sources with links at the end.”</li>
+        </ul>
+      `
+    },
+    {
+      title: "8) Provide examples (few-shot prompting)",
+      content: `
+        <p class="text-sm">Show the model what “good” looks like and say “match this style.”</p>
+        <p class="mt-2 text-sm italic bg-[#1A1C20] p-3 rounded-md">
+          <strong>Example:</strong> “Here are two example product blurbs I like. Write a third for this product, 
+          keeping the same rhythm and structure.”
+        </p>
+      `
+    },
+    {
+      title: "Prompt checklist (quick scan)",
+      content: `
+        <ul class="list-disc ml-6 mt-3 space-y-1 text-sm text-gray-300">
+          <li>Audience + goal stated</li>
+          <li>Length, tone, and format set</li>
+          <li>Context and constraints included</li>
+          <li>Role assigned (optional)</li>
+          <li>Example provided (optional)</li>
+        </ul>
+      `
+    }
+  ];
+  
+  function renderAIGuide() {
+    renderAccordion('aiPromptGuide', {
+      heading: 'How to Prompt AI Tools Correctly',
+      items: aiPromptGuideItems,
+      singleOpen: true
+    });
+  
+    // icons are injected by the renderer, but safe to replace again if needed
+    if (typeof feather !== 'undefined') feather.replace();
+  }
+
+  // -----------------------
   // Fuzzy Search (Fuse.js)
   // -----------------------
   function setupFuse() {
@@ -138,4 +253,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize homepage
   // -----------------------
   renderCategories();
+  renderAIGuide();
+
 });
