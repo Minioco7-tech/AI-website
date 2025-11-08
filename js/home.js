@@ -1,5 +1,5 @@
 // home.js — Optimized homepage functionality
-import { fetchJSON, getCategoryName, getRandomModels, renderSingleDropdown} from './utils.js';
+import { fetchJSON, getCategoryName, getRandomModels, renderDropdowns} from './utils.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize Feather icons once
