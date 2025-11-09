@@ -115,61 +115,138 @@ document.addEventListener('DOMContentLoaded', () => {
       {
         title: 'How to Prompt AI Tools Correctly',
         content: `
-          <div>
-            <h4 class="font-bold text-white mb-2">1. Be Specific and Clear</h4>
-            <p class="text-sm">Vague prompts lead to vague results. Provide as much detail as possible. Instead of "Write about dogs," try:</p>
-            <p class="mt-2 text-sm italic bg-[#1A1C20] p-3 rounded-md">
-              <strong>Example:</strong> "Write a 500-word blog post about the benefits of adopting a senior dog, focusing on their calm demeanor and lower energy levels."
-            </p>
-          </div>
-          <div>
-            <h4 class="font-bold text-white mb-2">2. Provide Context</h4>
-            <p class="text-sm">Give the AI background info: who it’s for, your goal, and the relationship.</p>
-          </div>
-          <div>
-            <h4 class="font-bold text-white mb-2">3. Define the Format</h4>
-            <p class="text-sm">Tell the AI exactly how you want the output — list, paragraph, table, or JSON.</p>
-          </div>
-          <div>
-            <h4 class="font-bold text-white mb-2">4. For Image Generation: Use Descriptive Adjectives</h4>
-            <p class="text-sm">Be vivid — include subject, style, lighting, and composition.</p>
-          </div>
-          <div>
-            <h4 class="font-bold text-white mb-2">5. Iterate and Refine</h4>
-            <p class="text-sm">Use feedback loops — ask the AI to adjust tone, format, or complexity.</p>
+          <div class="space-y-8">
+      
+            <!-- Tip 1 -->
+            <div>
+              <h4 class="font-bold text-white mb-2">🎯 1. Be Specific and Clear</h4>
+              <p class="text-sm text-gray-300">AI tools perform best when you give them context and direction. Vague prompts lead to vague results — always include purpose, tone, and details.</p>
+              <div class="mt-3 bg-[#1A1C20] border-l-4 border-yellow-500 p-3 rounded-md text-sm">
+                ❌ <strong>Weak:</strong> “Write about dogs.”<br>
+                ✅ <strong>Better:</strong> “Write a 500-word blog post about the benefits of adopting senior dogs, focusing on their calm temperament and loyalty.”
+              </div>
+              <p class="mt-2 text-sm text-gray-400 italic">
+                <strong>Why:</strong> The more detail you give, the more tailored and useful your results will be.
+              </p>
+            </div>
+      
+            <!-- Tip 2 -->
+            <div>
+              <h4 class="font-bold text-white mb-2">🧠 2. Provide Context and Perspective</h4>
+              <p class="text-sm text-gray-300">Explain who you are, what you need, and who the content is for. Context changes how AI frames its tone and depth.</p>
+              <div class="mt-3 bg-[#1A1C20] border-l-4 border-orange-500 p-3 rounded-md text-sm">
+                ❌ <strong>Generic:</strong> “Write an email about a meeting.”<br>
+                ✅ <strong>Better:</strong> “Write a short, friendly follow-up email from a team lead reminding their design team about tomorrow’s sprint review.”
+              </div>
+              <p class="mt-2 text-sm text-gray-400 italic">
+                <strong>Why:</strong> Without context, AI guesses your intent. Giving it a role or audience ensures more natural, human-like output.
+              </p>
+            </div>
+      
+            <!-- Tip 3 -->
+            <div>
+              <h4 class="font-bold text-white mb-2">🧾 3. Define the Format and Style You Want</h4>
+              <p class="text-sm text-gray-300">Tell the AI exactly how to present the result — such as in a list, table, summary, or email format.</p>
+              <div class="mt-3 bg-[#1A1C20] border-l-4 border-green-500 p-3 rounded-md text-sm">
+                ❌ <strong>Unclear:</strong> “Give me ideas for marketing.”<br>
+                ✅ <strong>Better:</strong> “List five creative social media campaign ideas in bullet points, each with a short description and target audience.”
+              </div>
+              <p class="mt-2 text-sm text-gray-400 italic">
+                <strong>Why:</strong> AI responds to structure — defining output format saves editing time later.
+              </p>
+            </div>
+      
+            <!-- Tip 4 -->
+            <div>
+              <h4 class="font-bold text-white mb-2">🎨 4. Use Descriptive Language for Images and Creative Work</h4>
+              <p class="text-sm text-gray-300">When generating visuals or creative text, include sensory and stylistic details: mood, color, lighting, and perspective.</p>
+              <div class="mt-3 bg-[#1A1C20] border-l-4 border-pink-500 p-3 rounded-md text-sm">
+                ❌ <strong>Weak:</strong> “Generate a picture of a cat.”<br>
+                ✅ <strong>Better:</strong> “A cozy watercolor of a ginger cat sleeping by a window with morning light streaming in.”
+              </div>
+              <p class="mt-2 text-sm text-gray-400 italic">
+                <strong>Why:</strong> Descriptive prompts help AI visualize your intent and match your creative vision.
+              </p>
+            </div>
+      
+            <!-- Tip 5 -->
+            <div>
+              <h4 class="font-bold text-white mb-2">🔁 5. Iterate and Refine</h4>
+              <p class="text-sm text-gray-300">Treat prompting as a conversation — adjust tone, complexity, or format until it fits your needs.</p>
+              <div class="mt-3 bg-[#1A1C20] border-l-4 border-blue-500 p-3 rounded-md text-sm">
+                💬 <strong>Example:</strong> “Make it sound more confident.” / “Add a closing summary.” / “Reformat as a bullet list.” 
+              </div>
+              <p class="mt-2 text-sm text-gray-400 italic">
+                <strong>Why:</strong> Refining outputs helps you learn how the AI interprets your intent — improving your skills over time.
+              </p>
+            </div>
           </div>
         `
       },
       {
         title: 'Choosing the Right AI Tool for Your Task',
         content: `
-          <div>
-            <h4 class="font-bold text-white mb-2">1. Define Your Goal Clearly</h4>
-            <p class="text-sm">Start by asking: “What problem am I solving?” Tools built for writing, research, or data analysis all have different strengths.</p>
-          </div>
-          <div>
-            <h4 class="font-bold text-white mb-2">2. Evaluate Features and Limitations</h4>
-            <p class="text-sm">Check whether the tool offers what you need — real-time collaboration, API access, export formats, or multilingual support.</p>
-          </div>
-          <div>
-            <h4 class="font-bold text-white mb-2">3. Test Before You Commit</h4>
-            <p class="text-sm">Try free or trial versions first. Evaluate ease of use, accuracy, and how well the outputs match your goals.</p>
-          </div>
-          <div>
-            <h4 class="font-bold text-white mb-2">4. Check for Integration and Compatibility</h4>
-            <p class="text-sm">Does it connect with your workflow — Google Docs, Figma, or Slack? Choosing tools that fit your ecosystem saves time.</p>
-          </div>
-          <div>
-            <h4 class="font-bold text-white mb-2">5. Consider Cost vs. Time Saved</h4>
-            <p class="text-sm">Calculate the time a tool saves you weekly. If it saves hours, it often justifies the subscription cost.</p>
-          </div>
-          <div>
-            <h4 class="font-bold text-white mb-2">6. Prioritize Trust and Transparency</h4>
-            <p class="text-sm">Pick companies that clearly explain how their AI works, how your data is used, and what safety measures they follow.</p>
-          </div>
-          <div>
-            <h4 class="font-bold text-white mb-2">7. Check Community Feedback</h4>
-            <p class="text-sm">Search for reviews, Reddit threads, or case studies to see how real users rate its reliability and support.</p>
+          <div class="space-y-8">
+      
+            <!-- Tip 1 -->
+            <div>
+              <h4 class="font-bold text-white mb-2">🎯 1. Start With Your Goal</h4>
+              <p class="text-sm text-gray-300">Begin by defining what you need: writing, image generation, coding help, research, or organization. Your goal determines which category of tool fits best.</p>
+              <div class="mt-3 bg-[#1A1C20] border-l-4 border-yellow-500 p-3 rounded-md text-sm">
+                ❌ <strong>Unclear:</strong> “I want to try AI.”<br>
+                ✅ <strong>Better:</strong> “I want to use AI to summarize research papers and help outline reports.”
+              </div>
+              <p class="mt-2 text-sm text-gray-400 italic">
+                <strong>Why:</strong> Specific goals narrow your search and help you find tools designed for that function — saving time and frustration.
+              </p>
+            </div>
+      
+            <!-- Tip 2 -->
+            <div>
+              <h4 class="font-bold text-white mb-2">🧩 2. Evaluate Features and Integrations</h4>
+              <p class="text-sm text-gray-300">Check what the tool actually offers — does it support collaboration, API use, data exports, or browser extensions?</p>
+              <div class="mt-3 bg-[#1A1C20] border-l-4 border-orange-500 p-3 rounded-md text-sm">
+                ❌ <strong>Limited:</strong> A note app that can’t export data or integrate with your workflow.<br>
+                ✅ <strong>Better:</strong> A writing AI that syncs with Google Docs, Notion, or your browser for smoother use.
+              </div>
+              <p class="mt-2 text-sm text-gray-400 italic">
+                <strong>Why:</strong> Choosing tools that fit your existing workflow saves setup time and keeps you productive.
+              </p>
+            </div>
+      
+            <!-- Tip 3 -->
+            <div>
+              <h4 class="font-bold text-white mb-2">⚖️ 3. Compare Cost vs. Value</h4>
+              <p class="text-sm text-gray-300">Look beyond monthly prices — consider how much time or effort the tool actually saves you.</p>
+              <div class="mt-3 bg-[#1A1C20] border-l-4 border-green-500 p-3 rounded-md text-sm">
+                💡 <strong>Example:</strong> A $15/month AI that saves you 3 hours a week is often more valuable than a free one that wastes your time.
+              </div>
+              <p class="mt-2 text-sm text-gray-400 italic">
+                <strong>Why:</strong> AI tools are productivity multipliers — not all free ones are truly “cheap,” and not all paid ones are worth it.
+              </p>
+            </div>
+      
+            <!-- Tip 4 -->
+            <div>
+              <h4 class="font-bold text-white mb-2">🔍 4. Check Reviews and Data Practices</h4>
+              <p class="text-sm text-gray-300">Before signing up, read privacy policies and community feedback. Check how the company handles your data and what users say about reliability.</p>
+              <div class="mt-3 bg-[#1A1C20] border-l-4 border-purple-500 p-3 rounded-md text-sm">
+                ❌ <strong>Risky:</strong> A “free AI” site with no company info or privacy policy.<br>
+                ✅ <strong>Better:</strong> Established tools like Notion AI, Claude, or Canva that clearly outline how they use your data.
+              </div>
+              <p class="mt-2 text-sm text-gray-400 italic">
+                <strong>Why:</strong> Transparency and user trust are key signs of a reputable AI product.
+              </p>
+            </div>
+      
+            <!-- Tip 5 -->
+            <div>
+              <h4 class="font-bold text-white mb-2">⚙️ 5. Test Before You Commit</h4>
+              <p class="text-sm text-gray-300">Use free tiers or trials to test the AI’s accuracy and ease of use before subscribing.</p>
+              <div class="mt-3 bg-[#1A1C20] border-l-4 border-blue-500 p-3 rounded-md text-sm">
+                💬 <strong>Tip:</strong> Run a small project first — like summarizing one article or generating one logo — to see how it performs under real use.
+              </div>
+            </div>
           </div>
         `
       },
