@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <li>💳 Bank details or passwords</li>
                 <li>📧 Personal emails or login info</li>
               </ul>
-              <div class="mt-3 bg-[#1A1C20] border-l-4 border-red-500 p-3 rounded-md text-sm">
+              <div class="mt-3 bg-[#1A1C20] border-l-4 border-blue-500 p-3 rounded-md text-sm">
                 ❌ <strong>Example:</strong> “My name is Sarah Blake and I live at 24 Oak Street. Can you write a CV for me?”<br>
                 ✅ <strong>Better:</strong> “Write a CV for a recent graduate in marketing with experience in social media.”
               </div>
@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div>
               <h4 class="font-bold text-white mb-2">⚠️ 2. Don’t Upload Confidential Work or Client Data</h4>
               <p class="text-sm text-gray-300">Avoid uploading internal documents, contracts, or client information.</p>
-              <div class="mt-3 bg-[#1A1C20] border-l-4 border-yellow-500 p-3 rounded-md text-sm">
+              <div class="mt-3 bg-[#1A1C20] border-l-4 border-blue-500 p-3 rounded-md text-sm">
                 ❌ <strong>Example:</strong> Copy-pasting a company proposal or customer database into ChatGPT.<br>
                 ✅ <strong>Better:</strong> Describe the structure or goal instead — “Write a proposal template for a digital marketing agency.”
               </div>
@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div>
               <h4 class="font-bold text-white mb-2">📚 3. Be Careful With Academic or Workplace Information</h4>
               <p class="text-sm text-gray-300">Never paste unpublished essays, exam questions, or company reports.</p>
-              <div class="mt-3 bg-[#1A1C20] border-l-4 border-orange-500 p-3 rounded-md text-sm">
+              <div class="mt-3 bg-[#1A1C20] border-l-4 border-blue-500 p-3 rounded-md text-sm">
                 ❌ <strong>Example:</strong> “Here’s my full assignment draft — can you rewrite it?”<br>
                 ✅ <strong>Better:</strong> “Can you help me improve the introduction of an essay about renewable energy?”
               </div>
@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div>
               <h4 class="font-bold text-white mb-2">🔍 4. Always Verify Information</h4>
               <p class="text-sm text-gray-300">AI can make confident mistakes (called “hallucinations”). Double-check all facts before using them in reports, articles, or research.</p>
-              <div class="mt-3 bg-[#1A1C20] border-l-4 border-purple-500 p-3 rounded-md text-sm">
+              <div class="mt-3 bg-[#1A1C20] border-l-4 border-blue-500 p-3 rounded-md text-sm">
                 ❌ <strong>Example:</strong> “According to ChatGPT, 80% of workers use AI daily.” (no source)<br>
                 ✅ <strong>Better:</strong> Verify using credible sources like official studies or news outlets.
               </div>
@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div>
               <h4 class="font-bold text-white mb-2">🤖 5. Watch for Bias or Harmful Outputs</h4>
               <p class="text-sm text-gray-300">AI tools can unintentionally generate offensive, biased, or inaccurate content.</p>
-              <div class="mt-3 bg-[#1A1C20] border-l-4 border-pink-500 p-3 rounded-md text-sm">
+              <div class="mt-3 bg-[#1A1C20] border-l-4 border-blue-500 p-3 rounded-md text-sm">
                 ❌ <strong>Example:</strong> “Describe the typical programmer” → returns a stereotypical or gendered answer.<br>
                 ✅ <strong>Better:</strong> Rephrase: “Describe key skills and traits of successful programmers.”
               </div>
@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <div>
               <h4 class="font-bold text-white mb-2">🛡️ 6. Use Only Reputable and Transparent Tools</h4>
               <p class="text-sm text-gray-300">Stick to well-known platforms that have clear privacy policies and contact details. Be cautious with unknown “free AI” tools.</p>
-              <div class="mt-3 bg-[#1A1C20] border-l-4 border-green-500 p-3 rounded-md text-sm">
+              <div class="mt-3 bg-[#1A1C20] border-l-4 border-blue-500 p-3 rounded-md text-sm">
                 ❌ <strong>Example:</strong> Downloading a random “AI Resume Generator” from a sketchy website.<br>
                 ✅ <strong>Better:</strong> Use verified tools from trusted developers or directories like AIviary.
               </div>
