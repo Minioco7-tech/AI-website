@@ -176,29 +176,87 @@ document.addEventListener('DOMContentLoaded', () => {
       {
         title: 'Using AI Safely and Ethically',
         content: `
-          <div>
-            <h4 class="font-bold text-white mb-2">1. Protect Your Personal and Client Data</h4>
-            <p class="text-sm">Avoid entering personal, financial, or confidential business data into AI tools. Treat AI chats like public forums unless the platform explicitly guarantees encryption and data privacy.</p>
-          </div>
-          <div>
-            <h4 class="font-bold text-white mb-2">2. Review Data and Privacy Policies</h4>
-            <p class="text-sm">Before signing up, check if the company stores, shares, or uses your prompts for training. Look for terms like <em>“data retention”</em> or <em>“model training”</em> in their policy pages.</p>
-          </div>
-          <div>
-            <h4 class="font-bold text-white mb-2">3. Verify and Cross-Check Facts</h4>
-            <p class="text-sm">AI-generated information can sound confident but still be incorrect. Always verify facts using reliable sources, especially for academic, medical, or financial content.</p>
-          </div>
-          <div>
-            <h4 class="font-bold text-white mb-2">4. Avoid Bias and Harmful Outputs</h4>
-            <p class="text-sm">AI models can reflect biases from their training data. Review results for stereotypes, misinformation, or exclusionary language before sharing or publishing.</p>
-          </div>
-          <div>
-            <h4 class="font-bold text-white mb-2">5. Be Transparent and Responsible</h4>
-            <p class="text-sm">If AI helped you write or design something, be open about it. This maintains trust with audiences, clients, and employers.</p>
-          </div>
-          <div>
-            <h4 class="font-bold text-white mb-2">6. Use Reputable Tools</h4>
-            <p class="text-sm">Stick to trusted platforms with a clear track record of safety and security. Avoid free tools from unknown developers without proper terms or contact info.</p>
+          <div class="space-y-6">
+      
+            <!-- Rule 1 -->
+            <div>
+              <h4 class="font-bold text-white mb-2">🛑 1. Never Share Personal Details</h4>
+              <p class="text-sm text-gray-300">Treat AI chats like public spaces — avoid entering private information such as:</p>
+              <ul class="list-disc list-inside text-sm text-gray-400 mt-2">
+                <li>📛 Full name or date of birth</li>
+                <li>🏠 Home or work address</li>
+                <li>💳 Bank details or passwords</li>
+                <li>📧 Personal emails or login info</li>
+              </ul>
+              <div class="mt-3 bg-[#1A1C20] border-l-4 border-red-500 p-3 rounded-md text-sm">
+                ❌ <strong>Example:</strong> “My name is Sarah Blake and I live at 24 Oak Street. Can you write a CV for me?”<br>
+                ✅ <strong>Better:</strong> “Write a CV for a recent graduate in marketing with experience in social media.”
+              </div>
+              <p class="mt-2 text-sm text-gray-400 italic">
+                <strong>Why:</strong> AI prompts are often stored or reviewed to improve systems — meaning your data could be visible to others.
+              </p>
+            </div>
+      
+            <!-- Rule 2 -->
+            <div>
+              <h4 class="font-bold text-white mb-2">⚠️ 2. Don’t Upload Confidential Work or Client Data</h4>
+              <p class="text-sm text-gray-300">Avoid uploading internal documents, contracts, or client information.</p>
+              <div class="mt-3 bg-[#1A1C20] border-l-4 border-yellow-500 p-3 rounded-md text-sm">
+                ❌ <strong>Example:</strong> Copy-pasting a company proposal or customer database into ChatGPT.<br>
+                ✅ <strong>Better:</strong> Describe the structure or goal instead — “Write a proposal template for a digital marketing agency.”
+              </div>
+              <p class="mt-2 text-sm text-gray-400 italic">
+                <strong>Why:</strong> Uploading real client or business data may break NDAs or privacy laws like GDPR.
+              </p>
+            </div>
+      
+            <!-- Rule 3 -->
+            <div>
+              <h4 class="font-bold text-white mb-2">📚 3. Be Careful With Academic or Workplace Information</h4>
+              <p class="text-sm text-gray-300">Never paste unpublished essays, exam questions, or company reports.</p>
+              <div class="mt-3 bg-[#1A1C20] border-l-4 border-orange-500 p-3 rounded-md text-sm">
+                ❌ <strong>Example:</strong> “Here’s my full assignment draft — can you rewrite it?”<br>
+                ✅ <strong>Better:</strong> “Can you help me improve the introduction of an essay about renewable energy?”
+              </div>
+              <p class="mt-2 text-sm text-gray-400 italic">
+                <strong>Why:</strong> Sharing proprietary or ungraded work can be flagged as plagiarism or breach confidentiality.
+              </p>
+            </div>
+      
+            <!-- Rule 4 -->
+            <div>
+              <h4 class="font-bold text-white mb-2">🔍 4. Always Verify Information</h4>
+              <p class="text-sm text-gray-300">AI can make confident mistakes (called “hallucinations”). Double-check all facts before using them in reports, articles, or research.</p>
+              <div class="mt-3 bg-[#1A1C20] border-l-4 border-purple-500 p-3 rounded-md text-sm">
+                ❌ <strong>Example:</strong> “According to ChatGPT, 80% of workers use AI daily.” (no source)<br>
+                ✅ <strong>Better:</strong> Verify using credible sources like official studies or news outlets.
+              </div>
+            </div>
+      
+            <!-- Rule 5 -->
+            <div>
+              <h4 class="font-bold text-white mb-2">🤖 5. Watch for Bias or Harmful Outputs</h4>
+              <p class="text-sm text-gray-300">AI tools can unintentionally generate offensive, biased, or inaccurate content.</p>
+              <div class="mt-3 bg-[#1A1C20] border-l-4 border-pink-500 p-3 rounded-md text-sm">
+                ❌ <strong>Example:</strong> “Describe the typical programmer” → returns a stereotypical or gendered answer.<br>
+                ✅ <strong>Better:</strong> Rephrase: “Describe key skills and traits of successful programmers.”
+              </div>
+            </div>
+      
+            <!-- Rule 6 -->
+            <div>
+              <h4 class="font-bold text-white mb-2">🛡️ 6. Use Only Reputable and Transparent Tools</h4>
+              <p class="text-sm text-gray-300">Stick to well-known platforms that have clear privacy policies and contact details. Be cautious with unknown “free AI” tools.</p>
+              <div class="mt-3 bg-[#1A1C20] border-l-4 border-green-500 p-3 rounded-md text-sm">
+                ❌ <strong>Example:</strong> Downloading a random “AI Resume Generator” from a sketchy website.<br>
+                ✅ <strong>Better:</strong> Use verified tools from trusted developers or directories like AIviary.
+              </div>
+            </div>
+      
+            <!-- Pro Tip -->
+            <div class="mt-6 bg-[#1A1C20] border-l-4 border-blue-500 p-3 rounded-md text-sm">
+              💡 <strong>Pro Tip:</strong> If you wouldn’t post it publicly on social media, don’t type it into an AI tool. Treat every prompt as potentially visible.
+            </div>
           </div>
         `
       }
