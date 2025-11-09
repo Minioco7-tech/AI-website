@@ -144,20 +144,32 @@ document.addEventListener('DOMContentLoaded', () => {
         title: 'Choosing the Right AI Tool for Your Task',
         content: `
           <div>
-            <h4 class="font-bold text-white mb-2">1. Start With Your Goal</h4>
-            <p class="text-sm">Decide what you want to achieve — writing, design, research, or coding — then pick tools built for that.</p>
+            <h4 class="font-bold text-white mb-2">1. Define Your Goal Clearly</h4>
+            <p class="text-sm">Start by asking: “What problem am I solving?” Tools built for writing, research, or data analysis all have different strengths.</p>
           </div>
           <div>
-            <h4 class="font-bold text-white mb-2">2. Test Before You Commit</h4>
-            <p class="text-sm">Most tools offer free plans — test their outputs before subscribing.</p>
+            <h4 class="font-bold text-white mb-2">2. Evaluate Features and Limitations</h4>
+            <p class="text-sm">Check whether the tool offers what you need — real-time collaboration, API access, export formats, or multilingual support.</p>
           </div>
           <div>
-            <h4 class="font-bold text-white mb-2">3. Check Integrations</h4>
-            <p class="text-sm">Choose tools that work with what you already use — Google Docs, Notion, Figma, or Slack.</p>
+            <h4 class="font-bold text-white mb-2">3. Test Before You Commit</h4>
+            <p class="text-sm">Try free or trial versions first. Evaluate ease of use, accuracy, and how well the outputs match your goals.</p>
           </div>
           <div>
-            <h4 class="font-bold text-white mb-2">4. Compare Cost vs. Time Saved</h4>
-            <p class="text-sm">If a tool saves you hours weekly, it likely pays for itself.</p>
+            <h4 class="font-bold text-white mb-2">4. Check for Integration and Compatibility</h4>
+            <p class="text-sm">Does it connect with your workflow — Google Docs, Figma, or Slack? Choosing tools that fit your ecosystem saves time.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-2">5. Consider Cost vs. Time Saved</h4>
+            <p class="text-sm">Calculate the time a tool saves you weekly. If it saves hours, it often justifies the subscription cost.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-2">6. Prioritize Trust and Transparency</h4>
+            <p class="text-sm">Pick companies that clearly explain how their AI works, how your data is used, and what safety measures they follow.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-2">7. Check Community Feedback</h4>
+            <p class="text-sm">Search for reviews, Reddit threads, or case studies to see how real users rate its reliability and support.</p>
           </div>
         `
       },
@@ -165,20 +177,28 @@ document.addEventListener('DOMContentLoaded', () => {
         title: 'Using AI Safely and Ethically',
         content: `
           <div>
-            <h4 class="font-bold text-white mb-2">1. Protect Your Data</h4>
-            <p class="text-sm">Never share private or sensitive data unless the tool clearly guarantees privacy.</p>
+            <h4 class="font-bold text-white mb-2">1. Protect Your Personal and Client Data</h4>
+            <p class="text-sm">Avoid entering personal, financial, or confidential business data into AI tools. Treat AI chats like public forums unless the platform explicitly guarantees encryption and data privacy.</p>
           </div>
           <div>
-            <h4 class="font-bold text-white mb-2">2. Check Data Policies</h4>
-            <p class="text-sm">Look for policies stating your data won’t be used to train models.</p>
+            <h4 class="font-bold text-white mb-2">2. Review Data and Privacy Policies</h4>
+            <p class="text-sm">Before signing up, check if the company stores, shares, or uses your prompts for training. Look for terms like <em>“data retention”</em> or <em>“model training”</em> in their policy pages.</p>
           </div>
           <div>
-            <h4 class="font-bold text-white mb-2">3. Verify Facts</h4>
-            <p class="text-sm">AI can hallucinate — always double-check its claims before publishing.</p>
+            <h4 class="font-bold text-white mb-2">3. Verify and Cross-Check Facts</h4>
+            <p class="text-sm">AI-generated information can sound confident but still be incorrect. Always verify facts using reliable sources, especially for academic, medical, or financial content.</p>
           </div>
           <div>
-            <h4 class="font-bold text-white mb-2">4. Be Transparent</h4>
-            <p class="text-sm">Credit AI contributions when appropriate to maintain trust.</p>
+            <h4 class="font-bold text-white mb-2">4. Avoid Bias and Harmful Outputs</h4>
+            <p class="text-sm">AI models can reflect biases from their training data. Review results for stereotypes, misinformation, or exclusionary language before sharing or publishing.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-2">5. Be Transparent and Responsible</h4>
+            <p class="text-sm">If AI helped you write or design something, be open about it. This maintains trust with audiences, clients, and employers.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-2">6. Use Reputable Tools</h4>
+            <p class="text-sm">Stick to trusted platforms with a clear track record of safety and security. Avoid free tools from unknown developers without proper terms or contact info.</p>
           </div>
         `
       }
