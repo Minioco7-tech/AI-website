@@ -389,7 +389,6 @@ export function renderSingleDropdown(containerId, { title = "", content = "" } =
             <i data-feather="chevron-down" class="w-6 h-6"></i>
           </span>
         </summary>
-
         <div class="border-t border-white/10">
           <div class="px-6 py-6 text-[#E0E0E0] space-y-8">
             ${content}
@@ -402,13 +401,10 @@ export function renderSingleDropdown(containerId, { title = "", content = "" } =
   if (typeof feather !== 'undefined') feather.replace();
 }
 
-// Render an array of dropdowns into one container, reusing renderSingleDropdown
-// items: Array<{ title: string, content: string(HTML) }>
 export function renderDropdowns(containerId, items = []) {
   const container = document.getElementById(containerId);
   if (!container) return;
 
-  // one pass DOM write for perf
   const frag = document.createDocumentFragment();
 
   items.forEach((item, idx) => {
@@ -417,7 +413,7 @@ export function renderDropdowns(containerId, items = []) {
     frag.appendChild(mount);
   });
 
-  container.innerHTML = ''; // clear once
+  container.innerHTML = '';
   container.appendChild(frag);
 
   items.forEach((item, idx) => {
