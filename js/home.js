@@ -189,3 +189,9 @@ function renderAIGuides() {
 
   renderDropdowns('aiGuidesContainer', guides);
 }
+  // -----------------------
+  // Initialize homepage
+  // -----------------------
+  renderCategories();
+  renderAIGuides();
+});
