@@ -115,20 +115,72 @@ document.addEventListener('DOMContentLoaded', () => {
       {
         title: 'How to Prompt AI Tools Correctly',
         content: `
-          <div><h4 class="font-bold mb-2">1. Be Specific and Clear</h4>
-          <p>Vague prompts lead to vague results.</p></div>`
+          <div>
+            <h4 class="font-bold text-white mb-2">1. Be Specific and Clear</h4>
+            <p class="text-sm">Vague prompts lead to vague results. Provide as much detail as possible. Instead of "Write about dogs," try:</p>
+            <p class="mt-2 text-sm italic bg-[#1A1C20] p-3 rounded-md">
+              <strong>Example:</strong> "Write a 500-word blog post about the benefits of adopting a senior dog, focusing on their calm demeanor and lower energy levels."
+            </p>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-2">2. Provide Context</h4>
+            <p class="text-sm">Give the AI background info: who it’s for, your goal, and the relationship.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-2">3. Define the Format</h4>
+            <p class="text-sm">Tell the AI exactly how you want the output — list, paragraph, table, or JSON.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-2">4. For Image Generation: Use Descriptive Adjectives</h4>
+            <p class="text-sm">Be vivid — include subject, style, lighting, and composition.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-2">5. Iterate and Refine</h4>
+            <p class="text-sm">Use feedback loops — ask the AI to adjust tone, format, or complexity.</p>
+          </div>
+        `
       },
       {
         title: 'Choosing the Right AI Tool for Your Task',
         content: `
-          <div><h4 class="font-bold mb-2">1. Start With Your Goal</h4>
-          <p>Choose tools based on task.</p></div>`
+          <div>
+            <h4 class="font-bold text-white mb-2">1. Start With Your Goal</h4>
+            <p class="text-sm">Decide what you want to achieve — writing, design, research, or coding — then pick tools built for that.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-2">2. Test Before You Commit</h4>
+            <p class="text-sm">Most tools offer free plans — test their outputs before subscribing.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-2">3. Check Integrations</h4>
+            <p class="text-sm">Choose tools that work with what you already use — Google Docs, Notion, Figma, or Slack.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-2">4. Compare Cost vs. Time Saved</h4>
+            <p class="text-sm">If a tool saves you hours weekly, it likely pays for itself.</p>
+          </div>
+        `
       },
       {
         title: 'Using AI Safely and Ethically',
         content: `
-          <div><h4 class="font-bold mb-2">1. Protect Your Data</h4>
-          <p>Never share private data unless safe.</p></div>`
+          <div>
+            <h4 class="font-bold text-white mb-2">1. Protect Your Data</h4>
+            <p class="text-sm">Never share private or sensitive data unless the tool clearly guarantees privacy.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-2">2. Check Data Policies</h4>
+            <p class="text-sm">Look for policies stating your data won’t be used to train models.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-2">3. Verify Facts</h4>
+            <p class="text-sm">AI can hallucinate — always double-check its claims before publishing.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-white mb-2">4. Be Transparent</h4>
+            <p class="text-sm">Credit AI contributions when appropriate to maintain trust.</p>
+          </div>
+        `
       }
     ];
     renderDropdowns('aiGuidesContainer', guides);
