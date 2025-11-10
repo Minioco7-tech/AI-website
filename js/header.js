@@ -137,10 +137,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-import { attachSearchHandler } from './utils.js';
-
-attachSearchHandler("searchForm", "searchInput", "category.html");
-
 document.addEventListener('click', (e) => {
   if (e.target.closest('a[href="index.html"]')) {
     sessionStorage.removeItem('breadcrumbSource');
