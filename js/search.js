@@ -140,38 +140,6 @@ function renderCategoryFilters(models) {
   });
 }
 
-// =============================
-// ✅ FILTER LOGIC
-// =============================
-function renderCategoryFilters(models) {
-  filterCategoriesContainer.innerHTML = '';
-  const uniqueCategories = getUniqueCategories(models);
-
-  uniqueCategories.forEach(cat => {
-    const label = document.createElement('label');
-    label.className = 'inline-flex items-center gap-2 text-sm text-white';
-
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    checkbox.value = cat;
-    checkbox.className = 'accent-blue-400';
-
-    checkbox.addEventListener('change', () => {
-      if (checkbox.checked) {
-        selectedCategories.add(cat);
-      } else {
-        selectedCategories.delete(cat);
-      }
-      updateFilteredModels();
-    });
-
-    label.appendChild(checkbox);
-    label.append(` ${getCategoryName(cat)}`);
-    filterCategoriesContainer.appendChild(label);
-  });
-}
-
-
 // ============================================================
 // ✅ Fetch models.json, run fuzzy search, and display results
 // ============================================================
