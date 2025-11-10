@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <!-- Tip 1 -->
             <div>
               <h4 class="font-bold text-white mb-2">🎯 1. Be Specific and Clear</h4>
-              <p class="text-sm text-gray-300">AI tools perform best when you give them context and direction. Vague prompts lead to vague results — always include purpose, tone, and details.</p>
+              <p class="text-sm text-gray-300">AI tools perform best when you give them context and direction. Vague prompts lead to vague results. ALWAYS include purpose, tone and details.</p>
               <div class="mt-3 bg-[#1A1C20] border-l-4 border-yellow-500 p-3 rounded-md text-sm">
                 ❌ <strong>Weak:</strong> “Write about dogs.”<br>
                 ✅ <strong>Better:</strong> “Write a 500-word blog post about the benefits of adopting senior dogs, focusing on their calm temperament and loyalty.”
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <!-- Tip 2 -->
             <div>
               <h4 class="font-bold text-white mb-2">🧠 2. Provide Context and Perspective</h4>
-              <p class="text-sm text-gray-300">Explain who you are, what you need, and who the content is for. Context changes how AI frames its tone and depth.</p>
+              <p class="text-sm text-gray-300">Explain who you are, what you need and who the content is for. Context changes how AI frames its tone and depth.</p>
               <div class="mt-3 bg-[#1A1C20] border-l-4 border-orange-500 p-3 rounded-md text-sm">
                 ❌ <strong>Generic:</strong> “Write an email about a meeting.”<br>
                 ✅ <strong>Better:</strong> “Write a short, friendly follow-up email from a team lead reminding their design team about tomorrow’s sprint review.”
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <!-- Tip 3 -->
             <div>
               <h4 class="font-bold text-white mb-2">🧾 3. Define the Format and Style You Want</h4>
-              <p class="text-sm text-gray-300">Tell the AI exactly how to present the result — such as in a list, table, summary, or email format.</p>
+              <p class="text-sm text-gray-300">Tell the AI exactly how to present the result, the more specific the better! This could be a list, table, summary or email format.</p>
               <div class="mt-3 bg-[#1A1C20] border-l-4 border-green-500 p-3 rounded-md text-sm">
                 ❌ <strong>Unclear:</strong> “Give me ideas for marketing.”<br>
                 ✅ <strong>Better:</strong> “List five creative social media campaign ideas in bullet points, each with a short description and target audience.”
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <!-- Tip 4 -->
             <div>
               <h4 class="font-bold text-white mb-2">🎨 4. Use Descriptive Language for Images and Creative Work</h4>
-              <p class="text-sm text-gray-300">When generating visuals or creative text, include sensory and stylistic details: mood, color, lighting, and perspective.</p>
+              <p class="text-sm text-gray-300">When generating visuals or creative text, include sensory and stylistic details: mood, color, lighting and perspective.</p>
               <div class="mt-3 bg-[#1A1C20] border-l-4 border-pink-500 p-3 rounded-md text-sm">
                 ❌ <strong>Weak:</strong> “Generate a picture of a cat.”<br>
                 ✅ <strong>Better:</strong> “A cozy watercolor of a ginger cat sleeping by a window with morning light streaming in.”
@@ -181,6 +181,11 @@ document.addEventListener('DOMContentLoaded', () => {
               </p>
             </div>
           </div>
+
+          <!-- Pro Tip -->
+          <div class="mt-6 bg-[#1A1C20] border-l-4 border-blue-500 p-3 rounded-md text-sm">
+            💡 <strong>Pro Tip:</strong> BE SPECIFIC!!! The more detailed the input, the more detailed the output.
+          </div>
         `
       },
       {
@@ -191,23 +196,23 @@ document.addEventListener('DOMContentLoaded', () => {
             <!-- Tip 1 -->
             <div>
               <h4 class="font-bold text-white mb-2">🎯 1. Start With Your Goal</h4>
-              <p class="text-sm text-gray-300">Begin by defining what you need: writing, image generation, coding help, research, or organization. Your goal determines which category of tool fits best.</p>
+              <p class="text-sm text-gray-300">Begin by defining what you need: writing, image generation, coding help, research or organization. Your goal determines which category of tool fits best.</p>
               <div class="mt-3 bg-[#1A1C20] border-l-4 border-yellow-500 p-3 rounded-md text-sm">
                 ❌ <strong>Unclear:</strong> “I want to try AI.”<br>
                 ✅ <strong>Better:</strong> “I want to use AI to summarize research papers and help outline reports.”
               </div>
               <p class="mt-2 text-sm text-gray-400 italic">
-                <strong>Why:</strong> Specific goals narrow your search and help you find tools designed for that function — saving time and frustration.
+                <strong>Why:</strong> Specific goals narrow your search and help you find tools designed for that function. Saving time and frustration.
               </p>
             </div>
       
             <!-- Tip 2 -->
             <div>
               <h4 class="font-bold text-white mb-2">🧩 2. Evaluate Features and Integrations</h4>
-              <p class="text-sm text-gray-300">Check what the tool actually offers — does it support collaboration, API use, data exports, or browser extensions?</p>
+              <p class="text-sm text-gray-300">Check what the tool actually offers... does it support collaboration, API use, data exports or browser extensions?</p>
               <div class="mt-3 bg-[#1A1C20] border-l-4 border-orange-500 p-3 rounded-md text-sm">
                 ❌ <strong>Limited:</strong> A note app that can’t export data or integrate with your workflow.<br>
-                ✅ <strong>Better:</strong> A writing AI that syncs with Google Docs, Notion, or your browser for smoother use.
+                ✅ <strong>Better:</strong> A writing AI that syncs with Google Docs, Notion or your browser for smoother use.
               </div>
               <p class="mt-2 text-sm text-gray-400 italic">
                 <strong>Why:</strong> Choosing tools that fit your existing workflow saves setup time and keeps you productive.
@@ -217,12 +222,12 @@ document.addEventListener('DOMContentLoaded', () => {
             <!-- Tip 3 -->
             <div>
               <h4 class="font-bold text-white mb-2">⚖️ 3. Compare Cost vs. Value</h4>
-              <p class="text-sm text-gray-300">Look beyond monthly prices — consider how much time or effort the tool actually saves you.</p>
+              <p class="text-sm text-gray-300">Look beyond monthly prices. Consider how much time or effort the tool actually saves you.</p>
               <div class="mt-3 bg-[#1A1C20] border-l-4 border-green-500 p-3 rounded-md text-sm">
                 💡 <strong>Example:</strong> A $15/month AI that saves you 3 hours a week is often more valuable than a free one that wastes your time.
               </div>
               <p class="mt-2 text-sm text-gray-400 italic">
-                <strong>Why:</strong> AI tools are productivity multipliers — not all free ones are truly “cheap,” and not all paid ones are worth it.
+                <strong>Why:</strong> AI tools are productivity multipliers. Not all free ones are truly “cheap,” and not all paid ones are worth it.
               </p>
             </div>
       
@@ -232,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <p class="text-sm text-gray-300">Before signing up, read privacy policies and community feedback. Check how the company handles your data and what users say about reliability.</p>
               <div class="mt-3 bg-[#1A1C20] border-l-4 border-purple-500 p-3 rounded-md text-sm">
                 ❌ <strong>Risky:</strong> A “free AI” site with no company info or privacy policy.<br>
-                ✅ <strong>Better:</strong> Established tools like Notion AI, Claude, or Canva that clearly outline how they use your data.
+                ✅ <strong>Better:</strong> Look for tools that clearly outline how they use your data and safetry precautions they take.
               </div>
               <p class="mt-2 text-sm text-gray-400 italic">
                 <strong>Why:</strong> Transparency and user trust are key signs of a reputable AI product.
@@ -244,7 +249,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <h4 class="font-bold text-white mb-2">⚙️ 5. Test Before You Commit</h4>
               <p class="text-sm text-gray-300">Use free tiers or trials to test the AI’s accuracy and ease of use before subscribing.</p>
               <div class="mt-3 bg-[#1A1C20] border-l-4 border-blue-500 p-3 rounded-md text-sm">
-                💬 <strong>Tip:</strong> Run a small project first — like summarizing one article or generating one logo — to see how it performs under real use.
+                💬 <strong>Tip:</strong> Run a small project first, like summarizing one article or generating one logo, to see how it performs under real use.
               </div>
             </div>
           </div>
@@ -270,7 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 ✅ <strong>Safe:</strong> “Help me write a polite rental application for a young professional moving to London.”
               </div>
               <p class="mt-2 text-sm text-gray-400 italic">
-                <strong>Why:</strong> AI systems may log your prompts to improve performance. Once shared, your personal information can’t easily be deleted or controlled — even by you.
+                <strong>Why:</strong> AI systems may log your prompts to improve performance. Once shared, your personal information can’t easily be deleted or controlled. Even by you.
               </p>
             </div>
       
@@ -289,16 +294,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 ✅ <strong>Safe:</strong> “What’s the best structure for presenting client data in a pricing proposal?”
               </div>
               <p class="mt-2 text-sm text-gray-400 italic">
-                <strong>Why:</strong> Even reputable AI tools may temporarily store uploaded content. If it includes private data, that could violate contracts, NDAs, or data protection laws like GDPR.
+                <strong>Why:</strong> Even reputable AI tools may temporarily store uploaded content. If it includes private data, that could violate contracts, NDAs or data protection laws like GDPR.
               </p>
             </div>
       
             <!-- Tip 3 -->
             <div>
               <h4 class="font-bold text-white mb-2">💼 3. Be Careful With Academic or Workplace Material</h4>
-              <p class="text-sm text-gray-300">Don’t paste unpublished essays, assessments, or official work documents directly into AI tools. Instead, summarize your request.</p>
+              <p class="text-sm text-gray-300">Don’t paste unpublished essays, assessments or official work documents directly into AI tools. Instead, summarize your request.</p>
               <div class="mt-3 bg-[#1A1C20] border-l-4 border-orange-500 p-3 rounded-md text-sm">
-                ❌ <strong>Unsafe:</strong> “This is my entire essay draft — can you rewrite it for me?”<br>
+                ❌ <strong>Unsafe:</strong> “This is my entire essay draft. Can you rewrite it for me?”<br>
                 ✅ <strong>Safe:</strong> “Can you suggest improvements for an introduction about the effects of renewable energy on global markets?”
               </div>
               <p class="mt-2 text-sm text-gray-400 italic">
@@ -316,8 +321,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 <li>📰 Quotes, legal facts, and news claims</li>
               </ul>
               <div class="mt-3 bg-[#1A1C20] border-l-4 border-purple-500 p-3 rounded-md text-sm">
-                ❌ <strong>Unsafe:</strong> “According to ChatGPT, remote work began in 2012.” (Incorrect — remote work has existed for decades.)<br>
-                ✅ <strong>Safe:</strong> “ChatGPT mentioned remote work trends — let’s confirm with official sources like Statista or the OECD.”
+                ❌ <strong>Unsafe:</strong> “According to "model", remote work began in 2012.” (Incorrect — remote work has existed for decades.)<br>
+                ✅ <strong>Safe:</strong> “Run a quick "Fact check" on information produced by models or ask for its sources and verify”
               </div>
               <p class="mt-2 text-sm text-gray-400 italic">
                 <strong>Why:</strong> AI models don’t “know” facts — they predict text patterns. Verifying their output prevents misinformation and protects your credibility.
