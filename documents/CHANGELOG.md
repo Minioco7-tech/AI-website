@@ -11,7 +11,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) conv
 
 ### Added
 - Complete responsive front-end layout using HTML, Tailwind CSS (CDN), and custom CSS.
-- `index.html`: Category grid with icons and lazy-loaded images.
+- `index.html`: Category grid with icons, lazy-loaded images. How to drop-down section.
 - `category.html`: Category-specific tool display with pagination and sorting.
 - `search.html`: Semantic + fuzzy search with relevance scoring.
 - `model.html`: Model detail page with related model carousel.
