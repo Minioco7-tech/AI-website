@@ -27,6 +27,7 @@ All site data (model names, images, descriptions, and categories) is sourced fro
 - Clicking a tile redirects to the `category.html` page filtered by that category.
 - Contains a search bar that accepts natural queries (e.g. *“tools for editing text”*).
 - “All Models” button redirects to the full category list.
+- "How To drop-down information sections"
 - Script: [`js/home.js`](../js/home.js)
 
 ---
