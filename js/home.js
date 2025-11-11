@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!query) return;
 
     // Redirect to category or search page (your logic)
-    window.location.href = `category.html?search=${encodeURIComponent(query)}`;
+    window.location.href = `search.html?search=${encodeURIComponent(query)}`;
   });
 
 
