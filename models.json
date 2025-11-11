@@ -619,5 +619,176 @@
       "description": "HireFlow streamlines recruitment by automating candidate sourcing, outreach and evaluation. Helping companies and applicants connect faster.",
       "image": "assets/images/placeholder.png",
       "link": "https://www.hireflow.net/"
+    },
+    {
+      "id": 70,
+      "name": "eve",
+      "category": ["office", "assistants", "documents"],
+      "type": "N/A",
+      "description": "Designed for plaintiff-law firms. A legal-AI platform you can train and teach to assist with case intake, litigation workflows and document drafting throughout an entire case lifecycle.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.eve.legal"
+    },
+    {
+      "id": 71,
+      "name": "Spellbook",
+      "category": ["office", "assistants", "documents"],
+      "type": "N/A",
+      "description": "Spellbook is an AI tool specialised for contract review and drafting, built on top of legal-language models. It helps transactional lawyers quickly analyse, draft and benchmark contract language worldwide.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.spellbook.legal"
+    },
+    {
+      "id": 72,
+      "name": "PQAI",
+      "category": ["research", "data", "documents"],
+      "type": "N/A",
+      "description": "PQAI is an open-source AI prior-art search tool for inventors and researchers. It accepts plain-language invention descriptions and finds relevant patents and literature to improve patent quality.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://projectpq.ai"
+    },
+    {
+      "id": 73,
+      "name": "Granola",
+      "category": ["office", "assistants", "documents"],
+      "type": "N/A",
+      "description": "Granola is an AI-powered meeting notepad that transcribes, summarises and extracts actionable insights from back-to-back meetings. It integrates into work processes and aids follow-ups.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.granola.ai"
+    },
+    {
+      "id": 74,
+      "name": "n8n",
+      "category": ["development", "office", "assistants"],
+      "type": "N/A",
+      "description": "n8n is a visual automation/workflow platform that allows you to build AI agents and integrate them with 400+ apps to perform automated tasks. NO code required!",
+      "image": "assets/images/placeholder.png",
+      "link": "https://n8n.io/ai-agents"
+    },
+    {
+      "id": 75,
+      "name": "Make",
+      "category": ["office", "development", "assistants"],
+      "type": "N/A",
+      "description": "Make (previously Integromat) is a no-code automation platform. Enabling users to build, orchestrate and scale AI-powered workflows and agents across business functions.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.make.com/en"
+    },
+    {
+      "id": 76,
+      "name": "Zapier",
+      "category": ["office", "assistants", "development"],
+      "type": "N/A",
+      "description": "Zapier is a widely-used automation platform that heavily integrates AI to connect apps, build agent and automate tasks across thousands of services with minimal code.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://zapier.com"
+    },
+    {
+      "id": 77,
+      "name": "Boomi",
+      "category": ["office", "development", "data"],
+      "type": "N/A",
+      "description": "Boomi is an enterprise integration and automation platform offering AI-agents and workflows to streamline API/data management, process automation, and integration across systems.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://boomi.com"
+    },
+    {
+      "id": 78,
+      "name": "Lovable",
+      "category": ["development", "design"],
+      "type": "N/A",
+      "description": "Lovable is an AI platform that lets users build web apps and websites via natural-language prompts. Simplifying front-end & full-stack development for non-technical users.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://lovable.dev"
+    },
+    {
+      "id": 79,
+      "name": "ATLAS",
+      "category": ["design", "office", "documents"],
+      "type": "N/A",
+      "description": "ATLAS is an AI store-builder tool that custom-generates Shopify and e-commerce stores. Design, copy, create product photos and themes via AI from product links.",
+      "image": "assets/images/placeholder.png"
+      "link": "https://www.helloatlas.io"
+    },
+    {
+      "id": 80,
+      "name": "Base 44",
+      "category": ["development", "office"],
+      "type": "N/A",
+      "description": "Base44 is a platform that converts natural-language prompts into fully functional apps. No code needed! Ideal for creating dashboards, onboarding portals or internal tools rapidly.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://base44.com"
+    },
+    {
+      "id": 81,
+      "name": "HeyGen",
+      "category": ["design", "audio"],
+      "type": "N/A",
+      "description": "HeyGen is a generative video/AI avatar platform. Allowing users to create AI-driven video avatars and narration from text, enabling quick production of human-like video content without filming.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.heygen.com"
+    },
+    {
+      "id": 82,
+      "name": "Artlist",
+      "category": ["design","audio"],
+      "type": "N/A",
+      "description": "Artlist.io is an AI-enhanced media platform offering royalty-free music, sound effects and AI tools for content creators to generate media assets.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://artlist.io"
+    },
+    {
+      "id": 83,
+      "name": "Precision",
+      "category": ["data", "finance"],
+      "type": "N/A",
+      "description": "Precision offers AI-driven financial modelling and analytics. Helping businesses and teams visualise data to forecast KPI's, simulate scenarios and make data-driven investment decisions.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.precision.co"
+    },
+    {
+      "id": 84,
+      "name": "Fyxer",
+      "category": ["office", "assistant", "documents"],
+      "type": "N/A",
+      "description": "Fyxer is an AI-enabled tool that connects to your inbox, drafts replies in your voice, takes meeting notes and automates follow-ups from your calendar and email.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.fyxer.com/"
+    },
+    {
+      "id": 85,
+      "name": "Similar Web",
+      "category": ["data", "documents"],
+      "type": "N/A",
+      "description": "SimilarWeb is a web analytics platform using AI to provide competitive insights, web traffic data and market intelligence for creators and businesses. Allowing you to comoare your websites performance to direct competitors'",
+      "image": "assets/images/placeholder.png",
+      "link": "https://lp.similarweb.com"
+    },
+    {
+      "id": 86,
+      "name": "PopAI",
+      "category": ["documents", "design", "audio"],
+      "type": "N/A",
+      "description": "PopAI provides creators with generative AI workflows to produce content (blogs, social posts, videos etc.) at scale. Enabling faster ideation and production cycles.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.popai.pro"
+    },
+    {
+      "id": 87,
+      "name": "Buddy Pro",
+      "category": ["assistants", "office", "documents"],
+      "type": "N/A",
+      "description": "BuddyPro AI acts as a personal AI assistant for professionals. Automating tasks like note-taking, follow-ups, content drafting and meeting summarisation to free up time.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://buddypro.ai/"
+    },
+    {
+      "id": 88,
+      "name": "VAPI",
+      "category": ["audio", "development", "assistants"],
+      "type": "N/A",
+      "description": "VAPI is a voice-agent platform that enables developers to build and deploy conversational voice agents at scale with low latency and enterprise reliability.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://vapi.ai/"
     }
 ]
