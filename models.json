@@ -707,7 +707,7 @@
       "category": ["design", "office", "documents"],
       "type": "N/A",
       "description": "ATLAS is an AI store-builder tool that custom-generates Shopify and e-commerce stores. Design, copy, create product photos and themes via AI from product links.",
-      "image": "assets/images/placeholder.png"
+      "image": "assets/images/placeholder.png",
       "link": "https://www.helloatlas.io"
     },
     {
@@ -749,7 +749,7 @@
     {
       "id": 84,
       "name": "Fyxer",
-      "category": ["office", "assistant", "documents"],
+      "category": ["office", "assistants", "documents"],
       "type": "N/A",
       "description": "Fyxer is an AI-enabled tool that connects to your inbox, drafts replies in your voice, takes meeting notes and automates follow-ups from your calendar and email.",
       "image": "assets/images/placeholder.png",
