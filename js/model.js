@@ -112,20 +112,26 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     <div class="w-full space-y-10">
   
-      <!-- ============================= -->
-      <!-- TOP HERO ROW (1/3 + 2/3 width) -->
-      <!-- ============================= -->
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+      <!-- ==================================== -->
+      <!-- TOP HERO ROW (equal height, 1/3 + 2/3) -->
+      <!-- ==================================== -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-stretch">
   
-        <!-- LEFT CONTAINER = 1/3 WIDTH -->
-        <div class="lg:col-span-1 rounded-3xl border border-white/20 p-6 bg-white/5 backdrop-blur-sm">
+        <!-- LEFT = 1/3 width -->
+        <div class="lg:col-span-1 rounded-3xl border border-white/20 p-6 bg-transparent h-full">
           <h1 class="text-4xl font-bold text-white mb-2">${model.name}</h1>
-          ${model.subtitle ? `<p class="text-gray-300 text-lg mb-4">${model.subtitle}</p>` : ""}
-          <div class="flex flex-wrap gap-2 mb-6">${categoryPills}</div>
+  
+          ${model.subtitle ? `
+            <p class="text-gray-300 text-lg mb-4">${model.subtitle}</p>
+          ` : ""}
+  
+          <div class="flex flex-wrap gap-2 mb-6">
+            ${categoryPills}
+          </div>
         </div>
   
-        <!-- RIGHT CONTAINER = 2/3 WIDTH -->
-        <div class="lg:col-span-2 rounded-3xl overflow-hidden">
+        <!-- RIGHT = 2/3 width (image fills entire container height) -->
+        <div class="lg:col-span-2 rounded-3xl border border-white/20 overflow-hidden bg-transparent h-full">
           <img src="${model.image}"
                alt="${model.name}"
                class="w-full h-full object-cover">
@@ -135,30 +141,36 @@ document.addEventListener('DOMContentLoaded', async () => {
   
   
   
-      <!-- ===================================== -->
-      <!-- MIDDLE ROW (4/5 + 1/5 WIDTH) -->
-      <!-- ===================================== -->
-      <div class="grid grid-cols-1 lg:grid-cols-5 gap-10">
+      <!-- ============================================= -->
+      <!-- MIDDLE ROW (equal height, 4/5 + 1/5 widths) -->
+      <!-- ============================================= -->
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 items-stretch">
   
-        <!-- LEFT CONTAINER = 4/5 WIDTH -->
-        <div class="lg:col-span-4 rounded-3xl border border-white/20 p-6 bg-white/5 backdrop-blur-sm">
+        <!-- LEFT = 4/5 width -->
+        <div class="lg:col-span-4 rounded-3xl border border-white/20 p-6 bg-transparent h-full">
           <h3 class="text-2xl font-semibold mb-3">Description</h3>
-          <p class="text-gray-300 leading-relaxed whitespace-pre-line">${model.description}</p>
+          <p class="text-gray-300 leading-relaxed whitespace-pre-line">
+            ${model.description}
+          </p>
         </div>
   
-        <!-- RIGHT CONTAINER = 1/5 WIDTH -->
-        <div class="lg:col-span-1 rounded-3xl border border-white/20 p-6 bg-white/5 backdrop-blur-sm">
+        <!-- RIGHT = 1/5 width -->
+        <div class="lg:col-span-1 rounded-3xl border border-white/20 p-6 bg-transparent h-full">
+  
           ${model.features?.length ? `
             <h3 class="text-xl font-semibold mb-3">Features</h3>
             <ul class="list-disc list-inside text-gray-300 space-y-1 mb-6">
               ${model.features.map(f => `<li>${f}</li>`).join("")}
-            </ul>` : ""}
+            </ul>
+          ` : ""}
   
           ${model.use_cases?.length ? `
             <h3 class="text-xl font-semibold mb-3">Use Cases</h3>
             <ul class="list-disc list-inside text-gray-300 space-y-1">
               ${model.use_cases.map(u => `<li>${u}</li>`).join("")}
-            </ul>` : ""}
+            </ul>
+          ` : ""}
+  
         </div>
   
       </div>
@@ -168,11 +180,12 @@ document.addEventListener('DOMContentLoaded', async () => {
       <!-- ============================ -->
       <!-- BOTTOM FULL-WIDTH CONTAINER -->
       <!-- ============================ -->
-      <div class="rounded-3xl border border-white/20 p-6 bg-white/5 backdrop-blur-sm">
+      <div class="rounded-3xl border border-white/20 p-6 bg-transparent">
   
         ${model.pricing ? `
           <h3 class="text-2xl font-semibold mb-3">Pricing</h3>
-          <p class="text-gray-300 mb-6">${model.pricing}</p>` : ""}
+          <p class="text-gray-300 mb-6">${model.pricing}</p>
+        ` : ""}
   
         <h3 class="text-2xl font-semibold mb-3">Model Information</h3>
   
@@ -187,6 +200,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     </div>
   
   `;
+  
   // ------------------------------
   // ✅ Related Models Carousel
   // Show other models that share ANY category
