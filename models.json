@@ -790,5 +790,464 @@
       "description": "VAPI is a voice-agent platform that enables developers to build and deploy conversational voice agents at scale with low latency and enterprise reliability.",
       "image": "assets/images/placeholder.png",
       "link": "https://vapi.ai/"
+    },
+    {
+      "id": 89,
+      "name": "Codiga",
+      "category": ["development", "data"],
+      "type": "N/A",
+      "description": "Codiga checks your code for mistakes and helps improve quality as you write. It gives suggestions inside your editor so you can write cleaner, safer code.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.codiga.io/"
+    },
+    {
+      "id": 90,
+      "name": "DeepSeek",
+      "category": ["assistants", "research", "data"],
+      "type": "N/A",
+      "description": "DeepSeek is an AI assistant built to handle long, detailed questions. It can read files, explain topics and help with research while being fast and affordable to use.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.deepseek.com"
+    },
+    {
+      "id": 91,
+      "name": "Gemini",
+      "category": ["assistants", "documents", "design"],
+      "type": "N/A",
+      "description": "Gemini is Google’s AI that can understand text, images and even audio together. It helps people write, learn, brainstorm ideas and work with creative or visual tasks.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://gemini.google.com/"
+    },
+    {
+      "id": 92,
+      "name": "Grok",
+      "category": ["assistants", "documents", "development"],
+      "type": "N/A",
+      "description": "Grok is an AI assistant designed to give quick, real-time answers using information from the web. It’s helpful for staying updated, writing content and even doing light coding tasks.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://x.ai/grok"
+    },
+    {
+      "id": 93,
+      "name": "Meta",
+      "category": ["assistants", "documents"],
+      "type": "N/A",
+      "description": "Meta AI is a friendly chat assistant built into Meta’s apps. It helps users write posts, answer questions, summarise information, and come up with creative ideas.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.meta.ai/"
+    },
+    {
+      "id": 94,
+      "name": "Perplexity",
+      "category": ["assistants", "research", "documents"],
+      "type": "N/A",
+      "description": "Perplexity is an AI search tool that gives clear answers backed by sources. It’s great for researching topics, learning something new, or getting reliable summaries quickly",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.perplexity.ai/"
+    },
+    {
+      "id": 95,
+      "name": "Beautiful.AI",
+      "category": ["design", "office", "documents"],
+      "type": "N/A",
+      "description": "Beautiful.AI creates clean, well-designed presentation slides automatically. You type the content, it formats everything professionally with smart layouts.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.beautiful.ai/"
+    },
+    {
+      "id": 96,
+      "name": "Pitch",
+      "category": ["design", "office", "documents"],
+      "type": "N/A",
+      "description": "Pitch is a modern presentation tool for teams. It makes it easy to create slides, share ideas, add visuals and work together in real time.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://pitch.com/"
+    },
+    {
+      "id": 97,
+      "name": "Plus",
+      "category": ["design", "office", "documents"],
+      "type": "N/A",
+      "description": "Plus AI helps you create full PowerPoint or Google Slides presentations using simple prompts. It designs layouts, adds visuals and builds complete decks automatically.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://plusai.com/"
+    },
+    {
+      "id": 98,
+      "name": "SlidesGo",
+      "category": ["design", "office"],
+      "type": "N/A",
+      "description": "SlidesGo offers a large collection of ready-made slide templates for school, work or creative projects. It makes presentation design fast and easy for beginners.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://slidesgo.com/"
+    },
+    {
+      "id": 99,
+      "name": "AskCodi",
+      "category": ["development", "documents"],
+      "type": "N/A",
+      "description": "AskCodi helps developers by turning everyday questions into code snippets or useful explanations. It’s helpful for beginners learning to code or developers working faster.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.askcodi.com/"
+    },
+    {
+      "id": 100,
+      "name": "Cursor",
+      "category": [""],
+      "type": "N/A",
+      "description": "Cursor is a code editor enhanced with built-in AI assistance. It helps developers write, fix, and understand code directly inside the editor, making programming faster and easier for beginners and professionals.",
+      "image": "assets/images/placeholder.png",
+      "link": "https://cursor.com/"
+    },
+    {
+      "id": 101,
+      "name": "Replit",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://replit.com/"
+    },
+    {
+      "id": 102,
+      "name": "Qodo",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://app.qodo.ai/"
+    },
+    {
+      "id": 103,
+      "name": "Tabnine",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.tabnine.com/"
+    },
+    {
+      "id": 104,
+      "name": "Clippit",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://clippit.ai/"
+    },
+    {
+      "id": 105,
+      "name": "Friday",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.friday.so/"
+    },
+    {
+      "id": 106,
+      "name": "Mailmaestro",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.maestrolabs.com/"
+    },
+    {
+      "id": 107,
+      "name": "Shortwave",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.shortwave.com/"
+    },
+    {
+      "id": 108,
+      "name": "Superhuman",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://superhuman.com/"
+    },
+    {
+      "id": 109,
+      "name": "Adobe Firefly",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://firefly.adobe.com/"
+    },
+    {
+      "id": 110,
+      "name": "FLUX.1",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://flux-ai.io/"
+    },
+    {
+      "id": ,
+      "name": "",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": ""
+    },
+    {
+      "id": 111,
+      "name": "Ideogram",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://ideogram.ai/"
+    },
+    {
+      "id": 112,
+      "name": "Recraft",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.recraft.ai/"
+    },
+    {
+      "id": 113,
+      "name": "Openart",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://openart.ai"
+    },
+    {
+      "id": 114,
+      "name": "Bricks",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.thebricks.com"
+    },
+    {
+      "id":115 ,
+      "name": "Gigasheet",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.gigasheet.com/"
+    },
+    {
+      "id": 116,
+      "name": "RowsAI",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://rows.com/ai"
+    },
+    {
+      "id": 117,
+      "name": "SheetAI",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.sheetai.app/"
+    },
+    {
+      "id": 118,
+      "name": "Avoma",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.avoma.com/"
+    },
+    {
+      "id": 119,
+      "name": "Equal Time",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://equaltime.io/"
+    },
+    {
+      "id": 120,
+      "name": "Fathom",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.fathom.ai/"
+    },
+    {
+      "id": 121,
+      "name": "Fellow",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://fellow.ai/"
+    },
+    {
+      "id": 122,
+      "name": "Fireflies",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://fireflies.ai/"
+    },
+    {
+      "id": 123,
+      "name": "Krisp",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://krisp.ai/"
+    },
+    {
+      "id": 124,
+      "name": "Otter",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://otter.ai/"
+    },
+    {
+      "id": 125,
+      "name": "Integrately",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://integrately.com/"
+    },
+    {
+      "id": 126,
+      "name": "Squirro",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://squirro.com/"
+    },
+    {
+      "id": 127,
+      "name": "HPE",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.hpe.com/"
+    },
+    {
+      "id": 128,
+      "name": "Exalate",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://exalate.com/"
+    },
+    {
+      "id": 129,
+      "name": "Suse",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.suse.com/"
+    },
+    {
+      "id": 130,
+      "name": "Teachmate AI",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://teachmateai.com/"
+    },
+    {
+      "id":131 ,
+      "name": "AmpCode",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://ampcode.com/"
+    },
+    {
+      "id": 132,
+      "name": "Monday",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://monday.com/"
+    },
+    {
+      "id": 133,
+      "name": "Wrike",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.wrike.com/"
+    },
+    {
+      "id": 134,
+      "name": "Jotform",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.jotform.com/"
+    },
+    {
+      "id": 135,
+      "name": "JustDone",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://justdone.com/"
+    },
+    {
+      "id":136 ,
+      "name": "JasperAI",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://www.jasper.ai/"
+    },
+    {
+      "id": 137,
+      "name": "MailChimp",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://mailchimp.com/"
+    },
+    {
+      "id": 138,
+      "name": "JotBot",
+      "category": [""],
+      "type": "N/A",
+      "description": "",
+      "image": "assets/images/placeholder.png",
+      "link": "https://app.myjotbot.com/"
     }
 ]
