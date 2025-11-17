@@ -12,6 +12,14 @@ import {
 
 import { createModelCard } from './modelCard.js';
 import { renderBreadcrumb } from './breadcrumb.js';
+import {
+  section,
+  renderFeatureList,
+  renderUseCases,
+  renderPricing,
+  renderProsCons,
+  renderScreenshots
+} from './modelSections.js';
 
 let relatedModels = [];
 let currentIndex = 0;
@@ -87,7 +95,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 
   // ------------------------------
-  // ✅ Build Category Badges
+  // ✅ Build Category Pills
   // ------------------------------
   const categoryPills = modelCategories.map(cat => {
     const colorClass = categoryColors[cat] || 'bg-black/20';
@@ -102,17 +110,41 @@ document.addEventListener('DOMContentLoaded', async () => {
   // ------------------------------
   modelDetailsEl.innerHTML = `
     <div class="max-w-3xl mx-auto">
-      <h1 class="text-3xl font-bold text-white mb-4">${model.name}</h1>
-      <img src="${model.image}" alt="${model.name}" class="rounded-lg w-full mb-6 max-h-64 object-cover" loading="lazy">
-      <div class="mb-4">
-        <a href="${model.link}" target="_blank" rel="noopener noreferrer" class="btn-primary px-4 py-2 text-sm font-medium">Try Model</a>
-      </div>
-      <div class="flex flex-wrap gap-2 mb-4">
+
+      <!-- Title & Subtitle -->
+      <h1 class="text-4xl font-bold text-white mb-2">${model.name}</h1>
+      ${model.subtitle ? `<p class="text-gray-400 text-lg mb-6">${model.subtitle}</p>` : ""}
+
+      <!-- Image -->
+      <img src="${model.image}" alt="${model.name}"
+        class="rounded-lg w-full mb-6 max-h-64 object-cover">
+
+      <!-- Call to Action -->
+      <a href="${model.link}" target="_blank" rel="noopener noreferrer"
+         class="btn-primary px-4 py-2 text-sm font-medium mb-6 inline-block">
+         Visit Website ↗
+      </a>
+
+      <!-- Categories -->
+      <div class="flex flex-wrap gap-2 mb-6">
         ${categoryPills}
       </div>
-      <p class="text-gray-200 text-base leading-relaxed whitespace-pre-line">
-        ${model.description !== 'N/A' ? model.description : 'No description provided.'}
-      </p>
+
+      <!-- Overview -->
+      ${section(
+        "Overview",
+        `<p class="text-gray-300 leading-relaxed whitespace-pre-line">
+          ${model.description}
+        </p>`
+      )}
+
+      <!-- Optional Sections (Only render if the data exists) -->
+      ${renderFeatureList(model.features)}
+      ${renderUseCases(model.use_cases)}
+      ${renderPricing(model.pricing)}
+      ${renderProsCons(model.pros, model.cons)}
+      ${renderScreenshots(model.screenshots)}
+
     </div>
   `;
 
