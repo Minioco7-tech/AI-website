@@ -760,7 +760,7 @@
       "name": "Similar Web",
       "category": ["data", "documents"],
       "type": "N/A",
-      "description": "SimilarWeb is a web analytics platform using AI to provide competitive insights, web traffic data and market intelligence for creators and businesses. Allowing you to comoare your websites performance to direct competitors.'",
+      "description": "SimilarWeb is a web analytics platform using AI to provide competitive insights, web traffic data and market intelligence for creators and businesses. Allowing you to comoare your websites performance to direct competitors.",
       "image": "assets/images/placeholder.png",
       "link": "https://lp.similarweb.com"
     },
@@ -956,7 +956,7 @@
     {
       "id": 107,
       "name": "Shortwave",
-      "category": ["office", "assitants", "documents"],
+      "category": ["office", "assistants", "documents"],
       "type": "N/A",
       "description": "Shortwave is an AI-powered email inbox that summarises messages, drafts replies and helps users stay organised with faster email workflows.",
       "image": "assets/images/placeholder.png",
@@ -965,7 +965,7 @@
     {
       "id": 108,
       "name": "Superhuman",
-      "category": ["office", "assitants", "documents"],
+      "category": ["office", "assistants", "documents"],
       "type": "N/A",
       "description": "Superhuman is a fast, AI-enhanced email client designed to help busy professionals process inboxes quickly, draft messages, and organise tasks efficiently.",
       "image": "assets/images/placeholder.png",
@@ -1170,7 +1170,7 @@
       "link": "https://teachmateai.com/"
     },
     {
-      "id":131 ,
+      "id": 131,
       "name": "AmpCode",
       "category": ["development", "design"],
       "type": "N/A",
@@ -1215,7 +1215,7 @@
       "link": "https://justdone.com/"
     },
     {
-      "id":136 ,
+      "id": 136,
       "name": "Jasper",
       "category": ["documents", "design", "jobs"],
       "type": "N/A",
