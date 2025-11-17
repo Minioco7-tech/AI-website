@@ -2,9 +2,24 @@
     {
       "id": 1,
       "name": "ElevenLabs",
+      "subtitle": "AI voice and speech synthesis for creators.",
       "category": ["audio", "design", "documents"],
-      "type": "N/A",
-      "description": "ElevenLabs provides lifelike voice generation and cloning. Enables creators to craft unique, expressive voices for videos, podcasts, games, and accessibility applications with remarkable realism.",
+      "tags": ["voice", "speech", "voice cloning"],
+      "type": "Voice Generator",
+      "description": "Long and detailed description...",
+      "features": [
+        "Realistic voice generation",
+        "Emotion & tone controls",
+        "Voice cloning"
+      ],
+      "use_cases": [
+        "Podcasts",
+        "Narration",
+        "Character voices"
+      ],
+      "pricing": "Free plan available — paid plans start at $5/mo",
+      "pros": ["Excellent realism", "Fast generation"],
+      "cons": ["Cloning requires a paid tier"],
       "image": "Images/writing/writing.webp",
       "link": "https://elevenlabs.io"
     },
