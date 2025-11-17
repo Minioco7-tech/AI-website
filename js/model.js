@@ -112,13 +112,13 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     <div class="w-full space-y-10">
   
-      <!-- ====================================================== -->
-      <!-- TOP HERO ROW (Title/Subtitle/Pills LEFT + Image RIGHT) -->
-      <!-- ====================================================== -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <!-- ============================= -->
+      <!-- TOP HERO ROW (1/3 + 2/3) -->
+      <!-- ============================= -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
   
-        <!-- LEFT HERO CONTAINER -->
-        <div class="rounded-3xl border border-white/20 p-6 bg-white/5 backdrop-blur-sm">
+        <!-- LEFT: Title / Subtitle / Pills (1/3) -->
+        <div class="lg:col-span-1 rounded-3xl border border-white/20 p-6 bg-white/5 backdrop-blur-sm">
           <h1 class="text-4xl font-bold text-white mb-2">${model.name}</h1>
   
           ${model.subtitle ? `
@@ -130,46 +130,47 @@ document.addEventListener('DOMContentLoaded', async () => {
           </div>
         </div>
   
-        <!-- RIGHT IMAGE CONTAINER -->
-        <div class="rounded-3xl border border-white/20 p-4 bg-white/5 backdrop-blur-sm flex justify-center items-center">
+        <!-- RIGHT: Image (2/3) -->
+        <div class="lg:col-span-2 rounded-3xl overflow-hidden">
           <img src="${model.image}"
-               class="rounded-2xl w-full max-w-lg object-cover border border-white/10 shadow-lg"
-               alt="${model.name}">
+               alt="${model.name}"
+               class="w-full h-full object-cover">
         </div>
   
       </div>
   
   
   
-      <!-- =========================================== -->
-      <!-- MIDDLE ROW (Description LEFT, Features RIGHT) -->
-      <!-- =========================================== -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <!-- ================================= -->
+      <!-- MIDDLE ROW (4/5 + 1/5) -->
+      <!-- ================================= -->
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-10">
   
-        <!-- DESCRIPTION CONTAINER -->
-        <div class="rounded-3xl border border-white/20 p-6 bg-white/5 backdrop-blur-sm">
+        <!-- LEFT COLUMN: Description (4/5) -->
+        <div class="lg:col-span-4 rounded-3xl border border-white/20 p-6 bg-white/5 backdrop-blur-sm">
           <h3 class="text-2xl font-semibold mb-3">Description</h3>
           <p class="text-gray-300 leading-relaxed whitespace-pre-line">
             ${model.description}
           </p>
         </div>
   
-        <!-- FEATURES + USE CASES IN ONE BOX -->
-        <div class="rounded-3xl border border-white/20 p-6 bg-white/5 backdrop-blur-sm">
+        <!-- RIGHT COLUMN: Features + Use Cases (1/5) -->
+        <div class="lg:col-span-1 rounded-3xl border border-white/20 p-6 bg-white/5 backdrop-blur-sm">
   
           ${model.features?.length ? `
-            <h3 class="text-2xl font-semibold mb-3">Key Features</h3>
+            <h3 class="text-xl font-semibold mb-3">Features</h3>
             <ul class="list-disc list-inside text-gray-300 space-y-1 mb-6">
               ${model.features.map(f => `<li>${f}</li>`).join("")}
             </ul>
           ` : ""}
   
           ${model.use_cases?.length ? `
-            <h3 class="text-2xl font-semibold mb-3">Use Cases</h3>
+            <h3 class="text-xl font-semibold mb-3">Use Cases</h3>
             <ul class="list-disc list-inside text-gray-300 space-y-1">
               ${model.use_cases.map(u => `<li>${u}</li>`).join("")}
             </ul>
           ` : ""}
+  
         </div>
   
       </div>
@@ -187,7 +188,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         ` : ""}
   
         <h3 class="text-2xl font-semibold mb-3">Model Information</h3>
-  
         <ul class="text-gray-300 space-y-1">
           ${model.created_by ? `<li><strong>Developer:</strong> ${model.created_by}</li>` : ""}
           ${model.year_founded ? `<li><strong>Founded:</strong> ${model.year_founded}</li>` : ""}
@@ -197,9 +197,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       </div>
   
     </div>
-  
   `;
-
   // ------------------------------
   // ✅ Related Models Carousel
   // Show other models that share ANY category
