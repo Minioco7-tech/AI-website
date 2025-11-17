@@ -113,24 +113,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     <div class="w-full space-y-10">
   
       <!-- ============================= -->
-      <!-- TOP HERO ROW (1/3 + 2/3) -->
+      <!-- TOP HERO ROW (1/3 + 2/3 width) -->
       <!-- ============================= -->
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
   
-        <!-- LEFT: Title / Subtitle / Pills (1/3) -->
+        <!-- LEFT CONTAINER = 1/3 WIDTH -->
         <div class="lg:col-span-1 rounded-3xl border border-white/20 p-6 bg-white/5 backdrop-blur-sm">
           <h1 class="text-4xl font-bold text-white mb-2">${model.name}</h1>
-  
-          ${model.subtitle ? `
-            <p class="text-gray-300 text-lg mb-4">${model.subtitle}</p>
-          ` : ""}
-  
-          <div class="flex flex-wrap gap-2 mb-6">
-            ${categoryPills}
-          </div>
+          ${model.subtitle ? `<p class="text-gray-300 text-lg mb-4">${model.subtitle}</p>` : ""}
+          <div class="flex flex-wrap gap-2 mb-6">${categoryPills}</div>
         </div>
   
-        <!-- RIGHT: Image (2/3) -->
+        <!-- RIGHT CONTAINER = 2/3 WIDTH -->
         <div class="lg:col-span-2 rounded-3xl overflow-hidden">
           <img src="${model.image}"
                alt="${model.name}"
@@ -141,36 +135,30 @@ document.addEventListener('DOMContentLoaded', async () => {
   
   
   
-      <!-- ================================= -->
-      <!-- MIDDLE ROW (4/5 + 1/5) -->
-      <!-- ================================= -->
+      <!-- ===================================== -->
+      <!-- MIDDLE ROW (4/5 + 1/5 WIDTH) -->
+      <!-- ===================================== -->
       <div class="grid grid-cols-1 lg:grid-cols-5 gap-10">
   
-        <!-- LEFT COLUMN: Description (4/5) -->
+        <!-- LEFT CONTAINER = 4/5 WIDTH -->
         <div class="lg:col-span-4 rounded-3xl border border-white/20 p-6 bg-white/5 backdrop-blur-sm">
           <h3 class="text-2xl font-semibold mb-3">Description</h3>
-          <p class="text-gray-300 leading-relaxed whitespace-pre-line">
-            ${model.description}
-          </p>
+          <p class="text-gray-300 leading-relaxed whitespace-pre-line">${model.description}</p>
         </div>
   
-        <!-- RIGHT COLUMN: Features + Use Cases (1/5) -->
+        <!-- RIGHT CONTAINER = 1/5 WIDTH -->
         <div class="lg:col-span-1 rounded-3xl border border-white/20 p-6 bg-white/5 backdrop-blur-sm">
-  
           ${model.features?.length ? `
             <h3 class="text-xl font-semibold mb-3">Features</h3>
             <ul class="list-disc list-inside text-gray-300 space-y-1 mb-6">
               ${model.features.map(f => `<li>${f}</li>`).join("")}
-            </ul>
-          ` : ""}
+            </ul>` : ""}
   
           ${model.use_cases?.length ? `
             <h3 class="text-xl font-semibold mb-3">Use Cases</h3>
             <ul class="list-disc list-inside text-gray-300 space-y-1">
               ${model.use_cases.map(u => `<li>${u}</li>`).join("")}
-            </ul>
-          ` : ""}
-  
+            </ul>` : ""}
         </div>
   
       </div>
@@ -184,19 +172,20 @@ document.addEventListener('DOMContentLoaded', async () => {
   
         ${model.pricing ? `
           <h3 class="text-2xl font-semibold mb-3">Pricing</h3>
-          <p class="text-gray-300 mb-6">${model.pricing}</p>
-        ` : ""}
+          <p class="text-gray-300 mb-6">${model.pricing}</p>` : ""}
   
         <h3 class="text-2xl font-semibold mb-3">Model Information</h3>
+  
         <ul class="text-gray-300 space-y-1">
           ${model.created_by ? `<li><strong>Developer:</strong> ${model.created_by}</li>` : ""}
           ${model.year_founded ? `<li><strong>Founded:</strong> ${model.year_founded}</li>` : ""}
           ${model.rating ? `<li><strong>Rating:</strong> ⭐ ${model.rating}</li>` : ""}
-          ${model.learn_more ? `<li><a href="${model.learn_more}" class="text-blue-400 underline" target="_blank">Learn More</a></li>` : ""}
+          ${model.learn_more ? `<li><a href="${model.learn_more}" target="_blank" class="text-blue-400 underline">Learn More</a></li>` : ""}
         </ul>
       </div>
   
     </div>
+  
   `;
   // ------------------------------
   // ✅ Related Models Carousel
