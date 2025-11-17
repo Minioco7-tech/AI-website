@@ -109,45 +109,96 @@ document.addEventListener('DOMContentLoaded', async () => {
   // ✅ Render Model Detail Content
   // ------------------------------
   modelDetailsEl.innerHTML = `
-    <div class="max-w-3xl mx-auto">
 
-      <!-- Title & Subtitle -->
-      <h1 class="text-4xl font-bold text-white mb-2">${model.name}</h1>
-      ${model.subtitle ? `<p class="text-gray-400 text-lg mb-6">${model.subtitle}</p>` : ""}
-
-      <!-- Image -->
-      <img src="${model.image}" alt="${model.name}"
-        class="rounded-lg w-full mb-6 max-h-64 object-cover">
-
-      <!-- Call to Action -->
-      <a href="${model.link}" target="_blank" rel="noopener noreferrer"
-         class="btn-primary px-4 py-2 text-sm font-medium mb-6 inline-block">
-         Visit Website ↗
-      </a>
-
-      <!-- Categories -->
-      <div class="flex flex-wrap gap-2 mb-6">
-        ${categoryPills}
+    <div class="w-full space-y-10">
+  
+      <!-- ====================================================== -->
+      <!-- TOP HERO ROW (Title/Subtitle/Pills LEFT + Image RIGHT) -->
+      <!-- ====================================================== -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+  
+        <!-- LEFT HERO CONTAINER -->
+        <div class="rounded-3xl border border-white/20 p-6 bg-white/5 backdrop-blur-sm">
+          <h1 class="text-4xl font-bold text-white mb-2">${model.name}</h1>
+  
+          ${model.subtitle ? `
+            <p class="text-gray-300 text-lg mb-4">${model.subtitle}</p>
+          ` : ""}
+  
+          <div class="flex flex-wrap gap-2 mb-6">
+            ${categoryPills}
+          </div>
+        </div>
+  
+        <!-- RIGHT IMAGE CONTAINER -->
+        <div class="rounded-3xl border border-white/20 p-4 bg-white/5 backdrop-blur-sm flex justify-center items-center">
+          <img src="${model.image}"
+               class="rounded-2xl w-full max-w-lg object-cover border border-white/10 shadow-lg"
+               alt="${model.name}">
+        </div>
+  
       </div>
-
-      <!-- Overview -->
-      ${section(
-        "Overview",
-        `<p class="text-gray-300 leading-relaxed whitespace-pre-line">
-          ${model.description}
-        </p>`
-      )}
-
-      <!-- Optional Sections (Only render if the data exists) -->
-      ${renderFeatureList(model.features)}
-      ${renderUseCases(model.use_cases)}
-      ${renderPricing(model.pricing)}
-      ${renderProsCons(model.pros, model.cons)}
-      ${renderScreenshots(model.screenshots)}
-
+  
+  
+  
+      <!-- =========================================== -->
+      <!-- MIDDLE ROW (Description LEFT, Features RIGHT) -->
+      <!-- =========================================== -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+  
+        <!-- DESCRIPTION CONTAINER -->
+        <div class="rounded-3xl border border-white/20 p-6 bg-white/5 backdrop-blur-sm">
+          <h3 class="text-2xl font-semibold mb-3">Description</h3>
+          <p class="text-gray-300 leading-relaxed whitespace-pre-line">
+            ${model.description}
+          </p>
+        </div>
+  
+        <!-- FEATURES + USE CASES IN ONE BOX -->
+        <div class="rounded-3xl border border-white/20 p-6 bg-white/5 backdrop-blur-sm">
+  
+          ${model.features?.length ? `
+            <h3 class="text-2xl font-semibold mb-3">Key Features</h3>
+            <ul class="list-disc list-inside text-gray-300 space-y-1 mb-6">
+              ${model.features.map(f => `<li>${f}</li>`).join("")}
+            </ul>
+          ` : ""}
+  
+          ${model.use_cases?.length ? `
+            <h3 class="text-2xl font-semibold mb-3">Use Cases</h3>
+            <ul class="list-disc list-inside text-gray-300 space-y-1">
+              ${model.use_cases.map(u => `<li>${u}</li>`).join("")}
+            </ul>
+          ` : ""}
+        </div>
+  
+      </div>
+  
+  
+  
+      <!-- ============================ -->
+      <!-- BOTTOM FULL-WIDTH CONTAINER -->
+      <!-- ============================ -->
+      <div class="rounded-3xl border border-white/20 p-6 bg-white/5 backdrop-blur-sm">
+  
+        ${model.pricing ? `
+          <h3 class="text-2xl font-semibold mb-3">Pricing</h3>
+          <p class="text-gray-300 mb-6">${model.pricing}</p>
+        ` : ""}
+  
+        <h3 class="text-2xl font-semibold mb-3">Model Information</h3>
+  
+        <ul class="text-gray-300 space-y-1">
+          ${model.created_by ? `<li><strong>Developer:</strong> ${model.created_by}</li>` : ""}
+          ${model.year_founded ? `<li><strong>Founded:</strong> ${model.year_founded}</li>` : ""}
+          ${model.rating ? `<li><strong>Rating:</strong> ⭐ ${model.rating}</li>` : ""}
+          ${model.learn_more ? `<li><a href="${model.learn_more}" class="text-blue-400 underline" target="_blank">Learn More</a></li>` : ""}
+        </ul>
+      </div>
+  
     </div>
+  
   `;
-
 
   // ------------------------------
   // ✅ Related Models Carousel
