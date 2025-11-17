@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Lazy-load backgrounds (for any present elements)
   const lazyBackgrounds = document.querySelectorAll('.lazy-bg');
-  observer = new IntersectionObserver((entries) => {
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const el = entry.target;
