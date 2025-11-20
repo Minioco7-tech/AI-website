@@ -137,6 +137,10 @@ document.addEventListener('DOMContentLoaded', async () => {
           <div class="flex flex-wrap gap-2 mt-auto">
             ${categoryPills}
           </div>
+          
+          <!-- Try Model Button pinned to bottom -->
+          <a href="${model.link}" rel="noopener noreferrer" class="btn-primary px-4 py-2 rounded-lg text-sm font-medium shadow-lg transition hover:scale-105">Try Model</a>
+          
         </div>
       
         <!-- RIGHT = DESKTOP IMAGE ONLY -->
@@ -145,9 +149,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                alt="${model.name}"
                class="w-full h-full object-cover">
         </div>
-
-        <!-- Try Model Button pinned to bottom -->
-        <a href="${model.link}" rel="noopener noreferrer" class="btn-primary px-4 py-2 rounded-lg text-sm font-medium shadow-lg transition hover:scale-105">Try Model</a>
       
       </div>
         
