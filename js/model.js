@@ -145,6 +145,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                alt="${model.name}"
                class="w-full h-full object-cover">
         </div>
+
+        <!-- Try Model Button pinned to bottom -->
+        <a href="${model.link}"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn-primary px-4 py-2 text-sm font-medium mt-auto inline-block text-center">
+           Try Model
+        </a>
       
       </div>
         
