@@ -112,26 +112,35 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     <div class="w-full space-y-10">
   
-      <!-- ==================================== -->
-      <!-- TOP HERO ROW (equal height, 1/3 + 2/3) -->
-      <!-- ==================================== -->
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-stretch">
-
-        <!-- LEFT = 1/3 width (fixed height) -->
-        <div class="lg:col-span-1 rounded-3xl border border-white/20 p-6 bg-transparent h-[300px] flex flex-col">
+    /* ============================= */
+    /* TOP HERO ROW (Fixed desktop, mobile image inside title box) */
+    /* ============================= */
+    
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+      
+        <!-- LEFT = 1/3 width on desktop, full width on mobile -->
+        <div class="lg:col-span-1 rounded-3xl border border-white/20 p-6 bg-transparent h-[500px] flex flex-col">
+      
           <h1 class="text-4xl font-bold text-white mb-2">${model.name}</h1>
       
           ${model.subtitle ? `
             <p class="text-gray-300 text-lg mb-4">${model.subtitle}</p>
           ` : ""}
       
+          <!-- MOBILE IMAGE ONLY -->
+          <div class="block lg:hidden w-full rounded-xl overflow-hidden mb-4">
+            <img src="${model.image}"
+                 alt="${model.name}"
+                 class="w-full h-64 object-cover">
+          </div>
+      
           <div class="flex flex-wrap gap-2 mt-auto">
             ${categoryPills}
           </div>
         </div>
       
-        <!-- RIGHT = 2/3 width (fixed height) -->
-        <div class="lg:col-span-2 rounded-3xl border border-white/20 overflow-hidden bg-transparent h-[300px]">
+        <!-- RIGHT = DESKTOP IMAGE ONLY -->
+        <div class="hidden lg:block lg:col-span-2 rounded-3xl border border-white/20 overflow-hidden bg-transparent h-[500px]">
           <img src="${model.image}"
                alt="${model.name}"
                class="w-full h-full object-cover">
