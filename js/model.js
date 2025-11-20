@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
       
         <!-- LEFT = 1/3 width on desktop, full width on mobile -->
-        <div class="lg:col-span-1 rounded-3xl border border-white/20 p-6 bg-transparent h-[300px] flex flex-col">
+        <div class="lg:col-span-1 rounded-3xl border border-white/20 p-6 bg-transparent lg:h-[300px] flex flex-col">
       
           <h1 class="text-4xl font-bold text-white mb-2">${model.name}</h1>
       
