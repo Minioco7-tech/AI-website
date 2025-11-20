@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           <div class="block lg:hidden w-full rounded-xl overflow-hidden mb-4">
             <img src="${model.image}"
                  alt="${model.name}"
-                 class="w-full h-[100px] object-cover">
+                 class="w-full h-[200px] object-cover">
           </div>
       
           <div class="flex flex-wrap gap-2 mt-auto">
