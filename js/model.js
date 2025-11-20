@@ -147,12 +147,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         </div>
 
         <!-- Try Model Button pinned to bottom -->
-        <a href="${model.link}"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="btn-primary px-4 py-2 text-sm font-medium mt-auto inline-block text-center">
-           Try Model
-        </a>
+        <a href="index.html" rel="noopener noreferrer" class="btn-primary px-4 py-2 rounded-lg text-sm font-medium shadow-lg transition hover:scale-105">Try Model</a>
       
       </div>
         
