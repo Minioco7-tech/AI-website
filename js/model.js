@@ -119,28 +119,36 @@ document.addEventListener('DOMContentLoaded', async () => {
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
       
         <!-- LEFT = 1/3 width on desktop, full width on mobile -->
-        <div class="lg:col-span-1 rounded-3xl border border-white/20 p-6 bg-transparent lg:h-[300px] flex flex-col">
-      
-          <h1 class="text-4xl font-bold text-white mb-2">${model.name}</h1>
-      
-          ${model.subtitle ? `
-            <p class="text-gray-300 text-lg mb-4">${model.subtitle}</p>
-          ` : ""}
-      
-          <!-- MOBILE IMAGE ONLY -->
-          <div class="block lg:hidden w-full rounded-xl overflow-hidden mb-4">
+        <div class="lg:col-span-1 rounded-3xl border border-white/20 p-6 bg-transparent flex flex-col space-y-4">
+        
+          <!-- TITLE + SUBTITLE -->
+          <div class="space-y-2">
+            <h1 class="text-4xl font-bold text-white">${model.name}</h1>
+        
+            ${model.subtitle ? `
+              <p class="text-gray-300 text-lg leading-snug">${model.subtitle}</p>
+            ` : ""}
+          </div>
+        
+          <!-- MOBILE IMAGE -->
+          <div class="block lg:hidden w-full rounded-xl overflow-hidden h-[220px]">
             <img src="${model.image}"
                  alt="${model.name}"
-                 class="w-full h-[200px] object-cover">
+                 class="w-full h-full object-cover">
           </div>
-      
-          <div class="flex flex-wrap gap-2 mt-auto">
+        
+          <!-- CATEGORY PILLS -->
+          <div class="flex flex-wrap gap-2">
             ${categoryPills}
           </div>
-          
-          <!-- Try Model Button pinned to bottom -->
-          <a href="${model.link}" rel="noopener noreferrer" class="btn-primary px-4 py-2 rounded-lg text-sm font-medium shadow-lg transition hover:scale-105">Try Model</a>
-          
+        
+          <!-- TRY MODEL BUTTON -->
+          <a href="${model.link}"
+             rel="noopener noreferrer"
+             class="btn-primary px-4 py-2 text-sm font-medium inline-block self-start">
+             Try Model
+          </a>
+        
         </div>
       
         <!-- RIGHT = DESKTOP IMAGE ONLY -->
