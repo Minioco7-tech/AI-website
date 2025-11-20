@@ -112,9 +112,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     <div class="w-full space-y-10">
   
-    /* ============================= */
-    /* TOP HERO ROW (Fixed desktop, mobile image inside title box) */
-    /* ============================= */
+      <!-- ============================================= -->
+      <!-- TOP HERO ROW (Fixed desktop, mobile image inside title box)-->
+      <!-- ============================================= -->
     
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
       
