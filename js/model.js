@@ -116,10 +116,10 @@ document.addEventListener('DOMContentLoaded', async () => {
       <!-- TOP HERO ROW (Fixed desktop, mobile image inside title box)-->
       <!-- ============================================= -->
     
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-10">
       
-        <!-- LEFT = 1/3 width on desktop, full width on mobile -->
-        <div class="lg:col-span-1 rounded-3xl border border-white/20 p-6 bg-transparent flex flex-col space-y-4">
+        <!-- LEFT = 2/5 width on desktop, full width on mobile -->
+        <div class="lg:col-span-2 rounded-3xl border border-white/20 p-6 bg-transparent flex flex-col space-y-4">
         
           <!-- TITLE + SUBTITLE -->
           <div class="space-y-2">
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         </div>
       
         <!-- RIGHT = DESKTOP IMAGE ONLY -->
-        <div class="hidden lg:block lg:col-span-2 rounded-3xl border border-white/20 overflow-hidden bg-transparent h-[300px]">
+        <div class="hidden lg:block lg:col-span-3 rounded-3xl border border-white/20 overflow-hidden bg-transparent h-[300px]">
           <img src="${model.image}"
                alt="${model.name}"
                class="w-full h-full object-cover">
@@ -163,17 +163,17 @@ document.addEventListener('DOMContentLoaded', async () => {
       <!-- ============================================= -->
       <!-- MIDDLE ROW (equal height, 4/5 + 1/5 widths) -->
       <!-- ============================================= -->
-      <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 items-stretch">
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10 items-stretch">
   
-        <!-- LEFT = 4/5 width -->
-        <div class="lg:col-span-4 rounded-3xl border border-white/20 p-6 bg-transparent h-full">
+        <!-- LEFT = 3/4 width -->
+        <div class="lg:col-span-3 rounded-3xl border border-white/20 p-6 bg-transparent h-full">
           <h3 class="text-2xl font-semibold mb-3">Description</h3>
           <p class="text-gray-300 leading-relaxed whitespace-pre-line">
             ${model.description}
           </p>
         </div>
   
-        <!-- RIGHT = 1/5 width -->
+        <!-- RIGHT = 1/4 width -->
         <div class="lg:col-span-1 rounded-3xl border border-white/20 p-6 bg-transparent h-full">
   
           ${model.features?.length ? `
