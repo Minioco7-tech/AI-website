@@ -153,11 +153,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       
         <!-- RIGHT = DESKTOP IMAGE ONLY -->
         <div class="hidden lg:block lg:col-span-3 rounded-3xl border-3 border-white/20 overflow-hidden bg-transparent h-[300px]">
-          <div class="w-full h-full border border-white/20 rounded-2xl overflow-hidden">
-            <img src="${model.image}"
-                 alt="${model.name}"
-                 class="w-full h-full object-cover">
-          </div>
+          <img src="${model.image}"
+               alt="${model.name}"
+               class="w-full h-full object-cover">
         </div>
       
       </div>
