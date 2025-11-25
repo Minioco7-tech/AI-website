@@ -254,7 +254,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           <ul class="space-y-3">
             ${model.information.map(item => `
               <li class="flex gap-3">
-                <span class="w-1 h-1 rounded-full bg-blue-500 mt-[6px] flex-shrink-0"></span>
+                <span class="w-2 h-2 rounded-full bg-blue-500 mt-[6px] flex-shrink-0"></span>
                 <p class="text-gray-300 leading-relaxed">
                   <strong>${item.label}:</strong>
                   ${
