@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             <ul class="space-y-3 mb-6">
               ${model.features.map(f => `
                 <li class="flex items-start gap-3">
-                  <span class="flex items-center justify-center w-4 h-4 rounded-full mt-2 bg-blue-500">
+                  <span class="flex items-center justify-center w-4 h-4 rounded-full mt-3 bg-blue-500">
                     <svg xmlns="http://www.w3.org/2000/svg" 
                          class="h-4 w-4 text-white" 
                          viewBox="0 0 20 20" 
@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', async () => {
               <div class="flex gap-3">
                 
                 <!-- BLUE BULLET -->
-                <span class="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0"></span>
+                <span class="w-2 h-2 rounded-full bg-blue-500 mt-3 flex-shrink-0"></span>
         
                 <!-- TEXT BLOCK -->
                 <div class="flex flex-col space-y-1">
