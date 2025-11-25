@@ -10,7 +10,7 @@ export function renderBreadcrumb(items) {
     // Add separator (except before first item)
     if (index > 0) {
       const separator = document.createElement('span');
-      separator.textContent = '/';
+      separator.textContent = '>';
       separator.classList.add('mx-1', 'text-gray-500');
       breadcrumbEl.appendChild(separator);
     }
