@@ -378,24 +378,34 @@ body:not(.home-page) #searchInput:hover {
   background-color: transparent;
 }
 
-#breadcrumb span {
-  color: #888;
-}
-
-#breadcrumb .active {
-  color: #fff;
-  /* font-weight: 500; */
-}
-
+/* Inactive breadcrumb links */
 #breadcrumb a {
-  color: #888;
+  color: #888;                 /* grey */
   text-decoration: none;
   transition: color 0.2s ease;
+  display: flex;
+  align-items: center;         /* ensures perfect vertical alignment */
 }
 
 #breadcrumb a:hover {
-  color: #00BFFF; /* Tailwind-inspired blue hover */
+  color: #00BFFF;              /* blue hover */
   text-decoration: underline;
+}
+
+/* Active breadcrumb item (current page) */
+#breadcrumb span {
+  color: #fff;                 /* bright white */
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+/* Separator "/" */
+#breadcrumb span.separator {
+  color: #666;
+  padding: 0 0.25rem;
+  display: flex;
+  align-items: center;
 }
 
 /* --- Filter Dropdown Styles --- */
