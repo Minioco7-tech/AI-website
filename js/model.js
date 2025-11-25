@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           </div>
         
           <!-- CATEGORY PILLS -->
-          <div class="flex flex-wrap gap-2 lg:gap-3">
+          <div class="flex flex-wrap gap-2 lg:gap-3 lg:mb-3">
             ${categoryPills}
           </div>
         
