@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', async () => {
               <div class="flex gap-3">
                 
                 <!-- BLUE BULLET -->
-                <span class="w-1 h-1 rounded-full bg-blue-500 mt-1 flex-shrink-0"></span>
+                <span class="w-1 h-1 rounded-full bg-blue-500 mt-2 flex-shrink-0"></span>
         
                 <!-- TEXT BLOCK -->
                 <div class="flex flex-col space-y-1">
