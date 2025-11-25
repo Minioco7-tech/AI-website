@@ -245,12 +245,23 @@ document.addEventListener('DOMContentLoaded', async () => {
   
         <h3 class="text-2xl font-semibold mb-3">Model Information</h3>
   
-        <ul class="text-gray-300 space-y-1">
-          ${model.created_by ? `<li><strong>Developer:</strong> ${model.created_by}</li>` : ""}
-          ${model.year_founded ? `<li><strong>Founded:</strong> ${model.year_founded}</li>` : ""}
-          ${model.rating ? `<li><strong>Rating:</strong> ⭐ ${model.rating}</li>` : ""}
-          ${model.learn_more ? `<li><a href="${model.learn_more}" target="_blank" class="text-blue-400 underline">Learn More</a></li>` : ""}
-        </ul>
+        ${model.information && model.information.length ? `
+          <ul class="text-gray-300 space-y-2">
+            ${model.information.map(item => `
+              <li>
+                <strong>${item.label}:</strong> 
+                ${
+                  // If the value starts with http, make it a clickable link
+                  typeof item.value === "string" && item.value.startsWith("http")
+                    ? `<a href="${item.value}" target="_blank" class="text-blue-400 underline">${item.value}</a>`
+                    : item.value
+                }
+              </li>
+            `).join("")}
+          </ul>
+        ` : `
+          <p class="text-gray-400">No additional information available.</p>
+        `}
       </div>
   
     </div>
