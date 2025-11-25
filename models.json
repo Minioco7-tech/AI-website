@@ -29,8 +29,13 @@
         }
       ],
       "pricing": "Free plan available — paid plans start at $5/mo",
-      "pros": ["Excellent realism", "Fast generation"],
-      "cons": ["Cloning requires a paid tier"],
+      "information": [
+        { "label": "Developer", "value": "ElevenLabs, Inc." },
+        { "label": "Founded", "value": "2022" },
+        { "label": "Type", "value": "Voice Generator" },
+        { "label": "Privacy", "value": "GDPR-compliant" },
+        { "label": "API", "value": "Available — with complete docs" }
+      ],
       "image": "Images/writing/writing.webp",
       "link": "https://elevenlabs.io"
     },
