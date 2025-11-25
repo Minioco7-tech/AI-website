@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             <ul class="space-y-2">
               ${model.use_cases.map(u => `
                 <li class="flex items-center gap-3">
-                  <span class="w-1 h-1rounded-full bg-blue-500"></span>
+                  <span class="w-1 h-1 rounded-full bg-blue-500"></span>
                   <span class="text-gray-300">${u}</span>
                 </li>
               `).join("")}
