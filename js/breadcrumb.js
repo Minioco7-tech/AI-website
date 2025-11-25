@@ -7,25 +7,35 @@ export function renderBreadcrumb(items) {
   items.forEach((item, index) => {
     const isLast = index === items.length - 1;
 
-    // Add separator (except before first item)
+    // Separator
     if (index > 0) {
       const separator = document.createElement('span');
       separator.textContent = '/';
-      separator.classList.add('mx-1', 'text-gray-500');
+      separator.className = 'mx-2 text-gray-500 text-sm flex items-center';
       breadcrumbEl.appendChild(separator);
     }
 
     if (!isLast && item.href) {
+      // Link items
       const link = document.createElement('a');
       link.href = item.href;
       link.rel = 'noopener noreferrer';
       link.textContent = item.label;
-      link.className = 'text-gray-400 text-white transition';
+
+      // Consistent typography
+      link.className =
+        'text-sm text-gray-400 hover:text-white transition-colors flex items-center';
+
       breadcrumbEl.appendChild(link);
     } else {
+      // Active item
       const span = document.createElement('span');
       span.textContent = item.label;
-      span.className = 'active';
+
+      // Same typography
+      span.className =
+        'text-sm text-white font-semibold flex items-center';
+
       breadcrumbEl.appendChild(span);
     }
   });
