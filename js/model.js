@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       <div class="grid grid-cols-1 lg:grid-cols-5 gap-10">
       
         <!-- LEFT = 2/5 width on desktop, full width on mobile -->
-        <div class="lg:col-span-2 rounded-3xl border border-white/20 p-6 bg-transparent flex flex-col space-y-4 lg:space-y-8">
+        <div class="lg:col-span-2 rounded-3xl border border-white/20 p-6 bg-transparent flex flex-col space-y-4">
         
           <!-- TITLE + SUBTITLE -->
           <div class="space-y-2">
