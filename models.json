@@ -45,7 +45,7 @@
       "category": ["audio", "office", "documents"],
       "type": "N/A",
       "description": "Adobe Podcast simplifies audio creation with AI-driven tools for cleaning sound, enhancing voice quality and automating editing. Ideal for podcasters and professionals who need polished audio without complex software.",
-      "image": "Images/writing/writing.webp",
+      "image": "Images/models/adobepodcast.webp",
       "link": "https://podcast.adobe.com/en"
     },
     {
@@ -54,7 +54,7 @@
       "category": ["audio", "documents"],
       "type": "N/A",
       "description": "Cleanvoice AI automatically removes filler words, background noise, stutters and awkward pauses from recordings. Helping creators produce smooth, professional audio content faster.",
-      "image": "Images/writing/writing.webp",
+      "image": "Images/models/cleanvoice.webp",
       "link":"https://cleanvoice.ai/"
     },
     {
@@ -63,7 +63,7 @@
       "category": ["audio", "design"],
       "type": "N/A",
       "description": "Resemble AI offers custom voice synthesis for branding, entertainment and customer interaction. Users can clone or design unique synthetic voices that maintain emotional tone and clarity across multiple languages.",
-      "image": "Images/writing/writing.webp",
+      "image": "Images/models/resemble.webp",
       "link": "https://www.resemble.ai/"
     },
     {
@@ -72,7 +72,7 @@
       "category": ["audio", "office", "documents"],
       "type": "N/A",
       "description": "Podcastle AI provides a full-service podcast production suite with AI tools for recording, editing, transcribing and enhancing voice quality. All within an intuitive web interface.",
-      "image": "Images/writing/writing.webp",
+      "image": "Images/models/podcastle.webp",
       "link": "https://podcastle.ai/ai-voices"
     },
     {
@@ -81,7 +81,7 @@
       "category": ["assistants", "documents", "development", "jobs"],
       "type": "N/A",
       "description": "ChatGPT is a conversational AI that assists with writing, brainstorming, coding, learning and creative ideation. It understands context and tone, helping users generate content, explanations, and insights in natural language.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/chatgpt.webp",
       "link": "https://chat.openai.com"
     },
     {
@@ -99,7 +99,7 @@
       "category": ["assistants", "documents", "jobs"],
       "type": "N/A",
       "description": "Meta AI is an intelligent conversational assistant integrated across Meta platforms. It supports casual chats, creative writing and learning tasks through natural interaction.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/meta.webp",
       "link": "https://www.meta.ai"
     },
     {
