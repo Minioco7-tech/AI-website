@@ -237,25 +237,32 @@ document.addEventListener('DOMContentLoaded', async () => {
       <!-- BOTTOM FULL-WIDTH CONTAINER -->
       <!-- ============================ -->
       <div class="rounded-3xl border border-white/20 p-6 bg-transparent">
-  
+      
+        <!-- PRICING WITH BULLET -->
         ${model.pricing ? `
           <h3 class="text-2xl font-semibold mb-3">Pricing</h3>
-          <p class="text-gray-300 mb-6">${model.pricing}</p>
+          <div class="flex gap-3 mb-6">
+            <span class="w-1 h-1 rounded-full bg-blue-500 mt-[6px] flex-shrink-0"></span>
+            <p class="text-gray-300 leading-relaxed">${model.pricing}</p>
+          </div>
         ` : ""}
-  
+      
+        <!-- MODEL INFORMATION -->
         <h3 class="text-2xl font-semibold mb-3">Model Information</h3>
-  
+      
         ${model.information && model.information.length ? `
-          <ul class="text-gray-300 space-y-2">
+          <ul class="space-y-3">
             ${model.information.map(item => `
-              <li>
-                <strong>${item.label}:</strong> 
-                ${
-                  // If the value starts with http, make it a clickable link
-                  typeof item.value === "string" && item.value.startsWith("http")
-                    ? `<a href="${item.value}" target="_blank" class="text-blue-400 underline">${item.value}</a>`
-                    : item.value
-                }
+              <li class="flex gap-3">
+                <span class="w-1 h-1 rounded-full bg-blue-500 mt-[6px] flex-shrink-0"></span>
+                <p class="text-gray-300 leading-relaxed">
+                  <strong>${item.label}:</strong>
+                  ${
+                    typeof item.value === "string" && item.value.startsWith("http")
+                      ? `<a href="${item.value}" target="_blank" class="text-blue-400 underline">${item.value}</a>`
+                      : item.value
+                  }
+                </p>
               </li>
             `).join("")}
           </ul>
