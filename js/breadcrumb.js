@@ -20,7 +20,7 @@ export function renderBreadcrumb(items) {
       link.href = item.href;
       link.rel = 'noopener noreferrer';
       link.textContent = item.label;
-      link.className = 'text-gray-400 hover:text-white transition';
+      link.className = 'text-gray-400 text-white transition';
       breadcrumbEl.appendChild(link);
     } else {
       const span = document.createElement('span');
