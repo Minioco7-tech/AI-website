@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       <div class="grid grid-cols-1 lg:grid-cols-5 gap-10">
       
         <!-- LEFT = 2/5 width on desktop, full width on mobile -->
-        <div class="lg:col-span-2 rounded-3xl border border-white/20 p-6 bg-transparent flex flex-col space-y-4">
+        <div class="lg:col-span-2 rounded-3xl border border-white/20 p-6 bg-transparent flex flex-col space-y-4 lg:space-y-8">
         
           <!-- TITLE + SUBTITLE -->
           <div class="space-y-2">
@@ -140,14 +140,14 @@ document.addEventListener('DOMContentLoaded', async () => {
           </div>
         
           <!-- CATEGORY PILLS -->
-          <div class="flex flex-wrap gap-2">
+          <div class="flex flex-wrap gap-2 lg:gap-3">
             ${categoryPills}
           </div>
         
           <!-- TRY MODEL BUTTON -->
           <a href="${model.link}"
              rel="noopener noreferrer"
-             class="btn-primary px-4 py-2 text-sm font-medium inline-block self-start">
+             class="btn-primary px-4 py-2 text-sm font-medium inline-block self-start lg:mt-2">
              Try Model
           </a>
         
