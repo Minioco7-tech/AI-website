@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       <!-- ============================ -->
       <!-- BOTTOM FULL-WIDTH CONTAINER -->
       <!-- ============================ -->
-      <div class="rounded-3xl border border-white/20 p-6 bg-transparent">
+      <div class="rounded-3xl border border-white/20 p-6 bg-transparent max-w-3xl mx-auto">
       
         <!-- PRICING WITH BULLET -->
         ${model.pricing ? `
