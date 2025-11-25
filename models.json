@@ -36,7 +36,7 @@
         { "label": "Privacy", "value": "GDPR-compliant" },
         { "label": "API", "value": "Available — with complete docs" }
       ],
-      "image": "Images/writing/writing.webp",
+      "image": "Images/models/elevenlabs.webp",
       "link": "https://elevenlabs.io"
     },
     {
