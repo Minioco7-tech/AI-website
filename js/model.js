@@ -207,20 +207,26 @@ document.addEventListener('DOMContentLoaded', async () => {
       <!-- USE CASES
       <!-- ======================== -->
 
-      <div class="rounded-3xl border border-white/20 p-6 bg-transparent h-full">
-          
+      <div class="rounded-3xl border border-white/20 p-6 bg-transparent h-full">    
         ${model.use_cases?.length ? `
-          <h3 class="text-xl font-semibold mb-3">Use Cases</h3>
-          <ul class="space-y-2">
+          <h3 class="text-xl font-semibold mb-4">Use Cases</h3>
+        
+          <div class="space-y-6">
             ${model.use_cases.map(u => `
-              <li class="flex items-center gap-3">
-                <span class="w-1 h-1 rounded-full bg-blue-500"></span>
-                <span class="text-gray-300">${u}</span>
-              </li>
+              <div class="flex flex-col space-y-1">
+        
+                <!-- Use Case Title (same brightness as other section titles) -->
+                <h4 class="text-lg font-semibold text-white">${u.title}</h4>
+        
+                <!-- Use Case Description (same brightness as main text) -->
+                <p class="text-gray-300 leading-relaxed">
+                  ${u.description}
+                </p>
+        
+              </div>
             `).join("")}
-          </ul>
+          </div>
         ` : ""}
-
       </div>
   
       <!-- ============================ -->
