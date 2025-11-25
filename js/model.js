@@ -179,18 +179,40 @@ document.addEventListener('DOMContentLoaded', async () => {
   
         <!-- RIGHT = 1/4 width -->
         <div class="lg:col-span-1 rounded-3xl border border-white/20 p-6 bg-transparent h-full">
-  
+        
           ${model.features?.length ? `
             <h3 class="text-xl font-semibold mb-3">Features</h3>
-            <ul class="list-disc list-inside text-gray-300 space-y-1 mb-6">
-              ${model.features.map(f => `<li>${f}</li>`).join("")}
+            <ul class="space-y-3 mb-6">
+              ${model.features.map(f => `
+                <li class="flex items-start gap-3">
+                  <span class="flex items-center justify-center w-6 h-6 rounded-full bg-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                         class="h-4 w-4 text-white" 
+                         viewBox="0 0 20 20" 
+                         fill="currentColor">
+                      <path fill-rule="evenodd" 
+                            d="M16.707 5.293a1 1 0 00-1.414 0L8 
+                               12.586 4.707 9.293a1 1 0 00-1.414 
+                               1.414l4 4a1 1 0 001.414 0l8-8a1 
+                               1 0 000-1.414z" 
+                            clip-rule="evenodd" />
+                    </svg>
+                  </span>
+                  <span class="text-gray-300">${f}</span>
+                </li>
+              `).join("")}
             </ul>
           ` : ""}
-  
+            
           ${model.use_cases?.length ? `
             <h3 class="text-xl font-semibold mb-3">Use Cases</h3>
-            <ul class="list-disc list-inside text-gray-300 space-y-1">
-              ${model.use_cases.map(u => `<li>${u}</li>`).join("")}
+            <ul class="space-y-2">
+              ${model.use_cases.map(u => `
+                <li class="flex items-center gap-3">
+                  <span class="w-3 h-3 rounded-full bg-blue-500"></span>
+                  <span class="text-gray-300">${u}</span>
+                </li>
+              `).join("")}
             </ul>
           ` : ""}
   
