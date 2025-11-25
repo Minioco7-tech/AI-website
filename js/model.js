@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           <!-- TRY MODEL BUTTON -->
           <a href="${model.link}"
              rel="noopener noreferrer"
-             class="btn-primary px-4 py-2 text-sm font-medium inline-block self-start my-2 lg:mt-3">
+             class="btn-primary px-4 py-2 text-sm font-medium inline-block self-start lg:mt-2">
              Try Model
           </a>
         
