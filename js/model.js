@@ -131,8 +131,8 @@ document.addEventListener('DOMContentLoaded', async () => {
           </div>
         
           <!-- MOBILE IMAGE -->
-          <div class="block lg:hidden w-full rounded-xl border-4 border-white/20 h-[220px]">
-            <div class="w-full h-full rounded-xl overflow-hidden">
+          <div class="block lg:hidden w-full rounded-xl h-[220px]">
+            <div class="w-full h-full rounded-xl border-4 border-white/20 overflow-hidden">
               <img src="${model.image}"
                    alt="${model.name}"
                    class="w-full h-full object-cover">
