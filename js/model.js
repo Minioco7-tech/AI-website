@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             <h1 class="text-4xl font-bold text-white">${model.name}</h1>
         
             ${model.subtitle ? `
-              <p class="text-gray-300 text-lg leading-snug">${model.subtitle}</p>
+              <p class="text-gray-300 leading-relaxed">${model.subtitle}</p>
             ` : ""}
           </div>
         
