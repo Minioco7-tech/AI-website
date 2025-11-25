@@ -167,16 +167,16 @@ document.addEventListener('DOMContentLoaded', async () => {
       <!-- ============ -->
       <!-- DESCRIPTION
       <!-- ============ -->
-      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10">
+      <div class="grid grid-cols-1 lg:grid-cols-7 gap-10">
       
-        <div class="lg:col-span-3 rounded-3xl border border-white/20 p-6 bg-transparent h-full">
+        <div class="lg:col-span-5 rounded-3xl border border-white/20 p-6 bg-transparent h-full">
           <h3 class="text-2xl font-semibold mb-3">Description</h3>
           <p class="text-gray-300 leading-relaxed whitespace-pre-line">
             ${model.description}
           </p>
         </div>
 
-        <div class="lg:col-span-1 rounded-3xl border border-white/20 p-6 bg-transparent h-full">
+        <div class="lg:col-span-2 rounded-3xl border border-white/20 p-6 bg-transparent h-full">
           ${model.features?.length ? `
             <h3 class="text-xl font-semibold mb-3">Features</h3>
             <ul class="space-y-3 mb-6">
@@ -208,30 +208,6 @@ document.addEventListener('DOMContentLoaded', async () => {
       <!-- ======================== -->
 
       <div class="rounded-3xl border border-white/20 p-6 bg-transparent h-full">
-      
-        ${model.features?.length ? `
-          <h3 class="text-xl font-semibold mb-3">Features</h3>
-          <ul class="space-y-3 mb-6">
-            ${model.features.map(f => `
-              <li class="flex items-start gap-3">
-                <span class="flex items-center justify-center w-4 h-4 rounded-full bg-blue-500">
-                  <svg xmlns="http://www.w3.org/2000/svg" 
-                       class="h-4 w-4 text-white" 
-                       viewBox="0 0 20 20" 
-                       fill="currentColor">
-                    <path fill-rule="evenodd" 
-                          d="M16.707 5.293a1 1 0 00-1.414 0L8 
-                             12.586 4.707 9.293a1 1 0 00-1.414 
-                             1.414l4 4a1 1 0 001.414 0l8-8a1 
-                             1 0 000-1.414z" 
-                          clip-rule="evenodd" />
-                  </svg>
-                </span>
-                <span class="text-gray-300">${f}</span>
-              </li>
-            `).join("")}
-          </ul>
-        ` : ""}
           
         ${model.use_cases?.length ? `
           <h3 class="text-xl font-semibold mb-3">Use Cases</h3>
