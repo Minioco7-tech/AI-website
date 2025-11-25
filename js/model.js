@@ -139,18 +139,22 @@ document.addEventListener('DOMContentLoaded', async () => {
             </div>
           </div>
         
-          <!-- CATEGORY PILLS -->
-          <div class="flex flex-wrap gap-2 lg:gap-3 lg:mb-3">
-            ${categoryPills}
+          <!-- PILLS + BUTTON pinned to bottom -->
+          <div class="flex flex-col mt-6">
+        
+            <!-- Pills -->
+            <div class="flex flex-wrap gap-2 lg:gap-3 mb-3">
+              ${categoryPills}
+            </div>
+        
+            <!-- Button -->
+            <a href="${model.link}"
+              rel="noopener noreferrer"
+              class="btn-primary px-4 py-2 text-sm font-medium inline-block self-start">
+              Try Model
+            </a>
           </div>
-        
-          <!-- TRY MODEL BUTTON -->
-          <a href="${model.link}"
-             rel="noopener noreferrer"
-             class="btn-primary px-4 py-2 text-sm font-medium inline-block self-start">
-             Try Model
-          </a>
-        
+          
         </div>
       
         <!-- RIGHT = DESKTOP IMAGE ONLY -->
