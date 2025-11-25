@@ -6,7 +6,7 @@
       "category": ["audio", "design", "documents"],
       "tags": ["voice", "speech", "voice cloning"],
       "type": "Voice Generator",
-      "description": "ElevenLabs is a leading AI-powered voice synthesis platform built for creators, studios and businesses that need lifelike audio. It uses advanced deep-learning models to generate expressive, natural-sounding speech in dozens of languages. With real-time responsiveness, emotional control and industry-leading voice cloning, ElevenLabs has become a go-to solution for podcasters, filmmakers, game studios and educators seeking high-quality narration without recording equipment. The platform combines accessibility with professional fidelity, offering beginner-friendly browser tools alongside a powerful API for developers.",
+      "description": "ElevenLabs is a leading AI-powered voice synthesis platform built for creators, studios and businesses that need lifelike audio. It uses advanced deep-learning models to generate expressive, natural-sounding speech in dozens of languages.\\n\\n With real-time responsiveness, emotional control and industry-leading voice cloning, ElevenLabs has become a go-to solution for podcasters, filmmakers, game studios and educators seeking high-quality narration without recording equipment.\\n\\n The platform combines accessibility with professional fidelity, offering beginner-friendly browser tools alongside a powerful API for developers.",
       "features": [
         "Realistic voice generation with human-like timbre",
         "Emotion-controlled speech synthesis",
