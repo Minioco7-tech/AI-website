@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             <ul class="space-y-3 mb-6">
               ${model.features.map(f => `
                 <li class="flex items-start gap-3">
-                  <span class="flex items-center justify-center w-6 h-6 rounded-full bg-blue-500">
+                  <span class="flex items-center justify-center w-4 h-4 rounded-full bg-blue-500">
                     <svg xmlns="http://www.w3.org/2000/svg" 
                          class="h-4 w-4 text-white" 
                          viewBox="0 0 20 20" 
@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             <ul class="space-y-2">
               ${model.use_cases.map(u => `
                 <li class="flex items-center gap-3">
-                  <span class="w-3 h-3 rounded-full bg-blue-500"></span>
+                  <span class="w-1 h-1rounded-full bg-blue-500"></span>
                   <span class="text-gray-300">${u}</span>
                 </li>
               `).join("")}
