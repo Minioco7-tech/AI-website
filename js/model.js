@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         ${model.pricing ? `
           <h3 class="text-2xl font-semibold mb-3">Pricing</h3>
           <div class="flex gap-3 mb-6">
-            <span class="w-1 h-1 rounded-full bg-blue-500 mt-[6px] flex-shrink-0"></span>
+            <span class="w-2 h-2 rounded-full bg-blue-500 mt-[6px] flex-shrink-0"></span>
             <p class="text-gray-300 leading-relaxed">${model.pricing}</p>
           </div>
         ` : ""}
