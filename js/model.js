@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       <div class="grid grid-cols-1 lg:grid-cols-7 gap-10">
       
         <div class="lg:col-span-5 rounded-3xl border border-white/20 p-6 bg-transparent h-full">
-          <h3 class="text-2xl font-semibold mb-3">Description</h3>
+          <h3 class="text-2xl font-semibold mb-1">Description</h3>
           <p class="text-gray-300 leading-relaxed whitespace-pre-line">
             ${model.description}
           </p>
