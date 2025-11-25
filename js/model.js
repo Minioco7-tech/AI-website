@@ -131,8 +131,8 @@ document.addEventListener('DOMContentLoaded', async () => {
           </div>
         
           <!-- MOBILE IMAGE -->
-          <div class="block lg:hidden w-full h-[220px]">
-            <div class="w-full h-full rounded-xl overflow-hidden border-3 border-white/20">
+          <div class="block lg:hidden w-full border-3 border-white/20 h-[220px]">
+            <div class="w-full h-full rounded-xl overflow-hidden">
               <img src="${model.image}"
                    alt="${model.name}"
                    class="w-full h-full object-cover">
@@ -154,8 +154,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         </div>
       
         <!-- RIGHT = DESKTOP IMAGE ONLY -->
-        <div class="hidden lg:block lg:col-span-3 rounded-3xl border border-white/20 overflow-hidden bg-transparent h-[300px]">
-          <div class="w-full h-full border-3 border-white/20 rounded-3xl overflow-hidden">
+        <div class="hidden lg:block lg:col-span-3 rounded-3xl border-3 border-white/20 overflow-hidden bg-transparent h-[300px]">
+          <div class="w-full h-full rounded-3xl overflow-hidden">
             <img src="${model.image}"
                  alt="${model.name}"
                  class="w-full h-full object-cover">
