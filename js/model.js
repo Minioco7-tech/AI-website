@@ -213,19 +213,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         
           <div class="space-y-6">
             ${model.use_cases.map(u => `
-              <div class="flex flex-col space-y-1">
-
+              <div class="flex gap-3">
+                
                 <!-- BLUE BULLET -->
-                <span class="w-1 h-1 rounded-full bg-blue-500 mt-1 flex-shrink-0"></span>
+                <span class="w-3 h-3 rounded-full bg-blue-500 mt-1 flex-shrink-0"></span>
         
-                <!-- Use Case Title (same brightness as other section titles) -->
-                <h4 class="text-lg font-semibold text-white">${u.title}</h4>
-        
-                <!-- Use Case Description (same brightness as main text) -->
-                <p class="text-gray-300 leading-relaxed">
-                  ${u.description}
-                </p>
-        
+                <!-- TEXT BLOCK -->
+                <div class="flex flex-col space-y-1">
+                  <h4 class="text-lg font-semibold text-white">${u.title}</h4>
+                  <p class="text-gray-300 leading-relaxed">${u.description}</p>
+                </div>
               </div>
             `).join("")}
           </div>
