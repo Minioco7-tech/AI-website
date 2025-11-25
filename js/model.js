@@ -214,6 +214,9 @@ document.addEventListener('DOMContentLoaded', async () => {
           <div class="space-y-6">
             ${model.use_cases.map(u => `
               <div class="flex flex-col space-y-1">
+
+                <!-- BLUE BULLET -->
+                <span class="w-1 h-1 rounded-full bg-blue-500 mt-1 flex-shrink-0"></span>
         
                 <!-- Use Case Title (same brightness as other section titles) -->
                 <h4 class="text-lg font-semibold text-white">${u.title}</h4>
