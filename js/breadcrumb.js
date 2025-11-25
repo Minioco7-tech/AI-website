@@ -11,7 +11,7 @@ export function renderBreadcrumb(items) {
     if (index > 0) {
       const separator = document.createElement('span');
       separator.textContent = '/';
-      separator.className = 'mx-2 text-gray-500 text-sm flex items-center';
+      separator.className = 'separator';
       breadcrumbEl.appendChild(separator);
     }
 
