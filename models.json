@@ -90,7 +90,7 @@
       "category": ["assistants", "documents", "development", "data", "jobs"],
       "type": "N/A",
       "description": "Google Gemini combines language, image and reasoning capabilities to deliver contextual understanding and creative assistance. Helps users to analyse data, generate ideas and complete complex tasks efficiently.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/gemini.webp",
       "link": "https://gemini.google.com"
     },
     {
@@ -351,7 +351,7 @@
       "category": ["research", "data"],
       "type": "N/A",
       "description": "AlphaFold predicts 3D protein structures from amino acid sequences, transforming biological research and accelerating drug discovery.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/alphafold.webp",
       "link": "https://deepmind.google/science/alphafold/"
     },
     {
