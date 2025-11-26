@@ -225,7 +225,7 @@
       "category": ["documents", "office", "jobs"],
       "type": "N/A",
       "description": "Scribe records digital workflows and auto-creates illustrated guides. It’s perfect for training, documentation and onboarding with minimal manual effort.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/scribe.webp",
       "link": "https://scribehow.com/"
     },
     {
@@ -234,7 +234,7 @@
       "category": ["documents", "research"],
       "type": "N/A",
       "description": "Scholarcy summarises academic papers and highlights key arguments, making research digestion faster for students and professionals alike.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/scholarcy.webp",
       "link": "https://www.scholarcy.com/"
     },
     {
@@ -243,7 +243,7 @@
       "category": ["documents", "research"],
       "type": "N/A",
       "description": "Paperpal helps researchers and writers improve language, clarity and formatting in manuscripts using AI-driven editing and style feedback.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/paperpal.webp",
       "link": "https://paperpal.com/"
     },
     {
@@ -252,7 +252,7 @@
       "category": ["documents", "jobs"],
       "type": "N/A",
       "description": "Wordtune rewrites and improves text to sound natural, concise, and engaging. It allows the user to adapt tone for emails, reports, essays and blogs.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/wordtune.webp",
       "link": "https://www.wordtune.com/summarizer"
     },
     {
@@ -261,7 +261,7 @@
       "category": ["finance", "data", "research"],
       "type": "N/A",
       "description": "AlphaSense enables professionals to analyse corporate data, reports and transcripts using semantic search. It reveals market insights and trends through natural-language understanding.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/alpha-sense.webp",
       "link": "https://www.alpha-sense.com/"
     },
     {
@@ -270,7 +270,7 @@
       "category": ["finance", "data", "research"],
       "type": "N/A",
       "description": "Numer AI crowdsources machine-learning models for stock prediction, allowing data scientists to contribute models that compete on real financial data.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/numer.webp",
       "link": "https://numer.ai/"
     },
     {
@@ -279,7 +279,7 @@
       "category": ["finance", "data", "office"],
       "type": "N/A",
       "description": "Datarails automates financial planning and reporting by integrating spreadsheets with real-time data insights. Helping finance professionals make faster, data-driven decisions.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/datarails.webp",
       "link": "https://www.datarails.com/"
     },
     {
@@ -288,7 +288,7 @@
       "category": ["finance", "office"],
       "type": "N/A",
       "description": "Workiva streamlines corporate compliance, reporting and audit processes through AI-powered automation and collaboration tools for large organisations.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/workiva.webp",
       "link": "https://www.workiva.com/uk/"
     },
     {
@@ -297,7 +297,7 @@
       "category": ["finance", "research", "data"],
       "type": "N/A",
       "description": "Zeta Alpha provides enterprise knowledge search powered by AI, surfacing insights from unstructured corporate data and research repositories.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/zeta-alpha.webp",
       "link": "https://www.zeta-alpha.com/"
     },
     {
@@ -306,7 +306,7 @@
       "category": ["learning", "assistants"],
       "type": "N/A",
       "description": "Khanmigo is a personalised AI tutor guiding students through lessons, problem-solving and writing exercises with real-time feedback and encouragement.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/khanmigo.webp",
       "link": "https://www.khanmigo.ai/"
     },
     {
@@ -315,7 +315,7 @@
       "category": ["learning", "documents"],
       "type": "N/A",
       "description": "MindGrasp turns videos, lectures and documents into concise notes and summaries. Helping learners retain key information more effectively.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/mindgrasp.webp",
       "link": "https://www.mindgrasp.ai/?utm_source=chatgpt.com"
     },
     {
@@ -324,7 +324,7 @@
       "category": ["learning", "documents"],
       "type": "N/A",
       "description": "OpenRead provides AI-powered comprehension tools for reading and analysing study materials. Making complex topics easier to understand.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/openread.webp",
       "link": "https://www.openread.academy/"
     },
     {
