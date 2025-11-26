@@ -131,11 +131,11 @@
     },
     {
       "id": 12,
-      "name": "Codium AI", 
+      "name": "QODO", 
       "category": ["development", "documents"],
       "type": "N/A",
-      "description": "Codium AI - now Qodo - enhances code reliability by generating intelligent test cases and suggesting improvements. It integrates seamlessly into development workflows for cleaner, safer and faster code.",
-      "image": "Images/models/codium.webp",
+      "description": "Qodo enhances code reliability by generating intelligent test cases and suggesting improvements. It integrates seamlessly into development workflows for cleaner, safer and faster code.",
+      "image": "Images/models/qodo.webp",
       "link": "https://www.codium.ai/qodo/"
     },
     {
@@ -171,7 +171,7 @@
       "category": ["design"],
       "type": "N/A",
       "description": "Midjourney converts text prompts into artistic imagery. Producing unique visual compositions for storytelling, branding and concept design.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/midjourney.webp",
       "link": "https://www.midjourney.com/home"
     },
     {
@@ -180,7 +180,7 @@
       "category": ["design", "documents"],
       "type": "N/A",
       "description": "DALL-E 3 generates detailed, coherent images from natural language prompts. Empowering designers, educators and marketers to visualise concepts with precision.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/dall-e-3.webp",
       "link": "https://openai.com/index/dall-e-3/"
     },
     {
@@ -189,7 +189,7 @@
       "category": ["design", "office", "documents", "jobs"],
       "type": "N/A",
       "description": "Canva integrates AI into its design suite for image generation, layout suggestions and smart templates. It enables non-designers to produce professional visuals quickly.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/canva.webp",
       "link": "https://www.canva.com/ai-image-generator/?msockid=0a20bcbb87566ef007cfae3e86b66fa1"
     },
     {
@@ -207,7 +207,7 @@
       "category": ["design"],
       "type": "N/A",
       "description": "Leonardo AI specialises in generating game assets, illustrations and digital art. It focuses on style consistency and custom model training for designers and studios.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/leonardo.webp",
       "link": "https://leonardo.ai/"
     },
     {
@@ -216,7 +216,7 @@
       "category": ["documents", "learning", "jobs"],
       "type": "N/A",
       "description": "QuillBot refines writing through paraphrasing, tone adjustments and summarisation. It enhances clarity and consistency across academic, professional and creative writing.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/quillbot.webp",
       "link": "https://quillbot.com/"
     },
     {
