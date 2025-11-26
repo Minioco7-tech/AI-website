@@ -414,7 +414,7 @@
       "category": ["office", "development"],
       "type": "N/A",
       "description": "Arcwise simplifies data manipulation by transforming plain-English instructions into spreadsheet actions and advanced formulas.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/arcwise.webp",
       "link": "https://arcwise.app/"
     },
     {
@@ -423,7 +423,7 @@
       "category": ["office", "documents"],
       "type": "N/A",
       "description": "Google Workspace integrates AI across Docs, Sheets and Slides to enhance collaboration, automate workflows and boost productivity.", 
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/workspace.webp",
       "link": "https://workspace.google.com/"
     },
     {
@@ -432,7 +432,7 @@
       "category": ["office", "development"],
       "type": "N/A",
       "description": "Formulabot translates user requests into spreadsheet formulas instantly. Allowing non-technical users to automate complex data tasks seamlessly.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/formulabot.webp",
       "link": "https://www.formulabot.com/"
     },
     {
@@ -441,7 +441,7 @@
       "category": ["documents", "learning", "jobs"],
       "type": "N/A",
       "description": "Grammarly AI improves writing clarity, tone and correctness in real-time. Offering stylistic and structural suggestions tailored to the writer’s intent.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/grammarly.webp",
       "link": "https://www.grammarly.com/?msockid=0a20bcbb87566ef007cfae3e86b66fa1"
     },
     {
@@ -450,7 +450,7 @@
       "category": ["documents", "jobs"],
       "type": "N/A",
       "description": "Writer empowers teams to create brand-consistent content with tone, terminology and grammar guidance powered by enterprise AI.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/writer.webp",
       "link": "https://writer.com/"
     },
     {
@@ -459,7 +459,7 @@
       "category": ["documents", "design", "jobs"],
       "type": "N/A",
       "description": "Copysmith generates marketing copy, ads and product descriptions quickly. Allowing marketers to scale content creation with consistent messaging.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/copysmith.webp",
       "link": "https://copysmith.ai/"
     },
     {
