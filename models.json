@@ -333,7 +333,7 @@
       "category": ["learning", "research"],
       "type": "N/A",
       "description": "Explainpaper translates dense academic text into plain language, helping researchers and students grasp scientific papers quickly.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/explainpaper.webp",
       "link": "https://www.explainpaper.com/"
     },
     {
@@ -342,7 +342,7 @@
       "category": ["research", "learning"],
       "type": "N/A",
       "description": "Elicit automates research discovery and synthesis by generating hypotheses, summarising studies and suggesting related work.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/elicit.webp",
       "link": "https://elicit.com/"
     },
     {
@@ -360,7 +360,7 @@
       "category": ["research", "documents", "learning"],
       "type": "N/A",
       "description": "SciSpace helps users read, summarise and explore academic papers... through AI explanations, visualisations and semantic linking.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/scispace.webp",
       "link": "https://scispace.com/"
     },
     {
@@ -378,7 +378,7 @@
       "category": ["research", "finance"],
       "type": "N/A",
       "description": "Labguru automates lab workflows... from experiment tracking to inventory and data analysis. It esures efficient scientific collaboration.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/labguru.webp",
       "link": "https://www.labguru.com/"
     },
     {
@@ -387,7 +387,7 @@
       "category": ["development", "data", "research"],
       "type": "N/A",
       "description": "Pinecone AI offers a vector-database for semantic search and retrieval. Foundational for LLMs, recommendation engines and AI research.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/pinecone.webp",
       "link": "https://www.pinecone.io/"
     },
     {
@@ -396,7 +396,7 @@
       "category": ["office", "data"],
       "type": "N/A",
       "description": "GPTexcel automates spreadsheet tasks like formula creation, chart building and data summarisation using natural language prompts.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/gptexcel.webp",
       "link": "https://gptexcel.uk/?utm_source=chatgpt.com"
     },
     {
@@ -405,7 +405,7 @@
       "category": ["office", "data", "finance"],
       "type": "N/A",
       "description": "DataGPT lets users chat directly with their data. Generating visual reports and insights automatically through AI analysis.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/datagpt.webp",
       "link": "https://datagpt.com/"
     },
     {
