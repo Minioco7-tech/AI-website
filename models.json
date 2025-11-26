@@ -108,7 +108,7 @@
       "category": ["assistants", "research", "documents", "jobs"],
       "type": "N/A",
       "description": "Perplexity AI merges search and conversation, answering questions with citations and concise summaries. It is seful for research, study and general knowledge exploration.",
-      "image": "assets/images/placeholder.png",    
+      "image": "Images/models/perplexity.webp",    
       "link": "https://www.perplexity.ai"
     },
     {
@@ -117,7 +117,7 @@
       "category": ["assistants", "documents", "research", "jobs"],
       "type": "N/A",
       "description": "Claude, from Anthropic, is an advanced assistant focused on safe and helpful reasoning. It supports writing, summarisation, coding and task automation in a natural manner.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/claude.webp",
       "link": "https://claude.ai"
     },
     {
@@ -126,7 +126,7 @@
       "category": ["development", "data"],
       "type": "N/A",
       "description": "Codex AI translates human language into code. Assisting developers in automating repetitive programming tasks, writing functions and learning syntax in multiple languages.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/codex.webp",
       "link": "https://openai.com/index/openai-codex"
     },
     {
@@ -135,7 +135,7 @@
       "category": ["development", "documents"],
       "type": "N/A",
       "description": "Codium AI - now Qodo - enhances code reliability by generating intelligent test cases and suggesting improvements. It integrates seamlessly into development workflows for cleaner, safer and faster code.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/codium.webp",
       "link": "https://www.codium.ai/qodo/"
     },
     {
@@ -144,7 +144,7 @@
       "category": ["development", "design", "documents"],
       "type": "N/A",
       "description": "Stitch helps developers collaborate and generate code using natural language. It bridges the gap between design and development, allowing users to prototype or build projects quickly.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/stitch.webp",
       "link": "https://stitch.withgoogle.com/"
     },
     {
@@ -153,7 +153,7 @@
       "category": ["development", "documents"],
       "type": "N/A",
       "description": "Blackbox AI searches, explains and writes code snippets across repositories. It accelerates debugging, learning and documentation for developers using various frameworks and languages.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/blackbox.webp",
       "link": "https://www.blackbox.ai/"
     },
     {
@@ -162,7 +162,7 @@
       "category": ["development", "design"],
       "type": "N/A",
       "description": "DeepSite transforms text prompts into live websites or prototypes. It merges web design and automation, allowing creators to launch responsive pages with minimal coding knowledge.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/huggingface.webp",
       "link": "https://huggingface.co/spaces/enzostvs/deepsite"
     },
     {
@@ -198,7 +198,7 @@
       "category": ["design", "assistants", "jobs"],
       "type": "N/A",
       "description": "Playground provides a creative sandbox for testing text-to-image and text-generation models. Encouraging experimentation and visual exploration for artists and developers alike.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/playground.webp",
       "link": "https://playground.com/"
     },
     {
@@ -873,7 +873,7 @@
       "category": ["assistants", "research", "documents"],
       "type": "N/A",
       "description": "Perplexity is an AI search tool that gives clear answers backed by sources. It’s great for researching topics, learning something new, or getting reliable summaries quickly.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/perplexity.webp",
       "link": "https://www.perplexity.ai/"
     },
     {
