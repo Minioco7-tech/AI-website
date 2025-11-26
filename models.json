@@ -468,7 +468,7 @@
       "category": ["documents", "jobs"],
       "type": "N/A",
       "description": "Hyperwrite acts as a personal writing companion. Assisting with brainstorming, drafting and improving text while adapting to your voice.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/hyperwrite.webp",
       "link": "https://www.hyperwriteai.com/"
     },
     {
@@ -477,7 +477,7 @@
       "category": ["documents", "design", "jobs"],
       "type": "N/A",
       "description": "Inkforall combines SEO optimisation with AI-assisted content creation. Helping writers produce high-ranking, engaging material for blogs and websites.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/inkforall.webp",
       "link": "https://inkforall.com/"
     },
     {
@@ -486,7 +486,7 @@
       "category": ["learning", "research"],
       "type": "N/A",
       "description": "MindLuster offers an extensive collection of free online courses in various subjects. Allowing learners to build skills and earn certificates.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/mindluster.webp",
       "link": "https://www.mindluster.com/"
     },
     {
@@ -495,7 +495,7 @@
       "category": ["development", "design"],
       "type": "N/A",
       "description": "React Bits provides reusable animated UI components for React developers. Helping to build visually dynamic and responsive interfaces quickly.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/reactbits.webp",
       "link": "https://www.reactbits.dev/"
     },
     {
@@ -504,7 +504,7 @@
       "category": ["design", "office"],
       "type": "N/A",
       "description": "Wondershare provides an ecosystem of creative software for editing, file management and publishing. Supporting digital creators and professionals.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/wondershare.webp",
       "link": "https://www.wondershare.net/"
     },
     {
@@ -513,7 +513,7 @@
       "category": ["development", "office"],
       "type": "N/A",
       "description": "Code Beautify hosts online tools for formatting, validating and converting code and data. Simplifying debugging and data cleaning processes.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/codebeautify.webp",
       "link": "https://codebeautify.org/"
     },
     {
@@ -522,7 +522,7 @@
       "category": ["office", "development"],
       "type": "N/A",
       "description": "10015 is a hub of free online tools for text, images and development tasks. Offering all-in-one convenience for quick productivity.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/10015.webp",
       "link": "https://10015.io/"
     },
     {
@@ -531,7 +531,7 @@
       "category": ["design"],
       "type": "N/A",
       "description": "Paperanimator allows artists to draw frame-by-frame animations in a digital format. Blending traditional creativity with AI assistance.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/paperanimator.webp",
       "link": "https://www.paperanimator.org/"
     },
     {
@@ -540,7 +540,7 @@
       "category": ["documents", "office"],
       "type": "N/A",
       "description": "TinyWow offers free browser-based utilities for document editing, image optimisation and quick file conversion. All powered by AI.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/tinywow.webp",
       "link": "https://tinywow.com/"
     },
     {
@@ -549,7 +549,7 @@
       "category": ["development", "design"],
       "type": "N/A",
       "description": "Natively helps developers create high-performance web applications with native functionality using modern build frameworks.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/natively.webp",
       "link": "https://natively.dev"
     },
     {
@@ -558,7 +558,7 @@
       "category": ["learning", "research"],
       "type": "N/A",
       "description": "Learn Anything maps interconnected learning paths across topics. Helping users plan efficient routes to mastery through visual knowledge graphs.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/learnanything.webp",
       "link": "https://www.learnanything.com/"
     },
     {
@@ -567,7 +567,7 @@
       "category": ["research", "development"],
       "type": "N/A",
       "description": "Higgsfield applies AI to data science workflows. Automating technical analysis, visualisation and predictive modelling.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/higgsfield.webp",
       "link": "https://higgsfield.ai/"
     },
     {
@@ -576,7 +576,7 @@
       "category": ["development", "design"],
       "type": "N/A",
       "description": "AnimeJS is a lightweight JavaScript animation engine. Letting developers build rich, interactive motion effects with simple syntax.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/animejs.webp",
       "link": "https://animejs.com/"
     },
     {
@@ -585,7 +585,7 @@
       "category": ["design", "audio"],
       "type": "N/A",
       "description": "Gambo AI helps designers and marketers create high-quality visual assets. Supporting branding, advertising and storytelling projects.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/gambo.webp",
       "link": "https://www.gambo.ai/"
     },
     {
@@ -594,7 +594,7 @@
       "category": ["design", "audio"],
       "type": "N/A",
       "description": "Jitter is a motion design tool for creating smooth UI animations and short video content. Perfect for digital designers and creators.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/jitter.webp",
       "link": "https://jitter.video/"
     },
     {
