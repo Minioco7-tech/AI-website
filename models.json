@@ -603,7 +603,7 @@
       "category": ["assistants", "development"],
       "type": "N/A",
       "description": "Emergent integrates AI tools for coding, planning and team automation. Helping users streamline development workflows efficiently.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/emergent.webp",
       "link": "https://app.emergent.sh/landing"
     },
     {
@@ -612,7 +612,7 @@
       "category": ["documents", "finance", "jobs"],
       "type": "N/A",
       "description": "InterviewAI simulates interview scenarios with realistic questions and feedback. Helping users practice and improve performance before real interviews.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/interviewai.webp",
       "link": "https://www.interviewai.io/"
     },
     {
@@ -621,7 +621,7 @@
       "category": ["design", "jobs"],
       "type": "N/A",
       "description": "LogoDiffusion generates unique brand logos using AI diffusion models. Allowing users to design professional visuals instantly.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/logodiffusion.webp",
       "link": "https://logodiffusion.com/"
     },
     {
@@ -630,7 +630,7 @@
       "category": ["design"],
       "type": "N/A",
       "description": "Anara provides AI-powered creative collaboration tools that assist designers and teams in producing cohesive branding and visual projects.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/anara.webp",
       "link": "https://anara.com/"
     },
     {
@@ -639,7 +639,7 @@
       "category": ["design"],
       "type": "N/A",
       "description": "Claid enhances and generates visual content using AI. Perfect for image editing, upscaling and creative automation.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/claid.webp",
       "link": "https://claid.ai/"
     },
     {
@@ -648,7 +648,7 @@
       "category": ["finance", "documents", "jobs"],
       "type": "N/A",
       "description": "HireFlow streamlines recruitment by automating candidate sourcing, outreach and evaluation. Helping companies and applicants connect faster.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/hireflow.webp",
       "link": "https://www.hireflow.net/"
     },
     {
@@ -657,7 +657,7 @@
       "category": ["office", "assistants", "documents"],
       "type": "N/A",
       "description": "Designed for plaintiff-law firms. A legal-AI platform you can train and teach to assist with case intake, litigation workflows and document drafting throughout an entire case lifecycle.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/eve.webp",
       "link": "https://www.eve.legal"
     },
     {
@@ -666,7 +666,7 @@
       "category": ["office", "assistants", "documents"],
       "type": "N/A",
       "description": "Spellbook is an AI tool specialised for contract review and drafting, built on top of legal-language models. It helps transactional lawyers quickly analyse, draft and benchmark contract language worldwide.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/spellbook.webp",
       "link": "https://www.spellbook.legal"
     },
     {
@@ -675,7 +675,7 @@
       "category": ["research", "data", "documents"],
       "type": "N/A",
       "description": "PQAI is an open-source AI prior-art search tool for inventors and researchers. It accepts plain-language invention descriptions and finds relevant patents and literature to improve patent quality.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/projectpq.webp",
       "link": "https://projectpq.ai"
     },
     {
@@ -684,7 +684,7 @@
       "category": ["office", "assistants", "documents"],
       "type": "N/A",
       "description": "Granola is an AI-powered meeting notepad that transcribes, summarises and extracts actionable insights from back-to-back meetings. It integrates into work processes and aids follow-ups.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/granola.webp",
       "link": "https://www.granola.ai"
     },
     {
@@ -693,7 +693,7 @@
       "category": ["development", "office", "assistants"],
       "type": "N/A",
       "description": "n8n is a visual automation/workflow platform that allows you to build AI agents and integrate them with 400+ apps to perform automated tasks. NO code required!",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/n8n.webp",
       "link": "https://n8n.io/ai-agents"
     },
     {
@@ -702,7 +702,7 @@
       "category": ["office", "development", "assistants"],
       "type": "N/A",
       "description": "Make (previously Integromat) is a no-code automation platform. Enabling users to build, orchestrate and scale AI-powered workflows and agents across business functions.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/make.webp",
       "link": "https://www.make.com/en"
     },
     {
@@ -711,7 +711,7 @@
       "category": ["office", "assistants", "development"],
       "type": "N/A",
       "description": "Zapier is a widely-used automation platform that heavily integrates AI to connect apps, build agent and automate tasks across thousands of services with minimal code.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/zapier.webp",
       "link": "https://zapier.com"
     },
     {
@@ -720,7 +720,7 @@
       "category": ["office", "development", "data"],
       "type": "N/A",
       "description": "Boomi is an enterprise integration and automation platform offering AI-agents and workflows to streamline API/data management, process automation, and integration across systems.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/boomi.webp",
       "link": "https://boomi.com"
     },
     {
@@ -729,7 +729,7 @@
       "category": ["development", "design"],
       "type": "N/A",
       "description": "Lovable is an AI platform that lets users build web apps and websites via natural-language prompts. Simplifying front-end & full-stack development for non-technical users.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/lovable.webp",
       "link": "https://lovable.dev"
     },
     {
@@ -738,7 +738,7 @@
       "category": ["design", "office", "documents"],
       "type": "N/A",
       "description": "ATLAS is an AI store-builder tool that custom-generates Shopify and e-commerce stores. Design, copy, create product photos and themes via AI from product links.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/atlas.webp",
       "link": "https://www.helloatlas.io"
     },
     {
@@ -747,7 +747,7 @@
       "category": ["development", "office"],
       "type": "N/A",
       "description": "Base44 is a platform that converts natural-language prompts into fully functional apps. No code needed! Ideal for creating dashboards, onboarding portals or internal tools rapidly.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/base44.webp",
       "link": "https://base44.com"
     },
     {
@@ -756,7 +756,7 @@
       "category": ["design", "audio"],
       "type": "N/A",
       "description": "HeyGen is a generative video/AI avatar platform. Allowing users to create AI-driven video avatars and narration from text, enabling quick production of human-like video content without filming.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/heygen.webp",
       "link": "https://www.heygen.com"
     },
     {
@@ -765,7 +765,7 @@
       "category": ["design","audio"],
       "type": "N/A",
       "description": "Artlist.io is an AI-enhanced media platform offering royalty-free music, sound effects and AI tools for content creators to generate media assets.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/artlist.webp",
       "link": "https://artlist.io"
     },
     {
@@ -774,7 +774,7 @@
       "category": ["data", "finance"],
       "type": "N/A",
       "description": "Precision offers AI-driven financial modelling and analytics. Helping businesses and teams visualise data to forecast KPI's, simulate scenarios and make data-driven investment decisions.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/precision.webp",
       "link": "https://www.precision.co"
     },
     {
