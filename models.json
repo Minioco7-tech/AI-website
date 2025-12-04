@@ -783,7 +783,7 @@
       "category": ["office", "assistants", "documents"],
       "type": "N/A",
       "description": "Fyxer is an AI-enabled tool that connects to your inbox, drafts replies in your voice, takes meeting notes and automates follow-ups from your calendar and email.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/fyxer.webp",
       "link": "https://www.fyxer.com/"
     },
     {
@@ -792,7 +792,7 @@
       "category": ["data", "documents"],
       "type": "N/A",
       "description": "SimilarWeb is a web analytics platform using AI to provide competitive insights, web traffic data and market intelligence for creators and businesses. Allowing you to comoare your websites performance to direct competitors.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/similarweb.webp",
       "link": "https://www.similarweb.com/"
     },
     {
@@ -801,7 +801,7 @@
       "category": ["documents", "design", "audio"],
       "type": "N/A",
       "description": "PopAI provides creators with generative AI workflows to produce content (blogs, social posts, videos etc.) at scale. Enabling faster ideation and production cycles.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/popai.webp",
       "link": "https://www.popai.pro"
     },
     {
@@ -810,7 +810,7 @@
       "category": ["assistants", "office", "documents"],
       "type": "N/A",
       "description": "BuddyPro AI acts as a personal AI assistant for professionals. Automating tasks like note-taking, follow-ups, content drafting and meeting summarisation to free up time.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/buddypro.webp",
       "link": "https://buddypro.ai/"
     },
     {
@@ -819,7 +819,7 @@
       "category": ["audio", "development", "assistants"],
       "type": "N/A",
       "description": "VAPI is a voice-agent platform that enables developers to build and deploy conversational voice agents at scale with low latency and enterprise reliability.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/vapi.webp",
       "link": "https://vapi.ai/"
     },
     {
@@ -828,7 +828,7 @@
       "category": ["development", "data"],
       "type": "N/A",
       "description": "Codiga checks your code for mistakes and helps improve quality as you write. It gives suggestions inside your editor so you can write cleaner, safer code.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/codiga.webp",
       "link": "https://www.codiga.io/"
     },
     {
@@ -837,7 +837,7 @@
       "category": ["assistants", "research", "data"],
       "type": "N/A",
       "description": "DeepSeek is an AI assistant built to handle long, detailed questions. It can read files, explain topics and help with research while being fast and affordable to use.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/deepseek.webp",
       "link": "https://www.deepseek.com/en"
     },
     {
@@ -855,7 +855,7 @@
       "category": ["assistants", "documents", "development"],
       "type": "N/A",
       "description": "Grok is an AI assistant designed to give quick, real-time answers using information from the web. It’s helpful for staying updated, writing content and even doing light coding tasks.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/grok.webp",
       "link": "https://x.ai/grok"
     },
     {
@@ -882,7 +882,7 @@
       "category": ["design", "office", "documents"],
       "type": "N/A",
       "description": "Beautiful.AI creates clean, well-designed presentation slides automatically. You type the content, it formats everything professionally with smart layouts.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/beautiful.webp",
       "link": "https://www.beautiful.ai/"
     },
     {
@@ -891,7 +891,7 @@
       "category": ["design", "office", "documents"],
       "type": "N/A",
       "description": "Pitch is a modern presentation tool for teams. It makes it easy to create slides, share ideas, add visuals and work together in real time.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/pitch.webp",
       "link": "https://pitch.com/"
     },
     {
@@ -900,7 +900,7 @@
       "category": ["design", "office", "documents"],
       "type": "N/A",
       "description": "Plus AI helps you create full PowerPoint or Google Slides presentations using simple prompts. It designs layouts, adds visuals and builds complete decks automatically.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/plusai.webp",
       "link": "https://plusai.com/"
     },
     {
@@ -909,7 +909,7 @@
       "category": ["design", "office"],
       "type": "N/A",
       "description": "SlidesGo offers a large collection of ready-made slide templates for school, work or creative projects. It makes presentation design fast and easy for beginners.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/slidesgo.webp",
       "link": "https://slidesgo.com/"
     },
     {
@@ -918,7 +918,7 @@
       "category": ["development", "documents"],
       "type": "N/A",
       "description": "AskCodi helps developers by turning everyday questions into code snippets or useful explanations. It’s helpful for beginners learning to code or developers working faster.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/askcodi.webp",
       "link": "https://www.askcodi.com/"
     },
     {
@@ -927,7 +927,7 @@
       "category": ["development","assistants", "documents"],
       "type": "N/A",
       "description": "Cursor is a code editor enhanced with built-in AI assistance. It helps developers write, fix, and understand code directly inside the editor, making programming faster and easier for beginners and professionals.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/cursor.webp",
       "link": "https://cursor.com/"
     },
     {
@@ -936,7 +936,7 @@
       "category": ["development", "assistants"],
       "type": "N/A",
       "description": "Replit is an online coding environment where you can build, run, and deploy software from your browser. Its AI tools help generate code, explain errors, and speed up development.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/replit.webp",
       "link": "https://replit.com/"
     },
     {
@@ -954,7 +954,7 @@
       "category": ["development"],
       "type": "N/A",
       "description": "Tabnine is an AI coding assistant that suggests code completions as you type. It learns from your coding style to offer personal, accurate suggestions.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/tabnine.webp",
       "link": "https://www.tabnine.com/"
     },
     {
@@ -963,7 +963,7 @@
       "category": ["design", "documents"],
       "type": "N/A",
       "description": "Clippit turns long videos into short clips by automatically trimming highlights, identifying key moments and producing ready-to-share content.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/clippit.webp",
       "link": "https://clippit.ai/"
     },
     {
@@ -972,7 +972,7 @@
       "category": ["office", "documents"],
       "type": "N/A",
       "description": "Friday.ai creates weekly reports by pulling updates from tools you already use. It automatically summarises progress, tasks, and blockers for teams.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/friday.webp",
       "link": "https://www.friday.so/"
     },
     {
