@@ -981,7 +981,7 @@
       "category": ["documents", "assistants", "office", "jobs"],
       "type": "N/A",
       "description": "MailMaestro writes personalised emails using AI. You choose the tone, message and details. It generates clean professional emails ready to send.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/maestrolabs.webp",
       "link": "https://www.maestrolabs.com/"
     },
     {
@@ -990,7 +990,7 @@
       "category": ["office", "assistants", "documents"],
       "type": "N/A",
       "description": "Shortwave is an AI-powered email inbox that summarises messages, drafts replies and helps users stay organised with faster email workflows.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/shortwave.webp",
       "link": "https://www.shortwave.com/"
     },
     {
@@ -999,7 +999,7 @@
       "category": ["office", "assistants", "documents"],
       "type": "N/A",
       "description": "Superhuman is a fast, AI-enhanced email client designed to help busy professionals process inboxes quickly, draft messages, and organise tasks efficiently.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/superhuman.webp",
       "link": "https://superhuman.com/"
     },
     {
@@ -1008,7 +1008,7 @@
       "category": ["design"],
       "type": "N/A",
       "description": "Adobe Firefly creates images, graphics and design elements using text prompts. It focuses on clean, high-quality visuals with strong brand-safe controls.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/firefly.webp",
       "link": "https://firefly.adobe.com/"
     },
     {
@@ -1017,7 +1017,7 @@
       "category": ["design"],
       "type": "N/A",
       "description": "FLUX.1 is an AI image generator known for producing bold, artistic visuals with rich detail. Built for designers who want more creative control.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/flux.webp",
       "link": "https://flux-ai.io/"
     },
     {
@@ -1026,7 +1026,7 @@
       "category": ["design"],
       "type": "N/A",
       "description": "Ideogram generates images and typography with accurate text rendering, making it ideal for posters, logos, and social graphics.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/ideogram.webp",
       "link": "https://ideogram.ai/"
     },
     {
@@ -1035,7 +1035,7 @@
       "category": ["design"],
       "type": "N/A",
       "description": "Recraft creates vectors, icons, patterns and illustrations using AI. Geared toward graphic designers needing consistent brand-ready assets.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/recraft.webp",
       "link": "https://www.recraft.ai/"
     },
     {
@@ -1044,7 +1044,7 @@
       "category": ["design"],
       "type": "N/A",
       "description": "OpenArt lets users generate, explore, and fine-tune AI images. Optimised for creators experimenting with different styles and models.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/openart.webp",
       "link": "https://openart.ai"
     },
     {
@@ -1053,7 +1053,7 @@
       "category": ["design", "development"],
       "type": "N/A",
       "description": "Bricks generates websites using simple prompts and visual tools. Users can design pages, layouts and components without needing to code.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/bricks.webp",
       "link": "https://www.thebricks.com"
     },
     {
@@ -1062,7 +1062,7 @@
       "category": ["data", "office"],
       "type": "N/A",
       "description": "Gigasheet lets users analyse huge datasets without the need of spreadsheets or coding. Upload a file and explore it instantly with AI-powered insights.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/gigasheet.webp",
       "link": "https://www.gigasheet.com/"
     },
     {
@@ -1071,7 +1071,7 @@
       "category": ["data", "office"],
       "type": "N/A",
       "description": "Rows AI integrates AI formulas into spreadsheets. Helping users automate reports, research and data tasks directly inside a spreadsheet interface.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/rows.webp",
       "link": "https://rows.com/ai"
     },
     {
@@ -1080,7 +1080,7 @@
       "category": ["data", "office"],
       "type": "N/A",
       "description": "SheetAI adds AI functions to Google Sheets so users can summarise text, generate content and automate tasks using simple formulas.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/sheetai.webp",
       "link": "https://www.sheetai.app/"
     },
     {
@@ -1089,7 +1089,7 @@
       "category": ["office", "assistants", "documents"],
       "type": "N/A",
       "description": "Avoma records meetings and turns them into summaries, action items and searchable notes. Helping teams stay aligned without manual note-taking.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/avoma.webp",
       "link": "https://www.avoma.com/"
     },
     {
@@ -1098,7 +1098,7 @@
       "category": ["office", "data"],
       "type": "N/A",
       "description": "Equal Time tracks who is speaking in meetings and uses AI to show participation patterns. Helping improve team communication and inclusivity.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/equaltime.webp",
       "link": "https://equaltime.io/"
     },
     {
@@ -1107,7 +1107,7 @@
       "category": ["office", "assistants", "documents"],
       "type": "N/A",
       "description": "Fathom transcribes calls and automatically highlights important moments. Giving users instant summaries for customer, team or sales conversations.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/fathom.webp",
       "link": "https://www.fathom.ai/"
     },
     {
@@ -1116,7 +1116,7 @@
       "category": ["office", "documents"],
       "type": "N/A",
       "description": "Fellow helps teams run organised meetings with shared agendas, notes, feedback tools, and AI-generated summaries of discussions.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/fellow.webp",
       "link": "https://fellow.ai/"
     },
     {
@@ -1125,7 +1125,7 @@
       "category": ["office", "assistants", "documents"],
       "type": "N/A",
       "description": "Fireflies records meetings, transcribes them and extracts tasks and insights. Helping teams review conversations without rewatching calls.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/fireflies.webp",
       "link": "https://fireflies.ai/"
     },
     {
@@ -1134,7 +1134,7 @@
       "category": ["office", "audio"],
       "type": "N/A",
       "description": "Krisp removes background noise and echoes from calls. It helps users sound clear and professional during meetings or recordings.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/krisp.webp",
       "link": "https://krisp.ai/"
     },
     {
@@ -1143,7 +1143,7 @@
       "category": ["office", "documents", "assistants", "learning"],
       "type": "N/A",
       "description": "Otter transcribes meetings and classrooms in real time. Producing clean notes, speaker highlights and summaries automatically.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/otter.webp",
       "link": "https://otter.ai/"
     },
     {
@@ -1152,7 +1152,7 @@
       "category": ["office", "assistants", "development"],
       "type": "N/A",
       "description": "Integrately lets users connect apps and automate workflows in one click. It includes thousands of ready-made automation templates for you to explore.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/integrately.webp",
       "link": "https://integrately.com/"
     },
     {
@@ -1161,7 +1161,7 @@
       "category": ["data", "finance"],
       "type": "N/A",
       "description": "Squirro uses AI to analyse enterprise data and surface insights for business teams. Helping guide decisions and identify opportunities.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/squirro.webp",
       "link": "https://squirro.com/"
     },
     {
@@ -1170,7 +1170,7 @@
       "category": ["data", "development", "finance"],
       "type": "N/A",
       "description": "HPE offers enterprise-grade AI infrastructure and automation tools that help organisations train models, analyse data and run AI workloads at scale.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/hpe.webp",
       "link": "https://www.hpe.com/"
     },
     {
@@ -1179,7 +1179,7 @@
       "category": ["office", "development"],
       "type": "N/A",
       "description": "Exalate helps teams sync data between platforms like Jira, ServiceNow, Salesforce and GitHub with automated, bi-directional updates.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/exalate.webp",
       "link": "https://exalate.com/"
     },
     {
@@ -1188,7 +1188,7 @@
       "category": ["development", "data"],
       "type": "N/A",
       "description": "Suse AI supports enterprise development and infrastructure through open-source tools. Helping teams deploy, manage and secure AI workloads.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/suse.webp",
       "link": "https://www.suse.com/"
     },
     {
@@ -1197,7 +1197,7 @@
       "category": ["learning", "documents"],
       "type": "N/A",
       "description": "Teachmate AI helps teachers create lesson plans, worksheets and classroom materials quickly using simple prompts.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/teachmate.webp",
       "link": "https://teachmateai.com/"
     },
     {
@@ -1206,7 +1206,7 @@
       "category": ["development", "design"],
       "type": "N/A",
       "description": "AmpCode turns text prompts into working websites and apps. Helping beginners and teams create software without needing deep coding experience.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/ampcode.webp",
       "link": "https://ampcode.com/"
     },
     {
@@ -1215,7 +1215,7 @@
       "category": ["office", "assistants", "documents"],
       "type": "N/A",
       "description": "Monday.com uses AI to automate tasks, summarise updates and organise teamwork across projects and workflows.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/monday.webp",
       "link": "https://monday.com/"
     },
     {
@@ -1224,7 +1224,7 @@
       "category": ["office", "assistants"],
       "type": "N/A",
       "description": "Wrike offers AI-powered project management features. Including task suggestions, summaries and automated organisation for teams.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/wrike.webp",
       "link": "https://www.wrike.com/"
     },
     {
@@ -1233,7 +1233,7 @@
       "category": ["office", "documents"],
       "type": "N/A",
       "description": "Jotform uses AI to help users build forms, surveys, and reports quickly, making data collection simple for any skill level.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/jotform.webp",
       "link": "https://www.jotform.com/"
     },
     {
@@ -1242,7 +1242,7 @@
       "category": ["documents", "assistants"],
       "type": "N/A",
       "description": "JustDone provides AI tools for writing, researching, and generating content, making it easy to produce articles, emails, and ideas quickly.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/justdone.webp",
       "link": "https://justdone.com/"
     },
     {
@@ -1251,7 +1251,7 @@
       "category": ["documents", "design", "jobs"],
       "type": "N/A",
       "description": "Jasper helps businesses create marketing and brand content such as social posts, ads and long-form writing. With strong tools for tone and style.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/jasper.webp",
       "link": "https://www.jasper.ai/"
     },
     {
@@ -1260,7 +1260,7 @@
       "category": ["documents", "office"],
       "type": "N/A",
       "description": "MailChimp uses AI to create emails, subject lines and campaigns that improve engagement. It also helps users manage contacts and track performance.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/mailchimp.webp",
       "link": "https://mailchimp.com/"
     },
     {
@@ -1269,7 +1269,7 @@
       "category": ["documents", "assistants"],
       "type": "N/A",
       "description": "JotBot helps users generate written content such as essays, blogs, and messages quickly using simple prompts and editing tools.",
-      "image": "assets/images/placeholder.png",
+      "image": "Images/models/jotbot.webp",
       "link": "https://app.myjotbot.com/"
     }
 ]
