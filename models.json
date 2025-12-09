@@ -5112,7 +5112,7 @@
       "information": [
         { "label": "Developer", "value": "JustDone" },
         { "label": "Founded", "value": "2020s" },
-        { "label": "AI writing, editing and content-checking toolbox" , "label": "Type"},
+        { "label": "AI writing, editing and content-checking toolbox" , "value": "Type"},
         { "label": "Privacy", "value": "Processes uploaded text securely with a focus on academic and professional use" },
         { "label": "API", "value": "APIs and integrations may be available for high-volume and partner use cases" }
       ],
