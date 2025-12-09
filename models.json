@@ -484,7 +484,7 @@
       "name": "Stitch",
       "category": ["development", "design", "documents"],
       "type": "AI UI Design & Code Generator",
-      "description": "Stitch is a Google Labs experiment that turns natural language prompts and visual references into production-ready user interfaces.\n\nPowered by Gemini, Stitch lets designers and developers describe an interface in plain English or upload wireframes and screenshots. The tool then generates responsive layouts, UI components and front-end code for web or mobile in minutes.\n\nBy combining AI-assisted design with code export, Stitch helps teams move from idea to interactive prototype faster, reducing repetitive layout work and improving collaboration between product, design and engineering.",
+      "description": "Stitch is an AI tool that helps developers and designers work together by turning natural language ideas into real code and interactive prototypes. Instead of switching between multiple tools or struggling to translate design concepts into working software, users can describe what they want and Stitch helps generate the structure, layout and logic.\n\nThe platform is built to support collaboration. Designers can share their ideas in simple language and developers can quickly turn those ideas into early versions of apps or websites. This speeds up the entire workflow because teams spend less time explaining concepts and more time building.\n\nStitch is ideal for early stage prototyping, design handoffs and rapid development. It gives teams a faster and clearer way to move from idea to execution, which makes it helpful for startups, product teams and students learning to build projects.",
       "subtitle": "Google’s AI tool for turning ideas into UI and frontend code.",
       "tags": ["UI design", "frontend code", "prototyping", "Google Labs", "Gemini"],
       "features": [
@@ -524,7 +524,7 @@
       "name": "Blackbox AI",
       "category": ["development", "documents"],
       "type": "AI Coding Assistant & Multi-Agent Workspace",
-      "description": "Blackbox AI is a full-stack coding assistant that combines code search, autocompletion, multi-agent workflows and an API for advanced automation.\n\nDevelopers can use Blackbox AI in the browser, IDEs and terminals to autocomplete functions, explain snippets, refactor code and generate boilerplate across hundreds of languages and frameworks. Its agents can read entire repositories, run tasks, and suggest fixes in context.\n\nFor teams and tool builders, Blackbox AI also exposes a multi-agent API, letting you integrate its capabilities into your own products or internal tools for automated refactoring, QA and documentation.",
+      "description": "Blackbox AI is a coding assistant that helps developers search, understand and write code more efficiently. It looks across projects and repositories to find examples that match what the user needs, then explains how the code works in simple terms. This makes it useful for learning new frameworks and solving problems without spending hours online searching for answers.\n\nThe tool also supports instant code generation. Users can ask Blackbox to write functions, fix errors or translate code between languages. It provides clean and readable snippets that developers can use as a starting point, which speeds up development and reduces repetitive work.\n\nBlackbox AI is helpful for beginners who need clear explanations and for experienced developers who want to improve productivity. It simplifies debugging, documentation and everyday coding tasks so users can focus on building real features.",
       "subtitle": "Multi-agent AI coding assistant for search, completion and automation.",
       "tags": ["code assistant", "autocomplete", "code search", "agents", "API"],
       "features": [
@@ -564,7 +564,7 @@
       "name": "DeepSite",
       "category": ["development", "design"],
       "type": "Text-to-Website Generator",
-      "description": "DeepSite is an AI-powered website builder that transforms natural language prompts into live, editable front-end code.\n\nBuilt as an open-source project on Hugging Face Spaces and powered by DeepSeek models, DeepSite generates responsive HTML, CSS and JavaScript from simple instructions such as “a landing page for a SaaS analytics tool with pricing and testimonials.”\n\nBecause it outputs real code, creators can export, tweak and host the generated sites anywhere, making DeepSite ideal for rapid prototyping, learning front-end patterns, and shipping small projects without heavy tooling.",
+      "description": "DeepSite is an AI tool that turns text prompts into real websites or interactive layouts, which makes it easy for anyone to create a web presence without advanced design or coding knowledge. Users can describe the type of website they want and DeepSite generates a responsive design that works across devices.\n\nThe platform also helps with early stage prototyping. Creators can test ideas quickly by generating multiple layouts, editing content and refining the style through simple instructions. This allows users to explore different directions without needing to build each version manually.\n\nDeepSite is ideal for entrepreneurs, students, small businesses and designers who want a simple way to move from concept to a working visual. It removes technical barriers and lets users focus on their ideas rather than the code behind them.",
       "subtitle": "Open-source AI tool that turns prompts into live, editable websites.",
       "tags": ["website builder", "no-code", "frontend", "DeepSeek", "Hugging Face"],
       "features": [
@@ -604,7 +604,7 @@
       "name": "Midjourney",
       "category": ["design"],
       "type": "AI Image Generator",
-      "description": "Midjourney is a high-end generative image model and subscription service developed by Midjourney, Inc. It turns natural language prompts into detailed, stylised images suitable for concept art, product visuals and storytelling.\n\nRunning primarily through Discord and its own web interface, Midjourney offers powerful controls for style, aspect ratio, variations, upscaling and now short video animations. Creators can explore anything from painterly illustration to photorealism while drawing inspiration from a large community feed.\n\nThanks to its quality and unique aesthetic, Midjourney has become a go-to tool for designers, agencies, indie creators and studios who need rapid visual exploration and moodboarding.",
+      "description": "Midjourney is an AI image generator known for creating artistic and expressive visuals from short text prompts. It produces images with strong style, rich detail and emotional impact, which makes it a favorite among designers, storytellers and creative professionals.\n\nThe platform encourages exploration and creativity. Users can experiment with different styles, moods and compositions to develop concepts for characters, environments or branding. This makes Midjourney helpful for people who want to visualise ideas before moving into full production.\n\nMidjourney is ideal for artists, writers, marketers and studios that want unique visuals for campaigns, concept art or storytelling. It turns imagination into vivid artwork with very little effort, even for users who have no design background.",
       "subtitle": "Premium AI image generation for art, concepts and visual exploration.",
       "tags": ["image generation", "art", "illustration", "concept art", "Discord"],
       "features": [
@@ -644,7 +644,7 @@
       "name": "DALL-E 3",
       "category": ["design", "documents"],
       "type": "Text-to-Image Model",
-      "description": "DALL·E 3 is OpenAI’s third-generation text-to-image model, designed to understand nuanced prompts and generate coherent, detailed images.\n\nIntegrated directly into ChatGPT and available via the OpenAI API, DALL·E 3 can create illustrations, diagrams, concept art and product visuals from natural language descriptions. It is especially strong at following complex instructions and rendering readable text within images.\n\nWith robust safety filters and content policies, DALL·E 3 is widely used by educators, marketers, product teams and individual creators who want fast, controllable visuals without needing dedicated design tools.",
+      "description": "DALL-E 3 is an AI model that creates detailed and accurate images based on everyday language descriptions. It understands context well, which allows it to generate images that match your prompt closely, including characters, objects and scenes with clear structure and consistency.\n\nThe model is designed to be easy for beginners. Users can describe what they want in natural language and DALL-E 3 handles the rest, producing illustrations, product mockups, educational diagrams or creative artwork. This makes it a flexible tool that supports both practical and artistic needs.\n\nDALL-E 3 is helpful for designers, teachers, marketers and creators who need fast and reliable visuals. It simplifies the creative process and allows anyone to turn written ideas into polished images without needing drawing or design skills.",
       "subtitle": "OpenAI’s advanced text-to-image model integrated with ChatGPT and the API.",
       "tags": ["image generation", "OpenAI", "illustration", "diagrams", "marketing visuals"],
       "features": [
@@ -684,7 +684,7 @@
       "name": "Canva",
       "category": ["design", "office", "documents", "jobs"],
       "type": "Design Suite with AI Tools",
-      "description": "Canva is a popular browser-based design suite that combines drag-and-drop editing with AI features like image generation, layout suggestions and copy assistance.\n\nUsers can start from thousands of templates for social posts, presentations, documents, resumes and more, then enhance them using AI tools such as Text to Image, Magic Media and Magic Design.\n\nBecause it’s built for non-designers as well as professionals, Canva has become a staple for individuals, teams and organisations that need fast, on-brand visuals without complex design software.",
+      "description": "Canva combines a simple design interface with AI features that help users create professional visuals quickly. Its tools support everything from social media graphics to presentations and the built-in AI can generate images, suggest layouts and adjust designs automatically to fit your project.\n\nThe platform is designed for non-designers, which means you can drag, drop and customise elements without any experience. AI features help refine your design, choose colors, fix spacing and create content that looks clean and modern. Canva also offers thousands of templates that users can personalise in minutes.\n\nCanva is ideal for small business owners, marketers, teachers and students who want polished graphics without hiring a designer. It brings professional design capabilities to everyone and saves time on creative tasks that would otherwise be complicated.",
       "subtitle": "All-in-one design platform with integrated AI for images, layouts and content.",
       "tags": ["graphic design", "templates", "image generator", "presentations", "social media"],
       "features": [
@@ -724,7 +724,7 @@
       "name": "Playground",
       "category": ["design", "assistants", "jobs"],
       "type": "AI Design & Image Editor",
-      "description": "Playground is a browser-based AI design studio that makes it easy to create and edit images with prompts, presets and intuitive editing tools.\n\nPositioned as a creative alternative to tools like Canva, Playground offers style presets, templates and powerful editing controls for inpainting, background changes and adjustments. Users can iterate on visuals until they match a specific aesthetic or brand.\n\nIt’s aimed at creators, marketers and small businesses who want fast, flexible image generation without deep design skills, while still allowing fine-grained control when needed.",
+      "description": "Playground is a creative environment where users can experiment with text-to-image and language generation models. It is designed to encourage exploration, letting users try different styles, ideas and prompts to see how AI responds. This makes it a fun and flexible tool for learning how generative AI works.\n\nThe platform supports both visual and written creativity. Users can generate artwork, write stories, test prompts or combine different models for unique results. Because everything updates instantly, Playground helps users understand how small changes in wording can produce very different outcomes.\n\nPlayground is great for artists, developers and curious users who want a place to test ideas freely. It offers a safe and inspiring space for experimentation, prototyping and creative growth.",
       "subtitle": "Prompt-based design studio for generating and editing images with AI.",
       "tags": ["image editor", "image generation", "templates", "design", "branding"],
       "features": [
@@ -764,7 +764,7 @@
       "name": "Leonardo",
       "category": ["design"],
       "type": "AI Art & Asset Creation Suite",
-      "description": "Leonardo.Ai is a creative suite for generating images, game assets and video content using a collection of powerful AI models.\n\nIt offers token-based plans, custom model training, style presets and workflows tailored for production use. Creators can maintain consistent characters, scenes and branding across large volumes of assets, making Leonardo popular with game studios, marketers and independent creators.\n\nBeyond the web app, Leonardo provides an API for developers who want to automate asset generation or build AI-powered features into their own tools and pipelines.",
+      "description": "Leonardo is an AI image generator designed for creating high quality game assets, illustrations and digital art. It focuses on style consistency, which makes it especially helpful for studios and designers who need multiple images that match the same look and feel.\n\nUsers can train custom models, upload references and refine images through simple instructions. This allows artists to generate characters, textures and environments that maintain continuity across a full project. It also speeds up early concept work before moving into detailed production.\n\nLeonardo is popular among game developers, illustrators and creative teams who want fast, reliable and cohesive visuals. It provides a powerful mix of quality and control that helps bring imaginative worlds to life.",
       "subtitle": "AI image and video generation platform built for consistent, production-ready assets.",
       "tags": ["image generator", "game assets", "illustration", "video", "API"],
       "features": [
@@ -804,7 +804,7 @@
       "name": "QuillBot",
       "category": ["documents", "learning", "jobs"],
       "type": "Writing Assistant & Paraphraser",
-      "description": "QuillBot is an AI-powered writing assistant best known for its paraphrasing tool, which helps users rephrase, clarify and improve text while preserving meaning.\n\nIt also includes grammar checking, summarisation, citation assistance and tone controls, making it useful for students, academics, professionals and non-native speakers. QuillBot is available via the web, browser extensions and integrations with tools like Word.\n\nBy focusing on improving existing writing rather than generating entire documents from scratch, QuillBot is often used alongside other tools to tighten, clarify and professionalise drafts.",
+      "description": "QuillBot is a writing assistant that helps users improve clarity, tone and structure through paraphrasing, summarising and rewriting tools. It is designed to make writing easier for students, professionals and anyone who wants to express ideas more effectively.\n\nThe platform can adjust the tone of your text, shorten long passages or reword sentences to sound more natural. Its summariser helps condense articles, papers and reports into simple overviews, which makes reading and studying faster and more efficient.\n\nQuillBot is useful for academic writing, emails, business documents and creative projects. It helps users communicate clearly, avoid repetition and refine their voice so the final result reads smoothly and professionally.",
       "subtitle": "AI paraphrasing and editing suite for clearer, more polished writing.",
       "tags": ["paraphrasing", "grammar", "summarization", "citation", "writing assistant"],
       "features": [
@@ -843,33 +843,38 @@
       "id": 22,
       "name": "Scribe",
       "category": ["documents", "office", "jobs"],
-      "type": "N/A",
-      "description": "Scribe records digital workflows and auto-creates illustrated guides. It’s perfect for training, documentation and onboarding with minimal manual effort.",
-      "subtitle": "",
-      "tags": [""],
-      "features": [""
+      "type": "Process Documentation & SOP Generator",
+      "description": "Scribe (also known as Scribehow) captures your on-screen actions and automatically turns them into step-by-step guides with screenshots and annotations.\n\nInstead of manually writing standard operating procedures, training docs or walkthroughs, you simply click “Record” and complete the workflow once. Scribe then generates a polished guide showing each step, complete with text descriptions, arrows and highlighting.\n\nThis makes it easy for teams to document processes at scale, reduce repetitive explanations and keep onboarding, support and internal documentation up to date.",
+      "subtitle": "Automatically turn clicks into step-by-step guides and SOPs.",
+      "tags": ["process documentation", "SOPs", "onboarding", "screen capture", "how-to guides"],
+      "features": [
+        "One-click recording of on-screen workflows to auto-generate step-by-step guides",
+        "Automatic screenshots, step titles and text descriptions for each action",
+        "Built-in editing tools to blur sensitive data, reorder steps and add notes",
+        "Easy sharing via links, embeds or exports to PDF and other formats",
+        "Team workspace with permissions to centralise process documentation"
       ],
       "use_cases": [
         {
-          "title": "",
-          "description": ""
+          "title": "Employee Onboarding & Training",
+          "description": "Create role-specific walkthroughs for tools and processes so new hires can self-serve, reducing the time senior staff spend explaining the same workflows."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Support & Customer Success Guides",
+          "description": "Generate clear, visual guides for common tasks to share with customers or internal support teams, improving resolution times and consistency."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Internal SOP & Process Libraries",
+          "description": "Standardise how tasks are done across departments by recording and storing up-to-date SOPs in a central, searchable knowledge base."
         }
       ],
-      "pricing": "",
+      "pricing": "Free plan available — paid Pro and Team plans based on users and features.",
       "information": [
-        { "label": "Developer", "value": "" },
-        { "label": "Founded", "value": "" },
-        { "label": "Type", "value": "" },
-        { "label": "Privacy", "value": "" },
-        { "label": "API", "value": "" }
+        { "label": "Developer", "value": "Scribe (Scribehow)" },
+        { "label": "Founded", "value": "Late 2010s" },
+        { "label": "Type", "value": "Process documentation and workflow capture tool" },
+        { "label": "Privacy", "value": "Cloud-based SaaS with workspace- and document-level controls" },
+        { "label": "API", "value": "No widely available public API; primarily browser extension and web app" }
       ],
       "image": "Images/models/scribe.webp",
       "link": "https://scribehow.com/"
@@ -878,33 +883,38 @@
       "id": 23,
       "name": "Scholarcy",
       "category": ["documents", "research"],
-      "type": "N/A",
-      "description": "Scholarcy summarises academic papers and highlights key arguments, making research digestion faster for students and professionals alike.",
-      "subtitle": "",
-      "tags": [""],
-      "features": [""
+      "type": "Academic Paper Summariser",
+      "description": "Scholarcy is an AI-powered tool that ingests research articles, reports and book chapters, then generates concise summaries and structured flashcards.\n\nIt identifies key contributions, methods, findings, references and tables so readers can quickly understand the essence of a paper without reading every line. Scholarcy works via a web app, browser extension and integrations with popular reference managers.\n\nBy automating literature digestion, Scholarcy helps students, researchers and professionals scan more papers, stay current in their field and prioritise what to read in full.",
+      "subtitle": "Turn research papers into quick, structured summaries and flashcards.",
+      "tags": ["paper summarizer", "research", "literature review", "flashcards", "PDF"],
+      "features": [
+        "Automatically summarises academic articles, reports and chapters into key points",
+        "Extracts tables, figures, references and key terms from PDFs and Word documents",
+        "Generates flashcards for quick review and study",
+        "Browser extension for summarising papers directly from publisher sites",
+        "Exports to formats compatible with reference managers and note-taking tools"
       ],
       "use_cases": [
         {
-          "title": "",
-          "description": ""
+          "title": "Faster Literature Reviews",
+          "description": "Researchers use Scholarcy to scan large volumes of papers, quickly identifying which are worth deeper reading for a given project."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Study & Revision Support",
+          "description": "Students convert dense articles into digestible summaries and flashcards, making it easier to remember key concepts for exams and assignments."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Professional Research Monitoring",
+          "description": "Analysts and knowledge workers summarise reports and whitepapers to stay informed without spending hours on each document."
         }
       ],
-      "pricing": "",
+      "pricing": "Free trial available — individual and institutional subscriptions offered.",
       "information": [
-        { "label": "Developer", "value": "" },
-        { "label": "Founded", "value": "" },
-        { "label": "Type", "value": "" },
-        { "label": "Privacy", "value": "" },
-        { "label": "API", "value": "" }
+        { "label": "Developer", "value": "Scholarcy Limited" },
+        { "label": "Founded", "value": "Late 2010s" },
+        { "label": "Type", "value": "AI summarisation and research assistant platform" },
+        { "label": "Privacy", "value": "Processes uploaded documents in the cloud; provides data and security documentation" },
+        { "label": "API", "value": "API and integrations available for publishers and platforms" }
       ],
       "image": "Images/models/scholarcy.webp",
       "link": "https://www.scholarcy.com/"
@@ -913,33 +923,38 @@
       "id": 24,
       "name": "Paperpal",
       "category": ["documents", "research"],
-      "type": "N/A",
-      "description": "Paperpal helps researchers and writers improve language, clarity and formatting in manuscripts using AI-driven editing and style feedback.",
-      "subtitle": "",
-      "tags": [""],
-      "features": [""
+      "type": "Academic Writing Assistant",
+      "description": "Paperpal is an AI editing assistant built specifically for research manuscripts and academic writing.\n\nIt checks grammar, clarity, technical phrasing and journal style, offering suggestions that align with academic conventions rather than generic consumer writing. Paperpal integrates with Word and popular journal submission platforms.\n\nBy tailoring its feedback to researchers, Paperpal helps authors polish language, improve readability and reduce the risk of desk rejection due to language issues.",
+      "subtitle": "AI editing for research papers, tuned to academic standards and style.",
+      "tags": ["academic writing", "proofreading", "grammar", "journals", "editing"],
+      "features": [
+        "Context-aware grammar and language corrections for scientific writing",
+        "Suggestions to improve clarity, concision and readability",
+        "Checks for journal-specific style and submission requirements in supported workflows",
+        "Microsoft Word and web editor integrations for in-place editing",
+        "Feedback focused on preserving technical meaning while improving presentation"
       ],
       "use_cases": [
         {
-          "title": "",
-          "description": ""
+          "title": "Pre-Submission Manuscript Polishing",
+          "description": "Authors refine drafts before submission, reducing language-related rejections and saving time during revision cycles."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Support for Non-Native English Researchers",
+          "description": "Researchers who write in English as a second language use Paperpal to ensure their work reads professionally and clearly."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Journal-Integrated Workflows",
+          "description": "Writers use Paperpal through integrated journal platforms to fix key issues before formally submitting their manuscripts."
         }
       ],
-      "pricing": "",
+      "pricing": "Free tier with limited checks — premium plans for heavier editing and advanced features.",
       "information": [
-        { "label": "Developer", "value": "" },
-        { "label": "Founded", "value": "" },
-        { "label": "Type", "value": "" },
-        { "label": "Privacy", "value": "" },
-        { "label": "API", "value": "" }
+        { "label": "Developer", "value": "Paperpal (Cactus Communications)" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI academic writing and editing assistant" },
+        { "label": "Privacy", "value": "Designed with researcher and publisher privacy requirements in mind" },
+        { "label": "API", "value": "Offered primarily via integrations; no broad public self-serve API" }
       ],
       "image": "Images/models/paperpal.webp",
       "link": "https://paperpal.com/"
@@ -948,33 +963,38 @@
       "id": 25,
       "name": "Wordtune",
       "category": ["documents", "jobs"],
-      "type": "N/A",
-      "description": "Wordtune rewrites and improves text to sound natural, concise, and engaging. It allows the user to adapt tone for emails, reports, essays and blogs.",
-      "subtitle": "",
-      "tags": [""],
-      "features": [""
+      "type": "Writing Assistant & Rewriter",
+      "description": "Wordtune is an AI writing assistant that helps users rewrite, shorten, expand and adjust the tone of their text.\n\nIt plugs into browsers, Google Docs, email clients and other tools to improve everyday writing—from emails and LinkedIn posts to reports and essays. Users can choose between more formal, casual, concise or creative variations.\n\nWordtune is especially useful for professionals and students who want to sound more natural and confident in English without losing their own voice.",
+      "subtitle": "Rewrite and refine sentences to sound clearer, more natural and on tone.",
+      "tags": ["rewriting", "tone", "email", "productivity", "summarization"],
+      "features": [
+        "Rewrite suggestions for sentences and paragraphs in multiple tones and styles",
+        "Shorten or expand text while preserving core meaning",
+        "Summarisation for long documents, articles and meeting notes",
+        "Browser extension and integrations with popular writing tools",
+        "Context-aware suggestions aimed at natural, human-like phrasing"
       ],
       "use_cases": [
         {
-          "title": "",
-          "description": ""
+          "title": "Professional Communication",
+          "description": "Knowledge workers use Wordtune to refine emails, proposals and internal messages so they read clearly and professionally."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Academic & Student Writing",
+          "description": "Students rewrite drafts to improve clarity and coherence while keeping their own ideas and structure intact."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Content & Social Writing",
+          "description": "Creators adapt tone for blog posts, social updates and landing pages, testing multiple versions to see what resonates best."
         }
       ],
-      "pricing": "",
+      "pricing": "Free plan with daily limits — Premium subscription unlocks higher usage and advanced features.",
       "information": [
-        { "label": "Developer", "value": "" },
-        { "label": "Founded", "value": "" },
-        { "label": "Type", "value": "" },
-        { "label": "Privacy", "value": "" },
-        { "label": "API", "value": "" }
+        { "label": "Developer", "value": "AI21 Labs (Wordtune)" },
+        { "label": "Founded", "value": "Around 2020" },
+        { "label": "Type", "value": "AI writing and rewriting assistant" },
+        { "label": "Privacy", "value": "Cloud-based service with enterprise data-handling options" },
+        { "label": "API", "value": "Underlying language models available via AI21 API; Wordtune itself is app-focused" }
       ],
       "image": "Images/models/wordtune.webp",
       "link": "https://www.wordtune.com/summarizer"
@@ -983,33 +1003,38 @@
       "id": 26,
       "name": "AlphaSense",
       "category": ["finance", "data", "research"],
-      "type": "N/A",
-      "description": "AlphaSense enables professionals to analyse corporate data, reports and transcripts using semantic search. It reveals market insights and trends through natural-language understanding.",
-      "subtitle": "",
-      "tags": [""],
-      "features": [""
+      "type": "Market Intelligence & Document Search Platform",
+      "description": "AlphaSense is an AI-powered market intelligence and search platform used by financial institutions and enterprises to analyse millions of documents.\n\nIt indexes earnings calls, broker research, filings, news, private content and internal documents, then applies semantic search to surface relevant insights for investors, strategy teams and executives.\n\nBy combining high-quality content with natural-language query and alerting, AlphaSense helps users discover trends, track competitors and make better-informed decisions.",
+      "subtitle": "Semantic search and insights across earnings calls, filings, research and more.",
+      "tags": ["market intelligence", "semantic search", "earnings calls", "filings", "research"],
+      "features": [
+        "Semantic search across transcripts, filings, broker research and news sources",
+        "Topic and company tracking with real-time alerts and watchlists",
+        "Dashboarding and collaboration tools for teams and workflows",
+        "Integration with premium research providers and proprietary content",
+        "Advanced filters for sectors, geographies, time ranges and document types"
       ],
       "use_cases": [
         {
-          "title": "",
-          "description": ""
+          "title": "Equity & Credit Research",
+          "description": "Analysts search across earnings calls, filings and research to quickly build investment theses and stay on top of company developments."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Competitive & Market Intelligence",
+          "description": "Strategy and corporate development teams monitor competitors, market shifts and regulatory trends from a single platform."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Executive & Board Briefing",
+          "description": "Leaders receive curated insights on key topics and companies ahead of meetings, negotiations and strategic planning."
         }
       ],
-      "pricing": "",
+      "pricing": "Enterprise-focused — pricing typically customised based on seats, content and modules.",
       "information": [
-        { "label": "Developer", "value": "" },
-        { "label": "Founded", "value": "" },
-        { "label": "Type", "value": "" },
-        { "label": "Privacy", "value": "" },
-        { "label": "API", "value": "" }
+        { "label": "Developer", "value": "AlphaSense, Inc." },
+        { "label": "Founded", "value": "2011" },
+        { "label": "Type", "value": "AI-driven market intelligence and search platform" },
+        { "label": "Privacy", "value": "Enterprise-grade security with support for private and internal content" },
+        { "label": "API", "value": "APIs and integrations available for enterprise customers" }
       ],
       "image": "Images/models/alpha-sense.webp",
       "link": "https://www.alpha-sense.com/"
@@ -1018,33 +1043,38 @@
       "id": 27,
       "name": "Numer AI",
       "category": ["finance", "data", "research"],
-      "type": "N/A",
-      "description": "Numer AI crowdsources machine-learning models for stock prediction, allowing data scientists to contribute models that compete on real financial data.",
-      "subtitle": "",
-      "tags": [""],
-      "features": [""
+      "type": "Crowdsourced Quant Research Platform",
+      "description": "Numer AI (Numerai) runs a global data science tournament where participants build machine-learning models on encrypted datasets to predict stock market movements.\n\nContributors submit model predictions rather than raw code, and Numerai combines them into a meta-model that informs its hedge fund’s trading decisions. Contributors are rewarded based on their model’s performance and risk-adjusted returns.\n\nThe platform blends open participation, encrypted data and financial incentives, making it a unique bridge between academic-style modelling and real-world asset management.",
+      "subtitle": "ML tournament where data scientists build models that drive a live hedge fund.",
+      "tags": ["quant", "tournament", "ML models", "hedge fund", "time series"],
+      "features": [
+        "Regular tournaments where users submit stock market predictions from ML models",
+        "Encrypted datasets designed to prevent overfitting to specific securities",
+        "Staking and reward mechanisms based on model performance and risk",
+        "Active research community sharing modelling ideas and best practices",
+        "APIs and tooling for automating submissions and analyses"
       ],
       "use_cases": [
         {
-          "title": "",
-          "description": ""
+          "title": "Quantitative Research Experimentation",
+          "description": "Data scientists experiment with feature engineering and model architectures on real-world financial data without needing raw market feeds."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Portfolio of ML Strategies",
+          "description": "Participants build and maintain multiple models and strategies, using Numer AI as a sandbox for ongoing quant research."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Community-Driven Alpha Generation",
+          "description": "The platform aggregates thousands of independent models into a single meta-signal used in a live hedge fund."
         }
       ],
-      "pricing": "",
+      "pricing": "Free to participate — users can optionally stake capital to increase potential rewards.",
       "information": [
-        { "label": "Developer", "value": "" },
-        { "label": "Founded", "value": "" },
-        { "label": "Type", "value": "" },
-        { "label": "Privacy", "value": "" },
-        { "label": "API", "value": "" }
+        { "label": "Developer", "value": "Numerai" },
+        { "label": "Founded", "value": "2015" },
+        { "label": "Type", "value": "Crowdsourced quantitative research and hedge fund platform" },
+        { "label": "Privacy", "value": "Uses anonymised, obfuscated datasets; trading logic remains proprietary" },
+        { "label": "API", "value": "APIs and CLI tooling available for submissions and data access" }
       ],
       "image": "Images/models/numer.webp",
       "link": "https://numer.ai/"
@@ -1053,33 +1083,38 @@
       "id": 28,
       "name": "Datarails",
       "category": ["finance", "data", "office"],
-      "type": "N/A",
-      "description": "Datarails automates financial planning and reporting by integrating spreadsheets with real-time data insights. Helping finance professionals make faster, data-driven decisions.",
-      "subtitle": "",
-      "tags": [""],
-      "features": [""
+      "type": "FP&A Automation Platform",
+      "description": "Datarails is a financial planning and analysis (FP&A) platform that layers on top of spreadsheets to automate reporting, budgeting and forecasting.\n\nIt connects Excel models to live data sources, consolidates numbers from multiple files and departments, and provides dashboards and scenario modelling tools. Finance teams can keep working in familiar spreadsheets while gaining controls and automation.\n\nThe result is faster close cycles, fewer manual errors and more time spent on analysis rather than data wrangling.",
+      "subtitle": "Bring automation and real-time data to spreadsheet-based FP&A workflows.",
+      "tags": ["FP&A", "Excel", "financial reporting", "budgeting", "forecasting"],
+      "features": [
+        "Integrates Excel spreadsheets with centralised, governed financial data",
+        "Automated consolidation of budgets, forecasts and actuals from multiple sources",
+        "Dashboards, variance analyses and scenario modelling for finance teams",
+        "Workflow and version control to manage collaboration across departments",
+        "AI-assisted insights and commentary for management reporting"
       ],
       "use_cases": [
         {
-          "title": "",
-          "description": ""
+          "title": "Monthly & Quarterly Close",
+          "description": "Automate consolidation of actuals and save days of manual work during each close cycle."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Budgeting & Forecasting",
+          "description": "Streamline multi-department budgeting and rolling forecasts while keeping familiar Excel models in place."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Board & Management Reporting",
+          "description": "Produce accurate, visually clear reports and dashboards that update as underlying data changes."
         }
       ],
-      "pricing": "",
+      "pricing": "Sold as a B2B SaaS platform — pricing depends on team size and implementation scope.",
       "information": [
-        { "label": "Developer", "value": "" },
-        { "label": "Founded", "value": "" },
-        { "label": "Type", "value": "" },
-        { "label": "Privacy", "value": "" },
-        { "label": "API", "value": "" }
+        { "label": "Developer", "value": "Datarails" },
+        { "label": "Founded", "value": "Mid-2010s" },
+        { "label": "Type", "value": "FP&A and financial reporting automation platform" },
+        { "label": "Privacy", "value": "Enterprise-grade security; designed for sensitive financial data" },
+        { "label": "API", "value": "Integrations and data connectors available for enterprise systems" }
       ],
       "image": "Images/models/datarails.webp",
       "link": "https://www.datarails.com/"
@@ -1088,33 +1123,38 @@
       "id": 29,
       "name": "Workiva",
       "category": ["finance", "office"],
-      "type": "N/A",
-      "description": "Workiva streamlines corporate compliance, reporting and audit processes through AI-powered automation and collaboration tools for large organisations.",
-      "subtitle": "",
-      "tags": [""],
-      "features": [""
+      "type": "Compliance & Reporting Platform",
+      "description": "Workiva is a cloud platform for connected reporting, compliance and audit workflows in large organisations.\n\nIt helps teams manage complex reporting obligations—such as financial statements, ESG, regulatory and internal reports—by connecting data, documents and teams in one environment. Automation and AI features reduce manual copy-paste, version confusion and risk.\n\nWorkiva is widely used by finance, risk, legal and ESG teams who need accurate, audit-ready reports that pull from consistent data sources.",
+      "subtitle": "Connected reporting and compliance automation for enterprises.",
+      "tags": ["compliance", "reporting", "ESG", "governance", "audit"],
+      "features": [
+        "Connected data model linking spreadsheets, documents and reports",
+        "Support for financial, ESG and regulatory reporting requirements",
+        "Workflow, approvals and audit trails for collaborative report creation",
+        "Integrations with ERPs, GRC tools and other enterprise systems",
+        "AI- and rules-based automations to reduce manual editing and copying"
       ],
       "use_cases": [
         {
-          "title": "",
-          "description": ""
+          "title": "Financial Reporting & Filings",
+          "description": "Finance teams create and file accurate, compliant financial statements and disclosures using connected data and automated roll-forwards."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "ESG & Sustainability Reports",
+          "description": "ESG teams gather data from across the organisation and produce consistent, auditable sustainability reports."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Audit & Controls",
+          "description": "Internal audit and controls teams gain better visibility into who changed what, when, and how it affects downstream reports."
         }
       ],
-      "pricing": "",
+      "pricing": "Enterprise pricing — tailored to organisation size, use cases and modules.",
       "information": [
-        { "label": "Developer", "value": "" },
-        { "label": "Founded", "value": "" },
-        { "label": "Type", "value": "" },
-        { "label": "Privacy", "value": "" },
-        { "label": "API", "value": "" }
+        { "label": "Developer", "value": "Workiva Inc." },
+        { "label": "Founded", "value": "2008" },
+        { "label": "Type", "value": "Connected reporting and compliance platform" },
+        { "label": "Privacy", "value": "SOC-compliant, enterprise-grade security and governance controls" },
+        { "label": "API", "value": "APIs and integrations available for enterprise data sources and workflows" }
       ],
       "image": "Images/models/workiva.webp",
       "link": "https://www.workiva.com/uk/"
@@ -1123,33 +1163,38 @@
       "id": 30,
       "name": "Zeta Alpha",
       "category": ["finance", "research", "data"],
-      "type": "N/A",
-      "description": "Zeta Alpha provides enterprise knowledge search powered by AI, surfacing insights from unstructured corporate data and research repositories.",
-      "subtitle": "",
-      "tags": [""],
-      "features": [""
+      "type": "Enterprise Knowledge & Research Search",
+      "description": "Zeta Alpha is an AI-powered search and discovery platform built to surface insights from unstructured information such as research papers, reports, emails and internal documents.\n\nUsing vector search and LLMs, it helps analysts, researchers and knowledge workers find relevant content across internal and external sources, then summarises and connects it via semantic relationships.\n\nEnterprises use Zeta Alpha to break down silos, accelerate research and improve how teams reuse knowledge scattered across systems.",
+      "subtitle": "AI semantic search that links insights across research and enterprise knowledge.",
+      "tags": ["enterprise search", "semantic search", "vector database", "knowledge management"],
+      "features": [
+        "Semantic search and discovery across multiple internal and external content sources",
+        "Topic, entity and relationship extraction to connect related documents",
+        "Research discovery features tailored to technical and scientific domains",
+        "Dashboards and workspaces for teams to organise and share findings",
+        "LLM-powered summarisation and question answering over indexed content"
       ],
       "use_cases": [
         {
-          "title": "",
-          "description": ""
+          "title": "Financial & Market Research",
+          "description": "Analysts unify broker research, internal notes and external publications to gain a holistic view on markets and companies."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "R&D and Innovation",
+          "description": "Technical teams surface relevant papers, patents and internal reports when exploring new technologies and products."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Enterprise Knowledge Hubs",
+          "description": "Large organisations turn fragmented content into a central, searchable knowledge layer for employees."
         }
       ],
-      "pricing": "",
+      "pricing": "Enterprise solution — pricing based on seats, data sources and deployment model.",
       "information": [
-        { "label": "Developer", "value": "" },
-        { "label": "Founded", "value": "" },
-        { "label": "Type", "value": "" },
-        { "label": "Privacy", "value": "" },
-        { "label": "API", "value": "" }
+        { "label": "Developer", "value": "Zeta Alpha" },
+        { "label": "Founded", "value": "Late 2010s" },
+        { "label": "Type", "value": "AI-powered enterprise search and research platform" },
+        { "label": "Privacy", "value": "Designed for secure handling of sensitive enterprise content" },
+        { "label": "API", "value": "APIs and connectors available for integrating with existing systems" }
       ],
       "image": "Images/models/zeta-alpha.webp",
       "link": "https://www.zeta-alpha.com/"
@@ -1158,8 +1203,39 @@
       "id": 31,
       "name": "Khanmigo",
       "category": ["learning", "assistants"],
-      "type": "N/A",
-      "description": "Khanmigo is a personalised AI tutor guiding students through lessons, problem-solving and writing exercises with real-time feedback and encouragement.",
+      "type": "AI Tutor & Teaching Assistant",
+      "description": "Khanmigo is Khan Academy’s AI-powered tutor designed to guide students through exercises, explanations and open-ended tasks.\n\nInstead of simply giving answers, Khanmigo prompts learners with hints, questions and feedback to support genuine understanding. It also helps teachers by generating example problems, lesson ideas and feedback on student work.\n\nThe assistant is aligned with Khan Academy’s mastery-based learning philosophy, aiming to be helpful, safe and educationally sound.",
+      "subtitle": "Khan Academy’s conversational AI tutor for students and teachers.",
+      "tags": ["tutoring", "education", "math", "writing", "Khan Academy"],
+      "features": [
+        "Step-by-step guidance for maths, science, humanities and more",
+        "Socratic-style questioning to encourage reasoning rather than simple answers",
+        "Writing feedback and brainstorming support for essays and creative tasks",
+        "Teacher tools for generating exercises, prompts and lesson ideas",
+        "Built on top of large language models with educational safety controls"
+      ],
+      "use_cases": [
+        {
+          "title": "Homework & Practice Help",
+          "description": "Students get guided help on problems they’re stuck on while still doing the thinking themselves."
+        },
+        {
+          "title": "Writing & Revision Support",
+          "description": "Learners receive feedback and suggestions on essays, stories and assignments while retaining ownership of their work."
+        },
+        {
+          "title": "Teacher Planning & Support",
+          "description": "Educators use Khanmigo to create example questions, activities and prompts aligned to topics they’re teaching."
+        }
+      ],
+      "pricing": "Offered through Khan Academy programs — availability and pricing vary by region and plan.",
+      "information": [
+        { "label": "Developer", "value": "Khan Academy" },
+        { "label": "Founded", "value": "2023 (pilot launch)" },
+        { "label": "Type", "value": "AI tutoring and teaching assistant" },
+        { "label": "Privacy", "value": "Built with student safety and privacy requirements in mind" },
+        { "label": "API", "value": "No public API; accessed through Khan Academy’s platform" }
+      ],
       "image": "Images/models/khanmigo.webp",
       "link": "https://www.khanmigo.ai/"
     },
@@ -1167,8 +1243,39 @@
       "id": 32,
       "name": "MindGrasp",
       "category": ["learning", "documents"],
-      "type": "N/A",
-      "description": "MindGrasp turns videos, lectures and documents into concise notes and summaries. Helping learners retain key information more effectively.",
+      "type": "AI Note-Taking & Summarization Tool",
+      "description": "MindGrasp is an AI assistant that turns lectures, videos, documents and web pages into concise notes, summaries and flashcards.\n\nUsers can upload files, paste links or connect platforms like YouTube and then ask questions, generate summaries or create study materials from the content.\n\nThis makes it easier for students and professionals to capture key ideas, revisit material and prepare for exams or presentations.",
+      "subtitle": "Turn any learning content into clear notes, summaries and flashcards.",
+      "tags": ["study notes", "summarization", "flashcards", "YouTube", "lectures"],
+      "features": [
+        "Summarises videos, audio, PDFs and web pages into digestible notes",
+        "Question answering over uploaded content for quick clarification",
+        "Automatic flashcard and quiz generation from source material",
+        "Organisation of notes by topics, classes or projects",
+        "Browser-based interface with support for multiple content types"
+      ],
+      "use_cases": [
+        {
+          "title": "Lecture & Class Capture",
+          "description": "Students convert lecture recordings and slides into structured notes and flashcards for revision."
+        },
+        {
+          "title": "Self-Paced Course Learning",
+          "description": "Learners taking MOOCs or online courses generate summaries from videos and readings to keep up more easily."
+        },
+        {
+          "title": "Professional Upskilling",
+          "description": "Professionals summarise long webinars, training sessions and documents into key takeaways."
+        }
+      ],
+      "pricing": "Freemium model — basic usage free with paid plans for higher limits and extra features.",
+      "information": [
+        { "label": "Developer", "value": "MindGrasp" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI summarisation and study assistant" },
+        { "label": "Privacy", "value": "Cloud service that processes user-uploaded content; privacy policy provided" },
+        { "label": "API", "value": "No major public API; primarily a direct-to-consumer web app" }
+      ],
       "image": "Images/models/mindgrasp.webp",
       "link": "https://www.mindgrasp.ai/?utm_source=chatgpt.com"
     },
@@ -1176,8 +1283,39 @@
       "id": 33,
       "name": "OpenRead",
       "category": ["learning", "documents"],
-      "type": "N/A",
-      "description": "OpenRead provides AI-powered comprehension tools for reading and analysing study materials. Making complex topics easier to understand.",
+      "type": "Reading & Comprehension Assistant",
+      "description": "OpenRead is a platform that helps learners and researchers understand complex study materials using AI.\n\nIt supports uploads of academic PDFs, textbooks and other documents, then provides explanations, summaries and question-answering over the content.\n\nBy turning dense reading into interactive dialogue, OpenRead helps users grasp concepts faster and stay engaged with challenging material.",
+      "subtitle": "AI assistant for deeply understanding textbooks, PDFs and study materials.",
+      "tags": ["reading", "comprehension", "study", "PDFs", "Q&A"],
+      "features": [
+        "Upload and analyse PDFs and study materials with AI",
+        "Summaries and section overviews to highlight the main ideas",
+        "Question-answering over the text to clarify confusing passages",
+        "Highlighting and note-taking tools to support active reading",
+        "Study-oriented features for exams and long-term retention"
+      ],
+      "use_cases": [
+        {
+          "title": "Studying Technical Textbooks",
+          "description": "Students break down challenging chapters into explanations and summaries they can actually follow."
+        },
+        {
+          "title": "Analysing Research Papers",
+          "description": "Learners and junior researchers use OpenRead to understand the key methods and conclusions without getting lost in jargon."
+        },
+        {
+          "title": "Exam Preparation",
+          "description": "Users review highlights, ask targeted questions and generate summaries from large volumes of reading material."
+        }
+      ],
+      "pricing": "Free tier with limited usage — paid plans for higher limits and premium features.",
+      "information": [
+        { "label": "Developer", "value": "OpenRead" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI-powered reading and study assistant" },
+        { "label": "Privacy", "value": "Processes uploaded documents in the cloud; provides user data and privacy details" },
+        { "label": "API", "value": "Focus on the web platform; no widely advertised open API" }
+      ],
       "image": "Images/models/openread.webp",
       "link": "https://www.openread.academy/"
     },
@@ -1185,8 +1323,39 @@
       "id": 34,
       "name": "Explainpaper",
       "category": ["learning", "research"],
-      "type": "N/A",
-      "description": "Explainpaper translates dense academic text into plain language, helping researchers and students grasp scientific papers quickly.",
+      "type": "Research Paper Explanation Tool",
+      "description": "Explainpaper is an AI tool that helps users understand dense academic text by explaining selected passages in simpler language.\n\nUsers upload PDFs or paste text, highlight confusing sections and receive clear, plain-English explanations while keeping the original context visible.\n\nThis makes research papers more accessible for students, interdisciplinary researchers and practitioners who may not be experts in a given field.",
+      "subtitle": "Highlight confusing paper sections and get clear, plain-language explanations.",
+      "tags": ["paper explanation", "research", "reading", "students", "plain language"],
+      "features": [
+        "Upload research papers and highlight specific sentences or paragraphs",
+        "Instant explanations that simplify technical language and jargon",
+        "Side-by-side view of original text and AI explanation",
+        "Support for PDFs and pasted text segments",
+        "Designed to preserve meaning while improving accessibility"
+      ],
+      "use_cases": [
+        {
+          "title": "Students New to a Field",
+          "description": "Learners tackle unfamiliar topics by having difficult sections of papers explained in simpler terms."
+        },
+        {
+          "title": "Interdisciplinary Research",
+          "description": "Researchers reading outside their core domain use Explainpaper to bridge terminology gaps."
+        },
+        {
+          "title": "Practitioner Learning",
+          "description": "Engineers, clinicians and professionals better understand cutting-edge research relevant to their practice."
+        }
+      ],
+      "pricing": "Free and paid tiers, depending on usage and features.",
+      "information": [
+        { "label": "Developer", "value": "Explainpaper" },
+        { "label": "Founded", "value": "Early 2020s" },
+        { "label": "Type", "value": "AI research paper explanation tool" },
+        { "label": "Privacy", "value": "Processes uploaded papers; users should review policy for sensitive documents" },
+        { "label": "API", "value": "No widely public commercial API; focused on the web app experience" }
+      ],
       "image": "Images/models/explainpaper.webp",
       "link": "https://www.explainpaper.com/"
     },
@@ -1194,8 +1363,39 @@
       "id": 35,
       "name": "Elicit",
       "category": ["research", "learning"],
-      "type": "N/A",
-      "description": "Elicit automates research discovery and synthesis by generating hypotheses, summarising studies and suggesting related work.",
+      "type": "AI Research Assistant",
+      "description": "Elicit is an AI research assistant that automates parts of the literature review and research synthesis process.\n\nIt uses language models to search academic databases, summarise papers, extract key information and suggest related work based on research questions rather than simple keyword matches.\n\nResearchers use Elicit to explore new topics, build evidence tables and surface relevant studies faster than manual searching alone.",
+      "subtitle": "Ask research questions and get AI-curated, summarised evidence from the literature.",
+      "tags": ["literature review", "research assistant", "papers", "evidence", "summarization"],
+      "features": [
+        "Question-based search that returns relevant papers and summaries",
+        "Automatic extraction of key details like methods, outcomes and populations",
+        "Tools for building and exporting evidence tables",
+        "Suggestions for related papers and concepts based on prior selections",
+        "Workflows tailored to systematic review and exploratory research tasks"
+      ],
+      "use_cases": [
+        {
+          "title": "Early-Stage Literature Reviews",
+          "description": "Researchers explore what’s been done on a topic and identify promising directions quickly."
+        },
+        {
+          "title": "Evidence Synthesis",
+          "description": "Teams build structured tables of study characteristics and outcomes to support decisions or formal reviews."
+        },
+        {
+          "title": "Hypothesis Generation",
+          "description": "Scientists and practitioners use Elicit to discover unexpected relationships and questions within a literature set."
+        }
+      ],
+      "pricing": "Freemium — core features free with limits; paid plans for heavier research workloads.",
+      "information": [
+        { "label": "Developer", "value": "Ought (Elicit)" },
+        { "label": "Founded", "value": "Elicit launched in early 2020s" },
+        { "label": "Type", "value": "AI research discovery and synthesis assistant" },
+        { "label": "Privacy", "value": "Handles user queries and project data in the cloud; aimed at research workflows" },
+        { "label": "API", "value": "Focus on the interactive web product; no broad public API announced" }
+      ],
       "image": "Images/models/elicit.webp",
       "link": "https://elicit.com/"
     },
@@ -1203,8 +1403,39 @@
       "id": 36,
       "name": "AlphaFold",
       "category": ["research", "data"],
-      "type": "N/A",
-      "description": "AlphaFold predicts 3D protein structures from amino acid sequences, transforming biological research and accelerating drug discovery.",
+      "type": "Protein Structure Prediction System",
+      "description": "AlphaFold is an AI system developed by DeepMind that predicts 3D protein structures from amino acid sequences with high accuracy.\n\nIts predictions, released via public databases and later open-source models, have transformed structural biology, enabling researchers to investigate protein function, disease mechanisms and potential drug targets without relying solely on experimental methods.\n\nAlphaFold has dramatically accelerated work in biology and medicine by making structural insights accessible to a much broader community.",
+      "subtitle": "DeepMind’s breakthrough AI for predicting 3D protein structures.",
+      "tags": ["biology", "proteins", "drug discovery", "DeepMind", "structure prediction"],
+      "features": [
+        "High-accuracy predictions of protein 3D structures from amino acid sequences",
+        "Public database of predicted structures for hundreds of thousands of proteins",
+        "Open-source models and code enabling community research and extensions",
+        "Integration into many bioinformatics workflows and tools",
+        "Support for accelerating hypothesis generation in structural biology"
+      ],
+      "use_cases": [
+        {
+          "title": "Drug Discovery & Target Identification",
+          "description": "Pharma and biotech teams use AlphaFold predictions to better understand binding sites and protein interactions."
+        },
+        {
+          "title": "Fundamental Biological Research",
+          "description": "Academic labs explore protein function and mechanisms using predicted structures as starting points."
+        },
+        {
+          "title": "Tool Building & Bioinformatics",
+          "description": "Developers integrate AlphaFold models into pipelines and tools for structural analysis and annotation."
+        }
+      ],
+      "pricing": "Model and many structure predictions are freely available; commercial applications may involve separate licensing or cloud costs.",
+      "information": [
+        { "label": "Developer", "value": "DeepMind (now part of Google DeepMind)" },
+        { "label": "Founded", "value": "Initial breakthrough results published 2018–2021" },
+        { "label": "Type", "value": "AI system for protein structure prediction" },
+        { "label": "Privacy", "value": "Research infrastructure; users should consider data sensitivity for proprietary sequences" },
+        { "label": "API", "value": "Available via various open-source implementations and cloud-hosted services" }
+      ],
       "image": "Images/models/alphafold.webp",
       "link": "https://deepmind.google/science/alphafold/"
     },
@@ -1212,8 +1443,39 @@
       "id": 37,
       "name": "SciSpace",
       "category": ["research", "documents", "learning"],
-      "type": "N/A",
-      "description": "SciSpace helps users read, summarise and explore academic papers... through AI explanations, visualisations and semantic linking.",
+      "type": "AI Research Reading Platform",
+      "description": "SciSpace (formerly Typeset) is a platform that helps users find, read and understand academic papers using AI.\n\nIt offers an AI co-pilot that explains concepts, summarises sections, answers questions about papers and links to related work, all while the user is reading.\n\nBy combining semantic search, interactive explanations and visual aids, SciSpace makes complex research more approachable for students, researchers and professionals.",
+      "subtitle": "Search, read and understand research papers with an AI co-pilot.",
+      "tags": ["research reading", "papers", "AI explanations", "semantic search", "students"],
+      "features": [
+        "Search and discovery of academic articles across fields",
+        "AI explanations and summaries embedded directly into the reading experience",
+        "Question-answering about specific sections, figures or concepts in a paper",
+        "Citation and related-work suggestions to broaden literature exploration",
+        "Tools for organising, highlighting and annotating research"
+      ],
+      "use_cases": [
+        {
+          "title": "Learning New Topics",
+          "description": "Students and early-career researchers use SciSpace to understand the basics of unfamiliar research areas faster."
+        },
+        {
+          "title": "Staying Current in a Field",
+          "description": "Researchers keep up with new publications and rely on summaries and explanations to triage what to read in depth."
+        },
+        {
+          "title": "Cross-Disciplinary Exploration",
+          "description": "Professionals explore research outside their core expertise with AI assistance to interpret terminology and methods."
+        }
+      ],
+      "pricing": "Free tier available — premium plans unlock advanced AI features and higher limits.",
+      "information": [
+        { "label": "Developer", "value": "SciSpace (formerly Typeset)" },
+        { "label": "Founded", "value": "Mid-2010s (as Typeset)" },
+        { "label": "Type", "value": "AI-powered platform for discovering and understanding research" },
+        { "label": "Privacy", "value": "Cloud-based service for reading and annotating research content" },
+        { "label": "API", "value": "Primarily a web app; integrations and partnerships more common than open API access" }
+      ],
       "image": "Images/models/scispace.webp",
       "link": "https://scispace.com/"
     },
@@ -1221,8 +1483,39 @@
       "id": 38,
       "name": "labguru",
       "category": ["research", "finance"],
-      "type": "N/A",
-      "description": "Labguru automates lab workflows... from experiment tracking to inventory and data analysis. It esures efficient scientific collaboration.",
+      "type": "Electronic Lab Notebook & Lab Management Platform",
+      "description": "Labguru is an electronic lab notebook (ELN) and lab management system that digitises experiments, inventory, equipment and project workflows.\n\nIt helps research organisations and labs track experiments, samples, reagents, budgets and compliance requirements in a single environment, replacing scattered spreadsheets and paper notebooks.\n\nBy capturing both scientific and operational data, Labguru supports more efficient collaboration, reproducibility and reporting across R&D teams.",
+      "subtitle": "Manage experiments, inventory and lab operations in one digital platform.",
+      "tags": ["ELN", "lab management", "inventory", "R&D", "compliance"],
+      "features": [
+        "Electronic lab notebook for documenting experiments and protocols",
+        "Inventory and sample management with location tracking and barcodes",
+        "Equipment, maintenance and scheduling tools",
+        "Project, budget and resource tracking for lab operations",
+        "Compliance and audit-ready records with role-based permissions"
+      ],
+      "use_cases": [
+        {
+          "title": "Biotech & Pharma R&D",
+          "description": "Labs manage experiments, samples and documentation in a structured, compliant environment."
+        },
+        {
+          "title": "Academic Research Labs",
+          "description": "Groups replace paper notebooks and disconnected spreadsheets with centralised data and inventory tracking."
+        },
+        {
+          "title": "Operations & Compliance",
+          "description": "Lab managers and operations teams keep track of equipment, ordering, budgets and regulatory requirements."
+        }
+      ],
+      "pricing": "SaaS pricing based on seats, modules and organisation size.",
+      "information": [
+        { "label": "Developer", "value": "Labguru" },
+        { "label": "Founded", "value": "Early 2010s" },
+        { "label": "Type", "value": "Electronic lab notebook and lab management platform" },
+        { "label": "Privacy", "value": "Designed for secure handling of sensitive scientific and operational data" },
+        { "label": "API", "value": "APIs and integrations available for connecting instruments and systems" }
+      ],
       "image": "Images/models/labguru.webp",
       "link": "https://www.labguru.com/"
     },
@@ -1230,8 +1523,39 @@
       "id": 39,
       "name": "Pinecone AI",
       "category": ["development", "data", "research"],
-      "type": "N/A",
-      "description": "Pinecone AI offers a vector-database for semantic search and retrieval. Foundational for LLMs, recommendation engines and AI research.",
+      "type": "Managed Vector Database",
+      "description": "Pinecone is a fully managed vector database designed for building semantic search, recommendation and retrieval-augmented generation (RAG) systems.\n\nIt stores and indexes vector embeddings from language or vision models, then performs low-latency similarity search at scale. Developers use Pinecone to connect LLMs to external knowledge or user data.\n\nBy abstracting away infrastructure and index management, Pinecone lets teams focus on application logic rather than building their own vector backend.",
+      "subtitle": "Production-ready vector database for semantic search and RAG workloads.",
+      "tags": ["vector database", "semantic search", "RAG", "recommendations", "embeddings"],
+      "features": [
+        "Managed vector indexes with configurable dimensions and metadata",
+        "High-performance similarity search APIs with low latency at scale",
+        "Integrations and examples for retrieval-augmented generation with LLMs",
+        "Automatic scaling, sharding and replication handled by the service",
+        "Support for filters and hybrid (vector + metadata) search"
+      ],
+      "use_cases": [
+        {
+          "title": "Retrieval-Augmented Generation (RAG)",
+          "description": "Developers connect LLMs to proprietary data sources by storing embeddings in Pinecone and querying relevant context at runtime."
+        },
+        {
+          "title": "Semantic & Personalised Search",
+          "description": "Products implement natural-language search that understands meaning rather than simple keyword matching."
+        },
+        {
+          "title": "Recommendations & Similarity Matching",
+          "description": "Teams build recommendation engines and similarity-based matching for content, products or users."
+        }
+      ],
+      "pricing": "Usage-based cloud pricing — free tier and paid plans based on capacity and throughput.",
+      "information": [
+        { "label": "Developer", "value": "Pinecone Systems Inc." },
+        { "label": "Founded", "value": "2019" },
+        { "label": "Type", "value": "Managed vector database service" },
+        { "label": "Privacy", "value": "Enterprise security features; customers control indexed data" },
+        { "label": "API", "value": "Full-featured APIs and client libraries for major languages" }
+      ],
       "image": "Images/models/pinecone.webp",
       "link": "https://www.pinecone.io/"
     },
@@ -1239,8 +1563,39 @@
       "id": 40,
       "name": "GPTexcel",
       "category": ["office", "data"],
-      "type": "N/A",
-      "description": "GPTexcel automates spreadsheet tasks like formula creation, chart building and data summarisation using natural language prompts.",
+      "type": "Spreadsheet AI Assistant",
+      "description": "GPTexcel is an AI helper for spreadsheet users that generates formulas, explains functions and automates common Excel or Google Sheets tasks using natural language prompts.\n\nInstead of manually researching syntax, users describe what they want to do and GPTexcel returns the appropriate formula or step-by-step instructions. It can also help with data cleaning, chart suggestions and basic analysis.\n\nThis lowers the barrier for non-experts to work effectively with complex spreadsheets.",
+      "subtitle": "Describe your spreadsheet task; get formulas, explanations and automation.",
+      "tags": ["Excel", "Google Sheets", "formulas", "productivity", "no-code"],
+      "features": [
+        "Natural-language prompts that generate Excel or Sheets formulas",
+        "Explanations of how formulas work and how to adapt them",
+        "Assistance with data cleaning, transformations and basic analysis",
+        "Suggestions for charts and visualisations based on data",
+        "Web interface and add-ins/extensions depending on plan"
+      ],
+      "use_cases": [
+        {
+          "title": "Formula Generation for Non-Experts",
+          "description": "Business users who aren’t Excel power users get working formulas by describing outcomes instead of memorising syntax."
+        },
+        {
+          "title": "Faster Data Cleaning",
+          "description": "Users generate formulas to split, join, clean and transform messy data for reporting."
+        },
+        {
+          "title": "On-the-Job Learning",
+          "description": "New analysts learn spreadsheet techniques by asking GPTexcel to both generate and explain formulas."
+        }
+      ],
+      "pricing": "Freemium — basic use often free with paid tiers for higher limits and advanced features.",
+      "information": [
+        { "label": "Developer", "value": "GPTexcel" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI assistant for spreadsheet formulas and analysis" },
+        { "label": "Privacy", "value": "Cloud-based; users should review data handling for sensitive sheets" },
+        { "label": "API", "value": "Focus on end-user tools; no widely advertised public API" }
+      ],
       "image": "Images/models/gptexcel.webp",
       "link": "https://gptexcel.uk/?utm_source=chatgpt.com"
     },
@@ -1248,8 +1603,39 @@
       "id": 41,
       "name": "DataGPT",
       "category": ["office", "data", "finance"],
-      "type": "N/A",
-      "description": "DataGPT lets users chat directly with their data. Generating visual reports and insights automatically through AI analysis.",
+      "type": "Chat-Based Analytics Assistant",
+      "description": "DataGPT lets users chat with their business data to generate insights, visualisations and reports without writing SQL or complex formulas.\n\nBy connecting to data sources such as warehouses, spreadsheets or BI tools, DataGPT interprets natural-language questions and turns them into queries, then returns charts and explanations.\n\nThis makes self-serve analytics more accessible for teams across finance, operations, sales and beyond.",
+      "subtitle": "Ask questions about your data and get instant charts, answers and insights.",
+      "tags": ["analytics", "BI", "chat with data", "dashboards", "self-serve"],
+      "features": [
+        "Natural-language querying over connected data sources",
+        "Automatic generation of charts, tables and narrative explanations",
+        "Support for metrics, filters, time ranges and drill-downs via conversation",
+        "Collaboration features for sharing insights and dashboards with teams",
+        "Integrations with popular data warehouses and business tools"
+      ],
+      "use_cases": [
+        {
+          "title": "Self-Serve BI for Non-Analysts",
+          "description": "Business users ask everyday questions about KPIs, trends and performance without waiting on data teams."
+        },
+        {
+          "title": "Finance & FP&A Insights",
+          "description": "Finance teams explore variances, scenario questions and ad-hoc analyses conversationally instead of building one-off reports."
+        },
+        {
+          "title": "Data Team Acceleration",
+          "description": "Analytics teams offload routine questions so they can focus on complex modelling and strategy."
+        }
+      ],
+      "pricing": "B2B SaaS — pricing depends on seats, data volume and deployment.",
+      "information": [
+        { "label": "Developer", "value": "DataGPT" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "Conversational analytics and BI assistant" },
+        { "label": "Privacy", "value": "Enterprise security and governance aimed at sensitive business data" },
+        { "label": "API", "value": "APIs and integrations focused on data connectors and embedding" }
+      ],
       "image": "Images/models/datagpt.webp",
       "link": "https://datagpt.com/"
     },
@@ -1257,8 +1643,39 @@
       "id": 42,
       "name": "Arcwise",
       "category": ["office", "development"],
-      "type": "N/A",
-      "description": "Arcwise simplifies data manipulation by transforming plain-English instructions into spreadsheet actions and advanced formulas.",
+      "type": "AI Copilot for Spreadsheets",
+      "description": "Arcwise is an AI copilot for spreadsheets that turns plain-English instructions into formulas, transformations and analyses in Google Sheets.\n\nIt reads your sheet context, understands the structure and helps with tasks like building complex formulas, cleaning data, reconciling tables and generating summaries.\n\nBy combining LLMs with spreadsheet awareness, Arcwise reduces friction for both non-technical users and power users who want to move faster.",
+      "subtitle": "Spreadsheet-aware AI copilot that understands and transforms your sheets.",
+      "tags": ["Google Sheets", "formulas", "data cleaning", "productivity", "copilot"],
+      "features": [
+        "Plain-English prompts that generate or fix spreadsheet formulas",
+        "Context-aware understanding of sheet layout, ranges and headers",
+        "Assistance with data cleaning, joins, lookups and transformations",
+        "Summaries and insights generated directly from sheet data",
+        "Add-on experience embedded into Google Sheets for smooth workflows"
+      ],
+      "use_cases": [
+        {
+          "title": "Complex Formula Building",
+          "description": "Users describe what they want and let Arcwise construct nested formulas involving lookups, conditionals and aggregations."
+        },
+        {
+          "title": "Data Cleaning & Reconciliation",
+          "description": "Operations and finance teams automate cleanup tasks like deduping, matching and joining datasets from multiple sources."
+        },
+        {
+          "title": "Ad-hoc Analysis & Reporting",
+          "description": "Analysts and business users quickly surface key metrics and summaries without building full BI dashboards."
+        }
+      ],
+      "pricing": "Freemium — free tier with usage limits; paid plans for teams and heavy users.",
+      "information": [
+        { "label": "Developer", "value": "Arcwise" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI copilot for Google Sheets and spreadsheets" },
+        { "label": "Privacy", "value": "Accesses spreadsheet data via Google integrations; privacy and security docs provided" },
+        { "label": "API", "value": "Primarily delivered as a Sheets add-on; no broad public API for third-party apps" }
+      ],
       "image": "Images/models/arcwise.webp",
       "link": "https://arcwise.app/"
     },
