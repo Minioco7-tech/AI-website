@@ -1683,8 +1683,39 @@
       "id": 43,
       "name": "Google Workspace",
       "category": ["office", "documents"],
-      "type": "N/A",
-      "description": "Google Workspace integrates AI across Docs, Sheets and Slides to enhance collaboration, automate workflows and boost productivity.", 
+      "type": "Productivity Suite with AI Features",
+      "description": "Google Workspace is Google’s cloud-based productivity and collaboration suite, now enhanced with AI across Gmail, Docs, Sheets, Slides and more.\n\nTeams can draft documents, summarise threads, generate slides, analyse data and automate workflows using natural language prompts inside the apps they already use every day.\n\nWith real-time collaboration, admin controls and tight integration with Google’s ecosystem, Workspace helps organisations of all sizes work smarter, reduce busywork and keep projects moving.",
+      "subtitle": "Docs, Sheets, Slides and Gmail with AI built in for faster collaboration.",
+      "tags": ["Docs", "Sheets", "Slides", "Gmail", "AI productivity", "collaboration"],
+      "features": [
+        "AI-assisted drafting and rewriting in Gmail, Docs and more",
+        "Smart fill, formula help and insights in Sheets",
+        "Slide generation and visual suggestions in Slides",
+        "Real-time collaboration with comments, suggestions and version history",
+        "Admin controls, security and integrations across the Google ecosystem"
+      ],
+      "use_cases": [
+        {
+          "title": "Document & Report Creation",
+          "description": "Teams co-author reports, proposals and documentation with AI help for drafting, summarising and polishing language."
+        },
+        {
+          "title": "Data-Driven Decision Making",
+          "description": "Analysts and managers use Sheets with AI assistance to transform data, generate formulas and build dashboards faster."
+        },
+        {
+          "title": "Company-Wide Collaboration",
+          "description": "Organisations run projects, share knowledge and coordinate across Docs, Sheets, Slides, Meet and Chat in a single workspace."
+        }
+      ],
+      "pricing": "Subscription-based — Business and Enterprise plans per user, with AI features available as add-ons in some tiers.",
+      "information": [
+        { "label": "Developer", "value": "Google" },
+        { "label": "Founded", "value": "Originally launched as Google Apps in 2006" },
+        { "label": "Type", "value": "Cloud productivity and collaboration suite" },
+        { "label": "Privacy", "value": "Enterprise-grade security, admin controls and compliance options" },
+        { "label": "API", "value": "Extensive APIs and developer platform for Docs, Sheets, Drive and more" }
+      ],
       "image": "Images/models/workspace.webp",
       "link": "https://workspace.google.com/"
     },
@@ -1692,8 +1723,39 @@
       "id": 44,
       "name": "formulabot",
       "category": ["office", "development"],
-      "type": "N/A",
-      "description": "Formulabot translates user requests into spreadsheet formulas instantly. Allowing non-technical users to automate complex data tasks seamlessly.",
+      "type": "Spreadsheet Formula Generator",
+      "description": "Formulabot turns plain-language requests into working spreadsheet formulas for Excel and Google Sheets.\n\nInstead of searching for syntax or piecing together nested functions, users describe what they want to calculate and Formulabot generates the correct formula, often with explanations.\n\nThis makes spreadsheet automation accessible to non-technical users while saving time for power users.",
+      "subtitle": "Describe your task in English, get a ready-to-use spreadsheet formula.",
+      "tags": ["Excel", "Google Sheets", "formulas", "no-code", "automation"],
+      "features": [
+        "Natural-language to formula generation for Excel and Sheets",
+        "Support for lookups, conditionals, date logic and more",
+        "Explanations and examples to help users learn the underlying syntax",
+        "Tools for debugging and fixing broken formulas",
+        "Web-based interface and add-ons depending on plan"
+      ],
+      "use_cases": [
+        {
+          "title": "Everyday Business Analytics",
+          "description": "Non-technical users generate formulas to calculate KPIs, margins and trends without deep Excel knowledge."
+        },
+        {
+          "title": "Data Cleaning & Transformation",
+          "description": "Teams quickly write formulas to split, join, clean and reformat messy data for analysis and reporting."
+        },
+        {
+          "title": "Learning Spreadsheet Skills",
+          "description": "New analysts use Formulabot not only to get formulas but to understand how and why they work."
+        }
+      ],
+      "pricing": "Freemium — free tier with limits, plus paid plans for higher usage and advanced features.",
+      "information": [
+        { "label": "Developer", "value": "Formulabot" },
+        { "label": "Founded", "value": "N/A" },
+        { "label": "Type", "value": "AI assistant for spreadsheet formulas" },
+        { "label": "Privacy", "value": "Cloud-based service processing user-entered prompts and examples" },
+        { "label": "API", "value": "Primarily focused on web and add-on experience; limited public API information" }
+      ],
       "image": "Images/models/formulabot.webp",
       "link": "https://www.formulabot.com/"
     },
@@ -1701,8 +1763,39 @@
       "id": 45,
       "name": "Grammarly AI",
       "category": ["documents", "learning", "jobs"],
-      "type": "N/A",
-      "description": "Grammarly AI improves writing clarity, tone and correctness in real-time. Offering stylistic and structural suggestions tailored to the writer’s intent.",
+      "type": "Writing Assistant",
+      "description": "Grammarly AI is a writing assistant that improves clarity, tone, correctness and style in real time across apps and devices.\n\nBeyond grammar and spelling, it offers suggestions for rephrasing, concision, formality and impact, and can generate drafts or outlines based on user prompts.\n\nIt’s widely used by students, professionals and teams to keep writing polished and consistent across emails, documents, social posts and more.",
+      "subtitle": "Real-time AI writing feedback and suggestions wherever you write.",
+      "tags": ["grammar", "tone", "rewrite", "email", "productivity"],
+      "features": [
+        "Grammar, spelling and punctuation checks with context awareness",
+        "Tone detection and suggestions (formal, confident, friendly and more)",
+        "Rewrites for clarity, concision and improved flow",
+        "AI-powered drafting, outlining and idea generation",
+        "Browser extension, desktop apps and integrations with popular tools"
+      ],
+      "use_cases": [
+        {
+          "title": "Professional Communication",
+          "description": "Knowledge workers refine emails, proposals and reports so they sound polished and on-brand."
+        },
+        {
+          "title": "Academic & Student Writing",
+          "description": "Students improve essays, theses and applications while avoiding common grammatical issues."
+        },
+        {
+          "title": "Content & Social Media",
+          "description": "Creators and marketers refine posts, captions and articles to better match their audience and goals."
+        }
+      ],
+      "pricing": "Free basic plan — Premium and Business plans unlock advanced checks and team features.",
+      "information": [
+        { "label": "Developer", "value": "Grammarly, Inc." },
+        { "label": "Founded", "value": "2009" },
+        { "label": "Type", "value": "AI writing assistant and communication tool" },
+        { "label": "Privacy", "value": "Offers detailed data-handling controls and enterprise-grade options" },
+        { "label": "API", "value": "Developer SDKs and APIs available for embedding Grammarly features" }
+      ],
       "image": "Images/models/grammarly.webp",
       "link": "https://www.grammarly.com/?msockid=0a20bcbb87566ef007cfae3e86b66fa1"
     },
@@ -1710,8 +1803,39 @@
       "id": 46,
       "name": "Writer",
       "category": ["documents", "jobs"],
-      "type": "N/A",
-      "description": "Writer empowers teams to create brand-consistent content with tone, terminology and grammar guidance powered by enterprise AI.",
+      "type": "Enterprise Generative AI Platform",
+      "description": "Writer is an enterprise-grade generative AI platform focused on brand-safe content creation.\n\nTeams use Writer to generate and edit marketing copy, support macros, documentation and internal communications that follow predefined style guides, tone and terminology.\n\nWith governance, analytics and integrations, Writer helps large organisations scale AI-assisted writing while staying consistent and compliant.",
+      "subtitle": "Brand-safe generative AI for teams that need control and consistency.",
+      "tags": ["enterprise AI", "style guide", "copywriting", "governance", "content"],
+      "features": [
+        "Custom style, tone and terminology enforcement across all content",
+        "AI writing assistance for marketing, sales, support and documentation",
+        "Integrated knowledge and templates for company-specific content",
+        "Admin controls, permissions and review workflows for teams",
+        "APIs and integrations with popular enterprise tools"
+      ],
+      "use_cases": [
+        {
+          "title": "Marketing & Brand Content",
+          "description": "Marketing teams generate on-brand landing pages, emails and ads that follow a shared style guide."
+        },
+        {
+          "title": "Support & Knowledge Bases",
+          "description": "Customer support writes macros and help articles that remain consistent across regions and channels."
+        },
+        {
+          "title": "Internal Communications",
+          "description": "People and operations teams standardise internal announcements and documentation across the company."
+        }
+      ],
+      "pricing": "Business and enterprise plans, typically customised based on seats and usage.",
+      "information": [
+        { "label": "Developer", "value": "Writer, Inc." },
+        { "label": "Founded", "value": "Mid-2010s" },
+        { "label": "Type", "value": "Enterprise generative AI and writing platform" },
+        { "label": "Privacy", "value": "Designed for enterprise security, compliance and data residency needs" },
+        { "label": "API", "value": "Robust API and integrations for embedding Writer into existing workflows" }
+      ],
       "image": "Images/models/writer.webp",
       "link": "https://writer.com/"
     },
@@ -1719,8 +1843,39 @@
       "id": 47,
       "name": "Copysmith",
       "category": ["documents", "design", "jobs"],
-      "type": "N/A",
-      "description": "Copysmith generates marketing copy, ads and product descriptions quickly. Allowing marketers to scale content creation with consistent messaging.",
+      "type": "Marketing Copy Generator",
+      "description": "Copysmith is an AI-powered content platform focused on marketing teams and eCommerce brands.\n\nIt generates product descriptions, ad copy, blog ideas, social posts and more, while supporting workflows for bulk content creation and collaboration.\n\nBy automating repetitive writing tasks, Copysmith helps marketers scale output and maintain consistent messaging across campaigns.",
+      "subtitle": "AI content engine for product descriptions, ads and marketing campaigns.",
+      "tags": ["eCommerce", "product descriptions", "ads", "marketing", "copywriting"],
+      "features": [
+        "Templates for product descriptions, ads, blog posts and social content",
+        "Bulk content generation for large product catalogues",
+        "Brand and tone controls to keep messaging consistent",
+        "Collaboration and approval workflows for teams",
+        "Integrations with eCommerce and marketing platforms"
+      ],
+      "use_cases": [
+        {
+          "title": "Scaling Product Descriptions",
+          "description": "Online retailers generate and optimise descriptions for hundreds or thousands of SKUs at once."
+        },
+        {
+          "title": "Ad & Campaign Copy",
+          "description": "Marketing teams quickly produce variations of headlines, ad text and CTAs for testing."
+        },
+        {
+          "title": "Content Ideation",
+          "description": "Creators use Copysmith to brainstorm topic ideas, outlines and angles for blogs and campaigns."
+        }
+      ],
+      "pricing": "Subscription tiers aimed at freelancers, teams and enterprises.",
+      "information": [
+        { "label": "Developer", "value": "Copysmith" },
+        { "label": "Founded", "value": "Early 2020s" },
+        { "label": "Type", "value": "AI marketing copy and content generation platform" },
+        { "label": "Privacy", "value": "Cloud-based SaaS with business-focused data policies" },
+        { "label": "API", "value": "API options for integrating AI copy into existing tools and workflows" }
+      ],
       "image": "Images/models/copysmith.webp",
       "link": "https://copysmith.ai/"
     },
@@ -1728,8 +1883,39 @@
       "id": 48,
       "name": "Hyperwrite",
       "category": ["documents", "jobs"],
-      "type": "N/A",
-      "description": "Hyperwrite acts as a personal writing companion. Assisting with brainstorming, drafting and improving text while adapting to your voice.",
+      "type": "AI Writing Companion",
+      "description": "Hyperwrite is a personal AI writing assistant that helps with brainstorming, drafting, rewriting and idea exploration.\n\nIt sits in the browser and across apps, offering suggestions in-line or generating passages based on brief prompts, while learning the user’s preferred tone over time.\n\nFrom emails and essays to creative projects, Hyperwrite aims to feel like a collaborative writing partner rather than a one-off generator.",
+      "subtitle": "A personal AI co-writer for ideas, drafts and everyday writing.",
+      "tags": ["brainstorming", "drafting", "writing assistant", "browser extension"],
+      "features": [
+        "In-line suggestions and autocomplete while you type",
+        "Prompt-based generation for paragraphs, outlines and ideas",
+        "Tools for rewriting, expanding or shortening existing text",
+        "Browser extension support for popular websites and editors",
+        "Personalisation to better match your tone and preferences over time"
+      ],
+      "use_cases": [
+        {
+          "title": "Email & Work Writing",
+          "description": "Professionals use Hyperwrite to draft and refine emails, reports and internal messages faster."
+        },
+        {
+          "title": "Creative & Long-Form Writing",
+          "description": "Writers brainstorm ideas, story beats and long-form content with a responsive AI partner."
+        },
+        {
+          "title": "Overcoming Writer’s Block",
+          "description": "Users stuck on a blank page get prompts, suggestions and partial drafts to get started."
+        }
+      ],
+      "pricing": "Freemium — basic usage free, with paid tiers for more generations and advanced features.",
+      "information": [
+        { "label": "Developer", "value": "Hyperwrite" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI writing companion and productivity tool" },
+        { "label": "Privacy", "value": "Cloud service with user data and content policies" },
+        { "label": "API", "value": "Primarily offered as a browser-based tool; limited public API information" }
+      ],
       "image": "Images/models/hyperwrite.webp",
       "link": "https://www.hyperwriteai.com/"
     },
@@ -1737,8 +1923,39 @@
       "id": 49,
       "name": "Inkforall",
       "category": ["documents", "design", "jobs"],
-      "type": "N/A",
-      "description": "Inkforall combines SEO optimisation with AI-assisted content creation. Helping writers produce high-ranking, engaging material for blogs and websites.",
+      "type": "SEO & Content Optimization Platform",
+      "description": "Inkforall (INK) combines AI writing with SEO optimisation tools to help content rank higher while staying readable and engaging.\n\nWriters can generate drafts, optimise for target keywords, check readability and ensure content meets search intent.\n\nThe platform is tailored to marketers and SEO teams who want AI assistance that respects on-page SEO best practices.",
+      "subtitle": "SEO-focused AI writing that balances rankings with readability.",
+      "tags": ["SEO", "content marketing", "copywriting", "optimization", "blogs"],
+      "features": [
+        "AI-assisted drafting for blog posts, landing pages and web copy",
+        "SEO scoring and optimisation recommendations for target keywords",
+        "Readability checks and suggestions for improving engagement",
+        "Tone and brand controls to match company voice",
+        "Tools for content briefs and topic research"
+      ],
+      "use_cases": [
+        {
+          "title": "Blog & Article Creation",
+          "description": "Content teams produce SEO-aware articles faster while following editorial standards."
+        },
+        {
+          "title": "Landing Page Optimization",
+          "description": "Marketers refine page copy to improve search performance and conversions simultaneously."
+        },
+        {
+          "title": "Content Briefs & Planning",
+          "description": "Strategists generate briefs outlining keywords, structure and talking points for writers or agencies."
+        }
+      ],
+      "pricing": "Subscription plans tailored to individual creators and teams.",
+      "information": [
+        { "label": "Developer", "value": "INK" },
+        { "label": "Founded", "value": "Late 2010s" },
+        { "label": "Type", "value": "AI content and SEO optimisation platform" },
+        { "label": "Privacy", "value": "Cloud-based; offers standard SaaS data protection practices" },
+        { "label": "API", "value": "Primarily web platform; some integrations and plugin options available" }
+      ],
       "image": "Images/models/inkforall.webp",
       "link": "https://inkforall.com/"
     },
@@ -1746,8 +1963,39 @@
       "id": 50,
       "name": "MindLuster",
       "category": ["learning", "research"],
-      "type": "N/A",
-      "description": "MindLuster offers an extensive collection of free online courses in various subjects. Allowing learners to build skills and earn certificates.",
+      "type": "Online Course Library",
+      "description": "MindLuster is an online learning platform offering thousands of free and low-cost video courses across a wide range of subjects.\n\nLearners can browse by topic, follow structured lessons and, in many cases, earn certificates of completion.\n\nIt’s designed for self-paced upskilling and exploration, making formal course content accessible without a traditional classroom.",
+      "subtitle": "Large library of self-paced courses with certificates across many subjects.",
+      "tags": ["online courses", "certificates", "skills", "e-learning"],
+      "features": [
+        "Extensive catalog of courses across technical and non-technical domains",
+        "Video lessons and structured modules for each course",
+        "Completion tracking and certificates for many courses",
+        "Search and categorisation by topic, difficulty and more",
+        "Self-paced learning accessible from the browser"
+      ],
+      "use_cases": [
+        {
+          "title": "Career Upskilling",
+          "description": "Professionals learn new skills or refresh existing ones to advance their careers."
+        },
+        {
+          "title": "Exploring New Fields",
+          "description": "Learners sample courses in areas like programming, design or business before committing to deeper study."
+        },
+        {
+          "title": "Supplementing Formal Education",
+          "description": "Students use MindLuster courses to reinforce concepts from school or university."
+        }
+      ],
+      "pricing": "Many courses offered free or at low cost; details vary by course.",
+      "information": [
+        { "label": "Developer", "value": "MindLuster" },
+        { "label": "Founded", "value": "N/A" },
+        { "label": "Type", "value": "Online learning and course platform" },
+        { "label": "Privacy", "value": "Standard web platform user and data policies" },
+        { "label": "API", "value": "No widely advertised public API" }
+      ],
       "image": "Images/models/mindluster.webp",
       "link": "https://www.mindluster.com/"
     },
@@ -1755,8 +2003,39 @@
       "id": 51,
       "name": "React Bits",
       "category": ["development", "design"],
-      "type": "N/A",
-      "description": "React Bits provides reusable animated UI components for React developers. Helping to build visually dynamic and responsive interfaces quickly.",
+      "type": "React UI Component Library",
+      "description": "React Bits provides a collection of polished, animated React components and UI snippets that developers can drop into their projects.\n\nIt focuses on visually appealing micro-interactions, transitions and layouts built with modern front-end practices.\n\nBy reusing these components, developers can speed up interface development and achieve a more professional feel with less custom CSS and animation work.",
+      "subtitle": "Reusable animated UI components and snippets for modern React apps.",
+      "tags": ["React", "UI components", "animation", "frontend", "design system"],
+      "features": [
+        "Pre-built, production-ready React components and patterns",
+        "Animations and micro-interactions crafted for smooth UX",
+        "Examples and code snippets ready to copy into projects",
+        "Responsive layouts and design-friendly defaults",
+        "Works with modern React tooling and frameworks"
+      ],
+      "use_cases": [
+        {
+          "title": "Faster UI Prototyping",
+          "description": "Developers assemble interfaces quickly using ready-made components and patterns."
+        },
+        {
+          "title": "Improving Visual Polish",
+          "description": "Teams enhance existing apps by introducing refined animations and transitions."
+        },
+        {
+          "title": "Design System Building",
+          "description": "Product teams use React Bits as a starting point for a consistent component library."
+        }
+      ],
+      "pricing": "Typically a mix of free and paid components or packages, depending on offering.",
+      "information": [
+        { "label": "Developer", "value": "React Bits" },
+        { "label": "Founded", "value": "N/A" },
+        { "label": "Type", "value": "React component and UI library" },
+        { "label": "Privacy", "value": "Static assets and code; minimal personal data handling" },
+        { "label": "API", "value": "Used as code components rather than via API" }
+      ],
       "image": "Images/models/reactbits.webp",
       "link": "https://www.reactbits.dev/"
     },
@@ -1764,8 +2043,39 @@
       "id": 52,
       "name": "Wondershare",
       "category": ["design", "office"],
-      "type": "N/A",
-      "description": "Wondershare provides an ecosystem of creative software for editing, file management and publishing. Supporting digital creators and professionals.",
+      "type": "Creative & Productivity Software Suite",
+      "description": "Wondershare is a software company offering a range of creative and productivity tools, including video editors, PDF utilities, diagramming tools and mobile utilities.\n\nProducts like Filmora, PDFelement and others help individuals and businesses create, edit and manage digital content more efficiently.\n\nTogether, these tools serve content creators, educators, offices and technical users with end-to-end workflows.",
+      "subtitle": "Ecosystem of tools for video, PDFs and digital productivity.",
+      "tags": ["video editing", "PDF", "screen recording", "utilities", "creators"],
+      "features": [
+        "Video editing and motion graphics tools for creators",
+        "PDF editing, conversion and signing utilities",
+        "Screen recording and presentation tools",
+        "Mobile and desktop utilities for file management and recovery",
+        "Templates, effects and resources to accelerate creative workflows"
+      ],
+      "use_cases": [
+        {
+          "title": "Content Creation & Editing",
+          "description": "YouTubers, marketers and educators edit video, audio and screen recordings using Wondershare tools."
+        },
+        {
+          "title": "Document & PDF Workflows",
+          "description": "Offices manage, edit and sign PDF documents without complex enterprise software."
+        },
+        {
+          "title": "Technical & Utility Tasks",
+          "description": "Users rely on Wondershare utilities for tasks like backup, conversion and device management."
+        }
+      ],
+      "pricing": "Product-based pricing — individual apps have their own licensing and subscription options.",
+      "information": [
+        { "label": "Developer", "value": "Wondershare Technology Co., Ltd." },
+        { "label": "Founded", "value": "2003" },
+        { "label": "Type", "value": "Creative and productivity software vendor" },
+        { "label": "Privacy", "value": "Offers product-specific privacy and data policies" },
+        { "label": "API", "value": "Primarily desktop and SaaS applications; limited public API exposure" }
+      ],
       "image": "Images/models/wondershare.webp",
       "link": "https://www.wondershare.net/"
     },
@@ -1773,8 +2083,39 @@
       "id": 53,
       "name": "Code Beautify",
       "category": ["development", "office"],
-      "type": "N/A",
-      "description": "Code Beautify hosts online tools for formatting, validating and converting code and data. Simplifying debugging and data cleaning processes.",
+      "type": "Online Code & Data Utilities",
+      "description": "Code Beautify hosts a large collection of browser-based tools for formatting, validating, converting and visualising code and data.\n\nDevelopers and analysts can quickly pretty-print JSON, XML or SQL, convert between formats, test regexes and more—all without installing software.\n\nThese utilities save time during debugging, data cleaning and API integration work.",
+      "subtitle": "One-stop toolbox for formatting, validating and converting code and data.",
+      "tags": ["formatting", "validators", "converters", "JSON", "XML"],
+      "features": [
+        "Code beautifiers and minifiers for many languages and formats",
+        "Validators for JSON, XML, YAML and other structured data",
+        "Converters between formats such as CSV, JSON and XML",
+        "Viewers and visualisers for complex data structures",
+        "Browser-based, zero-install utilities accessible from anywhere"
+      ],
+      "use_cases": [
+        {
+          "title": "Debugging API Responses",
+          "description": "Developers pretty-print and validate JSON or XML responses to track down issues."
+        },
+        {
+          "title": "Data Cleaning & Conversion",
+          "description": "Analysts convert data between formats and clean up files for import into other tools."
+        },
+        {
+          "title": "Learning & Experimentation",
+          "description": "Students and developers experiment with regexes, encodings and other concepts using interactive tools."
+        }
+      ],
+      "pricing": "Free web-based tools supported by ads or donations.",
+      "information": [
+        { "label": "Developer", "value": "Code Beautify" },
+        { "label": "Founded", "value": "N/A" },
+        { "label": "Type", "value": "Online toolkit for developers and data workers" },
+        { "label": "Privacy", "value": "Processes pasted data in browser; users should avoid sensitive content" },
+        { "label": "API", "value": "Primarily web utilities; not positioned as an API platform" }
+      ],
       "image": "Images/models/codebeautify.webp",
       "link": "https://codebeautify.org/"
     },
@@ -1782,8 +2123,39 @@
       "id": 54,
       "name": "10015",
       "category": ["office", "development"],
-      "type": "N/A",
-      "description": "10015 is a hub of free online tools for text, images and development tasks. Offering all-in-one convenience for quick productivity.",
+      "type": "All-in-One Online Tool Hub",
+      "description": "10015.io is a hub of free online tools for text, images, code, SEO, social media and more.\n\nInstead of visiting multiple sites, users can access dozens of small utilities from one clean interface—covering everything from text formatting and image compression to JSON formatting and time calculations.\n\nIt’s ideal as a quick, browser-based Swiss army knife for everyday digital tasks.",
+      "subtitle": "Dozens of quick, free tools for text, images, SEO and development.",
+      "tags": ["utilities", "productivity", "developer tools", "SEO", "images"],
+      "features": [
+        "Text tools for formatting, case changes, counting and encoding",
+        "Image tools for resizing, compression and conversion",
+        "Developer tools including formatters, encoders and generators",
+        "SEO and marketing utilities like meta tag and preview generators",
+        "Single hub with consistent UI for many daily micro-tasks"
+      ],
+      "use_cases": [
+        {
+          "title": "Day-to-Day Productivity",
+          "description": "Knowledge workers quickly handle text tweaks, file conversions and simple tasks without installing software."
+        },
+        {
+          "title": "Developer & SEO Workflow",
+          "description": "Developers and marketers use 10015.io as a handy reference toolkit while working on websites or campaigns."
+        },
+        {
+          "title": "On-the-Go Fixes",
+          "description": "Users rely on the site from any device when they need lightweight utilities in the browser."
+        }
+      ],
+      "pricing": "Free to use; monetised via ads or optional upgrades.",
+      "information": [
+        { "label": "Developer", "value": "10015.io" },
+        { "label": "Founded", "value": "N/A" },
+        { "label": "Type", "value": "Web-based toolbox and utility hub" },
+        { "label": "Privacy", "value": "Processes content in browser; minimal account data for most tools" },
+        { "label": "API", "value": "Primarily front-end tools; no prominent general-purpose API" }
+      ],
       "image": "Images/models/10015.webp",
       "link": "https://10015.io/"
     },
@@ -1791,8 +2163,39 @@
       "id": 55,
       "name": "Paperanimator",
       "category": ["design"],
-      "type": "N/A",
-      "description": "Paperanimator allows artists to draw frame-by-frame animations in a digital format. Blending traditional creativity with AI assistance.",
+      "type": "Frame-by-Frame Animation Tool",
+      "description": "Paperanimator is a digital tool for creating hand-drawn, frame-by-frame animations that feel like traditional paper animation.\n\nArtists can sketch each frame, flip between them and refine motion just as they would on a light table, but with digital conveniences like layers and playback.\n\nIt’s aimed at illustrators, students and animators who enjoy the craft of frame-by-frame work.",
+      "subtitle": "Draw traditional-style frame-by-frame animation in a digital workspace.",
+      "tags": ["animation", "frame-by-frame", "drawing", "2D", "illustration"],
+      "features": [
+        "Frame-by-frame drawing interface with onion-skinning",
+        "Timeline controls for timing, playback and loop preview",
+        "Digital drawing tools that mimic traditional sketching",
+        "Export options for sharing animations as GIFs or videos",
+        "Lightweight, focused workspace for hand-crafted motion"
+      ],
+      "use_cases": [
+        {
+          "title": "Hand-Drawn Shorts & Loops",
+          "description": "Animators create short looping animations and character tests with a traditional feel."
+        },
+        {
+          "title": "Concept & Motion Studies",
+          "description": "Artists explore motion ideas before moving into more complex production tools."
+        },
+        {
+          "title": "Learning Principles of Animation",
+          "description": "Students practice timing, squash-and-stretch and other animation fundamentals in a simple environment."
+        }
+      ],
+      "pricing": "Free or low-cost tool depending on version and platform.",
+      "information": [
+        { "label": "Developer", "value": "Paperanimator" },
+        { "label": "Founded", "value": "N/A" },
+        { "label": "Type", "value": "2D frame-by-frame animation application" },
+        { "label": "Privacy", "value": "Local or minimal cloud data usage focused on art files" },
+        { "label": "API", "value": "No API; used as a standalone creative tool" }
+      ],
       "image": "Images/models/paperanimator.webp",
       "link": "https://www.paperanimator.org/"
     },
@@ -1800,8 +2203,39 @@
       "id": 56,
       "name": "TinyWow",
       "category": ["documents", "office"],
-      "type": "N/A",
-      "description": "TinyWow offers free browser-based utilities for document editing, image optimisation and quick file conversion. All powered by AI.",
+      "type": "Browser Utility Suite",
+      "description": "TinyWow offers a collection of free browser-based utilities for working with PDFs, images, videos and text.\n\nMany tools leverage AI for tasks like background removal, text extraction and content generation, while others handle straightforward conversions and edits.\n\nIt’s designed to be a quick, no-signup solution for everyday file and content tasks.",
+      "subtitle": "Free online tools for PDFs, images, videos and text—many powered by AI.",
+      "tags": ["PDF tools", "image tools", "converters", "AI utilities"],
+      "features": [
+        "PDF editing, merging, splitting and format conversion",
+        "Image compression, resizing and background removal",
+        "Video trimming, converting and basic editing",
+        "AI-powered tools for text generation and manipulation",
+        "No-install, browser-based interface with simple workflows"
+      ],
+      "use_cases": [
+        {
+          "title": "Quick Document Fixes",
+          "description": "Users quickly merge, compress or convert PDFs without installing dedicated software."
+        },
+        {
+          "title": "Social & Web Media Prep",
+          "description": "Creators resize and compress images or clips to share online more easily."
+        },
+        {
+          "title": "Lightweight AI Text Tasks",
+          "description": "Users rely on TinyWow’s AI tools for simple generation or rewriting tasks in the browser."
+        }
+      ],
+      "pricing": "Free to use; some features may require creating a free account.",
+      "information": [
+        { "label": "Developer", "value": "TinyWow" },
+        { "label": "Founded", "value": "N/A" },
+        { "label": "Type", "value": "Web-based file and content utility suite" },
+        { "label": "Privacy", "value": "Processes uploaded files on servers with deletion policies stated on site" },
+        { "label": "API", "value": "No general public API advertised; tools are browser-focused" }
+      ],
       "image": "Images/models/tinywow.webp",
       "link": "https://tinywow.com/"
     },
@@ -1809,8 +2243,39 @@
       "id": 57,
       "name": "Natively",
       "category": ["development", "design"],
-      "type": "N/A",
-      "description": "Natively helps developers create high-performance web applications with native functionality using modern build frameworks.",
+      "type": "Web App Performance & Native Integration Tool",
+      "description": "Natively helps developers build web applications that feel closer to native apps by offering patterns and tooling for performance, offline use and deep platform integration.\n\nIt focuses on modern frameworks and best practices, helping teams bridge the gap between traditional web experiences and app-like behaviour.\n\nThis is useful for product teams that want native-quality UX while still shipping on the web.",
+      "subtitle": "Build web experiences with native-like performance and integration.",
+      "tags": ["web apps", "performance", "PWA", "frontend", "DX"],
+      "features": [
+        "Guidance and utilities for building high-performance web apps",
+        "Patterns for offline support and progressive web app behaviour",
+        "Integration approaches for native-like features where supported",
+        "Examples tailored to modern frameworks and toolchains",
+        "Developer-focused documentation and best practices"
+      ],
+      "use_cases": [
+        {
+          "title": "App-Like SaaS Products",
+          "description": "Teams building rich SaaS interfaces use Natively to improve perceived performance and UX."
+        },
+        {
+          "title": "Cross-Platform Web Apps",
+          "description": "Developers design experiences that work well on desktop and mobile with native-feeling interactions."
+        },
+        {
+          "title": "Performance Optimisation",
+          "description": "Engineering teams apply Natively’s patterns to reduce jank, load times and UX friction."
+        }
+      ],
+      "pricing": "May offer free resources or tools; details vary by product offering.",
+      "information": [
+        { "label": "Developer", "value": "Natively" },
+        { "label": "Founded", "value": "N/A" },
+        { "label": "Type", "value": "Developer-focused toolkit and guidance for native-feeling web apps" },
+        { "label": "Privacy", "value": "Mostly documentation and developer tools; minimal personal data usage" },
+        { "label": "API", "value": "Depends on specific tools; generally code- or framework-based integration" }
+      ],
       "image": "Images/models/natively.webp",
       "link": "https://natively.dev"
     },
@@ -1818,8 +2283,39 @@
       "id": 58,
       "name": "Learn Anything",
       "category": ["learning", "research"],
-      "type": "N/A",
-      "description": "Learn Anything maps interconnected learning paths across topics. Helping users plan efficient routes to mastery through visual knowledge graphs.",
+      "type": "Knowledge Graph & Learning Map",
+      "description": "Learn Anything organises topics into interconnected visual maps, helping learners explore subjects through related concepts and resources.\n\nInstead of a linear course, users can see how ideas connect, drilling down into subtopics and external links.\n\nThis approach supports self-directed learning and planning custom learning paths.",
+      "subtitle": "Visual knowledge maps that show how topics and ideas connect.",
+      "tags": ["knowledge graph", "mind map", "learning paths", "self-directed learning"],
+      "features": [
+        "Interactive maps of topics and subtopics across many domains",
+        "Links to resources such as articles, videos and documentation",
+        "Search to jump directly to a topic of interest",
+        "Visual representation of relationships between concepts",
+        "Community-driven curation and updates"
+      ],
+      "use_cases": [
+        {
+          "title": "Planning a Learning Journey",
+          "description": "Learners map out which topics to study and in what order when tackling a new field."
+        },
+        {
+          "title": "Discovering Related Concepts",
+          "description": "Users explore neighbouring topics to broaden their understanding and find new interests."
+        },
+        {
+          "title": "Reference & Orientation",
+          "description": "Students use the maps to orient themselves within complex subjects, from math to programming."
+        }
+      ],
+      "pricing": "Generally free to browse; may accept donations or community support.",
+      "information": [
+        { "label": "Developer", "value": "Learn Anything" },
+        { "label": "Founded", "value": "N/A" },
+        { "label": "Type", "value": "Visual knowledge mapping and learning platform" },
+        { "label": "Privacy", "value": "Primarily a browsing and search experience with minimal personal data" },
+        { "label": "API", "value": "No widely documented public API" }
+      ],
       "image": "Images/models/learnanything.webp",
       "link": "https://www.learnanything.com/"
     },
@@ -1827,8 +2323,39 @@
       "id": 59,
       "name": "Higgsfield",
       "category": ["research", "development"],
-      "type": "N/A",
-      "description": "Higgsfield applies AI to data science workflows. Automating technical analysis, visualisation and predictive modelling.",
+      "type": "AI Data Science Platform",
+      "description": "Higgsfield applies AI to data science and analytics workflows, automating parts of modelling, visualisation and prediction.\n\nIt aims to help teams move from raw data to insights faster, combining automation with tools that still allow expert control.\n\nThis makes it useful for organisations that want to scale advanced analytics without relying solely on manual notebook work.",
+      "subtitle": "Automate parts of data science workflows with AI-powered tooling.",
+      "tags": ["data science", "automation", "ML", "visualization", "analytics"],
+      "features": [
+        "Tools for preparing and exploring datasets",
+        "Assisted model training and selection for common ML tasks",
+        "Visualisations and dashboards for communicating results",
+        "Workflows designed for collaboration between technical and business users",
+        "Focus on reproducibility and experiment tracking"
+      ],
+      "use_cases": [
+        {
+          "title": "Predictive Analytics",
+          "description": "Teams build models to forecast metrics, demand and risk with support from automated workflows."
+        },
+        {
+          "title": "Exploratory Data Analysis",
+          "description": "Analysts quickly visualise and interrogate datasets to find patterns and outliers."
+        },
+        {
+          "title": "Democratising ML",
+          "description": "Organisations enable more users to leverage machine learning without needing to code everything from scratch."
+        }
+      ],
+      "pricing": "Likely B2B SaaS; pricing details typically via sales.",
+      "information": [
+        { "label": "Developer", "value": "Higgsfield" },
+        { "label": "Founded", "value": "N/A" },
+        { "label": "Type", "value": "AI-driven data science and analytics platform" },
+        { "label": "Privacy", "value": "Designed to work with potentially sensitive datasets; offers security documentation" },
+        { "label": "API", "value": "APIs or connectors likely provided for data integration and automation" }
+      ],
       "image": "Images/models/higgsfield.webp",
       "link": "https://higgsfield.ai/"
     },
@@ -1836,8 +2363,39 @@
       "id": 60,
       "name": "AnimeJS",
       "category": ["development", "design"],
-      "type": "N/A",
-      "description": "AnimeJS is a lightweight JavaScript animation engine. Letting developers build rich, interactive motion effects with simple syntax.",
+      "type": "JavaScript Animation Library",
+      "description": "AnimeJS is a lightweight JavaScript animation engine for building rich, interactive motion on the web.\n\nIt supports animations for CSS properties, SVGs, DOM attributes and JavaScript objects, with timelines and easing functions for precise control.\n\nFront-end developers use AnimeJS to add smooth transitions, micro-interactions and dynamic effects without heavy dependencies.",
+      "subtitle": "Lightweight JS engine for smooth, composable web animations.",
+      "tags": ["JavaScript", "animation", "frontend", "SVG", "UX"],
+      "features": [
+        "Animate CSS properties, transforms, SVG attributes and more",
+        "Timeline system for sequencing complex animations",
+        "Extensive easing functions and playback controls",
+        "Small footprint suitable for modern web apps",
+        "Works with vanilla JS or alongside frameworks like React and Vue"
+      ],
+      "use_cases": [
+        {
+          "title": "UI Micro-Interactions",
+          "description": "Developers add subtle animations to buttons, menus and components to improve perceived quality."
+        },
+        {
+          "title": "Landing Page Visuals",
+          "description": "Marketing sites use AnimeJS to create engaging hero sections and on-scroll animations."
+        },
+        {
+          "title": "Data & SVG Animations",
+          "description": "Teams animate icons, charts and custom SVG illustrations to bring interfaces to life."
+        }
+      ],
+      "pricing": "Open-source and free to use under its license.",
+      "information": [
+        { "label": "Developer", "value": "AnimeJS community / open-source maintainer" },
+        { "label": "Founded", "value": "Initial releases in the mid-2010s" },
+        { "label": "Type", "value": "Open-source JavaScript animation engine" },
+        { "label": "Privacy", "value": "Runs client-side; does not handle user data directly" },
+        { "label": "API", "value": "Used via JavaScript API in web projects" }
+      ],
       "image": "Images/models/animejs.webp",
       "link": "https://animejs.com/"
     },
@@ -1845,8 +2403,39 @@
       "id": 61,
       "name": "Gambo AI",
       "category": ["design", "audio"],
-      "type": "N/A",
-      "description": "Gambo AI helps designers and marketers create high-quality visual assets. Supporting branding, advertising and storytelling projects.",
+      "type": "Creative Asset Generation Platform",
+      "description": "Gambo AI helps designers and marketers create high-quality visual assets, often combining generative AI with professional templates and tools.\n\nIt’s built to support branding, advertising and storytelling projects by speeding up the creation of on-brand imagery and related media.\n\nThis can reduce dependence on stock libraries and traditional manual workflows.",
+      "subtitle": "Generate and refine visual assets for branding and campaigns with AI.",
+      "tags": ["image generation", "branding", "marketing", "creative assets"],
+      "features": [
+        "AI-assisted generation of visual assets for campaigns and brands",
+        "Templates and workflows for common marketing formats",
+        "Tools to adjust style, layout and colours to match brand identity",
+        "Asset management for keeping project visuals organised",
+        "Collaborative features for teams reviewing and approving creative"
+      ],
+      "use_cases": [
+        {
+          "title": "Brand & Campaign Creative",
+          "description": "Agencies and marketing teams generate campaign visuals aligned with brand guidelines."
+        },
+        {
+          "title": "Content for Social & Ads",
+          "description": "Creators quickly produce assets for social feeds, ads and landing pages without starting from scratch."
+        },
+        {
+          "title": "Storytelling & Concepts",
+          "description": "Teams visualise storyboards, moodboards and concepts early in the creative process."
+        }
+      ],
+      "pricing": "Likely subscription-based with tiers for individuals and teams.",
+      "information": [
+        { "label": "Developer", "value": "Gambo AI" },
+        { "label": "Founded", "value": "N/A" },
+        { "label": "Type", "value": "AI-powered creative asset platform" },
+        { "label": "Privacy", "value": "Handles user-uploaded media and project data; see site for details" },
+        { "label": "API", "value": "May offer integrations or APIs depending on plan" }
+      ],
       "image": "Images/models/gambo.webp",
       "link": "https://www.gambo.ai/"
     },
@@ -1854,8 +2443,39 @@
       "id": 62,
       "name": "Jitter",
       "category": ["design", "audio"],
-      "type": "N/A",
-      "description": "Jitter is a motion design tool for creating smooth UI animations and short video content. Perfect for digital designers and creators.",
+      "type": "Motion Design Tool",
+      "description": "Jitter is a browser-based motion design tool for creating smooth UI animations, social videos and micro-interactions.\n\nDesigners can animate UI elements, text and graphics on a timeline without needing a heavy desktop suite, then export them as videos, GIFs or Lottie files.\n\nIt’s particularly suited to product teams and content creators who need modern motion graphics for digital projects.",
+      "subtitle": "Create UI animations and motion graphics quickly in the browser.",
+      "tags": ["motion design", "UI animation", "video", "Lottie", "product design"],
+      "features": [
+        "Keyframe-based animation timeline for UI and graphic elements",
+        "Pre-built easing curves and transitions for smooth motion",
+        "Import of design assets from tools like Figma (depending on integrations)",
+        "Export as video, GIF or Lottie for implementation and sharing",
+        "Browser-based interface with collaboration-friendly workflows"
+      ],
+      "use_cases": [
+        {
+          "title": "Product UI Motion",
+          "description": "Designers prototype interactions, transitions and micro-interactions for apps and websites."
+        },
+        {
+          "title": "Marketing & Social Clips",
+          "description": "Creators produce short, animated videos and promos for social channels."
+        },
+        {
+          "title": "Handoff to Developers",
+          "description": "Teams export animations or use reference videos to guide implementation in code."
+        }
+      ],
+      "pricing": "Freemium model with paid plans for additional features and exports.",
+      "information": [
+        { "label": "Developer", "value": "Jitter" },
+        { "label": "Founded", "value": "Early 2020s" },
+        { "label": "Type", "value": "Web-based motion design and animation tool" },
+        { "label": "Privacy", "value": "Stores project files and media in the cloud; standard SaaS policies" },
+        { "label": "API", "value": "May provide integrations with design tools; not a general-purpose API platform" }
+      ],
       "image": "Images/models/jitter.webp",
       "link": "https://jitter.video/"
     },
@@ -1863,8 +2483,39 @@
       "id": 63,
       "name": "Emergent",
       "category": ["assistants", "development"],
-      "type": "N/A",
-      "description": "Emergent integrates AI tools for coding, planning and team automation. Helping users streamline development workflows efficiently.",
+      "type": "AI Development & Automation Assistant",
+      "description": "Emergent is an AI platform that integrates tools for coding, planning and team automation, helping developers streamline workflows.\n\nIt can assist with writing and reviewing code, generating tasks, coordinating work and connecting with other tools in the stack.\n\nThis makes it useful for teams that want an AI layer over their development and project processes.",
+      "subtitle": "AI copilot for coding, planning and automating team workflows.",
+      "tags": ["AI assistant", "developer tools", "automation", "planning", "agents"],
+      "features": [
+        "AI-assisted coding and code explanation capabilities",
+        "Task generation and planning support for projects",
+        "Workflows that connect to external tools and APIs",
+        "Collaborative environment for teams to coordinate work with AI help",
+        "Focus on automating repetitive development and ops tasks"
+      ],
+      "use_cases": [
+        {
+          "title": "Developer Productivity",
+          "description": "Engineers offload routine coding, refactoring and documentation tasks to Emergent."
+        },
+        {
+          "title": "Project Planning & Coordination",
+          "description": "Teams use AI to break down features into tasks and keep track of progress across tools."
+        },
+        {
+          "title": "Automation of Repetitive Work",
+          "description": "Ops and dev teams automate recurring workflows like deployments, checks and synchronisation."
+        }
+      ],
+      "pricing": "Likely subscription-based; details available via the platform.",
+      "information": [
+        { "label": "Developer", "value": "Emergent" },
+        { "label": "Founded", "value": "N/A" },
+        { "label": "Type", "value": "AI assistant and automation platform for development teams" },
+        { "label": "Privacy", "value": "Works with code and project data; provides security and privacy documentation" },
+        { "label": "API", "value": "Integrations and APIs likely available for connecting workflows and tools" }
+      ],
       "image": "Images/models/emergent.webp",
       "link": "https://app.emergent.sh/landing"
     },
