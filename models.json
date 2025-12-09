@@ -2523,8 +2523,39 @@
       "id": 64,
       "name": "InterviewAI",
       "category": ["documents", "finance", "jobs"],
-      "type": "N/A",
-      "description": "InterviewAI simulates interview scenarios with realistic questions and feedback. Helping users practice and improve performance before real interviews.",
+      "type": "AI Interview Practice Platform",
+      "description": "InterviewAI helps job seekers prepare for interviews by simulating realistic interview scenarios and asking thoughtful, role-specific questions. Users can practise answering aloud or in writing, making the experience feel similar to a live interview. The tool is designed to build confidence and reduce stress before the real event.\n\nIt provides feedback on clarity, structure and communication style so users understand how their responses might be received by employers. This helps people refine their answers, highlight strengths and improve areas that feel less natural. InterviewAI also adjusts difficulty and focus depending on the user’s experience level.\n\nWhether someone is preparing for their first job, moving into a new career path or aiming for senior roles, InterviewAI offers a safe space to practise and improve. It supports applicants in presenting themselves more effectively and increases readiness for the questions they are likely to face.",
+      "subtitle": "Personalised mock interviews and feedback to help you ace the real thing.",
+      "tags": ["interview prep", "mock interviews", "career", "jobs", "feedback"],
+      "features": [
+        "Generates job-specific interview questions across industries and seniority levels",
+        "Supports behavioural, technical and situational question types",
+        "Instant feedback on structure, clarity and confidence of responses",
+        "Session history and analytics to track progress over time",
+        "Accessible from web and mobile so users can practice on the go"
+      ],
+      "use_cases": [
+        {
+          "title": "Preparing for First-Round Screens",
+          "description": "Candidates rehearse typical screening questions to reduce nerves and improve their initial impression with recruiters."
+        },
+        {
+          "title": "Practising Technical & Case Interviews",
+          "description": "Job seekers targeting finance, consulting or technical roles practice problem-solving and technical questions in a low-risk environment."
+        },
+        {
+          "title": "Career Switching & Returners",
+          "description": "Professionals changing industries or returning to work use InterviewAI to rebuild confidence and update their interview skills."
+        }
+      ],
+      "pricing": "Freemium model — core practice features available with paid upgrades for advanced feedback and content.",
+      "information": [
+        { "label": "Developer", "value": "InterviewAI" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI-powered mock interview and coaching platform" },
+        { "label": "Privacy", "value": "Cloud-based; processes interview data and feedback under standard SaaS policies" },
+        { "label": "API", "value": "No widely public API; primarily a direct-to-user web and mobile app" }
+      ],
       "image": "Images/models/interviewai.webp",
       "link": "https://www.interviewai.io/"
     },
@@ -2532,8 +2563,39 @@
       "id": 65,
       "name": "LogoDiffusion",
       "category": ["design", "jobs"],
-      "type": "N/A",
-      "description": "LogoDiffusion generates unique brand logos using AI diffusion models. Allowing users to design professional visuals instantly.",
+      "type": "AI Logo Generator",
+      "description": "LogoDiffusion helps users generate professional-looking logos through simple text prompts. It uses AI to produce a wide range of visual styles so users can quickly explore different concepts without relying on complex design software. This makes it an accessible tool for entrepreneurs, freelancers and small businesses.\n\nUsers can adjust colour, layout and style until they find a logo that represents their brand. The tool can produce multiple variations in seconds, giving users a broad set of ideas to choose from. This is helpful for brands that want a fast and affordable way to develop their visual identity.\n\nLogoDiffusion is ideal for people who need a polished logo but do not have access to design resources. It offers quick experimentation, creative flexibility and a simple workflow, helping users create a strong first impression through clear branding.",
+      "subtitle": "Generate distinctive, AI-powered logos and brand marks in minutes.",
+      "tags": ["logo design", "branding", "image generation", "diffusion", "visual identity"],
+      "features": [
+        "Text-to-logo generation using state-of-the-art diffusion models",
+        "Support for style, colour and symbol preferences in prompts",
+        "Multiple variations and iterative refinement on chosen concepts",
+        "High-resolution exports suitable for web and print use",
+        "Simple workflow designed for non-designers and small teams"
+      ],
+      "use_cases": [
+        {
+          "title": "Startup Brand Exploration",
+          "description": "Founders rapidly test different visual identities before investing in full design engagements."
+        },
+        {
+          "title": "Freelancer & Side Project Logos",
+          "description": "Individuals spin up polished logos for new projects, portfolios or online shops without a design budget."
+        },
+        {
+          "title": "Agency Concept Prototyping",
+          "description": "Designers use LogoDiffusion to quickly generate rough directions to discuss with clients early in the branding process."
+        }
+      ],
+      "pricing": "Typically offers free previews with paid downloads or subscription plans for frequent use.",
+      "information": [
+        { "label": "Developer", "value": "LogoDiffusion" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI-driven logo and brand asset generator" },
+        { "label": "Privacy", "value": "Handles prompts and generated imagery via cloud infrastructure" },
+        { "label": "API", "value": "May offer API or integrations for partners; primarily a web app experience" }
+      ],
       "image": "Images/models/logodiffusion.webp",
       "link": "https://logodiffusion.com/"
     },
@@ -2541,8 +2603,39 @@
       "id": 66,
       "name": "Anara",
       "category": ["design"],
-      "type": "N/A",
-      "description": "Anara provides AI-powered creative collaboration tools that assist designers and teams in producing cohesive branding and visual projects.",
+      "type": "AI Research & Collaboration Platform",
+      "description": "Anara provides AI-powered creative collaboration tools that help teams produce cohesive brand visuals. Designers can explore ideas, share drafts and refine concepts with support from intelligent suggestions. This speeds up the early stages of design and helps teams stay aligned throughout a project.\n\nThe platform focuses on maintaining consistency in style, colour and layout across different assets. By analysing brand guidelines and previous work, Anara helps teams keep their visual identity coherent. This is especially valuable for agencies and growing companies with multiple contributors.\n\nAnara offers a smoother creative process by blending collaboration and AI assistance. It supports brainstorming, design reviews and content creation, helping teams deliver polished branding materials more efficiently.",
+      "subtitle": "Turn documents and research into a shared, AI-assisted knowledge workspace.",
+      "tags": ["research", "knowledge base", "collaboration", "document analysis", "AI assistant"],
+      "features": [
+        "Upload and organise large collections of documents and research materials",
+        "Ask natural-language questions and receive answers grounded in uploaded sources",
+        "Source-linked highlights and citations for trustworthy insights",
+        "Collaborative workspaces for teams to share notes and findings",
+        "Workflows that reduce manual synthesis time across long documents"
+      ],
+      "use_cases": [
+        {
+          "title": "Brand & Strategy Research",
+          "description": "Agencies and in-house teams synthesise market research, user interviews and reports to inform brand positioning and creative direction."
+        },
+        {
+          "title": "Content & Thought Leadership",
+          "description": "Teams organise reference material and quickly surface supporting evidence when creating high-quality content or whitepapers."
+        },
+        {
+          "title": "Cross-Functional Knowledge Hubs",
+          "description": "Organisations centralise key documents so design, product and leadership teams can work from the same insights."
+        }
+      ],
+      "pricing": "SaaS pricing with tiers for individuals, teams and enterprise deployments.",
+      "information": [
+        { "label": "Developer", "value": "Anara" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI-powered research, document analysis and collaboration platform" },
+        { "label": "Privacy", "value": "Designed with secure handling of sensitive documents and citations" },
+        { "label": "API", "value": "APIs and integrations may be available for enterprise customers" }
+      ],
       "image": "Images/models/anara.webp",
       "link": "https://anara.com/"
     },
@@ -2550,8 +2643,39 @@
       "id": 67,
       "name": "Claid",
       "category": ["design"],
-      "type": "N/A",
-      "description": "Claid enhances and generates visual content using AI. Perfect for image editing, upscaling and creative automation.",
+      "type": "AI Image Enhancement & Generation Platform",
+      "description": "Claid helps users enhance and generate visual content using AI-powered editing tools. It can upscale images, clean noise, adjust lighting and automate repetitive edits that normally take significant time. This makes it useful for creators who want fast, consistent results without advanced editing experience.\n\nThe platform is also capable of generating new imagery or extending existing visuals, giving users more freedom to experiment with creative ideas. Claid focuses on improving quality while keeping the workflow simple and approachable. Businesses often use it to refine product photos or prepare assets for e-commerce and advertising.\n\nClaid is a practical tool for photographers, designers and marketing teams. It streamlines visual production, improves image quality and supports creative exploration, helping users deliver professional visuals with minimal effort.",
+      "subtitle": "Enhance, upscale and generate production-ready visuals with AI.",
+      "tags": ["image enhancement", "upscaling", "background removal", "product photos", "API"],
+      "features": [
+        "AI-powered upscaling and denoising for low-resolution images",
+        "Background removal and replacement tuned for product photography",
+        "Automatic image improvement for brightness, contrast and colour",
+        "Generative tools for creating new product and lifestyle visuals",
+        "APIs and batch tools for large-scale image processing"
+      ],
+      "use_cases": [
+        {
+          "title": "E-commerce Product Imagery",
+          "description": "Online retailers standardise and improve product photos across large catalogues without manual editing."
+        },
+        {
+          "title": "Marketing & Ad Creatives",
+          "description": "Marketing teams rapidly generate and polish visuals for ads, landing pages and social campaigns."
+        },
+        {
+          "title": "Marketplace & UGC Cleanup",
+          "description": "Marketplaces enhance user-submitted images to meet quality standards and increase conversion."
+        }
+      ],
+      "pricing": "Usage-based pricing with free trials and tiers for SMBs and enterprises.",
+      "information": [
+        { "label": "Developer", "value": "Claid" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI image enhancement, upscaling and generation platform" },
+        { "label": "Privacy", "value": "Processes images via cloud APIs with business-focused security" },
+        { "label": "API", "value": "Full-featured API and web tools available for integration" }
+      ],
       "image": "Images/models/claid.webp",
       "link": "https://claid.ai/"
     },
@@ -2559,8 +2683,39 @@
       "id": 68,
       "name": "HireFlow",
       "category": ["finance", "documents", "jobs"],
-      "type": "N/A",
-      "description": "HireFlow streamlines recruitment by automating candidate sourcing, outreach and evaluation. Helping companies and applicants connect faster.",
+      "type": "Recruitment Automation Platform",
+      "description": "HireFlow helps companies streamline their recruitment process by automating tasks like sourcing candidates, sending outreach messages and evaluating applicant profiles. It reduces manual work and helps hiring teams identify strong matches more quickly. This gives recruiters more time to focus on relationship building and final decisions.\n\nThe platform can screen applicants, highlight relevant skills and organise candidate pipelines. It also assists with scheduling, follow-ups and communication, making the experience smoother for both companies and applicants. This is especially helpful for fast-moving teams that need to fill roles efficiently.\n\nHireFlow is valuable for startups, agencies and corporate hiring teams. It speeds up recruitment, improves consistency and helps companies connect with the right people at the right time. With automation taking care of repetitive tasks, teams can focus on finding the best possible talent.",
+      "subtitle": "Automate sourcing, outreach and candidate workflows in one hiring pipeline.",
+      "tags": ["recruitment", "ATS", "sourcing", "automation", "talent"],
+      "features": [
+        "Automated sourcing across multiple platforms based on role criteria",
+        "Personalised outreach sequences and follow-ups to candidates",
+        "Centralised candidate profiles and communication timelines",
+        "Dashboards for pipeline health, response rates and time-to-hire",
+        "Integrations with ATS, email and calendar tools"
+      ],
+      "use_cases": [
+        {
+          "title": "High-Volume Hiring",
+          "description": "Recruiting teams use HireFlow to scale outreach and screening for roles that require many candidates."
+        },
+        {
+          "title": "Startup Talent Operations",
+          "description": "Founders and small teams automate candidate discovery and follow-ups so they can focus on interviews."
+        },
+        {
+          "title": "Agency & RPO Workflows",
+          "description": "Recruitment agencies coordinate outreach and track performance across multiple clients and roles."
+        }
+      ],
+      "pricing": "Subscription pricing based on seats and number of roles or candidates managed.",
+      "information": [
+        { "label": "Developer", "value": "HireFlow" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI-enabled recruitment workflow and sourcing platform" },
+        { "label": "Privacy", "value": "Manages candidate data under standard hiring and data protection practices" },
+        { "label": "API", "value": "Integrations with ATS and HR tools; API availability varies by plan" }
+      ],
       "image": "Images/models/hireflow.webp",
       "link": "https://www.hireflow.net/"
     },
@@ -2568,8 +2723,39 @@
       "id": 69,
       "name": "eve",
       "category": ["office", "assistants", "documents"],
-      "type": "N/A",
-      "description": "Designed for plaintiff-law firms. A legal-AI platform you can train and teach to assist with case intake, litigation workflows and document drafting throughout an entire case lifecycle.",
+      "type": "Legal AI Platform for Plaintiff Firms",
+      "description": "Eve is an AI platform designed for plaintiff-side law firms that want support throughout the entire case lifecycle. It helps with tasks like intake, document drafting and litigation workflows, giving legal teams a reliable assistant for repetitive or time-consuming work. Users can train Eve on their own materials so it mirrors the firm’s preferred style and process.\n\nThe platform can review documents, generate first drafts and organise case information into a clear structure. This helps teams stay consistent and reduces the time spent preparing routine paperwork. Eve also supports communication and follow-ups, helping firms manage cases more efficiently.\n\nFor busy legal practices, Eve acts as an adaptable assistant that improves speed and accuracy across daily tasks. It allows attorneys and staff to focus more of their time on strategy, client interaction and complex legal work rather than administrative chores.",
+      "subtitle": "Trainable legal AI copilot for plaintiff-side case workflows.",
+      "tags": ["legal AI", "litigation", "intake", "drafting", "workflows"],
+      "features": [
+        "Configurable AI assistant trained on firm-specific templates and matter types",
+        "Support for case intake, triage and conflict checks",
+        "Drafting assistance for pleadings, motions and correspondence",
+        "Workflow automation for discovery and litigation milestones",
+        "Auditability and controls aligned to legal practice requirements"
+      ],
+      "use_cases": [
+        {
+          "title": "Intake & Screening",
+          "description": "Firms automate early case evaluation and documentation, ensuring consistent, thorough intake across staff."
+        },
+        {
+          "title": "Drafting Litigation Documents",
+          "description": "Lawyers generate first drafts of pleadings, motions and letters that can be quickly reviewed and finalised."
+        },
+        {
+          "title": "Ongoing Case Management",
+          "description": "Teams keep track of tasks, deadlines and document workflows with AI support throughout the case lifecycle."
+        }
+      ],
+      "pricing": "B2B SaaS pricing tailored to firm size and usage.",
+      "information": [
+        { "label": "Developer", "value": "Eve Legal" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "Legal AI and workflow platform for plaintiff-law firms" },
+        { "label": "Privacy", "value": "Built for handling confidential legal information with strict security controls" },
+        { "label": "API", "value": "Integrations and APIs focused on legal practice tools and document systems" }
+      ],
       "image": "Images/models/eve.webp",
       "link": "https://www.eve.legal"
     },
@@ -2577,8 +2763,39 @@
       "id": 70,
       "name": "Spellbook",
       "category": ["office", "assistants", "documents"],
-      "type": "N/A",
-      "description": "Spellbook is an AI tool specialised for contract review and drafting, built on top of legal-language models. It helps transactional lawyers quickly analyse, draft and benchmark contract language worldwide.",
+      "type": "AI Contract Drafting & Review Assistant",
+      "description": "Spellbook is an AI tool built specifically for contract drafting and review. It helps transactional lawyers analyse clauses, compare language against standards and generate clean contract text. By understanding legal structure and terminology, Spellbook assists lawyers in working more quickly without losing precision.\n\nThe tool can highlight risks, suggest alternative wording and point out inconsistencies within agreements. It also helps with benchmarking by comparing contract language to market norms. This saves time during negotiations and improves the clarity of final documents.\n\nSpellbook is popular among legal teams that manage high volumes of contracts. It supports lawyers by reducing repetitive drafting and giving them clearer insights during review. This helps firms deliver accurate work more efficiently.",
+      "subtitle": "AI copilot that helps lawyers draft and review contracts in less time.",
+      "tags": ["contracts", "legal AI", "document review", "drafting", "transactional law"],
+      "features": [
+        "Clause suggestions and alternative wording tailored to context",
+        "Issue spotting for risky or non-standard language in contracts",
+        "Benchmarking against playbooks or common market terms",
+        "Integration with contract editors and document tools",
+        "Customisable guidance to reflect firm or client preferences"
+      ],
+      "use_cases": [
+        {
+          "title": "First Draft Generation",
+          "description": "Lawyers quickly assemble initial drafts based on templates and Spellbook’s suggestions."
+        },
+        {
+          "title": "Reviewing Counterparty Paper",
+          "description": "Transactional teams use Spellbook to highlight unusual terms and propose revisions more efficiently."
+        },
+        {
+          "title": "Standardising Playbooks",
+          "description": "Firms codify their preferred positions and use Spellbook to keep drafts aligned with playbooks."
+        }
+      ],
+      "pricing": "Subscription pricing per user or seat, often targeted at law firms and in-house teams.",
+      "information": [
+        { "label": "Developer", "value": "Spellbook (by Rally)" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI assistant for contract drafting and review" },
+        { "label": "Privacy", "value": "Built with legal confidentiality and data security requirements in mind" },
+        { "label": "API", "value": "APIs and integrations available for contract platforms and document systems" }
+      ],
       "image": "Images/models/spellbook.webp",
       "link": "https://www.spellbook.legal"
     },
@@ -2586,8 +2803,39 @@
       "id": 71,
       "name": "PQAI",
       "category": ["research", "data", "documents"],
-      "type": "N/A",
-      "description": "PQAI is an open-source AI prior-art search tool for inventors and researchers. It accepts plain-language invention descriptions and finds relevant patents and literature to improve patent quality.",
+      "type": "AI Prior-Art Search Tool",
+      "description": "PQAI is an open-source tool that helps inventors and researchers search for prior art using simple, natural-language inputs. Instead of crafting complex search queries, users describe their invention and PQAI finds relevant patents and research papers. This makes the early stages of innovation easier to navigate.\n\nThe system analyses descriptions, identifies key concepts and surfaces materials that might relate to the proposed idea. This helps users refine their inventions, avoid duplication and improve patent quality. PQAI brings transparency to a process that can otherwise feel difficult for newcomers.\n\nInventors, students and research teams benefit from PQAI because it speeds up discovery and reduces uncertainty. It provides a practical starting point for patent exploration and helps users understand the landscape around their ideas.",
+      "subtitle": "Natural-language prior-art search for patents and technical literature.",
+      "tags": ["patents", "prior art", "search", "IP", "open source"],
+      "features": [
+        "Accepts plain-language descriptions of inventions and ideas",
+        "AI-powered semantic search over patent databases and literature",
+        "Ranked results highlighting relevance and similarities",
+        "Open-source stack that can be self-hosted or extended",
+        "Tools for refining queries and exploring related technologies"
+      ],
+      "use_cases": [
+        {
+          "title": "Pre-Filing Prior-Art Checks",
+          "description": "Inventors and patent attorneys quickly gauge existing art before drafting applications."
+        },
+        {
+          "title": "Competitive & Technology Landscape",
+          "description": "R&D teams analyse who else is working in a space and identify white spaces or crowded areas."
+        },
+        {
+          "title": "Portfolio & Quality Reviews",
+          "description": "IP teams assess existing patents for novelty and potential exposure to previously unknown art."
+        }
+      ],
+      "pricing": "Open-source and free to use; hosted or enterprise offerings may vary.",
+      "information": [
+        { "label": "Developer", "value": "Project PQ / PQAI community" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "Open-source AI prior-art search engine" },
+        { "label": "Privacy", "value": "Self-hosting options for sensitive invention disclosures" },
+        { "label": "API", "value": "Can be integrated as an API or service in custom tooling" }
+      ],
       "image": "Images/models/projectpq.webp",
       "link": "https://projectpq.ai"
     },
@@ -2595,8 +2843,39 @@
       "id": 72,
       "name": "Granola",
       "category": ["office", "assistants", "documents"],
-      "type": "N/A",
-      "description": "Granola is an AI-powered meeting notepad that transcribes, summarises and extracts actionable insights from back-to-back meetings. It integrates into work processes and aids follow-ups.",
+      "type": "AI Meeting Notepad & Summary Tool",
+      "description": "Granola is an AI-powered meeting assistant that records, transcribes and summarises discussions. It captures key points, action items and next steps so users can stay present without worrying about taking notes. This is especially helpful during back-to-back meetings.\n\nAfter each meeting, Granola generates clean summaries that can be shared with teams or added to project tools. It keeps information organised and makes follow-ups easier, reducing the chance of important details being overlooked. The tool integrates naturally into daily workflows.\n\nTeams that rely on frequent meetings use Granola to stay aligned and avoid manual note-taking. It helps create clarity, improves accountability and supports faster decision-making across projects.",
+      "subtitle": "Stay present in meetings while AI turns notes into clear summaries and action items.",
+      "tags": ["meeting notes", "summaries", "productivity", "transcription", "workflows"],
+      "features": [
+        "Automatic transcription of meetings with AI-enhanced summaries",
+        "Combines raw notes and transcript into structured outcomes",
+        "Highlights key decisions, action items and themes",
+        "Integrations with calendars and conferencing tools",
+        "Shareable notes for teams, clients and stakeholders"
+      ],
+      "use_cases": [
+        {
+          "title": "Back-to-Back Meetings",
+          "description": "Operators, founders and managers keep high-quality records from a full day of calls without manual effort."
+        },
+        {
+          "title": "Client & Sales Calls",
+          "description": "Sales and account teams capture key details and next steps from customer conversations automatically."
+        },
+        {
+          "title": "Internal Project Check-Ins",
+          "description": "Teams use Granola to ensure decisions and responsibilities from standups and syncs are clearly documented."
+        }
+      ],
+      "pricing": "Freemium — core features free with paid plans for heavier usage and advanced integrations.",
+      "information": [
+        { "label": "Developer", "value": "Granola" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI meeting notetaking and summarisation tool" },
+        { "label": "Privacy", "value": "Built with strong privacy controls for meeting content and transcripts" },
+        { "label": "API", "value": "Focus on app integrations; API availability may vary" }
+      ],
       "image": "Images/models/granola.webp",
       "link": "https://www.granola.ai"
     },
@@ -2604,8 +2883,39 @@
       "id": 73,
       "name": "n8n",
       "category": ["development", "office", "assistants"],
-      "type": "N/A",
-      "description": "n8n is a visual automation/workflow platform that allows you to build AI agents and integrate them with 400+ apps to perform automated tasks. NO code required!",
+      "type": "Open Source Workflow Automation & AI Agent Platform",
+      "description": "n8n is a visual automation platform that lets users build workflows and AI agents without writing code. With a drag-and-drop interface, users can connect hundreds of apps and automate tasks that would normally require manual effort. This makes automation accessible to both technical and non-technical teams.\n\nThe platform supports data transfers, notifications, API calls and decision-based actions. Users can build everything from simple integrations to multi-step automated processes that run on their own. It also includes features that help teams customise logic and connect with external services.\n\nn8n is valued for its flexibility and open approach. It gives organisations a powerful way to automate work, reduce repetitive tasks and build customised workflows that fit their unique processes.",
+      "subtitle": "Build powerful workflows and AI agents visually, with open-source flexibility.",
+      "tags": ["automation", "workflows", "no-code", "open source", "AI agents"],
+      "features": [
+        "Visual node-based workflow builder",
+        "Hundreds of prebuilt integrations with SaaS tools and databases",
+        "Native support for calling LLMs and AI services in workflows",
+        "Self-hosting and source code access for full control",
+        "Extensible via custom nodes and community contributions"
+      ],
+      "use_cases": [
+        {
+          "title": "AI-Enhanced Business Processes",
+          "description": "Teams connect CRMs, ticketing systems and AI models to automate classification, routing and responses."
+        },
+        {
+          "title": "Internal Agent & Bot Building",
+          "description": "Developers create agents that watch for events, call APIs and respond with AI-generated outputs."
+        },
+        {
+          "title": "Data Pipelines & Integrations",
+          "description": "Organisations stitch together data flows between tools without writing full custom backends."
+        }
+      ],
+      "pricing": "Open-source core with cloud-hosted and enterprise offerings available.",
+      "information": [
+        { "label": "Developer", "value": "n8n GmbH" },
+        { "label": "Founded", "value": "2019" },
+        { "label": "Type", "value": "Open-source workflow automation and integration platform" },
+        { "label": "Privacy", "value": "Self-hosted or cloud with enterprise security options" },
+        { "label": "API", "value": "Extensive API and integration capabilities; workflows themselves expose endpoints" }
+      ],
       "image": "Images/models/n8n.webp",
       "link": "https://n8n.io/ai-agents"
     },
@@ -2613,8 +2923,39 @@
       "id": 74,
       "name": "Make",
       "category": ["office", "development", "assistants"],
-      "type": "N/A",
-      "description": "Make (previously Integromat) is a no-code automation platform. Enabling users to build, orchestrate and scale AI-powered workflows and agents across business functions.",
+      "type": "No-Code Automation & Integration Platform",
+      "description": "Make is a no-code automation platform that helps teams build, orchestrate and scale workflows across different apps. Users can design automations visually, connecting tools like CRMs, document systems, AI services and analytics platforms. This simplifies complex processes and reduces manual work.\n\nMake can manage data syncing, content generation, notifications and other routine tasks. It is flexible enough for simple automations but also powerful enough for large team operations. Users can drag, connect and configure steps to create workflows that run smoothly in the background.\n\nBusinesses use Make to improve efficiency across departments like sales, support, operations and marketing. It helps teams save time, reduce errors and unify their tools in a more organised way.",
+      "subtitle": "Visually build and run complex automations and AI workflows across your stack.",
+      "tags": ["automation", "no-code", "integrations", "workflows", "AI agents"],
+      "features": [
+        "Drag-and-drop scenario builder for multi-step workflows",
+        "Hundreds of prebuilt integrations with SaaS tools and databases",
+        "Routers, filters and error handling for complex logic",
+        "AI and HTTP modules to call LLMs or custom APIs",
+        "Scheduling, monitoring and logging for production use"
+      ],
+      "use_cases": [
+        {
+          "title": "Cross-App Business Automation",
+          "description": "Operations teams sync data between CRMs, support tools, billing systems and more without custom code."
+        },
+        {
+          "title": "AI-Powered Processes",
+          "description": "Teams insert AI steps into workflows—for classification, summarisation or content generation."
+        },
+        {
+          "title": "Agency & Client Workflows",
+          "description": "Agencies build reusable automation templates for onboarding, reporting and campaign workflows."
+        }
+      ],
+      "pricing": "Tiered subscription plans based on operations, data limits and features.",
+      "information": [
+        { "label": "Developer", "value": "Make.com" },
+        { "label": "Founded", "value": "Integromat founded mid-2010s; rebranded to Make" },
+        { "label": "Type", "value": "Visual no-code integration and automation platform" },
+        { "label": "Privacy", "value": "Enterprise-ready with data residency and security options" },
+        { "label": "API", "value": "APIs and webhooks for triggering and managing scenarios" }
+      ],
       "image": "Images/models/make.webp",
       "link": "https://www.make.com/en"
     },
@@ -2622,8 +2963,39 @@
       "id": 75,
       "name": "Zapier",
       "category": ["office", "assistants", "development"],
-      "type": "N/A",
-      "description": "Zapier is a widely-used automation platform that heavily integrates AI to connect apps, build agent and automate tasks across thousands of services with minimal code.",
+      "type": "Automation Platform with AI Integration",
+      "description": "Zapier is one of the most widely used automation platforms, helping users connect apps and perform tasks across thousands of services. With AI capabilities built into the system, users can create agents, automate manual steps and streamline their daily workflow with minimal coding.\n\nThe platform allows users to build automated sequences that trigger actions across different tools. This is useful for tasks like updating spreadsheets, sending messages, managing files or coordinating customer data. Zapier’s large ecosystem makes it easy to connect almost any app combination.\n\nZapier supports individuals, small businesses and enterprise teams that want to simplify repetitive tasks. It saves time and brings consistency to everyday workflows, helping teams focus on higher-value work.",
+      "subtitle": "Connect thousands of apps and add AI to automate work across your tools.",
+      "tags": ["automation", "integrations", "no-code", "AI actions", "workflows"],
+      "features": [
+        "Prebuilt connectors for thousands of SaaS apps",
+        "Simple trigger–action model (“Zaps”) for common tasks",
+        "AI-powered actions and natural-language interfaces",
+        "Multi-step workflows with filters, delays and branching",
+        "Shared workspaces and folders for team automation"
+      ],
+      "use_cases": [
+        {
+          "title": "Sales & Marketing Automation",
+          "description": "Teams sync leads, automate follow-ups and keep CRM data up to date across tools."
+        },
+        {
+          "title": "Operations & Admin Tasks",
+          "description": "Ops staff automate notifications, ticket handling, approvals and reporting jobs."
+        },
+        {
+          "title": "AI-Enhanced Workflows",
+          "description": "Users call AI to summarise, classify or generate text as part of broader workflows."
+        }
+      ],
+      "pricing": "Freemium with tiered paid plans based on task volume and feature set.",
+      "information": [
+        { "label": "Developer", "value": "Zapier Inc." },
+        { "label": "Founded", "value": "2011" },
+        { "label": "Type", "value": "Cloud automation and integrations platform" },
+        { "label": "Privacy", "value": "Offers enterprise security, SSO and granular data controls" },
+        { "label": "API", "value": "Developer platform and APIs for building custom Zapier integrations" }
+      ],
       "image": "Images/models/zapier.webp",
       "link": "https://zapier.com"
     },
@@ -2631,8 +3003,39 @@
       "id": 76,
       "name": "Boomi",
       "category": ["office", "development", "data"],
-      "type": "N/A",
-      "description": "Boomi is an enterprise integration and automation platform offering AI-agents and workflows to streamline API/data management, process automation, and integration across systems.",
+      "type": "iPaaS & Automation Platform",
+      "description": "Boomi is an enterprise platform that helps organisations integrate their systems, automate processes and manage data across departments. It connects applications that do not naturally communicate with each other, reducing inefficiencies and supporting cleaner information flow.\n\nThe platform includes tools for building automated workflows, managing APIs and using AI to support decision-making. Boomi helps companies ensure that data moves consistently between systems like CRM, HR and finance, improving visibility across the organisation.\n\nLarge teams use Boomi to streamline operations and reduce the complexity of managing multiple systems. It supports reliable automation, improves data accuracy and helps businesses scale their digital processes.",
+      "subtitle": "Connect, integrate and automate systems with enterprise-grade iPaaS and AI.",
+      "tags": ["integration", "iPaaS", "APIs", "automation", "data"],
+      "features": [
+        "Drag-and-drop integration designer for connecting apps and data sources",
+        "Prebuilt connectors for ERPs, CRMs, databases and more",
+        "API management for designing, securing and monitoring APIs",
+        "Data quality and master data management capabilities",
+        "AI-enhanced recommendations and automation of integration tasks"
+      ],
+      "use_cases": [
+        {
+          "title": "Enterprise System Integration",
+          "description": "IT teams connect legacy and modern systems to share data and automate end-to-end processes."
+        },
+        {
+          "title": "API-Led Modernisation",
+          "description": "Organisations expose core capabilities as APIs while managing governance and performance through Boomi."
+        },
+        {
+          "title": "Data Synchronisation & Governance",
+          "description": "Businesses maintain consistent, high-quality data across multiple applications and regions."
+        }
+      ],
+      "pricing": "Enterprise licensing based on integration volume, connectors and modules.",
+      "information": [
+        { "label": "Developer", "value": "Boomi" },
+        { "label": "Founded", "value": "2000" },
+        { "label": "Type", "value": "Enterprise integration, automation and data management platform" },
+        { "label": "Privacy", "value": "Enterprise-grade security, compliance and governance options" },
+        { "label": "API", "value": "Supports building and managing APIs as part of the platform" }
+      ],
       "image": "Images/models/boomi.webp",
       "link": "https://boomi.com"
     },
@@ -2640,8 +3043,39 @@
       "id": 77,
       "name": "Lovable",
       "category": ["development", "design"],
-      "type": "N/A",
-      "description": "Lovable is an AI platform that lets users build web apps and websites via natural-language prompts. Simplifying front-end & full-stack development for non-technical users.",
+      "type": "AI App & Site Builder",
+      "description": "Lovable is an AI platform that allows users to build websites and web apps using simple text prompts. Instead of writing code manually, users describe what they want and the system generates functional interfaces and application logic. This makes development more accessible to non-technical individuals.\n\nUsers can refine designs, adjust features and update their app through conversational instructions. Lovable speeds up prototyping and helps teams turn early ideas into working products without relying heavily on engineering resources. It supports both simple sites and more complex applications.\n\nLovable is helpful for entrepreneurs, small businesses and creators who want to launch digital products quickly. It reduces the technical barrier to building software and encourages experimentation and rapid iteration.",
+      "subtitle": "Describe your idea and get a working web app you can edit and ship.",
+      "tags": ["app builder", "no-code", "full-stack", "prototyping", "AI dev"],
+      "features": [
+        "Natural-language prompts that generate working web apps",
+        "Front-end and back-end scaffolding with sensible defaults",
+        "Editable codebase so developers can refine and extend apps",
+        "Support for common use cases like dashboards, CRMs and portals",
+        "Deployment and hosting flows to put apps in users’ hands quickly"
+      ],
+      "use_cases": [
+        {
+          "title": "MVP & Prototype Building",
+          "description": "Founders turn ideas into clickable, functional prototypes to test with users and stakeholders."
+        },
+        {
+          "title": "Internal Tools & Portals",
+          "description": "Teams spin up admin panels, partner portals or internal dashboards with minimal engineering overhead."
+        },
+        {
+          "title": "Indie Projects & Experiments",
+          "description": "Developers and makers rapidly explore product ideas without hand-coding every boilerplate piece."
+        }
+      ],
+      "pricing": "Freemium and paid plans depending on project count, features and hosting.",
+      "information": [
+        { "label": "Developer", "value": "Lovable" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI-assisted full-stack app and website builder" },
+        { "label": "Privacy", "value": "Processes project code and configuration via cloud services" },
+        { "label": "API", "value": "Focus on generated apps; integrations depend on the tech stack used" }
+      ],
       "image": "Images/models/lovable.webp",
       "link": "https://lovable.dev"
     },
@@ -2649,8 +3083,39 @@
       "id": 78,
       "name": "ATLAS",
       "category": ["design", "office", "documents"],
-      "type": "N/A",
-      "description": "ATLAS is an AI store-builder tool that custom-generates Shopify and e-commerce stores. Design, copy, create product photos and themes via AI from product links.",
+      "type": "AI Store & Site Builder for E-commerce",
+      "description": "ATLAS is an AI tool that builds e-commerce stores, especially for Shopify users. It can generate themes, images, product descriptions and full store layouts from simple inputs like product links. This helps users launch shops quickly without design or coding experience.\n\nThe platform handles branding, layout and content to create a store that feels cohesive. Users can refine results, adjust styling and upload additional assets for personalisation. ATLAS is helpful for new sellers who want a strong starting point for their online presence.\n\nEntrepreneurs and small businesses use ATLAS to speed up store creation and reduce setup time. It provides an efficient way to build a polished e-commerce environment and focus more on products and customers.",
+      "subtitle": "Turn product links into a fully designed, copy-complete Shopify store with AI.",
+      "tags": ["Shopify", "e-commerce", "store builder", "copywriting", "product photos"],
+      "features": [
+        "Creates store layouts and themes based on product information",
+        "Generates product descriptions, headlines and on-page copy",
+        "AI-generated or enhanced product photography and lifestyle images",
+        "Support for common e-commerce sections like home, collection and product pages",
+        "Workflows for iterating on design and content before launch"
+      ],
+      "use_cases": [
+        {
+          "title": "Launching New Stores Fast",
+          "description": "Founders quickly move from idea to live store without hiring full design and dev teams."
+        },
+        {
+          "title": "Refreshing Existing Stores",
+          "description": "Merchants redesign product pages and themes to match evolving brand and customer expectations."
+        },
+        {
+          "title": "Testing New Product Lines",
+          "description": "Brands create spin-off microsites or collections to test interest before investing heavily."
+        }
+      ],
+      "pricing": "Subscription pricing with tiers for store counts, features and AI usage.",
+      "information": [
+        { "label": "Developer", "value": "ATLAS / HelloAtlas" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI-powered Shopify and e-commerce store builder" },
+        { "label": "Privacy", "value": "Handles product data, assets and store configuration in the cloud" },
+        { "label": "API", "value": "Integrates with Shopify; additional APIs may be available for partners" }
+      ],
       "image": "Images/models/atlas.webp",
       "link": "https://www.helloatlas.io"
     },
@@ -2658,8 +3123,39 @@
       "id": 79,
       "name": "Base 44",
       "category": ["development", "office"],
-      "type": "N/A",
-      "description": "Base44 is a platform that converts natural-language prompts into fully functional apps. No code needed! Ideal for creating dashboards, onboarding portals or internal tools rapidly.",
+      "type": "AI App & Internal Tool Builder",
+      "description": "Base44 converts plain-language prompts into fully working software applications. Users can describe dashboards, onboarding portals or internal tools and Base44 generates the necessary components. This removes the need for coding and speeds up project delivery.\n\nThe platform allows users to refine their app by adjusting layout, behaviour and content. Teams can build prototypes or production-ready tools much faster than with traditional development. Base44 provides a simple interface for creating digital products even without technical knowledge.\n\nBusinesses and teams use Base44 to streamline internal workflows and build solutions tailored to their needs. It supports rapid development and makes it easier for organisations to create useful tools without heavy engineering investment.",
+      "subtitle": "From prompt to working internal app—no code required.",
+      "tags": ["internal tools", "dashboards", "no-code", "AI builder", "operations"],
+      "features": [
+        "Prompt-based app generation for common business workflows",
+        "Auto-created dashboards, forms and data views",
+        "Integrations with popular data sources and SaaS tools",
+        "Editable logic and schemas so apps can evolve over time",
+        "Collaboration and permissions tailored to internal teams"
+      ],
+      "use_cases": [
+        {
+          "title": "Operations Dashboards",
+          "description": "Ops teams create dashboards to track KPIs, tickets or logistics without waiting on engineering."
+        },
+        {
+          "title": "Onboarding & Partner Portals",
+          "description": "Companies spin up portals for onboarding customers, vendors or employees with custom flows."
+        },
+        {
+          "title": "Ad-hoc Internal Tools",
+          "description": "Teams build small tools to automate specific workflows that would otherwise live in spreadsheets and email."
+        }
+      ],
+      "pricing": "SaaS pricing based on number of apps, users and integrations.",
+      "information": [
+        { "label": "Developer", "value": "Base44" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI-powered internal tool and app builder" },
+        { "label": "Privacy", "value": "Works with business data and user accounts under standard security practices" },
+        { "label": "API", "value": "Apps can connect to external APIs; platform-level APIs may be available" }
+      ],
       "image": "Images/models/base44.webp",
       "link": "https://base44.com"
     },
@@ -2667,17 +3163,79 @@
       "id": 80,
       "name": "HeyGen",
       "category": ["design", "audio"],
-      "type": "N/A",
-      "description": "HeyGen is a generative video/AI avatar platform. Allowing users to create AI-driven video avatars and narration from text, enabling quick production of human-like video content without filming.",
+      "type": "AI Avatar & Video Generation Platform",
+      "description": "HeyGen is a platform that creates AI-powered videos with realistic avatars and voice narration. Users can turn text into full video scenes without filming or using professional equipment. This makes it easier to produce content for training, marketing or communication.\n\nThe tool offers customisable avatars, language options and creative styles. Users can adjust tone, pacing and visuals until the final result matches their message. HeyGen also helps teams scale video production by generating multiple versions quickly.\n\nCreators, educators and businesses use HeyGen to deliver video content efficiently. It reduces the need for expensive filming setups and makes high-quality video more accessible to everyone.",
+      "subtitle": "Turn scripts into polished avatar videos with AI voice and lip-sync.",
+      "tags": ["video", "avatars", "text-to-video", "voiceover", "content"],
+      "features": [
+        "Library of realistic AI avatars and option for custom avatars",
+        "Text-to-speech with multiple voices and languages",
+        "Accurate lip-sync and facial animation aligned to speech",
+        "Template-based workflows for common video formats",
+        "Branding controls for backgrounds, overlays and layouts"
+      ],
+      "use_cases": [
+        {
+          "title": "Training & Onboarding Videos",
+          "description": "HR and L&D teams produce explainer videos for new hires and ongoing training at scale."
+        },
+        {
+          "title": "Marketing & Sales Outreach",
+          "description": "Marketers create personalised videos for campaigns, product updates and outreach without filming."
+        },
+        {
+          "title": "Support & Help Content",
+          "description": "Support teams generate walkthrough videos for FAQs and product tutorials that can be quickly updated."
+        }
+      ],
+      "pricing": "Subscription tiers based on minutes of video, features and branding options.",
+      "information": [
+        { "label": "Developer", "value": "HeyGen" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI avatar and video generation platform" },
+        { "label": "Privacy", "value": "Handles user-uploaded likenesses and scripts with specific content policies" },
+        { "label": "API", "value": "API available for programmatic video creation and integrations" }
+      ],
       "image": "Images/models/heygen.webp",
       "link": "https://www.heygen.com"
     },
     {
       "id": 81,
       "name": "Artlist",
-      "category": ["design","audio"],
-      "type": "N/A",
-      "description": "Artlist.io is an AI-enhanced media platform offering royalty-free music, sound effects and AI tools for content creators to generate media assets.",
+      "category": ["design", "audio"],
+      "type": "Royalty-Free Media & AI Tools Platform",
+      "description": "Artlist is a media platform offering royalty-free music, sound effects and AI-enhanced tools for content creators. It gives users access to high-quality audio that can be used in videos, podcasts or other media projects without worrying about licensing issues.\n\nThe platform includes curated libraries, search filters and playlists to help users find the right sound quickly. With AI enhancements, Artlist can also support creative workflows by helping users match mood, pacing and style across different media types.\n\nArtlist is a trusted resource for filmmakers, YouTubers and marketers who want reliable, professional audio. It simplifies content production and gives creators more freedom to focus on storytelling.",
+      "subtitle": "Royalty-free music, SFX and AI tools for modern content creators.",
+      "tags": ["music", "sound effects", "stock media", "AI tools", "licensing"],
+      "features": [
+        "Large catalog of royalty-free tracks and sound effects",
+        "Curated footage, templates and other visual assets (depending on plan)",
+        "Simple licensing that covers multiple platforms and use cases",
+        "AI tools for finding, adapting or generating media assets",
+        "Search and filtering tailored to video and content workflows"
+      ],
+      "use_cases": [
+        {
+          "title": "YouTube & Social Content",
+          "description": "Creators source music and SFX that are safe to use across platforms without manual licensing negotiations."
+        },
+        {
+          "title": "Brand & Agency Productions",
+          "description": "Production teams assemble soundtracks and effects for ads, promos and client work quickly."
+        },
+        {
+          "title": "Film & Narrative Projects",
+          "description": "Independent filmmakers use Artlist to score films and series with high-quality, affordable audio."
+        }
+      ],
+      "pricing": "Subscription plans based on media types and licensing scope (e.g. personal, commercial, enterprise).",
+      "information": [
+        { "label": "Developer", "value": "Artlist Ltd." },
+        { "label": "Founded", "value": "Mid-2010s" },
+        { "label": "Type", "value": "Royalty-free media and AI tools platform" },
+        { "label": "Privacy", "value": "Standard SaaS user and payment data handling" },
+        { "label": "API", "value": "Primarily web-based; partner integrations may be available" }
+      ],
       "image": "Images/models/artlist.webp",
       "link": "https://artlist.io"
     },
@@ -2685,8 +3243,39 @@
       "id": 82,
       "name": "Precision",
       "category": ["data", "finance"],
-      "type": "N/A",
-      "description": "Precision offers AI-driven financial modelling and analytics. Helping businesses and teams visualise data to forecast KPI's, simulate scenarios and make data-driven investment decisions.",
+      "type": "AI-Powered Growth & Financial Analytics Platform",
+      "description": "Precision helps businesses analyse financial data through AI-driven modelling and visualisation tools. Users can forecast performance, simulate scenarios and understand how different decisions impact key outcomes. This makes planning and budgeting more accurate and informed.\n\nThe platform turns complex data into clear dashboards that show trends and potential risks. Teams can adjust assumptions and instantly see how their forecasts change, helping them make confident choices. Precision supports collaboration and encourages data-driven discussion.\n\nFinance teams, analysts and executives use Precision to strengthen decision-making and track company performance. It provides a practical way to explore financial strategy without relying solely on spreadsheets.",
+      "subtitle": "Turn scattered metrics into one AI-driven scorecard for growth decisions.",
+      "tags": ["analytics", "financial modelling", "KPI tracking", "growth", "forecasting"],
+      "features": [
+        "Automated ingestion and consolidation of data from multiple sources",
+        "Scorecards that highlight the most important KPIs and trends",
+        "AI analysis that surfaces constraints and growth opportunities",
+        "Scenario modelling to test the impact of different levers on performance",
+        "Templates and best-practice metrics tailored to business models"
+      ],
+      "use_cases": [
+        {
+          "title": "Executive & Board Reporting",
+          "description": "Leadership teams use Precision to track key metrics and understand what’s driving or limiting growth."
+        },
+        {
+          "title": "FP&A & Finance Strategy",
+          "description": "Finance teams explore scenarios and KPIs without building complex spreadsheets from scratch."
+        },
+        {
+          "title": "Operator & Founder Insights",
+          "description": "Founders gain clarity on where to focus—from acquisition to retention—based on AI-driven analysis."
+        }
+      ],
+      "pricing": "Subscription pricing based on company stage, data complexity and support level.",
+      "information": [
+        { "label": "Developer", "value": "Precision" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI-powered growth and financial analytics platform" },
+        { "label": "Privacy", "value": "Works with sensitive business data; uses secure data pipelines and storage" },
+        { "label": "API", "value": "Integrations and connectors available for common data sources and warehouses" }
+      ],
       "image": "Images/models/precision.webp",
       "link": "https://www.precision.co"
     },
@@ -2694,8 +3283,39 @@
       "id": 83,
       "name": "Fyxer",
       "category": ["office", "assistants", "documents"],
-      "type": "N/A",
-      "description": "Fyxer is an AI-enabled tool that connects to your inbox, drafts replies in your voice, takes meeting notes and automates follow-ups from your calendar and email.",
+      "type": "AI Inbox & Workflow Assistant",
+      "description": "Fyxer connects to a user’s inbox and calendar to help automate everyday communication. It drafts replies in the user’s writing style, prepares follow-up messages and records notes from meetings. This reduces the amount of manual writing and organising required during a busy workday.\n\nThe assistant can highlight important messages, suggest responses and keep track of commitments across email threads. It helps users stay organised and ensures nothing gets overlooked. This is especially useful for professionals who manage high volumes of communication.\n\nFyxer is a helpful companion for individuals who want to save time and maintain a consistent communication style. It supports productivity by managing repetitive tasks and helping users focus on work that matters most.",
+      "subtitle": "An AI chief-of-staff for your inbox, meetings and follow-ups.",
+      "tags": ["email", "calendar", "assistant", "productivity", "inbox zero"],
+      "features": [
+        "Email triage to highlight important messages and de-emphasise noise",
+        "Draft replies that mimic your tone and previous communication style",
+        "Automatic follow-up reminders and task extraction from emails",
+        "Meeting note capture and action item generation",
+        "Integrations with calendars and productivity tools"
+      ],
+      "use_cases": [
+        {
+          "title": "Busy Executives & Operators",
+          "description": "Leaders rely on Fyxer to manage high-volume email and ensure timely, consistent communication."
+        },
+        {
+          "title": "Sales & Client-Facing Roles",
+          "description": "Salespeople and account managers use Fyxer to stay on top of follow-ups and client correspondence."
+        },
+        {
+          "title": "Knowledge Workers with Heavy Communication Load",
+          "description": "Anyone spending hours in email and meetings can offload routine tasks to Fyxer."
+        }
+      ],
+      "pricing": "Subscription-based pricing; typically per user with tiers by feature set.",
+      "information": [
+        { "label": "Developer", "value": "Fyxer AI Limited" },
+        { "label": "Founded", "value": "Original virtual assistant business mid-2010s; AI product launched 2024" },
+        { "label": "Type", "value": "AI email, calendar and workflow assistant" },
+        { "label": "Privacy", "value": "Connects to inboxes and calendars with strong security and permission controls" },
+        { "label": "API", "value": "Focus on integrations with email and calendar providers; broader APIs may evolve over time" }
+      ],
       "image": "Images/models/fyxer.webp",
       "link": "https://www.fyxer.com/"
     },
@@ -2703,8 +3323,39 @@
       "id": 84,
       "name": "Similar Web",
       "category": ["data", "documents"],
-      "type": "N/A",
-      "description": "SimilarWeb is a web analytics platform using AI to provide competitive insights, web traffic data and market intelligence for creators and businesses. Allowing you to comoare your websites performance to direct competitors.",
+      "type": "Web Analytics & Market Intelligence Platform",
+      "description": "SimilarWeb provides insights into website traffic, online performance and competitive positioning. It uses AI to analyse how users find and engage with websites, giving businesses a clearer understanding of market trends. This helps teams identify opportunities for growth and areas that may need improvement.\n\nThe platform offers metrics such as audience behaviour, traffic sources and keyword performance. Users can compare their website to competitors and understand how they rank in their industry. This information makes marketing decisions more strategic and informed.\n\nCreators, marketers and businesses rely on SimilarWeb for planning campaigns, improving SEO and tracking digital performance. It gives teams a deeper view of the online landscape and supports smarter, data-driven strategies.",
+      "subtitle": "Benchmark your digital performance and analyse competitors’ web traffic with AI insights.",
+      "tags": ["web analytics", "competitive intelligence", "traffic data", "market research"],
+      "features": [
+        "Traffic and engagement estimates for millions of websites and apps",
+        "Breakdown of traffic sources, geographies and audiences",
+        "Competitive benchmarking and market share analysis",
+        "Industry reports and trend dashboards for categories and regions",
+        "APIs and exports for integrating data into internal tools and reports"
+      ],
+      "use_cases": [
+        {
+          "title": "Competitive Benchmarking",
+          "description": "Digital teams compare their website performance to competitors and identify where they’re winning or lagging."
+        },
+        {
+          "title": "Market & Category Analysis",
+          "description": "Analysts track category trends, emerging players and shifting audience behaviour across markets."
+        },
+        {
+          "title": "Campaign & SEO Strategy",
+          "description": "Marketers study traffic sources and keywords that drive growth for their own sites and competitors."
+        }
+      ],
+      "pricing": "Combination of free insights, self-serve subscriptions and enterprise contracts depending on data depth and usage.",
+      "information": [
+        { "label": "Developer", "value": "Similarweb Ltd." },
+        { "label": "Founded", "value": "2007" },
+        { "label": "Type", "value": "Digital intelligence and web analytics platform" },
+        { "label": "Privacy", "value": "Aggregates and models web activity data with enterprise security controls" },
+        { "label": "API", "value": "Data APIs and integrations available for enterprises and partners" }
+      ],
       "image": "Images/models/similarweb.webp",
       "link": "https://www.similarweb.com/"
     },
