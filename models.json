@@ -753,7 +753,7 @@
         { "label": "Developer", "value": "Playground (founded by Suhail Doshi)" },
         { "label": "Founded", "value": "2022" },
         { "label": "Type", "value": "AI-powered design and image editing platform" },
-        { "label", "value": "Privacy", "value": "Operates as a hosted SaaS product with its own privacy policy" },
+        { "label": "Privacy", "value": "Operates as a hosted SaaS product with its own privacy policy" },
         { "label": "API", "value": "No widely-advertised public REST API; focused on the web app experience" }
       ],
       "image": "Images/models/playground.webp",
