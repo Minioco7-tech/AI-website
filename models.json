@@ -481,35 +481,40 @@
     },
     {
       "id": 13,
-      "name": "Stitch", 
+      "name": "Stitch",
       "category": ["development", "design", "documents"],
-      "type": "N/A",
-      "description": "Stitch helps developers collaborate and generate code using natural language. It bridges the gap between design and development, allowing users to prototype or build projects quickly.",
-      "subtitle": "",
-      "tags": [""],
-      "features": [""
+      "type": "AI UI Design & Code Generator",
+      "description": "Stitch is a Google Labs experiment that turns natural language prompts and visual references into production-ready user interfaces.\n\nPowered by Gemini, Stitch lets designers and developers describe an interface in plain English or upload wireframes and screenshots. The tool then generates responsive layouts, UI components and front-end code for web or mobile in minutes.\n\nBy combining AI-assisted design with code export, Stitch helps teams move from idea to interactive prototype faster, reducing repetitive layout work and improving collaboration between product, design and engineering.",
+      "subtitle": "Google’s AI tool for turning ideas into UI and frontend code.",
+      "tags": ["UI design", "frontend code", "prototyping", "Google Labs", "Gemini"],
+      "features": [
+        "Generate multi-screen web and mobile UIs from natural language prompts",
+        "Accepts image, sketch or wireframe references to guide layout and style",
+        "Exports responsive front-end code for faster developer handoff",
+        "Supports multiple variants to explore different layouts, themes and flows",
+        "Browser-based Google Labs experiment with tight design–dev feedback loop"
       ],
       "use_cases": [
         {
-          "title": "",
-          "description": ""
+          "title": "Rapid Product UI Prototyping",
+          "description": "Turn early-stage product ideas into concrete interface concepts in minutes instead of days, exploring different layouts and flows without manually redrawing screens."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Design-to-Development Handoff",
+          "description": "Generate structured front-end code that developers can refine instead of rebuilding UIs from scratch, reducing miscommunication between design mocks and implementation."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Exploring Alternative Design Directions",
+          "description": "Use prompts and reference images to explore multiple design directions quickly, helping teams compare options for visual style, hierarchy and UX before committing."
         }
       ],
-      "pricing": "",
+      "pricing": "Currently free as an experimental Google Labs tool (subject to change).",
       "information": [
-        { "label": "Developer", "value": "" },
-        { "label": "Founded", "value": "" },
-        { "label": "Type", "value": "" },
-        { "label": "Privacy", "value": "" },
-        { "label": "API", "value": "" }
+        { "label": "Developer", "value": "Google (Google Labs)" },
+        { "label": "Founded", "value": "2025" },
+        { "label": "Type", "value": "AI UI design & frontend code generator" },
+        { "label": "Privacy", "value": "Uses Google account & standard Google privacy controls" },
+        { "label": "API", "value": "No public API — accessed via web interface only" }
       ],
       "image": "Images/models/stitch.webp",
       "link": "https://stitch.withgoogle.com/"
@@ -518,68 +523,78 @@
       "id": 14,
       "name": "Blackbox AI",
       "category": ["development", "documents"],
-      "type": "N/A",
-      "description": "Blackbox AI searches, explains and writes code snippets across repositories. It accelerates debugging, learning and documentation for developers using various frameworks and languages.",
-      "subtitle": "",
-      "tags": [""],
-      "features": [""
+      "type": "AI Coding Assistant & Multi-Agent Workspace",
+      "description": "Blackbox AI is a full-stack coding assistant that combines code search, autocompletion, multi-agent workflows and an API for advanced automation.\n\nDevelopers can use Blackbox AI in the browser, IDEs and terminals to autocomplete functions, explain snippets, refactor code and generate boilerplate across hundreds of languages and frameworks. Its agents can read entire repositories, run tasks, and suggest fixes in context.\n\nFor teams and tool builders, Blackbox AI also exposes a multi-agent API, letting you integrate its capabilities into your own products or internal tools for automated refactoring, QA and documentation.",
+      "subtitle": "Multi-agent AI coding assistant for search, completion and automation.",
+      "tags": ["code assistant", "autocomplete", "code search", "agents", "API"],
+      "features": [
+        "Real-time code autocompletion and generation across major languages and frameworks",
+        "Semantic code search across files, repositories and even code shown in videos",
+        "Multi-agent coding workflows for refactoring, documentation and feature implementation",
+        "Integrations with popular IDEs and CLIs for in-context assistance",
+        "Unified API to access top LLMs and generative models through a single endpoint"
       ],
       "use_cases": [
         {
-          "title": "",
-          "description": ""
+          "title": "Everyday Coding Accelerator",
+          "description": "Speed up daily development by using AI to autocomplete functions, write boilerplate, generate tests and explain unfamiliar snippets directly inside your IDE."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Understanding Large Codebases",
+          "description": "Use search and agents to navigate, summarise and document legacy or complex codebases, helping new team members ramp up faster."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Embedding AI into Developer Tools",
+          "description": "Integrate the Blackbox AI API into internal platforms, CLIs or dashboards to automate code review, migration scripts and repetitive engineering workflows."
         }
       ],
-      "pricing": "",
+      "pricing": "Free tier available — paid plans start at around $5–$10/month depending on promotions.",
       "information": [
-        { "label": "Developer", "value": "" },
-        { "label": "Founded", "value": "" },
-        { "label": "Type", "value": "" },
-        { "label": "Privacy", "value": "" },
-        { "label": "API", "value": "" }
+        { "label": "Developer", "value": "BLACKBOX AI" },
+        { "label": "Founded", "value": "Not publicly specified" },
+        { "label": "Type", "value": "AI coding assistant & multi-agent platform" },
+        { "label": "Privacy", "value": "Enterprise-focused; advertises enterprise-grade security and privacy controls" },
+        { "label": "API", "value": "Available — multi-agent and task APIs for integrating AI into products" }
       ],
       "image": "Images/models/blackbox.webp",
       "link": "https://www.blackbox.ai/"
     },
     {
       "id": 15,
-      "name": "DeepSite", 
+      "name": "DeepSite",
       "category": ["development", "design"],
-      "type": "N/A",
-      "description": "DeepSite transforms text prompts into live websites or prototypes. It merges web design and automation, allowing creators to launch responsive pages with minimal coding knowledge.",
-      "subtitle": "",
-      "tags": [""],
-      "features": [""
+      "type": "Text-to-Website Generator",
+      "description": "DeepSite is an AI-powered website builder that transforms natural language prompts into live, editable front-end code.\n\nBuilt as an open-source project on Hugging Face Spaces and powered by DeepSeek models, DeepSite generates responsive HTML, CSS and JavaScript from simple instructions such as “a landing page for a SaaS analytics tool with pricing and testimonials.”\n\nBecause it outputs real code, creators can export, tweak and host the generated sites anywhere, making DeepSite ideal for rapid prototyping, learning front-end patterns, and shipping small projects without heavy tooling.",
+      "subtitle": "Open-source AI tool that turns prompts into live, editable websites.",
+      "tags": ["website builder", "no-code", "frontend", "DeepSeek", "Hugging Face"],
+      "features": [
+        "Generate live, runnable web pages from short natural language briefs",
+        "Produces readable HTML, CSS and JavaScript that can be exported or extended",
+        "Supports iterative refinement so you can adjust sections, components or styles via prompts",
+        "Open-source and hosted on Hugging Face Spaces with community-driven improvements",
+        "Great for learning front-end by inspecting AI-generated layouts and patterns"
       ],
       "use_cases": [
         {
-          "title": "",
-          "description": ""
+          "title": "Marketing & Landing Pages",
+          "description": "Non-technical founders and marketers can spin up landing pages for new products or campaigns by describing the structure and content they want."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Developer Prototyping",
+          "description": "Engineers can quickly prototype layout ideas, copy sections into existing projects, or use DeepSite as a starting point instead of coding from a blank file."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Teaching & Learning Front-end",
+          "description": "Students can experiment with prompts, then inspect the generated code to understand how different layouts and components are implemented."
         }
       ],
-      "pricing": "",
+      "pricing": "Free to use as an open-source Hugging Face Space (usage subject to platform limits).",
       "information": [
-        { "label": "Developer", "value": "" },
-        { "label": "Founded", "value": "" },
-        { "label": "Type", "value": "" },
-        { "label": "Privacy", "value": "" },
-        { "label": "API", "value": "" }
+        { "label": "Developer", "value": "enzostvs / Hugging Face community" },
+        { "label": "Founded", "value": "N/A — community open-source project" },
+        { "label": "Type", "value": "AI-powered front-end / website generator" },
+        { "label": "Privacy", "value": "Runs via Hugging Face infrastructure — see Hugging Face privacy policy" },
+        { "label": "API", "value": "No dedicated hosted API; can be self-hosted or extended from open-source code" }
       ],
       "image": "Images/models/huggingface.webp",
       "link": "https://huggingface.co/spaces/enzostvs/deepsite"
@@ -588,33 +603,38 @@
       "id": 16,
       "name": "Midjourney",
       "category": ["design"],
-      "type": "N/A",
-      "description": "Midjourney converts text prompts into artistic imagery. Producing unique visual compositions for storytelling, branding and concept design.",
-      "subtitle": "",
-      "tags": [""],
-      "features": [""
+      "type": "AI Image Generator",
+      "description": "Midjourney is a high-end generative image model and subscription service developed by Midjourney, Inc. It turns natural language prompts into detailed, stylised images suitable for concept art, product visuals and storytelling.\n\nRunning primarily through Discord and its own web interface, Midjourney offers powerful controls for style, aspect ratio, variations, upscaling and now short video animations. Creators can explore anything from painterly illustration to photorealism while drawing inspiration from a large community feed.\n\nThanks to its quality and unique aesthetic, Midjourney has become a go-to tool for designers, agencies, indie creators and studios who need rapid visual exploration and moodboarding.",
+      "subtitle": "Premium AI image generation for art, concepts and visual exploration.",
+      "tags": ["image generation", "art", "illustration", "concept art", "Discord"],
+      "features": [
+        "Text-to-image generation with support for many artistic styles and levels of realism",
+        "Advanced controls for aspect ratios, seeds, variations, remixing and tiling",
+        "High-quality upscaling and refinement for production-ready visuals",
+        "Community showcase, prompt inspiration and remix culture built into the platform",
+        "New video generation and animation features for bringing stills to life"
       ],
       "use_cases": [
         {
-          "title": "",
-          "description": ""
+          "title": "Concept Art & Worldbuilding",
+          "description": "Artists, writers and game designers can explore characters, environments and props visually at high speed, iterating through many concepts before committing."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Brand & Campaign Moodboards",
+          "description": "Creative teams use Midjourney to generate moodboards, hero imagery and style explorations for pitches, campaigns and brand refreshes."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Illustrations for Content",
+          "description": "Bloggers, educators and marketers create bespoke illustrations and cover images that better match their stories than generic stock photos."
         }
       ],
-      "pricing": "",
+      "pricing": "Subscription only — plans start at around $10/month with higher tiers for heavier usage.",
       "information": [
-        { "label": "Developer", "value": "" },
-        { "label": "Founded", "value": "" },
-        { "label": "Type", "value": "" },
-        { "label": "Privacy", "value": "" },
-        { "label": "API", "value": "" }
+        { "label": "Developer", "value": "Midjourney, Inc." },
+        { "label": "Founded", "value": "2021" },
+        { "label": "Type", "value": "Generative text-to-image and video service" },
+        { "label": "Privacy", "value": "Subscription service with its own content, IP and privacy policies" },
+        { "label": "API", "value": "No fully public REST API; primarily accessed via Discord bot and web app" }
       ],
       "image": "Images/models/midjourney.webp",
       "link": "https://www.midjourney.com/home"
@@ -623,33 +643,38 @@
       "id": 17,
       "name": "DALL-E 3",
       "category": ["design", "documents"],
-      "type": "N/A",
-      "description": "DALL-E 3 generates detailed, coherent images from natural language prompts. Empowering designers, educators and marketers to visualise concepts with precision.",
-      "subtitle": "",
-      "tags": [""],
-      "features": [""
+      "type": "Text-to-Image Model",
+      "description": "DALL·E 3 is OpenAI’s third-generation text-to-image model, designed to understand nuanced prompts and generate coherent, detailed images.\n\nIntegrated directly into ChatGPT and available via the OpenAI API, DALL·E 3 can create illustrations, diagrams, concept art and product visuals from natural language descriptions. It is especially strong at following complex instructions and rendering readable text within images.\n\nWith robust safety filters and content policies, DALL·E 3 is widely used by educators, marketers, product teams and individual creators who want fast, controllable visuals without needing dedicated design tools.",
+      "subtitle": "OpenAI’s advanced text-to-image model integrated with ChatGPT and the API.",
+      "tags": ["image generation", "OpenAI", "illustration", "diagrams", "marketing visuals"],
+      "features": [
+        "High-fidelity text-to-image generation with strong prompt adherence",
+        "Deep integration with ChatGPT for conversational prompt refinement and editing",
+        "Inpainting and outpainting capabilities for editing and extending existing images",
+        "Safety mitigations around public figures and sensitive content",
+        "Available via the OpenAI API for programmatic image workflows"
       ],
       "use_cases": [
         {
-          "title": "",
-          "description": ""
+          "title": "Educational Diagrams & Illustrations",
+          "description": "Teachers and students can create clear diagrams, infographics and visual explanations to support lessons, presentations and study materials."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Marketing & Product Visuals",
+          "description": "Marketers generate ad concepts, social media graphics and product scenarios for campaigns without relying solely on stock imagery."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Prototyping UX & Product Ideas",
+          "description": "Product teams quickly visualise interface ideas, physical product concepts or service scenarios to align stakeholders before full design work begins."
         }
       ],
-      "pricing": "",
+      "pricing": "Available via ChatGPT (including Plus/Team/Pro plans) and pay-per-image OpenAI API pricing.",
       "information": [
-        { "label": "Developer", "value": "" },
-        { "label": "Founded", "value": "" },
-        { "label": "Type", "value": "" },
-        { "label": "Privacy", "value": "" },
-        { "label": "API", "value": "" }
+        { "label": "Developer", "value": "OpenAI" },
+        { "label": "Founded", "value": "2023 (DALL·E 3 release)" },
+        { "label": "Type", "value": "Text-to-image diffusion model" },
+        { "label": "Privacy", "value": "Follows OpenAI’s data usage and safety policies" },
+        { "label": "API", "value": "Available — accessible through the OpenAI API and ChatGPT integrations" }
       ],
       "image": "Images/models/dall-e-3.webp",
       "link": "https://openai.com/index/dall-e-3/"
@@ -658,68 +683,78 @@
       "id": 18,
       "name": "Canva",
       "category": ["design", "office", "documents", "jobs"],
-      "type": "N/A",
-      "description": "Canva integrates AI into its design suite for image generation, layout suggestions and smart templates. It enables non-designers to produce professional visuals quickly.",
-      "subtitle": "",
-      "tags": [""],
-      "features": [""
+      "type": "Design Suite with AI Tools",
+      "description": "Canva is a popular browser-based design suite that combines drag-and-drop editing with AI features like image generation, layout suggestions and copy assistance.\n\nUsers can start from thousands of templates for social posts, presentations, documents, resumes and more, then enhance them using AI tools such as Text to Image, Magic Media and Magic Design.\n\nBecause it’s built for non-designers as well as professionals, Canva has become a staple for individuals, teams and organisations that need fast, on-brand visuals without complex design software.",
+      "subtitle": "All-in-one design platform with integrated AI for images, layouts and content.",
+      "tags": ["graphic design", "templates", "image generator", "presentations", "social media"],
+      "features": [
+        "Huge library of templates for social posts, presentations, documents and print",
+        "AI image generator (Text to Image) and Magic Media tools for creating visuals",
+        "Magic Design suggestions that automatically produce layouts from content",
+        "Brand Kits, collaboration tools and shared libraries for teams",
+        "One-click resizing and export options for multiple channels and formats"
       ],
       "use_cases": [
         {
-          "title": "",
-          "description": ""
+          "title": "Social Media & Marketing Graphics",
+          "description": "Create consistent, on-brand social posts, ads, thumbnails and banners using templates and AI-generated visuals."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Presentations & Internal Docs",
+          "description": "Teams build polished slide decks, reports and internal documents with drag-and-drop layouts and AI-assisted content."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Resumes, Flyers & Everyday Design",
+          "description": "Individuals design CVs, posters, invitations and business collateral without needing traditional design software."
         }
       ],
-      "pricing": "",
+      "pricing": "Free plan available — Canva Pro and Business plans typically start around $10–$15/user/month.",
       "information": [
-        { "label": "Developer", "value": "" },
-        { "label": "Founded", "value": "" },
-        { "label": "Type", "value": "" },
-        { "label": "Privacy", "value": "" },
-        { "label": "API", "value": "" }
+        { "label": "Developer", "value": "Canva Pty Ltd" },
+        { "label": "Founded", "value": "2013" },
+        { "label": "Type", "value": "Online design and publishing platform with AI features" },
+        { "label": "Privacy", "value": "Offers detailed privacy and security documentation for individuals and enterprises" },
+        { "label": "API", "value": "Developer platform and integrations available for embedding Canva into other workflows" }
       ],
       "image": "Images/models/canva.webp",
-      "link": "https://www.canva.com/ai-image-generator/?msockid=0a20bcbb87566ef007cfae3e86b66fa1"
+      "link": "https://www.canva.com/ai-image-generator/"
     },
     {
       "id": 19,
       "name": "Playground",
       "category": ["design", "assistants", "jobs"],
-      "type": "N/A",
-      "description": "Playground provides a creative sandbox for testing text-to-image and text-generation models. Encouraging experimentation and visual exploration for artists and developers alike.",
-      "subtitle": "",
-      "tags": [""],
-      "features": [""
+      "type": "AI Design & Image Editor",
+      "description": "Playground is a browser-based AI design studio that makes it easy to create and edit images with prompts, presets and intuitive editing tools.\n\nPositioned as a creative alternative to tools like Canva, Playground offers style presets, templates and powerful editing controls for inpainting, background changes and adjustments. Users can iterate on visuals until they match a specific aesthetic or brand.\n\nIt’s aimed at creators, marketers and small businesses who want fast, flexible image generation without deep design skills, while still allowing fine-grained control when needed.",
+      "subtitle": "Prompt-based design studio for generating and editing images with AI.",
+      "tags": ["image editor", "image generation", "templates", "design", "branding"],
+      "features": [
+        "Text-to-image generation with multiple styles and presets",
+        "Template-driven workflows for common formats like posters, logos and social content",
+        "AI-powered editing tools for background removal, inpainting and variations",
+        "Layered editing interface for fine control over compositions",
+        "Web-based workspace that keeps projects and assets in one place"
       ],
       "use_cases": [
         {
-          "title": "",
-          "description": ""
+          "title": "Brand & Social Visuals",
+          "description": "Creators and marketers generate on-brand social posts, ad creatives and hero images with style presets and templates."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Product & E-commerce Imagery",
+          "description": "Small businesses create product visuals, lifestyle scenes and promotional graphics without expensive photoshoots."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Creative Exploration & Experiments",
+          "description": "Artists and hobbyists experiment with AI styles, remix prompts and refine images for personal projects or inspiration boards."
         }
       ],
-      "pricing": "",
+      "pricing": "Freemium — core features are free with paid tiers for higher limits and advanced capabilities.",
       "information": [
-        { "label": "Developer", "value": "" },
-        { "label": "Founded", "value": "" },
-        { "label": "Type", "value": "" },
-        { "label": "Privacy", "value": "" },
-        { "label": "API", "value": "" }
+        { "label": "Developer", "value": "Playground (founded by Suhail Doshi)" },
+        { "label": "Founded", "value": "2022" },
+        { "label": "Type", "value": "AI-powered design and image editing platform" },
+        { "label", "value": "Privacy", "value": "Operates as a hosted SaaS product with its own privacy policy" },
+        { "label": "API", "value": "No widely-advertised public REST API; focused on the web app experience" }
       ],
       "image": "Images/models/playground.webp",
       "link": "https://playground.com/"
@@ -728,33 +763,38 @@
       "id": 20,
       "name": "Leonardo",
       "category": ["design"],
-      "type": "N/A",
-      "description": "Leonardo AI specialises in generating game assets, illustrations and digital art. It focuses on style consistency and custom model training for designers and studios.",
-      "subtitle": "",
-      "tags": [""],
-      "features": [""
+      "type": "AI Art & Asset Creation Suite",
+      "description": "Leonardo.Ai is a creative suite for generating images, game assets and video content using a collection of powerful AI models.\n\nIt offers token-based plans, custom model training, style presets and workflows tailored for production use. Creators can maintain consistent characters, scenes and branding across large volumes of assets, making Leonardo popular with game studios, marketers and independent creators.\n\nBeyond the web app, Leonardo provides an API for developers who want to automate asset generation or build AI-powered features into their own tools and pipelines.",
+      "subtitle": "AI image and video generation platform built for consistent, production-ready assets.",
+      "tags": ["image generator", "game assets", "illustration", "video", "API"],
+      "features": [
+        "Multiple image and video models with style presets for different aesthetics",
+        "Token-based generation with daily or monthly allowances depending on plan",
+        "Custom model training and fine-tuning for brand- or project-specific styles",
+        "Tools for upscaling, background removal and batch asset creation",
+        "Production-ready API for integrating Leonardo into pipelines and applications"
       ],
       "use_cases": [
         {
-          "title": "",
-          "description": ""
+          "title": "Game & Interactive Asset Creation",
+          "description": "Game studios and indie developers generate characters, props, environments and UI elements while maintaining a consistent art direction."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Marketing & Creative Teams",
+          "description": "Agencies and marketing teams create campaign visuals, variations and storyboards at scale, using custom styles to stay on brand."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Automated Asset Pipelines",
+          "description": "Developers use the API to build internal tools that automatically generate, upscale or adapt imagery for products and experiences."
         }
       ],
-      "pricing": "",
+      "pricing": "Free plan available — paid plans and API access start at roughly $10–$12/month with higher tiers for heavy use.",
       "information": [
-        { "label": "Developer", "value": "" },
-        { "label": "Founded", "value": "" },
-        { "label": "Type", "value": "" },
-        { "label": "Privacy", "value": "" },
-        { "label": "API", "value": "" }
+        { "label": "Developer", "value": "Leonardo Interactive (Leonardo.Ai)" },
+        { "label": "Founded", "value": "2022" },
+        { "label": "Type", "value": "AI art, asset and video generation platform" },
+        { "label": "Privacy", "value": "Commercial SaaS platform with documented security and data handling policies" },
+        { "label": "API", "value": "Available — production API with key-based access and separate plans" }
       ],
       "image": "Images/models/leonardo.webp",
       "link": "https://leonardo.ai/"
@@ -763,37 +803,42 @@
       "id": 21,
       "name": "QuillBot",
       "category": ["documents", "learning", "jobs"],
-      "type": "N/A",
-      "description": "QuillBot refines writing through paraphrasing, tone adjustments and summarisation. It enhances clarity and consistency across academic, professional and creative writing.",
-      "subtitle": "",
-      "tags": [""],
-      "features": [""
+      "type": "Writing Assistant & Paraphraser",
+      "description": "QuillBot is an AI-powered writing assistant best known for its paraphrasing tool, which helps users rephrase, clarify and improve text while preserving meaning.\n\nIt also includes grammar checking, summarisation, citation assistance and tone controls, making it useful for students, academics, professionals and non-native speakers. QuillBot is available via the web, browser extensions and integrations with tools like Word.\n\nBy focusing on improving existing writing rather than generating entire documents from scratch, QuillBot is often used alongside other tools to tighten, clarify and professionalise drafts.",
+      "subtitle": "AI paraphrasing and editing suite for clearer, more polished writing.",
+      "tags": ["paraphrasing", "grammar", "summarization", "citation", "writing assistant"],
+      "features": [
+        "Multiple paraphrasing modes to adjust clarity, fluency, tone and creativity",
+        "Built-in grammar, spelling and punctuation checking",
+        "Summariser for condensing articles, papers and long-form content",
+        "Citation and research helpers for academic writing",
+        "Browser extensions and document integrations for in-place editing"
       ],
       "use_cases": [
         {
-          "title": "",
-          "description": ""
+          "title": "Academic & Essay Rewriting",
+          "description": "Students and researchers refine paragraphs for clarity and coherence while reducing repetition and improving tone."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "Professional & Business Writing",
+          "description": "Professionals polish emails, reports and proposals so they read clearly and confidently with minimal manual editing."
         },
         {
-          "title": "",
-          "description": ""
+          "title": "ESL & Non-Native Writer Support",
+          "description": "Non-native speakers use QuillBot to improve fluency, fix grammar and better match expected tone in academic or professional contexts."
         }
       ],
-      "pricing": "",
+      "pricing": "Free plan available — Premium starts at $19.95/month, with significant discounts on annual billing.",
       "information": [
-        { "label": "Developer", "value": "" },
-        { "label": "Founded", "value": "" },
-        { "label": "Type", "value": "" },
-        { "label": "Privacy", "value": "" },
-        { "label": "API", "value": "" }
+        { "label": "Developer", "value": "QuillBot, Inc." },
+        { "label": "Founded", "value": "2017" },
+        { "label": "Type", "value": "AI paraphrasing and writing enhancement platform" },
+        { "label": "Privacy", "value": "Cloud-based service with documented data handling and education-focused safeguards" },
+        { "label": "API", "value": "No official public API — primarily offered via web app, browser extensions and editor integrations" }
       ],
       "image": "Images/models/quillbot.webp",
       "link": "https://quillbot.com/"
-    },
+    }
     {
       "id": 22,
       "name": "Scribe",
