@@ -3,10 +3,10 @@
       "id": 1,
       "name": "ElevenLabs",
       "category": ["audio", "design", "documents"],
-      "subtitle": "AI voice and speech synthesis for creators.",
-      "tags": ["voice", "speech", "voice cloning"],
       "type": "Voice Generator",
       "description": "ElevenLabs is a leading AI-powered voice synthesis platform built for creators, studios and businesses that need lifelike audio. It uses advanced deep-learning models to generate expressive, natural-sounding speech in dozens of languages.\n\nWith real-time responsiveness, emotional control and industry-leading voice cloning, ElevenLabs has become a go-to solution for podcasters, filmmakers, game studios and educators seeking high-quality narration without recording equipment.\n\nThe platform combines accessibility with professional fidelity, offering beginner-friendly browser tools alongside a powerful API for developers.",
+      "subtitle": "AI voice and speech synthesis for creators.",
+      "tags": ["voice", "speech", "voice cloning"],
       "features": [
         "Realistic voice generation with human-like timbre",
         "Emotion-controlled speech synthesis",
@@ -43,8 +43,39 @@
       "id": 2,
       "name": "Adobe Podcast",
       "category": ["audio", "office", "documents"],
-      "type": "N/A",
-      "description": "Adobe Podcast simplifies audio creation with AI-driven tools for cleaning sound, enhancing voice quality and automating editing. Ideal for podcasters and professionals who need polished audio without complex software.",
+      "type": "Audio Enhancement & Podcast Production",
+      "description": "Adobe Podcast is an AI-powered audio platform that helps anyone create clean, clear and professional-sounding voice recordings. Even if you only have a laptop microphone, its tools automatically remove background noise, fix unclear speech and improve overall clarity so your audio sounds polished.\n\nThe platform focuses on simplicity. Instead of using a complex timeline, you can edit your audio through a text transcript, which makes it easy to remove mistakes or rearrange content. Features like automatic volume leveling, remote guest recording and smart cleanup tools help creators save time and avoid the frustrations of traditional audio editing.\n\nAdobe Podcast is ideal for podcasters, educators, marketers and anyone who needs high quality voice content without expensive studio gear. Whether you are recording interviews, lessons or voiceovers, the platform helps you sound confident and professional with minimal effort.",
+      "subtitle": "AI-enhanced audio cleanup and podcast production tools.",
+      "tags": ["audio enhancement", "speech cleanup", "podcasting", "transcription"],
+      "features": [
+        "AI speech enhancement for studio-quality audio",
+        "Noise reduction, echo removal & leveling",
+        "Transcript-based editing workflow",
+        "Automatic clip detection & cleanup",
+        "Browser-based recording studio"
+      ],
+      "use_cases": [
+        {
+          "title": "Podcast Editing",
+          "description": "Creators can remove background noise, clean up poorly recorded audio and edit episodes using the text-based editor to save hours of manual work."
+        },
+        {
+          "title": "Remote Interviews",
+          "description": "Hosts can record high-quality audio from guests anywhere and apply AI enhancement to ensure consistent sound across all voices."
+        },
+        {
+          "title": "Marketing & Business Audio",
+          "description": "Teams can generate clean voiceovers for ads, tutorials and corporate content without needing professional studio equipment."
+        }
+      ],
+      "pricing": "Included with Adobe Creative Cloud — Enhance Speech has a free tier.",
+      "information": [
+        { "label": "Developer", "value": "Adobe Inc." },
+        { "label": "Founded", "value": "2022" },
+        { "label": "Type", "value": "Audio Enhancement Tool" },
+        { "label": "Privacy", "value": "Enterprise-grade data protection" },
+        { "label": "API", "value": "Not publicly available" }
+      ],
       "image": "Images/models/adobepodcast.webp",
       "link": "https://podcast.adobe.com/en"
     },
@@ -52,8 +83,39 @@
       "id": 3,
       "name": "Cleanvoice AI",
       "category": ["audio", "documents"],
-      "type": "N/A",
-      "description": "Cleanvoice AI automatically removes filler words, background noise, stutters and awkward pauses from recordings. Helping creators produce smooth, professional audio content faster.",
+      "type": "Audio Cleanup & Editing",
+      "description": "Cleanvoice AI is designed to clean up voice recordings quickly and automatically, which makes it perfect for creators who want smooth and professional audio without learning complicated editing tools. The platform removes filler words like “um” and “uh”, takes out mouth noises, reduces background sounds and smooths over awkward silences so your recordings feel natural and polished.\n\nThe tool is especially helpful for people who speak freely on camera or in podcasts. Instead of spending hours removing small mistakes by hand, Cleanvoice does the work for you, making the editing process fast and stress free. You simply upload your audio and receive a cleaner version ready for publishing.\n\nCleanvoice is a great fit for podcasters, YouTubers, interviewers and educators who want clear voice content that is easy to listen to. It helps your message stand out by removing distractions and delivering a crisp final result.",
+      "subtitle": "Automatic audio cleanup powered by AI.",
+      "tags": ["audio cleanup", "podcasting", "noise removal", "editing"],
+      "features": [
+        "Automatic filler word removal",
+        "Mouth noise detection & cleanup",
+        "Stutter & repetition removal",
+        "Background noise reduction",
+        "Multilingual support"
+      ],
+      "use_cases": [
+        {
+          "title": "Podcast Post-Production",
+          "description": "Speeds up editing by automatically removing ums, ahs, lip smacks and awkward pauses for a professional, smooth final cut."
+        },
+        {
+          "title": "Voiceover Optimization",
+          "description": "Creators can polish narration for YouTube, audiobooks, or corporate training without manual audio engineering."
+        },
+        {
+          "title": "Interview Cleanup",
+          "description": "Multi-speaker recordings become clearer by eliminating distractions such as background noise or verbal tics."
+        }
+      ],
+      "pricing": "Pay-as-you-go and subscription plans available from €10/month.",
+      "information": [
+        { "label": "Developer", "value": "Cleanvoice GmbH" },
+        { "label": "Founded", "value": "2022" },
+        { "label": "Type", "value": "Audio Cleanup Tool" },
+        { "label": "Privacy", "value": "GDPR-compliant" },
+        { "label": "API", "value": "Available for automated workflows" }
+      ],
       "image": "Images/models/cleanvoice.webp",
       "link":"https://cleanvoice.ai/"
     },
@@ -61,8 +123,39 @@
       "id": 4,
       "name": "Resemble AI",
       "category": ["audio", "design"],
-      "type": "N/A",
-      "description": "Resemble AI offers custom voice synthesis for branding, entertainment and customer interaction. Users can clone or design unique synthetic voices that maintain emotional tone and clarity across multiple languages.",
+      "type": "Custom Voice Generation",
+      "description": "Resemble AI helps creators and businesses generate realistic synthetic voices that can express emotion and speak in multiple languages. The platform allows you to clone your own voice or create entirely new voice profiles that sound natural and engaging, which makes it ideal for storytelling, branding and interactive applications.\n\nResemble keeps the process simple. Users can upload a small set of recordings or choose from existing voice styles, then type or upload text to instantly generate lifelike speech. The voices can be calm, energetic, dramatic or anything in between, depending on the tone you choose.\n\nThe tool is a strong option for studios, game developers, marketers and creators who want unique and expressive voice content without relying on constant manual recording. Whether you are building characters, producing ads or designing an AI assistant, Resemble AI makes it easy to bring your audio to life.",
+      "subtitle": "Custom voice cloning and AI speech generation.",
+      "tags": ["voice cloning", "text-to-speech", "synthetic voices", "multilingual"],
+      "features": [
+        "Custom voice cloning",
+        "Emotion-driven speech generation",
+        "Instant voice conversion",
+        "Multilingual & cross-language support",
+        "Secure enterprise voice models"
+      ],
+      "use_cases": [
+        {
+          "title": "Brand Voice Development",
+          "description": "Companies can create consistent, recognizable synthetic voices for advertisements, virtual agents, and branded experiences."
+        },
+        {
+          "title": "Character Voice Creation",
+          "description": "Game studios and filmmakers generate unique voices for characters without hiring multiple voice actors."
+        },
+        {
+          "title": "AI Assistants & IVR Systems",
+          "description": "Businesses enhance customer support systems with expressive, natural-sounding automated voices."
+        }
+      ],
+      "pricing": "Usage-based pricing with custom enterprise plans.",
+      "information": [
+        { "label": "Developer", "value": "Resemble AI Inc." },
+        { "label": "Founded", "value": "2019" },
+        { "label": "Type", "value": "Voice Generation Platform" },
+        { "label": "Privacy", "value": "GDPR & enterprise compliant" },
+        { "label": "API", "value": "Full-featured API available" }
+      ],
       "image": "Images/models/resemble.webp",
       "link": "https://www.resemble.ai/"
     },
@@ -70,8 +163,39 @@
       "id": 5,
       "name": "Podcastle AI",
       "category": ["audio", "office", "documents"],
-      "type": "N/A",
-      "description": "Podcastle AI provides a full-service podcast production suite with AI tools for recording, editing, transcribing and enhancing voice quality. All within an intuitive web interface.",
+      "type": "Podcast Creation Suite",
+      "description": "Podcastle AI is an all-in-one platform for creating, editing and publishing podcasts without needing advanced audio skills. The platform offers high quality recording tools, AI voice cleanup, easy multitrack editing and natural text-to-speech voices, which means anyone can produce a full podcast episode straight from their browser.\n\nOne of its biggest strengths is simplicity. Podcastle lets you record guests remotely, edit audio by modifying the transcript and enhance your voice automatically with built-in AI tools. This helps creators focus on storytelling without worrying about complicated software or equipment.\n\nPodcastle is perfect for beginners and professionals who want an organised workflow for interviews, solo episodes or scripted content. With its mix of easy editing tools and powerful AI features, it helps you produce consistent, polished audio every time.",
+      "subtitle": "All-in-one AI platform for podcast creation.",
+      "tags": ["podcasting", "recording", "audio editing", "transcription"],
+      "features": [
+        "AI-powered audio enhancement",
+        "Multitrack recording & editing",
+        "Auto-transcription",
+        "Remote interview recording",
+        "High-quality text-to-speech voices"
+      ],
+      "use_cases": [
+        {
+          "title": "Podcast Recording",
+          "description": "Record clear audio locally or remotely with guest links and then enhance the quality using built-in AI tools."
+        },
+        {
+          "title": "Script-to-Audio Production",
+          "description": "Convert written scripts into natural-sounding AI narration for episodes, intros or ads."
+        },
+        {
+          "title": "Transcript Editing",
+          "description": "Edit your podcast by modifying the transcript — changes automatically update the audio timeline."
+        }
+      ],
+      "pricing": "Free plan available — paid plans start at $14.99/month.",
+      "information": [
+        { "label": "Developer", "value": "Podcastle Inc." },
+        { "label": "Founded", "value": "2020" },
+        { "label": "Type", "value": "Podcast Production Suite" },
+        { "label": "Privacy", "value": "Secure cloud processing" },
+        { "label": "API", "value": "Not publicly available" }
+      ],
       "image": "Images/models/podcastle.webp",
       "link": "https://podcastle.ai/ai-voices"
     },
@@ -79,8 +203,39 @@
       "id": 6,
       "name": "ChatGPT",
       "category": ["assistants", "documents", "development", "jobs"],
-      "type": "N/A",
-      "description": "ChatGPT is a conversational AI that assists with writing, brainstorming, coding, learning and creative ideation. It understands context and tone, helping users generate content, explanations, and insights in natural language.",
+      "type": "Conversational AI Assistant",
+      "description": "ChatGPT is an AI assistant that helps people write, learn, brainstorm and solve problems through natural conversation. It can explain ideas clearly, generate content in many different styles and help users think through tasks step by step. Whether you are working on a school project, planning a trip or writing a piece of content, ChatGPT is designed to make the process easier.\n\nThe tool is also helpful for developers and learners. It can write code, fix errors and explain programming concepts in simple terms, which makes it a helpful companion for both beginners and experienced professionals. ChatGPT can break down complex topics into easy explanations and provide examples to help you understand new skills.\n\nMany people use ChatGPT for everyday tasks like drafting emails, summarising documents or coming up with ideas for creative projects. It is flexible, friendly and designed to support anyone who wants to work faster and understand things more clearly.",
+      "subtitle": "AI assistant for writing, coding, learning and creativity.",
+      "tags": ["assistant", "chatbot", "writing", "coding", "reasoning"],
+      "features": [
+        "Context-aware natural language conversations",
+        "Code generation & debugging",
+        "Long-form writing & content creation",
+        "Data analysis & reasoning",
+        "Image generation (with multimodal models)"
+      ],
+      "use_cases": [
+        {
+          "title": "Writing & Editing",
+          "description": "Draft emails, essays, articles or scripts with AI-assisted phrasing, idea generation and proofreading."
+        },
+        {
+          "title": "Coding Assistance",
+          "description": "Generate functions, fix errors, explain code concepts or build small applications in multiple languages."
+        },
+        {
+          "title": "Learning & Research",
+          "description": "Get step-by-step explanations, study help, summaries and insights across academic subjects."
+        }
+      ],
+      "pricing": "Free version available — paid plans start at $20/month.",
+      "information": [
+        { "label": "Developer", "value": "OpenAI" },
+        { "label": "Founded", "value": "2022" },
+        { "label": "Type", "value": "General AI Assistant" },
+        { "label": "Privacy", "value": "User-controlled data settings" },
+        { "label": "API", "value": "Full API available for apps" }
+      ],
       "image": "Images/models/chatgpt.webp",
       "link": "https://chat.openai.com"
     },
@@ -88,8 +243,39 @@
       "id": 7,
       "name": "Google Gemini",
       "category": ["assistants", "documents", "development", "data", "jobs"],
-      "type": "N/A",
-      "description": "Google Gemini combines language, image and reasoning capabilities to deliver contextual understanding and creative assistance. Helps users to analyse data, generate ideas and complete complex tasks efficiently.",
+      "type": "Multimodal AI Assistant",
+      "description": "Google Gemini is a smart AI assistant that can understand text, images and ideas to help you work more efficiently. It is designed to handle a wide range of everyday tasks, from answering questions and explaining concepts to helping with writing and generating creative ideas. Because it connects with the Google ecosystem, it can support schoolwork, research and planning in a simple and intuitive way.\n\nGemini also includes helpful tools for developers and problem solvers. It can write code, suggest improvements and walk you through technical topics in clear language. People who need support with data or documents can use Gemini to analyse content, uncover insights and break down information into easy-to-understand summaries.\n\nWhether you are creating content, studying for exams or exploring new ideas, Google Gemini provides a flexible and friendly experience that helps you work faster and think more clearly. Its multimodal design makes it a useful assistant for both everyday tasks and more complex projects.",
+      "subtitle": "Google’s multimodal AI for productivity and creativity.",
+      "tags": ["assistant", "multimodal", "reasoning", "coding", "search"],
+      "features": [
+        "Multimodal understanding (text, images, audio)",
+        "Advanced reasoning and problem-solving",
+        "Code generation & debugging",
+        "Google Workspace integration",
+        "Real-time internet-backed search"
+      ],
+      "use_cases": [
+        {
+          "title": "Data & Research Assistance",
+          "description": "Summarizes sources, analyzes data, and explains complex concepts using multimodal context."
+        },
+        {
+          "title": "Coding & App Prototyping",
+          "description": "Helps developers build scripts, fix bugs and design prototypes faster across multiple languages."
+        },
+        {
+          "title": "Content & Creative Writing",
+          "description": "Generates stories, posts, marketing copy and brainstorming ideas adapted to user tone."
+        }
+      ],
+      "pricing": "Free plan available — Gemini Advanced subscription from $19.99/month.",
+      "information": [
+        { "label": "Developer", "value": "Google DeepMind" },
+        { "label": "Founded", "value": "2023" },
+        { "label": "Type", "value": "Multimodal Assistant" },
+        { "label": "Privacy", "value": "Google-grade data protection" },
+        { "label": "API", "value": "Gemini API available via Google AI Studio" }
+      ],
       "image": "Images/models/gemini.webp",
       "link": "https://gemini.google.com"
     },
@@ -97,8 +283,39 @@
       "id": 8,
       "name": "Meta AI",
       "category": ["assistants", "documents", "jobs"],
-      "type": "N/A",
-      "description": "Meta AI is an intelligent conversational assistant integrated across Meta platforms. It supports casual chats, creative writing and learning tasks through natural interaction.",
+      "type": "Conversational AI Assistant",
+      "description": "Meta AI is a conversational assistant built into popular Meta platforms, which makes it easy for people to get help while browsing or chatting with friends. It can answer questions, explain topics, help with writing and generate creative ideas, all in a simple and approachable way. Because it is integrated into apps people already use, Meta AI is accessible at any moment without needing special tools.\n\nThe assistant can also create images and help brainstorm content, making it popular with social media users who want to design posts, captions or messages quickly. For learners, Meta AI provides step-by-step explanations and clear answers that make new topics easier to understand.\n\nMeta AI is a convenient choice for anyone who wants quick support while messaging, posting or exploring ideas. It is designed to help improve conversations and make everyday tasks feel smoother and more enjoyable.",
+      "subtitle": "Conversational assistant available across Meta platforms.",
+      "tags": ["assistant", "chatbot", "image generation", "writing"],
+      "features": [
+        "Real-time conversational interaction",
+        "Image generation with Meta’s models",
+        "Writing & creative brainstorming",
+        "Integrated search responses",
+        "Messenger and Instagram built-in access"
+      ],
+      "use_cases": [
+        {
+          "title": "Everyday Q&A",
+          "description": "Ask for definitions, advice, explanations or quick knowledge without searching manually."
+        },
+        {
+          "title": "Content Creation",
+          "description": "Generate posts, captions, messages and creative writing instantly."
+        },
+        {
+          "title": "Learning & Tutoring",
+          "description": "Get help with homework, concepts or step-by-step explanations inside social apps."
+        }
+      ],
+      "pricing": "Free for Meta platform users.",
+      "information": [
+        { "label": "Developer", "value": "Meta Platforms, Inc." },
+        { "label": "Founded", "value": "2023" },
+        { "label": "Type", "value": "Conversational AI" },
+        { "label": "Privacy", "value": "Follows Meta privacy policy" },
+        { "label": "API", "value": "Not currently available" }
+      ],
       "image": "Images/models/meta.webp",
       "link": "https://www.meta.ai"
     },
@@ -106,8 +323,39 @@
       "id": 9,
       "name": "Perplexity",
       "category": ["assistants", "research", "documents", "jobs"],
-      "type": "N/A",
-      "description": "Perplexity AI merges search and conversation, answering questions with citations and concise summaries. It is useful for research, study and general knowledge exploration.",
+      "type": "AI Search Assistant",
+      "description": "Perplexity is an AI search assistant that helps people find accurate information quickly and understand it clearly. Instead of giving long lists of links, Perplexity reads online sources for you and then provides a simple answer with citations. This makes it especially useful for people who want trustworthy information without spending time digging through pages.\n\nThe platform is designed to make research easy for everyone. You can ask questions in everyday language and Perplexity will summarise the most important points, highlight key facts and show where the information came from. Students, professionals and curious learners enjoy how fast and clear the answers are.\n\nPerplexity is ideal for anyone who needs a reliable way to explore new topics, check facts or learn quickly. Its mix of accuracy and simplicity makes it an excellent tool for studying, researching or understanding subjects at a deeper level.",
+      "subtitle": "AI-powered search assistant with real-time citations.",
+      "tags": ["search", "research", "Q&A", "summaries"],
+      "features": [
+        "Real-time web search with citations",
+        "Concise AI summarization",
+        "Deep research mode",
+        "Document analysis & uploads",
+        "Follow-up conversational queries"
+      ],
+      "use_cases": [
+        {
+          "title": "Research Summaries",
+          "description": "Find accurate, up-to-date answers with clear citations pulled directly from trusted sources."
+        },
+        {
+          "title": "Academic Work",
+          "description": "Students and researchers can analyze documents, extract insights and understand complex topics faster."
+        },
+        {
+          "title": "Market & Industry Analysis",
+          "description": "Professionals can get high-level breakdowns of trends, companies or technologies with sourced data."
+        }
+      ],
+      "pricing": "Free plan available — Perplexity Pro starts at $20/month.",
+      "information": [
+        { "label": "Developer", "value": "Perplexity AI" },
+        { "label": "Founded", "value": "2022" },
+        { "label": "Type", "value": "Search AI Assistant" },
+        { "label": "Privacy", "value": "Search data anonymized" },
+        { "label": "API", "value": "API available for developers" }
+      ],
       "image": "Images/models/perplexity.webp",    
       "link": "https://www.perplexity.ai"
     },
@@ -115,8 +363,39 @@
       "id": 10,
       "name": "Claude",
       "category": ["assistants", "documents", "research", "jobs"],
-      "type": "N/A",
-      "description": "Claude, from Anthropic, is an advanced assistant focused on safe and helpful reasoning. It supports writing, summarisation, coding and task automation in a natural manner.",
+      "type": "AI Assistant for Work & Research",
+      "description": "Claude is an AI assistant created to help people write, think and analyse information with confidence. It is known for producing clear and thoughtful responses, which makes it helpful for writing projects, detailed explanations and everyday problem solving. Claude can handle complex tasks but always communicates in a simple and human-friendly way.\n\nThe assistant is also useful for professionals and students who work with long documents. Claude can read large amounts of text, summarise the key ideas and help you understand the information more easily. Developers can use Claude to generate code, review logic and explore technical topics with clear explanations.\n\nClaude is a strong choice for anyone who values accuracy and careful reasoning. It supports writing, planning, creativity and critical thinking, which makes it a reliable partner for both personal and professional tasks.",
+      "subtitle": "Safe, reliable AI assistant for writing and reasoning.",
+      "tags": ["assistant", "writing", "analysis", "coding"],
+      "features": [
+        "Large context window for long documents",
+        "Advanced reasoning & safety features",
+        "Coding assistance",
+        "Professional writing & editing",
+        "Document summarization & interpretation"
+      ],
+      "use_cases": [
+        {
+          "title": "Professional Writing",
+          "description": "Create polished reports, articles, business plans and structured documents with clarity and precision."
+        },
+        {
+          "title": "Complex Analysis",
+          "description": "Claude can evaluate long documents, contracts or datasets and deliver accurate structured insights."
+        },
+        {
+          "title": "Code Help",
+          "description": "Generate functions, fix bugs and explain logic with safe, structured reasoning."
+        }
+      ],
+      "pricing": "Free version available — Claude Pro starts at $20/month.",
+      "information": [
+        { "label": "Developer", "value": "Anthropic" },
+        { "label": "Founded", "value": "2023" },
+        { "label": "Type", "value": "AI Assistant" },
+        { "label": "Privacy", "value": "Strong commitment to safety & privacy" },
+        { "label": "API", "value": "Claude API available via Anthropic" }
+      ],
       "image": "Images/models/claude.webp",
       "link": "https://claude.ai"
     },
@@ -124,8 +403,39 @@
       "id": 11,
       "name": "Codex AI",
       "category": ["development", "data"],
-      "type": "N/A",
-      "description": "Codex AI translates human language into code. Assisting developers in automating repetitive programming tasks, writing functions and learning syntax in multiple languages.",
+      "type": "Code Generation Model",
+      "description": "Codex AI is designed to help people write code by turning everyday language into working programs. You can describe what you want to build and Codex will generate the code, explain how it works and suggest improvements. This makes it a helpful tool for beginners learning to program and for developers who want to work more efficiently.\n\nThe platform can also assist with debugging. If something is not working, you can paste your code into Codex and receive clear guidance on what went wrong and how to fix it. It supports many popular programming languages, which makes it flexible for different projects and skill levels.\n\nCodex is a great partner for building small tools, learning programming or speeding up development tasks. It reduces the time spent on repetitive work and helps users focus on the creative and problem solving parts of coding.",
+      "subtitle": "AI model that converts natural language into code.",
+      "tags": ["coding", "automation", "developer tools", "programming"],
+      "features": [
+        "Natural language → code generation",
+        "Code explanation & debugging",
+        "Multi-language support",
+        "Unit test generation",
+        "API-ready model integration"
+      ],
+      "use_cases": [
+        {
+          "title": "Accelerated Development",
+          "description": "Write functions or small modules faster by describing the logic in plain language."
+        },
+        {
+          "title": "Code Learning",
+          "description": "Beginners can ask for explanations, examples and clarifications across many programming languages."
+        },
+        {
+          "title": "Automated Testing",
+          "description": "Codex can generate test cases and basic QA coverage to support engineering workflows."
+        }
+      ],
+      "pricing": "Pay-as-you-go via OpenAI API.",
+      "information": [
+        { "label": "Developer", "value": "OpenAI" },
+        { "label": "Founded", "value": "2021" },
+        { "label": "Type", "value": "Code Generation Model" },
+        { "label": "Privacy", "value": "Developer-controlled API privacy" },
+        { "label": "API", "value": "Available via OpenAI API" }
+      ],
       "image": "Images/models/codex.webp",
       "link": "https://openai.com/index/openai-codex"
     },
@@ -133,8 +443,39 @@
       "id": 12,
       "name": "Qodo", 
       "category": ["development", "documents"],
-      "type": "N/A",
-      "description": "Qodo enhances code reliability by generating intelligent test cases and suggesting improvements. It integrates seamlessly into development workflows for cleaner, safer and faster code.",
+      "type": "AI Test Generation & Code Analysis",
+      "description": "Qodo is an AI tool that helps developers create strong and reliable software by generating intelligent test cases and reviewing code for potential issues. It looks for mistakes and weaknesses that are easy to overlook, then provides clear suggestions that help improve the overall quality of your project.\n\nThe platform works smoothly within common development workflows. You can send Qodo a piece of code and receive readable feedback that highlights risks and offers safer alternatives. It is especially useful for teams that want to increase test coverage or maintain consistent code standards without spending hours writing tests by hand.\n\nQodo is ideal for developers who want clean, dependable code and a faster testing process. It gives you confidence in your work and helps you catch issues early so your software stays stable and efficient.",
+      "subtitle": "AI tool for automated test generation and code quality.",
+      "tags": ["testing", "code quality", "automation", "developer tools"],
+      "features": [
+        "Automated test case generation",
+        "Static code analysis",
+        "Bug detection & suggestions",
+        "Language-agnostic support",
+        "IDE & CI/CD integration"
+      ],
+      "use_cases": [
+        {
+          "title": "Test Creation",
+          "description": "Automatically generate test cases to improve coverage and reduce manual QA workloads."
+        },
+        {
+          "title": "Code Review Assistance",
+          "description": "Identify risks, logic issues and potential bugs early in the development cycle."
+        },
+        {
+          "title": "Continuous Integration Quality",
+          "description": "Integrate Qodo into pipelines to enforce consistent code quality standards."
+        }
+      ],
+      "pricing": "Professional and enterprise plans available.",
+      "information": [
+        { "label": "Developer", "value": "CodiumAI" },
+        { "label": "Founded", "value": "2023" },
+        { "label": "Type", "value": "Code Quality & Testing Tool" },
+        { "label": "Privacy", "value": "Enterprise-grade privacy controls" },
+        { "label": "API", "value": "API available for integrations" }
+      ],
       "image": "Images/models/qodo.webp",
       "link": "https://www.codium.ai/qodo/"
     },
@@ -144,6 +485,31 @@
       "category": ["development", "design", "documents"],
       "type": "N/A",
       "description": "Stitch helps developers collaborate and generate code using natural language. It bridges the gap between design and development, allowing users to prototype or build projects quickly.",
+      "subtitle": "",
+      "tags": [""],
+      "features": [""
+      ],
+      "use_cases": [
+        {
+          "title": "",
+          "description": ""
+        {
+          "title": "",
+          "description": ""
+        },
+        {
+          "title": "",
+          "description": ""
+        }
+      ],
+      "pricing": "",
+      "information": [
+        { "label": "Developer", "value": "" },
+        { "label": "Founded", "value": "" },
+        { "label": "Type", "value": "" },
+        { "label": "Privacy", "value": "" },
+        { "label": "API", "value": "" }
+      ],
       "image": "Images/models/stitch.webp",
       "link": "https://stitch.withgoogle.com/"
     },
@@ -153,6 +519,31 @@
       "category": ["development", "documents"],
       "type": "N/A",
       "description": "Blackbox AI searches, explains and writes code snippets across repositories. It accelerates debugging, learning and documentation for developers using various frameworks and languages.",
+      "subtitle": "",
+      "tags": [""],
+      "features": [""
+      ],
+      "use_cases": [
+        {
+          "title": "",
+          "description": ""
+        {
+          "title": "",
+          "description": ""
+        },
+        {
+          "title": "",
+          "description": ""
+        }
+      ],
+      "pricing": "",
+      "information": [
+        { "label": "Developer", "value": "" },
+        { "label": "Founded", "value": "" },
+        { "label": "Type", "value": "" },
+        { "label": "Privacy", "value": "" },
+        { "label": "API", "value": "" }
+      ],
       "image": "Images/models/blackbox.webp",
       "link": "https://www.blackbox.ai/"
     },
@@ -162,6 +553,31 @@
       "category": ["development", "design"],
       "type": "N/A",
       "description": "DeepSite transforms text prompts into live websites or prototypes. It merges web design and automation, allowing creators to launch responsive pages with minimal coding knowledge.",
+      "subtitle": "",
+      "tags": [""],
+      "features": [""
+      ],
+      "use_cases": [
+        {
+          "title": "",
+          "description": ""
+        {
+          "title": "",
+          "description": ""
+        },
+        {
+          "title": "",
+          "description": ""
+        }
+      ],
+      "pricing": "",
+      "information": [
+        { "label": "Developer", "value": "" },
+        { "label": "Founded", "value": "" },
+        { "label": "Type", "value": "" },
+        { "label": "Privacy", "value": "" },
+        { "label": "API", "value": "" }
+      ],
       "image": "Images/models/huggingface.webp",
       "link": "https://huggingface.co/spaces/enzostvs/deepsite"
     },
@@ -171,6 +587,31 @@
       "category": ["design"],
       "type": "N/A",
       "description": "Midjourney converts text prompts into artistic imagery. Producing unique visual compositions for storytelling, branding and concept design.",
+      "subtitle": "",
+      "tags": [""],
+      "features": [""
+      ],
+      "use_cases": [
+        {
+          "title": "",
+          "description": ""
+        {
+          "title": "",
+          "description": ""
+        },
+        {
+          "title": "",
+          "description": ""
+        }
+      ],
+      "pricing": "",
+      "information": [
+        { "label": "Developer", "value": "" },
+        { "label": "Founded", "value": "" },
+        { "label": "Type", "value": "" },
+        { "label": "Privacy", "value": "" },
+        { "label": "API", "value": "" }
+      ],
       "image": "Images/models/midjourney.webp",
       "link": "https://www.midjourney.com/home"
     },
@@ -180,6 +621,31 @@
       "category": ["design", "documents"],
       "type": "N/A",
       "description": "DALL-E 3 generates detailed, coherent images from natural language prompts. Empowering designers, educators and marketers to visualise concepts with precision.",
+      "subtitle": "",
+      "tags": [""],
+      "features": [""
+      ],
+      "use_cases": [
+        {
+          "title": "",
+          "description": ""
+        {
+          "title": "",
+          "description": ""
+        },
+        {
+          "title": "",
+          "description": ""
+        }
+      ],
+      "pricing": "",
+      "information": [
+        { "label": "Developer", "value": "" },
+        { "label": "Founded", "value": "" },
+        { "label": "Type", "value": "" },
+        { "label": "Privacy", "value": "" },
+        { "label": "API", "value": "" }
+      ],
       "image": "Images/models/dall-e-3.webp",
       "link": "https://openai.com/index/dall-e-3/"
     },
@@ -189,6 +655,31 @@
       "category": ["design", "office", "documents", "jobs"],
       "type": "N/A",
       "description": "Canva integrates AI into its design suite for image generation, layout suggestions and smart templates. It enables non-designers to produce professional visuals quickly.",
+      "subtitle": "",
+      "tags": [""],
+      "features": [""
+      ],
+      "use_cases": [
+        {
+          "title": "",
+          "description": ""
+        {
+          "title": "",
+          "description": ""
+        },
+        {
+          "title": "",
+          "description": ""
+        }
+      ],
+      "pricing": "",
+      "information": [
+        { "label": "Developer", "value": "" },
+        { "label": "Founded", "value": "" },
+        { "label": "Type", "value": "" },
+        { "label": "Privacy", "value": "" },
+        { "label": "API", "value": "" }
+      ],
       "image": "Images/models/canva.webp",
       "link": "https://www.canva.com/ai-image-generator/?msockid=0a20bcbb87566ef007cfae3e86b66fa1"
     },
@@ -198,6 +689,31 @@
       "category": ["design", "assistants", "jobs"],
       "type": "N/A",
       "description": "Playground provides a creative sandbox for testing text-to-image and text-generation models. Encouraging experimentation and visual exploration for artists and developers alike.",
+      "subtitle": "",
+      "tags": [""],
+      "features": [""
+      ],
+      "use_cases": [
+        {
+          "title": "",
+          "description": ""
+        {
+          "title": "",
+          "description": ""
+        },
+        {
+          "title": "",
+          "description": ""
+        }
+      ],
+      "pricing": "",
+      "information": [
+        { "label": "Developer", "value": "" },
+        { "label": "Founded", "value": "" },
+        { "label": "Type", "value": "" },
+        { "label": "Privacy", "value": "" },
+        { "label": "API", "value": "" }
+      ],
       "image": "Images/models/playground.webp",
       "link": "https://playground.com/"
     },
@@ -207,6 +723,31 @@
       "category": ["design"],
       "type": "N/A",
       "description": "Leonardo AI specialises in generating game assets, illustrations and digital art. It focuses on style consistency and custom model training for designers and studios.",
+      "subtitle": "",
+      "tags": [""],
+      "features": [""
+      ],
+      "use_cases": [
+        {
+          "title": "",
+          "description": ""
+        {
+          "title": "",
+          "description": ""
+        },
+        {
+          "title": "",
+          "description": ""
+        }
+      ],
+      "pricing": "",
+      "information": [
+        { "label": "Developer", "value": "" },
+        { "label": "Founded", "value": "" },
+        { "label": "Type", "value": "" },
+        { "label": "Privacy", "value": "" },
+        { "label": "API", "value": "" }
+      ],
       "image": "Images/models/leonardo.webp",
       "link": "https://leonardo.ai/"
     },
@@ -216,6 +757,31 @@
       "category": ["documents", "learning", "jobs"],
       "type": "N/A",
       "description": "QuillBot refines writing through paraphrasing, tone adjustments and summarisation. It enhances clarity and consistency across academic, professional and creative writing.",
+      "subtitle": "",
+      "tags": [""],
+      "features": [""
+      ],
+      "use_cases": [
+        {
+          "title": "",
+          "description": ""
+        {
+          "title": "",
+          "description": ""
+        },
+        {
+          "title": "",
+          "description": ""
+        }
+      ],
+      "pricing": "",
+      "information": [
+        { "label": "Developer", "value": "" },
+        { "label": "Founded", "value": "" },
+        { "label": "Type", "value": "" },
+        { "label": "Privacy", "value": "" },
+        { "label": "API", "value": "" }
+      ],
       "image": "Images/models/quillbot.webp",
       "link": "https://quillbot.com/"
     },
@@ -225,6 +791,31 @@
       "category": ["documents", "office", "jobs"],
       "type": "N/A",
       "description": "Scribe records digital workflows and auto-creates illustrated guides. It’s perfect for training, documentation and onboarding with minimal manual effort.",
+      "subtitle": "",
+      "tags": [""],
+      "features": [""
+      ],
+      "use_cases": [
+        {
+          "title": "",
+          "description": ""
+        {
+          "title": "",
+          "description": ""
+        },
+        {
+          "title": "",
+          "description": ""
+        }
+      ],
+      "pricing": "",
+      "information": [
+        { "label": "Developer", "value": "" },
+        { "label": "Founded", "value": "" },
+        { "label": "Type", "value": "" },
+        { "label": "Privacy", "value": "" },
+        { "label": "API", "value": "" }
+      ],
       "image": "Images/models/scribe.webp",
       "link": "https://scribehow.com/"
     },
@@ -234,6 +825,31 @@
       "category": ["documents", "research"],
       "type": "N/A",
       "description": "Scholarcy summarises academic papers and highlights key arguments, making research digestion faster for students and professionals alike.",
+      "subtitle": "",
+      "tags": [""],
+      "features": [""
+      ],
+      "use_cases": [
+        {
+          "title": "",
+          "description": ""
+        {
+          "title": "",
+          "description": ""
+        },
+        {
+          "title": "",
+          "description": ""
+        }
+      ],
+      "pricing": "",
+      "information": [
+        { "label": "Developer", "value": "" },
+        { "label": "Founded", "value": "" },
+        { "label": "Type", "value": "" },
+        { "label": "Privacy", "value": "" },
+        { "label": "API", "value": "" }
+      ],
       "image": "Images/models/scholarcy.webp",
       "link": "https://www.scholarcy.com/"
     },
@@ -243,6 +859,31 @@
       "category": ["documents", "research"],
       "type": "N/A",
       "description": "Paperpal helps researchers and writers improve language, clarity and formatting in manuscripts using AI-driven editing and style feedback.",
+      "subtitle": "",
+      "tags": [""],
+      "features": [""
+      ],
+      "use_cases": [
+        {
+          "title": "",
+          "description": ""
+        {
+          "title": "",
+          "description": ""
+        },
+        {
+          "title": "",
+          "description": ""
+        }
+      ],
+      "pricing": "",
+      "information": [
+        { "label": "Developer", "value": "" },
+        { "label": "Founded", "value": "" },
+        { "label": "Type", "value": "" },
+        { "label": "Privacy", "value": "" },
+        { "label": "API", "value": "" }
+      ],
       "image": "Images/models/paperpal.webp",
       "link": "https://paperpal.com/"
     },
@@ -252,6 +893,31 @@
       "category": ["documents", "jobs"],
       "type": "N/A",
       "description": "Wordtune rewrites and improves text to sound natural, concise, and engaging. It allows the user to adapt tone for emails, reports, essays and blogs.",
+      "subtitle": "",
+      "tags": [""],
+      "features": [""
+      ],
+      "use_cases": [
+        {
+          "title": "",
+          "description": ""
+        {
+          "title": "",
+          "description": ""
+        },
+        {
+          "title": "",
+          "description": ""
+        }
+      ],
+      "pricing": "",
+      "information": [
+        { "label": "Developer", "value": "" },
+        { "label": "Founded", "value": "" },
+        { "label": "Type", "value": "" },
+        { "label": "Privacy", "value": "" },
+        { "label": "API", "value": "" }
+      ],
       "image": "Images/models/wordtune.webp",
       "link": "https://www.wordtune.com/summarizer"
     },
@@ -261,6 +927,31 @@
       "category": ["finance", "data", "research"],
       "type": "N/A",
       "description": "AlphaSense enables professionals to analyse corporate data, reports and transcripts using semantic search. It reveals market insights and trends through natural-language understanding.",
+      "subtitle": "",
+      "tags": [""],
+      "features": [""
+      ],
+      "use_cases": [
+        {
+          "title": "",
+          "description": ""
+        {
+          "title": "",
+          "description": ""
+        },
+        {
+          "title": "",
+          "description": ""
+        }
+      ],
+      "pricing": "",
+      "information": [
+        { "label": "Developer", "value": "" },
+        { "label": "Founded", "value": "" },
+        { "label": "Type", "value": "" },
+        { "label": "Privacy", "value": "" },
+        { "label": "API", "value": "" }
+      ],
       "image": "Images/models/alpha-sense.webp",
       "link": "https://www.alpha-sense.com/"
     },
@@ -270,6 +961,31 @@
       "category": ["finance", "data", "research"],
       "type": "N/A",
       "description": "Numer AI crowdsources machine-learning models for stock prediction, allowing data scientists to contribute models that compete on real financial data.",
+      "subtitle": "",
+      "tags": [""],
+      "features": [""
+      ],
+      "use_cases": [
+        {
+          "title": "",
+          "description": ""
+        {
+          "title": "",
+          "description": ""
+        },
+        {
+          "title": "",
+          "description": ""
+        }
+      ],
+      "pricing": "",
+      "information": [
+        { "label": "Developer", "value": "" },
+        { "label": "Founded", "value": "" },
+        { "label": "Type", "value": "" },
+        { "label": "Privacy", "value": "" },
+        { "label": "API", "value": "" }
+      ],
       "image": "Images/models/numer.webp",
       "link": "https://numer.ai/"
     },
@@ -279,6 +995,31 @@
       "category": ["finance", "data", "office"],
       "type": "N/A",
       "description": "Datarails automates financial planning and reporting by integrating spreadsheets with real-time data insights. Helping finance professionals make faster, data-driven decisions.",
+      "subtitle": "",
+      "tags": [""],
+      "features": [""
+      ],
+      "use_cases": [
+        {
+          "title": "",
+          "description": ""
+        {
+          "title": "",
+          "description": ""
+        },
+        {
+          "title": "",
+          "description": ""
+        }
+      ],
+      "pricing": "",
+      "information": [
+        { "label": "Developer", "value": "" },
+        { "label": "Founded", "value": "" },
+        { "label": "Type", "value": "" },
+        { "label": "Privacy", "value": "" },
+        { "label": "API", "value": "" }
+      ],
       "image": "Images/models/datarails.webp",
       "link": "https://www.datarails.com/"
     },
@@ -288,6 +1029,31 @@
       "category": ["finance", "office"],
       "type": "N/A",
       "description": "Workiva streamlines corporate compliance, reporting and audit processes through AI-powered automation and collaboration tools for large organisations.",
+      "subtitle": "",
+      "tags": [""],
+      "features": [""
+      ],
+      "use_cases": [
+        {
+          "title": "",
+          "description": ""
+        {
+          "title": "",
+          "description": ""
+        },
+        {
+          "title": "",
+          "description": ""
+        }
+      ],
+      "pricing": "",
+      "information": [
+        { "label": "Developer", "value": "" },
+        { "label": "Founded", "value": "" },
+        { "label": "Type", "value": "" },
+        { "label": "Privacy", "value": "" },
+        { "label": "API", "value": "" }
+      ],
       "image": "Images/models/workiva.webp",
       "link": "https://www.workiva.com/uk/"
     },
@@ -297,6 +1063,31 @@
       "category": ["finance", "research", "data"],
       "type": "N/A",
       "description": "Zeta Alpha provides enterprise knowledge search powered by AI, surfacing insights from unstructured corporate data and research repositories.",
+      "subtitle": "",
+      "tags": [""],
+      "features": [""
+      ],
+      "use_cases": [
+        {
+          "title": "",
+          "description": ""
+        {
+          "title": "",
+          "description": ""
+        },
+        {
+          "title": "",
+          "description": ""
+        }
+      ],
+      "pricing": "",
+      "information": [
+        { "label": "Developer", "value": "" },
+        { "label": "Founded", "value": "" },
+        { "label": "Type", "value": "" },
+        { "label": "Privacy", "value": "" },
+        { "label": "API", "value": "" }
+      ],
       "image": "Images/models/zeta-alpha.webp",
       "link": "https://www.zeta-alpha.com/"
     },
