@@ -3363,8 +3363,39 @@
       "id": 85,
       "name": "PopAI",
       "category": ["documents", "design", "audio"],
-      "type": "N/A",
-      "description": "PopAI provides creators with generative AI workflows to produce content (blogs, social posts, videos etc.) at scale. Enabling faster ideation and production cycles.",
+      "type": "All-in-one AI Productivity & Presentation Workspace",
+      "description": "PopAI helps creators plan and produce content faster across blogs, social media, video and more. Users can feed in ideas or themes and PopAI suggests outlines, scripts and variations that match their goals. This makes it easier to keep up with regular posting without running out of ideas.\n\nThe platform supports full workflows, from brainstorming through to draft creation. It can adapt to different formats, whether you are preparing a newsletter, a short video or a long-form article. This flexibility means teams can centralise much of their content planning in one place.\n\nPopAI is ideal for marketers, solo creators and small businesses that need to publish consistently on multiple channels. It reduces the time spent on blank-page moments and gives users a steady stream of structured, ready-to-edit content.",
+      "subtitle": "Chat with docs, summarise PDFs and create AI-powered slides in one place.",
+      "tags": ["presentations", "pdf chat", "content generation", "study", "productivity"],
+      "features": [
+        "Chat with PDFs, slides and documents using GPT-style assistants",
+        "AI presentation maker for PowerPoint-style decks from prompts or files",
+        "Content generation for blogs, social posts, essays and more",
+        "Image and video generation tools for visual storytelling",
+        "Cloud workspace with real-time editing, sharing and cross-device sync"
+      ],
+      "use_cases": [
+        {
+          "title": "Studying & Exam Revision",
+          "description": "Students upload textbooks or lecture PDFs, then use PopAI to summarise chapters, quiz themselves and create revision slides."
+        },
+        {
+          "title": "Client & Team Presentations",
+          "description": "Professionals turn reports and data into polished decks quickly, reducing manual slide design work."
+        },
+        {
+          "title": "Content Repurposing",
+          "description": "Creators transform long-form documents into social posts, scripts and visual assets in a few prompts."
+        }
+      ],
+      "pricing": "Freemium — core chat and creation tools free with paid plans for higher limits and advanced features.",
+      "information": [
+        { "label": "Developer", "value": "PopAi" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI-powered document, chat and presentation workspace" },
+        { "label": "Privacy", "value": "Cloud-based; processes uploaded documents and generated content under standard SaaS policies" },
+        { "label": "API", "value": "Focus on web and mobile apps; APIs and integrations may be available for partners" }
+      ],
       "image": "Images/models/popai.webp",
       "link": "https://www.popai.pro"
     },
@@ -3372,8 +3403,39 @@
       "id": 86,
       "name": "Buddy Pro",
       "category": ["assistants", "office", "documents"],
-      "type": "N/A",
-      "description": "BuddyPro AI acts as a personal AI assistant for professionals. Automating tasks like note-taking, follow-ups, content drafting and meeting summarisation to free up time.",
+      "type": "AI Expert & Assistant Builder",
+      "description": "Buddy Pro is an AI assistant designed to support busy professionals with everyday work tasks. It can take meeting notes, summarise conversations and help draft documents or follow-up emails. This means users spend less time on admin and more time on meaningful work.\n\nBy connecting with calendars and communication tools, Buddy Pro keeps track of commitments and reminders. It helps users remember what was discussed, what was promised and what needs to happen next. This leads to smoother collaboration and fewer missed actions.\n\nBuddy Pro is helpful for managers, consultants and knowledge workers who juggle many meetings and projects. It provides a quiet layer of support that keeps information organised and workflows moving without adding extra complexity.",
+      "subtitle": "Train an AI expert on your knowledge to coach, support and scale your work.",
+      "tags": ["knowledge base", "ai assistant", "coaching", "automation", "no-code"],
+      "features": [
+        "No-code setup to train AI on your own documents, notes and frameworks",
+        "Customisable tone and behaviour so the assistant reflects your brand and style",
+        "Embeddable assistants for websites, communities and client portals",
+        "Automated content drafting, FAQs and follow-up messages",
+        "Analytics on what users ask and where your content can expand"
+      ],
+      "use_cases": [
+        {
+          "title": "Scaling Coaching & Consulting",
+          "description": "Coaches and consultants offer always-on AI experts to answer client questions between sessions."
+        },
+        {
+          "title": "Internal Knowledge Hubs",
+          "description": "Teams train Buddy Pro on internal docs so new hires and staff can get instant, consistent answers."
+        },
+        {
+          "title": "Lead Nurturing & Education",
+          "description": "Businesses embed AI experts on landing pages to educate prospects and qualify leads."
+        }
+      ],
+      "pricing": "Subscription tiers based on number of assistants, usage and advanced branding features.",
+      "information": [
+        { "label": "Developer", "value": "BuddyPro" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "Knowledge-trained AI assistant builder for experts and teams" },
+        { "label": "Privacy", "value": "Designed to keep proprietary content and client data secure under SaaS best practices" },
+        { "label": "API", "value": "Embeds and integrations available; deeper API access may be available for partners" }
+      ],
       "image": "Images/models/buddypro.webp",
       "link": "https://buddypro.ai/"
     },
@@ -3381,8 +3443,39 @@
       "id": 87,
       "name": "VAPI",
       "category": ["audio", "development", "assistants"],
-      "type": "N/A",
-      "description": "VAPI is a voice-agent platform that enables developers to build and deploy conversational voice agents at scale with low latency and enterprise reliability.",
+      "type": "Voice Agent API Platform",
+      "description": "VAPI is a platform for building voice-based AI agents that can talk to users in real time. Developers can design agents that handle customer support, booking, information requests and more, all through natural speech. The focus on low latency helps conversations feel fluid and responsive.\n\nThe platform supports deployment at scale so businesses can handle many calls or interactions at once without losing quality. It also includes tools for monitoring performance and improving responses over time. This gives teams control over how their agents behave and how they evolve.\n\nVAPI is suited to companies that want to offer voice assistants or phone-based automation without building everything from scratch. It helps bring conversational AI into real-world scenarios in a practical and manageable way.",
+      "subtitle": "Build production-grade voice AI agents with one configurable platform.",
+      "tags": ["voice agents", "telephony", "api", "call center", "real-time"],
+      "features": [
+        "Low-latency bidirectional audio for natural-feeling voice conversations",
+        "Configurable routing to different LLMs and backends",
+        "Phone number provisioning and telephony integration for inbound and outbound calls",
+        "Scalable infrastructure with monitoring and logging for agents in production",
+        "SDKs, dashboards and documentation tailored for developers"
+      ],
+      "use_cases": [
+        {
+          "title": "Inbound Customer Support Agents",
+          "description": "Companies build voice agents that answer common questions, update tickets and escalate complex cases."
+        },
+        {
+          "title": "Outbound Calling Campaigns",
+          "description": "Sales and operations teams run scripted yet conversational outreach at scale with AI callers."
+        },
+        {
+          "title": "Embedded Voice Interfaces",
+          "description": "Developers add hands-free voice interfaces on top of existing apps and workflows."
+        }
+      ],
+      "pricing": "Usage-based pricing tied to call minutes and feature tiers, with free developer credits to get started.",
+      "information": [
+        { "label": "Developer", "value": "Vapi" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "Developer platform and API for voice AI agents" },
+        { "label": "Privacy", "value": "Enterprise-focused with controls for call data, recordings and PII" },
+        { "label": "API", "value": "Core product is an API with SDKs and integration guides" }
+      ],
       "image": "Images/models/vapi.webp",
       "link": "https://vapi.ai/"
     },
@@ -3390,8 +3483,39 @@
       "id": 88,
       "name": "Codiga",
       "category": ["development", "data"],
-      "type": "N/A",
-      "description": "Codiga checks your code for mistakes and helps improve quality as you write. It gives suggestions inside your editor so you can write cleaner, safer code.",
+      "type": "Code Quality & Static Analysis Assistant",
+      "description": "Codiga is a coding assistant that checks your code as you write and suggests improvements. It can catch mistakes, highlight potential issues and recommend better patterns inside your editor. This supports cleaner, safer code from the start rather than after long debugging sessions.\n\nThe tool also helps enforce style guidelines so teams can keep their codebase consistent. Developers receive instant feedback that fits naturally into their workflow instead of separate review steps. This makes learning and improvement part of everyday coding.\n\nCodiga is useful for both new and experienced developers who want to improve quality and reduce errors. It speeds up code review, encourages good habits and helps teams ship more reliable software.",
+      "subtitle": "Catch bugs, smells and security issues as you code, with instant suggestions.",
+      "tags": ["code quality", "static analysis", "linting", "security", "ide plugin"],
+      "features": [
+        "Inline issue detection and suggestions inside supported IDEs",
+        "Configurable rules for style, security and best practices",
+        "Code review automation and quality reports in CI/CD workflows",
+        "Support for multiple languages and frameworks",
+        "Dashboards for tracking code quality trends over time"
+      ],
+      "use_cases": [
+        {
+          "title": "Everyday Coding Assistance",
+          "description": "Developers get immediate feedback on errors and smells as they type, reducing review churn."
+        },
+        {
+          "title": "Team Code Quality Standards",
+          "description": "Engineering teams enforce consistent rules and prevent regressions across large codebases."
+        },
+        {
+          "title": "Security & Compliance Checks",
+          "description": "Organsiations run automated checks to detect insecure patterns before code reaches production."
+        }
+      ],
+      "pricing": "Freemium for individuals with paid team and enterprise tiers for collaboration and governance.",
+      "information": [
+        { "label": "Developer", "value": "Codiga" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI-assisted static analysis and code quality platform" },
+        { "label": "Privacy", "value": "Offers organisation-level controls over code scanning and data retention" },
+        { "label": "API", "value": "Integrations via IDE plugins, CI/CD hooks and APIs" }
+      ],
       "image": "Images/models/codiga.webp",
       "link": "https://www.codiga.io/"
     },
@@ -3399,8 +3523,39 @@
       "id": 89,
       "name": "DeepSeek",
       "category": ["assistants", "research", "data"],
-      "type": "N/A",
-      "description": "DeepSeek is an AI assistant built to handle long, detailed questions. It can read files, explain topics and help with research while being fast and affordable to use.",
+      "type": "Reasoning-First AI Assistant & Model Suite",
+      "description": "DeepSeek is an AI assistant built to handle long and detailed queries. It can read files, follow multi-step instructions and keep track of context across extended conversations. This makes it especially useful for research tasks or complex problem solving.\n\nUsers can upload documents, ask for explanations and request summaries that highlight the most important points. DeepSeek aims to stay fast and affordable while still handling large amounts of information. This balance makes it accessible for frequent use.\n\nStudents, professionals and analysts can rely on DeepSeek to explore topics in depth without getting lost. It helps turn long and heavy material into something easier to understand and work with.",
+      "subtitle": "Long-context AI assistant for research, coding and deep problem-solving.",
+      "tags": ["ai assistant", "reasoning", "long context", "research", "coding"],
+      "features": [
+        "Access to DeepSeek’s latest reasoning-first models via web, app and API",
+        "Long-context support for reading files, chats and datasets",
+        "Tools for coding help, explanations and step-by-step problem solving",
+        "Multilingual support with fast, affordable generation",
+        "Developer tooling for integrating DeepSeek models into apps and agents"
+      ],
+      "use_cases": [
+        {
+          "title": "Technical Research & Reading",
+          "description": "Users upload papers or docs and ask DeepSeek to summarise, compare and explain complex concepts."
+        },
+        {
+          "title": "Coding & Debugging",
+          "description": "Developers lean on DeepSeek for code generation, refactors and detailed reasoning about tricky bugs."
+        },
+        {
+          "title": "Data & Business Analysis",
+          "description": "Analysts and operators explore data, build queries and generate reports with conversational prompts."
+        }
+      ],
+      "pricing": "Free access to web assistant with paid API and higher-usage plans for teams and developers.",
+      "information": [
+        { "label": "Developer", "value": "DeepSeek" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI assistant and open-weight language model provider" },
+        { "label": "Privacy", "value": "Cloud-hosted models with options for stricter controls in enterprise contexts" },
+        { "label": "API", "value": "Full-featured APIs for chat, completion and tools integration" }
+      ],
       "image": "Images/models/deepseek.webp",
       "link": "https://www.deepseek.com/en"
     },
@@ -3408,8 +3563,39 @@
       "id": 90,
       "name": "Grok",
       "category": ["assistants", "documents", "development"],
-      "type": "N/A",
-      "description": "Grok is an AI assistant designed to give quick, real-time answers using information from the web. It’s helpful for staying updated, writing content and even doing light coding tasks.",
+      "type": "Real-Time AI Assistant by xAI",
+      "description": "Grok is an AI assistant designed to provide quick answers based on information from the web. It can help users stay current with news, trends and online sources while also supporting everyday tasks like writing or light coding. This combination makes it feel both informative and practical.\n\nUsers can ask open-ended questions, request summaries or get help creating content. Grok aims to respond with context that reflects what is happening now rather than only relying on older data. This helps users make decisions based on fresher information.\n\nGrok is a good fit for people who want a conversational way to explore the web, write messages or test ideas. It brings together search, chat and creativity in one place.",
+      "subtitle": "A real-time, web-connected AI assistant for search, coding and content.",
+      "tags": ["ai assistant", "real-time search", "coding", "content", "xai"],
+      "features": [
+        "Real-time search integration for fresh answers on current events and web content",
+        "Content generation for documents, posts, emails and creative writing",
+        "Coding capabilities for writing, refactoring and explaining code",
+        "Image generation and multimodal understanding in supported apps",
+        "APIs and integrations for embedding Grok into products and workflows"
+      ],
+      "use_cases": [
+        {
+          "title": "Staying on Top of News & Trends",
+          "description": "Users query real-time topics and market movements with web-connected answers instead of static training data."
+        },
+        {
+          "title": "Everyday Work Writing",
+          "description": "Professionals draft emails, reports and briefs with Grok and refine them to match their tone."
+        },
+        {
+          "title": "Developer Productivity",
+          "description": "Engineers lean on Grok to understand unfamiliar code, generate snippets and explore APIs quickly."
+        }
+      ],
+      "pricing": "Included in certain X / xAI subscriptions, with additional tiers for API and enterprise access.",
+      "information": [
+        { "label": "Developer", "value": "xAI" },
+        { "label": "Founded", "value": "2023 (xAI)" },
+        { "label": "Type", "value": "General-purpose, real-time AI assistant and API" },
+        { "label": "Privacy", "value": "Operates under xAI’s data-use and privacy policies, with controls for developers" },
+        { "label": "API", "value": "API available for integrating Grok into third-party apps and services" }
+      ],
       "image": "Images/models/grok.webp",
       "link": "https://x.ai/grok"
     },
@@ -3417,8 +3603,39 @@
       "id": 91,
       "name": "Beautiful.AI",
       "category": ["design", "office", "documents"],
-      "type": "N/A",
-      "description": "Beautiful.AI creates clean, well-designed presentation slides automatically. You type the content, it formats everything professionally with smart layouts.",
+      "type": "AI Presentation Maker",
+      "description": "Beautiful.AI helps users create polished presentation slides without needing strong design skills. You add your content and the tool arranges it into clean layouts that follow good design principles. This keeps slides consistent and easy to read.\n\nThe platform offers smart templates that adjust as you edit. When you change text, images or data, the slides update to maintain balance and clarity. This removes the need to manually tweak spacing or alignment for every change.\n\nBeautiful.AI is ideal for teams and individuals who want professional presentations in less time. It supports sales decks, internal updates and pitches, giving users confidence that their slides look sharp and well-structured.",
+      "subtitle": "Smart slide layouts that make your presentations look professionally designed.",
+      "tags": ["presentations", "slide design", "templates", "teams", "brand"],
+      "features": [
+        "Smart templates that auto-adjust layouts as you edit content",
+        "AI-assisted slide generation and content suggestions",
+        "Brand control for fonts, colours and logos across decks",
+        "Collaboration and sharing tools for teams and clients",
+        "Export and compatibility with common presentation formats"
+      ],
+      "use_cases": [
+        {
+          "title": "Sales & Client Decks",
+          "description": "Sales teams quickly assemble visually consistent decks for pitches and proposals."
+        },
+        {
+          "title": "Internal Strategy & Reporting",
+          "description": "Leaders create polished presentations for updates, planning sessions and all-hands meetings."
+        },
+        {
+          "title": "Startup Fundraising",
+          "description": "Founders use Beautiful.AI to craft aesthetically strong pitch decks without hiring designers."
+        }
+      ],
+      "pricing": "Free trial available; paid plans for individuals, teams and enterprises starting at a low monthly rate.",
+      "information": [
+        { "label": "Developer", "value": "Beautiful.ai" },
+        { "label": "Founded", "value": "Mid-2010s" },
+        { "label": "Type", "value": "AI-powered presentation design platform" },
+        { "label": "Privacy", "value": "Cloud-based; presentations stored securely with team and enterprise options" },
+        { "label": "API", "value": "Focuses on app-based workflows; integrations available with common work tools" }
+      ],
       "image": "Images/models/beautiful.webp",
       "link": "https://www.beautiful.ai/"
     },
@@ -3426,8 +3643,39 @@
       "id": 92,
       "name": "Pitch",
       "category": ["design", "office", "documents"],
-      "type": "N/A",
-      "description": "Pitch is a modern presentation tool for teams. It makes it easy to create slides, share ideas, add visuals and work together in real time.",
+      "type": "Collaborative Presentation Platform",
+      "description": "Pitch is a presentation tool built for modern teams that want to create and share slides together. It offers templates, easy editing tools and collaboration features so people can contribute in real time. This keeps everyone aligned and reduces the back-and-forth that often comes with slide creation.\n\nThe platform makes it simple to add images, charts and videos, and to reuse elements across multiple decks. Teams can keep a shared library of branded slides, which helps maintain a consistent look for external and internal presentations.\n\nPitch is a strong choice for startups, agencies and remote teams that rely on visual communication. It turns presentations into a more collaborative and efficient part of daily work.",
+      "subtitle": "Create, collaborate on and share modern team presentations.",
+      "tags": ["presentations", "collaboration", "templates", "pitch decks", "teams"],
+      "features": [
+        "Real-time collaboration with comments, presence and version history",
+        "Template gallery with on-brand, customisable slide designs",
+        "Workspace organisation for decks, deal rooms and folders",
+        "Embeds and integrations with tools like Slack, Notion and analytics",
+        "Presentation analytics to track engagement and deck performance"
+      ],
+      "use_cases": [
+        {
+          "title": "Sales & Fundraising Pitches",
+          "description": "Teams keep their latest sales and investor decks aligned and easily shareable from one hub."
+        },
+        {
+          "title": "Team Updates & Strategy",
+          "description": "Product and leadership teams create recurring update decks with reusable templates."
+        },
+        {
+          "title": "Agency & Client Work",
+          "description": "Agencies manage multiple client decks with consistent branding across projects."
+        }
+      ],
+      "pricing": "Free tier with paid plans for teams and enterprises that need advanced collaboration and brand control.",
+      "information": [
+        { "label": "Developer", "value": "Pitch Software GmbH" },
+        { "label": "Founded", "value": "Late 2010s" },
+        { "label": "Type", "value": "Collaborative presentation and pitching platform" },
+        { "label": "Privacy", "value": "Business-ready security with options for workspace access control" },
+        { "label": "API", "value": "Integrations and APIs available for embedding and automation use cases" }
+      ],
       "image": "Images/models/pitch.webp",
       "link": "https://pitch.com/"
     },
@@ -3435,8 +3683,39 @@
       "id": 93,
       "name": "Plus",
       "category": ["design", "office", "documents"],
-      "type": "N/A",
-      "description": "Plus AI helps you create full PowerPoint or Google Slides presentations using simple prompts. It designs layouts, adds visuals and builds complete decks automatically.",
+      "type": "AI Add-on for Slides & PowerPoint",
+      "description": "Plus helps users generate full presentations for PowerPoint or Google Slides using simple prompts. You describe the topic and goals, and Plus creates draft decks with suggested layouts, sections and visuals. This removes the initial effort of starting from a blank slide.\n\nUsers can then refine the content, adjust design choices and add their own data or branding. Plus focuses on structure and clarity so decks feel well organised from the outset. This is especially helpful when time is limited or when teams need many variations.\n\nPlus is ideal for professionals who regularly prepare reports, pitches or training materials. It speeds up the creation process and helps users focus on message and delivery rather than manual formatting.",
+      "subtitle": "Generate and edit presentations with AI, right inside Slides and PowerPoint.",
+      "tags": ["presentations", "google slides", "powerpoint", "add-on", "ai decks"],
+      "features": [
+        "Create full decks from prompts, outlines or documents",
+        "Insert single AI-generated slides into existing presentations",
+        "Remix and reformat existing slides into new layouts",
+        "Works natively inside Google Slides and PowerPoint",
+        "Template library and best-practice slide designs"
+      ],
+      "use_cases": [
+        {
+          "title": "Quick Pitch & Sales Decks",
+          "description": "Sales reps turn briefs or docs into full client-ready decks without leaving PowerPoint or Slides."
+        },
+        {
+          "title": "Report & Update Presentations",
+          "description": "Teams repurpose existing reports into presentation format using the Remix and insert tools."
+        },
+        {
+          "title": "Busy Knowledge Workers",
+          "description": "Professionals offload layout and drafting to Plus so they can focus on content and delivery."
+        }
+      ],
+      "pricing": "Free trial with paid plans for individual professionals and teams.",
+      "information": [
+        { "label": "Developer", "value": "Plus AI, Inc." },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI presentation assistant for Google Slides and PowerPoint" },
+        { "label": "Privacy", "value": "Enterprise-grade security, including SOC 2 compliance for business users" },
+        { "label": "API", "value": "Primarily delivered as add-ons; APIs and integrations exist for select workflows" }
+      ],
       "image": "Images/models/plusai.webp",
       "link": "https://plusai.com/"
     },
@@ -3444,17 +3723,79 @@
       "id": 94,
       "name": "AskCodi",
       "category": ["development", "documents"],
-      "type": "N/A",
-      "description": "AskCodi helps developers by turning everyday questions into code snippets or useful explanations. It’s helpful for beginners learning to code or developers working faster.",
+      "type": "AI Coding Assistant",
+      "description": "AskCodi is an AI assistant that supports developers by turning everyday questions into code snippets and explanations. Users can ask how to perform a task in a specific language and receive ready-to-use examples. This shortens the time spent searching through documentation or forums.\n\nThe tool can also explain existing code so beginners and intermediate developers understand what each part does. This is useful for learning new technologies or revisiting older projects. AskCodi becomes a reference companion that sits alongside normal development tools.\n\nAskCodi works well for people who are still learning to code and for experienced developers who want to move faster. It helps reduce confusion, encourages exploration and makes coding feel more accessible.",
+      "subtitle": "Turn natural-language questions into code, explanations and tests.",
+      "tags": ["coding assistant", "code generation", "documentation", "tests", "ide"],
+      "features": [
+        "Code generation from natural-language instructions",
+        "Explanations for unfamiliar code or APIs",
+        "Automatic test and docstring suggestions",
+        "Support for multiple languages and frameworks",
+        "Editor extensions and an OpenAI-compatible API"
+      ],
+      "use_cases": [
+        {
+          "title": "Learning New Frameworks",
+          "description": "Developers experiment in their IDE, asking AskCodi for examples and explanations as they go."
+        },
+        {
+          "title": "Speeding Up Routine Coding",
+          "description": "Teams offload boilerplate and repetitive patterns to the assistant to focus on higher-level logic."
+        },
+        {
+          "title": "Improving Documentation Coverage",
+          "description": "Projects generate docstrings and basic docs more consistently with AI support."
+        }
+      ],
+      "pricing": "Freemium with additional paid tiers for higher limits, teams and API access.",
+      "information": [
+        { "label": "Developer", "value": "AskCodi" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI coding assistant and API" },
+        { "label": "Privacy", "value": "Options to keep code private, with policies tailored for professional teams" },
+        { "label": "API", "value": "OpenAI-compatible API for integrating coding assistance into workflows" }
+      ],
       "image": "Images/models/askcodi.webp",
       "link": "https://www.askcodi.com/"
     },
     {
       "id": 95,
       "name": "Cursor",
-      "category": ["development","assistants", "documents"],
-      "type": "N/A",
-      "description": "Cursor is a code editor enhanced with built-in AI assistance. It helps developers write, fix, and understand code directly inside the editor, making programming faster and easier for beginners and professionals.",
+      "category": ["development", "assistants", "documents"],
+      "type": "AI-First Code Editor",
+      "description": "Cursor is a code editor that includes AI assistance directly inside the workspace. As developers write code, Cursor can suggest completions, help fix errors and generate functions based on short prompts. This tight integration makes programming feel smoother and more interactive.\n\nThe editor supports understanding and navigation by explaining sections of code in simple terms. Developers can ask questions about their own projects and receive context-aware answers. This is helpful when working with large codebases or unfamiliar libraries.\n\nCursor is suitable for both newcomers and professionals who want a smarter editor. It combines familiar editing features with powerful AI support, helping users write, read and maintain code more efficiently.",
+      "subtitle": "A code editor where AI understands your whole project and helps you ship faster.",
+      "tags": ["ide", "ai coding", "pair programming", "refactoring", "debugging"],
+      "features": [
+        "Chat interface that can see and reason about your entire codebase",
+        "Inline completions and multi-line code suggestions",
+        "Tools for refactoring, generating new files and scaffolding features",
+        "Error diagnosis and fix suggestions based on runtime logs or console output",
+        "Support for multiple AI backends and model choices"
+      ],
+      "use_cases": [
+        {
+          "title": "Greenfield Feature Development",
+          "description": "Developers describe features in natural language and have Cursor generate scaffolding and initial implementations."
+        },
+        {
+          "title": "Onboarding to New Codebases",
+          "description": "New team members ask questions about unfamiliar parts of the repo and get guided explanations."
+        },
+        {
+          "title": "Refactors & Large Changes",
+          "description": "Teams use Cursor to plan and execute broad refactors with AI help while maintaining code style."
+        }
+      ],
+      "pricing": "Free tier for individual use with paid plans for higher limits and advanced team features.",
+      "information": [
+        { "label": "Developer", "value": "Cursor" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI-native code editor and coding assistant" },
+        { "label": "Privacy", "value": "Provides controls over what code is shared with AI backends; options for teams" },
+        { "label": "API", "value": "Editor-centric; integrates various AI APIs under the hood rather than exposing its own" }
+      ],
       "image": "Images/models/cursor.webp",
       "link": "https://cursor.com/"
     },
@@ -3462,8 +3803,39 @@
       "id": 96,
       "name": "Replit",
       "category": ["development", "assistants"],
-      "type": "N/A",
-      "description": "Replit is an online coding environment where you can build, run, and deploy software from your browser. Its AI tools help generate code, explain errors, and speed up development.",
+      "type": "Collaborative Cloud IDE with AI",
+      "description": "Replit is an online environment where users can write, run and share code directly from their browser. It removes the need for complex setup so people can start building projects quickly on almost any device. This makes it popular for learning and experimentation.\n\nWith built-in AI tools, Replit can assist with writing code, explaining errors and suggesting improvements. Users can collaborate in real time, which is useful for classrooms, teams or pair programming sessions. Projects can often be deployed with a few clicks, turning ideas into live apps.\n\nReplit is ideal for students, hobbyists and developers who want a simple way to code and share work. It lowers the barrier to entry and encourages creativity and collaboration.",
+      "subtitle": "Code, collaborate and build apps from your browser—with AI support built in.",
+      "tags": ["cloud ide", "ai coding", "collaboration", "education", "agent"],
+      "features": [
+        "Browser-based and desktop IDE for dozens of languages and frameworks",
+        "Replit Agent to build apps and sites from natural-language prompts",
+        "AI code completion, explanation and debugging assistance",
+        "Instant hosting and deployment for web apps and APIs",
+        "Real-time collaboration with shared sessions and live cursors"
+      ],
+      "use_cases": [
+        {
+          "title": "Learning & Teaching Code",
+          "description": "Educators and learners use Replit’s environment and AI explanations to practise coding without setup."
+        },
+        {
+          "title": "Rapid Prototyping & MVPs",
+          "description": "Founders and hackers get ideas running quickly, then share URLs for feedback and testing."
+        },
+        {
+          "title": "Internal Tools & Hackathons",
+          "description": "Teams spin up internal dashboards, scripts and experiments without configuring dev environments."
+        }
+      ],
+      "pricing": "Free tier with paid plans for more compute, private repls and advanced collaboration features.",
+      "information": [
+        { "label": "Developer", "value": "Replit" },
+        { "label": "Founded", "value": "2016" },
+        { "label": "Type", "value": "AI-powered collaborative cloud IDE and app platform" },
+        { "label": "Privacy", "value": "Supports private projects and enterprise security controls for organisations" },
+        { "label": "API", "value": "APIs and integrations for deployments, agents and external tooling" }
+      ],
       "image": "Images/models/replit.webp",
       "link": "https://replit.com/"
     },
@@ -3471,8 +3843,39 @@
       "id": 97,
       "name": "Tabnine",
       "category": ["development"],
-      "type": "N/A",
-      "description": "Tabnine is an AI coding assistant that suggests code completions as you type. It learns from your coding style to offer personal, accurate suggestions.",
+      "type": "Enterprise AI Code Assistant",
+      "description": "Tabnine is an AI-powered code completion tool that suggests the next part of a line or entire blocks of code as you type. It learns from the patterns in your projects and adapts to your personal style. This helps speed up development and reduce repetitive typing.\n\nThe tool works inside popular editors, so developers do not need to change their workflow. It supports many languages and frameworks, offering context-aware completions that fit the file being edited. This can also help prevent small errors and mismatched syntax.\n\nTabnine is useful for developers who want to move faster without sacrificing control. It acts as a quiet partner in the background, making coding feel smoother and more efficient.",
+      "subtitle": "AI code completion and chat you can deploy in the cloud, on-prem or even air-gapped.",
+      "tags": ["code completion", "enterprise", "security", "ide", "ai chat"],
+      "features": [
+        "Context-aware code completions for many languages and frameworks",
+        "AI chat for explaining code, generating snippets and writing tests",
+        "Flexible deployment: cloud, VPC, on-premise or air-gapped",
+        "Team-level customisation trained on your own repositories",
+        "Compliance-focused with strong privacy, security and licence controls"
+      ],
+      "use_cases": [
+        {
+          "title": "Enterprise Development Teams",
+          "description": "Large organisations deploy Tabnine to boost productivity while keeping source code private."
+        },
+        {
+          "title": "Regulated Industries",
+          "description": "Companies in finance, healthcare or government use on-prem or air-gapped setups to satisfy strict compliance."
+        },
+        {
+          "title": "Multi-Language Projects",
+          "description": "Teams working across stacks get consistent AI assistance in all major languages and IDEs."
+        }
+      ],
+      "pricing": "Commercial plans tailored to team size and deployment model, with trials available.",
+      "information": [
+        { "label": "Developer", "value": "Tabnine" },
+        { "label": "Founded", "value": "Company roots 2013 (Codota); Tabnine assistant launched 2018" },
+        { "label": "Type", "value": "AI coding assistant for individuals and enterprises" },
+        { "label": "Privacy", "value": "Strong emphasis on keeping code private, secure and compliant" },
+        { "label": "API", "value": "Available through IDE plugins and enterprise integrations" }
+      ],
       "image": "Images/models/tabnine.webp",
       "link": "https://www.tabnine.com/"
     },
@@ -3480,8 +3883,39 @@
       "id": 98,
       "name": "Friday",
       "category": ["office", "documents"],
-      "type": "N/A",
-      "description": "Friday.ai creates weekly reports by pulling updates from tools you already use. It automatically summarises progress, tasks, and blockers for teams.",
+      "type": "AI Email & Weekly Report Assistant",
+      "description": "Friday is an AI assistant that creates weekly reports by gathering updates from tools your team already uses. It collects information about tasks, progress and blockers, then summarises everything into a clear overview. This saves teams time preparing status updates.\n\nThe platform can pull from project management tools, documents and communication channels. It turns scattered updates into a single, easy-to-read report that leaders and teammates can review. This improves transparency and helps everyone stay on the same page.\n\nFriday is especially helpful for remote and distributed teams who want consistent visibility into work. It reduces manual reporting work and keeps focus on what has been done and what needs attention next.",
+      "subtitle": "From scattered tasks to clean weekly updates and emails—automatically.",
+      "tags": ["email", "weekly report", "status updates", "productivity", "automation"],
+      "features": [
+        "AI-assisted drafting of weekly reports and status emails",
+        "Pulls context from tools and email (where connected)",
+        "Templates for common update formats (OKRs, project status, highlights)",
+        "Simple editing workflow to approve and send updates",
+        "Works alongside Gmail via extension-style flows"
+      ],
+      "use_cases": [
+        {
+          "title": "Weekly Status Reports",
+          "description": "Employees and managers generate structured recaps of progress, blockers and plans with minimal effort."
+        },
+        {
+          "title": "Asynchronous Team Updates",
+          "description": "Distributed teams share updates without more meetings, standardising communication across time zones."
+        },
+        {
+          "title": "Personal Progress Journals",
+          "description": "Individuals maintain a log of wins and work that can feed performance reviews or personal reflection."
+        }
+      ],
+      "pricing": "Typically offers a free tier or trial, with paid plans for heavier usage and team features.",
+      "information": [
+        { "label": "Developer", "value": "Friday, Inc." },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI email and reporting assistant for weekly updates" },
+        { "label": "Privacy", "value": "Connects to email and work tools with controls over data access and storage" },
+        { "label": "API", "value": "Primarily browser/extension-based; deeper integrations may be evolving" }
+      ],
       "image": "Images/models/friday.webp",
       "link": "https://www.friday.so/"
     },
@@ -3489,8 +3923,39 @@
       "id": 99,
       "name": "Mailmaestro",
       "category": ["documents", "assistants", "office", "jobs"],
-      "type": "N/A",
-      "description": "MailMaestro writes personalised emails using AI. You choose the tone, message and details. It generates clean professional emails ready to send.",
+      "type": "AI Email Writing & Management Assistant",
+      "description": "MailMaestro helps users write personalised emails with the support of AI. You set the tone, outline the message and provide key details, then MailMaestro generates a draft that feels polished and professional. This is useful for people who send many emails each day.\n\nThe tool can adapt to different scenarios such as sales outreach, follow-ups, internal communication or customer support. Users can tweak the text to match their voice more closely before sending. This keeps communication fast while still feeling personal.\n\nMailMaestro is a good fit for professionals who want to save time while maintaining high-quality communication. It helps reduce the effort of writing from scratch and ensures messages remain clear and appropriate for each recipient.",
+      "subtitle": "Write better emails in seconds and keep your inbox organised with AI.",
+      "tags": ["email", "writing assistant", "productivity", "outlook", "gmail"],
+      "features": [
+        "Email drafting from short notes, bullet points or instructions",
+        "Tone control, rewriting and translations across multiple languages",
+        "Summarisation of long threads and conversations",
+        "Inbox management with smart labels and priority views",
+        "Works directly in Outlook and Gmail via extensions and add-ins"
+      ],
+      "use_cases": [
+        {
+          "title": "Daily Email Workloads",
+          "description": "Professionals turn rough ideas into polished emails and speed through inboxes with AI-generated drafts."
+        },
+        {
+          "title": "Multilingual Communication",
+          "description": "Teams collaborate across regions using Mailmaestro to translate and adapt messages appropriately."
+        },
+        {
+          "title": "Inbox Triage & Focus",
+          "description": "Users rely on AI labels and prioritisation to focus on messages that matter most."
+        }
+      ],
+      "pricing": "Freemium and paid plans depending on usage, with business options for teams.",
+      "information": [
+        { "label": "Developer", "value": "MaestroLabs" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI email writing and management assistant" },
+        { "label": "Privacy", "value": "Runs inside major email clients with enterprise-grade security practices" },
+        { "label": "API", "value": "Focus on client integrations; APIs for enterprise email workflows may be available" }
+      ],
       "image": "Images/models/maestrolabs.webp",
       "link": "https://www.maestrolabs.com/"
     },
@@ -3498,8 +3963,39 @@
       "id": 100,
       "name": "Shortwave",
       "category": ["office", "assistants", "documents"],
-      "type": "N/A",
-      "description": "Shortwave is an AI-powered email inbox that summarises messages, drafts replies and helps users stay organised with faster email workflows.",
+      "type": "AI-Forward Email Client",
+      "description": "Shortwave is an AI-powered email client that helps users stay organised and process messages faster. It can group related emails, summarise threads and highlight the most important information. This lets users understand conversations at a glance instead of reading every message in full.\n\nThe platform also assists with drafting replies and creating quick responses for common scenarios. Users can manage tasks directly from their inbox by turning emails into follow-up items. This keeps everything in one place and reduces the chance of missing something important.\n\nShortwave is ideal for people who deal with heavy email volumes. It turns the inbox into a more focused workspace and helps users feel in control of their communication.",
+      "subtitle": "Automate, summarise and reply to email with an AI-native inbox.",
+      "tags": ["email client", "ai agent", "summaries", "productivity", "gmail"],
+      "features": [
+        "AI summaries for long conversations and threads",
+        "Draft replies and instant AI responses in your own style",
+        "Smart inbox bundles, snoozes and scheduling tools",
+        "Natural-language commands to search, organise and act on email",
+        "Cross-platform apps for web, desktop and mobile"
+      ],
+      "use_cases": [
+        {
+          "title": "High-Volume Knowledge Work",
+          "description": "Operators and leaders with heavy email loads use Shortwave to triage faster and delegate to AI."
+        },
+        {
+          "title": "Team Collaboration via Email",
+          "description": "Teams share context with shared labels, spaces and consistent inbox workflows."
+        },
+        {
+          "title": "Personal Productivity Upgrade",
+          "description": "Individuals replace classic Gmail UI with a more structured, AI-assisted experience."
+        }
+      ],
+      "pricing": "Free tier with paid plans for advanced features and team collaboration.",
+      "information": [
+        { "label": "Developer", "value": "Shortwave" },
+        { "label": "Founded", "value": "Early 2020s" },
+        { "label": "Type", "value": "AI-native email client built on Gmail" },
+        { "label": "Privacy", "value": "Connects to Gmail with strong security and data protection controls" },
+        { "label": "API", "value": "Focus on first-party clients; deeper integrations may be available" }
+      ],
       "image": "Images/models/shortwave.webp",
       "link": "https://www.shortwave.com/"
     },
@@ -3507,8 +4003,39 @@
       "id": 101,
       "name": "Superhuman",
       "category": ["office", "assistants", "documents"],
-      "type": "N/A",
-      "description": "Superhuman is a fast, AI-enhanced email client designed to help busy professionals process inboxes quickly, draft messages, and organise tasks efficiently.",
+      "type": "Premium AI Email Client",
+      "description": "Superhuman is an email client designed for speed and focus. It combines keyboard shortcuts, smart triage and AI assistance to help users work through their inbox quickly. Professionals use it to cut down the time spent reading, sorting and responding to messages.\n\nAI features help draft replies, suggest next actions and surface important messages before others. The interface is streamlined and designed to minimise distractions so users can stay in a state of flow. This makes handling email feel more intentional and less draining.\n\nSuperhuman is popular among executives, founders and busy knowledge workers. It is built for people who want email to be a powerful tool rather than a constant source of friction.",
+      "subtitle": "Fly through your inbox with an AI-native, keyboard-optimised email experience.",
+      "tags": ["email", "ai writing", "productivity", "inbox zero", "professional"],
+      "features": [
+        "AI-powered drafting that turns phrases into full emails in your own voice",
+        "Instant reply suggestions for incoming messages",
+        "Conversation summaries so you can scan threads in seconds",
+        "Powerful keyboard shortcuts and split inbox views",
+        "Integrations with calendars, tasks and other productivity tools"
+      ],
+      "use_cases": [
+        {
+          "title": "Executive & Leadership Email",
+          "description": "Leaders use Superhuman to stay responsive and organised despite heavy inbound volume."
+        },
+        {
+          "title": "Sales & Client Communication",
+          "description": "Client-facing roles respond faster and keep conversations moving with AI-assisted replies."
+        },
+        {
+          "title": "Focused Knowledge Work",
+          "description": "Anyone who wants to spend less time in email and more time on deep work benefits from its workflow design."
+        }
+      ],
+      "pricing": "Subscription-based, with Pro and Business tiers for individuals and teams.",
+      "information": [
+        { "label": "Developer", "value": "Superhuman (formerly Superhuman Mail, part of the broader Superhuman/Grammarly group)" },
+        { "label": "Founded", "value": "Late 2010s" },
+        { "label": "Type", "value": "AI-enhanced premium email client and productivity suite component" },
+        { "label": "Privacy", "value": "Enterprise-grade security and privacy controls for business users" },
+        { "label": "API", "value": "Integrations with major email providers; broader suite APIs evolving" }
+      ],
       "image": "Images/models/superhuman.webp",
       "link": "https://superhuman.com/"
     },
@@ -3516,8 +4043,39 @@
       "id": 102,
       "name": "Adobe Firefly",
       "category": ["design"],
-      "type": "N/A",
-      "description": "Adobe Firefly creates images, graphics and design elements using text prompts. It focuses on clean, high-quality visuals with strong brand-safe controls.",
+      "type": "Generative AI Creative Workspace",
+      "description": "Adobe Firefly is a generative AI tool that creates images and design elements from simple text prompts. It aims to produce clean, high-quality visuals that fit naturally into professional workflows. Users can generate backgrounds, illustrations and other assets in seconds.\n\nThe tool is integrated with Adobe’s creative ecosystem, which makes it easy to move from generated images into deeper editing in apps like Photoshop. Firefly also focuses on brand safety and commercial usability so creators can use assets with more confidence.\n\nDesigners, marketers and content creators use Firefly to speed up concepting and production. It provides a quick way to explore ideas visually and reduce the time spent searching for or building assets from scratch.",
+      "subtitle": "Generate images, designs and more with Adobe’s brand-safe generative AI.",
+      "tags": ["text-to-image", "generative fill", "creative cloud", "design", "ai art"],
+      "features": [
+        "Text-to-image generation with multiple styles and variations",
+        "Generative Fill and Expand to add, remove or extend elements in photos",
+        "Support for vector, video and audio generation in compatible tools",
+        "Integration across Adobe apps for seamless workflows",
+        "Credit-based usage with options for free and paid tiers"
+      ],
+      "use_cases": [
+        {
+          "title": "Marketing & Social Creative",
+          "description": "Teams generate campaign visuals, resize assets and adapt creatives for different channels quickly."
+        },
+        {
+          "title": "Photo & Asset Editing",
+          "description": "Designers use Generative Fill and related tools to retouch and extend images non-destructively."
+        },
+        {
+          "title": "Concept & Style Exploration",
+          "description": "Artists explore compositions and styles rapidly before committing to final production work."
+        }
+      ],
+      "pricing": "Free tier with limited generations; paid Firefly and Creative Cloud plans unlock higher limits and advanced features.",
+      "information": [
+        { "label": "Developer", "value": "Adobe" },
+        { "label": "Founded", "value": "Firefly launched early 2020s" },
+        { "label": "Type", "value": "Generative AI platform for images, video, audio and vector graphics" },
+        { "label": "Privacy", "value": "Designed for commercial use with clear content and training policies" },
+        { "label": "API", "value": "Firefly Services APIs available for image and media generation at scale" }
+      ],
       "image": "Images/models/firefly.webp",
       "link": "https://firefly.adobe.com/"
     },
@@ -3525,8 +4083,39 @@
       "id": 103,
       "name": "FLUX.1",
       "category": ["design"],
-      "type": "N/A",
-      "description": "FLUX.1 is an AI image generator known for producing bold, artistic visuals with rich detail. Built for designers who want more creative control.",
+      "type": "Open-Weight Text-to-Image Model",
+      "description": "FLUX.1 is an AI image generator known for bold and expressive visuals. It specialises in rich detail and strong artistic style, making it appealing for designers who want more character in their images. Users can experiment with different prompts to create unique and memorable artwork.\n\nThe tool supports a wide range of creative directions, from abstract scenes to stylised characters. It allows users to iterate quickly until they find a look that suits their project. This makes it useful for concept art, moodboards or visual storytelling.\n\nFLUX.1 is a strong option for artists, creatives and brands that want eye-catching visuals. It encourages experimentation and helps turn imaginative ideas into striking images.",
+      "subtitle": "Next-generation text-to-image models for rich, controllable visuals.",
+      "tags": ["text-to-image", "open weights", "generative art", "api", "image generation"],
+      "features": [
+        "High-quality image generation from natural-language prompts",
+        "Multiple variants balancing speed, quality and licensing needs",
+        "Support for image editing and conditioning in compatible setups",
+        "Open-weight releases for self-hosting certain versions",
+        "API access via Black Forest Labs for production workloads"
+      ],
+      "use_cases": [
+        {
+          "title": "Creative & Concept Art",
+          "description": "Artists and designers explore styles, compositions and concepts with fast iterations."
+        },
+        {
+          "title": "App & Product Integration",
+          "description": "Developers embed FLUX-powered image generation into design tools, games or creative apps."
+        },
+        {
+          "title": "Research & Experiments",
+          "description": "Researchers use FLUX’s open-weight variants to study and extend generative image models."
+        }
+      ],
+      "pricing": "Open-weight options under specific licences plus paid API access for hosted, production-grade usage.",
+      "information": [
+        { "label": "Developer", "value": "Black Forest Labs" },
+        { "label": "Founded", "value": "2024 (Black Forest Labs)" },
+        { "label": "Type", "value": "State-of-the-art text-to-image model family" },
+        { "label": "Privacy", "value": "Self-hosting available for open-weight variants; API use governed by BFL’s policies" },
+        { "label": "API", "value": "Image generation and editing API available via BFL" }
+      ],
       "image": "Images/models/flux.webp",
       "link": "https://flux-ai.io/"
     },
@@ -3534,8 +4123,39 @@
       "id": 104,
       "name": "Ideogram",
       "category": ["design"],
-      "type": "N/A",
-      "description": "Ideogram generates images and typography with accurate text rendering, making it ideal for posters, logos, and social graphics.",
+      "type": "Text-Aware Image Generation Platform",
+      "description": "Ideogram is an image generator focused on producing visuals with accurate, readable text built in. This makes it ideal for posters, social graphics, logos and other designs where typography is part of the image. Users can specify messages and see them rendered directly in the artwork.\n\nThe tool aims to combine strong layout with creative styling so that both the text and image work together. This lets creators produce shareable visuals in a single step instead of manually adding lettering later. It is especially useful for social campaigns and marketing materials.\n\nIdeogram is favoured by marketers, creators and small businesses who need quick, attractive text-based visuals. It helps users bring slogans, titles and statements to life without advanced design skills.",
+      "subtitle": "Generate images with crisp, accurate text for logos, posters and social graphics.",
+      "tags": ["text-in-image", "logos", "posters", "typography", "image generation"],
+      "features": [
+        "Accurate text rendering within generated images",
+        "Multiple artistic and design styles from photo to vector-like art",
+        "Web interface and community gallery for inspiration",
+        "Controls for aspect ratio, composition and style",
+        "Commercial-use options depending on plan"
+      ],
+      "use_cases": [
+        {
+          "title": "Posters & Social Graphics",
+          "description": "Creators generate headline-driven visuals with readable text baked into the image."
+        },
+        {
+          "title": "Logo & Branding Experiments",
+          "description": "Designers explore logo concepts and branded typography with AI assistance."
+        },
+        {
+          "title": "Marketing Campaign Assets",
+          "description": "Teams quickly create variants of campaign graphics tailored to different channels."
+        }
+      ],
+      "pricing": "Free usage with limitations plus paid subscriptions for higher-quality outputs and commercial rights.",
+      "information": [
+        { "label": "Developer", "value": "Ideogram AI" },
+        { "label": "Founded", "value": "2023" },
+        { "label": "Type", "value": "Text-to-image platform optimised for text rendering" },
+        { "label": "Privacy", "value": "Hosted service with standard content and usage policies" },
+        { "label": "API", "value": "APIs and integrations available through partners and third-party platforms" }
+      ],
       "image": "Images/models/ideogram.webp",
       "link": "https://ideogram.ai/"
     },
@@ -3543,8 +4163,39 @@
       "id": 105,
       "name": "Recraft",
       "category": ["design"],
-      "type": "N/A",
-      "description": "Recraft creates vectors, icons, patterns and illustrations using AI. Geared toward graphic designers needing consistent brand-ready assets.",
+      "type": "AI Vector & Illustration Generator",
+      "description": "Recraft is an AI tool built for creating vector graphics, icons and patterns. It generates clean, scalable art that can be used across websites, apps and printed materials. This is helpful for designers who need consistent visuals that look sharp at any size.\n\nUsers can define styles and themes to match a brand, then generate assets that fit into that visual system. Recraft supports pattern creation, illustration and icon sets, which saves time on manual drawing. The results are ready for editing or direct use in design tools.\n\nRecraft is ideal for product designers, brand teams and illustrators who want to speed up asset creation. It helps maintain a cohesive look across different projects and reduces the repetitive work involved in building visual libraries.",
+      "subtitle": "Create editable vector illustrations, icons and patterns with AI.",
+      "tags": ["vector", "icons", "illustrations", "svg", "branding"],
+      "features": [
+        "AI generation of vector art with SVG export",
+        "Style presets and controls for consistent visual language",
+        "Support for logos, icons, patterns and stock-style illustrations",
+        "Workspace oriented around brand consistency and reusable assets",
+        "Free-to-use plans with rapid generation for designers"
+      ],
+      "use_cases": [
+        {
+          "title": "Product & Marketing Illustrations",
+          "description": "Teams create cohesive illustration libraries for websites, apps and docs with minimal manual drawing."
+        },
+        {
+          "title": "Icon & UI Asset Design",
+          "description": "Designers generate icon sets that match specific styles and then tweak them in vector editors."
+        },
+        {
+          "title": "Brand & Campaign Visuals",
+          "description": "Agencies and brands quickly prototype visual directions and refine the best ones by hand."
+        }
+      ],
+      "pricing": "Free access with generous generation limits; paid tiers may add advanced features and usage rights.",
+      "information": [
+        { "label": "Developer", "value": "Recraft" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI vector art and illustration generator" },
+        { "label": "Privacy", "value": "Cloud-based; generated and uploaded assets handled under standard SaaS terms" },
+        { "label": "API", "value": "Focus on web app; API/integration options are emerging via the platform" }
+      ],
       "image": "Images/models/recraft.webp",
       "link": "https://www.recraft.ai/"
     },
@@ -3552,8 +4203,39 @@
       "id": 106,
       "name": "Openart",
       "category": ["design"],
-      "type": "N/A",
-      "description": "OpenArt lets users generate, explore, and fine-tune AI images. Optimised for creators experimenting with different styles and models.",
+      "type": "AI Image Generation & Model Platform",
+      "description": "OpenArt is a creative hub for generating and exploring AI images. Users can type in simple prompts and see them turned into artwork in many different styles, from realistic scenes to abstract designs. This makes it a friendly place for creators who want to experiment with visual ideas without needing drawing skills.\n\nThe platform also lets users browse images made by others and learn which prompts or settings were used. This is helpful for understanding how small changes in wording can lead to very different results. Over time, users can build their own collections and refine the look they want.\n\nOpenArt is ideal for designers, content creators and hobbyists who want to play with AI art in a flexible way. It supports quick experiments, moodboards and early concept work, turning imagination into visuals that can inspire future projects.",
+      "subtitle": "Generate, explore and train AI image models in one creative hub.",
+      "tags": ["text-to-image", "image generator", "fine-tuning", "models", "creative"],
+      "features": [
+        "Text-to-image generation with dozens of styles and model options",
+        "Community gallery for inspiration and prompt ideas",
+        "Custom model training for personalised characters and visual styles",
+        "Image editing tools including variations, upscaling and refinements",
+        "Cloud-based workflows that scale to large generation volumes"
+      ],
+      "use_cases": [
+        {
+          "title": "Concept Art & Moodboards",
+          "description": "Artists and creative teams quickly explore visual directions for projects without manual sketching."
+        },
+        {
+          "title": "Marketing & Social Content",
+          "description": "Marketers generate campaign visuals and social posts tailored to different audiences and channels."
+        },
+        {
+          "title": "Custom Character & Brand Styles",
+          "description": "Creators train models on brand assets or characters to keep imagery consistent across projects."
+        }
+      ],
+      "pricing": "Free tier with paid subscriptions for higher usage and custom model training limits.",
+      "information": [
+        { "label": "Developer", "value": "OpenArt" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI art generation and model hosting platform" },
+        { "label": "Privacy", "value": "Handles prompts, generated images and training data via cloud infrastructure" },
+        { "label": "API", "value": "APIs and integrations available for programmatic image generation in apps" }
+      ],
       "image": "Images/models/openart.webp",
       "link": "https://openart.ai"
     },
@@ -3561,8 +4243,39 @@
       "id": 107,
       "name": "Bricks",
       "category": ["design", "development"],
-      "type": "N/A",
-      "description": "Bricks generates websites using simple prompts and visual tools. Users can design pages, layouts and components without needing to code.",
+      "type": "AI Website & Page Builder",
+      "description": "Bricks helps people build websites using a mix of simple prompts and visual tools. Instead of writing code, users drag sections into place, adjust layouts and customise content directly on the page. This makes it easy for non-developers to create professional looking sites.\n\nThe platform supports common page types like home pages, landing pages and portfolios. Users can change colours, fonts and components to match their brand or personal style. Because the interface is visual, changes are easy to understand and quick to preview.\n\nBricks is a good choice for small businesses, freelancers and teams who want a modern website without hiring a full development team. It speeds up the process from idea to live site and keeps control in the hands of the creator.",
+      "subtitle": "Design and generate websites with prompts and visual editing instead of code.",
+      "tags": ["website builder", "no-code", "landing pages", "components", "AI design"],
+      "features": [
+        "Prompt-based generation of page sections, layouts and components",
+        "Drag-and-drop editor to customise structure, content and styling",
+        "Component-based system for reusable design patterns",
+        "Responsive designs optimised for desktop and mobile",
+        "Export and integration paths for developers to extend or host sites"
+      ],
+      "use_cases": [
+        {
+          "title": "Marketing & Launch Pages",
+          "description": "Growth and marketing teams spin up campaign pages fast without waiting on engineering."
+        },
+        {
+          "title": "Portfolio & Brand Sites",
+          "description": "Creators and agencies design visually polished sites with minimal technical overhead."
+        },
+        {
+          "title": "Product & Feature Microsites",
+          "description": "Product teams test ideas and messaging with quickly built microsites and landing pages."
+        }
+      ],
+      "pricing": "SaaS pricing with tiers for individuals, agencies and teams based on projects and features.",
+      "information": [
+        { "label": "Developer", "value": "Bricks" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI-assisted website and page builder" },
+        { "label": "Privacy", "value": "Stores project content and designs in the cloud under standard SaaS terms" },
+        { "label": "API", "value": "Integrations and export options for developers; API availability varies" }
+      ],
       "image": "Images/models/bricks.webp",
       "link": "https://www.thebricks.com"
     },
@@ -3570,8 +4283,39 @@
       "id": 108,
       "name": "Gigasheet",
       "category": ["data", "office"],
-      "type": "N/A",
-      "description": "Gigasheet lets users analyse huge datasets without the need of spreadsheets or coding. Upload a file and explore it instantly with AI-powered insights.",
+      "type": "Big Data Spreadsheet Platform",
+      "description": "Gigasheet lets users explore very large datasets in a familiar spreadsheet-style interface without needing to set up databases or write code. You can upload files with millions of rows and start filtering, sorting and grouping right away. This makes big data feel more manageable for everyday users.\n\nThe platform includes tools for finding patterns, spotting outliers and summarising information. It can reveal trends that might be hidden in raw files and helps users answer questions quickly. AI features assist with insights so you do not need to be a data expert to get value.\n\nGigasheet is useful for analysts, marketers and operations teams that regularly work with large CSVs, logs or exports. It turns heavy data into something easier to explore and share, all from the browser.",
+      "subtitle": "Work with billion-row datasets in a spreadsheet-style interface, no code required.",
+      "tags": ["big data", "spreadsheet", "analytics", "no-code", "csv"],
+      "features": [
+        "Browser-based spreadsheet UI that scales to billions of rows",
+        "Support for large CSV, TSV, JSON and Excel files up to hundreds of GB",
+        "Filtering, grouping, pivoting and joining across massive datasets",
+        "AI-powered data cleanup, classification and summarisation",
+        "Integrations with cloud storage and export to common formats"
+      ],
+      "use_cases": [
+        {
+          "title": "Ad-hoc Big Data Analysis",
+          "description": "Analysts quickly explore large log files, pricing data or customer datasets without provisioning databases."
+        },
+        {
+          "title": "Healthcare & Transparency Data",
+          "description": "Teams load public or internal price transparency data to benchmark and analyse at scale."
+        },
+        {
+          "title": "Data Sharing & Collaboration",
+          "description": "Organisations share big datasets with stakeholders in an easy-to-use spreadsheet view instead of raw files."
+        }
+      ],
+      "pricing": "Free tier with limits on storage/rows; paid plans for higher limits, collaboration and enterprise features.",
+      "information": [
+        { "label": "Developer", "value": "Gigasheet, Inc." },
+        { "label": "Founded", "value": "Late 2010s" },
+        { "label": "Type", "value": "Cloud big data spreadsheet and analytics platform" },
+        { "label": "Privacy", "value": "Enterprise-grade security for uploaded datasets and workspace access" },
+        { "label": "API", "value": "APIs and connectors for programmatic data loading and export" }
+      ],
       "image": "Images/models/gigasheet.webp",
       "link": "https://www.gigasheet.com/"
     },
@@ -3579,8 +4323,39 @@
       "id": 109,
       "name": "Rows AI",
       "category": ["data", "office"],
-      "type": "N/A",
-      "description": "Rows AI integrates AI formulas into spreadsheets. Helping users automate reports, research and data tasks directly inside a spreadsheet interface.",
+      "type": "AI-Enhanced Spreadsheet & Analyst",
+      "description": "Rows AI brings smart features into a spreadsheet environment that feels familiar but more powerful. Users can add AI-enhanced formulas to research information, summarise text or clean data without leaving the sheet. This keeps workflows simple and centralised.\n\nThe platform also supports sharing, dashboards and automated reports. Teams can pull in live data from external services, then use AI to organise and present it. This reduces the need for separate tools and manual copy and paste work.\n\nRows AI is ideal for business users who rely on spreadsheets for planning and analysis. It combines flexible tables with built-in intelligence, helping teams move from raw information to clear results more quickly.",
+      "subtitle": "A spreadsheet where AI helps you analyse, transform and connect your data.",
+      "tags": ["spreadsheet", "ai formulas", "data analysis", "automation", "dashboards"],
+      "features": [
+        "AI Analyst to generate tables, models and formulas from plain-language instructions",
+        "Built-in AI functions for summarising, classifying and transforming data",
+        "Live data integrations with CRMs, marketing tools, databases and APIs",
+        "Shareable dashboards and embeds for reports and internal tools",
+        "Modern UX with collaboration, comments and version history"
+      ],
+      "use_cases": [
+        {
+          "title": "Sales & Marketing Reporting",
+          "description": "Teams centralise metrics from multiple tools and let AI help build reports and dashboards."
+        },
+        {
+          "title": "Research & Enrichment",
+          "description": "Analysts use AI formulas to enrich leads, classify text and pull insights from external sources."
+        },
+        {
+          "title": "Quick Models & Calculators",
+          "description": "Operators spin up scenario models and calculators without heavy BI tooling."
+        }
+      ],
+      "pricing": "Free tier with paid plans per user for expanded AI usage and data integrations.",
+      "information": [
+        { "label": "Developer", "value": "Rows, Inc." },
+        { "label": "Founded", "value": "Late 2010s" },
+        { "label": "Type", "value": "AI-powered spreadsheet and data analysis platform" },
+        { "label": "Privacy", "value": "Secure handling of connected account data and spreadsheet contents" },
+        { "label": "API", "value": "Supports API-based data connections and automation" }
+      ],
       "image": "Images/models/rows.webp",
       "link": "https://rows.com/ai"
     },
@@ -3588,8 +4363,39 @@
       "id": 110,
       "name": "SheetAI",
       "category": ["data", "office"],
-      "type": "N/A",
-      "description": "SheetAI adds AI functions to Google Sheets so users can summarise text, generate content and automate tasks using simple formulas.",
+      "type": "AI Add-on for Google Sheets",
+      "description": "SheetAI adds AI functions directly to Google Sheets so users can do more with their data using simple formulas. You can ask it to summarise a paragraph, create new text from a short prompt or help with classification and tagging. All of this happens inside the sheet you already know.\n\nThe functions behave like normal spreadsheet formulas, which makes them easy to integrate into existing workflows. Users can apply AI to entire columns, build simple automations and combine results with standard spreadsheet logic. This bridges the gap between everyday tasks and advanced tools.\n\nSheetAI is a great fit for marketers, analysts and administrators who live in Google Sheets. It helps them save time on manual writing, cleaning and organising while keeping everything inside one familiar interface.",
+      "subtitle": "Use AI directly in Google Sheets formulas to write, summarise and transform data.",
+      "tags": ["google sheets", "ai formulas", "text processing", "automation", "add-on"],
+      "features": [
+        "Custom AI functions callable from cells (e.g. summarise, rewrite, classify)",
+        "Prompt-based content generation for subject lines, descriptions and more",
+        "Data extraction from long text into structured formats",
+        "Support for translations and tone adjustments",
+        "Works inside existing Sheets workflows with no extra tools required"
+      ],
+      "use_cases": [
+        {
+          "title": "Content & SEO Workflows",
+          "description": "Marketing teams generate and refine titles, descriptions and snippets at scale inside spreadsheets."
+        },
+        {
+          "title": "Support & Feedback Analysis",
+          "description": "Ops teams classify support tickets or survey responses into categories using formulas."
+        },
+        {
+          "title": "Data Cleanup & Standardisation",
+          "description": "Analysts use AI functions to normalise, summarise or tag messy text fields."
+        }
+      ],
+      "pricing": "Subscription-based, often per Google account, with usage limits tied to AI calls.",
+      "information": [
+        { "label": "Developer", "value": "SheetAI" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI function add-on for Google Sheets" },
+        { "label": "Privacy", "value": "Accesses spreadsheet contents through Google’s add-on permissions and API" },
+        { "label": "API", "value": "Primarily used via Sheets formulas; backend APIs may be available for advanced users" }
+      ],
       "image": "Images/models/sheetai.webp",
       "link": "https://www.sheetai.app/"
     },
@@ -3597,8 +4403,39 @@
       "id": 111,
       "name": "Avoma",
       "category": ["office", "assistants", "documents"],
-      "type": "N/A",
-      "description": "Avoma records meetings and turns them into summaries, action items and searchable notes. Helping teams stay aligned without manual note-taking.",
+      "type": "AI Meeting Assistant & Revenue Intelligence Platform",
+      "description": "Avoma is a meeting assistant that records conversations and turns them into summaries, notes and action items. It captures what was discussed so participants can stay focused instead of worrying about typing everything out. After the meeting, teams get a clear record they can review and share.\n\nThe platform organises information by topics and speakers, making it easy to jump back to specific moments. It can highlight key decisions, follow-up tasks and questions that still need answers. This reduces confusion and helps keep projects moving in the right direction.\n\nAvoma is popular with sales teams, customer success groups and internal project teams. It helps everyone stay aligned, reduces the risk of misunderstandings and saves time on manual documentation.",
+      "subtitle": "From automatic meeting notes to call insights that drive revenue and alignment.",
+      "tags": ["meeting assistant", "transcription", "summaries", "revenue intelligence", "notes"],
+      "features": [
+        "Automatic recording, transcription and AI-powered summaries of meetings",
+        "Shared notes, highlights and action items synced with CRMs and tools",
+        "Analytics across conversations for topics, competitors and deal health",
+        "Support for multiple conferencing platforms and calendars",
+        "Workspaces and permissions for teams, managers and coaches"
+      ],
+      "use_cases": [
+        {
+          "title": "Sales & Customer Success Calls",
+          "description": "Teams capture key moments, follow-ups and risks from every call without manual note-taking."
+        },
+        {
+          "title": "Internal Syncs & Standups",
+          "description": "Product and operations meetings produce clear notes and decisions that everyone can revisit."
+        },
+        {
+          "title": "Coaching & Enablement",
+          "description": "Leaders review call snippets and patterns to coach reps and improve talk tracks."
+        }
+      ],
+      "pricing": "Per-seat subscription with tiers for individuals, teams and enterprises based on features and usage.",
+      "information": [
+        { "label": "Developer", "value": "Avoma Inc." },
+        { "label": "Founded", "value": "Late 2010s" },
+        { "label": "Type", "value": "AI meeting assistant and conversation intelligence platform" },
+        { "label": "Privacy", "value": "Built for sensitive call data with enterprise security and compliance options" },
+        { "label": "API", "value": "Integrates with CRMs and tools; APIs available for custom workflows" }
+      ],
       "image": "Images/models/avoma.webp",
       "link": "https://www.avoma.com/"
     },
@@ -3606,8 +4443,39 @@
       "id": 112,
       "name": "Equal Time",
       "category": ["office", "data"],
-      "type": "N/A",
-      "description": "Equal Time tracks who is speaking in meetings and uses AI to show participation patterns. Helping improve team communication and inclusivity.",
+      "type": "Meeting Participation Analytics & AI Notetaker",
+      "description": "Equal Time tracks how speaking time is shared during meetings and presents simple visuals that show who is contributing and who is quiet. It runs in the background and uses AI to measure participation without recording the actual content of what is said. This shines a light on patterns that might otherwise go unnoticed.\n\nTeams can use these insights to improve balance and inclusivity in discussions. Leaders can see if certain voices dominate or if some team members rarely get a chance to speak. Over time, this awareness can lead to more thoughtful facilitation and better collaboration.\n\nEqual Time is useful for managers, facilitators and organisations that care about equitable participation. It turns an invisible dynamic into clear, gentle data that supports healthier team communication.",
+      "subtitle": "See who’s talking, how often—and make your meetings more inclusive with AI insights.",
+      "tags": ["meetings", "inclusion", "analytics", "transcription", "ai notes"],
+      "features": [
+        "Speaking time tracking and participation metrics for each participant",
+        "Inclusion scores and DEI-focused meeting analytics",
+        "Real-time or post-meeting AI notes and action items",
+        "Transcripts and searchable records of discussions",
+        "Integrations with Zoom, Google Meet and other conferencing tools"
+      ],
+      "use_cases": [
+        {
+          "title": "Leadership & Executive Meetings",
+          "description": "Executives use Equal Time to ensure discussions aren’t dominated by a few voices and to model inclusive behaviour."
+        },
+        {
+          "title": "Team & Project Meetings",
+          "description": "Managers get objective data on how engaged different team members are over time."
+        },
+        {
+          "title": "Training & Facilitation",
+          "description": "Facilitators and coaches use participation analytics to improve meeting design and dynamics."
+        }
+      ],
+      "pricing": "Subscription pricing per user or per workspace, with tiers for teams and enterprises.",
+      "information": [
+        { "label": "Developer", "value": "Equal Time AI" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI-driven meeting participation and note-taking tool" },
+        { "label": "Privacy", "value": "Handles meeting audio, transcripts and analytics with strict privacy controls" },
+        { "label": "API", "value": "Integrations with conferencing platforms; APIs evolving for reporting and data export" }
+      ],
       "image": "Images/models/equaltime.webp",
       "link": "https://equaltime.io/"
     },
@@ -3615,8 +4483,39 @@
       "id": 113,
       "name": "Fathom",
       "category": ["office", "assistants", "documents"],
-      "type": "N/A",
-      "description": "Fathom transcribes calls and automatically highlights important moments. Giving users instant summaries for customer, team or sales conversations.",
+      "type": "AI Call Recorder & Summary Tool",
+      "description": "Fathom is a call assistant that records and transcribes meetings, then highlights key moments automatically. Instead of rewatching entire calls, users can review important sections such as questions, decisions or objections. This keeps follow-ups simple and focused.\n\nThe tool integrates with popular video meeting platforms and can tag sections by topic. After each call, Fathom generates a summary that can be shared with teammates or added to a CRM or project tool. This ensures important details are captured and easy to find later.\n\nFathom is especially helpful for salespeople, account managers and customer facing teams. It reduces manual note-taking, improves recall of conversations and helps teams act quickly on what was discussed.",
+      "subtitle": "Automatically record, transcribe and summarise your calls with shareable highlights.",
+      "tags": ["call recording", "transcription", "summaries", "zoom", "customer calls"],
+      "features": [
+        "Automatic recording and transcription of supported video calls",
+        "One-click highlighting during calls to mark key moments",
+        "AI-generated summaries with timestamps and action items",
+        "Integrations with CRM and productivity tools for follow-ups",
+        "Searchable history of past calls and notes"
+      ],
+      "use_cases": [
+        {
+          "title": "Sales & Demo Calls",
+          "description": "Reps share concise summaries and snippets with stakeholders and update CRMs automatically."
+        },
+        {
+          "title": "User Research & Interviews",
+          "description": "Researchers capture rich qualitative data and easily revisit important quotes and themes."
+        },
+        {
+          "title": "Internal Meetings & 1:1s",
+          "description": "Teams keep track of decisions, feedback and commitments from recurring meetings."
+        }
+      ],
+      "pricing": "Free and paid tiers depending on recording volume, features and team usage.",
+      "information": [
+        { "label": "Developer", "value": "Fathom" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI meeting recorder, transcription and summarisation tool" },
+        { "label": "Privacy", "value": "Designed with consent workflows and secure handling of recorded calls" },
+        { "label": "API", "value": "Integrations with CRMs and tools; APIs may be available for enterprise" }
+      ],
       "image": "Images/models/fathom.webp",
       "link": "https://www.fathom.ai/"
     },
@@ -3624,8 +4523,39 @@
       "id": 114,
       "name": "Fellow",
       "category": ["office", "documents"],
-      "type": "N/A",
-      "description": "Fellow helps teams run organised meetings with shared agendas, notes, feedback tools, and AI-generated summaries of discussions.",
+      "type": "Meeting Management & AI Note Platform",
+      "description": "Fellow is a meeting management platform that helps teams plan, run and follow up on meetings more effectively. It provides shared agendas, note spaces and feedback tools so everyone comes prepared and stays engaged. This makes meetings feel more purposeful and less chaotic.\n\nAI features can summarise discussions and highlight action items so key points are not lost. Teams can revisit past notes, track decisions and build a record of progress over time. This is helpful for recurring check-ins and long-running projects.\n\nFellow is well suited for managers, team leads and organisations that want to improve meeting culture. It encourages better preparation, clear outcomes and continuous improvement in how people collaborate.",
+      "subtitle": "Structured agendas, collaborative notes and AI summaries for better meetings.",
+      "tags": ["meetings", "agendas", "notes", "feedback", "summaries"],
+      "features": [
+        "Shared meeting agendas linked to calendar events",
+        "Collaborative note-taking with action items and assignments",
+        "AI-generated summaries and follow-up suggestions",
+        "Feedback tools for 1:1s, performance and meeting quality",
+        "Templates for common meeting types and rituals"
+      ],
+      "use_cases": [
+        {
+          "title": "Manager 1:1s",
+          "description": "Managers and reports share agendas, document progress and track feedback over time."
+        },
+        {
+          "title": "Team Standups & Weekly Syncs",
+          "description": "Teams use recurring templates and AI summaries to keep meetings consistent and efficient."
+        },
+        {
+          "title": "Project Kickoffs & Retros",
+          "description": "Cross-functional groups capture decisions, learnings and next steps in one central place."
+        }
+      ],
+      "pricing": "Free tier for small teams with paid plans for advanced features and larger organisations.",
+      "information": [
+        { "label": "Developer", "value": "Fellow.app" },
+        { "label": "Founded", "value": "Late 2010s" },
+        { "label": "Type", "value": "Meeting management and AI note-taking platform" },
+        { "label": "Privacy", "value": "Stores agendas, notes and meeting data securely in the cloud" },
+        { "label": "API", "value": "Integrations with calendars, task tools and collaboration platforms" }
+      ],
       "image": "Images/models/fellow.webp",
       "link": "https://fellow.ai/"
     },
@@ -3633,8 +4563,39 @@
       "id": 115,
       "name": "Fireflies",
       "category": ["office", "assistants", "documents"],
-      "type": "N/A",
-      "description": "Fireflies records meetings, transcribes them and extracts tasks and insights. Helping teams review conversations without rewatching calls.",
+      "type": "AI Meeting Recorder & Conversation Intelligence",
+      "description": "Fireflies is an AI assistant that joins your calls, records them and produces transcripts, summaries and task lists. Users can search through past conversations by keyword instead of trying to remember which call something was said on. This makes it easier to keep track of details across many meetings.\n\nThe platform pulls out highlights, such as questions asked or next steps agreed. Teams can share key moments, tag colleagues and connect notes to other tools they use. This reduces repetition and ensures everyone can revisit information when needed.\n\nFireflies is popular with teams that rely heavily on remote calls, including sales, recruiting and internal operations. It helps them stay organised, save time and avoid missing important follow-ups.",
+      "subtitle": "Record, transcribe and analyse meetings with AI-powered insights and workflows.",
+      "tags": ["meeting recorder", "transcription", "conversation intelligence", "crm", "summaries"],
+      "features": [
+        "Bot-based recording for Zoom, Meet, Teams and other platforms",
+        "Automatic transcription with speaker identification",
+        "Detection of tasks, topics and sentiment from conversations",
+        "Searchable call library with snippets and commenting",
+        "Integrations with CRMs and collaboration tools for automatic logging"
+      ],
+      "use_cases": [
+        {
+          "title": "Sales & Customer Success",
+          "description": "Revenue teams capture every customer conversation and sync insights to their CRM for follow-up."
+        },
+        {
+          "title": "Recruiting & Hiring",
+          "description": "Recruiters review interview highlights and share key clips with hiring managers."
+        },
+        {
+          "title": "Internal Knowledge Sharing",
+          "description": "Teams turn recurring calls into a searchable archive of decisions and learnings."
+        }
+      ],
+      "pricing": "Freemium with paid plans for higher transcription limits, advanced analytics and team features.",
+      "information": [
+        { "label": "Developer", "value": "Fireflies.ai" },
+        { "label": "Founded", "value": "Late 2010s" },
+        { "label": "Type", "value": "AI meeting assistant and conversation intelligence platform" },
+        { "label": "Privacy", "value": "Enterprise-ready security for call recordings and transcripts" },
+        { "label": "API", "value": "APIs and integrations for embedding Fireflies data into other systems" }
+      ],
       "image": "Images/models/fireflies.webp",
       "link": "https://fireflies.ai/"
     },
@@ -3642,8 +4603,39 @@
       "id": 116,
       "name": "Krisp",
       "category": ["office", "audio"],
-      "type": "N/A",
-      "description": "Krisp removes background noise and echoes from calls. It helps users sound clear and professional during meetings or recordings.",
+      "type": "AI Noise Cancellation & Voice Clarity Tool",
+      "description": "Krisp is an audio tool that removes background noise and echo from calls so voices sound clearer. It works in real time, blocking sounds like keyboard typing, traffic or household noise. This helps users sound more professional even when they are not in a quiet environment.\n\nThe app runs alongside common meeting and calling tools and can be turned on with a simple switch. It improves the listening experience for everyone on the call, especially in busy or shared spaces. This is valuable for both sides of the conversation.\n\nKrisp is useful for remote workers, call centre agents and anyone who speaks often online. It reduces distractions, improves call quality and makes meetings feel smoother and more focused.",
+      "subtitle": "One-click AI noise cancellation so you sound clear on every call.",
+      "tags": ["noise cancellation", "audio", "calls", "remote work", "clarity"],
+      "features": [
+        "Real-time noise removal for microphones, speakers and recordings",
+        "Echo cancellation and background voice suppression",
+        "Works with popular conferencing and calling apps",
+        "On-device processing options for privacy-sensitive use",
+        "Add-on features like call transcription and talk-time analytics in some plans"
+      ],
+      "use_cases": [
+        {
+          "title": "Remote & Hybrid Work",
+          "description": "Professionals keep calls clear even in noisy home or shared environments."
+        },
+        {
+          "title": "Customer Support & Call Centres",
+          "description": "Support teams deliver higher-quality audio without changing existing telephony setups."
+        },
+        {
+          "title": "Content Creation & Podcasting",
+          "description": "Creators clean up audio recordings quickly before publishing."
+        }
+      ],
+      "pricing": "Free tier with limited minutes; paid individual and team plans for extended usage and analytics.",
+      "information": [
+        { "label": "Developer", "value": "Krisp Technologies" },
+        { "label": "Founded", "value": "2017" },
+        { "label": "Type", "value": "AI-based noise cancellation and audio enhancement tool" },
+        { "label": "Privacy", "value": "Supports on-device processing so audio never leaves your machine in certain modes" },
+        { "label": "API", "value": "SDK and integrations available for partners embedding Krisp technology" }
+      ],
       "image": "Images/models/krisp.webp",
       "link": "https://krisp.ai/"
     },
@@ -3651,8 +4643,39 @@
       "id": 117,
       "name": "Otter",
       "category": ["office", "documents", "assistants", "learning"],
-      "type": "N/A",
-      "description": "Otter transcribes meetings and classrooms in real time. Producing clean notes, speaker highlights and summaries automatically.",
+      "type": "Real-Time Transcription & Meeting Notes Assistant",
+      "description": "Otter is an AI transcription tool that captures spoken content from meetings, lectures and conversations in real time. It turns speech into text and organises it with speaker labels, timestamps and searchable keywords. This lets users review and share information easily after the session.\n\nThe platform can also generate summaries and highlight key points from long recordings. Students use it to capture classroom lectures while professionals use it to keep records of meetings and interviews. The notes stay stored in one place instead of being scattered across different apps.\n\nOtter is ideal for learners, teams and individuals who want accurate notes without manual typing. It helps people stay present in the moment and still walk away with clear, structured records.",
+      "subtitle": "Live transcription, searchable notes and summaries for meetings and classes.",
+      "tags": ["transcription", "live captions", "meetings", "lectures", "summaries"],
+      "features": [
+        "Real-time transcription for meetings and in-person conversations",
+        "Speaker identification and highlighted key phrases",
+        "AI-generated summaries, keywords and action items",
+        "Collaboration features for sharing notes and assigning tasks",
+        "Integrations with Zoom, Google Meet and other conferencing tools"
+      ],
+      "use_cases": [
+        {
+          "title": "Classes & Lectures",
+          "description": "Students follow live transcripts, then review summaries and search notes when revising."
+        },
+        {
+          "title": "Business Meetings",
+          "description": "Teams capture discussions and decisions automatically and share them with absent stakeholders."
+        },
+        {
+          "title": "Interviews & Research",
+          "description": "Journalists and researchers transcribe interviews and quickly find key quotes and themes."
+        }
+      ],
+      "pricing": "Free tier with limits on transcription; paid Pro and Business plans for higher usage and team features.",
+      "information": [
+        { "label": "Developer", "value": "Otter.ai" },
+        { "label": "Founded", "value": "2016" },
+        { "label": "Type", "value": "AI transcription and meeting notes platform" },
+        { "label": "Privacy", "value": "Supports secure storage and sharing of voice data and transcripts" },
+        { "label": "API", "value": "APIs and integrations available for enterprise and platform partners" }
+      ],
       "image": "Images/models/otter.webp",
       "link": "https://otter.ai/"
     },
@@ -3660,8 +4683,39 @@
       "id": 118,
       "name": "Integrately",
       "category": ["office", "assistants", "development"],
-      "type": "N/A",
-      "description": "Integrately lets users connect apps and automate workflows in one click. It includes thousands of ready-made automation templates for you to explore.",
+      "type": "One-Click Automation Platform",
+      "description": "Integrately is an automation platform that lets users connect apps and set up workflows with just a few clicks. It provides thousands of ready-made automation templates so people can get started quickly without designing everything from scratch. This makes automation accessible even to those with no technical background.\n\nUsers can link tools for CRM, email, forms, spreadsheets and more. When an event happens in one app, Integrately can trigger actions in another, such as creating records, sending notifications or updating dashboards. This reduces manual copy and paste work across systems.\n\nIntegrately is helpful for small businesses, marketers and teams that want to save time on repetitive tasks. It brings together the software they already use and helps everything work together more smoothly.",
+      "subtitle": "Discover and launch app automations in one click, then customise as you grow.",
+      "tags": ["automation", "integrations", "no-code", "workflows", "small business"],
+      "features": [
+        "Library of thousands of one-click automations between popular apps",
+        "Visual editor to customise triggers, actions and conditions",
+        "Support for multi-step workflows and branching logic",
+        "Activity logs and error handling for monitoring automations",
+        "Affordable pricing aimed at individuals and SMBs"
+      ],
+      "use_cases": [
+        {
+          "title": "Lead & Contact Sync",
+          "description": "Automatically send new leads from forms or ads into CRMs and email marketing tools."
+        },
+        {
+          "title": "Operations Workflows",
+          "description": "Teams connect support, billing and project tools to reduce manual data entry."
+        },
+        {
+          "title": "Notification & Alerting",
+          "description": "Businesses trigger Slack, email or SMS alerts based on key events in their SaaS tools."
+        }
+      ],
+      "pricing": "Tiered subscriptions based on number of automations, tasks and features.",
+      "information": [
+        { "label": "Developer", "value": "Integrately" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "No-code automation and app integration platform" },
+        { "label": "Privacy", "value": "Manages OAuth connections and data flows with standard security practices" },
+        { "label": "API", "value": "Primarily app connectors; platform APIs for partners and advanced users" }
+      ],
       "image": "Images/models/integrately.webp",
       "link": "https://integrately.com/"
     },
@@ -3669,8 +4723,39 @@
       "id": 119,
       "name": "Squirro",
       "category": ["data", "finance"],
-      "type": "N/A",
-      "description": "Squirro uses AI to analyse enterprise data and surface insights for business teams. Helping guide decisions and identify opportunities.",
+      "type": "Enterprise Insight Engine",
+      "description": "Squirro is a platform that uses AI to analyse enterprise data and surface insights for business teams. It pulls information from different systems and presents it in a way that highlights patterns, risks and opportunities. This helps decision makers move beyond raw numbers.\n\nThe tool can support areas like customer intelligence, risk management and operational efficiency. It shows relevant insights within the tools people already use, which makes it easier to act on findings. Teams can see context around key events rather than isolated metrics.\n\nSquirro is well suited for financial institutions and data-heavy organisations that want a clearer view of their information. It turns scattered data into practical guidance for strategy and daily operations.",
+      "subtitle": "Turn scattered enterprise data into actionable insights for revenue, service and risk teams.",
+      "tags": ["insight engine", "enterprise search", "financial services", "nlp", "analytics"],
+      "features": [
+        "Semantic search across documents, emails, CRM records and more",
+        "AI-driven recommendations and alerts based on relevant signals",
+        "Vertical solutions for financial services, manufacturing and other sectors",
+        "Dashboards and widgets that embed insights into existing tools",
+        "Connectors and pipelines for enterprise data sources"
+      ],
+      "use_cases": [
+        {
+          "title": "Relationship & Account Intelligence",
+          "description": "Front-line teams get timely insights about accounts, news and opportunities directly inside their CRM."
+        },
+        {
+          "title": "Risk & Compliance Monitoring",
+          "description": "Risk teams monitor documents and communications for signals that warrant investigation."
+        },
+        {
+          "title": "Market & Research Insights",
+          "description": "Analysts surface patterns from large collections of reports, notes and external data."
+        }
+      ],
+      "pricing": "Enterprise contracts tailored to deployment scope, users and data sources.",
+      "information": [
+        { "label": "Developer", "value": "Squirro AG" },
+        { "label": "Founded", "value": "2012" },
+        { "label": "Type", "value": "Enterprise AI insight engine and search platform" },
+        { "label": "Privacy", "value": "Built for regulated industries with strong security and compliance" },
+        { "label": "API", "value": "APIs and connectors to integrate Squirro insights into other tools" }
+      ],
       "image": "Images/models/squirro.webp",
       "link": "https://squirro.com/"
     },
@@ -3678,8 +4763,39 @@
       "id": 120,
       "name": "HPE",
       "category": ["data", "development", "finance"],
-      "type": "N/A",
-      "description": "HPE offers enterprise-grade AI infrastructure and automation tools that help organisations train models, analyse data and run AI workloads at scale.",
+      "type": "Enterprise AI & Infrastructure Platform",
+      "description": "HPE provides hardware and software solutions that help organisations run AI and data workloads at scale. It offers servers, storage and cloud services that are tuned for machine learning and analytics. This gives enterprises the infrastructure they need to support demanding AI projects.\n\nAlongside infrastructure, HPE provides tools for managing, monitoring and optimising AI systems. Teams can deploy models, move data securely and integrate AI into their existing IT landscape. This helps large organisations work with advanced technology in a reliable way.\n\nHPE is a strong partner for companies with complex environments and strict requirements. It supports long-term AI strategies by combining performance, security and manageability.",
+      "subtitle": "Hardware, software and services to run enterprise AI and data workloads at scale.",
+      "tags": ["infrastructure", "hpc", "mlops", "hybrid cloud", "enterprise"],
+      "features": [
+        "High-performance compute and storage solutions for AI and analytics",
+        "Hybrid cloud platforms for running workloads across on-prem and cloud",
+        "Data fabric and management tools to unify and govern data at scale",
+        "MLOps and AI software stacks for training and serving models",
+        "Professional services and financial models for AI projects"
+      ],
+      "use_cases": [
+        {
+          "title": "AI & ML Training Clusters",
+          "description": "Enterprises deploy GPU-accelerated infrastructure to train large models and run experiments."
+        },
+        {
+          "title": "Hybrid Analytics Platforms",
+          "description": "Organisations run analytics and AI across on-prem, edge and cloud while managing costs and governance."
+        },
+        {
+          "title": "Industry-Specific Solutions",
+          "description": "Sectors like finance, telecom and healthcare use HPE solutions for domain-specific AI applications."
+        }
+      ],
+      "pricing": "Hardware, software and service-based contracts tailored to enterprise needs and scale.",
+      "information": [
+        { "label": "Developer", "value": "Hewlett Packard Enterprise (HPE)" },
+        { "label": "Founded", "value": "2015 (HPE spin-off from HP)" },
+        { "label": "Type", "value": "Enterprise IT, AI infrastructure and services provider" },
+        { "label": "Privacy", "value": "Supports stringent security, compliance and data residency requirements" },
+        { "label": "API", "value": "Extensive APIs and management interfaces across its software and platforms" }
+      ],
       "image": "Images/models/hpe.webp",
       "link": "https://www.hpe.com/"
     },
@@ -3687,8 +4803,39 @@
       "id": 121,
       "name": "Exalate",
       "category": ["office", "development"],
-      "type": "N/A",
-      "description": "Exalate helps teams sync data between platforms like Jira, ServiceNow, Salesforce and GitHub with automated, bi-directional updates.",
+      "type": "Cross-Platform Synchronisation & Integration Tool",
+      "description": "Exalate helps teams keep data in sync between platforms like Jira, ServiceNow, Salesforce and GitHub. It manages bi-directional updates so changes in one system are reflected in another automatically. This removes the need for manual copying or duplicate entry.\n\nThe platform is flexible enough to handle different workflows and mapping rules for each connection. Teams can control which fields sync, how often updates happen and how conflicts are handled. This ensures each system stays accurate while still fitting local needs.\n\nExalate is useful for organisations that rely on multiple tools across departments or partners. It keeps everyone aligned while allowing each group to continue using the software that works best for them.",
+      "subtitle": "Sync issues, tickets and records across tools with customisable, bi-directional integration.",
+      "tags": ["sync", "integration", "jira", "servicenow", "salesforce"],
+      "features": [
+        "Bi-directional synchronisation between multiple platforms",
+        "Flexible configuration and scripting for mapping fields and rules",
+        "Support for complex collaboration scenarios across companies",
+        "Conflict resolution and error handling mechanisms",
+        "Scalable architecture for large enterprise deployments"
+      ],
+      "use_cases": [
+        {
+          "title": "ITSM & Dev Collaboration",
+          "description": "Service desks in ServiceNow sync incidents with Jira or Azure DevOps for engineering resolution."
+        },
+        {
+          "title": "Cross-Company Projects",
+          "description": "Partners each work in their own systems while sharing key project data via Exalate."
+        },
+        {
+          "title": "CRM & Work Management Linking",
+          "description": "Salesforce opportunities and customer issues sync to engineering or support backlogs."
+        }
+      ],
+      "pricing": "Subscription tiers based on connectors, sync volume and deployment (cloud or on-prem).",
+      "information": [
+        { "label": "Developer", "value": "Exalate" },
+        { "label": "Founded", "value": "2010s" },
+        { "label": "Type", "value": "Cross-platform synchronisation and integration solution" },
+        { "label": "Privacy", "value": "Supports secure data exchange with on-prem and cloud deployment options" },
+        { "label": "API", "value": "Exposes APIs and scripting interfaces for advanced integration use cases" }
+      ],
       "image": "Images/models/exalate.webp",
       "link": "https://exalate.com/"
     },
@@ -3696,8 +4843,39 @@
       "id": 122,
       "name": "Suse",
       "category": ["development", "data"],
-      "type": "N/A",
-      "description": "Suse AI supports enterprise development and infrastructure through open-source tools. Helping teams deploy, manage and secure AI workloads.",
+      "type": "Enterprise Linux & AI Infrastructure Platform",
+      "description": "Suse AI supports enterprise teams that want to deploy and manage AI workloads on open-source infrastructure. It builds on Suse’s experience with Linux and cloud technologies to provide a stable base for modern applications. This helps organisations run AI systems with confidence and control.\n\nThe platform focuses on reliability, security and flexibility. Teams can choose where to run their workloads, integrate with existing tools and maintain compliance with internal policies. Suse AI provides guidance and tooling rather than locking users into a single approach.\n\nFor companies that value open-source technology and hybrid environments, Suse AI offers a path to adopt AI at scale. It helps bridge the gap between innovative models and the operational demands of enterprise IT.",
+      "subtitle": "Open-source foundation for running containers, data and AI workloads in production.",
+      "tags": ["linux", "kubernetes", "containers", "infrastructure", "enterprise"],
+      "features": [
+        "Enterprise Linux distributions with long-term support and certifications",
+        "Kubernetes and container orchestration via Rancher",
+        "Solutions for edge, on-prem and hybrid cloud deployments",
+        "Security, compliance and lifecycle management tooling",
+        "Support services for mission-critical infrastructure and workloads"
+      ],
+      "use_cases": [
+        {
+          "title": "Containerised AI & Microservices",
+          "description": "Teams deploy AI models and services on Kubernetes clusters managed with SUSE tools."
+        },
+        {
+          "title": "Hybrid & Multi-Cloud Infrastructure",
+          "description": "Organisations run consistent Linux and container stacks across clouds and data centres."
+        },
+        {
+          "title": "Edge & Telco Deployments",
+          "description": "Telecom and edge use cases rely on SUSE for distributed, resilient infrastructure."
+        }
+      ],
+      "pricing": "Subscription and support contracts based on nodes, cores and product bundles.",
+      "information": [
+        { "label": "Developer", "value": "SUSE" },
+        { "label": "Founded", "value": "1992" },
+        { "label": "Type", "value": "Enterprise Linux, Kubernetes and infrastructure solution provider" },
+        { "label": "Privacy", "value": "Supports secure, compliant deployments across regulated industries" },
+        { "label": "API", "value": "APIs across Kubernetes, management tools and platform components" }
+      ],
       "image": "Images/models/suse.webp",
       "link": "https://www.suse.com/"
     },
@@ -3705,8 +4883,39 @@
       "id": 123,
       "name": "Teachmate AI",
       "category": ["learning", "documents"],
-      "type": "N/A",
-      "description": "Teachmate AI helps teachers create lesson plans, worksheets and classroom materials quickly using simple prompts.",
+      "type": "AI Lesson Planning & Teaching Assistant",
+      "description": "Teachmate AI helps teachers create classroom materials more quickly using simple prompts. Educators can ask for lesson plans, worksheets or quiz questions and receive ready-made content that they can adjust to match their students. This reduces preparation time while still allowing for personal teaching style.\n\nThe tool can adapt materials to different age groups and difficulty levels. It can also suggest activities that support discussion, practice and assessment. Teachers remain in control, using Teachmate AI as a starting point rather than a replacement for their expertise.\n\nTeachmate AI is valuable for busy educators who juggle many classes and responsibilities. It helps them focus more on teaching and student support while spending less time staring at a blank planning template.",
+      "subtitle": "Generate ready-to-use lesson plans and classroom materials with a few prompts.",
+      "tags": ["education", "lesson plans", "worksheets", "quizzes", "teachers"],
+      "features": [
+        "Prompt-based generation of lesson plans aligned to topics and age groups",
+        "Creation of worksheets, quizzes and activities in minutes",
+        "Options to adjust difficulty, tone and length of materials",
+        "Editable outputs that teachers can adapt for their classrooms",
+        "Organisation tools to save, reuse and share resources"
+      ],
+      "use_cases": [
+        {
+          "title": "Daily Lesson Planning",
+          "description": "Teachers generate structured lessons with warm-ups, main activities and assessments."
+        },
+        {
+          "title": "Differentiated Instruction",
+          "description": "Educators create multiple versions of materials for varied reading levels and abilities."
+        },
+        {
+          "title": "Curriculum & Unit Design",
+          "description": "Teams develop unit plans and resource banks more efficiently with AI support."
+        }
+      ],
+      "pricing": "Freemium for individual educators with paid plans for advanced features and school licences.",
+      "information": [
+        { "label": "Developer", "value": "Teachmate AI" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI assistant for teachers and lesson creation" },
+        { "label": "Privacy", "value": "Handles classroom content with education-focused privacy considerations" },
+        { "label": "API", "value": "Primarily a web app; integrations for LMS platforms may be evolving" }
+      ],
       "image": "Images/models/teachmate.webp",
       "link": "https://teachmateai.com/"
     },
@@ -3714,8 +4923,39 @@
       "id": 124,
       "name": "AmpCode",
       "category": ["development", "design"],
-      "type": "N/A",
-      "description": "AmpCode turns text prompts into working websites and apps. Helping beginners and teams create software without needing deep coding experience.",
+      "type": "AI App & Website Builder",
+      "description": "AmpCode lets users turn text descriptions into working websites and applications. You describe what you want your app to do, and AmpCode generates the structure, layout and basic logic. This makes it much easier for non-developers to bring digital ideas to life.\n\nUsers can then refine and customise their projects through a guided interface. Teams can prototype features, gather feedback and update the app without needing to rebuild everything. This speeds up experimentation and reduces reliance on full-time engineering resources for early-stage ideas.\n\nAmpCode is ideal for founders, product managers and small teams who want to move from concept to demo quickly. It lowers the technical barrier and encourages more people to participate in software creation.",
+      "subtitle": "Describe your idea and let AI generate the app or site—then customise as needed.",
+      "tags": ["app builder", "no-code", "full-stack", "web apps", "prototyping"],
+      "features": [
+        "Prompt-based generation of websites and web apps",
+        "Prebuilt components and patterns for common product flows",
+        "Editable code or visual configuration options for customisation",
+        "Support for responsive layouts and modern front-end frameworks",
+        "Deployment paths to put prototypes and apps online quickly"
+      ],
+      "use_cases": [
+        {
+          "title": "Startup MVPs",
+          "description": "Founders go from idea to testable product in days instead of weeks."
+        },
+        {
+          "title": "Internal Tools & Dashboards",
+          "description": "Teams generate internal dashboards for operations, support or analytics with minimal engineering support."
+        },
+        {
+          "title": "Client Prototyping",
+          "description": "Agencies quickly prototype concepts to align with client requirements before full builds."
+        }
+      ],
+      "pricing": "SaaS pricing based on number of projects, deployments and advanced features.",
+      "information": [
+        { "label": "Developer", "value": "AmpCode" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI-powered app and website generation platform" },
+        { "label": "Privacy", "value": "Processes project prompts and code in the cloud under standard SaaS policies" },
+        { "label": "API", "value": "APIs and integrations may be available for advanced automation and deployment workflows" }
+      ],
       "image": "Images/models/ampcode.webp",
       "link": "https://ampcode.com/"
     },
@@ -3723,8 +4963,39 @@
       "id": 125,
       "name": "Monday",
       "category": ["office", "assistants", "documents"],
-      "type": "N/A",
-      "description": "Monday.com uses AI to automate tasks, summarise updates and organise teamwork across projects and workflows.",
+      "type": "Work OS with AI Workflows",
+      "description": "Monday.com is a work management platform that helps teams organise projects, tasks and communication in one place. AI features assist with summarising updates, generating task descriptions and highlighting what needs attention. This helps teams stay on top of their workload without reading every message in detail.\n\nThe platform supports boards, timelines and dashboards that give a clear view of progress. Teams can customise workflows for different departments such as marketing, product or operations. Automation rules take care of repetitive actions like assigning tasks or sending reminders.\n\nMonday.com is used by companies of all sizes to keep work visible and coordinated. It reduces clutter, supports collaboration and gives everyone a shared understanding of what is happening across projects.",
+      "subtitle": "Plan, track and automate work across teams, now with AI assistance built in.",
+      "tags": ["project management", "work os", "automation", "dashboards", "ai assistant"],
+      "features": [
+        "Customisable boards for tasks, projects, CRM and operations",
+        "Automation rules to move items, send notifications and update fields",
+        "AI tools for summarising updates, drafting messages and building formulas",
+        "Dashboards and reporting for team and executive views",
+        "Integrations with popular work tools like Slack, Gmail and Salesforce"
+      ],
+      "use_cases": [
+        {
+          "title": "Project & Program Management",
+          "description": "Teams centralise projects, owners and timelines in shared boards and dashboards."
+        },
+        {
+          "title": "Sales & Pipeline Tracking",
+          "description": "Revenue teams manage deals, handoffs and automations without custom CRM development."
+        },
+        {
+          "title": "Operations & Internal Workflows",
+          "description": "Ops teams automate recurring processes, approvals and status updates with AI help."
+        }
+      ],
+      "pricing": "Tiered pricing per seat with plans for individuals, SMBs and enterprises.",
+      "information": [
+        { "label": "Developer", "value": "monday.com" },
+        { "label": "Founded", "value": "2012" },
+        { "label": "Type", "value": "Work OS and project management platform with AI features" },
+        { "label": "Privacy", "value": "Enterprise-ready with security, compliance and role-based access control" },
+        { "label": "API", "value": "Robust GraphQL API and integrations for custom workflows" }
+      ],
       "image": "Images/models/monday.webp",
       "link": "https://monday.com/"
     },
@@ -3732,8 +5003,39 @@
       "id": 126,
       "name": "Wrike",
       "category": ["office", "assistants"],
-      "type": "N/A",
-      "description": "Wrike offers AI-powered project management features. Including task suggestions, summaries and automated organisation for teams.",
+      "type": "AI-Enabled Project & Work Management Platform",
+      "description": "Wrike is a project management platform that uses AI to help teams handle tasks, deadlines and priorities. It offers features like smart task suggestions, summaries and automated organisation to keep work flowing smoothly. This makes it easier to manage complex projects with many moving parts.\n\nTeams can create plans, assign responsibilities and track progress in real time. Wrike adapts to different workflows, from simple to-do lists to detailed campaign planning. AI powered insights can highlight risks or bottlenecks before they become bigger problems.\n\nWrike is well suited for marketing teams, agencies and operations groups that need clear coordination. It turns scattered tasks into structured plans and helps teams deliver projects more reliably.",
+      "subtitle": "Plan, execute and track work with AI-powered task insights and organisation.",
+      "tags": ["project management", "work management", "ai summaries", "collaboration", "enterprise"],
+      "features": [
+        "Task and project tracking with multiple views (list, board, Gantt, calendar)",
+        "AI capabilities for task prioritisation, risk prediction and summarisation",
+        "Workload and resource management for teams and departments",
+        "Request forms and automation rules to standardise intake and workflows",
+        "Integrations with tools like Slack, Salesforce, Google Workspace and more"
+      ],
+      "use_cases": [
+        {
+          "title": "Marketing & Creative Projects",
+          "description": "Creative teams coordinate campaigns, assets and approvals with clear deadlines and owners."
+        },
+        {
+          "title": "IT & Operations",
+          "description": "IT and ops teams manage projects, requests and support work in one shared platform."
+        },
+        {
+          "title": "Agency & Client Delivery",
+          "description": "Agencies track client work, dependencies and billable tasks with transparent timelines."
+        }
+      ],
+      "pricing": "Per-user subscription with plans for teams of different sizes and enterprise deployments.",
+      "information": [
+        { "label": "Developer", "value": "Wrike, Inc. (a Citrix/Cloud Software Group company)" },
+        { "label": "Founded", "value": "2006" },
+        { "label": "Type", "value": "Collaborative work and project management platform with AI features" },
+        { "label": "Privacy", "value": "Enterprise security, compliance and role-based access controls" },
+        { "label": "API", "value": "Comprehensive REST API and integrations for custom workflows and reporting" }
+      ],
       "image": "Images/models/wrike.webp",
       "link": "https://www.wrike.com/"
     },
@@ -3741,8 +5043,39 @@
       "id": 127,
       "name": "Jotform",
       "category": ["office", "documents"],
-      "type": "N/A",
-      "description": "Jotform uses AI to help users build forms, surveys, and reports quickly, making data collection simple for any skill level.",
+      "type": "AI Form Builder & Data Collection Platform",
+      "description": "Jotform helps individuals and teams create forms, surveys and data collection workflows without needing technical skills. Its AI tools assist with generating form questions, structuring layouts and recommending fields based on what the user wants to collect, which speeds up the entire creation process.\n\nUsers can build everything from contact forms and event registrations to feedback surveys and application forms. Once responses come in, Jotform automatically organises the data into tables, reports and visual summaries that are easy to share. This removes the need to manually sort through entries or build reports from scratch.\n\nJotform is especially helpful for educators, small businesses, nonprofits and teams that regularly gather information. It turns the entire process from form creation to data analysis into a smooth, beginner friendly experience that works right in the browser.",
+      "subtitle": "AI-powered form, survey and report builder for teams of any size.",
+      "tags": ["forms", "surveys", "ai form generator", "no-code", "data collection"],
+      "features": [
+        "AI Form Generator that builds forms from plain-language descriptions",
+        "Drag-and-drop editor with hundreds of templates and widgets",
+        "Conditional logic, approvals and workflow automation",
+        "Built-in reports, dashboards and PDF document generation",
+        "Integrations with CRMs, payment gateways, storage and productivity tools"
+      ],
+      "use_cases": [
+        {
+          "title": "Customer Feedback & Surveys",
+          "description": "Create branded surveys and feedback forms, then turn responses into reports in a few clicks."
+        },
+        {
+          "title": "Lead Capture & Registrations",
+          "description": "Build lead forms, event registrations or application forms with payments and automated follow-ups."
+        },
+        {
+          "title": "Internal Requests & Approvals",
+          "description": "Standardise HR, IT or operations requests with approval workflows and automatic notifications."
+        }
+      ],
+      "pricing": "Freemium — generous free tier with paid plans unlocking higher limits, advanced features and compliance options.",
+      "information": [
+        { "label": "Developer", "value": "Jotform Inc." },
+        { "label": "Founded", "value": "2006" },
+        { "label": "Type", "value": "AI-enhanced online form, survey and workflow platform" },
+        { "label": "Privacy", "value": "GDPR-ready with options for HIPAA and enterprise compliance" },
+        { "label": "API", "value": "Robust REST API and integrations for embedding forms and syncing data" }
+      ],
       "image": "Images/models/jotform.webp",
       "link": "https://www.jotform.com/"
     },
@@ -3750,8 +5083,39 @@
       "id": 128,
       "name": "JustDone",
       "category": ["documents", "assistants"],
-      "type": "N/A",
-      "description": "JustDone provides AI tools for writing, researching, and generating content, making it easy to produce articles, emails, and ideas quickly.",
+      "type": "All-in-One AI Writing & Checking Suite",
+      "description": "JustDone provides a suite of AI tools designed to help users write, research and generate ideas quickly. Whether someone needs an email draft, an article outline or a batch of content ideas, JustDone can produce helpful starting points that save time and reduce creative pressure.\n\nThe platform supports many content formats such as blog posts, summaries, product descriptions and messages for social media. It also includes tools for rewriting text, checking clarity and generating variations so users can refine their writing without starting over. This helps both beginners and experienced writers move past blank-page frustration.\n\nJustDone is a useful companion for students, marketers, freelancers and anyone who writes frequently. It accelerates brainstorming, simplifies research and supports smoother day-to-day writing across a wide range of tasks.",
+      "subtitle": "Write, check, humanise and optimise content with one AI toolkit.",
+      "tags": ["writing assistant", "paraphrasing", "plagiarism check", "ai detector", "editing"],
+      "features": [
+        "AI content generation for articles, emails, posts and more",
+        "Paraphrasing and rewriting tools to change style or structure",
+        "Plagiarism detection and AI-detection checks for originality",
+        "AI humaniser to make robotic text sound more natural",
+        "Grammar, style and sentiment tools to refine and optimise writing"
+      ],
+      "use_cases": [
+        {
+          "title": "Academic & Professional Writing",
+          "description": "Users draft essays, reports and papers, then check for grammar, plagiarism and AI detection risks."
+        },
+        {
+          "title": "Marketing & Blog Content",
+          "description": "Creators generate first drafts for blog posts, newsletters and social content, then refine with rewriting tools."
+        },
+        {
+          "title": "Compliance & Authenticity Checks",
+          "description": "Teams ensure content meets originality standards using AI and plagiarism detection before publishing."
+        }
+      ],
+      "pricing": "Freemium model with additional paid tiers unlocking more tools, checks and higher word limits.",
+      "information": [
+        { "label": "Developer", "value": "JustDone" },
+        { "label": "Founded", "value": "2020s" },
+        { "label", "value": "AI writing, editing and content-checking toolbox" , "label": "Type"},
+        { "label": "Privacy", "value": "Processes uploaded text securely with a focus on academic and professional use" },
+        { "label": "API", "value": "APIs and integrations may be available for high-volume and partner use cases" }
+      ],
       "image": "Images/models/justdone.webp",
       "link": "https://justdone.com/"
     },
@@ -3759,8 +5123,39 @@
       "id": 129,
       "name": "Jasper",
       "category": ["documents", "design", "jobs"],
-      "type": "N/A",
-      "description": "Jasper helps businesses create marketing and brand content such as social posts, ads and long-form writing. With strong tools for tone and style.",
+      "type": "AI Marketing & Brand Content Platform",
+      "description": "Jasper is a content creation platform built for businesses that need consistent, on-brand writing across marketing channels. Users can produce social posts, ad copy, blog articles and emails by describing what they want, and Jasper adjusts the tone and style to match brand guidelines.\n\nThe platform includes collaboration tools that help teams build campaigns, organise assets and maintain a unified voice across all content. Jasper can generate fresh ideas, expand rough drafts or refine existing copy, making it valuable at every stage of the creative process. It is especially helpful for fast-paced teams that publish regularly.\n\nJasper is widely used by marketing departments, agencies and growing businesses. It combines strong writing assistance with brand control features so teams can scale their content output without sacrificing quality or consistency.",
+      "subtitle": "AI content automation for marketing teams who care about brand voice.",
+      "tags": ["marketing", "brand voice", "copywriting", "content automation", "teams"],
+      "features": [
+        "Brand voice and style profiles to keep content on-message",
+        "Templates for ads, landing pages, emails, social posts and long-form content",
+        "AI assistants and agents to help with ideation, outlining and drafting",
+        "Collaboration tools for teams, including approvals and version history",
+        "Integrations with CMS, marketing and productivity stacks"
+      ],
+      "use_cases": [
+        {
+          "title": "Always-On Content Production",
+          "description": "Marketing teams generate a steady stream of blog posts, ads and social content while staying consistent with brand guidelines."
+        },
+        {
+          "title": "Campaign & Launch Assets",
+          "description": "Teams use Jasper to produce messaging variations, headlines and creative copy for multi-channel campaigns."
+        },
+        {
+          "title": "Sales & Enablement Materials",
+          "description": "Businesses quickly create one-pagers, scripts and collateral aligned with core brand messaging."
+        }
+      ],
+      "pricing": "Subscription plans for small teams to enterprises, with pricing based on seats, features and usage.",
+      "information": [
+        { "label": "Developer", "value": "Jasper AI" },
+        { "label": "Founded", "value": "2021" },
+        { "label": "Type", "value": "AI marketing and brand content automation platform" },
+        { "label": "Privacy", "value": "Enterprise-grade security with controls for training and data retention" },
+        { "label": "API", "value": "APIs and integrations for connecting Jasper to marketing workflows and tools" }
+      ],
       "image": "Images/models/jasper.webp",
       "link": "https://www.jasper.ai/"
     },
@@ -3768,8 +5163,39 @@
       "id": 130,
       "name": "MailChimp",
       "category": ["documents", "office"],
-      "type": "N/A",
-      "description": "MailChimp uses AI to create emails, subject lines and campaigns that improve engagement. It also helps users manage contacts and track performance.",
+      "type": "Email & Marketing Automation Platform with AI",
+      "description": "MailChimp is an email marketing platform that uses AI to help users design campaigns, write engaging content and manage their audience more effectively. Its tools can generate subject lines, suggest improvements to email copy and provide insights into what resonates with subscribers.\n\nUsers can design newsletters, automated sequences and promotional emails using templates that require no design experience. MailChimp also manages contact lists, segments audiences based on behaviour and tracks performance through clear analytics. This helps teams understand what works and adjust their strategy over time.\n\nMailChimp is ideal for small businesses, creators and marketing teams that want an approachable platform for email communication. It streamlines campaign creation from idea to send and helps users reach their audience in a more organised and effective way.",
+      "subtitle": "Plan, write and optimise email campaigns with AI suggestions and insights.",
+      "tags": ["email marketing", "subject lines", "content optimizer", "automation", "analytics"],
+      "features": [
+        "AI-powered subject line suggestions for better open rates",
+        "Content Optimizer to assess email copy, layout and structure",
+        "Send time and send day optimisation based on audience behaviour",
+        "Contact management, segmentation and marketing automation journeys",
+        "Landing pages, forms and reporting dashboards built in"
+      ],
+      "use_cases": [
+        {
+          "title": "Email Newsletters & Campaigns",
+          "description": "Businesses send regular newsletters and promo emails with AI-assisted copy and subject lines."
+        },
+        {
+          "title": "E-commerce Lifecycle Marketing",
+          "description": "Stores run automated welcome flows, cart recovery, product follow-ups and recommendations."
+        },
+        {
+          "title": "Audience Segmentation & Testing",
+          "description": "Marketers segment audiences, A/B test content and use AI insights to iterate on campaigns."
+        }
+      ],
+      "pricing": "Free tier for small lists; paid plans scale based on contacts, features and level of automation.",
+      "information": [
+        { "label": "Developer", "value": "Mailchimp (Intuit Mailchimp)" },
+        { "label": "Founded", "value": "2001" },
+        { "label": "Type", "value": "Email marketing, automation and AI content optimisation platform" },
+        { "label": "Privacy", "value": "Complies with major privacy standards and offers tools for consent and data management" },
+        { "label": "API", "value": "Comprehensive APIs and integrations for managing audiences, campaigns and data" }
+      ],
       "image": "Images/models/mailchimp.webp",
       "link": "https://mailchimp.com/"
     },
@@ -3777,8 +5203,39 @@
       "id": 131,
       "name": "SlidesGo",
       "category": ["design", "office"],
-      "type": "N/A",
-      "description": "SlidesGo offers a large collection of ready-made slide templates for school, work or creative projects. It makes presentation design fast and easy for beginners.",
+      "type": "Presentation Template Library",
+      "description": "SlidesGo provides a large library of ready-made slide templates that make presentation design quick and beginner friendly. Users can choose from themes for school, business, workshops, creative projects and more, then customise the layouts with their own content.\n\nThe templates include illustrations, icons, charts and colour palettes that help give presentations a polished look without needing design skills. This saves significant time for users who want professional results but do not want to build slides from scratch. SlidesGo also offers templates tailored to common formats like lessons, reports and proposals.\n\nTeachers, students, professionals and creators rely on SlidesGo when they need to deliver presentations that look clean and engaging. It removes design barriers and helps users focus on delivering their message.",
+      "subtitle": "Ready-made presentation templates for Google Slides, PowerPoint and Canva.",
+      "tags": ["presentation templates", "google slides", "powerpoint", "education", "business"],
+      "features": [
+        "Hundreds of free and premium templates for different industries and topics",
+        "Fully editable layouts, icons and infographics",
+        "Support for Google Slides, PowerPoint and Canva formats",
+        "Filters and search to quickly find themes by style or use case",
+        "Blog tips and tutorials for better presentation design"
+      ],
+      "use_cases": [
+        {
+          "title": "School & Classroom Presentations",
+          "description": "Teachers and students pick themed templates to present lessons, projects and portfolios."
+        },
+        {
+          "title": "Business & Pitch Decks",
+          "description": "Professionals use Slidesgo templates as a base for sales, strategy or stakeholder presentations."
+        },
+        {
+          "title": "Workshops & Webinars",
+          "description": "Facilitators start from pre-designed slides and adjust them to their sessions quickly."
+        }
+      ],
+      "pricing": "Free registration with limited downloads; premium subscription unlocks unlimited access and extra resources.",
+      "information": [
+        { "label": "Developer", "value": "Slidesgo" },
+        { "label": "Founded", "value": "2010s" },
+        { "label": "Type", "value": "Template library for Google Slides, PowerPoint and Canva" },
+        { "label": "Privacy", "value": "Standard web SaaS policies for user accounts and preferences" },
+        { "label": "API", "value": "No public API; templates are downloaded and edited in office suites" }
+      ],
       "image": "Images/models/slidesgo.webp",
       "link": "https://slidesgo.com/"
     },
@@ -3786,8 +5243,39 @@
       "id": 132,
       "name": "Clippit",
       "category": ["design", "documents"],
-      "type": "N/A",
-      "description": "Clippit turns long videos into short clips by automatically trimming highlights, identifying key moments and producing ready-to-share content.",
+      "type": "AI Video Clipping & Repurposing Tool",
+      "description": "Clippit automatically turns long videos into short, shareable clips by identifying important moments and trimming them into highlight-ready segments. Instead of manually scrubbing through footage, users can upload a video and let the platform detect key parts such as reactions, transitions or noteworthy dialogue.\n\nThe system produces clean, ready-to-post clips that work well for social media, marketing, training or content recaps. Users can adjust length, captions and formatting to match the platform they are posting to. This makes repurposing long content into multiple smaller pieces fast and effortless.\n\nClippit is valuable for creators, brands, educators and streamers who produce long-form video but want to share quick highlights across different platforms. It cuts down editing time and helps users consistently publish engaging, short-form content.",
+      "subtitle": "Automatically find highlights and turn long videos into short, shareable clips.",
+      "tags": ["video clipping", "repurposing", "shorts", "content creator", "social media"],
+      "features": [
+        "AI detection of key moments and highlights in long videos",
+        "Automatic clipping and trimming into short-form segments",
+        "Support for social-friendly formats like vertical videos",
+        "Options for subtitles, captions and simple branding",
+        "Built to repurpose webinars, podcasts, streams and long-form content"
+      ],
+      "use_cases": [
+        {
+          "title": "Social Media Content from Long Videos",
+          "description": "Creators turn full podcasts, webinars or streams into short clips for TikTok, Reels or Shorts."
+        },
+        {
+          "title": "Marketing & Promo Clips",
+          "description": "Teams quickly cut out highlight moments to use in ads, landing pages or email campaigns."
+        },
+        {
+          "title": "Content Libraries & Archives",
+          "description": "Companies rework existing video libraries into bite-size clips that are easier to consume and share."
+        }
+      ],
+      "pricing": "Typically offered as a freemium or subscription service with limits based on video length, exports and features.",
+      "information": [
+        { "label": "Developer", "value": "Clippit" },
+        { "label": "Founded", "value": "2020s" },
+        { "label": "Type", "value": "AI-powered video clipping and repurposing platform" },
+        { "label": "Privacy", "value": "Processes uploaded video content securely in the cloud" },
+        { "label": "API", "value": "APIs or integrations may be available for high-volume or platform use cases" }
+      ],
       "image": "Images/models/clippit.webp",
       "link": "https://clippit.ai/"
     }
