@@ -157,7 +157,7 @@ async function loadCategoryModels() {
 
   // Save breadcrumb info for model detail page
   sessionStorage.setItem('breadcrumbSource', 'category');
-  sessionStorage.setItem('breadcrumbCategory', categoryName);
+  sessionStorage.setItem('breadcrumbCategoryKey', categoryKey);
 
   if (categoryTitle) categoryTitle.textContent = categoryName;
 
