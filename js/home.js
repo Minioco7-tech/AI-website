@@ -47,8 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
     { key: 'development', name: 'Development & Code', icon: 'code', colorFrom: 'from-[#0F172A]', colorTo: 'to-[#1E3A8A]', image: 'Images/coding/coding.webp' },
     { key: 'research', name: 'Research', icon: 'cpu', colorFrom: 'from-[#EC4899]', colorTo: 'to-[#F59E0B]', image: 'Images/science/science.webp' },
     { key: 'finance', name: 'Finance & Operations', icon: 'bar-chart-2', colorFrom: 'from-[#10B981]', colorTo: 'to-[#059669]', image: 'Images/finance/finance.webp' },
-    { key: 'office', name: 'Office Tools', icon: 'smile', colorFrom: 'from-[#E11D48]', colorTo: 'to-[#DB2777]', image: 'Images/speech/speech.webp' },
-    { key: 'jobs', name: 'Career & Job Tools', icon: 'smile', colorFrom: 'from-pink-400', colorTo: 'to-red-500', image: 'Images/speech/speech.webp' }
+    { key: 'office', name: 'Office Tools', icon: 'smile', colorFrom: 'from-[#E11D48]', colorTo: 'to-[#DB2777]', image: 'Images/office/office.webp' },
+    { key: 'jobs', name: 'Career & Job Tools', icon: 'smile', colorFrom: 'from-pink-400', colorTo: 'to-red-500', image: 'Images/jobs/jobs.webp' }
   ];
 
   // -----------------------
