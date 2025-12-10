@@ -47,7 +47,7 @@ export const categoryColors = {
   assistants: 'bg-gradient-to-r from-[#6366F1] to-[#8B5CF6]',
   design: 'bg-gradient-to-r from-[#14B8A6] to-[#06B6D4]',
   audio: 'bg-gradient-to-r from-[#F59E0B] to-[#E11D48]',
-  jobs: 'bg-gradient-to-r from-[#2563EB] to-[#1D4ED8]',
+  jobs: 'bg-gradient-to-r from-pink-400 to-red-500',
   development: 'bg-gradient-to-r from-[#0F172A] to-[#1E3A8A]'
 };
 
