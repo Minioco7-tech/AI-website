@@ -38,17 +38,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // Categories data
   const categories = [
     { key: 'all', name: 'All', icon: 'globe', colorFrom: 'from-purple-500', colorTo: 'to-pink-500', image: 'Images/all/all.webp' },
-    { key: 'documents', name: 'Writing & Documents', icon: 'edit-3', colorFrom: 'from-purple-500', colorTo: 'to-pink-500', image: 'Images/writing/writing.webp' },
-    { key: 'design', name: 'Design & Media', icon: 'pen-tool', colorFrom: 'from-green-400', colorTo: 'to-blue-500', image: 'Images/design/design.webp' },
-    { key: 'learning', name: 'Learning', icon: 'book', colorFrom: 'from-yellow-400', colorTo: 'to-orange-500', image: 'Images/learning/learning.webp' },
-    { key: 'data', name: 'Data & Analytics', icon: 'briefcase', colorFrom: 'from-indigo-400', colorTo: 'to-purple-500', image: 'Images/business/business.webp' },
-    { key: 'assistants', name: 'Assistance', icon: 'message-circle', colorFrom: 'from-pink-400', colorTo: 'to-red-500', image: 'Images/chatbots/chatbot.webp' },
-    { key: 'audio', name: 'Audio & Voice', icon: 'volume-2', colorFrom: 'from-teal-400', colorTo: 'to-blue-400', image: 'Images/speech/speech.webp' },
+    { key: 'documents', name: 'Writing & Documents', icon: 'edit-3', colorFrom: 'from-[#F59E0B]', colorTo: 'to-[#D97706]', image: 'Images/writing/writing.webp' },
+    { key: 'design', name: 'Design & Media', icon: 'pen-tool', colorFrom: 'from-[#14B8A6]', colorTo: 'to-[#06B6D4]', image: 'Images/design/design.webp' },
+    { key: 'learning', name: 'Learning', icon: 'book', colorFrom: 'from-[#A855F7]', colorTo: 'to-[#6366F1]', image: 'Images/learning/learning.webp' },
+    { key: 'data', name: 'Data & Analytics', icon: 'briefcase', colorFrom: 'from-[#22D3EE]', colorTo: 'to-[#3B82F6]', image: 'Images/business/business.webp' },
+    { key: 'assistants', name: 'Assistants', icon: 'message-circle', colorFrom: 'from-[#6366F1]', colorTo: 'to-[#8B5CF6]', image: 'Images/chatbots/chatbot.webp' },
+    { key: 'audio', name: 'Audio & Voice', icon: 'volume-2', colorFrom: 'from-[#F59E0B]', colorTo: 'to-[#E11D48]', image: 'Images/speech/speech.webp' },
     { key: 'development', name: 'Development & Code', icon: 'code', colorFrom: 'from-blue-400', colorTo: 'to-indigo-500', image: 'Images/coding/coding.webp' },
-    { key: 'research', name: 'Research', icon: 'cpu', colorFrom: 'from-red-400', colorTo: 'to-yellow-500', image: 'Images/science/science.webp' },
-    { key: 'finance', name: 'Finance & Operations', icon: 'bar-chart-2', colorFrom: 'from-green-400', colorTo: 'to-teal-500', image: 'Images/finance/finance.webp' },
-    { key: 'office', name: 'Office Tools', icon: 'smile', colorFrom: 'from-gray-400', colorTo: 'to-gray-600', image: 'Images/speech/speech.webp' },
-    { key: 'jobs', name: 'Career & Job Tools', icon: 'smile', colorFrom: 'from-gray-400', colorTo: 'to-gray-600', image: 'Images/speech/speech.webp' }
+    { key: 'research', name: 'Research', icon: 'cpu', colorFrom: 'from-[#EC4899]', colorTo: 'to-[#F59E0B]', image: 'Images/science/science.webp' },
+    { key: 'finance', name: 'Finance & Operations', icon: 'bar-chart-2', colorFrom: 'from-[#10B981]', colorTo: 'to-[#059669]', image: 'Images/finance/finance.webp' },
+    { key: 'office', name: 'Office Tools', icon: 'smile', colorFrom: 'from-[#E11D48]', colorTo: 'to-[#DB2777]', image: 'Images/speech/speech.webp' },
+    { key: 'jobs', name: 'Career & Job Tools', icon: 'smile', colorFrom: 'from-pink-400', colorTo: 'to-red-500', image: 'Images/speech/speech.webp' }
   ];
 
   // -----------------------
