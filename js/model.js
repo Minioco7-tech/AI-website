@@ -74,23 +74,34 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // ------------------------------
   // ✅ Breadcrumb Setup
-  // Uses sessionStorage to remember navigation path
   // ------------------------------
   let breadcrumbItems = [{ label: 'Home', href: 'index.html' }];
-  const source = sessionStorage.getItem('breadcrumbSource');
 
-  if (source === 'category') {
-    const catName = sessionStorage.getItem('breadcrumbCategory') || getCategoryName(firstCategory);
-    breadcrumbItems.push({ label: catName, href: `category.html?category=${encodeURIComponent(firstCategory)}` });
-  } else if (source === 'search') {
-    const query = sessionStorage.getItem('breadcrumbSearchQuery') || 'Search Results';
-    breadcrumbItems.push({ label: 'Search Results', href: `search.html?q=${encodeURIComponent(query)}` });
+  const source = sessionStorage.getItem('breadcrumbSource');
+  const storedCategoryKey = sessionStorage.getItem('breadcrumbCategoryKey');
+  const storedSearchQuery = sessionStorage.getItem('breadcrumbSearchQuery');
+
+  if (source === 'search' && storedSearchQuery) {
+    // Came from search results
+    breadcrumbItems.push({
+      label: 'Search Results',
+      href: `search.html?q=${encodeURIComponent(storedSearchQuery)}`
+    });
   } else {
-    // Fallback
-    breadcrumbItems.push({ label: getCategoryName(firstCategory), href: `category.html?category=${encodeURIComponent(firstCategory)}` });
+    // Came from category OR direct link
+    const categoryKey = storedCategoryKey || firstCategory;
+
+    if (categoryKey) {
+      breadcrumbItems.push({
+        label: getCategoryName(categoryKey), // ✅ DRY: always use utils
+        href: `category.html?category=${encodeURIComponent(categoryKey)}`
+      });
+    }
   }
 
+  // Active crumb = model name
   breadcrumbItems.push({ label: model.name });
+
   renderBreadcrumb(breadcrumbItems);
 
 
