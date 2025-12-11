@@ -470,6 +470,46 @@ body:not(.home-page) #searchInput:hover {
   100% { transform: scale(1); }
 }
 
+/* === Global animated ocean background === */
+
+@keyframes wave-slow {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-40px) translateY(8px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes wave-fast {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(40px) translateY(-6px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+.animate-wave-slow {
+  animation: wave-slow 18s ease-in-out infinite;
+}
+
+.animate-wave-fast {
+  animation: wave-fast 12s ease-in-out infinite;
+}
+
+@media (min-width: 1024px) {
+  .animate-wave-slow path,
+  .animate-wave-fast path {
+    filter: blur(0.2px);
+  }
+}
 
 
 
