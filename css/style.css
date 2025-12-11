@@ -470,46 +470,64 @@ body:not(.home-page) #searchInput:hover {
   100% { transform: scale(1); }
 }
 
-/* === Global animated ocean background === */
+/* === Global animated ocean background (multi-wave) === */
 
-@keyframes wave-slow {
-  0% {
-    transform: translateX(0) translateY(0);
-  }
-  50% {
-    transform: translateX(-40px) translateY(8px);
-  }
-  100% {
-    transform: translateX(0) translateY(0);
-  }
+@keyframes ocean-wave-left {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(-8%); }
+  100% { transform: translateX(0); }
 }
 
-@keyframes wave-fast {
-  0% {
-    transform: translateX(0) translateY(0);
-  }
-  50% {
-    transform: translateX(40px) translateY(-6px);
-  }
-  100% {
-    transform: translateX(0) translateY(0);
-  }
+@keyframes ocean-wave-right {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(6%); }
+  100% { transform: translateX(0); }
 }
 
-.animate-wave-slow {
-  animation: wave-slow 18s ease-in-out infinite;
+@keyframes ocean-wave-deep {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(-5%); }
+  100% { transform: translateX(0); }
 }
 
-.animate-wave-fast {
-  animation: wave-fast 12s ease-in-out infinite;
+/* Shared wave wrapper */
+.ocean-wave {
+  position: absolute;
+  left: -10%;          /* extend past viewport */
+  width: 120%;         /* wider than screen to avoid vertical clipping */
+  overflow: hidden;
 }
 
+/* Different vertical positions + speeds */
+.ocean-wave--top {
+  top: 18%;
+  height: 26%;
+  animation: ocean-wave-left 22s ease-in-out infinite;
+}
+
+.ocean-wave--mid {
+  top: 45%;
+  height: 28%;
+  animation: ocean-wave-right 16s ease-in-out infinite;
+}
+
+.ocean-wave--deep {
+  top: 70%;
+  height: 30%;
+  animation: ocean-wave-deep 28s ease-in-out infinite;
+}
+
+/* SVG itself is oversized so its path extends beyond edges */
+.ocean-wave svg {
+  width: 220%;
+  height: 100%;
+  display: block;
+  transform-origin: center;
+}
+
+/* Slight softening on big screens so lines feel subtle */
 @media (min-width: 1024px) {
-  .animate-wave-slow path,
-  .animate-wave-fast path {
-    filter: blur(0.2px);
+  .ocean-wave path {
+    filter: blur(0.25px);
   }
 }
-
-
-
