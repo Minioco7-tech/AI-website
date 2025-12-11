@@ -27,7 +27,7 @@
 
   <!-- Hero Section -->
   <section 
-    class="relative h-screen flex flex-col items-center justify-center text-center text-white bg-cover bg-center overflow-hidden"
+    class="relative min-h-[70vh] md:min-h-[75vh] flex flex-col items-center justify-center text-center text-white bg-cover bg-center overflow-hidden"
     style="background-image: url('Images/background/background.webp');"
   >
     <!-- Dark gradient + blur overlay -->
@@ -71,33 +71,55 @@
 
     <!-- Subtle glow at bottom -->
     <div class="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-black/80 to-transparent"></div>
-
+    <!-- Bridge strip between hero and main -->
+    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20">
+      <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-black/70 border border-white/10 backdrop-blur-md text-xs sm:text-sm text-gray-200 shadow-lg">
+        <span class="inline-flex items-center gap-1">
+          <span class="w-2 h-2 rounded-full bg-[#00BFFF]"></span>
+          <span>120+ AI tools</span>
+        </span>
+        <span class="hidden sm:inline text-gray-500">•</span>
+        <span class="hidden sm:inline">12 categories</span>
+        <span class="hidden sm:inline text-gray-500">•</span>
+        <span class="hidden sm:inline">Curated for real use cases</span>
+      </div>
+    </div>
   </section>
 
   <!-- Main Content -->
   <main class="relative container flex-grow mx-auto px-4 py-12 text-center">
-    <h2 class="text-3xl font-bold mb-8 relative z-10">Explore AI Categories</h2>
-    <div class="relative z-0 w-full h-12 -mt-10">
-      <div class="absolute inset-0 flex justify-center">
-        <div class="w-64 h-12 bg-white/10 blur-2xl rounded-full"></div>
+    <section>
+      <!-- Section header -->
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+        <div>
+          <p class="text-xs font-semibold tracking-[0.25em] uppercase text-[#38BDF8]/80">
+            Browse by category
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold mt-2 text-white">
+            Explore AI tools for every workflow
+          </h2>
+          <p class="mt-2 text-sm md:text-base text-gray-400 max-w-2xl">
+            Jump into curated collections for writing, design, coding, productivity, research and more.
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-screen h-20 sm:h-40 md:h-48 bg-gradient-to-b from-black to-transparent pointer-events-none"></div>
-    <div id="categoryGrid" class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mb-12">
-      <!-- Categories dynamically injected by home.js -->
-    </div>
-
-    <h2 class="text-3xl font-bold mb-8 px-4 py-8 text-white">
-      Learn to Use AI Like a Pro
-    </h2>
-    <p class="text-center text-gray-400 max-w-2xl mx-auto mb-6">
-      Whether you’re new to AI or looking to refine your workflow, these short guides show you 
-      how to prompt smarter, choose the right tools, stay safe, and use AI to grow your career.
-    </p>
-    
-    <!-- Educational Guides Container -->
-    <section id="aiGuidesContainer" class="max-w-4xl mx-auto mt-16 text-left space-y-0.5"></section>
-
+      
+      <!-- Category Grid -->
+      <div id="categoryGrid" class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mb-12">
+        <!-- Categories dynamically injected by home.js -->
+      </div>
+  
+      <h2 class="text-3xl font-bold mb-8 px-4 py-8 text-white">
+        Learn to Use AI Like a Pro
+      </h2>
+      <p class="text-center text-gray-400 max-w-2xl mx-auto mb-6">
+        Whether you’re new to AI or looking to refine your workflow, these short guides show you 
+        how to prompt smarter, choose the right tools, stay safe, and use AI to grow your career.
+      </p>
+      
+      <!-- Educational Guides Container -->
+      <section id="aiGuidesContainer" class="max-w-4xl mx-auto mt-16 text-left space-y-0.5"></section>
+    </section>
   </main>
 
   <!-- Footer -->
