@@ -470,54 +470,33 @@ body:not(.home-page) #searchInput:hover {
   100% { transform: scale(1); }
 }
 
-/* === Global animated ocean background (multi-wave) === */
+/* === Global ocean background (static waves) === */
 
-@keyframes ocean-wave-left {
-  0%   { transform: translateX(0); }
-  50%  { transform: translateX(-8%); }
-  100% { transform: translateX(0); }
-}
-
-@keyframes ocean-wave-right {
-  0%   { transform: translateX(0); }
-  50%  { transform: translateX(6%); }
-  100% { transform: translateX(0); }
-}
-
-@keyframes ocean-wave-deep {
-  0%   { transform: translateX(0); }
-  50%  { transform: translateX(-5%); }
-  100% { transform: translateX(0); }
-}
-
-/* Shared wave wrapper */
+/* Shared wave wrapper: extend past viewport to avoid visible edges */
 .ocean-wave {
   position: absolute;
-  left: -10%;          /* extend past viewport */
-  width: 120%;         /* wider than screen to avoid vertical clipping */
+  left: -10%;
+  width: 120%;
   overflow: hidden;
 }
 
-/* Different vertical positions + speeds */
+/* Just vertical position + size now, no animation */
 .ocean-wave--top {
   top: 18%;
   height: 26%;
-  animation: ocean-wave-left 22s ease-in-out infinite;
 }
 
 .ocean-wave--mid {
   top: 45%;
   height: 28%;
-  animation: ocean-wave-right 16s ease-in-out infinite;
 }
 
 .ocean-wave--deep {
   top: 70%;
   height: 30%;
-  animation: ocean-wave-deep 28s ease-in-out infinite;
 }
 
-/* SVG itself is oversized so its path extends beyond edges */
+/* SVG oversized for smoother look */
 .ocean-wave svg {
   width: 220%;
   height: 100%;
@@ -525,7 +504,7 @@ body:not(.home-page) #searchInput:hover {
   transform-origin: center;
 }
 
-/* Slight softening on big screens so lines feel subtle */
+/* Slight softening on big screens */
 @media (min-width: 1024px) {
   .ocean-wave path {
     filter: blur(0.25px);
