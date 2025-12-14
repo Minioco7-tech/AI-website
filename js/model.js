@@ -184,15 +184,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                class="btn-primary px-4 py-2 text-sm font-medium inline-flex items-center gap-2">
               Try ${model.name}
             </a>
-  
-            ${model.link ? `
-              <a href="${model.link}"
-                 target="_blank"
-                 rel="noopener noreferrer"
-                 class="text-xs sm:text-sm text-gray-300 hover:text-white underline underline-offset-4">
-                Visit website
-              </a>
-            ` : ''}
           </div>
         </div>
   
