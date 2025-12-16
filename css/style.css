@@ -20,6 +20,25 @@ body {
   flex-direction: column;
 }
 
+h1 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+p {
+  font-weight: 400;
+  line-height: 1.6;
+}
+
 /* Subtle overlay gradient for main content sections */
 .main-gradient {
   position: absolute;      /* So it sits behind content */
