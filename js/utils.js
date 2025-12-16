@@ -511,26 +511,51 @@ export function expandQueryTokens(rawInput) {
 // options: { heading?: string, singleOpen?: boolean }
 // =====================================================
 // --- Single Accordion Renderer (One Dropdown, Netflix Style) ---
-export function renderSingleDropdown(containerId, { title = "", content = "" } = {}) {
+export function renderSingleDropdown(containerId, { title = "", content = "", subtitle = "", accent = "cyan", icon = "book-open" } = {}) {
   const el = document.getElementById(containerId);
   if (!el) return;
 
+  // Accent map (keeps it consistent + DRY)
+  const accentMap = {
+    cyan:   "from-cyan-500/25 via-blue-500/10 to-transparent",
+    amber:  "from-amber-500/25 via-yellow-500/10 to-transparent",
+    pink:   "from-pink-500/25 via-fuchsia-500/10 to-transparent",
+    emerald:"from-emerald-500/25 via-teal-500/10 to-transparent",
+    violet: "from-violet-500/25 via-indigo-500/10 to-transparent",
+  };
+
+  const glow = accentMap[accent] || accentMap.cyan;
+
   el.innerHTML = `
-    <div class="p-4">
-      <details class="group rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm overflow-hidden">
-        <summary class="flex cursor-pointer list-none items-center justify-between px-6 py-5">
-          <h3 class="text-white text-lg font-semibold">${title}</h3>
-          <span class="inline-flex items-center justify-center text-white transition-transform duration-300 group-open:rotate-180">
-            <i data-feather="chevron-down" class="w-6 h-6"></i>
-          </span>
-        </summary>
-        <div class="border-t border-white/10">
-          <div class="px-6 py-6 text-[#E0E0E0] space-y-8">
-            ${content}
+    <details class="guide-accordion group rounded-3xl border border-white/10 bg-black/20 backdrop-blur-sm overflow-hidden">
+      <summary class="guide-summary flex cursor-pointer list-none items-center justify-between gap-4 px-5 sm:px-6 py-5">
+        
+        <div class="flex items-center gap-4">
+          <div class="relative w-11 h-11 rounded-2xl border border-white/10 bg-white/5 flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 opacity-60 blur-2xl bg-gradient-to-br ${glow}"></div>
+            <i data-feather="${icon}" class="relative w-5 h-5 text-white"></i>
+          </div>
+
+          <div class="min-w-0">
+            <h3 class="text-base sm:text-lg font-semibold text-white leading-tight">
+              ${title}
+            </h3>
+            ${subtitle ? `<p class="text-sm text-gray-400 mt-1">${subtitle}</p>` : ""}
           </div>
         </div>
-      </details>
-    </div>
+
+        <span class="shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-white/5 text-white transition-transform duration-300 group-open:rotate-180">
+          <i data-feather="chevron-down" class="w-5 h-5"></i>
+        </span>
+      </summary>
+
+      <div class="relative">
+        <div class="absolute inset-0 opacity-40 blur-3xl bg-gradient-to-br ${glow}"></div>
+        <div class="relative border-t border-white/10 px-5 sm:px-6 py-6 text-[#E0E0E0] space-y-8">
+          ${content}
+        </div>
+      </div>
+    </details>
   `;
 
   if (typeof feather !== 'undefined') feather.replace();
