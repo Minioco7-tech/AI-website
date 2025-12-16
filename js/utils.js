@@ -148,9 +148,9 @@ export function getPaginatedModels(models, currentPage, perPage = MODELS_PER_PAG
 // ============================================================================
 // ✅ Render pagination UI (shows only 3 pages around current + final page)
 // Pattern examples:
-//  - Page 1 of 20:  Prev [1] 2 3 … 20 Next
-//  - Page 5 of 20:  Prev 4 [5] 6 … 20 Next
-//  - Page 19 of 20: Prev … 17 18 [19] 20 Next
+//  - Page 1 of 20:  [1] 2 3 … 20 >
+//  - Page 2 of 20:  < 1 [2] 3 … 20 >
+//  - Page 3 of 20:  < 1 … [3] 4 5 … 20 >
 // ============================================================================
 
 export function renderPagination({
@@ -167,81 +167,118 @@ export function renderPagination({
   container.innerHTML = '';
   if (totalPages <= 1) return;
 
-  // Force a clean centered layout regardless of parent CSS
-  container.className = 'w-full flex flex-col items-center justify-center';
+  // Ensure centered + clean layout regardless of parent styles
+  container.className = 'w-full flex flex-col items-center justify-center mt-10';
 
-  const wrapper = document.createElement('div');
-  wrapper.className = 'w-full flex items-center justify-center gap-2 mt-8 flex-wrap';
+  const row = document.createElement('div');
+  row.className = 'w-full flex items-center justify-center gap-3 flex-wrap select-none';
 
-  const meta = document.createElement('div');
-  meta.className = 'w-full text-center text-xs text-gray-500 mt-3';
-  meta.textContent = `Page ${currentPage} of ${totalPages}`;
+  const makeEllipsis = () => {
+    const span = document.createElement('span');
+    span.textContent = '...';
+    span.className = 'text-gray-500 text-sm';
+    return span;
+  };
 
-  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  const makeArrow = (label, page, disabled) => {
+    const a = document.createElement('button');
+    a.type = 'button';
+    a.textContent = label; // "<" or ">"
+    a.className = `text-sm font-medium ${disabled ? 'text-gray-700 cursor-default' : 'text-gray-300 hover:text-white'} transition-colors`;
+    if (!disabled) {
+      a.addEventListener('click', () => {
+        onPageChange?.(page);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+    return a;
+  };
 
-  function createButton(label, page, { active = false, disabled = false } = {}) {
+  const makePage = (page) => {
     const btn = document.createElement('button');
     btn.type = 'button';
-    btn.textContent = label;
+    btn.textContent = String(page);
 
-    const base = 'px-3 py-1 text-sm rounded-md border border-white/10 transition-colors';
-    const activeCls = 'bg-white text-black';
-    const disabledCls = 'bg-black/20 text-gray-500 cursor-not-allowed';
-    const normalCls = 'bg-black/30 text-white hover:bg-white/10';
+    const isActive = page === currentPage;
 
-    btn.className = `${base} ${active ? activeCls : disabled ? disabledCls : normalCls}`;
+    // No visible container unless active (active = white circle)
+    btn.className = isActive
+      ? 'w-8 h-8 inline-flex items-center justify-center rounded-full bg-white text-black text-sm font-semibold'
+      : 'w-8 h-8 inline-flex items-center justify-center rounded-full text-sm text-gray-300 hover:text-white transition-colors';
 
-    if (!disabled && !active && typeof page === 'number') {
+    if (!isActive) {
       btn.addEventListener('click', () => {
         onPageChange?.(page);
-        scrollToTop();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       });
     }
 
     return btn;
+  };
+
+  // ---------- Build the page list based on your rules ----------
+  // Always show last page (Y)
+  // Start pages: show 1 2 3
+  // Middle: < 1 ... p-1 p p+1 ... Y >
+  // End: < 1 ... Y-2 Y-1 Y
+  const pages = [];
+
+  // Helpers to add pages without duplicates
+  const add = (p) => {
+    if (!pages.includes(p)) pages.push(p);
+  };
+
+  const Y = totalPages;
+  const p = currentPage;
+
+  // Decide which pages to show
+  if (Y <= 6) {
+    // Small page counts: just show all pages
+    for (let i = 1; i <= Y; i++) add(i);
+  } else if (p <= 2) {
+    // Page 1-2: 1 2 3 ... Y
+    add(1); add(2); add(3);
+    pages.push('ellipsis-right');
+    add(Y);
+  } else if (p >= Y - 1) {
+    // Last two pages: < 1 ... Y-2 Y-1 Y
+    add(1);
+    pages.push('ellipsis-left');
+    add(Y - 2); add(Y - 1); add(Y);
+  } else {
+    // Middle: < 1 ... p-1 p p+1 ... Y
+    add(1);
+    pages.push('ellipsis-left');
+    add(p - 1); add(p); add(p + 1);
+    pages.push('ellipsis-right');
+    add(Y);
   }
 
-  function createEllipsis() {
-    const span = document.createElement('span');
-    span.textContent = '…';
-    span.className = 'px-2 text-gray-500 select-none';
-    return span;
+  // ---------- Render arrows + pages ----------
+  const prevDisabled = p === 1;
+  const nextDisabled = p === Y;
+
+  // Left arrow only from page 2 onward (as per your examples)
+  if (!prevDisabled) {
+    row.appendChild(makeArrow('<', p - 1, false));
   }
 
-  // Prev
-  wrapper.appendChild(
-    createButton('Prev', currentPage - 1, { disabled: currentPage === 1 })
-  );
-
-  // Only 3 pages around current + last page
-  const windowStart = Math.max(1, currentPage - 1);
-  const windowEnd = Math.min(totalPages - 1, currentPage + 1);
-
-  if (windowStart > 1) {
-    wrapper.appendChild(createButton('1', 1, { active: currentPage === 1 }));
-    if (windowStart > 2) wrapper.appendChild(createEllipsis());
+  for (const item of pages) {
+    if (item === 'ellipsis-left' || item === 'ellipsis-right') {
+      row.appendChild(makeEllipsis());
+    } else {
+      row.appendChild(makePage(item));
+    }
   }
 
-  for (let p = windowStart; p <= windowEnd; p++) {
-    wrapper.appendChild(createButton(String(p), p, { active: p === currentPage }));
+  // Right arrow only if not last page
+  if (!nextDisabled) {
+    row.appendChild(makeArrow('>', p + 1, false));
   }
 
-  if (windowEnd < totalPages - 1) wrapper.appendChild(createEllipsis());
-
-  if (totalPages > 1) {
-    wrapper.appendChild(
-      createButton(String(totalPages), totalPages, { active: currentPage === totalPages })
-    );
-  }
-
-  // Next
-  wrapper.appendChild(
-    createButton('Next', currentPage + 1, { disabled: currentPage === totalPages })
-  );
-
-  container.appendChild(wrapper);
-  container.appendChild(meta);
+  container.appendChild(row);
 }
+
 
 // ============================================================================
 // ✅ Normalize category field into an array
