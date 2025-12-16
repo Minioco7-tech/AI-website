@@ -120,74 +120,157 @@ document.addEventListener('DOMContentLoaded', () => {
         content: `
           <div class="space-y-8">
       
-            <!-- Tip 1 -->
-            <div>
-              <h4 class="font-bold text-white mb-2">🎯 1. Be Specific and Clear</h4>
-              <p class="text-sm text-gray-300">AI tools perform best when you give them context and direction. Vague prompts lead to vague results. ALWAYS include purpose, tone and details.</p>
-              <div class="mt-3 bg-[#1A1C20] border-l-4 border-yellow-500 p-3 rounded-md text-sm">
-                ❌ <strong>Weak:</strong> “Write about dogs.”<br>
-                ✅ <strong>Better:</strong> “Write a 500-word blog post about the benefits of adopting senior dogs, focusing on their calm temperament and loyalty.”
+            <!-- Intro -->
+            <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
+              <p class="text-sm text-gray-200 leading-relaxed">
+                Good prompting is just good communication: <strong>goal</strong>, <strong>context</strong>, and
+                <strong>constraints</strong>. Use the patterns below and you’ll instantly get more useful results.
+              </p>
+              <div class="mt-3 flex flex-wrap gap-2">
+                <span class="text-[11px] px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300">Goal</span>
+                <span class="text-[11px] px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300">Audience</span>
+                <span class="text-[11px] px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300">Tone</span>
+                <span class="text-[11px] px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300">Format</span>
+                <span class="text-[11px] px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300">Constraints</span>
               </div>
-              <p class="mt-2 text-sm text-gray-400 italic">
-                <strong>Why:</strong> The more detail you give, the more tailored and useful your results will be.
+            </div>
+      
+            <!-- Rule 01 -->
+            <div class="space-y-2">
+              <h4 class="text-white font-semibold text-base">
+                <span class="text-gray-400 mr-2">01</span> Be specific and clear
+              </h4>
+              <p class="text-sm text-gray-300">
+                Include purpose, audience, and constraints. Vague prompts create vague results.
+              </p>
+      
+              <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
+                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Don’t</p>
+                  <p class="text-sm text-gray-200"><span class="text-red-300 font-semibold">❌</span> Write about dogs.</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Do</p>
+                  <p class="text-sm text-gray-200"><span class="text-green-300 font-semibold">✅</span> Write a 500-word blog post about adopting senior dogs for first-time owners. Calm, friendly tone. Include 3 benefits + a short CTA.</p>
+                </div>
+              </div>
+      
+              <p class="mt-3 text-xs text-gray-400">
+                <span class="font-semibold text-gray-300">Why it matters:</span> Better constraints reduce rework and increase output quality.
               </p>
             </div>
       
-            <!-- Tip 2 -->
-            <div>
-              <h4 class="font-bold text-white mb-2">🧠 2. Provide Context and Perspective</h4>
-              <p class="text-sm text-gray-300">Explain who you are, what you need and who the content is for. Context changes how AI frames its tone and depth.</p>
-              <div class="mt-3 bg-[#1A1C20] border-l-4 border-orange-500 p-3 rounded-md text-sm">
-                ❌ <strong>Generic:</strong> “Write an email about a meeting.”<br>
-                ✅ <strong>Better:</strong> “Write a short, friendly follow-up email from a team lead reminding their design team about tomorrow’s sprint review.”
+            <!-- Rule 02 -->
+            <div class="space-y-2">
+              <h4 class="text-white font-semibold text-base">
+                <span class="text-gray-400 mr-2">02</span> Provide context (role + situation)
+              </h4>
+              <p class="text-sm text-gray-300">
+                Tell the AI who you are and what’s happening. Context changes tone, depth, and relevance.
+              </p>
+      
+              <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
+                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Don’t</p>
+                  <p class="text-sm text-gray-200"><span class="text-red-300 font-semibold">❌</span> Write an email about a meeting.</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Do</p>
+                  <p class="text-sm text-gray-200"><span class="text-green-300 font-semibold">✅</span> Write a short, friendly follow-up email from a team lead to a design team reminding them about tomorrow’s sprint review. Include agenda + time.</p>
+                </div>
               </div>
-              <p class="mt-2 text-sm text-gray-400 italic">
-                <strong>Why:</strong> Without context, AI guesses your intent. Giving it a role or audience ensures more natural, human-like output.
+      
+              <p class="mt-3 text-xs text-gray-400">
+                <span class="font-semibold text-gray-300">Why it matters:</span> Without context the model guesses your intent — that’s where “meh” results come from.
               </p>
             </div>
       
-            <!-- Tip 3 -->
-            <div>
-              <h4 class="font-bold text-white mb-2">🧾 3. Define the Format and Style You Want</h4>
-              <p class="text-sm text-gray-300">Tell the AI exactly how to present the result, the more specific the better! This could be a list, table, summary or email format.</p>
-              <div class="mt-3 bg-[#1A1C20] border-l-4 border-green-500 p-3 rounded-md text-sm">
-                ❌ <strong>Unclear:</strong> “Give me ideas for marketing.”<br>
-                ✅ <strong>Better:</strong> “List five creative social media campaign ideas in bullet points, each with a short description and target audience.”
+            <!-- Rule 03 -->
+            <div class="space-y-2">
+              <h4 class="text-white font-semibold text-base">
+                <span class="text-gray-400 mr-2">03</span> Define the output format
+              </h4>
+              <p class="text-sm text-gray-300">
+                Ask for the structure you want: bullets, table, short summary, email draft, checklist, etc.
+              </p>
+      
+              <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
+                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Don’t</p>
+                  <p class="text-sm text-gray-200"><span class="text-red-300 font-semibold">❌</span> Give me marketing ideas.</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Do</p>
+                  <p class="text-sm text-gray-200"><span class="text-green-300 font-semibold">✅</span> List 5 social campaign ideas in bullet points. For each: goal, audience, hook, and a one-line example post.</p>
+                </div>
               </div>
-              <p class="mt-2 text-sm text-gray-400 italic">
-                <strong>Why:</strong> AI responds to structure — defining output format saves editing time later.
+      
+              <p class="mt-3 text-xs text-gray-400">
+                <span class="font-semibold text-gray-300">Why it matters:</span> Structure saves editing time and makes outputs easier to reuse.
               </p>
             </div>
       
-            <!-- Tip 4 -->
-            <div>
-              <h4 class="font-bold text-white mb-2">🎨 4. Use Descriptive Language for Images and Creative Work</h4>
-              <p class="text-sm text-gray-300">When generating visuals or creative text, include sensory and stylistic details: mood, color, lighting and perspective.</p>
-              <div class="mt-3 bg-[#1A1C20] border-l-4 border-pink-500 p-3 rounded-md text-sm">
-                ❌ <strong>Weak:</strong> “Generate a picture of a cat.”<br>
-                ✅ <strong>Better:</strong> “A cozy watercolor of a ginger cat sleeping by a window with morning light streaming in.”
+            <!-- Rule 04 -->
+            <div class="space-y-2">
+              <h4 class="text-white font-semibold text-base">
+                <span class="text-gray-400 mr-2">04</span> Use descriptive language for visuals
+              </h4>
+              <p class="text-sm text-gray-300">
+                For creative outputs, specify style, mood, lighting, camera angle, and key objects.
+              </p>
+      
+              <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
+                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Don’t</p>
+                  <p class="text-sm text-gray-200"><span class="text-red-300 font-semibold">❌</span> Generate a picture of a cat.</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Do</p>
+                  <p class="text-sm text-gray-200"><span class="text-green-300 font-semibold">✅</span> A cozy watercolor of a ginger cat sleeping by a window, soft morning light, warm tones, shallow depth of field.</p>
+                </div>
               </div>
-              <p class="mt-2 text-sm text-gray-400 italic">
-                <strong>Why:</strong> Descriptive prompts help AI visualize your intent and match your creative vision.
+      
+              <p class="mt-3 text-xs text-gray-400">
+                <span class="font-semibold text-gray-300">Why it matters:</span> Descriptive prompts reduce randomness and get you closer to the look you want.
               </p>
             </div>
       
-            <!-- Tip 5 -->
-            <div>
-              <h4 class="font-bold text-white mb-2">🔁 5. Iterate and Refine</h4>
-              <p class="text-sm text-gray-300">Treat prompting as a conversation — adjust tone, complexity, or format until it fits your needs.</p>
-              <div class="mt-3 bg-[#1A1C20] border-l-4 border-blue-500 p-3 rounded-md text-sm">
-                💬 <strong>Example:</strong> “Make it sound more confident.” / “Add a closing summary.” / “Reformat as a bullet list.” 
+            <!-- Rule 05 -->
+            <div class="space-y-2">
+              <h4 class="text-white font-semibold text-base">
+                <span class="text-gray-400 mr-2">05</span> Iterate with small, specific edits
+              </h4>
+              <p class="text-sm text-gray-300">
+                Treat it like a conversation: request precise changes instead of restarting from scratch.
+              </p>
+      
+              <div class="mt-3 rounded-2xl border border-white/10 bg-black/20 p-4">
+                <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Good follow-ups</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">Make it more confident</span>
+                  <span class="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">Shorten by 30%</span>
+                  <span class="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">Add a bullet summary</span>
+                  <span class="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">Rewrite for beginners</span>
+                </div>
               </div>
-              <p class="mt-2 text-sm text-gray-400 italic">
-                <strong>Why:</strong> Refining outputs helps you learn how the AI interprets your intent — improving your skills over time.
+      
+              <p class="mt-3 text-xs text-gray-400">
+                <span class="font-semibold text-gray-300">Why it matters:</span> Small edits converge faster than re-prompting from zero.
               </p>
             </div>
-          </div>
-
-          <!-- Pro Tip -->
-          <div class="mt-6 bg-[#1A1C20] border-l-4 border-blue-500 p-3 rounded-md text-sm">
-            💡 <strong>Pro Tip:</strong> BE SPECIFIC!!! The more detailed the input, the more detailed the output.
+      
+            <!-- Quick prompt template -->
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+              <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Prompt template</p>
+              <p class="text-sm text-gray-200 leading-relaxed">
+                <strong>Role:</strong> You are a [role].<br>
+                <strong>Goal:</strong> Help me [goal].<br>
+                <strong>Context:</strong> [who/what/where].<br>
+                <strong>Constraints:</strong> [tone, length, rules].<br>
+                <strong>Output:</strong> Return as [format].
+              </p>
+            </div>
+      
           </div>
         `
       },
@@ -199,148 +282,350 @@ document.addEventListener('DOMContentLoaded', () => {
         content: `
           <div class="space-y-8">
       
-            <!-- Tip 1 -->
-            <div>
-              <h4 class="font-bold text-white mb-2">🎯 1. Start With Your Goal</h4>
-              <p class="text-sm text-gray-300">Begin by defining what you need: writing, image generation, coding help, research or organization. Your goal determines which category of tool fits best.</p>
-              <div class="mt-3 bg-[#1A1C20] border-l-4 border-yellow-500 p-3 rounded-md text-sm">
-                ❌ <strong>Unclear:</strong> “I want to try AI.”<br>
-                ✅ <strong>Better:</strong> “I want to use AI to summarize research papers and help outline reports.”
+            <!-- Intro -->
+            <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
+              <p class="text-sm text-gray-200 leading-relaxed">
+                The best tool isn’t the fanciest — it’s the one that fits your <strong>task</strong>,
+                <strong>workflow</strong>, and <strong>budget</strong>. Use this quick framework to choose in minutes.
+              </p>
+              <div class="mt-3 flex flex-wrap gap-2">
+                <span class="text-[11px] px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300">Goal</span>
+                <span class="text-[11px] px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300">Inputs</span>
+                <span class="text-[11px] px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300">Outputs</span>
+                <span class="text-[11px] px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300">Workflow</span>
+                <span class="text-[11px] px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300">Privacy</span>
+                <span class="text-[11px] px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300">Cost</span>
               </div>
-              <p class="mt-2 text-sm text-gray-400 italic">
-                <strong>Why:</strong> Specific goals narrow your search and help you find tools designed for that function. Saving time and frustration.
+            </div>
+      
+            <!-- Rule 01 -->
+            <div class="space-y-2">
+              <h4 class="text-white font-semibold text-base">
+                <span class="text-gray-400 mr-2">01</span> Start with your goal
+              </h4>
+              <p class="text-sm text-gray-300">
+                Define the job in one sentence. Your goal determines the category (writing, design, coding, research, ops).
+              </p>
+      
+              <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
+                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Don’t</p>
+                  <p class="text-sm text-gray-200"><span class="text-red-300 font-semibold">❌</span> I want to try AI.</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Do</p>
+                  <p class="text-sm text-gray-200"><span class="text-green-300 font-semibold">✅</span> I want an AI tool that summarizes research papers and produces an outline I can paste into a report.</p>
+                </div>
+              </div>
+      
+              <p class="mt-3 text-xs text-gray-400">
+                <span class="font-semibold text-gray-300">Why it matters:</span> A clear goal prevents “feature shopping” and narrows the shortlist fast.
               </p>
             </div>
       
-            <!-- Tip 2 -->
-            <div>
-              <h4 class="font-bold text-white mb-2">🧩 2. Evaluate Features and Integrations</h4>
-              <p class="text-sm text-gray-300">Check what the tool actually offers... does it support collaboration, API use, data exports or browser extensions?</p>
-              <div class="mt-3 bg-[#1A1C20] border-l-4 border-orange-500 p-3 rounded-md text-sm">
-                ❌ <strong>Limited:</strong> A note app that can’t export data or integrate with your workflow.<br>
-                ✅ <strong>Better:</strong> A writing AI that syncs with Google Docs, Notion or your browser for smoother use.
+            <!-- Rule 02 -->
+            <div class="space-y-2">
+              <h4 class="text-white font-semibold text-base">
+                <span class="text-gray-400 mr-2">02</span> Check inputs and outputs
+              </h4>
+              <p class="text-sm text-gray-300">
+                Make sure the tool supports what you work with (PDF, audio, URLs, docs) and what you need back (Doc, slides, CSV, export).
+              </p>
+      
+              <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
+                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Don’t</p>
+                  <p class="text-sm text-gray-200"><span class="text-red-300 font-semibold">❌</span> Choose a tool that looks good, then discover it can’t export anything.</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Do</p>
+                  <p class="text-sm text-gray-200"><span class="text-green-300 font-semibold">✅</span> Confirm it can import your format (PDF/Docs/etc.) and export your output (DOCX/CSV/links) before committing.</p>
+                </div>
               </div>
-              <p class="mt-2 text-sm text-gray-400 italic">
-                <strong>Why:</strong> Choosing tools that fit your existing workflow saves setup time and keeps you productive.
+      
+              <p class="mt-3 text-xs text-gray-400">
+                <span class="font-semibold text-gray-300">Why it matters:</span> A “great” tool is useless if it doesn’t fit your real inputs/outputs.
               </p>
             </div>
       
-            <!-- Tip 3 -->
-            <div>
-              <h4 class="font-bold text-white mb-2">⚖️ 3. Compare Cost vs. Value</h4>
-              <p class="text-sm text-gray-300">Look beyond monthly prices. Consider how much time or effort the tool actually saves you.</p>
-              <div class="mt-3 bg-[#1A1C20] border-l-4 border-green-500 p-3 rounded-md text-sm">
-                💡 <strong>Example:</strong> A $15/month AI that saves you 3 hours a week is often more valuable than a free one that wastes your time.
+            <!-- Rule 03 -->
+            <div class="space-y-2">
+              <h4 class="text-white font-semibold text-base">
+                <span class="text-gray-400 mr-2">03</span> Evaluate workflow fit (integrations)
+              </h4>
+              <p class="text-sm text-gray-300">
+                Look for integrations with what you already use: Google Docs, Notion, Chrome, Slack, API access, or team features.
+              </p>
+      
+              <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
+                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Don’t</p>
+                  <p class="text-sm text-gray-200"><span class="text-red-300 font-semibold">❌</span> Pick a tool that forces you to copy/paste everything all day.</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Do</p>
+                  <p class="text-sm text-gray-200"><span class="text-green-300 font-semibold">✅</span> Choose a tool that plugs into your existing workflow (Docs/Notion/Browser) or has a solid API.</p>
+                </div>
               </div>
-              <p class="mt-2 text-sm text-gray-400 italic">
-                <strong>Why:</strong> AI tools are productivity multipliers. Not all free ones are truly “cheap,” and not all paid ones are worth it.
+      
+              <p class="mt-3 text-xs text-gray-400">
+                <span class="font-semibold text-gray-300">Why it matters:</span> Workflow fit beats raw “AI quality” for day-to-day productivity.
               </p>
             </div>
       
-            <!-- Tip 4 -->
-            <div>
-              <h4 class="font-bold text-white mb-2">🔍 4. Check Reviews and Data Practices</h4>
-              <p class="text-sm text-gray-300">Before signing up, read privacy policies and community feedback. Check how the company handles your data and what users say about reliability.</p>
-              <div class="mt-3 bg-[#1A1C20] border-l-4 border-purple-500 p-3 rounded-md text-sm">
-                ❌ <strong>Risky:</strong> A “free AI” site with no company info or privacy policy.<br>
-                ✅ <strong>Better:</strong> Look for tools that clearly outline how they use your data and safetry precautions they take.
+            <!-- Rule 04 -->
+            <div class="space-y-2">
+              <h4 class="text-white font-semibold text-base">
+                <span class="text-gray-400 mr-2">04</span> Compare cost vs. time saved
+              </h4>
+              <p class="text-sm text-gray-300">
+                Think in outcomes: does it save time weekly? Does it reduce errors? Does it replace multiple tools?
+              </p>
+      
+              <div class="mt-3 rounded-2xl border border-white/10 bg-black/20 p-4">
+                <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Simple rule of thumb</p>
+                <p class="text-sm text-gray-200">
+                  If a tool saves you <strong>1 hour/week</strong>, even a small subscription can be worth it.
+                  If it costs money but adds friction, it’s “expensive” even if it’s cheap.
+                </p>
+                <div class="mt-3 flex flex-wrap gap-2">
+                  <span class="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">Time saved</span>
+                  <span class="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">Quality improved</span>
+                  <span class="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">Fewer tools</span>
+                </div>
               </div>
-              <p class="mt-2 text-sm text-gray-400 italic">
-                <strong>Why:</strong> Transparency and user trust are key signs of a reputable AI product.
+      
+              <p class="mt-3 text-xs text-gray-400">
+                <span class="font-semibold text-gray-300">Why it matters:</span> “Free” tools often cost you time; value is measured in outcomes.
               </p>
             </div>
       
-            <!-- Tip 5 -->
-            <div>
-              <h4 class="font-bold text-white mb-2">⚙️ 5. Test Before You Commit</h4>
-              <p class="text-sm text-gray-300">Use free tiers or trials to test the AI’s accuracy and ease of use before subscribing.</p>
-              <div class="mt-3 bg-[#1A1C20] border-l-4 border-blue-500 p-3 rounded-md text-sm">
-                💬 <strong>Tip:</strong> Run a small project first, like summarizing one article or generating one logo, to see how it performs under real use.
+            <!-- Rule 05 -->
+            <div class="space-y-2">
+              <h4 class="text-white font-semibold text-base">
+                <span class="text-gray-400 mr-2">05</span> Verify trust: privacy + reliability
+              </h4>
+              <p class="text-sm text-gray-300">
+                Before signing up, check how data is handled, whether there’s a clear policy, and whether reviews mention stability.
+              </p>
+      
+              <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
+                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Don’t</p>
+                  <p class="text-sm text-gray-200"><span class="text-red-300 font-semibold">❌</span> Use a “free AI” site with no company info, no policy, and unclear data handling.</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Do</p>
+                  <p class="text-sm text-gray-200"><span class="text-green-300 font-semibold">✅</span> Look for transparent policies, reputable company details, and consistent user feedback on reliability.</p>
+                </div>
               </div>
+      
+              <p class="mt-3 text-xs text-gray-400">
+                <span class="font-semibold text-gray-300">Why it matters:</span> If you wouldn’t paste it into email, don’t paste it into a random AI tool.
+              </p>
             </div>
+      
+            <!-- Quick checklist -->
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+              <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-3">5-minute selection checklist</p>
+              <ul class="space-y-3 text-sm text-gray-200">
+                <li class="flex gap-3">
+                  <span class="mt-[7px] w-1.5 h-1.5 rounded-full bg-white/70 flex-shrink-0"></span>
+                  <span><strong>Goal:</strong> one sentence describing the job.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-[7px] w-1.5 h-1.5 rounded-full bg-white/70 flex-shrink-0"></span>
+                  <span><strong>Inputs/outputs:</strong> supports your formats + exports what you need.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-[7px] w-1.5 h-1.5 rounded-full bg-white/70 flex-shrink-0"></span>
+                  <span><strong>Workflow:</strong> integrations or API reduce copy/paste.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-[7px] w-1.5 h-1.5 rounded-full bg-white/70 flex-shrink-0"></span>
+                  <span><strong>Trust:</strong> clear privacy policy + reliable reviews.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-[7px] w-1.5 h-1.5 rounded-full bg-white/70 flex-shrink-0"></span>
+                  <span><strong>Value:</strong> worth it if it saves meaningful time each week.</span>
+                </li>
+              </ul>
+            </div>
+      
           </div>
         `
       },
       {
         title: 'Using AI Safely and Ethically',
-        subtitle: 'Avoid common privacy + compliance mistakes.',
+        subtitle: 'Avoid common privacy and compliance mistakes.',
         icon: 'shield',
-        accent: 'pink',        
+        accent: 'pink',
         content: `
           <div class="space-y-8">
-
-            <!-- Tip 1 -->
-            <div>
-              <h4 class="font-bold text-white mb-2">🛑 1. Never Share Personal Details</h4>
-              <p class="text-sm text-gray-300">Treat every AI chat like a public forum. Avoid entering any personally identifiable information (PII) such as:</p>
-              <ul class="list-disc list-inside text-sm text-gray-400 mt-2">
-                <li>📛 Full name, home address, phone number</li>
-                <li>📧 Personal or work email addresses</li>
-                <li>💳 Bank details, passwords, ID numbers</li>
-                <li>📅 Dates of birth, national insurance numbers, or medical data</li>
+      
+            <!-- Intro -->
+            <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
+              <p class="text-sm text-gray-200 leading-relaxed">
+                AI tools are powerful, but they don’t understand confidentiality.
+                Treat every prompt as <strong>potentially logged</strong> and design your usage around
+                privacy, trust, and verification.
+              </p>
+              <div class="mt-3 flex flex-wrap gap-2">
+                <span class="text-[11px] px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300">Privacy</span>
+                <span class="text-[11px] px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300">Confidentiality</span>
+                <span class="text-[11px] px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300">Verification</span>
+                <span class="text-[11px] px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300">Compliance</span>
+              </div>
+            </div>
+      
+            <!-- Rule 01 -->
+            <div class="space-y-2">
+              <h4 class="text-white font-semibold text-base">
+                <span class="text-gray-400 mr-2">01</span> Never share personal details
+              </h4>
+              <p class="text-sm text-gray-300">
+                Avoid entering any personally identifiable information (PII) into AI tools.
+              </p>
+      
+              <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
+                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Don’t</p>
+                  <p class="text-sm text-gray-200">
+                    <span class="text-red-300 font-semibold">❌</span>
+                    Hi, my name is Emma Collins. I live at 15 Bridge Road in London. Can you help me write a rental application?
+                  </p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Do</p>
+                  <p class="text-sm text-gray-200">
+                    <span class="text-green-300 font-semibold">✅</span>
+                    Help me write a polite rental application for a young professional moving to London.
+                  </p>
+                </div>
+              </div>
+      
+              <p class="mt-3 text-xs text-gray-400">
+                <span class="font-semibold text-gray-300">Why it matters:</span>
+                Prompts may be logged or reviewed. Once shared, personal data is difficult to retract.
+              </p>
+            </div>
+      
+            <!-- Rule 02 -->
+            <div class="space-y-2">
+              <h4 class="text-white font-semibold text-base">
+                <span class="text-gray-400 mr-2">02</span> Avoid uploading confidential or client data
+              </h4>
+              <p class="text-sm text-gray-300">
+                Never paste private business, financial, or client-owned information into AI tools.
+              </p>
+      
+              <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
+                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Don’t</p>
+                  <p class="text-sm text-gray-200">
+                    <span class="text-red-300 font-semibold">❌</span>
+                    Here’s our client list and pricing model — suggest improvements.
+                  </p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Do</p>
+                  <p class="text-sm text-gray-200">
+                    <span class="text-green-300 font-semibold">✅</span>
+                    What’s a good structure for presenting client data in a pricing proposal?
+                  </p>
+                </div>
+              </div>
+      
+              <p class="mt-3 text-xs text-gray-400">
+                <span class="font-semibold text-gray-300">Why it matters:</span>
+                Uploading sensitive data may violate NDAs, contracts, or regulations like GDPR.
+              </p>
+            </div>
+      
+            <!-- Rule 03 -->
+            <div class="space-y-2">
+              <h4 class="text-white font-semibold text-base">
+                <span class="text-gray-400 mr-2">03</span> Use AI as a coach, not a ghostwriter
+              </h4>
+              <p class="text-sm text-gray-300">
+                Don’t paste unpublished essays, assessments, or internal documents. Summarize instead.
+              </p>
+      
+              <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
+                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Don’t</p>
+                  <p class="text-sm text-gray-200">
+                    <span class="text-red-300 font-semibold">❌</span>
+                    This is my entire essay draft. Rewrite it for me.
+                  </p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Do</p>
+                  <p class="text-sm text-gray-200">
+                    <span class="text-green-300 font-semibold">✅</span>
+                    Suggest ways to improve the introduction of an essay about renewable energy markets.
+                  </p>
+                </div>
+              </div>
+      
+              <p class="mt-3 text-xs text-gray-400">
+                <span class="font-semibold text-gray-300">Why it matters:</span>
+                Using AI as a drafting assistant preserves integrity and avoids policy violations.
+              </p>
+            </div>
+      
+            <!-- Rule 04 -->
+            <div class="space-y-2">
+              <h4 class="text-white font-semibold text-base">
+                <span class="text-gray-400 mr-2">04</span> Always verify AI-generated information
+              </h4>
+              <p class="text-sm text-gray-300">
+                AI outputs can sound confident while being wrong. Always fact-check critical details.
+              </p>
+      
+              <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
+                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Don’t</p>
+                  <p class="text-sm text-gray-200">
+                    <span class="text-red-300 font-semibold">❌</span>
+                    According to this AI, remote work started in 2012.
+                  </p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <p class="text-sm text-gray-200">
+                    <span class="text-green-300 font-semibold">✅</span>
+                    Ask for sources, then independently verify dates, statistics, and claims.
+                  </p>
+                </div>
+              </div>
+      
+              <p class="mt-3 text-xs text-gray-400">
+                <span class="font-semibold text-gray-300">Why it matters:</span>
+                AI predicts language patterns — it doesn’t validate truth.
+              </p>
+            </div>
+      
+            <!-- Quick safety checklist -->
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+              <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-3">Safe usage checklist</p>
+              <ul class="space-y-3 text-sm text-gray-200">
+                <li class="flex gap-3">
+                  <span class="mt-[7px] w-1.5 h-1.5 rounded-full bg-white/70"></span>
+                  <span>No personal or identifying information.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-[7px] w-1.5 h-1.5 rounded-full bg-white/70"></span>
+                  <span>No confidential business or client data.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-[7px] w-1.5 h-1.5 rounded-full bg-white/70"></span>
+                  <span>Summarize sensitive material instead of pasting it.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-[7px] w-1.5 h-1.5 rounded-full bg-white/70"></span>
+                  <span>Verify important facts with trusted sources.</span>
+                </li>
               </ul>
-              <div class="mt-3 bg-[#1A1C20] border-l-4 border-red-500 p-3 rounded-md text-sm">
-                ❌ <strong>Unsafe:</strong> “Hi, my name is Emma Collins. I live in London at 15 Bridge Road. Can you help me write a rental application?”<br>
-                ✅ <strong>Safe:</strong> “Help me write a polite rental application for a young professional moving to London.”
-              </div>
-              <p class="mt-2 text-sm text-gray-400 italic">
-                <strong>Why:</strong> AI systems may log your prompts to improve performance. Once shared, your personal information can’t easily be deleted or controlled. Even by you.
-              </p>
-            </div>
-      
-            <!-- Tip 2 -->
-            <div>
-              <h4 class="font-bold text-white mb-2">⚠️ 2. Avoid Uploading Confidential or Client Data</h4>
-              <p class="text-sm text-gray-300">Never upload or paste information that belongs to others or contains sensitive business content. This includes:</p>
-              <ul class="list-disc list-inside text-sm text-gray-400 mt-2">
-                <li>📂 Internal company reports or contracts</li>
-                <li>🧾 Financial statements or customer lists</li>
-                <li>📎 Private project files, prototypes, or source code</li>
-                <li>👥 Client names, addresses, or email chains</li>
-              </ul>
-              <div class="mt-3 bg-[#1A1C20] border-l-4 border-yellow-500 p-3 rounded-md text-sm">
-                ❌ <strong>Unsafe:</strong> “Here’s our client list and pricing model — can you suggest improvements?”<br>
-                ✅ <strong>Safe:</strong> “What’s the best structure for presenting client data in a pricing proposal?”
-              </div>
-              <p class="mt-2 text-sm text-gray-400 italic">
-                <strong>Why:</strong> Even reputable AI tools may temporarily store uploaded content. If it includes private data, that could violate contracts, NDAs or data protection laws like GDPR.
-              </p>
-            </div>
-      
-            <!-- Tip 3 -->
-            <div>
-              <h4 class="font-bold text-white mb-2">💼 3. Be Careful With Academic or Workplace Material</h4>
-              <p class="text-sm text-gray-300">Don’t paste unpublished essays, assessments or official work documents directly into AI tools. Instead, summarize your request.</p>
-              <div class="mt-3 bg-[#1A1C20] border-l-4 border-orange-500 p-3 rounded-md text-sm">
-                ❌ <strong>Unsafe:</strong> “This is my entire essay draft. Can you rewrite it for me?”<br>
-                ✅ <strong>Safe:</strong> “Can you suggest improvements for an introduction about the effects of renewable energy on global markets?”
-              </div>
-              <p class="mt-2 text-sm text-gray-400 italic">
-                <strong>Why:</strong> Sharing unsubmitted coursework or work files can break academic integrity rules or internal policies. It’s better to use AI as a *coach* for structure and clarity, not a ghostwriter.
-              </p>
-            </div>
-      
-            <!-- Tip 4 -->
-            <div>
-              <h4 class="font-bold text-white mb-2">🔍 4. Always Verify AI-Generated Information</h4>
-              <p class="text-sm text-gray-300">AI tools can produce text that sounds confident but isn’t factually correct. Before sharing or submitting, double-check:</p>
-              <ul class="list-disc list-inside text-sm text-gray-400 mt-2">
-                <li>📆 Dates and statistics</li>
-                <li>📚 Research citations or references</li>
-                <li>📰 Quotes, legal facts, and news claims</li>
-              </ul>
-              <div class="mt-3 bg-[#1A1C20] border-l-4 border-purple-500 p-3 rounded-md text-sm">
-                ❌ <strong>Unsafe:</strong> “According to "model", remote work began in 2012.” (Incorrect — remote work has existed for decades.)<br>
-                ✅ <strong>Safe:</strong> “Run a quick "Fact check" on information produced by models or ask for its sources and verify”
-              </div>
-              <p class="mt-2 text-sm text-gray-400 italic">
-                <strong>Why:</strong> AI models don’t “know” facts — they predict text patterns. Verifying their output prevents misinformation and protects your credibility.
-              </p>
-            </div>
-      
-            <!-- Pro Tip -->
-            <div class="mt-6 bg-[#1A1C20] border-l-4 border-blue-500 p-3 rounded-md text-sm">
-              💡 <strong>Pro Tip:</strong> If you wouldn’t email it to a stranger or post it on social media, don’t share it with an AI tool.
             </div>
       
           </div>
