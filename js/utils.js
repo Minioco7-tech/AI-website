@@ -291,9 +291,20 @@ export function renderPagination({
   // Right chevron only if not last page
   if (p < Y) row.appendChild(makeChevron('right', p + 1, false));
 
+  // -----------------------------
+  // Meta text: Showing models X–Y
+  // -----------------------------
+  const start = (currentPage - 1) * perPage + 1;
+  const end = Math.min(currentPage * perPage, totalItems);
+  
+  const meta = document.createElement('div');
+  meta.className = 'mt-3 text-xs text-gray-500 text-center';
+  meta.textContent = `Showing models ${start}–${end} of ${totalItems}`;
+
   // Mount
   container.appendChild(nextWrap);
   container.appendChild(row);
+  container.appendChild(meta);
 
   // Render feather chevrons
   if (window.feather) window.feather.replace({ 'stroke-width': 2.6 });
