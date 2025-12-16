@@ -327,6 +327,16 @@ footer p {
    filter: brightness(1.1);
 }
 
+/* Home page information drop-downs */
+/* Remove default triangle marker */
+.guide-summary::-webkit-details-marker { display: none; }
+
+/* Subtle open/close polish */
+.guide-accordion[open] {
+  border-color: rgba(255,255,255,0.16);
+}
+
+
 /* Responsive tweaks */
 @media screen and (max-width: 768px) {
   .carousel-container {
