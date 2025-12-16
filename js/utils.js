@@ -147,7 +147,11 @@ export function getPaginatedModels(models, currentPage, perPage = MODELS_PER_PAG
 
 
 // ============================================================================
-// ✅ Render pagination buttons UI (compact: window + first/last + prev/next)
+// ✅ Render pagination UI (shows only 3 pages around current + final page)
+// Pattern examples:
+//  - Page 1 of 20:  Prev [1] 2 3 … 20 Next
+//  - Page 5 of 20:  Prev 4 [5] 6 … 20 Next
+//  - Page 19 of 20: Prev … 17 18 [19] 20 Next
 // ============================================================================
 export function renderPagination({
   totalItems,
@@ -167,29 +171,28 @@ export function renderPagination({
   const wrapper = document.createElement('div');
   wrapper.className = 'flex items-center justify-center gap-2 mt-8 flex-wrap';
 
-  function createPageButton(label, page, { isActive = false, isDisabled = false } = {}) {
+  const meta = document.createElement('div');
+  meta.className = 'w-full text-center text-xs text-gray-500 mt-2';
+  meta.textContent = `Page ${currentPage} of ${totalPages}`;
+
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  function createButton(label, page, { active = false, disabled = false } = {}) {
     const btn = document.createElement('button');
+    btn.type = 'button';
     btn.textContent = label;
 
-    let baseClasses =
-      'px-3 py-1 rounded-md text-sm border border-white/10 transition-colors';
+    const base = 'px-3 py-1 text-sm rounded-md border border-white/10 transition-colors';
+    const activeCls = 'bg-white text-black';
+    const disabledCls = 'bg-black/20 text-gray-500 cursor-not-allowed';
+    const normalCls = 'bg-black/30 text-white hover:bg-white/10';
 
-    if (isActive) {
-      baseClasses += ' bg-white text-black';
-    } else if (isDisabled) {
-      baseClasses += ' bg-black/20 text-gray-500 cursor-not-allowed';
-    } else {
-      baseClasses += ' bg-black/30 text-white hover:bg-white/10';
-    }
+    btn.className = `${base} ${active ? activeCls : disabled ? disabledCls : normalCls}`;
 
-    btn.className = baseClasses;
-
-    if (!isDisabled && typeof page === 'number' && page !== currentPage) {
+    if (!disabled && !active && typeof page === 'number') {
       btn.addEventListener('click', () => {
-        if (typeof onPageChange === 'function') {
-          onPageChange(page);
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+        if (typeof onPageChange === 'function') onPageChange(page);
+        scrollToTop();
       });
     }
 
@@ -199,73 +202,61 @@ export function renderPagination({
   function createEllipsis() {
     const span = document.createElement('span');
     span.textContent = '…';
-    span.className = 'px-2 text-sm text-gray-500 select-none';
+    span.className = 'px-2 text-gray-500 select-none';
     return span;
   }
 
-  // Prev button
+  // ------------------------------
+  // Prev
+  // ------------------------------
   wrapper.appendChild(
-    createPageButton('Prev', currentPage - 1, {
-      isDisabled: currentPage === 1
-    })
+    createButton('Prev', currentPage - 1, { disabled: currentPage === 1 })
   );
 
-  // If few pages, just show all
-  if (totalPages <= 7) {
-    for (let page = 1; page <= totalPages; page++) {
-      wrapper.appendChild(
-        createPageButton(String(page), page, {
-          isActive: page === currentPage
-        })
-      );
-    }
-  } else {
-    // Always show first page
+  // ------------------------------
+  // Middle window: ONLY 3 pages
+  // (current-1, current, current+1)
+  // Plus always show last page
+  // ------------------------------
+  const windowStart = Math.max(1, currentPage - 1);
+  const windowEnd = Math.min(totalPages - 1, currentPage + 1);
+
+  // If we're not starting at page 1, show "1" then ellipsis if gap is bigger than 1
+  if (windowStart > 1) {
     wrapper.appendChild(
-      createPageButton('1', 1, { isActive: currentPage === 1 })
+      createButton('1', 1, { active: currentPage === 1 })
     );
 
-    // Left ellipsis
-    if (currentPage > 3) {
+    if (windowStart > 2) {
       wrapper.appendChild(createEllipsis());
     }
+  }
 
-    // Window around current page
-    const windowStart = Math.max(2, currentPage - 1);
-    const windowEnd = Math.min(totalPages - 1, currentPage + 1);
-
-    for (let page = windowStart; page <= windowEnd; page++) {
-      wrapper.appendChild(
-        createPageButton(String(page), page, {
-          isActive: page === currentPage
-        })
-      );
-    }
-
-    // Right ellipsis
-    if (currentPage < totalPages - 2) {
-      wrapper.appendChild(createEllipsis());
-    }
-
-    // Always show last page
+  // The 3-page window (max)
+  for (let p = windowStart; p <= windowEnd; p++) {
     wrapper.appendChild(
-      createPageButton(String(totalPages), totalPages, {
-        isActive: currentPage === totalPages
-      })
+      createButton(String(p), p, { active: p === currentPage })
     );
   }
 
-  // Next button
-  wrapper.appendChild(
-    createPageButton('Next', currentPage + 1, {
-      isDisabled: currentPage === totalPages
-    })
-  );
+  // Ellipsis before last page if needed
+  if (windowEnd < totalPages - 1) {
+    wrapper.appendChild(createEllipsis());
+  }
 
-  // Optional "Page X of Y" label under buttons
-  const meta = document.createElement('div');
-  meta.className = 'mt-2 text-xs text-gray-500 text-center w-full';
-  meta.textContent = `Page ${currentPage} of ${totalPages}`;
+  // Always show last page (if > 1)
+  if (totalPages > 1) {
+    wrapper.appendChild(
+      createButton(String(totalPages), totalPages, { active: currentPage === totalPages })
+    );
+  }
+
+  // ------------------------------
+  // Next
+  // ------------------------------
+  wrapper.appendChild(
+    createButton('Next', currentPage + 1, { disabled: currentPage === totalPages })
+  );
 
   container.appendChild(wrapper);
   container.appendChild(meta);
