@@ -145,7 +145,6 @@ export function getPaginatedModels(models, currentPage, perPage = MODELS_PER_PAG
   return models.slice(start, end);
 }
 
-
 // ============================================================================
 // ✅ Render pagination UI (shows only 3 pages around current + final page)
 // Pattern examples:
@@ -153,6 +152,7 @@ export function getPaginatedModels(models, currentPage, perPage = MODELS_PER_PAG
 //  - Page 5 of 20:  Prev 4 [5] 6 … 20 Next
 //  - Page 19 of 20: Prev … 17 18 [19] 20 Next
 // ============================================================================
+
 export function renderPagination({
   totalItems,
   currentPage,
@@ -165,14 +165,16 @@ export function renderPagination({
 
   const totalPages = Math.ceil(totalItems / perPage);
   container.innerHTML = '';
-
   if (totalPages <= 1) return;
 
+  // Force a clean centered layout regardless of parent CSS
+  container.className = 'w-full flex flex-col items-center justify-center';
+
   const wrapper = document.createElement('div');
-  wrapper.className = 'flex items-center justify-center gap-2 mt-8 flex-wrap';
+  wrapper.className = 'w-full flex items-center justify-center gap-2 mt-8 flex-wrap';
 
   const meta = document.createElement('div');
-  meta.className = 'w-full text-center text-xs text-gray-500 mt-2';
+  meta.className = 'w-full text-center text-xs text-gray-500 mt-3';
   meta.textContent = `Page ${currentPage} of ${totalPages}`;
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -191,7 +193,7 @@ export function renderPagination({
 
     if (!disabled && !active && typeof page === 'number') {
       btn.addEventListener('click', () => {
-        if (typeof onPageChange === 'function') onPageChange(page);
+        onPageChange?.(page);
         scrollToTop();
       });
     }
@@ -206,54 +208,33 @@ export function renderPagination({
     return span;
   }
 
-  // ------------------------------
   // Prev
-  // ------------------------------
   wrapper.appendChild(
     createButton('Prev', currentPage - 1, { disabled: currentPage === 1 })
   );
 
-  // ------------------------------
-  // Middle window: ONLY 3 pages
-  // (current-1, current, current+1)
-  // Plus always show last page
-  // ------------------------------
+  // Only 3 pages around current + last page
   const windowStart = Math.max(1, currentPage - 1);
   const windowEnd = Math.min(totalPages - 1, currentPage + 1);
 
-  // If we're not starting at page 1, show "1" then ellipsis if gap is bigger than 1
   if (windowStart > 1) {
-    wrapper.appendChild(
-      createButton('1', 1, { active: currentPage === 1 })
-    );
-
-    if (windowStart > 2) {
-      wrapper.appendChild(createEllipsis());
-    }
+    wrapper.appendChild(createButton('1', 1, { active: currentPage === 1 }));
+    if (windowStart > 2) wrapper.appendChild(createEllipsis());
   }
 
-  // The 3-page window (max)
   for (let p = windowStart; p <= windowEnd; p++) {
-    wrapper.appendChild(
-      createButton(String(p), p, { active: p === currentPage })
-    );
+    wrapper.appendChild(createButton(String(p), p, { active: p === currentPage }));
   }
 
-  // Ellipsis before last page if needed
-  if (windowEnd < totalPages - 1) {
-    wrapper.appendChild(createEllipsis());
-  }
+  if (windowEnd < totalPages - 1) wrapper.appendChild(createEllipsis());
 
-  // Always show last page (if > 1)
   if (totalPages > 1) {
     wrapper.appendChild(
       createButton(String(totalPages), totalPages, { active: currentPage === totalPages })
     );
   }
 
-  // ------------------------------
   // Next
-  // ------------------------------
   wrapper.appendChild(
     createButton('Next', currentPage + 1, { disabled: currentPage === totalPages })
   );
@@ -261,7 +242,6 @@ export function renderPagination({
   container.appendChild(wrapper);
   container.appendChild(meta);
 }
-
 
 // ============================================================================
 // ✅ Normalize category field into an array
