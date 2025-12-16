@@ -167,11 +167,49 @@ export function renderPagination({
   container.innerHTML = '';
   if (totalPages <= 1) return;
 
-  // Ensure centered + clean layout regardless of parent styles
   container.className = 'w-full flex flex-col items-center justify-center mt-10';
 
+  const Y = totalPages;
+  const p = currentPage;
+
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  // -----------------------------
+  // "Next" pill (fixed size only)
+  // -----------------------------
+  const nextPill = document.createElement('button');
+  nextPill.type = 'button';
+  nextPill.textContent = 'Next';
+
+  // ✅ Fixed size (adjust w-72 if you want wider/narrower)
+  nextPill.className =
+    'w-72 h-11 rounded-full px-6 text-sm font-semibold ' +
+    'bg-white/10 text-white border border-white/15 ' +
+    'hover:bg-white/15 transition-colors';
+
+  if (p === Y) {
+    nextPill.disabled = true;
+    nextPill.className =
+      'w-72 h-11 rounded-full px-6 text-sm font-semibold ' +
+      'bg-white/5 text-gray-500 border border-white/10 cursor-not-allowed';
+  } else {
+    nextPill.addEventListener('click', () => {
+      onPageChange?.(p + 1);
+      scrollToTop();
+    });
+  }
+
+  // Wrapper just to center the fixed-size button
+  const nextWrap = document.createElement('div');
+  nextWrap.className = 'w-full flex justify-center';
+  nextWrap.appendChild(nextPill);
+
+  // -----------------------------
+  // Pagination row (natural width)
+  // -----------------------------
   const row = document.createElement('div');
-  row.className = 'w-full flex items-center justify-center gap-3 flex-wrap select-none';
+  // ✅ inline-flex means it sizes to its content naturally
+  row.className = 'inline-flex items-center justify-center gap-3 flex-wrap mt-4 select-none';
 
   const makeEllipsis = () => {
     const span = document.createElement('span');
@@ -180,18 +218,24 @@ export function renderPagination({
     return span;
   };
 
-  const makeArrow = (label, page, disabled) => {
-    const a = document.createElement('button');
-    a.type = 'button';
-    a.textContent = label; // "<" or ">"
-    a.className = `text-sm font-medium ${disabled ? 'text-gray-700 cursor-default' : 'text-gray-300 hover:text-white'} transition-colors`;
+  const makeChevron = (direction, page, disabled) => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.setAttribute('aria-label', direction === 'left' ? 'Previous page' : 'Next page');
+
+    btn.className = disabled
+      ? 'w-8 h-8 inline-flex items-center justify-center text-gray-700 cursor-default'
+      : 'w-8 h-8 inline-flex items-center justify-center text-gray-300 hover:text-white transition-colors';
+
+    btn.innerHTML = `<i data-feather="chevron-${direction}" style="width:22px;height:22px;"></i>`;
+
     if (!disabled) {
-      a.addEventListener('click', () => {
+      btn.addEventListener('click', () => {
         onPageChange?.(page);
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        scrollToTop();
       });
     }
-    return a;
+    return btn;
   };
 
   const makePage = (page) => {
@@ -199,9 +243,8 @@ export function renderPagination({
     btn.type = 'button';
     btn.textContent = String(page);
 
-    const isActive = page === currentPage;
+    const isActive = page === p;
 
-    // No visible container unless active (active = white circle)
     btn.className = isActive
       ? 'w-8 h-8 inline-flex items-center justify-center rounded-full bg-white text-black text-sm font-semibold'
       : 'w-8 h-8 inline-flex items-center justify-center rounded-full text-sm text-gray-300 hover:text-white transition-colors';
@@ -209,44 +252,27 @@ export function renderPagination({
     if (!isActive) {
       btn.addEventListener('click', () => {
         onPageChange?.(page);
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        scrollToTop();
       });
     }
-
     return btn;
   };
 
-  // ---------- Build the page list based on your rules ----------
-  // Always show last page (Y)
-  // Start pages: show 1 2 3
-  // Middle: < 1 ... p-1 p p+1 ... Y >
-  // End: < 1 ... Y-2 Y-1 Y
+  // Build the page list using your rules
   const pages = [];
+  const add = (x) => { if (!pages.includes(x)) pages.push(x); };
 
-  // Helpers to add pages without duplicates
-  const add = (p) => {
-    if (!pages.includes(p)) pages.push(p);
-  };
-
-  const Y = totalPages;
-  const p = currentPage;
-
-  // Decide which pages to show
   if (Y <= 6) {
-    // Small page counts: just show all pages
     for (let i = 1; i <= Y; i++) add(i);
   } else if (p <= 2) {
-    // Page 1-2: 1 2 3 ... Y
     add(1); add(2); add(3);
     pages.push('ellipsis-right');
     add(Y);
   } else if (p >= Y - 1) {
-    // Last two pages: < 1 ... Y-2 Y-1 Y
     add(1);
     pages.push('ellipsis-left');
     add(Y - 2); add(Y - 1); add(Y);
   } else {
-    // Middle: < 1 ... p-1 p p+1 ... Y
     add(1);
     pages.push('ellipsis-left');
     add(p - 1); add(p); add(p + 1);
@@ -254,29 +280,23 @@ export function renderPagination({
     add(Y);
   }
 
-  // ---------- Render arrows + pages ----------
-  const prevDisabled = p === 1;
-  const nextDisabled = p === Y;
-
-  // Left arrow only from page 2 onward (as per your examples)
-  if (!prevDisabled) {
-    row.appendChild(makeArrow('<', p - 1, false));
-  }
+  // Left chevron only from page 2 onwards
+  if (p > 1) row.appendChild(makeChevron('left', p - 1, false));
 
   for (const item of pages) {
-    if (item === 'ellipsis-left' || item === 'ellipsis-right') {
-      row.appendChild(makeEllipsis());
-    } else {
-      row.appendChild(makePage(item));
-    }
+    if (item === 'ellipsis-left' || item === 'ellipsis-right') row.appendChild(makeEllipsis());
+    else row.appendChild(makePage(item));
   }
 
-  // Right arrow only if not last page
-  if (!nextDisabled) {
-    row.appendChild(makeArrow('>', p + 1, false));
-  }
+  // Right chevron only if not last page
+  if (p < Y) row.appendChild(makeChevron('right', p + 1, false));
 
+  // Mount
+  container.appendChild(nextWrap);
   container.appendChild(row);
+
+  // Render feather chevrons
+  if (window.feather) window.feather.replace({ 'stroke-width': 2.6 });
 }
 
 
