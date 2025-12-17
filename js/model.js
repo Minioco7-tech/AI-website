@@ -390,22 +390,49 @@ function renderGridPage() {
 
   setTimeout(() => {
     grid.innerHTML = '';
+
     const start = currentIndex * modelsPerView;
     const pageModels = relatedModels.slice(start, start + modelsPerView);
 
     pageModels.forEach(model => {
       const card = createModelCard(model);
-      grid.appendChild(card);
-    });
 
-    // Re-observe new backgrounds
-    const lazyBackgrounds = document.querySelectorAll('.lazy-bg');
-    lazyBackgrounds.forEach(el => observer.observe(el));
+      // Wrap for consistent sizing
+      const wrap = document.createElement('div');
+      wrap.className = 'carousel-item';
+      wrap.appendChild(card);
+
+      // Clamp pills ONLY in carousel
+      clampBadgesForCarousel(card, 3);
+
+      grid.appendChild(wrap);
+    });
 
     updateDots();
     grid.classList.remove('opacity-0', 'scale-95');
   }, 150);
 }
+
+function clampBadgesForCarousel(cardEl, maxVisible = 3) {
+  const badgeRow = cardEl.querySelector('.model-card-badges');
+  if (!badgeRow) return;
+
+  const pills = Array.from(badgeRow.querySelectorAll('span'));
+  if (pills.length <= maxVisible) return;
+
+  const hidden = pills.length - maxVisible;
+
+  // Remove extra pills
+  pills.slice(maxVisible).forEach(p => p.remove());
+
+  // Add +X pill
+  const more = document.createElement('span');
+  more.className = 'badge-more inline-block px-3 py-1 text-xs font-semibold rounded-full';
+  more.textContent = `+${hidden}`;
+
+  badgeRow.appendChild(more);
+}
+
 
 function renderDots() {
   if (window.innerWidth <= 768) {
