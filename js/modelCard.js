@@ -50,7 +50,7 @@ export function createModelCard(model) {
     <div class="flex flex-col flex-1 p-4">
       <h3 class="text-purple-400 text-lg sm:text-xl font-bold leading-snug mb-2">${model.name}</h3>
       <p class="text-gray-200 text-sm sm:text-base font-normal leading-normal mb-3 line-clamp-2">${model.description}</p>
-      <div class="flex flex-wrap gap-2 mt-auto">
+      <div class="model-card-badges flex flex-wrap gap-2 mt-auto">
         ${badges}
       </div>
     </div>
