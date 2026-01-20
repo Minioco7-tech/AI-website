@@ -1,4 +1,3 @@
-// hero-animation.js
 document.addEventListener("DOMContentLoaded", function () {
   const el = document.getElementById("hero-section");
   if (!el) return;
@@ -41,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Animation loop
   function animate() {
-    // ctx.fillStyle = "transparent"; // background color
+    // Clear canvas for transparent background
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // Draw lines
@@ -53,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const dy = p1.y - p2.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
         if (dist < MAX_DISTANCE) {
-          ctx.strokeStyle = `rgba(0, 191, 255, ${1 - dist / MAX_DISTANCE})`; // #00BFFF
+          ctx.strokeStyle = `rgba(0, 191, 255, ${0.3 * (1 - dist / MAX_DISTANCE)})`;
           ctx.lineWidth = 1;
           ctx.beginPath();
           ctx.moveTo(p1.x, p1.y);
@@ -84,4 +83,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
   animate();
 });
-
