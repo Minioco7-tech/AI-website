@@ -9,7 +9,7 @@ window.addEventListener("load",() => {
   canvas.style.left = 0;
   canvas.style.width = "100%";
   canvas.style.height = "100%";
-  canvas.style.zIndex = 0; // behind hero content
+  canvas.style.zIndex = 5; // behind hero content
   el.prepend(canvas);
 
   const ctx = canvas.getContext("2d");
