@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load",() => {
   const el = document.getElementById("hero-section");
   if (!el) return;
 
