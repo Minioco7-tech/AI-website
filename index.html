@@ -33,14 +33,16 @@
 
   <!-- Hero Section -->
   <section 
-    class="relative min-h-[70vh] md:min-h-[75vh] flex flex-col items-center justify-center text-center text-white bg-cover bg-center overflow-hidden"
-    style="background-image: url('Images/background/background.webp');"
+    id="hero-section"
+    class="relative min-h-[70vh] md:min-h-[75vh] flex flex-col items-center justify-center text-center text-white overflow-hidden"
   >
+    <!-- Hero animation canvas will be injected by hero-animation.js -->
+
     <!-- Dark gradient + blur overlay -->
-    <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-black/75"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-[#020617] via-[#020617] to-[#020617] z-10 pointer-events-none"></div>
 
     <!-- Hero Content -->
-    <div class="relative z-10 max-w-2xl px-6">
+    <div class="relative z-20 max-w-2xl px-6">
       <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6 bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
         Discover the World's Smartest AI Tools
       </h1>
@@ -232,6 +234,7 @@
   <!-- Footer -->
   <footer id="footer"></footer>
   <!-- Scripts -->
+  <script src="js/hero-animation.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
   <script type="module" src="js/utils.js"></script>
   <script type="module" src="js/background.js"></script> 
