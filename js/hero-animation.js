@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const POINTS = Math.floor(area / 1000);
 
     return {
-      POINTS: Math.min(Math.max(POINTS, 40), 120),
+      POINTS: Math.min(Math.max(POINTS, 100), 300),
       MAX_DISTANCE: minDimension * 0.18,
       SPEED: minDimension / 1500
     };
