@@ -130,20 +130,25 @@
 
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script>
+  <script>
+    // Ensure THREE is globally available
+    window.THREE = window.THREE || THREE;
+  </script>
   <script src="js/hero-animation.js"></script>
   <script>
-    // Initialize VANTA.NET animation
-    VANTA.NET({
-      el: "#hero-section",
-      color: 0x00BFFF,           // lines color
-      backgroundColor: 0x020617, // matches website gradient
-      points: 12,                // number of points
-      maxDistance: 20,           // max line distance
-      spacing: 18,               // spacing between points
-      showDots: true             // small dots at points
+    // Initialize VANTA.NET after the script loads
+    document.addEventListener("DOMContentLoaded", function() {
+      VANTA.NET({
+        el: "#hero-section",
+        color: 0x00BFFF,           // line color
+        backgroundColor: 0x020617, // matches your dark theme
+        points: 12,                // number of points
+        maxDistance: 20,           // max line distance
+        spacing: 18,               // spacing between points
+        showDots: true             // small dots at points
+      });
     });
   </script>
-
   <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
   <script type="module" src="js/utils.js"></script>
   <script type="module" src="js/background.js"></script> 
