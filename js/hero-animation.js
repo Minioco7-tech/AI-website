@@ -9,43 +9,69 @@ document.addEventListener("DOMContentLoaded", () => {
   const canvas = document.createElement("canvas");
   canvas.style.position = "absolute";
   canvas.style.inset = "0";
-  canvas.style.width = "100%";
-  canvas.style.height = "100%";
   canvas.style.zIndex = "0";
   canvas.style.pointerEvents = "none";
   el.prepend(canvas);
 
   const ctx = canvas.getContext("2d");
   let points = [];
+  let lastWidth = 0;
+  let lastHeight = 0;
 
   /* ===============================
-     Density Configuration
+     Responsive Configuration
   =============================== */
   function getConfig() {
     const w = canvas.width;
     const h = canvas.height;
-    const area = w * h;
-    const minDim = Math.min(w, h);
-
-    // MUCH higher base density
-    const POINTS = Math.floor(area / 9000);
+    const isMobile = w < 768;
 
     return {
-      POINTS: Math.min(Math.max(POINTS, 80), 220),
-      MAX_DISTANCE: minDim * 0.22,
-      SPEED: minDim / 1800
+      POINTS: isMobile
+        ? Math.floor(w / 6)       // mobile: controlled, clean
+        : Math.floor(w / 3),      // desktop: much denser
+
+      MAX_DISTANCE: isMobile ? 110 : 160,
+      SPEED: isMobile ? 0.35 : 0.45
     };
   }
 
   /* ===============================
-     Resize + Rebuild
+     Resize (NO REBUILD)
   =============================== */
   function resize() {
-    canvas.width = el.offsetWidth;
-    canvas.height = el.offsetHeight;
+    const w = el.offsetWidth;
+    const h = el.offsetHeight;
 
-    const { POINTS, SPEED } = getConfig();
+    canvas.width = w;
+    canvas.height = h;
+
+    if (!lastWidth || !lastHeight) {
+      lastWidth = w;
+      lastHeight = h;
+      buildPoints();
+      return;
+    }
+
+    // Scale positions instead of recreating points
+    const sx = w / lastWidth;
+    const sy = h / lastHeight;
+
+    points.forEach(p => {
+      p.x *= sx;
+      p.y *= sy;
+    });
+
+    lastWidth = w;
+    lastHeight = h;
+  }
+
+  /* ===============================
+     Build Points (ONCE)
+  =============================== */
+  function buildPoints() {
     points = [];
+    const { POINTS, SPEED } = getConfig();
 
     for (let i = 0; i < POINTS; i++) {
       points.push({
@@ -58,17 +84,20 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   resize();
-  window.addEventListener("resize", resize);
+  window.addEventListener("resize", () => {
+    clearTimeout(window.__heroResize);
+    window.__heroResize = setTimeout(resize, 120);
+  });
 
   /* ===============================
-     Animation Loop
+     Animation Loop (single RAF)
   =============================== */
   function animate() {
     const { MAX_DISTANCE } = getConfig();
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Draw connections
+    // Lines
     for (let i = 0; i < points.length; i++) {
       for (let j = i + 1; j < points.length; j++) {
         const dx = points[i].x - points[j].x;
@@ -76,10 +105,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const dist = Math.hypot(dx, dy);
 
         if (dist < MAX_DISTANCE) {
-          // Raised baseline opacity → no invisible lines
           const alpha = 0.18 + 0.32 * (1 - dist / MAX_DISTANCE);
-
-          ctx.strokeStyle = `rgba(0, 191, 255, ${alpha})`;
+          ctx.strokeStyle = `rgba(0,191,255,${alpha})`;
           ctx.lineWidth = 1.15;
           ctx.beginPath();
           ctx.moveTo(points[i].x, points[i].y);
@@ -89,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    // Draw points
+    // Points
     for (const p of points) {
       ctx.fillStyle = "#00BFFF";
       ctx.beginPath();
@@ -99,8 +126,8 @@ document.addEventListener("DOMContentLoaded", () => {
       p.x += p.vx;
       p.y += p.vy;
 
-      if (p.x <= 0 || p.x >= canvas.width) p.vx *= -1;
-      if (p.y <= 0 || p.y >= canvas.height) p.vy *= -1;
+      if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+      if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
     }
 
     requestAnimationFrame(animate);
