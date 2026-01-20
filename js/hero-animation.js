@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const area = canvas.width * canvas.height;
     const minDimension = Math.min(canvas.width, canvas.height);
 
-    const POINTS = Math.floor(area / 18000);
+    const POINTS = Math.floor(area / 1000);
 
     return {
       POINTS: Math.min(Math.max(POINTS, 40), 120),
