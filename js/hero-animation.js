@@ -1,35 +1,46 @@
-window.addEventListener("load",() => {
-  const el = document.getElementById("hero-section");
-  if (!el) return;
+// js/hero-animation.js
+
+window.addEventListener("load", () => {
+  const hero = document.getElementById("hero-section");
+  if (!hero) {
+    console.warn("Hero section not found");
+    return;
+  }
+
+  // Ensure hero is positioning context
+  hero.style.position = "relative";
 
   // Create canvas
   const canvas = document.createElement("canvas");
+  canvas.setAttribute("aria-hidden", "true");
   canvas.style.position = "absolute";
-  canvas.style.top = 0;
-  canvas.style.left = 0;
+  canvas.style.inset = "0";
   canvas.style.width = "100%";
   canvas.style.height = "100%";
-  canvas.style.zIndex = 5; // behind hero content
-  el.prepend(canvas);
+  canvas.style.zIndex = "1"; // below overlay (10) and content (20)
+  canvas.style.pointerEvents = "none";
+
+  hero.prepend(canvas);
 
   const ctx = canvas.getContext("2d");
 
-  // Resize canvas
+  // Resize handling
   function resize() {
-    canvas.width = el.offsetWidth;
-    canvas.height = el.offsetHeight;
+    const rect = hero.getBoundingClientRect();
+    canvas.width = rect.width;
+    canvas.height = rect.height;
   }
   resize();
   window.addEventListener("resize", resize);
 
-  // Configuration
-  const POINTS = 40;
-  const MAX_DISTANCE = 120;
-  const SPEED = 0.5;
+  // Network configuration
+  const POINT_COUNT = 48;
+  const MAX_DISTANCE = 130;
+  const SPEED = 0.35;
   const points = [];
 
-  // Initialize points
-  for (let i = 0; i < POINTS; i++) {
+  // Create points
+  for (let i = 0; i < POINT_COUNT; i++) {
     points.push({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
@@ -38,44 +49,40 @@ window.addEventListener("load",() => {
     });
   }
 
-  // Animation loop
   function animate() {
-    // Clear canvas for transparent background
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Draw lines
-    for (let i = 0; i < POINTS; i++) {
-      const p1 = points[i];
-      for (let j = i + 1; j < POINTS; j++) {
-        const p2 = points[j];
-        const dx = p1.x - p2.x;
-        const dy = p1.y - p2.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
+    // Draw connections
+    for (let i = 0; i < points.length; i++) {
+      for (let j = i + 1; j < points.length; j++) {
+        const dx = points[i].x - points[j].x;
+        const dy = points[i].y - points[j].y;
+        const dist = Math.hypot(dx, dy);
+
         if (dist < MAX_DISTANCE) {
-          ctx.strokeStyle = `rgba(0, 191, 255, ${0.3 * (1 - dist / MAX_DISTANCE)})`;
+          const alpha = 0.25 * (1 - dist / MAX_DISTANCE);
+          ctx.strokeStyle = `rgba(0, 191, 255, ${alpha})`;
           ctx.lineWidth = 1;
           ctx.beginPath();
-          ctx.moveTo(p1.x, p1.y);
-          ctx.lineTo(p2.x, p2.y);
+          ctx.moveTo(points[i].x, points[i].y);
+          ctx.lineTo(points[j].x, points[j].y);
           ctx.stroke();
         }
       }
     }
 
-    // Draw points and update positions
-    for (let p of points) {
+    // Draw points
+    for (const p of points) {
       ctx.fillStyle = "#00BFFF";
       ctx.beginPath();
       ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
       ctx.fill();
 
-      // Move points
       p.x += p.vx;
       p.y += p.vy;
 
-      // Bounce off edges
-      if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
-      if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+      if (p.x <= 0 || p.x >= canvas.width) p.vx *= -1;
+      if (p.y <= 0 || p.y >= canvas.height) p.vy *= -1;
     }
 
     requestAnimationFrame(animate);
