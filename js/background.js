@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
     page === 'home'
       ? `
         <!-- Home base: black -->
-        <div class="absolute inset-0 bg-black"></div>
+        <!-- <div class="absolute inset-0 bg-black"> -->
+        <div class="absolute inset-0 bg-gradient-to-b from-[#020617] via-[#020617] to-[#020617]"></div>
       `
       : `
         <!-- Category/Model base: blue -->
