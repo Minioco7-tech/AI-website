@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return {
       POINTS,
       MAX_DISTANCE: isMobile ? 110 : 160,
-      BASE_SPEED: isMobile ? 0.25 : 6 // mobile slowed to 1/3, desktop increased 4x
+      BASE_SPEED: isMobile ? 0.25 : 2 // mobile slowed to 1/3, desktop increased 4x
     };
   }
 
