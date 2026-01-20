@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
   =============================== */
   function getConfig() {
     const w = canvas.width;
-    const h = canvas.height;
     const isMobile = w < 768;
 
     let POINTS;
@@ -37,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return {
       POINTS,
       MAX_DISTANCE: isMobile ? 110 : 160,
-      SPEED: isMobile ? 0.035 : 0.045
+      BASE_SPEED: isMobile ? 0.8 : 1.5 // speed scaling factor per device
     };
   }
 
@@ -48,15 +47,15 @@ document.addEventListener("DOMContentLoaded", () => {
     canvas.width = el.offsetWidth;
     canvas.height = el.offsetHeight;
 
-    const { POINTS, SPEED } = getConfig();
+    const { POINTS } = getConfig();
     points = [];
 
     for (let i = 0; i < POINTS; i++) {
       points.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * SPEED,
-        vy: (Math.random() - 0.5) * SPEED
+        vx: (Math.random() - 0.5), // normalized; real speed applied in animate
+        vy: (Math.random() - 0.5)
       });
     }
   }
@@ -65,13 +64,13 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", resize);
 
   /* ===============================
-     Animation Loop with Delta Time
+     Animation Loop
   =============================== */
   function animate(now) {
     const deltaTime = (now - lastTime) / 16; // normalize to ~60fps
     lastTime = now;
 
-    const { MAX_DISTANCE } = getConfig();
+    const { MAX_DISTANCE, BASE_SPEED } = getConfig();
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -83,8 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const dist = Math.hypot(dx, dy);
 
         if (dist < MAX_DISTANCE) {
-          // brighter baseline alpha
-          const alpha = 0.18 + 0.32 * (1 - dist / MAX_DISTANCE);
+          const alpha = 0.18 + 0.32 * (1 - dist / MAX_DISTANCE); // brighter baseline
           ctx.strokeStyle = `rgba(0, 191, 255, ${alpha})`;
           ctx.lineWidth = 1.15;
           ctx.beginPath();
@@ -95,16 +93,18 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    // Draw points and update positions with delta
+    // Draw points and update positions with speed scaling
     for (const p of points) {
       ctx.fillStyle = "#00BFFF";
       ctx.beginPath();
       ctx.arc(p.x, p.y, 2.2, 0, Math.PI * 2);
       ctx.fill();
 
-      p.x += p.vx * deltaTime;
-      p.y += p.vy * deltaTime;
+      // Apply movement with deltaTime and device speed
+      p.x += p.vx * deltaTime * BASE_SPEED;
+      p.y += p.vy * deltaTime * BASE_SPEED;
 
+      // Bounce off edges
       if (p.x <= 0 || p.x >= canvas.width) p.vx *= -1;
       if (p.y <= 0 || p.y >= canvas.height) p.vy *= -1;
     }
@@ -114,4 +114,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
   requestAnimationFrame(animate);
 });
-
