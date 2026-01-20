@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return {
       POINTS,
       MAX_DISTANCE: isMobile ? 110 : 160,
-      BASE_SPEED: isMobile ? 0.8 : 1.5 // speed scaling factor per device
+      BASE_SPEED: isMobile ? 0.3 : 4.0 // speed scaling factor per device
     };
   }
 
