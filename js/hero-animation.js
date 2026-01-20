@@ -60,7 +60,7 @@ window.addEventListener("load", () => {
         const dist = Math.hypot(dx, dy);
 
         if (dist < MAX_DISTANCE) {
-          const alpha = 0.25 * (1 - dist / MAX_DISTANCE);
+          const alpha = 0.12 + 0.23 * (1 - dist / MAX_DISTANCE);
           ctx.strokeStyle = `rgba(0, 191, 255, ${alpha})`;
           ctx.lineWidth = 1;
           ctx.beginPath();
