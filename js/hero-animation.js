@@ -17,27 +17,41 @@ document.addEventListener("DOMContentLoaded", () => {
   let points = [];
   let lastWidth = 0;
   let lastHeight = 0;
+  let lastTime = performance.now();
+
+  /* ===============================
+     Scroll State (CRITICAL FIX)
+  =============================== */
+  let isScrolling = false;
+  let scrollTimeout;
+
+  window.addEventListener("scroll", () => {
+    isScrolling = true;
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      isScrolling = false;
+      lastTime = performance.now(); // reset clock to prevent jump
+    }, 120);
+  }, { passive: true });
 
   /* ===============================
      Responsive Configuration
   =============================== */
   function getConfig() {
     const w = canvas.width;
-    const h = canvas.height;
     const isMobile = w < 768;
 
     return {
       POINTS: isMobile
-        ? Math.floor(w / 6)       // mobile: controlled, clean
-        : Math.floor(w / 3),      // desktop: much denser
-
+        ? Math.floor(w / 6)
+        : Math.floor(w / 3),
       MAX_DISTANCE: isMobile ? 110 : 160,
-      SPEED: isMobile ? 0.35 : 0.45
+      SPEED: isMobile ? 0.035 : 0.045 // px per ms
     };
   }
 
   /* ===============================
-     Resize (NO REBUILD)
+     Resize Logic
   =============================== */
   function resize() {
     const w = el.offsetWidth;
@@ -53,7 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    // Scale positions instead of recreating points
     const sx = w / lastWidth;
     const sy = h / lastHeight;
 
@@ -66,9 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
     lastHeight = h;
   }
 
-  /* ===============================
-     Build Points (ONCE)
-  =============================== */
   function buildPoints() {
     points = [];
     const { POINTS, SPEED } = getConfig();
@@ -90,14 +100,18 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* ===============================
-     Animation Loop (single RAF)
+     Animation Loop
   =============================== */
-  function animate() {
-    const { MAX_DISTANCE } = getConfig();
+  function animate(now) {
+    let delta = now - lastTime;
+    lastTime = now;
 
+    if (delta > 40) delta = 40;
+
+    const { MAX_DISTANCE } = getConfig();
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // Lines
+    // Draw lines
     for (let i = 0; i < points.length; i++) {
       for (let j = i + 1; j < points.length; j++) {
         const dx = points[i].x - points[j].x;
@@ -116,22 +130,24 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    // Points
+    // Update + draw points
     for (const p of points) {
       ctx.fillStyle = "#00BFFF";
       ctx.beginPath();
       ctx.arc(p.x, p.y, 2.2, 0, Math.PI * 2);
       ctx.fill();
 
-      p.x += p.vx;
-      p.y += p.vy;
+      if (!isScrolling) {
+        p.x += p.vx * delta;
+        p.y += p.vy * delta;
 
-      if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
-      if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+        if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+      }
     }
 
     requestAnimationFrame(animate);
   }
 
-  animate();
+  requestAnimationFrame(animate);
 });
