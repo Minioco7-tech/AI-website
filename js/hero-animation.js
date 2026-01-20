@@ -41,8 +41,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Animation loop
   function animate() {
-    ctx.fillStyle = "#020617"; // background color
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    // ctx.fillStyle = "transparent"; // background color
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // Draw lines
     for (let i = 0; i < POINTS; i++) {
