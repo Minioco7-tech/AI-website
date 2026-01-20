@@ -17,7 +17,7 @@ window.addEventListener("load", () => {
   canvas.style.inset = "0";
   canvas.style.width = "100%";
   canvas.style.height = "100%";
-  canvas.style.zIndex = "1"; // below overlay (10) and content (20)
+  canvas.style.zIndex = "15"; // below overlay (10) and content (20)
   canvas.style.pointerEvents = "none";
 
   hero.prepend(canvas);
