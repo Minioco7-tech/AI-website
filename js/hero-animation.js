@@ -9,79 +9,47 @@ document.addEventListener("DOMContentLoaded", () => {
   const canvas = document.createElement("canvas");
   canvas.style.position = "absolute";
   canvas.style.inset = "0";
+  canvas.style.width = "100%";
+  canvas.style.height = "100%";
   canvas.style.zIndex = "0";
   canvas.style.pointerEvents = "none";
   el.prepend(canvas);
 
   const ctx = canvas.getContext("2d");
   let points = [];
-  let lastWidth = 0;
-  let lastHeight = 0;
   let lastTime = performance.now();
 
   /* ===============================
-     Scroll State (CRITICAL FIX)
-  =============================== */
-  let isScrolling = false;
-  let scrollTimeout;
-
-  window.addEventListener("scroll", () => {
-    isScrolling = true;
-    clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(() => {
-      isScrolling = false;
-      lastTime = performance.now(); // reset clock to prevent jump
-    }, 120);
-  }, { passive: true });
-
-  /* ===============================
-     Responsive Configuration
+     Density & Speed Config
   =============================== */
   function getConfig() {
     const w = canvas.width;
+    const h = canvas.height;
     const isMobile = w < 768;
 
+    let POINTS;
+    if (isMobile) {
+      POINTS = Math.floor(35 + w / 8); // mobile: enough points but not overcrowded
+    } else {
+      POINTS = Math.min(160, Math.floor(80 + (w - 768) / 12)); // desktop: capped
+    }
+
     return {
-      POINTS: isMobile
-        ? Math.floor(w / 6)
-        : Math.floor(w / 3),
+      POINTS,
       MAX_DISTANCE: isMobile ? 110 : 160,
-      SPEED: isMobile ? 0.035 : 0.045 // px per ms
+      SPEED: isMobile ? 0.035 : 0.045
     };
   }
 
   /* ===============================
-     Resize Logic
+     Resize & Init Points
   =============================== */
   function resize() {
-    const w = el.offsetWidth;
-    const h = el.offsetHeight;
+    canvas.width = el.offsetWidth;
+    canvas.height = el.offsetHeight;
 
-    canvas.width = w;
-    canvas.height = h;
-
-    if (!lastWidth || !lastHeight) {
-      lastWidth = w;
-      lastHeight = h;
-      buildPoints();
-      return;
-    }
-
-    const sx = w / lastWidth;
-    const sy = h / lastHeight;
-
-    points.forEach(p => {
-      p.x *= sx;
-      p.y *= sy;
-    });
-
-    lastWidth = w;
-    lastHeight = h;
-  }
-
-  function buildPoints() {
-    points = [];
     const { POINTS, SPEED } = getConfig();
+    points = [];
 
     for (let i = 0; i < POINTS; i++) {
       points.push({
@@ -94,21 +62,17 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   resize();
-  window.addEventListener("resize", () => {
-    clearTimeout(window.__heroResize);
-    window.__heroResize = setTimeout(resize, 120);
-  });
+  window.addEventListener("resize", resize);
 
   /* ===============================
-     Animation Loop
+     Animation Loop with Delta Time
   =============================== */
   function animate(now) {
-    let delta = now - lastTime;
+    const deltaTime = (now - lastTime) / 16; // normalize to ~60fps
     lastTime = now;
 
-    if (delta > 40) delta = 40;
-
     const { MAX_DISTANCE } = getConfig();
+
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // Draw lines
@@ -119,8 +83,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const dist = Math.hypot(dx, dy);
 
         if (dist < MAX_DISTANCE) {
+          // brighter baseline alpha
           const alpha = 0.18 + 0.32 * (1 - dist / MAX_DISTANCE);
-          ctx.strokeStyle = `rgba(0,191,255,${alpha})`;
+          ctx.strokeStyle = `rgba(0, 191, 255, ${alpha})`;
           ctx.lineWidth = 1.15;
           ctx.beginPath();
           ctx.moveTo(points[i].x, points[i].y);
@@ -130,20 +95,18 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    // Update + draw points
+    // Draw points and update positions with delta
     for (const p of points) {
       ctx.fillStyle = "#00BFFF";
       ctx.beginPath();
       ctx.arc(p.x, p.y, 2.2, 0, Math.PI * 2);
       ctx.fill();
 
-      if (!isScrolling) {
-        p.x += p.vx * delta;
-        p.y += p.vy * delta;
+      p.x += p.vx * deltaTime;
+      p.y += p.vy * deltaTime;
 
-        if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
-        if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
-      }
+      if (p.x <= 0 || p.x >= canvas.width) p.vx *= -1;
+      if (p.y <= 0 || p.y >= canvas.height) p.vy *= -1;
     }
 
     requestAnimationFrame(animate);
@@ -151,3 +114,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   requestAnimationFrame(animate);
 });
+
