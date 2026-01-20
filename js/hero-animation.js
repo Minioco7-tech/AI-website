@@ -1,112 +1,103 @@
 // hero-animation.js
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
   const el = document.getElementById("hero-section");
   if (!el) return;
 
-  /* ===============================
-     Canvas Setup
-  =============================== */
+  // Create canvas
   const canvas = document.createElement("canvas");
   canvas.style.position = "absolute";
-  canvas.style.inset = "0";
+  canvas.style.top = 0;
+  canvas.style.left = 0;
   canvas.style.width = "100%";
   canvas.style.height = "100%";
-  canvas.style.zIndex = "0";
-  canvas.style.pointerEvents = "none";
+  canvas.style.zIndex = 0; // behind hero content
   el.prepend(canvas);
 
   const ctx = canvas.getContext("2d");
-  let points = [];
-  let lastTime = performance.now();
 
-  /* ===============================
-     Density & Speed Config
-  =============================== */
+  // Resize canvas
+  function resize() {
+    canvas.width = el.offsetWidth;
+    canvas.height = el.offsetHeight;
+  }
+  resize();
+  window.addEventListener("resize", resize);
+
+  // Config function: returns number of points, max distance, base speed
   function getConfig() {
     const w = canvas.width;
     const isMobile = w < 768;
 
     let POINTS;
     if (isMobile) {
-      POINTS = Math.floor(35 + w / 8); // mobile: enough points but not overcrowded
+      POINTS = Math.floor(35 + w / 8); // mobile dot count
     } else {
-      POINTS = Math.min(160, Math.floor(80 + (w - 768) / 12)); // desktop: capped
+      POINTS = Math.min(160, Math.floor(80 + (w - 768) / 12)); // desktop dot count
     }
 
     return {
       POINTS,
       MAX_DISTANCE: isMobile ? 110 : 160,
-      BASE_SPEED: isMobile ? 0.3 : 4.0 // speed scaling factor per device
+      BASE_SPEED: isMobile ? 0.25 : 6 // mobile slowed to 1/3, desktop increased 4x
     };
   }
 
-  /* ===============================
-     Resize & Init Points
-  =============================== */
-  function resize() {
-    canvas.width = el.offsetWidth;
-    canvas.height = el.offsetHeight;
+  const { POINTS, MAX_DISTANCE, BASE_SPEED } = getConfig();
 
-    const { POINTS } = getConfig();
-    points = [];
-
-    for (let i = 0; i < POINTS; i++) {
-      points.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5), // normalized; real speed applied in animate
-        vy: (Math.random() - 0.5)
-      });
-    }
+  // Initialize points
+  const points = [];
+  for (let i = 0; i < POINTS; i++) {
+    points.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      vx: (Math.random() - 0.5) * BASE_SPEED,
+      vy: (Math.random() - 0.5) * BASE_SPEED
+    });
   }
 
-  resize();
-  window.addEventListener("resize", resize);
+  // Track previous timestamp for deltaTime
+  let lastTime = performance.now();
 
-  /* ===============================
-     Animation Loop
-  =============================== */
-  function animate(now) {
-    const deltaTime = (now - lastTime) / 16; // normalize to ~60fps
-    lastTime = now;
-
-    const { MAX_DISTANCE, BASE_SPEED } = getConfig();
+  // Animation loop
+  function animate(time) {
+    const deltaTime = (time - lastTime) / 16.6667; // normalize to ~60fps
+    lastTime = time;
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // Draw lines
-    for (let i = 0; i < points.length; i++) {
-      for (let j = i + 1; j < points.length; j++) {
-        const dx = points[i].x - points[j].x;
-        const dy = points[i].y - points[j].y;
-        const dist = Math.hypot(dx, dy);
-
+    for (let i = 0; i < POINTS; i++) {
+      const p1 = points[i];
+      for (let j = i + 1; j < POINTS; j++) {
+        const p2 = points[j];
+        const dx = p1.x - p2.x;
+        const dy = p1.y - p2.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
         if (dist < MAX_DISTANCE) {
-          const alpha = 0.18 + 0.32 * (1 - dist / MAX_DISTANCE); // brighter baseline
-          ctx.strokeStyle = `rgba(0, 191, 255, ${alpha})`;
-          ctx.lineWidth = 1.15;
+          ctx.strokeStyle = `rgba(0, 191, 255, ${0.5 * (1 - dist / MAX_DISTANCE)})`; // brighter lines
+          ctx.lineWidth = 1;
           ctx.beginPath();
-          ctx.moveTo(points[i].x, points[i].y);
-          ctx.lineTo(points[j].x, points[j].y);
+          ctx.moveTo(p1.x, p1.y);
+          ctx.lineTo(p2.x, p2.y);
           ctx.stroke();
         }
       }
     }
 
-    // Draw points and update positions with speed scaling
-    for (const p of points) {
+    // Draw points and update positions
+    for (let p of points) {
       ctx.fillStyle = "#00BFFF";
       ctx.beginPath();
-      ctx.arc(p.x, p.y, 2.2, 0, Math.PI * 2);
+      ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
       ctx.fill();
 
-      // Apply movement with deltaTime and device speed
-      p.x += p.vx * deltaTime * BASE_SPEED;
-      p.y += p.vy * deltaTime * BASE_SPEED;
+      // Move points with deltaTime to prevent scroll fast-forward bug
+      p.x += p.vx * deltaTime;
+      p.y += p.vy * deltaTime;
 
       // Bounce off edges
-      if (p.x <= 0 || p.x >= canvas.width) p.vx *= -1;
-      if (p.y <= 0 || p.y >= canvas.height) p.vy *= -1;
+      if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+      if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
     }
 
     requestAnimationFrame(animate);
