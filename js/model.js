@@ -23,7 +23,7 @@ import {
 
 let relatedModels = [];
 let currentIndex = 0;
-let modelsPerView = 3;
+let modelsPerView = window.innerWidth <= 768 ? 1 : 3;
 let observer;
 
 
@@ -31,11 +31,6 @@ let observer;
 // ✅ DOM References
 // ------------------------------
 const modelDetailsEl = document.getElementById('model-details');
-const grid = document.getElementById('carousel-grid');
-const dotsContainer = document.getElementById('carousel-dots');
-const leftArrow = document.querySelector('.left-arrow');
-const rightArrow = document.querySelector('.right-arrow');
-
 
 // ------------------------------
 // ✅ On Page Load
@@ -45,7 +40,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Lazy-load backgrounds (for any present elements)
   const lazyBackgrounds = document.querySelectorAll('.lazy-bg');
-  const observer = new IntersectionObserver((entries) => {
+  observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const el = entry.target;
@@ -334,9 +329,6 @@ relatedModels = models
   .sort((a, b) => b.score - a.score)
   .slice(0, 12)
   .map(entry => entry.model);
-
-let currentIndex = 0;
-let modelsPerView = window.innerWidth <= 768 ? 1 : 3;
 
 // DOM References
 const grid = document.getElementById('carousel-grid');
