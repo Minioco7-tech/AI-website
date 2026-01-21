@@ -116,6 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
         title: 'How to Prompt AI Tools Correctly',
         subtitle: 'Get better outputs in fewer tries.',
         icon: 'edit-3',
+        accent: 'cyan',
         content: `
           <div class="space-y-8">
       
@@ -277,6 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
         title: 'Choosing the Right AI Tool for Your Task',
         subtitle: 'Pick faster, avoid wasting time.',
         icon: 'sliders',
+        accent: 'amber',
         content: `
           <div class="space-y-8">
       
@@ -457,6 +459,7 @@ document.addEventListener('DOMContentLoaded', () => {
         title: 'Using AI Safely and Ethically',
         subtitle: 'Avoid common privacy and compliance mistakes.',
         icon: 'shield',
+        accent: 'pink',
         content: `
           <div class="space-y-8">
       
