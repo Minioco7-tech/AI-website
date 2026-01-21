@@ -113,167 +113,6 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderAIGuides() {
     const guides = [
       {
-        title: 'How to Prompt AI Tools Correctly',
-        subtitle: 'Get better outputs in fewer tries.',
-        icon: 'edit-3',
-        content: `
-          <div class="space-y-8">
-      
-            <!-- Intro -->
-            <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
-              <p class="text-sm text-gray-200 leading-relaxed">
-                Good prompting is just good communication: <strong>goal</strong>, <strong>context</strong>, and
-                <strong>constraints</strong>. Use the patterns below and you’ll instantly get more useful results.
-              </p>
-              <div class="mt-3 flex flex-wrap gap-2">
-                <span class="text-[11px] px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300">Goal</span>
-                <span class="text-[11px] px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300">Audience</span>
-                <span class="text-[11px] px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300">Tone</span>
-                <span class="text-[11px] px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300">Format</span>
-                <span class="text-[11px] px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300">Constraints</span>
-              </div>
-            </div>
-      
-            <!-- Rule 01 -->
-            <div class="space-y-2">
-              <h4 class="text-white font-semibold text-base">
-                <span class="text-gray-400 mr-2">01</span> Be specific and clear
-              </h4>
-              <p class="text-sm text-gray-300">
-                Include purpose, audience, and constraints. Vague prompts create vague results.
-              </p>
-      
-              <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
-                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Don’t</p>
-                  <p class="text-sm text-gray-200"><span class="text-red-300 font-semibold">❌</span> Write about dogs.</p>
-                </div>
-                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
-                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Do</p>
-                  <p class="text-sm text-gray-200"><span class="text-green-300 font-semibold">✅</span> Write a 500-word blog post about adopting senior dogs for first-time owners. Calm, friendly tone. Include 3 benefits + a short CTA.</p>
-                </div>
-              </div>
-      
-              <p class="mt-3 text-xs text-gray-400">
-                <span class="font-semibold text-gray-300">Why it matters:</span> Better constraints reduce rework and increase output quality.
-              </p>
-            </div>
-      
-            <!-- Rule 02 -->
-            <div class="space-y-2">
-              <h4 class="text-white font-semibold text-base">
-                <span class="text-gray-400 mr-2">02</span> Provide context (role + situation)
-              </h4>
-              <p class="text-sm text-gray-300">
-                Tell the AI who you are and what’s happening. Context changes tone, depth, and relevance.
-              </p>
-      
-              <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
-                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Don’t</p>
-                  <p class="text-sm text-gray-200"><span class="text-red-300 font-semibold">❌</span> Write an email about a meeting.</p>
-                </div>
-                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
-                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Do</p>
-                  <p class="text-sm text-gray-200"><span class="text-green-300 font-semibold">✅</span> Write a short, friendly follow-up email from a team lead to a design team reminding them about tomorrow’s sprint review. Include agenda + time.</p>
-                </div>
-              </div>
-      
-              <p class="mt-3 text-xs text-gray-400">
-                <span class="font-semibold text-gray-300">Why it matters:</span> Without context the model guesses your intent — that’s where “meh” results come from.
-              </p>
-            </div>
-      
-            <!-- Rule 03 -->
-            <div class="space-y-2">
-              <h4 class="text-white font-semibold text-base">
-                <span class="text-gray-400 mr-2">03</span> Define the output format
-              </h4>
-              <p class="text-sm text-gray-300">
-                Ask for the structure you want: bullets, table, short summary, email draft, checklist, etc.
-              </p>
-      
-              <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
-                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Don’t</p>
-                  <p class="text-sm text-gray-200"><span class="text-red-300 font-semibold">❌</span> Give me marketing ideas.</p>
-                </div>
-                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
-                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Do</p>
-                  <p class="text-sm text-gray-200"><span class="text-green-300 font-semibold">✅</span> List 5 social campaign ideas in bullet points. For each: goal, audience, hook, and a one-line example post.</p>
-                </div>
-              </div>
-      
-              <p class="mt-3 text-xs text-gray-400">
-                <span class="font-semibold text-gray-300">Why it matters:</span> Structure saves editing time and makes outputs easier to reuse.
-              </p>
-            </div>
-      
-            <!-- Rule 04 -->
-            <div class="space-y-2">
-              <h4 class="text-white font-semibold text-base">
-                <span class="text-gray-400 mr-2">04</span> Use descriptive language for visuals
-              </h4>
-              <p class="text-sm text-gray-300">
-                For creative outputs, specify style, mood, lighting, camera angle, and key objects.
-              </p>
-      
-              <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
-                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Don’t</p>
-                  <p class="text-sm text-gray-200"><span class="text-red-300 font-semibold">❌</span> Generate a picture of a cat.</p>
-                </div>
-                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
-                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Do</p>
-                  <p class="text-sm text-gray-200"><span class="text-green-300 font-semibold">✅</span> A cozy watercolor of a ginger cat sleeping by a window, soft morning light, warm tones, shallow depth of field.</p>
-                </div>
-              </div>
-      
-              <p class="mt-3 text-xs text-gray-400">
-                <span class="font-semibold text-gray-300">Why it matters:</span> Descriptive prompts reduce randomness and get you closer to the look you want.
-              </p>
-            </div>
-      
-            <!-- Rule 05 -->
-            <div class="space-y-2">
-              <h4 class="text-white font-semibold text-base">
-                <span class="text-gray-400 mr-2">05</span> Iterate with small, specific edits
-              </h4>
-              <p class="text-sm text-gray-300">
-                Treat it like a conversation: request precise changes instead of restarting from scratch.
-              </p>
-      
-              <div class="mt-3 rounded-2xl border border-white/10 bg-black/20 p-4">
-                <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Good follow-ups</p>
-                <div class="flex flex-wrap gap-2">
-                  <span class="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">Make it more confident</span>
-                  <span class="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">Shorten by 30%</span>
-                  <span class="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">Add a bullet summary</span>
-                  <span class="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">Rewrite for beginners</span>
-                </div>
-              </div>
-      
-              <p class="mt-3 text-xs text-gray-400">
-                <span class="font-semibold text-gray-300">Why it matters:</span> Small edits converge faster than re-prompting from zero.
-              </p>
-            </div>
-      
-            <!-- Quick prompt template -->
-            <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
-              <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Prompt template</p>
-              <p class="text-sm text-gray-200 leading-relaxed">
-                <strong>Role:</strong> You are a [role].<br>
-                <strong>Goal:</strong> Help me [goal].<br>
-                <strong>Context:</strong> [who/what/where].<br>
-                <strong>Constraints:</strong> [tone, length, rules].<br>
-                <strong>Output:</strong> Return as [format].
-              </p>
-            </div>
-      
-          </div>
-        `
-      },
-      {
         title: 'Choosing the Right AI Tool for Your Task',
         subtitle: 'Pick faster, avoid wasting time.',
         icon: 'sliders',
@@ -448,6 +287,167 @@ document.addEventListener('DOMContentLoaded', () => {
                   <span><strong>Value:</strong> worth it if it saves meaningful time each week.</span>
                 </li>
               </ul>
+            </div>
+      
+          </div>
+        `
+      },
+      {
+        title: 'How to Prompt AI Tools Correctly',
+        subtitle: 'Get better outputs in fewer tries.',
+        icon: 'edit-3',
+        content: `
+          <div class="space-y-8">
+      
+            <!-- Intro -->
+            <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
+              <p class="text-sm text-gray-200 leading-relaxed">
+                Good prompting is just good communication: <strong>goal</strong>, <strong>context</strong>, and
+                <strong>constraints</strong>. Use the patterns below and you’ll instantly get more useful results.
+              </p>
+              <div class="mt-3 flex flex-wrap gap-2">
+                <span class="text-[11px] px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300">Goal</span>
+                <span class="text-[11px] px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300">Audience</span>
+                <span class="text-[11px] px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300">Tone</span>
+                <span class="text-[11px] px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300">Format</span>
+                <span class="text-[11px] px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-300">Constraints</span>
+              </div>
+            </div>
+      
+            <!-- Rule 01 -->
+            <div class="space-y-2">
+              <h4 class="text-white font-semibold text-base">
+                <span class="text-gray-400 mr-2">01</span> Be specific and clear
+              </h4>
+              <p class="text-sm text-gray-300">
+                Include purpose, audience, and constraints. Vague prompts create vague results.
+              </p>
+      
+              <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
+                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Don’t</p>
+                  <p class="text-sm text-gray-200"><span class="text-red-300 font-semibold">❌</span> Write about dogs.</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Do</p>
+                  <p class="text-sm text-gray-200"><span class="text-green-300 font-semibold">✅</span> Write a 500-word blog post about adopting senior dogs for first-time owners. Calm, friendly tone. Include 3 benefits + a short CTA.</p>
+                </div>
+              </div>
+      
+              <p class="mt-3 text-xs text-gray-400">
+                <span class="font-semibold text-gray-300">Why it matters:</span> Better constraints reduce rework and increase output quality.
+              </p>
+            </div>
+      
+            <!-- Rule 02 -->
+            <div class="space-y-2">
+              <h4 class="text-white font-semibold text-base">
+                <span class="text-gray-400 mr-2">02</span> Provide context (role + situation)
+              </h4>
+              <p class="text-sm text-gray-300">
+                Tell the AI who you are and what’s happening. Context changes tone, depth, and relevance.
+              </p>
+      
+              <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
+                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Don’t</p>
+                  <p class="text-sm text-gray-200"><span class="text-red-300 font-semibold">❌</span> Write an email about a meeting.</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Do</p>
+                  <p class="text-sm text-gray-200"><span class="text-green-300 font-semibold">✅</span> Write a short, friendly follow-up email from a team lead to a design team reminding them about tomorrow’s sprint review. Include agenda + time.</p>
+                </div>
+              </div>
+      
+              <p class="mt-3 text-xs text-gray-400">
+                <span class="font-semibold text-gray-300">Why it matters:</span> Without context the model guesses your intent — that’s where “meh” results come from.
+              </p>
+            </div>
+      
+            <!-- Rule 03 -->
+            <div class="space-y-2">
+              <h4 class="text-white font-semibold text-base">
+                <span class="text-gray-400 mr-2">03</span> Define the output format
+              </h4>
+              <p class="text-sm text-gray-300">
+                Ask for the structure you want: bullets, table, short summary, email draft, checklist, etc.
+              </p>
+      
+              <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
+                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Don’t</p>
+                  <p class="text-sm text-gray-200"><span class="text-red-300 font-semibold">❌</span> Give me marketing ideas.</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Do</p>
+                  <p class="text-sm text-gray-200"><span class="text-green-300 font-semibold">✅</span> List 5 social campaign ideas in bullet points. For each: goal, audience, hook, and a one-line example post.</p>
+                </div>
+              </div>
+      
+              <p class="mt-3 text-xs text-gray-400">
+                <span class="font-semibold text-gray-300">Why it matters:</span> Structure saves editing time and makes outputs easier to reuse.
+              </p>
+            </div>
+      
+            <!-- Rule 04 -->
+            <div class="space-y-2">
+              <h4 class="text-white font-semibold text-base">
+                <span class="text-gray-400 mr-2">04</span> Use descriptive language for visuals
+              </h4>
+              <p class="text-sm text-gray-300">
+                For creative outputs, specify style, mood, lighting, camera angle, and key objects.
+              </p>
+      
+              <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="rounded-2xl border border-white/10 bg-black/20 p-4">
+                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Don’t</p>
+                  <p class="text-sm text-gray-200"><span class="text-red-300 font-semibold">❌</span> Generate a picture of a cat.</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Do</p>
+                  <p class="text-sm text-gray-200"><span class="text-green-300 font-semibold">✅</span> A cozy watercolor of a ginger cat sleeping by a window, soft morning light, warm tones, shallow depth of field.</p>
+                </div>
+              </div>
+      
+              <p class="mt-3 text-xs text-gray-400">
+                <span class="font-semibold text-gray-300">Why it matters:</span> Descriptive prompts reduce randomness and get you closer to the look you want.
+              </p>
+            </div>
+      
+            <!-- Rule 05 -->
+            <div class="space-y-2">
+              <h4 class="text-white font-semibold text-base">
+                <span class="text-gray-400 mr-2">05</span> Iterate with small, specific edits
+              </h4>
+              <p class="text-sm text-gray-300">
+                Treat it like a conversation: request precise changes instead of restarting from scratch.
+              </p>
+      
+              <div class="mt-3 rounded-2xl border border-white/10 bg-black/20 p-4">
+                <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Good follow-ups</p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">Make it more confident</span>
+                  <span class="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">Shorten by 30%</span>
+                  <span class="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">Add a bullet summary</span>
+                  <span class="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">Rewrite for beginners</span>
+                </div>
+              </div>
+      
+              <p class="mt-3 text-xs text-gray-400">
+                <span class="font-semibold text-gray-300">Why it matters:</span> Small edits converge faster than re-prompting from zero.
+              </p>
+            </div>
+      
+            <!-- Quick prompt template -->
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+              <p class="text-[11px] tracking-[0.25em] uppercase text-gray-400 mb-2">Prompt template</p>
+              <p class="text-sm text-gray-200 leading-relaxed">
+                <strong>Role:</strong> You are a [role].<br>
+                <strong>Goal:</strong> Help me [goal].<br>
+                <strong>Context:</strong> [who/what/where].<br>
+                <strong>Constraints:</strong> [tone, length, rules].<br>
+                <strong>Output:</strong> Return as [format].
+              </p>
             </div>
       
           </div>
