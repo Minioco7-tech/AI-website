@@ -58,9 +58,18 @@ document.addEventListener("DOMContentLoaded", function () {
   // Track previous timestamp for deltaTime
   let lastTime = performance.now();
 
+  // Reset lastTime when tab becomes visible to prevent huge jumps
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) {
+      lastTime = performance.now();
+    }
+  });
+
   // Animation loop
   function animate(time) {
-    const deltaTime = (time - lastTime) / 16.6667; // normalize to ~60fps
+    let deltaTime = (time - lastTime) / 16.6667; // normalize to ~60fps
+    // Cap deltaTime to prevent jumps after tab inactivity
+    if (deltaTime > 5) deltaTime = 5;
     lastTime = time;
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
