@@ -319,142 +319,124 @@ document.addEventListener('DOMContentLoaded', async () => {
 // ------------------------------
 // ✅ Related Models Carousel
 // ------------------------------
-// Run AFTER modelDetailsEl.innerHTML is set
-const initCarousel = () => {
-  const grid = document.getElementById('carousel-grid');
-  const dotsContainer = document.getElementById('carousel-dots');
-  const leftArrow = document.querySelector('.left-arrow');
-  const rightArrow = document.querySelector('.right-arrow');
+relatedModels = models
+  .filter(m => m.id !== model.id) // skip current
+  .map(m => {
+    const mCats = normalizeCategories(m.category);
+    const sharesCategory = mCats.some(cat => modelCategories.includes(cat));
+    if (!sharesCategory) return null;
 
-  if (!grid || !dotsContainer || !leftArrow || !rightArrow) return;
+    const tokens = [...model.name.toLowerCase().split(/\s+/), ...modelCategories];
+    const score = scoreModelRelevance(m, tokens, model.name);
+    return { model: m, score };
+  })
+  .filter(Boolean)
+  .sort((a, b) => b.score - a.score)
+  .slice(0, 12)
+  .map(entry => entry.model);
 
-  // Filter related models
-  relatedModels = models
-    .filter(m => m.id !== model.id)
-    .map(m => {
-      const mCats = normalizeCategories(m.category);
-      const sharesCategory = mCats.some(cat => modelCategories.includes(cat));
-      if (!sharesCategory) return null;
+let currentIndex = 0;
+let modelsPerView = window.innerWidth <= 768 ? 1 : 3;
 
-      const tokens = [
-        ...model.name.toLowerCase().split(/\s+/),
-        ...modelCategories
-      ];
-      const score = scoreModelRelevance(m, tokens, model.name);
-      return { model: m, score };
-    })
-    .filter(Boolean)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, 12)
-    .map(entry => entry.model);
+// DOM References
+const grid = document.getElementById('carousel-grid');
+const dotsContainer = document.getElementById('carousel-dots');
+const leftArrow = document.querySelector('.left-arrow');
+const rightArrow = document.querySelector('.right-arrow');
 
-  let modelsPerView = window.innerWidth <= 768 ? 1 : 3;
-  let currentIndex = 0;
+// Initial render
+renderCarouselPage();
+renderDots();
 
-  // ------------------
-  // Functions
-  // ------------------
-  const getMaxIndex = () => Math.max(0, Math.ceil(relatedModels.length / modelsPerView) - 1);
+// ------------------------------
+// Resize Handling
+// ------------------------------
+window.addEventListener('resize', () => {
+  modelsPerView = window.innerWidth <= 768 ? 1 : 3;
+  // Reset to first page if resizing shrinks
+  currentIndex = Math.min(currentIndex, Math.ceil(relatedModels.length / modelsPerView) - 1);
+  renderCarouselPage();
+  renderDots();
+});
 
-  const clampBadgesForCarousel = (cardEl, maxVisible = 3) => {
-    const badgeRow = cardEl.querySelector('.model-card-badges');
-    if (!badgeRow) return;
-    const pills = Array.from(badgeRow.querySelectorAll('span'));
-    if (pills.length <= maxVisible) return;
-    const hidden = pills.length - maxVisible;
-    pills.slice(maxVisible).forEach(p => p.remove());
-    const more = document.createElement('span');
-    more.className = 'badge-more';
-    more.textContent = `+${hidden}`;
-    badgeRow.appendChild(more);
-  };
+// ------------------------------
+// Carousel Navigation
+// ------------------------------
+leftArrow.addEventListener('click', () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    renderCarouselPage();
+  }
+});
 
-  const renderGridPage = () => {
-    grid.classList.add('is-transitioning');
-    setTimeout(() => {
-      grid.innerHTML = '';
-      const start = currentIndex * modelsPerView;
-      const pageModels = relatedModels.slice(start, start + modelsPerView);
-      pageModels.forEach(m => {
-        const card = createModelCard(m);
-        const wrap = document.createElement('div');
-        wrap.className = 'carousel-item';
-        wrap.appendChild(card);
-        clampBadgesForCarousel(card, 3);
-        grid.appendChild(wrap);
-      });
-      updateDots();
-      updateArrows();
-      grid.classList.remove('is-transitioning');
-    }, 120);
-  };
+rightArrow.addEventListener('click', () => {
+  const maxIndex = Math.ceil(relatedModels.length / modelsPerView) - 1;
+  if (currentIndex < maxIndex) {
+    currentIndex++;
+    renderCarouselPage();
+  }
+});
 
-  const updateArrows = () => {
-    leftArrow.classList.toggle('disabled', currentIndex === 0);
-    rightArrow.classList.toggle('disabled', currentIndex === getMaxIndex());
-  };
-
-  const renderDots = () => {
-    dotsContainer.innerHTML = '';
-    const totalPages = getMaxIndex() + 1;
-    for (let i = 0; i < totalPages; i++) {
-      const dot = document.createElement('span');
-      dot.className = `carousel-dot ${i === currentIndex ? 'active' : ''}`;
-      dot.addEventListener('click', () => {
-        if (i !== currentIndex) {
-          currentIndex = i;
-          renderGridPage();
-        }
-      });
-      dotsContainer.appendChild(dot);
-    }
-  };
-
-  const updateDots = () => {
-    Array.from(dotsContainer.children).forEach((dot, i) => {
-      dot.classList.toggle('active', i === currentIndex);
-    });
-  };
-
-  // ------------------
-  // Event Listeners
-  // ------------------
-  leftArrow.addEventListener('click', () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      renderGridPage();
-    }
-  });
-
-  rightArrow.addEventListener('click', () => {
-    if (currentIndex < getMaxIndex()) {
-      currentIndex++;
-      renderGridPage();
-    }
-  });
-
+// Touch support for mobile swipe
+if (window.innerWidth <= 768) {
   let startX = 0;
-  grid.addEventListener('touchstart', e => { startX = e.touches[0].clientX; });
+  grid.addEventListener('touchstart', e => startX = e.touches[0].clientX);
   grid.addEventListener('touchend', e => {
     const diff = e.changedTouches[0].clientX - startX;
-    if (Math.abs(diff) > 40) diff < 0 ? rightArrow.click() : leftArrow.click();
+    if (Math.abs(diff) > 30) diff < 0 ? rightArrow.click() : leftArrow.click();
   });
+}
 
-  window.addEventListener('resize', () => {
-    modelsPerView = window.innerWidth <= 768 ? 1 : 3;
-    currentIndex = Math.min(currentIndex, getMaxIndex());
-    renderGridPage();
-    renderDots();
-    updateArrows();
-  });
+// ------------------------------
+// RENDER FUNCTIONS
+// ------------------------------
 
-  // Initial render
-  renderGridPage();
+function renderCarouselPage() {
+  // Fade-out animation
+  grid.classList.add('opacity-0', 'scale-95');
+
+  setTimeout(() => {
+    grid.innerHTML = '';
+    const start = currentIndex * modelsPerView;
+    const pageModels = relatedModels.slice(start, start + modelsPerView);
+
+    pageModels.forEach(model => {
+      const card = createModelCard(model);
+
+      // Fix card size for carousel
+      card.style.flex = '1 0 calc(33.333% - 1rem)';
+      card.style.maxWidth = '100%';
+      card.style.minHeight = '335px'; // uniform card height
+      grid.appendChild(card);
+    });
+
+    // Re-observe lazy backgrounds if needed
+    const lazyBackgrounds = document.querySelectorAll('.lazy-bg');
+    lazyBackgrounds.forEach(el => observer.observe(el));
+
+    updateDots();
+    grid.classList.remove('opacity-0', 'scale-95');
+  }, 150);
+}
+
+function renderDots() {
+  dotsContainer.innerHTML = '';
+  const totalPages = Math.ceil(relatedModels.length / modelsPerView);
+
+  for (let i = 0; i < totalPages; i++) {
+    const dot = document.createElement('span');
+    dot.className = `carousel-dot w-3 h-3 rounded-full ${i === currentIndex ? 'bg-white' : 'bg-white/30'} cursor-pointer`;
+    dot.dataset.index = i;
+    dot.addEventListener('click', () => {
+      if (i !== currentIndex) {
+        currentIndex = i;
+        renderCarouselPage();
+      }
+    });
+    dotsContainer.appendChild(dot);
+  }
+}
+
+function updateDots() {
   renderDots();
-  updateArrows();
-};
-
-// ------------------------------
-// Call carousel init after DOM content is loaded
-// ------------------------------
-initCarousel();
+}
