@@ -511,20 +511,9 @@ export function expandQueryTokens(rawInput) {
 // options: { heading?: string, singleOpen?: boolean }
 // =====================================================
 // --- Single Accordion Renderer (One Dropdown, Netflix Style) ---
-export function renderSingleDropdown(containerId, { title = "", content = "", subtitle = "", accent = "cyan", icon = "book-open" } = {}) {
+export function renderSingleDropdown(containerId, { title = "", content = "", subtitle = "", icon = "book-open" } = {}) {
   const el = document.getElementById(containerId);
   if (!el) return;
-
-  // Accent map (keeps it consistent + DRY)
-  const accentDotMap = {
-    cyan: "bg-cyan-400",
-    amber: "bg-amber-400",
-    pink: "bg-pink-400",
-    emerald: "bg-emerald-400",
-    violet: "bg-violet-400",
-  };
-
-  const accentDot = accentDotMap[accent] || accentDotMap.cyan;
 
   el.innerHTML = `
     <details class="guide-accordion group rounded-2xl border border-white/10 bg-[#020617]/80 overflow-hidden">
@@ -532,9 +521,8 @@ export function renderSingleDropdown(containerId, { title = "", content = "", su
         
         <div class="flex items-center gap-4 min-w-0">
         
-          <!-- Accent dot + icon -->
+          <!-- Icon -->
           <div class="relative flex items-center justify-center w-10 h-10 rounded-xl border border-white/10 bg-white/5 shrink-0">
-            <span class="absolute w-1.5 h-1.5 rounded-full ${accentDot}"></span>
             <i data-feather="${icon}" class="w-5 h-5 text-white"></i>
           </div>
 
