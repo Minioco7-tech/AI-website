@@ -440,3 +440,4 @@ function renderDots() {
 function updateDots() {
   renderDots();
 }
+}); 
