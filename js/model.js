@@ -312,23 +312,17 @@ document.addEventListener('DOMContentLoaded', async () => {
   `;
 
 // ------------------------------
-// ✅ Related Models Carousel
+// ✅ Related Models Carousel (Category-style cards)
 // ------------------------------
-relatedModels = models
-  .filter(m => m.id !== model.id) // skip current
-  .map(m => {
-    const mCats = normalizeCategories(m.category);
-    const sharesCategory = mCats.some(cat => modelCategories.includes(cat));
-    if (!sharesCategory) return null;
 
-    const tokens = [...model.name.toLowerCase().split(/\s+/), ...modelCategories];
-    const score = scoreModelRelevance(m, tokens, model.name);
-    return { model: m, score };
+// Filter related models: same category, exclude current model
+relatedModels = models
+  .filter(m => m.id !== model.id)
+  .filter(m => {
+    const mCats = normalizeCategories(m.category);
+    return mCats.some(cat => modelCategories.includes(cat));
   })
-  .filter(Boolean)
-  .sort((a, b) => b.score - a.score)
-  .slice(0, 12)
-  .map(entry => entry.model);
+  .slice(0, 12); // limit to 12 related models
 
 // DOM References
 const grid = document.getElementById('carousel-grid');
@@ -336,55 +330,14 @@ const dotsContainer = document.getElementById('carousel-dots');
 const leftArrow = document.querySelector('.left-arrow');
 const rightArrow = document.querySelector('.right-arrow');
 
-// Initial render
-renderCarouselPage();
-renderDots();
+// Initial settings
+let currentIndex = 0;
+let modelsPerView = window.innerWidth <= 768 ? 1 : 3;
 
 // ------------------------------
-// Resize Handling
+// Render a page of related models
 // ------------------------------
-window.addEventListener('resize', () => {
-  modelsPerView = window.innerWidth <= 768 ? 1 : 3;
-  // Reset to first page if resizing shrinks
-  currentIndex = Math.min(currentIndex, Math.ceil(relatedModels.length / modelsPerView) - 1);
-  renderCarouselPage();
-  renderDots();
-});
-
-// ------------------------------
-// Carousel Navigation
-// ------------------------------
-leftArrow.addEventListener('click', () => {
-  if (currentIndex > 0) {
-    currentIndex--;
-    renderCarouselPage();
-  }
-});
-
-rightArrow.addEventListener('click', () => {
-  const maxIndex = Math.ceil(relatedModels.length / modelsPerView) - 1;
-  if (currentIndex < maxIndex) {
-    currentIndex++;
-    renderCarouselPage();
-  }
-});
-
-// Touch support for mobile swipe
-if (window.innerWidth <= 768) {
-  let startX = 0;
-  grid.addEventListener('touchstart', e => startX = e.touches[0].clientX);
-  grid.addEventListener('touchend', e => {
-    const diff = e.changedTouches[0].clientX - startX;
-    if (Math.abs(diff) > 30) diff < 0 ? rightArrow.click() : leftArrow.click();
-  });
-}
-
-// ------------------------------
-// RENDER FUNCTIONS
-// ------------------------------
-
 function renderCarouselPage() {
-  // Fade-out animation
   grid.classList.add('opacity-0', 'scale-95');
 
   setTimeout(() => {
@@ -393,16 +346,14 @@ function renderCarouselPage() {
     const pageModels = relatedModels.slice(start, start + modelsPerView);
 
     pageModels.forEach(model => {
-      const card = createModelCard(model);
-
-      // Fix card size for carousel
-      card.style.flex = '1 0 calc(33.333% - 1rem)';
+      const card = createModelCard(model); // Uses the category-style card
+      card.style.flex = `1 0 calc(${100 / modelsPerView}% - 1rem)`;
       card.style.maxWidth = '100%';
       card.style.minHeight = '335px'; // uniform card height
       grid.appendChild(card);
     });
 
-    // Re-observe lazy backgrounds if needed
+    // Re-observe lazy backgrounds
     const lazyBackgrounds = document.querySelectorAll('.lazy-bg');
     lazyBackgrounds.forEach(el => observer.observe(el));
 
@@ -411,6 +362,9 @@ function renderCarouselPage() {
   }, 150);
 }
 
+// ------------------------------
+// Render pagination dots
+// ------------------------------
 function renderDots() {
   dotsContainer.innerHTML = '';
   const totalPages = Math.ceil(relatedModels.length / modelsPerView);
@@ -429,7 +383,54 @@ function renderDots() {
   }
 }
 
+// Update dots state
 function updateDots() {
   renderDots();
 }
-}); 
+
+// ------------------------------
+// Carousel navigation
+// ------------------------------
+leftArrow.addEventListener('click', () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    renderCarouselPage();
+  }
+});
+
+rightArrow.addEventListener('click', () => {
+  const maxIndex = Math.ceil(relatedModels.length / modelsPerView) - 1;
+  if (currentIndex < maxIndex) {
+    currentIndex++;
+    renderCarouselPage();
+  }
+});
+
+// ------------------------------
+// Mobile swipe support
+// ------------------------------
+if (window.innerWidth <= 768) {
+  let startX = 0;
+  grid.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+  grid.addEventListener('touchend', e => {
+    const diff = e.changedTouches[0].clientX - startX;
+    if (Math.abs(diff) > 30) diff < 0 ? rightArrow.click() : leftArrow.click();
+  });
+}
+
+// ------------------------------
+// Handle window resize
+// ------------------------------
+window.addEventListener('resize', () => {
+  modelsPerView = window.innerWidth <= 768 ? 1 : 3;
+  currentIndex = Math.min(currentIndex, Math.ceil(relatedModels.length / modelsPerView) - 1);
+  renderCarouselPage();
+  updateDots();
+});
+
+// ------------------------------
+// Initial render
+// ------------------------------
+renderCarouselPage();
+renderDots();
+
