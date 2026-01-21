@@ -260,29 +260,22 @@ footer p {
 }
 
 /* ============================
-   Related Models Carousel (model.html)
-   Scoped to #related-models only
-   ============================ */
-
-/* =========================================================
-   Related Models Carousel – Optimized
+   Related Models Carousel
    Scoped to #related-models
-   ========================================================= */
+   ============================ */
 
 #related-models {
   position: relative;
   width: 100%;
 }
 
-/* ----------------------------
-   Layout wrapper
-   ---------------------------- */
+/* Wrapper */
 #related-models .carousel-wrapper {
   position: relative;
   width: 100%;
 }
 
-/* Viewport (clips overflow) */
+/* Viewport (clips hover overflow) */
 #related-models .carousel-container {
   position: relative;
   overflow: hidden;
@@ -290,15 +283,23 @@ footer p {
   padding: 0 3rem; /* space for arrows */
 }
 
-/* Grid holding visible cards */
-#related-models .carousel-grid {
+/* Grid */
+#related-models #related-grid {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 1fr;
   gap: 1rem;
   align-items: stretch;
 
+  opacity: 1;
+  transform: scale(1);
   transition: opacity 150ms ease, transform 150ms ease;
+}
+
+/* Fade transition state */
+#related-models #related-grid.is-transitioning {
+  opacity: 0;
+  transform: scale(0.96);
 }
 
 /* ----------------------------
@@ -306,19 +307,19 @@ footer p {
    ---------------------------- */
 #related-models .carousel-item {
   height: 100%;
-  padding: 12px; /* breathing room for hover scale */
+  padding: 12px;
   box-sizing: border-box;
 }
 
-/* Force uniform height */
+/* Force uniform card height */
 #related-models .carousel-item > a {
+  display: block;
   height: 100%;
   min-height: 360px;
-  display: block;
 }
 
 /* ----------------------------
-   Model card hover behavior
+   Card hover behavior
    ---------------------------- */
 #related-models .model-card {
   height: 100%;
@@ -400,6 +401,26 @@ footer p {
 #related-models .carousel-dot.active {
   background: rgba(255, 255, 255, 0.9);
   transform: scale(1.2);
+}
+
+/* ----------------------------
+   Badge clamping
+   ---------------------------- */
+#related-models .model-card-badges {
+  flex-wrap: nowrap !important;
+  overflow: hidden;
+}
+
+#related-models .model-card-badges span {
+  font-size: 11px;
+  padding: 4px 10px;
+  white-space: nowrap;
+}
+
+#related-models .badge-more {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 /* ----------------------------
