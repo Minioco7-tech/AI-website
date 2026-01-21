@@ -316,194 +316,166 @@ document.addEventListener('DOMContentLoaded', async () => {
     </div>
   `;
 
-  // ------------------------------
-  // ✅ Related Models Carousel
-  // Show other models that share ANY category
-  // ------------------------------
-  relatedModels = models
-    .filter(m => m.id !== model.id) // skip current
-    .map(m => {
-      const mCats = normalizeCategories(m.category);
-      const sharesCategory = mCats.some(cat => modelCategories.includes(cat));
-      if (!sharesCategory) return null;
+// =====================================================
+// Related Models Carousel – Optimized
+// =====================================================
 
-      const tokens = [...model.name.toLowerCase().split(/\s+/), ...modelCategories];
-      const score = scoreModelRelevance(m, tokens, model.name);
-      return { model: m, score };
-    })
-    .filter(Boolean)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, 12)
-    .map(entry => entry.model);
+let modelsPerView = getModelsPerView();
+let currentIndex = 0;
 
+// ----------------------------
+// Build related models list
+// ----------------------------
+const relatedModels = models
+  .filter(m => m.id !== model.id)
+  .map(m => {
+    const mCats = normalizeCategories(m.category);
+    if (!mCats.some(cat => modelCategories.includes(cat))) return null;
 
-  // ------------------------------
-  // ✅ Carousel State & Setup
-  // ------------------------------
-  modelsPerView = window.innerWidth <= 768 ? 1 : 3;
-  currentIndex = 0;
+    const tokens = [
+      ...model.name.toLowerCase().split(/\s+/),
+      ...modelCategories
+    ];
 
-  renderGridPage();
+    return {
+      model: m,
+      score: scoreModelRelevance(m, tokens, model.name)
+    };
+  })
+  .filter(Boolean)
+  .sort((a, b) => b.score - a.score)
+  .slice(0, 12)
+  .map(x => x.model);
+
+// ----------------------------
+// Initial render
+// ----------------------------
+render();
+updateArrows();
+renderDots();
+
+// ----------------------------
+// Event listeners
+// ----------------------------
+window.addEventListener('resize', () => {
+  modelsPerView = getModelsPerView();
+  currentIndex = Math.min(currentIndex, maxIndex());
+  render();
   renderDots();
-  window.addEventListener('resize', () => {
-    modelsPerView = window.innerWidth <= 768 ? 1 : 3;
-    renderDots();
-  });
+  updateArrows();
+});
 
-  // Arrows navigation
-  leftArrow.addEventListener('click', () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      renderGridPage();
-    }
-  });
-
-  rightArrow.addEventListener('click', () => {
-    const maxIndex = Math.ceil(relatedModels.length / modelsPerView) - 1;
-    if (currentIndex < maxIndex) {
-      currentIndex++;
-      renderGridPage();
-    }
-  });
-
-  if (window.innerWidth <= 768) {
-    let startX = 0;
-    grid.addEventListener('touchstart', e => {
-      startX = e.touches[0].clientX;
-    });
-    grid.addEventListener('touchend', e => {
-      const endX = e.changedTouches[0].clientX;
-      const diff = endX - startX;
-      if (Math.abs(diff) > 30) {
-        diff < 0 ? rightArrow.click() : leftArrow.click();
-      }
-    });
+leftArrow.addEventListener('click', () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    render();
   }
 });
 
-// ======================
-// ✅ Carousel Functions
-// ======================
+rightArrow.addEventListener('click', () => {
+  if (currentIndex < maxIndex()) {
+    currentIndex++;
+    render();
+  }
+});
 
-function renderGridPage() {
+// Mobile swipe
+let startX = 0;
+grid.addEventListener('touchstart', e => {
+  startX = e.touches[0].clientX;
+});
+grid.addEventListener('touchend', e => {
+  const diff = e.changedTouches[0].clientX - startX;
+  if (Math.abs(diff) > 40) {
+    diff < 0 ? rightArrow.click() : leftArrow.click();
+  }
+});
+
+// =====================================================
+// Functions
+// =====================================================
+
+function getModelsPerView() {
+  return window.innerWidth <= 768 ? 1 : 3;
+}
+
+function maxIndex() {
+  return Math.max(
+    0,
+    Math.ceil(relatedModels.length / modelsPerView) - 1
+  );
+}
+
+function render() {
   grid.classList.add('opacity-0', 'scale-95');
 
   setTimeout(() => {
     grid.innerHTML = '';
 
     const start = currentIndex * modelsPerView;
-    const pageModels = relatedModels.slice(start, start + modelsPerView);
+    const page = relatedModels.slice(start, start + modelsPerView);
 
-    pageModels.forEach(model => {
+    page.forEach(model => {
       const card = createModelCard(model);
 
-      // Wrap for consistent sizing
       const wrap = document.createElement('div');
       wrap.className = 'carousel-item';
       wrap.appendChild(card);
 
-      // Clamp pills ONLY in carousel
       clampBadgesForCarousel(card, 3);
-
       grid.appendChild(wrap);
     });
 
+    updateArrows();
     updateDots();
     grid.classList.remove('opacity-0', 'scale-95');
-  }, 150);
+  }, 120);
 }
 
-function clampBadgesForCarousel(cardEl, maxVisible = 3) {
-  const badgeRow = cardEl.querySelector('.model-card-badges');
-  if (!badgeRow) return;
-
-  const pills = Array.from(badgeRow.querySelectorAll('span'));
-  if (pills.length <= maxVisible) return;
-
-  const hidden = pills.length - maxVisible;
-
-  // Remove extra pills
-  pills.slice(maxVisible).forEach(p => p.remove());
-
-  // Add +X pill
-  const more = document.createElement('span');
-  more.className = 'badge-more inline-block px-3 py-1 text-xs font-semibold rounded-full';
-  more.textContent = `+${hidden}`;
-
-  badgeRow.appendChild(more);
+function updateArrows() {
+  leftArrow.classList.toggle('disabled', currentIndex === 0);
+  rightArrow.classList.toggle('disabled', currentIndex === maxIndex());
 }
 
-
+// ----------------------------
+// Dots
+// ----------------------------
 function renderDots() {
-  if (window.innerWidth <= 768) {
-    renderDotsMobile();
-  } else {
-    renderDotsDesktop();
-  }
-}
-
-function renderDotsDesktop() {
-  const totalPages = Math.ceil(relatedModels.length / modelsPerView);
   dotsContainer.innerHTML = '';
+  const total = maxIndex() + 1;
 
-  for (let i = 0; i < totalPages; i++) {
+  for (let i = 0; i < total; i++) {
     const dot = document.createElement('span');
-    dot.className = `carousel-dot w-3 h-3 rounded-full ${i === currentIndex ? 'bg-white' : 'bg-white/30'} cursor-pointer`;
-    dot.dataset.index = i;
+    dot.className = `carousel-dot ${i === currentIndex ? 'active' : ''}`;
     dot.addEventListener('click', () => {
-      if (i !== currentIndex) {
-        currentIndex = i;
-        renderGridPage();
-      }
+      currentIndex = i;
+      render();
     });
     dotsContainer.appendChild(dot);
-  }
-}
-
-function renderDotsMobile() {
-  const totalPages = Math.ceil(relatedModels.length / modelsPerView);
-  const maxDots = 5;
-  const middleIndex = Math.floor(maxDots / 2);
-  dotsContainer.innerHTML = '';
-
-  for (let i = 0; i < maxDots; i++) {
-    const pageIndex = currentIndex - middleIndex + i;
-
-    const dot = document.createElement('span');
-    dot.dataset.index = pageIndex;
-
-    dot.className = getDotClass(pageIndex, currentIndex);
-
-    if (pageIndex < 0 || pageIndex >= totalPages) {
-      dot.style.opacity = 0;
-      dot.style.pointerEvents = 'none';
-    } else {
-      dot.addEventListener('click', () => {
-        if (pageIndex !== currentIndex) {
-          dot.classList.add('clicked');
-          setTimeout(() => dot.classList.remove('clicked'), 250);
-          currentIndex = pageIndex;
-          renderGridPage();
-        }
-      });
-    }
-
-    dotsContainer.appendChild(dot);
-  }
-}
-
-function getDotClass(dotIndex, currentIndex) {
-  const distance = Math.abs(dotIndex - currentIndex);
-
-  if (dotIndex === currentIndex) {
-    return 'carousel-dot w-3 h-3 rounded-full bg-white cursor-pointer';
-  } else if (distance === 1) {
-    return 'carousel-dot w-3 h-3 rounded-full bg-white/50 cursor-pointer';
-  } else {
-    return 'carousel-dot w-3 h-3 rounded-full bg-white/20 cursor-pointer';
   }
 }
 
 function updateDots() {
-  renderDots();
+  [...dotsContainer.children].forEach((dot, i) => {
+    dot.classList.toggle('active', i === currentIndex);
+  });
+}
+
+// ----------------------------
+// Badge clamp helper
+// ----------------------------
+function clampBadgesForCarousel(card, maxVisible) {
+  const row = card.querySelector('.model-card-badges');
+  if (!row) return;
+
+  const pills = [...row.children];
+  if (pills.length <= maxVisible) return;
+
+  const hidden = pills.length - maxVisible;
+  pills.slice(maxVisible).forEach(p => p.remove());
+
+  const more = document.createElement('span');
+  more.className = 'badge-more';
+  more.textContent = `+${hidden}`;
+  row.appendChild(more);
 }
