@@ -259,207 +259,184 @@ footer p {
   display: none;
 }
 
-/* ============================
-   Related Models Carousel
-   Scoped to #related-models
-   ============================ */
-
+/* ========================== */
+/* Carousel Styling for model.html */
+/* ========================== */
 #related-models {
-  position: relative;
   width: 100%;
+  margin-top: 2rem;
 }
 
-/* Wrapper */
-#related-models .carousel-wrapper {
-  position: relative;
-  width: 100%;
-}
-
-/* Viewport (clips hover overflow) */
-#related-models .carousel-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  padding: 0 3rem; /* space for arrows */
-}
-
-/* Grid */
-#related-models #related-grid {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
-  gap: 1rem;
-  align-items: stretch;
-
-  opacity: 1;
-  transform: scale(1);
-  transition: opacity 150ms ease, transform 150ms ease;
-}
-
-/* Fade transition state */
-#related-models #related-grid.is-transitioning {
-  opacity: 0;
-  transform: scale(0.96);
-}
-
-/* ----------------------------
-   Carousel item wrapper
-   ---------------------------- */
-#related-models .carousel-item {
-  height: 100%;
-  padding: 12px;
-  box-sizing: border-box;
-}
-
-/* Force uniform card height */
-#related-models .carousel-item > a {
-  display: block;
-  height: 100%;
-  min-height: 360px;
-}
-
-/* ----------------------------
-   Card hover behavior
-   ---------------------------- */
-#related-models .model-card {
-  height: 100%;
-  transition: transform 200ms ease, box-shadow 200ms ease;
-  transform-origin: center;
-}
-
-#related-models .model-card:hover {
-  transform: scale(1.04);
-  z-index: 5;
-}
-
-/* ----------------------------
-   Arrows
-   ---------------------------- */
-#related-models .carousel-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 20;
-
-  width: 44px;
-  height: 44px;
-  border-radius: 9999px;
-
+.carousel-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
 
-  background: rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: rgba(255, 255, 255, 0.9);
+.carousel-container {
+  overflow: hidden;
+  flex: 1;
+  position: relative;
+}
 
+#carousel-grid {
+  display: flex;
+  gap: 1rem;
+  transition: transform 0.5s ease, opacity 0.3s ease;
+}
+
+#carousel-grid a.model-tile {
+  flex: 1 0 calc(33.333% - 1rem); /* Always 3 cards per row on desktop */
+  max-width: 100%;
+  min-height: 335px; /* Uniform height */
+  display: flex;
+  flex-direction: column;
+  background-color: #11131A;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#carousel-grid a.model-tile:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.thumb-wrapper {
+  flex-shrink: 0;
+  height: 160px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.thumb-wrapper .thumb {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+#carousel-grid a.model-tile:hover .thumb {
+  transform: scale(1.05);
+}
+
+.model-tile .flex-1 {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.model-tile h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #a78bfa; /* Matches your purple */
+  margin-bottom: 0.5rem;
+}
+
+.model-tile p {
+  font-size: 0.875rem;
+  color: #e5e7eb;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; 
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+
+.model-tile .flex-wrap {
+  margin-top: auto; /* Push badges to bottom */
+  gap: 0.25rem;
+}
+
+.model-tile span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+/* ========================== */
+/* Arrows Styling */
+/* ========================== */
+.carousel-arrow {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
   cursor: pointer;
-  transition: transform 150ms ease, background 150ms ease, opacity 150ms ease;
+  padding: 0.25rem;
+  flex-shrink: 0;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-#related-models .carousel-arrow:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-50%) scale(1.05);
+.carousel-arrow:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
 }
 
-#related-models .carousel-arrow:active {
-  transform: translateY(-50%) scale(0.96);
+.carousel-arrow:active {
+  transform: scale(0.9);
+  filter: brightness(0.85);
 }
 
-#related-models .carousel-arrow.disabled {
-  opacity: 0.35;
-  pointer-events: none;
-}
-
-#related-models .carousel-arrow.left {
-  left: 0;
-}
-
-#related-models .carousel-arrow.right {
-  right: 0;
-}
-
-/* ----------------------------
-   Dots
-   ---------------------------- */
-#related-models .carousel-dots {
+/* ========================== */
+/* Dots Styling */
+/* ========================== */
+.carousel-dots {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
   margin-top: 1rem;
 }
 
-#related-models .carousel-dot {
+.carousel-dot {
   width: 10px;
   height: 10px;
-  border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.25);
+  background: #666;
+  border-radius: 50%;
   cursor: pointer;
-  transition: transform 150ms ease, background 150ms ease;
+  transition: all 0.3s ease;
 }
 
-#related-models .carousel-dot.active {
-  background: rgba(255, 255, 255, 0.9);
+.carousel-dot:hover {
   transform: scale(1.2);
+  background: #fff;
 }
 
-/* ----------------------------
-   Badge clamping
-   ---------------------------- */
-#related-models .model-card-badges {
-  flex-wrap: nowrap !important;
-  overflow: hidden;
+.carousel-dot.bg-white {
+  background: #fff;
 }
 
-#related-models .model-card-badges span {
-  font-size: 11px;
-  padding: 4px 10px;
-  white-space: nowrap;
+/* ========================== */
+/* Responsive Adjustments */
+/* ========================== */
+@media screen and (max-width: 1024px) {
+  #carousel-grid a.model-tile {
+    flex: 1 0 calc(50% - 0.75rem); /* 2 cards per row */
+    min-height: 300px;
+  }
 }
 
-#related-models .badge-more {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: rgba(255, 255, 255, 0.85);
-}
-
-/* ----------------------------
-   Badge clamping
-   ---------------------------- */
-#related-models .model-card-badges {
-  flex-wrap: nowrap !important;
-  overflow: hidden;
-}
-
-#related-models .model-card-badges span {
-  font-size: 11px;
-  padding: 4px 10px;
-  white-space: nowrap;
-}
-
-#related-models .badge-more {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: rgba(255, 255, 255, 0.85);
-}
-
-/* ----------------------------
-   Responsive tweaks
-   ---------------------------- */
 @media screen and (max-width: 768px) {
-  #related-models .carousel-container {
-    padding: 0 0.25rem;
+  #carousel-grid a.model-tile {
+    flex: 1 0 100%; /* 1 card per row */
+    min-height: 280px;
   }
 
-  #related-models .carousel-wrapper {
+  .carousel-arrow {
+    font-size: 1.5rem;
+  }
+
+  .carousel-wrapper {
     gap: 0.5rem;
   }
-
-  #related-models .carousel-arrow {
-    width: 38px;
-    height: 38px;
-  }
 }
+
 
 
 /* Home page information drop-downs */
