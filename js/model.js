@@ -125,10 +125,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             </a>
           </div>
         </div>
-        <div class="lg:col-span-2 rounded-3xl border border-white/15 bg-black/30 overflow-hidden">
-          <div class="w-full h-full max-h-[320px] md:max-h-[360px] border-4 border-white/10 rounded-3xl overflow-hidden">
-            <img src="${model.image}" alt="${model.name}" class="w-full h-full object-cover">
-          </div>
+        <div class="lg:col-span-2 rounded-3xl border border-white/15 bg-black/30 overflow-hidden
+                    transition-transform duration-300 ease-in-out transform hover:scale-105">
+          <img src="${model.image}"
+               alt="${model.name}"
+               class="w-full h-full object-cover">
         </div>
       </section>
       <!-- COLORED OVERVIEW CARD -->
