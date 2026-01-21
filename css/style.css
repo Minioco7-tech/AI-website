@@ -288,24 +288,6 @@ footer p {
   transition: transform 0.5s ease, opacity 0.3s ease;
 }
 
-#carousel-grid a.model-tile {
-  flex: 1 0 calc(33.333% - 1rem); /* Always 3 cards per row on desktop */
-  max-width: 100%;
-  min-height: 335px; /* Uniform height */
-  display: flex;
-  flex-direction: column;
-  background-color: #11131A;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  overflow: hidden;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-#carousel-grid a.model-tile:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-}
-
 .thumb-wrapper {
   flex-shrink: 0;
   height: 160px;
