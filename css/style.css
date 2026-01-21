@@ -268,6 +268,7 @@ footer p {
 }
 
 .carousel-wrapper {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -364,6 +365,10 @@ footer p {
 /* Arrows Styling */
 /* ========================== */
 .carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
   background: transparent;
   border: none;
   color: white;
@@ -372,6 +377,14 @@ footer p {
   padding: 0.25rem;
   flex-shrink: 0;
   transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.left-arrow {
+  left: 0.5rem;
+}
+
+.right-arrow {
+  right: 0.5rem;
 }
 
 .carousel-arrow:hover {
@@ -436,8 +449,6 @@ footer p {
     gap: 0.5rem;
   }
 }
-
-
 
 /* Home page information drop-downs */
 /* Remove default triangle marker */
