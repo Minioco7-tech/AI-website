@@ -516,7 +516,7 @@ export function renderSingleDropdown(containerId, { title = "", content = "", su
   if (!el) return;
 
   // Accent map (keeps it consistent + DRY)
-  const accentMap = {
+  const accentDotMap = {
     cyan:   "from-cyan-500/25 via-blue-500/10 to-transparent",
     amber:  "from-amber-500/25 via-yellow-500/10 to-transparent",
     pink:   "from-pink-500/25 via-fuchsia-500/10 to-transparent",
@@ -524,16 +524,18 @@ export function renderSingleDropdown(containerId, { title = "", content = "", su
     violet: "from-violet-500/25 via-indigo-500/10 to-transparent",
   };
 
-  const glow = accentMap[accent] || accentMap.cyan;
+  const glow = accentDotMap[accent] || accentDotMap.cyan;
 
   el.innerHTML = `
-    <details class="guide-accordion group rounded-3xl border border-white/10 bg-black/20 backdrop-blur-sm overflow-hidden">
-      <summary class="guide-summary flex cursor-pointer list-none items-center justify-between gap-4 px-5 sm:px-6 py-5">
+    <details class="guide-accordion group rounded-2xl border border-white/10 bg-[#020617]/80 overflow-hidden">
+      <summary class="guide-summary flex cursor-pointer list-none items-center justify-between gap-4 px-5 sm:px-6 py-4">
         
-        <div class="flex items-center gap-4">
-          <div class="relative w-11 h-11 rounded-2xl border border-white/10 bg-white/5 flex items-center justify-center overflow-hidden">
-            <div class="absolute inset-0 opacity-60 blur-2xl bg-gradient-to-br ${glow}"></div>
-            <i data-feather="${icon}" class="relative w-5 h-5 text-white"></i>
+        <div class="flex items-center gap-4 min-w-0">
+        
+          <!-- Accent dot + icon -->
+          <div class="flex items-center justify-center w-10 h-10 rounded-xl border border-white/10 bg-white/5 shrink-0">
+            <span class="absolute w-1.5 h-1.5 rounded-full ${accentDot}"></span>
+            <i data-feather="${icon}" class="w-5 h-5 text-white"></i>
           </div>
 
           <div class="min-w-0">
