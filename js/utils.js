@@ -517,11 +517,11 @@ export function renderSingleDropdown(containerId, { title = "", content = "", su
 
   // Accent map (keeps it consistent + DRY)
   const accentDotMap = {
-    cyan:   "from-cyan-500/25 via-blue-500/10 to-transparent",
-    amber:  "from-amber-500/25 via-yellow-500/10 to-transparent",
-    pink:   "from-pink-500/25 via-fuchsia-500/10 to-transparent",
-    emerald:"from-emerald-500/25 via-teal-500/10 to-transparent",
-    violet: "from-violet-500/25 via-indigo-500/10 to-transparent",
+    cyan: "bg-cyan-400",
+    amber: "bg-amber-400",
+    pink: "bg-pink-400",
+    emerald: "bg-emerald-400",
+    violet: "bg-violet-400",
   };
 
   const accentDot = accentDotMap[accent] || accentDotMap.cyan;
@@ -533,7 +533,7 @@ export function renderSingleDropdown(containerId, { title = "", content = "", su
         <div class="flex items-center gap-4 min-w-0">
         
           <!-- Accent dot + icon -->
-          <div class="flex items-center justify-center w-10 h-10 rounded-xl border border-white/10 bg-white/5 shrink-0">
+          <div class="relative flex items-center justify-center w-10 h-10 rounded-xl border border-white/10 bg-white/5 shrink-0">
             <span class="absolute w-1.5 h-1.5 rounded-full ${accentDot}"></span>
             <i data-feather="${icon}" class="w-5 h-5 text-white"></i>
           </div>
@@ -551,12 +551,10 @@ export function renderSingleDropdown(containerId, { title = "", content = "", su
         </span>
       </summary>
 
-      <div class="relative">
-        <div class="absolute inset-0 opacity-40 blur-3xl bg-gradient-to-br ${glow}"></div>
-        <div class="relative border-t border-white/10 px-5 sm:px-6 py-6 text-[#E0E0E0] space-y-8">
-          ${content}
-        </div>
+      <div class="border-t border-white/10 px-5 sm:px-6 py-5 text-gray-300 space-y-5">
+        ${content}
       </div>
+      
     </details>
   `;
 
