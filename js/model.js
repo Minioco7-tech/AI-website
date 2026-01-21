@@ -319,151 +319,142 @@ document.addEventListener('DOMContentLoaded', async () => {
 // ------------------------------
 // ✅ Related Models Carousel
 // ------------------------------
-relatedModels = models
-  .filter(m => m.id !== model.id)
-  .map(m => {
-    const mCats = normalizeCategories(m.category);
-    const sharesCategory = mCats.some(cat => modelCategories.includes(cat));
-    if (!sharesCategory) return null;
+// Run AFTER modelDetailsEl.innerHTML is set
+const initCarousel = () => {
+  const grid = document.getElementById('carousel-grid');
+  const dotsContainer = document.getElementById('carousel-dots');
+  const leftArrow = document.querySelector('.left-arrow');
+  const rightArrow = document.querySelector('.right-arrow');
 
-    const tokens = [
-      ...model.name.toLowerCase().split(/\s+/),
-      ...modelCategories
-    ];
-    const score = scoreModelRelevance(m, tokens, model.name);
-    return { model: m, score };
-  })
-  .filter(Boolean)
-  .sort((a, b) => b.score - a.score)
-  .slice(0, 12)
-  .map(entry => entry.model);
+  if (!grid || !dotsContainer || !leftArrow || !rightArrow) return;
 
-// ------------------------------
-// ✅ Carousel State
-// ------------------------------
-modelsPerView = window.innerWidth <= 768 ? 1 : 3;
-currentIndex = 0;
+  // Filter related models
+  relatedModels = models
+    .filter(m => m.id !== model.id)
+    .map(m => {
+      const mCats = normalizeCategories(m.category);
+      const sharesCategory = mCats.some(cat => modelCategories.includes(cat));
+      if (!sharesCategory) return null;
 
-renderGridPage();
-renderDots();
-updateArrows();
+      const tokens = [
+        ...model.name.toLowerCase().split(/\s+/),
+        ...modelCategories
+      ];
+      const score = scoreModelRelevance(m, tokens, model.name);
+      return { model: m, score };
+    })
+    .filter(Boolean)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 12)
+    .map(entry => entry.model);
 
-// Resize handling
-window.addEventListener('resize', () => {
-  modelsPerView = window.innerWidth <= 768 ? 1 : 3;
-  currentIndex = Math.min(currentIndex, getMaxIndex());
+  let modelsPerView = window.innerWidth <= 768 ? 1 : 3;
+  let currentIndex = 0;
+
+  // ------------------
+  // Functions
+  // ------------------
+  const getMaxIndex = () => Math.max(0, Math.ceil(relatedModels.length / modelsPerView) - 1);
+
+  const clampBadgesForCarousel = (cardEl, maxVisible = 3) => {
+    const badgeRow = cardEl.querySelector('.model-card-badges');
+    if (!badgeRow) return;
+    const pills = Array.from(badgeRow.querySelectorAll('span'));
+    if (pills.length <= maxVisible) return;
+    const hidden = pills.length - maxVisible;
+    pills.slice(maxVisible).forEach(p => p.remove());
+    const more = document.createElement('span');
+    more.className = 'badge-more';
+    more.textContent = `+${hidden}`;
+    badgeRow.appendChild(more);
+  };
+
+  const renderGridPage = () => {
+    grid.classList.add('is-transitioning');
+    setTimeout(() => {
+      grid.innerHTML = '';
+      const start = currentIndex * modelsPerView;
+      const pageModels = relatedModels.slice(start, start + modelsPerView);
+      pageModels.forEach(m => {
+        const card = createModelCard(m);
+        const wrap = document.createElement('div');
+        wrap.className = 'carousel-item';
+        wrap.appendChild(card);
+        clampBadgesForCarousel(card, 3);
+        grid.appendChild(wrap);
+      });
+      updateDots();
+      updateArrows();
+      grid.classList.remove('is-transitioning');
+    }, 120);
+  };
+
+  const updateArrows = () => {
+    leftArrow.classList.toggle('disabled', currentIndex === 0);
+    rightArrow.classList.toggle('disabled', currentIndex === getMaxIndex());
+  };
+
+  const renderDots = () => {
+    dotsContainer.innerHTML = '';
+    const totalPages = getMaxIndex() + 1;
+    for (let i = 0; i < totalPages; i++) {
+      const dot = document.createElement('span');
+      dot.className = `carousel-dot ${i === currentIndex ? 'active' : ''}`;
+      dot.addEventListener('click', () => {
+        if (i !== currentIndex) {
+          currentIndex = i;
+          renderGridPage();
+        }
+      });
+      dotsContainer.appendChild(dot);
+    }
+  };
+
+  const updateDots = () => {
+    Array.from(dotsContainer.children).forEach((dot, i) => {
+      dot.classList.toggle('active', i === currentIndex);
+    });
+  };
+
+  // ------------------
+  // Event Listeners
+  // ------------------
+  leftArrow.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      renderGridPage();
+    }
+  });
+
+  rightArrow.addEventListener('click', () => {
+    if (currentIndex < getMaxIndex()) {
+      currentIndex++;
+      renderGridPage();
+    }
+  });
+
+  let startX = 0;
+  grid.addEventListener('touchstart', e => { startX = e.touches[0].clientX; });
+  grid.addEventListener('touchend', e => {
+    const diff = e.changedTouches[0].clientX - startX;
+    if (Math.abs(diff) > 40) diff < 0 ? rightArrow.click() : leftArrow.click();
+  });
+
+  window.addEventListener('resize', () => {
+    modelsPerView = window.innerWidth <= 768 ? 1 : 3;
+    currentIndex = Math.min(currentIndex, getMaxIndex());
+    renderGridPage();
+    renderDots();
+    updateArrows();
+  });
+
+  // Initial render
   renderGridPage();
   renderDots();
   updateArrows();
-});
+};
 
-// Arrow navigation
-leftArrow.addEventListener('click', () => {
-  if (currentIndex > 0) {
-    currentIndex--;
-    renderGridPage();
-  }
-});
-
-rightArrow.addEventListener('click', () => {
-  if (currentIndex < getMaxIndex()) {
-    currentIndex++;
-    renderGridPage();
-  }
-});
-
-// Swipe (mobile)
-let startX = 0;
-grid.addEventListener('touchstart', e => {
-  startX = e.touches[0].clientX;
-});
-grid.addEventListener('touchend', e => {
-  const diff = e.changedTouches[0].clientX - startX;
-  if (Math.abs(diff) > 40) {
-    diff < 0 ? rightArrow.click() : leftArrow.click();
-  }
-});
-
-// ======================
-// ✅ Carousel Functions
-// ======================
-
-function getMaxIndex() {
-  return Math.max(0, Math.ceil(relatedModels.length / modelsPerView) - 1);
-}
-
-function renderGridPage() {
-  grid.classList.add('is-transitioning');
-
-  setTimeout(() => {
-    grid.innerHTML = '';
-
-    const start = currentIndex * modelsPerView;
-    const pageModels = relatedModels.slice(start, start + modelsPerView);
-
-    pageModels.forEach(model => {
-      const card = createModelCard(model);
-
-      const wrap = document.createElement('div');
-      wrap.className = 'carousel-item';
-      wrap.appendChild(card);
-
-      clampBadgesForCarousel(card, 3);
-      grid.appendChild(wrap);
-    });
-
-    updateDots();
-    updateArrows();
-    grid.classList.remove('is-transitioning');
-  }, 120);
-}
-
-function updateArrows() {
-  leftArrow.classList.toggle('disabled', currentIndex === 0);
-  rightArrow.classList.toggle('disabled', currentIndex === getMaxIndex());
-}
-
-// ---------------------
-// Dots
-// ---------------------
-function renderDots() {
-  dotsContainer.innerHTML = '';
-  const totalPages = getMaxIndex() + 1;
-
-  for (let i = 0; i < totalPages; i++) {
-    const dot = document.createElement('span');
-    dot.className = `carousel-dot ${i === currentIndex ? 'active' : ''}`;
-    dot.addEventListener('click', () => {
-      if (i !== currentIndex) {
-        currentIndex = i;
-        renderGridPage();
-      }
-    });
-    dotsContainer.appendChild(dot);
-  }
-}
-
-function updateDots() {
-  Array.from(dotsContainer.children).forEach((dot, i) => {
-    dot.classList.toggle('active', i === currentIndex);
-  });
-}
-
-// ---------------------
-// Badge clamp helper
-// ---------------------
-function clampBadgesForCarousel(cardEl, maxVisible = 3) {
-  const badgeRow = cardEl.querySelector('.model-card-badges');
-  if (!badgeRow) return;
-
-  const pills = Array.from(badgeRow.querySelectorAll('span'));
-  if (pills.length <= maxVisible) return;
-
-  const hidden = pills.length - maxVisible;
-  pills.slice(maxVisible).forEach(p => p.remove());
-
-  const more = document.createElement('span');
-  more.className = 'badge-more';
-  more.textContent = `+${hidden}`;
-  badgeRow.appendChild(more);
-}
+// ------------------------------
+// Call carousel init after DOM content is loaded
+// ------------------------------
+initCarousel();
