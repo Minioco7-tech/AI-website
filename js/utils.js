@@ -524,7 +524,7 @@ export function renderSingleDropdown(containerId, { title = "", content = "", su
     violet: "from-violet-500/25 via-indigo-500/10 to-transparent",
   };
 
-  const glow = accentDotMap[accent] || accentDotMap.cyan;
+  const accentDot = accentDotMap[accent] || accentDotMap.cyan;
 
   el.innerHTML = `
     <details class="guide-accordion group rounded-2xl border border-white/10 bg-[#020617]/80 overflow-hidden">
