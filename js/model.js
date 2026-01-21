@@ -125,11 +125,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             </a>
           </div>
         </div>
-        <div class="lg:col-span-2 rounded-3xl border border-white/15 bg-black/30 overflow-hidden
-                    transition-transform duration-300 ease-in-out transform hover:scale-105">
-          <img src="${model.image}"
-               alt="${model.name}"
-               class="w-full h-full object-cover">
+        <div class=" lg:col-span-2 model-tile rounded-3xl overflow-hidden border border-white/10 bg-black/30 transition-transform duration-300 hover:scale-[1.03] ">
+          <div class="thumb bg-cover bg-center w-full h-[320px] md:h-[360px]" style="background-image: url('${model.image}');"></div>
         </div>
       </section>
       <!-- COLORED OVERVIEW CARD -->
