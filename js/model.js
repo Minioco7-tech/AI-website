@@ -215,9 +215,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
       pageModels.forEach(m => {
         const card = createModelCard(m);
-        card.style.flex = `1 0 calc(${100 / modelsPerView}% - 1rem)`;
-        card.style.maxWidth = '100%';
-        card.style.minHeight = '335px';
         grid.appendChild(card);
       });
 
