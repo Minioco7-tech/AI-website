@@ -281,7 +281,26 @@ document.addEventListener('DOMContentLoaded', async () => {
         dotsContainer.appendChild(dot);
       }
     }
+
+    function pulseActiveDot() {
+    // Find whichever dot is currently active
+    const active = dotsContainer.querySelector(".carousel-dot.active");
+    if (!active) return;
   
+    // Temporarily deactivate
+    active.classList.remove("active");
+  
+    // Force a reflow so the browser “sees” the removal (restarts animation)
+    void active.offsetWidth;
+  
+    // Reactivate (and optionally trigger your dotPop animation class)
+    active.classList.add("active");
+    active.classList.add("clicked");
+  
+    // Clean up clicked class so it can be replayed next time
+    window.setTimeout(() => active.classList.remove("clicked"), 220);
+    }
+
     function updatePosition() {
       clampPage();
   
@@ -333,7 +352,12 @@ document.addEventListener('DOMContentLoaded', async () => {
       const dx = startX - t.clientX;
       const dy = startY - t.clientY;
       if (Math.abs(dy) > Math.abs(dx)) return;
-      if (Math.abs(dx) > 50) go(dx > 0 ? 1 : -1);
+      if (Math.abs(dx) > 50) {
+        go(dx > 0 ? 1 : -1);
+      
+        // Mobile-only: make the active dot “pop” on swipe
+        if (window.innerWidth < 768) pulseActiveDot();
+      }
     }, { passive: true });
   
     window.addEventListener("resize", () => update());
