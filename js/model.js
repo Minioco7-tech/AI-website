@@ -200,11 +200,17 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   
     function computeStep() {
-      const first = track.children[0];
-      if (!first) return;
-      cardStep = first.getBoundingClientRect().width + getGapPx();
+      const firstCard = track.children[0];
+      if (!firstCard) return;
+    
+      const gap = getGapPx();
+    
+      // Use layout width (ignores CSS transform scale)
+      const w = firstCard.offsetWidth;
+    
+      cardStep = w + gap;
     }
-  
+
     function totalPages() {
       return Math.max(1, Math.ceil(relatedModels.length / modelsPerView));
     }
