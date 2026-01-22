@@ -307,134 +307,97 @@ footer p {
 }
 
 /* =============================== */
-/* Related Models Carousel — model.html */
+/* Related Models Carousel — model.html (Drop-in) */
 /* =============================== */
 
-/* Container for related models section */
-#related-models {
-  width: 100%;
-  margin-top: 2rem;
+/* Keep carousel away from screen edge (your layout already uses px-4/6/8).
+   This ensures arrows never sit on top of cards. */
+#related-models .overflow-hidden {
+  padding-left: 3.25rem;
+  padding-right: 3.25rem;
 }
 
-/* Carousel wrapper — holds arrows and scrollable container */
-.carousel-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  width: 100%;
-}
-
-/* Scrollable container for carousel cards */
-.carousel-container {
-  overflow: hidden;
-  flex: 1;
-  position: relative;
-}
-
-/* Grid of carousel cards */
+/* Track */
 #carousel-grid {
   display: flex;
+  gap: 1rem; /* matches Tailwind gap-4 */
   transition: transform 0.5s ease;
   will-change: transform;
-  overflow: hidden;
 }
 
-/* Individual card styling */
-.thumb-wrapper {
-  flex-shrink: 0;
-  width: 240px; /* base card width */
-  height: 160px; /* maintains aspect ratio */
-  overflow: hidden;
-  border-radius: 0.75rem;
+/* Center content if not enough to scroll */
+#carousel-grid.is-centered {
+  justify-content: center;
 }
 
-.thumb-wrapper .thumb {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.3s ease;
+/* Force EXACT cards per view (DRY: no JS widths) */
+#carousel-grid .model-tile {
+  flex: 0 0 calc((100% - 2rem) / 3);   /* 3 cards, 2 gaps of 1rem */
+  max-width: calc((100% - 2rem) / 3);
 }
 
-.model-tile:hover .thumb {
-  transform: scale(1.05);
+/* Mobile: 1 card per view */
+@media (max-width: 768px) {
+  #related-models .overflow-hidden {
+    padding-left: 2.75rem;
+    padding-right: 2.75rem;
+  }
+
+  #carousel-grid .model-tile {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
-/* Card content 
-.model-tile .flex-1 {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-}
-
-.model-tile h3 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #a78bfa; 
-  margin-bottom: 0.5rem;
-}
-
-.model-tile p {
-  font-size: 0.875rem;
-  color: #e5e7eb;
-  line-height: 1.3;
-  margin-bottom: 0.5rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 2; 
-  -webkit-box-orient: vertical;  
-  overflow: hidden;
-}
-
-.model-tile .flex-wrap {
-  margin-top: auto; 
-  gap: 0.25rem;
-}
-
-.model-tile span {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 100%;
-} */
-
-/* ========================== */
-/* Arrows Styling */
-/* ========================== */
+/* -------------------------- */
+/* Arrows */
+/* -------------------------- */
 .carousel-arrow {
-   position: absolute;
+  position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.3);
-  border: none;
-  padding: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 9999px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.14);
+  color: rgba(255,255,255,0.75);
+
   cursor: pointer;
-  z-index: 5;
-  transition: background 0.2s;
+  z-index: 10;
+
+  transition: transform 0.2s ease, filter 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
 
-.left-arrow {
-  left: 0.5rem;
-}
-
-.right-arrow {
-  right: 0.5rem;
-}
+.left-arrow { left: 0.75rem; }
+.right-arrow { right: 0.75rem; }
 
 .carousel-arrow:hover {
-  transform: scale(1.1);
-  filter: brightness(1.1);
+  color: #ffffff;
+  filter: brightness(1.15);
+  transform: translateY(-50%) scale(1.08);
 }
 
 .carousel-arrow:active {
-  transform: scale(0.9);
-  filter: brightness(0.85);
+  transform: translateY(-50%) scale(0.96);
+  filter: brightness(0.95);
 }
 
-/* ========================== */
-/* Dots Styling */
-/* ========================== */
+.carousel-arrow.is-disabled,
+.carousel-arrow:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  filter: none;
+}
+
+/* -------------------------- */
+/* Dots */
+/* -------------------------- */
 .carousel-dots {
   display: flex;
   justify-content: center;
@@ -445,66 +408,31 @@ footer p {
 .carousel-dot {
   width: 10px;
   height: 10px;
-  background: #666;
-  border-radius: 50%;
+  border-radius: 9999px;
+  background: rgba(255,255,255,0.35);
+  border: 1px solid rgba(255,255,255,0.10);
   cursor: pointer;
-  transition: all 0.3s ease;
+
+  transition: transform 0.2s ease, background 0.2s ease, filter 0.2s ease;
 }
 
 .carousel-dot:hover {
-  transform: scale(1.2);
-  background: #fff;
-}
-
-.carousel-dot.clicked {
-  animation: dotPop 0.25s ease;
+  background: rgba(255,255,255,0.85);
+  transform: scale(1.25);
+  filter: brightness(1.1);
 }
 
 .carousel-dot.active {
-  background: #fff;
-  transform: scale(1.2);
+  background: rgba(255,255,255,1);
+  transform: scale(1.25);
 }
 
-@keyframes dotPop {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.4); }
-  100% { transform: scale(1); }
-}
-
-/* ========================== */
-/* Responsive Adjustments */
-/* ========================== */
-@media screen and (max-width: 1024px) {
-  #carousel-grid .model-tile {
-    flex: 1 0 calc(50% - 0.5rem); /* 2 cards per row */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  #carousel-grid .model-tile {
-    flex: 1 0 100%; /* 1 card per row */
-  }
-
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  #carousel-grid,
+  .carousel-dot,
   .carousel-arrow {
-    font-size: 1.5rem;  /* smaller arrows */
-    padding: 0.25rem;
-  }
-
-  .carousel-wrapper {
-    gap: 0.5rem; /* reduce spacing */
-  }
-
-  /* Optional mobile fade animation */
-  .carousel-grid.fade-out {
-    opacity: 0;
-    transform: scale(0.95);
-    transition: opacity 0.2s ease, transform 0.2s ease;
-  }
-
-  .carousel-grid.fade-in {
-    opacity: 1;
-    transform: scale(1);
-    transition: opacity 0.2s ease, transform 0.2s ease;
+    transition: none !important;
   }
 }
 
