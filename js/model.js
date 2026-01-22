@@ -177,96 +177,237 @@ document.addEventListener('DOMContentLoaded', async () => {
     </div>
   `;
   // ------------------------------
-  // Related Models Carousel Optimized
+  // ✅ Related Models Carousel (DRY, page-based, fixed dot window)
   // ------------------------------
   function initCarousel(track, dotsContainer, leftArrow, rightArrow, models) {
-    let currentIndex = 0;
-    let modelsPerView = window.innerWidth < 768 ? 1 : 3;
-    let cardStep = 0;
-    const MAX_MODELS = 10;
+    const MAX_MODELS = 12;
+  
     let relatedModels = [];
+    let modelsPerView = window.innerWidth < 768 ? 1 : 3;
+    let visibleDots = window.innerWidth < 768 ? 3 : 4;
+  
+    let currentPage = 0;
+    let cardStep = 0; // card width + gap
+  
+    const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
   
     function extractTokens(text) {
       return text?.toLowerCase().split(/\W+/).filter(Boolean) || [];
     }
   
-    function renderRelated(currentModel) {
-      track.innerHTML = '';
-      relatedModels = models
-        .filter(m => m.name !== currentModel.name)
-        .map(m => ({ model: m, score: scoreModelRelevance(m, extractTokens(currentModel.name + ' ' + currentModel.description)) }))
-        .sort((a,b) => b.score - a.score)
-        .slice(0, MAX_MODELS)
-        .map(m => m.model);
-  
-      relatedModels.forEach(model => {
-        const card = createModelCard(model);
-        card.classList.add('min-w-[280px]', 'max-w-[320px]');
-        track.appendChild(card);
-      });
-  
-      updateLayout();
+    function getGapPx() {
+      // Uses actual CSS gap on the track so we stay DRY
+      const cs = getComputedStyle(track);
+      // Most browsers expose `gap`; some expose columnGap for flex
+      const g = parseFloat(cs.gap || cs.columnGap || "16");
+      return Number.isFinite(g) ? g : 16;
     }
   
-    function updateLayout() {
-      modelsPerView = window.innerWidth < 768 ? 1 : 3;
+    function computeStep() {
       const firstCard = track.children[0];
       if (!firstCard) return;
-      const gap = 16; // Tailwind gap-4
-      cardStep = firstCard.offsetWidth + gap;
   
-      renderDots();
-      updatePosition();
+      const gap = getGapPx();
+      const w = firstCard.getBoundingClientRect().width;
+      cardStep = w + gap;
+    }
+  
+    function totalPages() {
+      return Math.max(1, Math.ceil(relatedModels.length / modelsPerView));
+    }
+  
+    function clampPage() {
+      const maxPage = totalPages() - 1;
+      currentPage = Math.min(Math.max(0, currentPage), maxPage);
+    }
+  
+    function setArrowState() {
+      const maxPage = totalPages() - 1;
+  
+      const disableLeft = currentPage <= 0;
+      const disableRight = currentPage >= maxPage;
+  
+      leftArrow.classList.toggle("is-disabled", disableLeft);
+      rightArrow.classList.toggle("is-disabled", disableRight);
+  
+      leftArrow.setAttribute("aria-disabled", String(disableLeft));
+      rightArrow.setAttribute("aria-disabled", String(disableRight));
+  
+      // Keep buttons focusable but prevent click action when disabled
+      leftArrow.disabled = disableLeft;
+      rightArrow.disabled = disableRight;
     }
   
     function updatePosition() {
-      const maxIndex = Math.max(0, relatedModels.length - modelsPerView);
-      currentIndex = Math.min(Math.max(0, currentIndex), maxIndex);
+      clampPage();
   
-      track.style.transform = `translateX(-${currentIndex * cardStep}px)`;
+      // If not enough models to scroll, center them and lock transform
+      if (relatedModels.length <= modelsPerView) {
+        track.classList.add("is-centered");
+        track.style.transform = "translateX(0px)";
+        dotsContainer.innerHTML = ""; // no dots if nothing to page
+        setArrowState();
+        return;
+      } else {
+        track.classList.remove("is-centered");
+      }
   
-      [...dotsContainer.children].forEach((dot, i) => {
-        dot.classList.toggle('active', i === currentIndex);
+      const offset = currentPage * cardStep * modelsPerView;
+  
+      // Respect reduced motion
+      if (prefersReducedMotion) {
+        track.style.transition = "none";
+        requestAnimationFrame(() => {
+          track.style.transform = `translateX(-${offset}px)`;
+          // Restore transition for normal use if user toggles later
+          track.style.transition = "";
+        });
+      } else {
+        track.style.transform = `translateX(-${offset}px)`;
+      }
+  
+      // Update dot active state
+      [...dotsContainer.children].forEach((dot) => {
+        const page = Number(dot.dataset.page);
+        dot.classList.toggle("active", page === currentPage);
       });
+  
+      setArrowState();
+    }
+  
+    function dotWindowStart() {
+      const pages = totalPages();
+      if (pages <= visibleDots) return 0;
+  
+      // Center window around current page
+      const half = Math.floor(visibleDots / 2);
+      let start = currentPage - half;
+  
+      // Clamp start so window stays within [0, pages-visibleDots]
+      start = Math.max(0, Math.min(start, pages - visibleDots));
+      return start;
     }
   
     function renderDots() {
-      dotsContainer.innerHTML = '';
-      const pages = Math.ceil(relatedModels.length / modelsPerView);
+      dotsContainer.innerHTML = "";
   
-      for (let i = 0; i < pages; i++) {
-        const dot = document.createElement('button');
-        dot.className = 'carousel-dot';
-        dot.addEventListener('click', () => { currentIndex = i; updatePosition(); });
+      const pages = totalPages();
+      if (relatedModels.length <= modelsPerView) return;
+  
+      const start = dotWindowStart();
+      const count = Math.min(visibleDots, pages);
+  
+      for (let i = 0; i < count; i++) {
+        const page = start + i;
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "carousel-dot";
+        dot.dataset.page = String(page);
+        dot.setAttribute("aria-label", `Go to related models page ${page + 1}`);
+  
+        dot.addEventListener("click", () => {
+          currentPage = page;
+          renderDots();     // window may shift
+          updatePosition();
+        });
+  
         dotsContainer.appendChild(dot);
       }
     }
   
-    leftArrow.addEventListener('click', () => { currentIndex--; updatePosition(); });
-    rightArrow.addEventListener('click', () => { currentIndex++; updatePosition(); });
+    function applyResponsiveState() {
+      const isMobile = window.innerWidth < 768;
+      modelsPerView = isMobile ? 1 : 3;
+      visibleDots = isMobile ? 3 : 4;
+    }
   
-    // Swipe support
+    function updateLayout() {
+      applyResponsiveState();
+      computeStep();
+      renderDots();
+      updatePosition();
+    }
+  
+    function go(delta) {
+      currentPage += delta;
+      renderDots();   // keep dot window in sync
+      updatePosition();
+    }
+  
+    // Arrow clicks
+    leftArrow.addEventListener("click", () => go(-1));
+    rightArrow.addEventListener("click", () => go(1));
+  
+    // Swipe support (mobile)
     let startX = 0;
-    track.addEventListener('touchstart', e => startX = e.touches[0].clientX);
-    track.addEventListener('touchend', e => {
-      const diff = startX - e.changedTouches[0].clientX;
-      if (Math.abs(diff) > 50) diff > 0 ? rightArrow.click() : leftArrow.click();
+    let startY = 0;
+  
+    track.addEventListener("touchstart", (e) => {
+      const t = e.touches[0];
+      startX = t.clientX;
+      startY = t.clientY;
+    }, { passive: true });
+  
+    track.addEventListener("touchend", (e) => {
+      const t = e.changedTouches[0];
+      const dx = startX - t.clientX;
+      const dy = startY - t.clientY;
+  
+      // Ignore mostly-vertical gestures
+      if (Math.abs(dy) > Math.abs(dx)) return;
+  
+      if (Math.abs(dx) > 50) {
+        if (dx > 0) go(1);
+        else go(-1);
+      }
+    }, { passive: true });
+  
+    // Recompute sizes on resize + when cards/images settle
+    window.addEventListener("resize", () => {
+      const prevPage = currentPage;
+      updateLayout();
+      currentPage = Math.min(prevPage, totalPages() - 1);
+      renderDots();
+      updatePosition();
     });
   
-    window.addEventListener('resize', updateLayout);
+    const ro = new ResizeObserver(() => updateLayout());
+    ro.observe(track);
+  
+    function renderRelated(currentModel) {
+      track.innerHTML = "";
+  
+      const tokens = extractTokens(`${currentModel.name} ${currentModel.description || ""}`);
+  
+      relatedModels = models
+        .filter((m) => m.name !== currentModel.name)
+        .map((m) => ({ model: m, score: scoreModelRelevance(m, tokens) }))
+        .sort((a, b) => b.score - a.score)
+        .slice(0, MAX_MODELS)
+        .map((x) => x.model);
+  
+      relatedModels.forEach((m) => {
+        const card = createModelCard(m);
+        // IMPORTANT: don't force widths in JS; CSS handles exact 3/1 layout DRYly
+        track.appendChild(card);
+      });
+  
+      currentPage = 0;
+      updateLayout();
+    }
   
     return renderRelated;
   }
   
-  // Usage:
-  const track = document.getElementById('carousel-grid');
-  const dotsContainer = document.getElementById('carousel-dots');
-  const leftArrow = document.querySelector('.left-arrow');
-  const rightArrow = document.querySelector('.right-arrow');
+  // Usage (keeps your existing IDs/classes)
+  const track = document.getElementById("carousel-grid");
+  const dotsContainer = document.getElementById("carousel-dots");
+  const leftArrow = document.querySelector(".left-arrow");
+  const rightArrow = document.querySelector(".right-arrow");
   
   if (track && dotsContainer && leftArrow && rightArrow) {
     const render = initCarousel(track, dotsContainer, leftArrow, rightArrow, models);
-    render(model); // Pass current model to populate
+    render(model);
   }
 }); 
 
