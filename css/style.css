@@ -345,6 +345,40 @@ footer p {
   z-index: 2;
 }
 
+/* ================================= */
+/* Carousel: uniform card scale-down */
+/* ================================= */
+
+/* Clip hover growth inside the carousel viewport */
+#related-models .overflow-hidden {
+  overflow: hidden;
+}
+
+/* Scale cards down uniformly (width + height) */
+#carousel-grid .model-tile {
+  transform: scale(0.94);              /* 👈 reduce whole card size */
+  transform-origin: center center;
+  transition: transform 0.25s ease;
+}
+
+/* Hover: gently scale up, but stay within container */
+#carousel-grid .model-tile:hover {
+  transform: scale(0.98);              /* 👈 still smaller than normal cards */
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Mobile: slightly less reduction (cards already tall) */
+@media (max-width: 768px) {
+  #carousel-grid .model-tile {
+    transform: scale(0.97);
+  }
+
+  #carousel-grid .model-tile:hover {
+    transform: scale(1.0);
+  }
+}
+
 /* -------------------------- */
 /* Arrows (sit outside cards without shrinking card area) */
 /* -------------------------- */
