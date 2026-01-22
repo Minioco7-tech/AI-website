@@ -359,7 +359,7 @@ footer p {
   transform: scale(1.05);
 }
 
-/* Card content */
+/* Card content 
 .model-tile .flex-1 {
   display: flex;
   flex-direction: column;
@@ -369,7 +369,7 @@ footer p {
 .model-tile h3 {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #a78bfa; /* purple */
+  color: #a78bfa; 
   margin-bottom: 0.5rem;
 }
 
@@ -385,7 +385,7 @@ footer p {
 }
 
 .model-tile .flex-wrap {
-  margin-top: auto; /* push badges to bottom */
+  margin-top: auto; 
   gap: 0.25rem;
 }
 
@@ -394,7 +394,7 @@ footer p {
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
-}
+} */
 
 /* ========================== */
 /* Arrows Styling */
@@ -458,6 +458,11 @@ footer p {
 
 .carousel-dot.clicked {
   animation: dotPop 0.25s ease;
+}
+
+.carousel-dot.active {
+  background: #fff;
+  transform: scale(1.2);
 }
 
 @keyframes dotPop {
