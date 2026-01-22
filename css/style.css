@@ -64,7 +64,9 @@ button:focus, input:focus, select:focus {
   outline-offset: 2px;
 }
 
-/* -------- Navbar -------- */
+/* ======================= */
+/* Navbar */
+/* ======================= */
 nav {
   backdrop-filter: blur(12px);
   background: rgba(0, 0, 0, 0.25);
@@ -77,7 +79,9 @@ nav a {
   align-items: center;
 }
 
-/* -------- Hero Section -------- */
+/* ======================== */
+/* Hero Section */
+/* ======================== */
 header h1 {
   background: linear-gradient(to right, #fff, #d8b4fe);
   -webkit-background-clip: text;
@@ -92,7 +96,9 @@ header form button {
   font-weight: 600;
 }
 
-/* -------- Buttons -------- */
+/* ======================= */
+/* Buttons */
+/* ======================= */
 button, .btn {
   display: inline-flex;
   align-items: center;
@@ -117,7 +123,9 @@ button, .btn {
   background-color: #0099e6;
 }
 
-/* -------- Footer -------- */
+/* ===================== */
+/* Footer */
+/* ===================== */
 footer {
   background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
@@ -136,7 +144,9 @@ footer p {
   font-size: 0.9rem;
 }
 
-/* -------- Animations -------- */
+/* ===================== */
+/* Animations */
+/* ===================== */
 .fade-in {
   opacity: 0;
   transform: translateY(15px);
@@ -150,7 +160,9 @@ footer p {
   }
 }
 
-/* -------- Utility -------- */
+/* ========================= */
+/* Utility */
+/* ========================= */
 .text-gradient {
   background: linear-gradient(to right, #a855f7, #ec4899);
   -webkit-background-clip: text;
@@ -161,7 +173,10 @@ footer p {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* -------- Model-Tile (Unified Tile Design) -------- */
+/* ================================ */
+/* Model-Tile (Unified Tile Design) */
+/* ================================ */
+
 .model-tile {
   background: rgba(42, 42, 42, 0.35);
   border: 1px solid rgba(255,255,255,0.1);
@@ -176,8 +191,7 @@ footer p {
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  /* width:100%; */
-  align-items: stretch;
+  align-items: stretch; /* width:100%; */
 }
 
 .model-tile:hover {
@@ -193,8 +207,7 @@ footer p {
   border-radius: 0.75rem;
   padding: 0.50rem;
   background: transparent;
-  /* subtle shadow inside for depth */
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.03);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.03); /* subtle shadow inside for depth */
 }
 
 .model-tile .thumb {
@@ -218,6 +231,18 @@ footer p {
   color: #E0E0E0;
 }
 
+
+/* .model-tile p {
+  font-size: 0.875rem;
+  color: #e5e7eb;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; 
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+} */
+
 .model-tile .icon-circle {
   display: flex;
   align-items: center;
@@ -227,7 +252,28 @@ footer p {
   border-radius: 9999px;
   margin-bottom: 0.75rem;
 }
-/* -------- Category Image (Inset style) -------- */
+
+.model-tile .flex-1 {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.model-tile .flex-wrap {
+  margin-top: auto; /* Push badges to bottom */
+  gap: 0.25rem;
+}
+
+.model-tile span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+/* ============================ */
+/* Category Image (Inset style) */
+/* ============================ */
 
 .category-thumb-wrapper {
   background-color: rgba(42, 42, 42, 0.35); /* same as tile background */
@@ -259,40 +305,46 @@ footer p {
   display: none;
 }
 
-/* ========================== */
-/* Carousel Styling for model.html */
-/* ========================== */
+/* =============================== */
+/* Related Models Carousel — model.html */
+/* =============================== */
+
+/* Container for related models section */
 #related-models {
   width: 100%;
   margin-top: 2rem;
 }
 
+/* Carousel wrapper — holds arrows and scrollable container */
 .carousel-wrapper {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 1rem;
   width: 100%;
 }
 
+/* Scrollable container for carousel cards */
 .carousel-container {
   overflow: hidden;
   flex: 1;
   position: relative;
 }
 
+/* Grid of carousel cards */
 #carousel-grid {
   display: flex;
   gap: 1rem;
   transition: transform 0.5s ease, opacity 0.3s ease;
 }
 
+/* Individual card styling */
 .thumb-wrapper {
   flex-shrink: 0;
-  height: 160px;
+  width: 240px; /* base card width */
+  height: 160px; /* maintains aspect ratio */
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 0.75rem;
 }
 
 .thumb-wrapper .thumb {
@@ -303,10 +355,11 @@ footer p {
   transition: transform 0.3s ease;
 }
 
-#carousel-grid a.model-tile:hover .thumb {
+.model-tile:hover .thumb {
   transform: scale(1.05);
 }
 
+/* Card content */
 .model-tile .flex-1 {
   display: flex;
   flex-direction: column;
@@ -316,7 +369,7 @@ footer p {
 .model-tile h3 {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #a78bfa; /* Matches your purple */
+  color: #a78bfa; /* purple */
   margin-bottom: 0.5rem;
 }
 
@@ -332,7 +385,7 @@ footer p {
 }
 
 .model-tile .flex-wrap {
-  margin-top: auto; /* Push badges to bottom */
+  margin-top: auto; /* push badges to bottom */
   gap: 0.25rem;
 }
 
@@ -403,34 +456,56 @@ footer p {
   background: #fff;
 }
 
-.carousel-dot.bg-white {
-  background: #fff;
+.carousel-dot.clicked {
+  animation: dotPop 0.25s ease;
+}
+
+@keyframes dotPop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+  100% { transform: scale(1); }
 }
 
 /* ========================== */
 /* Responsive Adjustments */
 /* ========================== */
 @media screen and (max-width: 1024px) {
-  #carousel-grid a.model-tile {
-    flex: 1 0 calc(50% - 0.75rem); /* 2 cards per row */
-    min-height: 300px;
+  #carousel-grid .model-tile {
+    flex: 1 0 calc(50% - 0.5rem); /* 2 cards per row */
   }
 }
 
 @media screen and (max-width: 768px) {
-  #carousel-grid a.model-tile {
+  #carousel-grid .model-tile {
     flex: 1 0 100%; /* 1 card per row */
-    min-height: 280px;
   }
 
   .carousel-arrow {
-    font-size: 1.5rem;
+    font-size: 1.5rem;  /* smaller arrows */
+    padding: 0.25rem;
   }
 
   .carousel-wrapper {
-    gap: 0.5rem;
+    gap: 0.5rem; /* reduce spacing */
+  }
+
+  /* Optional mobile fade animation */
+  .carousel-grid.fade-out {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .carousel-grid.fade-in {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.2s ease, transform 0.2s ease;
   }
 }
+
+/* ============================ */
+/* Unknown */
+/* ============================ */
 
 /* Home page information drop-downs */
 /* Remove default triangle marker */
@@ -441,39 +516,9 @@ footer p {
   border-color: rgba(255,255,255,0.16);
 }
 
-
-/* Responsive tweaks */
-@media screen and (max-width: 768px) {
-  .carousel-container {
-     overflow-x: visible;
-  }
-   
-  .carousel-wrapper {
-    gap: 0.5rem;
-  }
-
-  .carousel-arrow {
-    font-size: 1.5rem;
-    padding: 0.25rem;
-  }
-  .carousel-grid.fade-out {
-     opacity: 0;
-     transform: scale(0.95);
-     transition: opacity 0.2s ease, transform 0.2s ease;
-   }
-   
-   .carousel-grid.fade-in {
-     opacity: 1;
-     transform: scale(1);
-     transition: opacity 0.2s ease, transform 0.2s ease;
-   }
-   
-   .carousel-dot {
-     cursor: pointer;
-   }
-}
-
-/* ========== Search Bar Glow for Non-Index Pages ========== */
+/* =================================== */
+/* Search Bar Glow for Non-Index Pages */
+/* =================================== */
 
 /* Apply only when body does NOT have .home-page class (i.e., not index.html) */
 body:not(.home-page) #searchInput {
