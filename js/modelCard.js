@@ -26,7 +26,7 @@ export function createModelCard(model) {
     rounded-lg 
     overflow-hidden 
     border border-white/10
-    transition transform duration-300 hover:scale-[1.03]
+    transition duration-300 
   `;
 
   // Normalize category into array for badge generation
