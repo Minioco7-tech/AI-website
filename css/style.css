@@ -187,15 +187,16 @@ footer p {
   box-shadow:
     0 8px 20px rgba(0, 0, 0, 0.4),       /* soft shadow for depth */
     inset 0 1px 0 rgba(255, 255, 255, 0.08); /* faint top highlight for 3D effect */
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.3s ease;
   cursor: pointer;
   display: flex;
+  flex-shrink: 0;
   flex-direction: column;
   align-items: stretch; /* width:100%; */
 }
 
 .model-tile:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
   z-index: 10;
   overflow: visible;
 }
@@ -334,8 +335,9 @@ footer p {
 /* Grid of carousel cards */
 #carousel-grid {
   display: flex;
-  gap: 1rem;
-  transition: transform 0.5s ease, opacity 0.3s ease;
+  transition: transform 0.5s ease;
+  will-change: transform;
+  overflow: hidden;
 }
 
 /* Individual card styling */
@@ -400,18 +402,16 @@ footer p {
 /* Arrows Styling */
 /* ========================== */
 .carousel-arrow {
-  position: absolute;
+   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 10;
-  background: transparent;
+  background: rgba(0,0,0,0.3);
   border: none;
-  color: white;
-  font-size: 2rem;
+  padding: 0.5rem;
+  border-radius: 9999px;
   cursor: pointer;
-  padding: 0.25rem;
-  flex-shrink: 0;
-  transition: transform 0.2s ease, filter 0.2s ease;
+  z-index: 5;
+  transition: background 0.2s;
 }
 
 .left-arrow {
