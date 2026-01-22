@@ -349,6 +349,54 @@ footer p {
   }
 }
 
+/* ===================================== */
+/* Carousel-only inner card layout fixes  */
+/* Add BELOW the existing carousel block  */
+/* ===================================== */
+
+#carousel-grid {
+  align-items: stretch; /* make all cards same height */
+}
+
+#carousel-grid .model-tile {
+  width: 100%;
+  align-items: stretch; /* ensure children span card width */
+}
+
+/* Ensure the image area fills the card width and has a stable height */
+#carousel-grid .thumb-wrapper {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  padding: 6px;          /* reduce inset so image isn't tiny */
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  #carousel-grid .thumb-wrapper {
+    padding: 4px;
+  }
+}
+
+/* Ensure the background-image fills the wrapper */
+#carousel-grid .thumb {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Give the text area breathing room */
+#carousel-grid .model-tile > div.flex.flex-col.flex-1 {
+  gap: 0.5rem;
+}
+
+/* Optional: slightly calmer paragraph spacing */
+#carousel-grid h3 { margin-bottom: 0.25rem; }
+#carousel-grid p  { margin-bottom: 0.75rem; }
+
+
 /* -------------------------- */
 /* Arrows */
 /* -------------------------- */
