@@ -313,8 +313,8 @@ footer p {
 /* Keep carousel away from screen edge (your layout already uses px-4/6/8).
    This ensures arrows never sit on top of cards. */
 #related-models .overflow-hidden {
-  padding-left: 3.25rem;
-  padding-right: 3.25rem;
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
 }
 
 /* Track */
@@ -339,8 +339,8 @@ footer p {
 /* Mobile: 1 card per view */
 @media (max-width: 768px) {
   #related-models .overflow-hidden {
-    padding-left: 2.75rem;
-    padding-right: 2.75rem;
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
   }
 
   #carousel-grid .model-tile {
@@ -370,11 +370,13 @@ footer p {
   aspect-ratio: 16 / 9;
   padding: 6px;          /* reduce inset so image isn't tiny */
   box-sizing: border-box;
+  padding: 0.35rem;
 }
 
 @media (max-width: 768px) {
   #carousel-grid .thumb-wrapper {
     padding: 4px;
+    padding: 0.3rem;
   }
 }
 
