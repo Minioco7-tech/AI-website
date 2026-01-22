@@ -174,122 +174,145 @@ document.addEventListener('DOMContentLoaded', async () => {
       </section>` : ''}
     </div>
   `;
-
-  // ------------------------------
-  // ✅ Lazy-load backgrounds
-  // ------------------------------
-  const lazyEls = document.querySelectorAll('.lazy-bg');
-  observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.backgroundImage = `url('${entry.target.dataset.bg}')`;
-        observer.unobserve(entry.target);
-      }
-    });
-  });
-  lazyEls.forEach(el => observer.observe(el));
-
-  // ------------------------------
-  // ✅ Related Models Carousel (Category-style cards)
-  // ------------------------------
-  relatedModels = models
-    .filter(m => m.id !== model.id)
-    .filter(m => normalizeCategories(m.category).some(cat => modelCategories.includes(cat)))
-    .slice(0, 12);
-
-  const grid = document.getElementById('carousel-grid');
+  // ==============================
+  // ✅ RELATED MODELS CAROUSEL
+  // ==============================
+  
+  // DOM refs (elements already exist in model.html)
+  const track = document.getElementById('carousel-track');
   const dotsContainer = document.getElementById('carousel-dots');
   const leftArrow = document.querySelector('.left-arrow');
   const rightArrow = document.querySelector('.right-arrow');
-
-  // ------------------------------
-  // Render Functions
-  // ------------------------------
-  function renderCarouselPage() {
-    grid.classList.add('opacity-0', 'scale-95');
-
-    setTimeout(() => {
-      grid.innerHTML = '';
-      const start = currentIndex * modelsPerView;
-      const pageModels = relatedModels.slice(start, start + modelsPerView);
-
-      pageModels.forEach(m => {
-        const card = createModelCard(m);
-        grid.appendChild(card);
+  
+  if (track && dotsContainer && leftArrow && rightArrow) {
+  
+    let relatedModels = [];
+    let currentIndex = 0;
+    let modelsPerView = window.innerWidth < 768 ? 1 : 3;
+    const MAX_MODELS = 12;
+    let cardStep = 0;
+  
+    // ------------------------------
+    // Determine layout
+    // ------------------------------
+    function updateLayout() {
+      modelsPerView = window.innerWidth < 768 ? 1 : 3;
+  
+      const firstCard = track.children[0];
+      if (!firstCard) return;
+  
+      const gap = 24; // Tailwind gap-6
+      cardStep = firstCard.offsetWidth + gap;
+  
+      renderDots();
+      updatePosition();
+    }
+  
+    // ------------------------------
+    // Move carousel
+    // ------------------------------
+    function updatePosition() {
+      const offset = currentIndex * cardStep;
+      track.style.transform = `translateX(-${offset}px)`;
+  
+      [...dotsContainer.children].forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
       });
-
-      lazyEls.forEach(el => observer.observe(el));
-      updateDots();
-      grid.classList.remove('opacity-0', 'scale-95');
-    }, 150);
-  }
-
-  function renderDots() {
-    dotsContainer.innerHTML = '';
-    const totalPages = Math.ceil(relatedModels.length / modelsPerView);
-
-    for (let i = 0; i < totalPages; i++) {
-      const dot = document.createElement('span');
-      dot.className = `carousel-dot w-3 h-3 rounded-full ${i === currentIndex ? 'bg-white' : 'bg-white/30'} cursor-pointer`;
-      dot.dataset.index = i;
-      dot.addEventListener('click', () => {
-        if (i !== currentIndex) {
-          currentIndex = i;
-          renderCarouselPage();
-        }
-      });
-      dotsContainer.appendChild(dot);
     }
-  }
-
-  function updateDots() {
-    renderDots();
-  }
-
-  // ------------------------------
-  // Carousel navigation
-  // ------------------------------
-  leftArrow.addEventListener('click', () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      renderCarouselPage();
+  
+    // ------------------------------
+    // Render dots
+    // ------------------------------
+    function renderDots() {
+      dotsContainer.innerHTML = '';
+  
+      const dotCount = window.innerWidth < 768 ? 3 : 4;
+      const maxIndex = Math.max(0, relatedModels.length - modelsPerView);
+  
+      for (let i = 0; i < dotCount; i++) {
+        const dot = document.createElement('button');
+        dot.className = 'carousel-dot';
+  
+        dot.addEventListener('click', () => {
+          currentIndex = Math.min(i, maxIndex);
+          updatePosition();
+        });
+  
+        dotsContainer.appendChild(dot);
+      }
     }
-  });
-
-  rightArrow.addEventListener('click', () => {
-    const maxIndex = Math.ceil(relatedModels.length / modelsPerView) - 1;
-    if (currentIndex < maxIndex) {
-      currentIndex++;
-      renderCarouselPage();
-    }
-  });
-
-  // ------------------------------
-  // Mobile swipe support
-  // ------------------------------
-  if (window.innerWidth <= 768) {
-    let startX = 0;
-    grid.addEventListener('touchstart', e => startX = e.touches[0].clientX);
-    grid.addEventListener('touchend', e => {
-      const diff = e.changedTouches[0].clientX - startX;
-      if (Math.abs(diff) > 30) diff < 0 ? rightArrow.click() : leftArrow.click();
+  
+    // ------------------------------
+    // Arrow controls
+    // ------------------------------
+    leftArrow.addEventListener('click', () => {
+      currentIndex = Math.max(0, currentIndex - 1);
+      updatePosition();
     });
+  
+    rightArrow.addEventListener('click', () => {
+      const maxIndex = Math.max(0, relatedModels.length - modelsPerView);
+      currentIndex = Math.min(maxIndex, currentIndex + 1);
+      updatePosition();
+    });
+  
+    // ------------------------------
+    // Swipe support (mobile)
+    // ------------------------------
+    let touchStartX = 0;
+  
+    track.addEventListener('touchstart', e => {
+      touchStartX = e.touches[0].clientX;
+    });
+  
+    track.addEventListener('touchend', e => {
+      const diff = touchStartX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) {
+        diff > 0 ? rightArrow.click() : leftArrow.click();
+      }
+    });
+  
+    // ------------------------------
+    // Populate related models
+    // ------------------------------
+    function renderRelatedModels(models, currentModel) {
+      track.innerHTML = '';
+  
+      relatedModels = models
+        .filter(m => m.name !== currentModel.name)
+        .map(m => ({
+          model: m,
+          score: scoreModelRelevance(currentModel, m)
+        }))
+        .sort((a, b) => b.score - a.score)
+        .slice(0, MAX_MODELS)
+        .map(m => m.model);
+  
+      relatedModels.forEach(model => {
+        const card = createModelCard(model);
+  
+        // Slightly smaller for carousel
+        card.classList.add(
+          'min-w-[280px]',
+          'max-w-[320px]'
+        );
+  
+        track.appendChild(card);
+      });
+  
+      currentIndex = 0;
+      updateLayout();
+    }
+  
+    // ------------------------------
+    // Resize handling
+    // ------------------------------
+    window.addEventListener('resize', updateLayout);
+  
+    // ------------------------------
+    // INIT (use existing data)
+    // ------------------------------
+    renderRelatedModels(models, model);
   }
-
-  // ------------------------------
-  // Handle window resize
-  // ------------------------------
-  window.addEventListener('resize', () => {
-    modelsPerView = window.innerWidth <= 768 ? 1 : 3;
-    currentIndex = Math.min(currentIndex, Math.ceil(relatedModels.length / modelsPerView) - 1);
-    renderCarouselPage();
-    updateDots();
-  });
-
-  // ------------------------------
-  // Initial render
-  // ------------------------------
-  renderCarouselPage();
-  renderDots();
-}); // <-- closes DOMContentLoaded
+}); 
 
