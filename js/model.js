@@ -269,19 +269,32 @@ document.addEventListener('DOMContentLoaded', async () => {
     // ------------------------------
     // Populate related models
     // ------------------------------
+    function extractTokens(text) {
+      if (!text || typeof text !== "string") return [];
+      return text
+        .toLowerCase()
+        .split(/\W+/) // split on non-word characters
+        .filter(Boolean);
+    }
+
     function renderRelatedModels(models, currentModel) {
       track.innerHTML = '';
   
       relatedModels = models
         .filter(m => m.name !== currentModel.name)
-        .map(m => ({
-          model: m,
-          score: scoreModelRelevance(currentModel, m)
-        }))
+        .map(m => {
+          // Combine current model's name + description into tokens
+          const tokens = extractTokens(currentModel.name + " " + currentModel.description);
+      
+          return {
+            model: m,
+            score: scoreModelRelevance(m, tokens)
+          };
+        })
         .sort((a, b) => b.score - a.score)
         .slice(0, MAX_MODELS)
         .map(m => m.model);
-  
+
       relatedModels.forEach(model => {
         const card = createModelCard(model);
   
