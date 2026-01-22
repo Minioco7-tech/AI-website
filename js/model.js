@@ -176,152 +176,97 @@ document.addEventListener('DOMContentLoaded', async () => {
       </section>` : ''}
     </div>
   `;
-  // ==============================
-  // ✅ RELATED MODELS CAROUSEL
-  // ==============================
+  // ------------------------------
+  // Related Models Carousel Optimized
+  // ------------------------------
+  function initCarousel(track, dotsContainer, leftArrow, rightArrow, models) {
+    let currentIndex = 0;
+    let modelsPerView = window.innerWidth < 768 ? 1 : 3;
+    let cardStep = 0;
+    const MAX_MODELS = 10;
+    let relatedModels = [];
   
-  // DOM refs (elements already exist in model.html)
-  const track = document.getElementById('carousel-grid');
-  const dotsContainer = document.getElementById('carousel-dots');
-  const leftArrow = document.querySelector('.left-arrow');
-  const rightArrow = document.querySelector('.right-arrow');
+    function extractTokens(text) {
+      return text?.toLowerCase().split(/\W+/).filter(Boolean) || [];
+    }
   
-  if (track && dotsContainer && leftArrow && rightArrow) {
+    function renderRelated(currentModel) {
+      track.innerHTML = '';
+      relatedModels = models
+        .filter(m => m.name !== currentModel.name)
+        .map(m => ({ model: m, score: scoreModelRelevance(m, extractTokens(currentModel.name + ' ' + currentModel.description)) }))
+        .sort((a,b) => b.score - a.score)
+        .slice(0, MAX_MODELS)
+        .map(m => m.model);
   
-    // ------------------------------
-    // Determine layout
-    // ------------------------------
+      relatedModels.forEach(model => {
+        const card = createModelCard(model);
+        card.classList.add('min-w-[280px]', 'max-w-[320px]');
+        track.appendChild(card);
+      });
+  
+      updateLayout();
+    }
+  
     function updateLayout() {
       modelsPerView = window.innerWidth < 768 ? 1 : 3;
-  
       const firstCard = track.children[0];
       if (!firstCard) return;
-  
-      const gap = 24; // Tailwind gap-6
+      const gap = 16; // Tailwind gap-4
       cardStep = firstCard.offsetWidth + gap;
   
       renderDots();
       updatePosition();
     }
   
-    // ------------------------------
-    // Move carousel
-    // ------------------------------
     function updatePosition() {
-      const offset = currentIndex * cardStep;
-      track.style.transform = `translateX(-${offset}px)`;
+      const maxIndex = Math.max(0, relatedModels.length - modelsPerView);
+      currentIndex = Math.min(Math.max(0, currentIndex), maxIndex);
+  
+      track.style.transform = `translateX(-${currentIndex * cardStep}px)`;
   
       [...dotsContainer.children].forEach((dot, i) => {
         dot.classList.toggle('active', i === currentIndex);
       });
     }
   
-    // ------------------------------
-    // Render dots
-    // ------------------------------
     function renderDots() {
       dotsContainer.innerHTML = '';
+      const pages = Math.ceil(relatedModels.length / modelsPerView);
   
-      const dotCount = window.innerWidth < 768 ? 3 : 4;
-      const maxIndex = Math.max(0, relatedModels.length - modelsPerView);
-  
-      for (let i = 0; i < dotCount; i++) {
+      for (let i = 0; i < pages; i++) {
         const dot = document.createElement('button');
         dot.className = 'carousel-dot';
-  
-        dot.addEventListener('click', () => {
-          currentIndex = Math.min(i, maxIndex);
-          updatePosition();
-        });
-  
+        dot.addEventListener('click', () => { currentIndex = i; updatePosition(); });
         dotsContainer.appendChild(dot);
       }
     }
   
-    // ------------------------------
-    // Arrow controls
-    // ------------------------------
-    leftArrow.addEventListener('click', () => {
-      currentIndex = Math.max(0, currentIndex - 1);
-      updatePosition();
-    });
+    leftArrow.addEventListener('click', () => { currentIndex--; updatePosition(); });
+    rightArrow.addEventListener('click', () => { currentIndex++; updatePosition(); });
   
-    rightArrow.addEventListener('click', () => {
-      const maxIndex = Math.max(0, relatedModels.length - modelsPerView);
-      currentIndex = Math.min(maxIndex, currentIndex + 1);
-      updatePosition();
-    });
-  
-    // ------------------------------
-    // Swipe support (mobile)
-    // ------------------------------
-    let touchStartX = 0;
-  
-    track.addEventListener('touchstart', e => {
-      touchStartX = e.touches[0].clientX;
-    });
-  
+    // Swipe support
+    let startX = 0;
+    track.addEventListener('touchstart', e => startX = e.touches[0].clientX);
     track.addEventListener('touchend', e => {
-      const diff = touchStartX - e.changedTouches[0].clientX;
-      if (Math.abs(diff) > 50) {
-        diff > 0 ? rightArrow.click() : leftArrow.click();
-      }
+      const diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) diff > 0 ? rightArrow.click() : leftArrow.click();
     });
   
-    // ------------------------------
-    // Populate related models
-    // ------------------------------
-    function extractTokens(text) {
-      if (!text || typeof text !== "string") return [];
-      return text
-        .toLowerCase()
-        .split(/\W+/) // split on non-word characters
-        .filter(Boolean);
-    }
-
-    function renderRelatedModels(models, currentModel) {
-      track.innerHTML = '';
-  
-      relatedModels = models
-        .filter(m => m.name !== currentModel.name)
-        .map(m => {
-          // Combine current model's name + description into tokens
-          const tokens = extractTokens(currentModel.name + " " + currentModel.description);
-      
-          return {
-            model: m,
-            score: scoreModelRelevance(m, tokens)
-          };
-        })
-        .sort((a, b) => b.score - a.score)
-        .slice(0, MAX_MODELS)
-        .map(m => m.model);
-
-      relatedModels.forEach(model => {
-        const card = createModelCard(model);
-  
-        // Slightly smaller for carousel
-        card.classList.add(
-          'min-w-[280px]',
-          'max-w-[320px]'
-        );
-  
-        track.appendChild(card);
-      });
-  
-      currentIndex = 0;
-      updateLayout();
-    }
-  
-    // ------------------------------
-    // Resize handling
-    // ------------------------------
     window.addEventListener('resize', updateLayout);
   
-    // ------------------------------
-    // INIT (use existing data)
-    // ------------------------------
-    renderRelatedModels(models, model);
+    return renderRelated;
+  }
+  
+  // Usage:
+  const track = document.getElementById('carousel-grid');
+  const dotsContainer = document.getElementById('carousel-dots');
+  const leftArrow = document.querySelector('.left-arrow');
+  const rightArrow = document.querySelector('.right-arrow');
+  
+  if (track && dotsContainer && leftArrow && rightArrow) {
+    const render = initCarousel(track, dotsContainer, leftArrow, rightArrow, models);
+    render(model); // Pass current model to populate
   }
 }); 
 
