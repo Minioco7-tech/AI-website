@@ -189,27 +189,20 @@ document.addEventListener('DOMContentLoaded', async () => {
     let currentPage = 0;
     let cardStep = 0; // card width + gap
   
-    const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
-  
     function extractTokens(text) {
       return text?.toLowerCase().split(/\W+/).filter(Boolean) || [];
     }
   
     function getGapPx() {
-      // Uses actual CSS gap on the track so we stay DRY
       const cs = getComputedStyle(track);
-      // Most browsers expose `gap`; some expose columnGap for flex
       const g = parseFloat(cs.gap || cs.columnGap || "16");
       return Number.isFinite(g) ? g : 16;
     }
   
     function computeStep() {
-      const firstCard = track.children[0];
-      if (!firstCard) return;
-  
-      const gap = getGapPx();
-      const w = firstCard.getBoundingClientRect().width;
-      cardStep = w + gap;
+      const first = track.children[0];
+      if (!first) return;
+      cardStep = first.getBoundingClientRect().width + getGapPx();
     }
   
     function totalPages() {
@@ -217,73 +210,22 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   
     function clampPage() {
-      const maxPage = totalPages() - 1;
-      currentPage = Math.min(Math.max(0, currentPage), maxPage);
+      currentPage = Math.min(Math.max(0, currentPage), totalPages() - 1);
     }
   
     function setArrowState() {
       const maxPage = totalPages() - 1;
-  
-      const disableLeft = currentPage <= 0;
-      const disableRight = currentPage >= maxPage;
-  
-      leftArrow.classList.toggle("is-disabled", disableLeft);
-      rightArrow.classList.toggle("is-disabled", disableRight);
-  
-      leftArrow.setAttribute("aria-disabled", String(disableLeft));
-      rightArrow.setAttribute("aria-disabled", String(disableRight));
-  
-      // Keep buttons focusable but prevent click action when disabled
-      leftArrow.disabled = disableLeft;
-      rightArrow.disabled = disableRight;
+      leftArrow.disabled = currentPage <= 0;
+      rightArrow.disabled = currentPage >= maxPage;
+      leftArrow.classList.toggle("is-disabled", leftArrow.disabled);
+      rightArrow.classList.toggle("is-disabled", rightArrow.disabled);
     }
   
-    function updatePosition() {
-      clampPage();
-  
-      // If not enough models to scroll, center them and lock transform
-      if (relatedModels.length <= modelsPerView) {
-        track.classList.add("is-centered");
-        track.style.transform = "translateX(0px)";
-        dotsContainer.innerHTML = ""; // no dots if nothing to page
-        setArrowState();
-        return;
-      } else {
-        track.classList.remove("is-centered");
-      }
-  
-      const offset = currentPage * cardStep * modelsPerView;
-  
-      // Respect reduced motion
-      if (prefersReducedMotion) {
-        track.style.transition = "none";
-        requestAnimationFrame(() => {
-          track.style.transform = `translateX(-${offset}px)`;
-          // Restore transition for normal use if user toggles later
-          track.style.transition = "";
-        });
-      } else {
-        track.style.transform = `translateX(-${offset}px)`;
-      }
-  
-      // Update dot active state
-      [...dotsContainer.children].forEach((dot) => {
-        const page = Number(dot.dataset.page);
-        dot.classList.toggle("active", page === currentPage);
-      });
-  
-      setArrowState();
-    }
-  
-    function dotWindowStart() {
+    function windowStart() {
       const pages = totalPages();
       if (pages <= visibleDots) return 0;
-  
-      // Center window around current page
       const half = Math.floor(visibleDots / 2);
       let start = currentPage - half;
-  
-      // Clamp start so window stays within [0, pages-visibleDots]
       start = Math.max(0, Math.min(start, pages - visibleDots));
       return start;
     }
@@ -291,11 +233,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     function renderDots() {
       dotsContainer.innerHTML = "";
   
-      const pages = totalPages();
+      // If no paging needed, no dots
       if (relatedModels.length <= modelsPerView) return;
   
-      const start = dotWindowStart();
-      const count = Math.min(visibleDots, pages);
+      const start = windowStart();
+      const count = Math.min(visibleDots, totalPages());
   
       for (let i = 0; i < count; i++) {
         const page = start + i;
@@ -303,45 +245,57 @@ document.addEventListener('DOMContentLoaded', async () => {
         dot.type = "button";
         dot.className = "carousel-dot";
         dot.dataset.page = String(page);
-        dot.setAttribute("aria-label", `Go to related models page ${page + 1}`);
+        dot.classList.toggle("active", page === currentPage);
   
         dot.addEventListener("click", () => {
           currentPage = page;
-          renderDots();     // window may shift
-          updatePosition();
+          update();
         });
   
         dotsContainer.appendChild(dot);
       }
     }
   
-    function applyResponsiveState() {
-      const isMobile = window.innerWidth < 768;
-      modelsPerView = isMobile ? 1 : 3;
-      visibleDots = isMobile ? 3 : 4;
+    function updatePosition() {
+      clampPage();
+  
+      if (relatedModels.length <= modelsPerView) {
+        track.classList.add("is-centered");
+        track.style.transform = "translateX(0px)";
+        setArrowState();
+        return;
+      } else {
+        track.classList.remove("is-centered");
+      }
+  
+      const offset = currentPage * cardStep * modelsPerView;
+      track.style.transform = `translateX(-${offset}px)`;
+      setArrowState();
     }
   
-    function updateLayout() {
-      applyResponsiveState();
+    function update() {
+      applyResponsive();
       computeStep();
       renderDots();
       updatePosition();
     }
   
-    function go(delta) {
-      currentPage += delta;
-      renderDots();   // keep dot window in sync
-      updatePosition();
+    function applyResponsive() {
+      const isMobile = window.innerWidth < 768;
+      modelsPerView = isMobile ? 1 : 3;
+      visibleDots = isMobile ? 3 : 4;
     }
   
-    // Arrow clicks
+    function go(delta) {
+      currentPage += delta;
+      update();
+    }
+  
     leftArrow.addEventListener("click", () => go(-1));
     rightArrow.addEventListener("click", () => go(1));
   
-    // Swipe support (mobile)
-    let startX = 0;
-    let startY = 0;
-  
+    // Swipe support
+    let startX = 0, startY = 0;
     track.addEventListener("touchstart", (e) => {
       const t = e.touches[0];
       startX = t.clientX;
@@ -352,27 +306,11 @@ document.addEventListener('DOMContentLoaded', async () => {
       const t = e.changedTouches[0];
       const dx = startX - t.clientX;
       const dy = startY - t.clientY;
-  
-      // Ignore mostly-vertical gestures
       if (Math.abs(dy) > Math.abs(dx)) return;
-  
-      if (Math.abs(dx) > 50) {
-        if (dx > 0) go(1);
-        else go(-1);
-      }
+      if (Math.abs(dx) > 50) go(dx > 0 ? 1 : -1);
     }, { passive: true });
   
-    // Recompute sizes on resize + when cards/images settle
-    window.addEventListener("resize", () => {
-      const prevPage = currentPage;
-      updateLayout();
-      currentPage = Math.min(prevPage, totalPages() - 1);
-      renderDots();
-      updatePosition();
-    });
-  
-    const ro = new ResizeObserver(() => updateLayout());
-    ro.observe(track);
+    window.addEventListener("resize", () => update());
   
     function renderRelated(currentModel) {
       track.innerHTML = "";
@@ -380,25 +318,21 @@ document.addEventListener('DOMContentLoaded', async () => {
       const tokens = extractTokens(`${currentModel.name} ${currentModel.description || ""}`);
   
       relatedModels = models
-        .filter((m) => m.name !== currentModel.name)
-        .map((m) => ({ model: m, score: scoreModelRelevance(m, tokens) }))
+        .filter(m => m.name !== currentModel.name)
+        .map(m => ({ model: m, score: scoreModelRelevance(m, tokens) }))
         .sort((a, b) => b.score - a.score)
         .slice(0, MAX_MODELS)
-        .map((x) => x.model);
+        .map(x => x.model);
   
-      relatedModels.forEach((m) => {
-        const card = createModelCard(m);
-        // IMPORTANT: don't force widths in JS; CSS handles exact 3/1 layout DRYly
-        track.appendChild(card);
-      });
+      relatedModels.forEach(m => track.appendChild(createModelCard(m)));
   
       currentPage = 0;
-      updateLayout();
+      update();
     }
   
     return renderRelated;
   }
-  
+
   // Usage (keeps your existing IDs/classes)
   const track = document.getElementById("carousel-grid");
   const dotsContainer = document.getElementById("carousel-dots");
