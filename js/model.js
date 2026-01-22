@@ -25,6 +25,8 @@ let relatedModels = [];
 let currentIndex = 0;
 let modelsPerView = window.innerWidth <= 768 ? 1 : 3;
 let observer;
+let cardStep = 0;        
+const MAX_MODELS = 10; 
 
 // ------------------------------
 // ✅ DOM References
