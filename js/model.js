@@ -103,8 +103,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   // ------------------------------
   modelDetailsEl.innerHTML = `
     <div class="w-full space-y-10">
+    
       <!-- TOP HERO ROW -->
       <section class="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10">
+      
+        <!-- MAIN MODEL DETAILS CARD -->
         <div class="lg:col-span-3 rounded-3xl border border-white/15 bg-black/20 p-6 sm:p-7 flex flex-col gap-6">
           <div class="space-y-3">
             <p class="text-[11px] tracking-[0.3em] uppercase text-gray-400">AI Tool Overview</p>
@@ -125,12 +128,15 @@ document.addEventListener('DOMContentLoaded', async () => {
             </a>
           </div>
         </div>
+        
+        <!-- MODEL IMAGE CARD -->
         <div class="lg:col-span-2 rounded-3xl border border-white/15 bg-black/30 overflow-hidden">
           <div class="w-full h-full max-h-[320px] md:max-h-[360px] border-4 border-white/10 rounded-3xl overflow-hidden">
             <img src="${model.image}" alt="${model.name}" class="w-full h-full object-cover">
           </div>
         </div>
       </section>
+      
       <!-- COLORED OVERVIEW CARD -->
       <section class="relative rounded-3xl border border-white/10 bg-[#020617] overflow-hidden p-6 sm:p-7">
         <div class="absolute inset-0 opacity-40 blur-3xl ${accentGradient}"></div>
@@ -154,12 +160,17 @@ document.addEventListener('DOMContentLoaded', async () => {
           </div>
         </div>
       </section>
+      
       <!-- DESCRIPTION + FEATURES -->
       <section class="grid grid-cols-1 lg:grid-cols-7 gap-8 lg:gap-10">
+
+        <!-- DESCRIPTION CARD -->
         <div class="lg:col-span-4 rounded-3xl border border-white/15 bg-black/20 p-6 sm:p-7">
           <h3 class="text-xl sm:text-2xl font-semibold mb-3">Description</h3>
           <p class="text-gray-200 leading-relaxed whitespace-pre-line">${model.description}</p>
         </div>
+
+        <!-- FEATURES CARD -->
         <div class="lg:col-span-3 space-y-5">
           ${model.features?.length ? `<div class="rounded-3xl border border-white/15 bg-black/20 p-6 sm:p-7">
             <h3 class="text-lg sm:text-xl font-semibold mb-3">Key features</h3>
@@ -169,6 +180,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             <ul class="space-y-2 text-sm text-gray-200">${model.information.map(item => `<li class="flex gap-2"><span class="mt-[6px] w-1.5 h-1.5 rounded-full bg-gray-400 flex-shrink-0"></span><p class="leading-relaxed"><strong class="text-gray-100">${item.label}:</strong>${typeof item.value === "string" && item.value.startsWith("http") ? `<a href="${item.value}" target="_blank" rel="noopener noreferrer" class="text-blue-400 underline">${item.value}</a>` : item.value}</p></li>`).join('')}</ul></div>` : ''}
         </div>
       </section>
+      
       <!-- USE CASES -->
       ${model.use_cases?.length ? `<section class="rounded-3xl border border-white/15 bg-black/20 p-6 sm:p-7">
         <h3 class="text-xl sm:text-2xl font-semibold mb-4">Use cases</h3>
