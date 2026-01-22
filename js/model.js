@@ -179,18 +179,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   // ==============================
   
   // DOM refs (elements already exist in model.html)
-  const track = document.getElementById('carousel-track');
+  const track = document.getElementById('carousel-grid');
   const dotsContainer = document.getElementById('carousel-dots');
   const leftArrow = document.querySelector('.left-arrow');
   const rightArrow = document.querySelector('.right-arrow');
   
   if (track && dotsContainer && leftArrow && rightArrow) {
-  
-    let relatedModels = [];
-    let currentIndex = 0;
-    let modelsPerView = window.innerWidth < 768 ? 1 : 3;
-    const MAX_MODELS = 12;
-    let cardStep = 0;
   
     // ------------------------------
     // Determine layout
