@@ -205,10 +205,30 @@ document.addEventListener('DOMContentLoaded', async () => {
     
       const gap = getGapPx();
     
-      // Use layout width (ignores CSS transform scale)
-      const w = firstCard.offsetWidth;
+      // Get visual width (includes transform) but keeps sub-pixels
+      const rectW = firstCard.getBoundingClientRect().width;
     
-      cardStep = w + gap;
+      // Undo the scale so we recover the true layout width with sub-pixels
+      let scaleX = 1;
+      const t = getComputedStyle(firstCard).transform;
+      if (t && t !== "none") {
+        try {
+          // DOMMatrixReadOnly is supported in modern browsers
+          const m = new DOMMatrixReadOnly(t);
+          scaleX = Math.hypot(m.a, m.b) || 1;
+        } catch {
+          // Fallback for older parsing
+          const match = t.match(/^matrix\(([^)]+)\)$/);
+          if (match) {
+            const parts = match[1].split(",").map(v => parseFloat(v.trim()));
+            const a = parts[0], b = parts[1];
+            scaleX = Math.hypot(a, b) || 1;
+          }
+        }
+      }
+    
+      const layoutW = rectW / scaleX; // sub-pixel, transform-free
+      cardStep = layoutW + gap;
     }
 
     function totalPages() {
