@@ -12,8 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Unified base layers for all pages
   const base = `
-    <!-- Gradient base -->
-    <div class="absolute inset-0 bg-gradient-to-b from-[#020617] via-[#020617] to-[#020617]"></div>
+    <!-- Base background -->
+    <div class="absolute inset-0 ${
+      page === 'model'
+        ? 'bg-[#020632]'
+        : 'bg-gradient-to-b from-[#020617] via-[#020617] to-[#020617]'
+    }"></div>
 
     <!-- Blue glows -->
     <div class="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[1200px] h-[1200px] rounded-full 
