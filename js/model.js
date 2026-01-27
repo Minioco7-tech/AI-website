@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       </section>
       <!-- DESCRIPTION + FEATURES -->
       <section class="grid grid-cols-1 lg:grid-cols-7 gap-8 lg:gap-10">
-        <div class="lg:col-span-4 rounded-3xl border border-white/15 bg-black/20 p-6 sm:p-7">
+        <div class="lg:col-span-4 rounded-3xl border border-white/15 bg-[#020617] p-6 sm:p-7">
           <h3 class="text-xl sm:text-2xl font-semibold mb-3">Description</h3>
           <p class="text-gray-200 leading-relaxed whitespace-pre-line">${model.description}</p>
         </div>
@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         </div>
       </section>
       <!-- USE CASES -->
-      ${model.use_cases?.length ? `<section class="rounded-3xl border border-white/15 bg-black/20 p-6 sm:p-7">
+      ${model.use_cases?.length ? `<section class="rounded-3xl border border-white/15 bg-[#020617] p-6 sm:p-7">
         <h3 class="text-xl sm:text-2xl font-semibold mb-4">Use cases</h3>
         <div class="space-y-5">${model.use_cases.map(u => `<article class="flex gap-3"><span class="mt-2 w-2 h-2 rounded-full bg-cyan-400 flex-shrink-0"></span><div><h4 class="text-base sm:text-lg font-semibold text-white">${u.title}</h4><p class="text-sm text-gray-200 leading-relaxed">${u.description}</p></div></article>`).join('')}</div>
       </section>` : ''}
