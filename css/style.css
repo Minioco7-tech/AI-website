@@ -312,9 +312,18 @@ footer p {
   display: block;
 }
 
-/* Variants */
-.sshot-img--contain { object-fit: contain; }
-.sshot-img--cover   { object-fit: cover; }
+/* Default “fill” for cards */
+.sshot-img--cover {
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+/* Full screenshot (no cropping) */
+.sshot-img--contain {
+  object-fit: contain;
+  object-position: center;
+}
+
 
 /* =============================== */
 /* Related Models Carousel — model.html (DRY: reuse model cards) */
