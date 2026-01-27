@@ -112,6 +112,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             <p class="text-[11px] tracking-[0.3em] uppercase text-gray-400">AI Tool Overview</p>
             <h1 class="text-3xl sm:text-4xl font-bold text-white">${model.name}</h1>
             ${model.subtitle ? `<p class="text-sm sm:text-base text-gray-300 leading-relaxed">${model.subtitle}</p>` : ''}
+            ${model.image ? `
+              <div class="lg:hidden rounded-2xl overflow-hidden border border-white/10 bg-black/20">
+                <div class="w-full aspect-[16/9] bg-cover bg-center"
+                     style="background-image: url('${model.image}');"></div>
+              </div>
+            ` : ''}
             <div class="flex flex-wrap items-center gap-3 mt-2">
               ${model.type ? `<span class="inline-flex items-center rounded-full bg-white/5 border border-white/10 
                                px-3 py-1 text-xs font-medium text-gray-200">
@@ -127,7 +133,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             </a>
           </div>
         </div>
-        <div class=" lg:col-span-2 model-tile rounded-3xl overflow-hidden border border-white/10 bg-black/30 transition-transform duration-300 hover:scale-[1.03] ">
+        <div class="hidden lg:block lg:col-span-2 model-tile rounded-3xl overflow-hidden border border-white/10 bg-black/30">
           <div class="thumb bg-cover bg-center w-full h-[320px] md:h-[360px]" style="background-image: url('${model.image}');"></div>
         </div>
       </section>
