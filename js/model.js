@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     <div class="w-full space-y-10">
       <!-- TOP HERO ROW -->
       <section class="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10">
-        <div class="lg:col-span-3 rounded-3xl border border-white/15 bg-black/20 p-6 sm:p-7 flex flex-col gap-6">
+        <div class="lg:col-span-3 rounded-3xl border border-white/15 bg-[#020617] p-6 sm:p-7 flex flex-col gap-6">
           <div class="space-y-3">
             <p class="text-[11px] tracking-[0.3em] uppercase text-gray-400">AI Tool Overview</p>
             <h1 class="text-3xl sm:text-4xl font-bold text-white">${model.name}</h1>
