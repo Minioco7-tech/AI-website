@@ -115,13 +115,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             ${model.image ? `
               <div class="lg:hidden mt-4">
                 <div class="sshot-frame" style="border-radius: 1rem;">
-                  <img
-                    class="sshot-img sshot-img--cover"
-                    src="${model.image}"
-                    alt="${model.name} screenshot"
-                    loading="lazy"
-                    decoding="async"
-                  >
+                  <img class="sshot-img sshot-img--cover" src="${model.image}" alt="${model.name} screenshot" loading="lazy" decoding="async">
                 </div>
               </div>
             ` : ''}
@@ -142,14 +136,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         </div>
         <div class="hidden lg:block lg:col-span-2 model-tile model-hero-image rounded-3xl overflow-hidden border border-white/10">
           <div class="sshot-frame" style="border-radius: 1.5rem;">
-            <img
-              class="sshot-img sshot-img--cover"
-              src="${model.image}"
-              alt="${model.name} screenshot"
-              loading="lazy"
-              fetchpriority="high"
-              decoding="async"
-            >
+            <img class="sshot-img sshot-img--cover" src="${model.image}" alt="${model.name} screenshot" loading="lazy" fetchpriority="high" decoding="async">
           </div>
         </div>
       </section>
