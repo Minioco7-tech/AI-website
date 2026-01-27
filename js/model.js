@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', async () => {
               class="sshot-img sshot-img--cover"
               src="${model.image}"
               alt="${model.name} screenshot"
-              loading="eager"
+              loading="lazy"
               fetchpriority="high"
               decoding="async"
             >
