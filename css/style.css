@@ -306,6 +306,13 @@ footer p {
   display: none;
 }
 
+/* Stop hover scaling for the large model image card on model.html */
+.model-hero-image:hover {
+  transform: none !important;
+  z-index: auto !important;
+  overflow: hidden !important;
+}
+
 /* =============================== */
 /* Related Models Carousel — model.html (DRY: reuse model cards) */
 /* =============================== */
