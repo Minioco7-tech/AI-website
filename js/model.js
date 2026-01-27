@@ -134,7 +134,16 @@ document.addEventListener('DOMContentLoaded', async () => {
           </div>
         </div>
         <div class="hidden lg:block lg:col-span-2 model-tile model-hero-image rounded-3xl overflow-hidden border border-white/10 bg-black/30">
-          <div class="thumb bg-cover bg-center w-full h-[320px] md:h-[360px]" style="background-image: url('${model.image}');"></div>
+          <div class="sshot-frame" style="border-radius: 1.5rem;">
+            <img
+              class="sshot-img sshot-img--cover"
+              src="${model.image}"
+              alt="${model.name} screenshot"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+            >
+          </div>
         </div>
       </section>
       <!-- COLORED OVERVIEW CARD -->
