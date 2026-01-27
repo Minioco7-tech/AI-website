@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', async () => {
               <div class="lg:hidden mt-4">
                 <div class="sshot-frame" style="border-radius: 1rem;">
                   <img
-                    class="sshot-img sshot-img--contain"
+                    class="sshot-img sshot-img--cover"
                     src="${model.image}"
                     alt="${model.name} screenshot"
                     loading="lazy"
