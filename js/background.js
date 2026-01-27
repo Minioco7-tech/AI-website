@@ -19,12 +19,18 @@ document.addEventListener('DOMContentLoaded', () => {
         : 'bg-gradient-to-b from-[#020617] via-[#020617] to-[#020617]'
     }"></div>
 
-    <!-- Blue glows -->
-    <div class="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[1200px] h-[1200px] rounded-full 
-                bg-cyan-500/18 blur-[190px]"></div>
-
-    <div class="absolute bottom-[-35%] left-1/2 -translate-x-1/2 w-[1400px] h-[1400px] rounded-full 
-                bg-blue-900/45 blur-[230px]"></div>
+    ${
+      page !== 'model'
+        ? `
+          <!-- Blue glows (NOT on model page) -->
+          <div class="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[1200px] h-[1200px] rounded-full 
+                      bg-cyan-500/18 blur-[190px]"></div>
+  
+          <div class="absolute bottom-[-35%] left-1/2 -translate-x-1/2 w-[1400px] h-[1400px] rounded-full 
+                      bg-blue-900/45 blur-[230px]"></div>
+        `
+        : ''
+    }
   `;
 
   // Shared waves layer (same everywhere)
