@@ -295,34 +295,36 @@ footer p {
   display: none;
 }
 
-/* Reusable screenshot frame */
+/* Frame */
 .sshot-frame {
+  position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  border-radius: 0.75rem;
   overflow: hidden;
-  background: #020617;            /* looks intentional when using contain */
+  border-radius: 0.75rem;
+  background: #020617;
   border: 1px solid rgba(255,255,255,0.08);
 }
 
-/* The actual image */
+/* Image is pinned to all edges (no gaps possible) */
 .sshot-img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   display: block;
 }
 
-/* Default “fill” for cards */
+/* Variants */
 .sshot-img--cover {
   object-fit: cover;
   object-position: center 35%;
 }
-
-/* Full screenshot (no cropping) */
 .sshot-img--contain {
   object-fit: contain;
   object-position: center;
 }
+
 
 
 /* =============================== */
