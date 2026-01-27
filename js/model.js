@@ -170,10 +170,10 @@ document.addEventListener('DOMContentLoaded', async () => {
           <p class="text-gray-200 leading-relaxed whitespace-pre-line">${model.description}</p>
         </div>
         <div class="lg:col-span-3 space-y-5">
-          ${model.features?.length ? `<div class="rounded-3xl border border-white/15 bg-black/20 p-6 sm:p-7">
+          ${model.features?.length ? `<div class="rounded-3xl border border-white/15 bg-[#020617] p-6 sm:p-7">
             <h3 class="text-lg sm:text-xl font-semibold mb-3">Key features</h3>
             <ul class="space-y-3">${model.features.map(f => `<li class="flex gap-3"><span class="mt-[6px] w-2 h-2 rounded-full bg-cyan-400 flex-shrink-0"></span><span class="text-sm text-gray-200">${f}</span></li>`).join('')}</ul></div>` : ''}
-          ${model.information?.length ? `<div class="rounded-3xl border border-white/15 bg-black/20 p-6 sm:p-7">
+          ${model.information?.length ? `<div class="rounded-3xl border border-white/15 bg-[#020617] p-6 sm:p-7">
             <h3 class="text-lg sm:text-xl font-semibold mb-3">Model information</h3>
             <ul class="space-y-2 text-sm text-gray-200">${model.information.map(item => `<li class="flex gap-2"><span class="mt-[6px] w-1.5 h-1.5 rounded-full bg-gray-400 flex-shrink-0"></span><p class="leading-relaxed"><strong class="text-gray-100">${item.label}:</strong>${typeof item.value === "string" && item.value.startsWith("http") ? `<a href="${item.value}" target="_blank" rel="noopener noreferrer" class="text-blue-400 underline">${item.value}</a>` : item.value}</p></li>`).join('')}</ul></div>` : ''}
         </div>
