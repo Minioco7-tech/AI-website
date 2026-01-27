@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <!-- Base background -->
     <div class="absolute inset-0 ${
       page === 'model'
-        ? 'bg-[#020632]'
+        ? 'bg-[#020617]'
         : 'bg-gradient-to-b from-[#020617] via-[#020617] to-[#020617]'
     }"></div>
 
