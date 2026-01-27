@@ -21,7 +21,7 @@ export function createModelCard(model) {
 
   // Card styling
   card.className = `
-    model-tile 
+    model-tile is-hoverable
     flex flex-col
     rounded-lg 
     overflow-hidden 
