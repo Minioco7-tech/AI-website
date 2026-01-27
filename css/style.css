@@ -195,7 +195,7 @@ footer p {
   align-items: stretch; /* width:100%; */
 }
 
-.model-tile:hover {
+.model-tile.is-hoverable:hover {
   transform: scale(1.03);
   z-index: 10;
   overflow: visible;
@@ -306,12 +306,12 @@ footer p {
   display: none;
 }
 
-/* Stop hover scaling for the large model image card on model.html */
+/* Stop hover scaling for the large model image card on model.html 
 .model-hero-image:hover {
   transform: none !important;
   z-index: auto !important;
   overflow: hidden !important;
-}
+} */
 
 /* =============================== */
 /* Related Models Carousel — model.html (DRY: reuse model cards) */
