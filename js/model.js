@@ -113,9 +113,16 @@ document.addEventListener('DOMContentLoaded', async () => {
             <h1 class="text-3xl sm:text-4xl font-bold text-white">${model.name}</h1>
             ${model.subtitle ? `<p class="text-sm sm:text-base text-gray-300 leading-relaxed">${model.subtitle}</p>` : ''}
             ${model.image ? `
-              <div class="lg:hidden rounded-2xl overflow-hidden border border-white/10 bg-black/20">
-                <div class="w-full aspect-[16/9] bg-cover bg-center"
-                     style="background-image: url('${model.image}');"></div>
+              <div class="lg:hidden mt-4">
+                <div class="sshot-frame" style="border-radius: 1rem;">
+                  <img
+                    class="sshot-img sshot-img--contain"
+                    src="${model.image}"
+                    alt="${model.name} screenshot"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </div>
               </div>
             ` : ''}
             <div class="flex flex-wrap items-center gap-3 mt-2">
@@ -133,7 +140,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             </a>
           </div>
         </div>
-        <div class="hidden lg:block lg:col-span-2 model-tile model-hero-image rounded-3xl overflow-hidden border border-white/10 bg-black/30">
+        <div class="hidden lg:block lg:col-span-2 model-tile model-hero-image rounded-3xl overflow-hidden border border-white/10">
           <div class="sshot-frame" style="border-radius: 1.5rem;">
             <img
               class="sshot-img sshot-img--cover"
