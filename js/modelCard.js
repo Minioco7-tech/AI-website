@@ -45,7 +45,7 @@ export function createModelCard(model) {
     <div class="thumb-wrapper rounded-lg overflow-hidden p-1">
       <div class="sshot-frame">
         <img
-          class="sshot-img sshot-img--contain"
+          class="sshot-img sshot-img--cover"
           src="${model.image}"
           alt="${model.name} screenshot"
           loading="lazy"
