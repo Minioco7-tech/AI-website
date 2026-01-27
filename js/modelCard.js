@@ -43,10 +43,17 @@ export function createModelCard(model) {
   // Set inner card HTML
   card.innerHTML = `
     <div class="thumb-wrapper rounded-lg overflow-hidden p-1">
-        <div class="thumb bg-cover bg-center w-full h-full rounded-lg transition-transform duration-300"
-              style="background-image: url('${model.image}');">
-        </div>
+      <div class="sshot-frame">
+        <img
+          class="sshot-img sshot-img--contain"
+          src="${model.image}"
+          alt="${model.name} screenshot"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
     </div>
+
     <div class="flex flex-col flex-1 p-4">
       <h3 class="text-purple-400 text-lg sm:text-xl font-bold leading-snug mb-2">${model.name}</h3>
       <p class="text-gray-200 text-sm sm:text-base font-normal leading-normal mb-3 line-clamp-2">${model.description}</p>
