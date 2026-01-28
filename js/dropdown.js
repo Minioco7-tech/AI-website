@@ -94,7 +94,7 @@ export function setupCategoryPillDropdown({
       <button type="button" class="filter-reset-btn">Reset filters</button>
     </div>
   
-    <details class="filter-section" open>
+    <details class="filter-section">
       <summary class="filter-section-summary">
         <span class="filter-section-title">Categories</span>
         <span class="filter-section-chevron" aria-hidden="true"></span>
