@@ -9,7 +9,7 @@ import {
   getPaginatedModels,
   renderPagination,
   MODELS_PER_PAGE,
-  filterModelsByCategories,
+  filterModelsByAnyCategory,
   getUniqueCategories,
   scoreModelRelevance,
   expandQueryTokens
@@ -87,7 +87,7 @@ function initLazyBackgrounds() {
 // ✅ Filtering logic (checkbox UI interaction)
 // ------------------------------
 function updateFilteredModels() {
-  const filtered = filterModelsByCategories(currentModels, selectedCategories);
+  const filtered = filterModelsByAnyCategory(currentModels, selectedCategories);
   displayModels(filtered);
 }
 
