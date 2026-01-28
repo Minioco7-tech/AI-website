@@ -168,7 +168,7 @@ async function fetchAndDisplayResults() {
     }
 
     // Store state for sorting + filtering
-    currentModels = sortModels(results, sortBySelect.value).sort(() => 0.5 - Math.random());
+    currentModels = sortModels(results, sortBySelect.value);
 
     // Render category filter checkboxes
     renderCategoryFilters(models, currentModels);
