@@ -842,14 +842,10 @@ body:not(.home-page) #searchInput:hover {
 /* =======================
    Pills inside #filterCategories
    ======================= */
+/* ✅ filterCategories is the MENU ROOT now — it must NOT be a pill grid */
 #filterCategories {
-  max-height: 320px;
-  overflow: auto;
-  padding: 0.9rem;
-
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
+  display: block;
+  padding: 0;
 }
 
 /* pill wrapper */
@@ -968,7 +964,7 @@ body:not(.home-page) #searchInput:hover {
   border: 2px solid rgba(2,6,23,0.92);
 }
 
-/* Expandable section inside dropdown */
+/* Expandable Categories section inside dropdown */
 .filter-section {
   border-top: 1px solid rgba(255,255,255,0.08);
 }
@@ -981,14 +977,11 @@ body:not(.home-page) #searchInput:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.75rem;
 
   padding: 0.75rem 0.9rem;
 }
 
-.filter-section-summary::-webkit-details-marker {
-  display: none;
-}
+.filter-section-summary::-webkit-details-marker { display: none; }
 
 .filter-section-title {
   font-size: 0.85rem;
@@ -997,14 +990,14 @@ body:not(.home-page) #searchInput:hover {
   color: rgba(255,255,255,0.9);
 }
 
+/* ✅ same bubble + arrow style as your dropdown chevron */
 .filter-section-chevron {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   border-radius: 9999px;
   border: 1px solid rgba(255,255,255,0.10);
   background: rgba(255,255,255,0.05);
   position: relative;
-  flex: 0 0 auto;
 }
 
 .filter-section-chevron::before {
@@ -1012,8 +1005,8 @@ body:not(.home-page) #searchInput:hover {
   position: absolute;
   inset: 0;
   margin: auto;
-  width: 9px;
-  height: 9px;
+  width: 10px;
+  height: 10px;
   border-right: 2px solid rgba(255,255,255,0.8);
   border-bottom: 2px solid rgba(255,255,255,0.8);
   transform: rotate(45deg) translateY(-1px);
@@ -1023,7 +1016,6 @@ body:not(.home-page) #searchInput:hover {
 .filter-section[open] .filter-section-chevron::before {
   transform: rotate(-135deg) translateY(-1px);
 }
-
 
 /* Carousel Dot Click Animation 
 .carousel-dot.clicked {
