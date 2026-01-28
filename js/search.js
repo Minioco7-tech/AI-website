@@ -12,7 +12,8 @@ import {
   filterModelsByFacets,
   getUniqueCategories,
   scoreModelRelevance,
-  expandQueryTokens
+  expandQueryTokens,
+  getUniqueTags
 } from './utils.js';
 
 import { setupCategoryPillDropdown } from './dropdown.js';
@@ -90,7 +91,7 @@ function initLazyBackgrounds() {
 // ✅ Filtering logic (checkbox UI interaction)
 // ------------------------------
 function updateFilteredModels() {
-  const filtered = filterModelsByFacets(currentModels, selectedCategories);
+  const filtered = filterModelsByFacets(currentModels, selectedCategories, selectedTags);
   displayModels(filtered);
 }
 
@@ -102,8 +103,8 @@ function renderCategoryFilters(allModelsForPills, currentModelsForDefaults) {
   const allCategoryKeys = getUniqueCategories(allModelsForPills);
   const allTagKeys = getUniqueTags(allModelsForPills);
 
-  defaultSelectedCategories = new Set(getUniqueCategories(currentModelsForDefaults));
-  defaultSelectedTags = new Set(getUniqueTags(currentModelsForDefaults));
+  const defaultSelectedCategories = new Set(getUniqueCategories(currentModelsForDefaults));
+  const defaultSelectedTags = new Set(getUniqueTags(currentModelsForDefaults));
 
   selectedCategories = new Set(defaultSelectedCategories);
   selectedTags = new Set(defaultSelectedTags);
@@ -113,10 +114,12 @@ function renderCategoryFilters(allModelsForPills, currentModelsForDefaults) {
     toggleId: "filterDropdownToggle",
     menuId: "filterCategories",
 
+    // categories
     categoryKeys: allCategoryKeys,
     selectedCategoriesSet: selectedCategories,
     defaultSelectedCategoriesSet: defaultSelectedCategories,
 
+    // tags
     tagKeys: allTagKeys,
     selectedTagsSet: selectedTags,
     defaultSelectedTagsSet: defaultSelectedTags,
