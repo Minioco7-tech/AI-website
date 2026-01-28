@@ -93,7 +93,15 @@ export function setupCategoryPillDropdown({
       <div class="filter-selected-count" aria-live="polite"></div>
       <button type="button" class="filter-reset-btn">Reset filters</button>
     </div>
-    <div class="filter-pills"></div>
+  
+    <details class="filter-section" open>
+      <summary class="filter-section-summary">
+        <span class="filter-section-title">Categories</span>
+        <span class="filter-section-chevron" aria-hidden="true"></span>
+      </summary>
+  
+      <div class="filter-pills"></div>
+    </details>
   `;
 
   const pillsMount = menu.querySelector(".filter-pills");
