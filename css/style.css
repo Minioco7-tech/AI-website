@@ -632,7 +632,8 @@ body:not(.home-page) #searchInput:hover {
 
 .filter-dropdown {
   position: relative;
-  display: inline-block;
+  display: block;
+  width: 100%;
 }
 
 /* Toggle button */
@@ -787,52 +788,6 @@ body:not(.home-page) #searchInput:hover {
   color: rgba(255,255,255,0.45);
 }
 
-/* List area */
-.filter-dropdown-list {
-  max-height: 280px;
-  overflow: auto;
-  padding: 0.55rem;
-}
-
-/* Custom scrollbar (subtle) */
-.filter-dropdown-list::-webkit-scrollbar { width: 10px; }
-.filter-dropdown-list::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.10);
-  border-radius: 9999px;
-  border: 2px solid rgba(2,6,23,0.92);
-}
-
-/* Filter row */
-.filter-item {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-
-  padding: 0.55rem 0.65rem;
-  border-radius: 0.75rem;
-
-  font-size: 0.92rem;
-  color: rgba(255,255,255,0.88);
-  cursor: pointer;
-  user-select: none;
-
-  border: 1px solid transparent;
-  transition: background 150ms ease, border-color 150ms ease, transform 150ms ease;
-}
-
-.filter-item:hover {
-  background: rgba(255,255,255,0.05);
-  border-color: rgba(255,255,255,0.08);
-  transform: translateY(-1px);
-}
-
-/* Checkbox styling */
-.filter-item input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
-  accent-color: #00BFFF; /* modern browsers */
-}
-
 /* Footer actions */
 .filter-dropdown-footer {
   display: flex;
@@ -882,17 +837,111 @@ body:not(.home-page) #searchInput:hover {
   }
 }
 
+/* =======================
+   Pills inside #filterCategories
+   ======================= */
 
-/* Carousel Dot Click Animation */
+#filterCategories {
+  max-height: 320px;
+  overflow: auto;
+  padding: 0.9rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+#filterCategories::-webkit-scrollbar { width: 10px; }
+#filterCategories::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.10);
+  border-radius: 9999px;
+  border: 2px solid rgba(2,6,23,0.92);
+}
+
+.filter-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-pill input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.filter-pill .pill-ui {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.45rem 0.8rem;
+  border-radius: 9999px;
+
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 650;
+
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.10);
+
+  opacity: 0.82;
+  transform: translateY(0);
+  transition: transform 150ms ease, opacity 150ms ease, box-shadow 150ms ease, border-color 150ms ease;
+}
+
+.filter-pill:hover .pill-ui {
+  opacity: 0.95;
+  transform: translateY(-1px);
+  border-color: rgba(255,255,255,0.22);
+}
+
+.filter-pill .pill-check {
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.filter-pill input:checked + .pill-ui {
+  opacity: 1;
+  border-color: rgba(255,255,255,0.28);
+  box-shadow:
+    0 10px 26px rgba(0,0,0,0.35),
+    0 0 0 3px rgba(0,191,255,0.16),
+    inset 0 1px 0 rgba(255,255,255,0.12);
+}
+
+.filter-pill input:not(:checked) + .pill-ui .pill-check i {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.filter-pill input:checked + .pill-ui .pill-check i {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 140ms ease, transform 140ms ease;
+}
+
+
+
+/* Carousel Dot Click Animation 
 .carousel-dot.clicked {
   animation: dotPop 0.25s ease;
-}
+} 
 
 @keyframes dotPop {
   0% { transform: scale(1); }
   50% { transform: scale(1.4); }
   100% { transform: scale(1); }
-}
+} */
 
 /* === Global ocean background (static waves) === */
 
