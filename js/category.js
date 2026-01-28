@@ -108,7 +108,7 @@ function renderCategoryFilters(models) {
   const uniqueCategories = getUniqueCategories(models);
 
   // Reset and set up the pill dropdown
-  setupCategoryFilterDropdown({
+  setupCategoryPillDropdown({
     wrapperId: "filterDropdown",
     toggleId: "filterDropdownToggle",
     menuId: "filterCategories",
