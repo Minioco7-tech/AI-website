@@ -11,7 +11,7 @@ import {
   renderPagination,
   MODELS_PER_PAGE,
   normalizeCategories,
-  filterModelsByCategories,
+  filterModelsByAnyCategory,
   getUniqueCategories
 } from './utils.js';
 
@@ -96,7 +96,7 @@ function initLazyBackgrounds() {
 // ✅ Filter checkbox UI → filtered model list
 // ------------------------------
 function updateFilteredModels() {
-  const filtered = filterModelsByCategories(currentModels, selectedCategories);
+  const filtered = filterModelsByAnyCategory(currentModels, selectedCategories);
   displayModels(filtered);
 }
 
