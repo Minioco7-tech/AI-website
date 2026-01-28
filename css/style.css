@@ -732,6 +732,8 @@ body:not(.home-page) #searchInput:hover {
   width: 100%;
 
   display: none;
+  flex-direction: column; /* ✅ stack header + categories section vertically */
+  gap: 0;                 /* ✅ no weird horizontal drift */
   z-index: 60;
 
   border-radius: 1rem;
@@ -754,7 +756,7 @@ body:not(.home-page) #searchInput:hover {
 }
 
 .filter-dropdown.open .filter-dropdown-menu {
-  display: block;
+  display: flex; /* ✅ was block */
   transform: translateY(0) scale(1);
   opacity: 1;
 }
