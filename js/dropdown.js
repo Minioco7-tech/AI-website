@@ -45,12 +45,8 @@ export function renderCategoryPills({ mountEl, categories = [], selectedSet, onC
 
     const ui = document.createElement("span");
     ui.className = `pill-ui ${pillBg}`;
-    ui.innerHTML = `
-      <span class="pill-check">
-        <i data-feather="check" style="width:14px;height:14px;"></i>
-      </span>
-      <span>${getCategoryName(key)}</span>
-    `;
+    ui.innerHTML = `<span class="pill-text">${getCategoryName(key)}</span>`;
+
 
     input.addEventListener("change", () => {
       if (input.checked) selectedSet.add(key);
