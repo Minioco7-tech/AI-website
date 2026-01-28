@@ -9,7 +9,7 @@ import {
   getPaginatedModels,
   renderPagination,
   MODELS_PER_PAGE,
-  filterModelsByAnyCategory,
+  filterModelsByFacets,
   getUniqueCategories,
   scoreModelRelevance,
   expandQueryTokens
@@ -37,6 +37,9 @@ const filterCategoriesContainer = document.getElementById('filterCategories');
 let currentModels = [];
 let selectedCategories = new Set();
 let currentPage = 1;
+let selectedTags = new Set();
+let defaultSelectedTags = new Set();
+let defaultSelectedCategories = new Set();
 
 // ------------------------------
 // ✅ Display search results in grid with pagination
@@ -87,7 +90,7 @@ function initLazyBackgrounds() {
 // ✅ Filtering logic (checkbox UI interaction)
 // ------------------------------
 function updateFilteredModels() {
-  const filtered = filterModelsByAnyCategory(currentModels, selectedCategories);
+  const filtered = filterModelsByFacets(currentModels, selectedCategories);
   displayModels(filtered);
 }
 
@@ -97,26 +100,26 @@ function updateFilteredModels() {
 // ------------------------------
 function renderCategoryFilters(allModelsForPills, currentModelsForDefaults) {
   const allCategoryKeys = getUniqueCategories(allModelsForPills);
+  const allTagKeys = getUniqueTags(allModelsForPills);
 
-  // ✅ default: categories that appear in the current result set
-  const defaultSelectedCategories = new Set(getUniqueCategories(currentModelsForDefaults));
+  defaultSelectedCategories = new Set(getUniqueCategories(currentModelsForDefaults));
+  defaultSelectedTags = new Set(getUniqueTags(currentModelsForDefaults));
 
-  // ✅ this is the live selection set used by filtering
   selectedCategories = new Set(defaultSelectedCategories);
+  selectedTags = new Set(defaultSelectedTags);
 
   setupCategoryPillDropdown({
     wrapperId: "filterDropdown",
     toggleId: "filterDropdownToggle",
     menuId: "filterCategories",
 
-    // show ALL categories as pills
     categoryKeys: allCategoryKeys,
+    selectedCategoriesSet: selectedCategories,
+    defaultSelectedCategoriesSet: defaultSelectedCategories,
 
-    // selection used by filtering
-    selectedSet: selectedCategories,
-
-    // ✅ used by the Reset button inside the dropdown
-    defaultSelectedSet: defaultSelectedCategories,
+    tagKeys: allTagKeys,
+    selectedTagsSet: selectedTags,
+    defaultSelectedTagsSet: defaultSelectedTags,
 
     onUpdate: () => {
       currentPage = 1;
