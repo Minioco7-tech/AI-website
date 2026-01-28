@@ -351,6 +351,57 @@ export function filterModelsByAnyCategory(models, selectedCategories) {
   });
 }
 
+// ✅ Normalize tags into an array (robust if string or array)
+export function normalizeTags(tagField) {
+  if (!tagField) return [];
+  return Array.isArray(tagField) ? tagField : [tagField];
+}
+
+// ✅ Extract unique tags from models (lowercased)
+export function getUniqueTags(models) {
+  const all = models.flatMap(m =>
+    normalizeTags(m.tags).map(t => String(t).toLowerCase()).filter(Boolean)
+  );
+  return [...new Set(all)];
+}
+
+// ✅ OR logic — match ANY selected tag
+export function filterModelsByAnyTag(models, selectedTags) {
+  if (!selectedTags || selectedTags.size === 0) return models;
+
+  const selected = new Set([...selectedTags].map(t => t.toLowerCase()));
+
+  return models.filter(model => {
+    const modelTags = normalizeTags(model.tags).map(t => String(t).toLowerCase());
+    return modelTags.some(t => selected.has(t));
+  });
+}
+
+/**
+ * ✅ Combined faceted filtering:
+ * - OR within categories
+ * - OR within tags
+ * - AND between dimensions
+ */
+export function filterModelsByFacets(models, selectedCategories, selectedTags) {
+  let out = models;
+
+  if (selectedCategories && selectedCategories.size > 0) {
+    // Uses your existing normalizeCategories()
+    const selected = new Set([...selectedCategories].map(c => c.toLowerCase()));
+    out = out.filter(model => {
+      const cats = normalizeCategories(model.category).map(c => c.toLowerCase());
+      return cats.some(c => selected.has(c));
+    });
+  }
+
+  if (selectedTags && selectedTags.size > 0) {
+    out = filterModelsByAnyTag(out, selectedTags);
+  }
+
+  return out;
+}
+
 
 // ============================================================================
 // ✅ Advanced Semantic Relevance Scoring
