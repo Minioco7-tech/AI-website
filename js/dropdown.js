@@ -1,12 +1,12 @@
 // dropdown.js — Filter dropdown UI (category/search) + category pill rendering
-// Keeps homepage "guide accordions" in utils.js (DO NOT move them here)
+// Keeps homepage "guide accordions" in utils.js
 
 import { categoryColors, getCategoryName } from "./utils.js";
 
 console.log("✅ dropdown.js loaded");
 
 // ============================================================================
-// ✅ Close on outside click (UI helper)
+// Close on outside click
 // ============================================================================
 export function closeOnOutsideClick(triggerEl, dropdownEl, callback) {
   function outsideClickHandler(e) {
@@ -19,71 +19,8 @@ export function closeOnOutsideClick(triggerEl, dropdownEl, callback) {
 }
 
 // ============================================================================
-// ✅ Render category pills into a mount element
+// Render pills
 // ============================================================================
-export function renderCategoryPills({ mountEl, categories = [], selectedSet, onChange } = {}) {
-  if (!mountEl) return;
-  if (!selectedSet || typeof selectedSet.has !== "function") {
-    console.warn("renderCategoryPills: selectedSet must be a Set");
-    return;
-  }
-
-  mountEl.innerHTML = "";
-  const frag = document.createDocumentFragment();
-
-  categories.forEach((raw) => {
-    const key = String(raw).toLowerCase();
-    const pillBg = categoryColors[key] || "bg-white/10";
-
-    const label = document.createElement("label");
-    label.className = "filter-pill";
-
-    const input = document.createElement("input");
-    input.type = "checkbox";
-    input.value = key;
-    input.checked = selectedSet.has(key);
-
-    const ui = document.createElement("span");
-    ui.className = `pill-ui ${pillBg}`;
-    ui.innerHTML = `<span class="pill-text">${getCategoryName(key)}</span>`;
-
-
-    input.addEventListener("change", () => {
-      if (input.checked) selectedSet.add(key);
-      else selectedSet.delete(key);
-      onChange?.(key, input.checked);
-    });
-
-    label.appendChild(input);
-    label.appendChild(ui);
-    frag.appendChild(label);
-  });
-
-  mountEl.appendChild(frag);
-
-  if (window.feather) window.feather.replace({ "stroke-width": 2.6 });
-}
-
-// ============================================================================
-// ✅ Setup dropdown (works with your current IDs)
-// - wrapper: #filterDropdown
-// - toggle:  #filterDropdownToggle
-// - menu:    #filterCategories
-// ============================================================================
-import { categoryColors, getCategoryName } from "./utils.js";
-
-console.log("✅ dropdown.js loaded");
-
-export function closeOnOutsideClick(triggerEl, dropdownEl, callback) {
-  function outsideClickHandler(e) {
-    if (!triggerEl.contains(e.target) && !dropdownEl.contains(e.target)) {
-      callback?.();
-      document.removeEventListener("click", outsideClickHandler);
-    }
-  }
-  document.addEventListener("click", outsideClickHandler);
-}
-
 export function renderCategoryPills({ mountEl, categories = [], selectedSet, onChange } = {}) {
   if (!mountEl) return;
   if (!selectedSet || typeof selectedSet.has !== "function") {
@@ -124,16 +61,9 @@ export function renderCategoryPills({ mountEl, categories = [], selectedSet, onC
   mountEl.appendChild(frag);
 }
 
-/**
- * Setup pill dropdown with an INTERNAL header row:
- * - Reset Filters button (above pills)
- * - Optional selected count
- *
- * You pass in:
- * - defaultSelectedSet: Set of categories that should be selected after reset
- * - onUpdate: what to do when selection changes (re-filter + re-render)
- * - onReset: optional (if you want extra behaviour)
- */
+// ============================================================================
+// Setup dropdown with header row + reset button (inside dropdown)
+// ============================================================================
 export function setupCategoryPillDropdown({
   wrapperId = "filterDropdown",
   toggleId = "filterDropdownToggle",
@@ -157,8 +87,7 @@ export function setupCategoryPillDropdown({
     return null;
   }
 
-  // --- Build menu structure once ---
-  // (header + pills mount)
+  // Build menu structure
   menu.innerHTML = `
     <div class="filter-menu-header">
       <div class="filter-selected-count" aria-live="polite"></div>
@@ -191,16 +120,14 @@ export function setupCategoryPillDropdown({
     if (window.feather) window.feather.replace({ "stroke-width": 2.6 });
   };
 
-  // Reset behaviour (restores defaultSelectedSet if provided)
+  // Reset
   resetBtn?.addEventListener("click", (e) => {
     e.preventDefault();
     e.stopPropagation();
 
+    selectedSet.clear();
     if (defaultSelectedSet && typeof defaultSelectedSet.has === "function") {
-      selectedSet.clear();
       for (const x of defaultSelectedSet) selectedSet.add(String(x).toLowerCase());
-    } else {
-      selectedSet.clear(); // fallback: reset to none
     }
 
     render();
