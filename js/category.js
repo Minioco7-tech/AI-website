@@ -104,18 +104,31 @@ function updateFilteredModels() {
 // ------------------------------
 // ✅ Render dynamic category filters as checkboxes
 // ------------------------------
-function renderCategoryFilters(models) {
-  const uniqueCategories = getUniqueCategories(models);
+function renderCategoryFilters(allModelsForPills, currentModelsForDefaults) {
+  const allCategoryKeys = getUniqueCategories(allModelsForPills);
 
-  // Reset and set up the pill dropdown
+  // ✅ default: categories that appear in the current result set
+  const defaultSelectedCategories = new Set(getUniqueCategories(currentModelsForDefaults));
+
+  // ✅ this is the live selection set used by filtering
+  selectedCategories = new Set(defaultSelectedCategories);
+
   setupCategoryPillDropdown({
     wrapperId: "filterDropdown",
     toggleId: "filterDropdownToggle",
     menuId: "filterCategories",
-    categoryKeys: uniqueCategories,
+
+    // show ALL categories as pills
+    categoryKeys: allCategoryKeys,
+
+    // selection used by filtering
     selectedSet: selectedCategories,
+
+    // ✅ used by the Reset button inside the dropdown
+    defaultSelectedSet: defaultSelectedCategories,
+
     onUpdate: () => {
-      currentPage = 1;           // ✅ important: reset pagination on filter change
+      currentPage = 1;
       updateFilteredModels();
     }
   });
@@ -154,7 +167,7 @@ async function loadCategoryModels() {
 
   currentModels = filteredModels;
   selectedCategories.clear(); // reset filters when navigating to a new category
-  renderCategoryFilters(modelsData);  // Show filter UI based on all categories
+  renderCategoryFilters(modelsData, currentModels);  // Show filter UI based on all categories
   updateFilteredModels();            // Show results
 }
 
