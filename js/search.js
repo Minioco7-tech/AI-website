@@ -4,20 +4,18 @@
 
 import {
   fetchJSON,
-  categoryColors,
-  getCategoryName,
   shuffleArray,
   sortModels,
   getPaginatedModels,
   renderPagination,
   MODELS_PER_PAGE,
-  normalizeCategories,
   filterModelsByCategories,
   getUniqueCategories,
-  scoreModelRelevance, 
+  scoreModelRelevance,
   expandQueryTokens
 } from './utils.js';
 
+import { setupCategoryPillDropdown } from './dropdown.js';
 import { createModelCard } from './modelCard.js';
 import { renderBreadcrumb } from './breadcrumb.js';
 
@@ -95,47 +93,20 @@ function updateFilteredModels() {
 
 
 // ------------------------------
-// ✅ Render checkboxes for category filters
+// ✅ Render category filters as PILLS (dropdown.js)
 // ------------------------------
-function renderCategoryFilters(models) {
-  const container = document.getElementById('filterCategories');
-  const dropdownWrapper = document.getElementById('filterDropdown');
-  const toggleButton = document.getElementById('filterDropdownToggle');
+function renderCategoryFilters(allModels) {
+  const uniqueCategories = getUniqueCategories(allModels);
 
-  container.innerHTML = '';
-  const uniqueCategories = getUniqueCategories(models);
-
-  uniqueCategories.forEach(cat => {
-    const label = document.createElement('label');
-
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    checkbox.value = cat;
-
-    checkbox.addEventListener('change', () => {
-      if (checkbox.checked) {
-        selectedCategories.add(cat);
-      } else {
-        selectedCategories.delete(cat);
-      }
+  setupCategoryPillDropdown({
+    wrapperId: "filterDropdown",
+    toggleId: "filterDropdownToggle",
+    menuId: "filterCategories",
+    categoryKeys: uniqueCategories,
+    selectedSet: selectedCategories,
+    onUpdate: () => {
+      currentPage = 1;
       updateFilteredModels();
-    });
-
-    label.appendChild(checkbox);
-    label.append(` ${getCategoryName(cat)}`);
-    container.appendChild(label);
-  });
-
-  // Toggle dropdown open/close
-  toggleButton.addEventListener('click', (e) => {
-    e.stopPropagation();
-    dropdownWrapper.classList.toggle('open');
-
-    // Close on outside click
-    if (dropdownWrapper.classList.contains('open')) {
-      closeOnOutsideClick(toggleButton, container, () => {
-        dropdownWrapper.classList.remove('open');
-      });
     }
   });
 }
