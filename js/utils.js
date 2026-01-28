@@ -338,6 +338,20 @@ export function filterModelsByCategories(models, selectedCategories) {
   });
 }
 
+// ✅ OR logic — model passes if it matches ANY selected category
+// If nothing selected -> return all models
+export function filterModelsByAnyCategory(models, selectedCategories) {
+  if (!selectedCategories || selectedCategories.size === 0) return models;
+
+  const selected = new Set([...selectedCategories].map(c => c.toLowerCase()));
+
+  return models.filter(model => {
+    const modelCats = normalizeCategories(model.category).map(c => c.toLowerCase());
+    return modelCats.some(cat => selected.has(cat));
+  });
+}
+
+
 // ============================================================================
 // ✅ Advanced Semantic Relevance Scoring
 // ============================================================================
