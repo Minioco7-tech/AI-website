@@ -726,15 +726,11 @@ body:not(.home-page) #searchInput:hover {
 
 /* Menu panel */
 .filter-dropdown-menu {
-  position: relative;
-  top: calc(100% + 10px);
-  left: 0;
+  position: relative;   /* ✅ stays in layout flow */
   width: 100%;
+  margin-top: 0.75rem;
 
   display: none;
-  flex-direction: column; /* ✅ stack header + categories section vertically */
-  gap: 0;                 /* ✅ no weird horizontal drift */
-  z-index: 60;
 
   border-radius: 1rem;
   background: rgba(2, 6, 23, 0.92);
@@ -748,11 +744,6 @@ body:not(.home-page) #searchInput:hover {
   -webkit-backdrop-filter: blur(14px) saturate(150%);
 
   overflow: hidden;
-
-  transform-origin: top;
-  transform: translateY(-6px) scale(0.98);
-  opacity: 0;
-  transition: transform 160ms ease, opacity 160ms ease;
 }
 
 .filter-dropdown.open .filter-dropdown-menu {
