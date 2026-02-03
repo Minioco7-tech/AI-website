@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         <div class="border-t border-white border-opacity-10 mt-8 pt-8 text-center">
           <p class="text-gray-400">
-            &copy; 2025 AIviary. All AI tools belong to their respective owners.
+            &copy; 2026 AIviary. All AI tools belong to their respective owners.
           </p>
         </div>
       </div>
