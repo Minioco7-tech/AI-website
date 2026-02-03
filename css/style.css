@@ -725,26 +725,28 @@ body:not(.home-page) #searchInput:hover {
 }
 
 /* Menu panel */
+/* Closed by default */
 .filter-dropdown-menu {
-  position: relative;   /* ✅ stays in layout flow */
+  position: relative;   /* in-flow so it pushes content down */
   width: 100%;
   margin-top: 0.75rem;
-
-  display: none;
-
+  display: none;        /* ✅ MUST be none when closed */
   border-radius: 1rem;
   background: rgba(2, 6, 23, 0.92);
   border: 1px solid rgba(255,255,255,0.10);
-
   box-shadow:
     0 18px 55px rgba(0, 0, 0, 0.55),
     0 0 0 1px rgba(255,255,255,0.04);
-
   backdrop-filter: blur(14px) saturate(150%);
   -webkit-backdrop-filter: blur(14px) saturate(150%);
-
   overflow: hidden;
 }
+
+/* ✅ Only show when wrapper has .open */
+.filter-dropdown.open .filter-dropdown-menu {
+  display: block; /* IMPORTANT: block, not flex unless you need it */
+}
+
 
 .filter-dropdown.open .filter-dropdown-menu {
   display: flex; /* ✅ was block */
