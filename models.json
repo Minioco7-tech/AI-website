@@ -206,7 +206,7 @@
       "type": "Conversational AI Assistant",
       "description": "ChatGPT is an AI assistant that helps people write, learn, brainstorm and solve problems through natural conversation. It can explain ideas clearly, generate content in many different styles and help users think through tasks step by step. Whether you are working on a school project, planning a trip or writing a piece of content, ChatGPT is designed to make the process easier.\n\nThe tool is also helpful for developers and learners. It can write code, fix errors and explain programming concepts in simple terms, which makes it a helpful companion for both beginners and experienced professionals. ChatGPT can break down complex topics into easy explanations and provide examples to help you understand new skills.\n\nMany people use ChatGPT for everyday tasks like drafting emails, summarising documents or coming up with ideas for creative projects. It is flexible, friendly and designed to support anyone who wants to work faster and understand things more clearly.",
       "subtitle": "AI assistant for writing, coding, learning and creativity.",
-      "tags": ["assistant", "chatbot", "writing", "coding", "reasoning"],
+      "tags": ["ai assistant", "summarization", "writing", "professionals"],
       "features": [
         "Context-aware natural language conversations",
         "Code generation & debugging",
@@ -246,7 +246,7 @@
       "type": "Multimodal AI Assistant",
       "description": "Google Gemini is a smart AI assistant that can understand text, images and ideas to help you work more efficiently. It is designed to handle a wide range of everyday tasks, from answering questions and explaining concepts to helping with writing and generating creative ideas. Because it connects with the Google ecosystem, it can support schoolwork, research and planning in a simple and intuitive way.\n\nGemini also includes helpful tools for developers and problem solvers. It can write code, suggest improvements and walk you through technical topics in clear language. People who need support with data or documents can use Gemini to analyse content, uncover insights and break down information into easy-to-understand summaries.\n\nWhether you are creating content, studying for exams or exploring new ideas, Google Gemini provides a flexible and friendly experience that helps you work faster and think more clearly. Its multimodal design makes it a useful assistant for both everyday tasks and more complex projects.",
       "subtitle": "Google’s multimodal AI for productivity and creativity.",
-      "tags": ["assistant", "multimodal", "reasoning", "coding", "search"],
+      "tags": ["ai assistant", "summarization", "web search", "professionals"],
       "features": [
         "Multimodal understanding (text, images, audio)",
         "Advanced reasoning and problem-solving",
@@ -286,7 +286,7 @@
       "type": "Conversational AI Assistant",
       "description": "Meta AI is a conversational assistant built into popular Meta platforms, which makes it easy for people to get help while browsing or chatting with friends. It can answer questions, explain topics, help with writing and generate creative ideas, all in a simple and approachable way. Because it is integrated into apps people already use, Meta AI is accessible at any moment without needing special tools.\n\nThe assistant can also create images and help brainstorm content, making it popular with social media users who want to design posts, captions or messages quickly. For learners, Meta AI provides step-by-step explanations and clear answers that make new topics easier to understand.\n\nMeta AI is a convenient choice for anyone who wants quick support while messaging, posting or exploring ideas. It is designed to help improve conversations and make everyday tasks feel smoother and more enjoyable.",
       "subtitle": "Conversational assistant available across Meta platforms.",
-      "tags": ["assistant", "chatbot", "image generation", "writing"],
+      "tags": ["ai assistant", "summarization", "web search", "professionals"],
       "features": [
         "Real-time conversational interaction",
         "Image generation with Meta’s models",
@@ -326,7 +326,7 @@
       "type": "AI Search Assistant",
       "description": "Perplexity is an AI search assistant that helps people find accurate information quickly and understand it clearly. Instead of giving long lists of links, Perplexity reads online sources for you and then provides a simple answer with citations. This makes it especially useful for people who want trustworthy information without spending time digging through pages.\n\nThe platform is designed to make research easy for everyone. You can ask questions in everyday language and Perplexity will summarise the most important points, highlight key facts and show where the information came from. Students, professionals and curious learners enjoy how fast and clear the answers are.\n\nPerplexity is ideal for anyone who needs a reliable way to explore new topics, check facts or learn quickly. Its mix of accuracy and simplicity makes it an excellent tool for studying, researching or understanding subjects at a deeper level.",
       "subtitle": "AI-powered search assistant with real-time citations.",
-      "tags": ["search", "research", "Q&A", "summaries"],
+      "tags": ["ai assistant", "web search", "summarization", "professionals"],
       "features": [
         "Real-time web search with citations",
         "Concise AI summarization",
@@ -366,7 +366,7 @@
       "type": "AI Assistant for Work & Research",
       "description": "Claude is an AI assistant created to help people write, think and analyse information with confidence. It is known for producing clear and thoughtful responses, which makes it helpful for writing projects, detailed explanations and everyday problem solving. Claude can handle complex tasks but always communicates in a simple and human-friendly way.\n\nThe assistant is also useful for professionals and students who work with long documents. Claude can read large amounts of text, summarise the key ideas and help you understand the information more easily. Developers can use Claude to generate code, review logic and explore technical topics with clear explanations.\n\nClaude is a strong choice for anyone who values accuracy and careful reasoning. It supports writing, planning, creativity and critical thinking, which makes it a reliable partner for both personal and professional tasks.",
       "subtitle": "Safe, reliable AI assistant for writing and reasoning.",
-      "tags": ["assistant", "writing", "analysis", "coding"],
+      "tags": ["ai assistant", "summarization", "writing", "professionals"],
       "features": [
         "Large context window for long documents",
         "Advanced reasoning & safety features",
@@ -406,7 +406,7 @@
       "type": "Code Generation Model",
       "description": "Codex AI is designed to help people write code by turning everyday language into working programs. You can describe what you want to build and Codex will generate the code, explain how it works and suggest improvements. This makes it a helpful tool for beginners learning to program and for developers who want to work more efficiently.\n\nThe platform can also assist with debugging. If something is not working, you can paste your code into Codex and receive clear guidance on what went wrong and how to fix it. It supports many popular programming languages, which makes it flexible for different projects and skill levels.\n\nCodex is a great partner for building small tools, learning programming or speeding up development tasks. It reduces the time spent on repetitive work and helps users focus on the creative and problem solving parts of coding.",
       "subtitle": "AI model that converts natural language into code.",
-      "tags": ["coding", "automation", "developer tools", "programming"],
+      "tags": ["coding assistant", "code generation", "debugging", "developers"],
       "features": [
         "Natural language → code generation",
         "Code explanation & debugging",
@@ -446,7 +446,7 @@
       "type": "AI Test Generation & Code Analysis",
       "description": "Qodo is an AI tool that helps developers create strong and reliable software by generating intelligent test cases and reviewing code for potential issues. It looks for mistakes and weaknesses that are easy to overlook, then provides clear suggestions that help improve the overall quality of your project.\n\nThe platform works smoothly within common development workflows. You can send Qodo a piece of code and receive readable feedback that highlights risks and offers safer alternatives. It is especially useful for teams that want to increase test coverage or maintain consistent code standards without spending hours writing tests by hand.\n\nQodo is ideal for developers who want clean, dependable code and a faster testing process. It gives you confidence in your work and helps you catch issues early so your software stays stable and efficient.",
       "subtitle": "AI tool for automated test generation and code quality.",
-      "tags": ["testing", "code quality", "automation", "developer tools"],
+      "tags": ["coding assistant", "code completion", "code generation", "developers"],
       "features": [
         "Automated test case generation",
         "Static code analysis",
@@ -486,7 +486,7 @@
       "type": "AI UI Design & Code Generator",
       "description": "Stitch is an AI tool that helps developers and designers work together by turning natural language ideas into real code and interactive prototypes. Instead of switching between multiple tools or struggling to translate design concepts into working software, users can describe what they want and Stitch helps generate the structure, layout and logic.\n\nThe platform is built to support collaboration. Designers can share their ideas in simple language and developers can quickly turn those ideas into early versions of apps or websites. This speeds up the entire workflow because teams spend less time explaining concepts and more time building.\n\nStitch is ideal for early stage prototyping, design handoffs and rapid development. It gives teams a faster and clearer way to move from idea to execution, which makes it helpful for startups, product teams and students learning to build projects.",
       "subtitle": "Google’s AI tool for turning ideas into UI and frontend code.",
-      "tags": ["UI design", "frontend code", "prototyping", "Google Labs", "Gemini"],
+      "tags": ["coding assistant", "code generation", "collaboration", "developers"],
       "features": [
         "Generate multi-screen web and mobile UIs from natural language prompts",
         "Accepts image, sketch or wireframe references to guide layout and style",
@@ -526,7 +526,7 @@
       "type": "AI Coding Assistant & Multi-Agent Workspace",
       "description": "Blackbox AI is a coding assistant that helps developers search, understand and write code more efficiently. It looks across projects and repositories to find examples that match what the user needs, then explains how the code works in simple terms. This makes it useful for learning new frameworks and solving problems without spending hours online searching for answers.\n\nThe tool also supports instant code generation. Users can ask Blackbox to write functions, fix errors or translate code between languages. It provides clean and readable snippets that developers can use as a starting point, which speeds up development and reduces repetitive work.\n\nBlackbox AI is helpful for beginners who need clear explanations and for experienced developers who want to improve productivity. It simplifies debugging, documentation and everyday coding tasks so users can focus on building real features.",
       "subtitle": "Multi-agent AI coding assistant for search, completion and automation.",
-      "tags": ["code assistant", "autocomplete", "code search", "agents", "API"],
+      "tags": ["coding assistant", "code search", "code explanation", "developers"],
       "features": [
         "Real-time code autocompletion and generation across major languages and frameworks",
         "Semantic code search across files, repositories and even code shown in videos",
@@ -566,7 +566,7 @@
       "type": "Text-to-Website Generator",
       "description": "DeepSite is an AI tool that turns text prompts into real websites or interactive layouts, which makes it easy for anyone to create a web presence without advanced design or coding knowledge. Users can describe the type of website they want and DeepSite generates a responsive design that works across devices.\n\nThe platform also helps with early stage prototyping. Creators can test ideas quickly by generating multiple layouts, editing content and refining the style through simple instructions. This allows users to explore different directions without needing to build each version manually.\n\nDeepSite is ideal for entrepreneurs, students, small businesses and designers who want a simple way to move from concept to a working visual. It removes technical barriers and lets users focus on their ideas rather than the code behind them.",
       "subtitle": "Open-source AI tool that turns prompts into live, editable websites.",
-      "tags": ["website builder", "no-code", "frontend", "DeepSeek", "Hugging Face"],
+      "tags": ["app builder", "no code", "code generation", "founders"],
       "features": [
         "Generate live, runnable web pages from short natural language briefs",
         "Produces readable HTML, CSS and JavaScript that can be exported or extended",
@@ -606,7 +606,7 @@
       "type": "AI Image Generator",
       "description": "Midjourney is an AI image generator known for creating artistic and expressive visuals from short text prompts. It produces images with strong style, rich detail and emotional impact, which makes it a favorite among designers, storytellers and creative professionals.\n\nThe platform encourages exploration and creativity. Users can experiment with different styles, moods and compositions to develop concepts for characters, environments or branding. This makes Midjourney helpful for people who want to visualise ideas before moving into full production.\n\nMidjourney is ideal for artists, writers, marketers and studios that want unique visuals for campaigns, concept art or storytelling. It turns imagination into vivid artwork with very little effort, even for users who have no design background.",
       "subtitle": "Premium AI image generation for art, concepts and visual exploration.",
-      "tags": ["image generation", "art", "illustration", "concept art", "Discord"],
+      "tags": ["ai image generator", "text to image", "creative art", "designers"],
       "features": [
         "Text-to-image generation with support for many artistic styles and levels of realism",
         "Advanced controls for aspect ratios, seeds, variations, remixing and tiling",
@@ -646,7 +646,7 @@
       "type": "Text-to-Image Model",
       "description": "DALL-E 3 is an AI model that creates detailed and accurate images based on everyday language descriptions. It understands context well, which allows it to generate images that match your prompt closely, including characters, objects and scenes with clear structure and consistency.\n\nThe model is designed to be easy for beginners. Users can describe what they want in natural language and DALL-E 3 handles the rest, producing illustrations, product mockups, educational diagrams or creative artwork. This makes it a flexible tool that supports both practical and artistic needs.\n\nDALL-E 3 is helpful for designers, teachers, marketers and creators who need fast and reliable visuals. It simplifies the creative process and allows anyone to turn written ideas into polished images without needing drawing or design skills.",
       "subtitle": "OpenAI’s advanced text-to-image model integrated with ChatGPT and the API.",
-      "tags": ["image generation", "OpenAI", "illustration", "diagrams", "marketing visuals"],
+      "tags": ["ai image generator", "text to image", "prompt accuracy", "creators"],
       "features": [
         "High-fidelity text-to-image generation with strong prompt adherence",
         "Deep integration with ChatGPT for conversational prompt refinement and editing",
@@ -686,7 +686,7 @@
       "type": "Design Suite with AI Tools",
       "description": "Canva combines a simple design interface with AI features that help users create professional visuals quickly. Its tools support everything from social media graphics to presentations and the built-in AI can generate images, suggest layouts and adjust designs automatically to fit your project.\n\nThe platform is designed for non-designers, which means you can drag, drop and customise elements without any experience. AI features help refine your design, choose colors, fix spacing and create content that looks clean and modern. Canva also offers thousands of templates that users can personalise in minutes.\n\nCanva is ideal for small business owners, marketers, teachers and students who want polished graphics without hiring a designer. It brings professional design capabilities to everyone and saves time on creative tasks that would otherwise be complicated.",
       "subtitle": "All-in-one design platform with integrated AI for images, layouts and content.",
-      "tags": ["graphic design", "templates", "image generator", "presentations", "social media"],
+      "tags": ["design tool", "presentation generator", "brand design", "marketers"],
       "features": [
         "Huge library of templates for social posts, presentations, documents and print",
         "AI image generator (Text to Image) and Magic Media tools for creating visuals",
@@ -726,7 +726,7 @@
       "type": "AI Design & Image Editor",
       "description": "Playground is a creative environment where users can experiment with text-to-image and language generation models. It is designed to encourage exploration, letting users try different styles, ideas and prompts to see how AI responds. This makes it a fun and flexible tool for learning how generative AI works.\n\nThe platform supports both visual and written creativity. Users can generate artwork, write stories, test prompts or combine different models for unique results. Because everything updates instantly, Playground helps users understand how small changes in wording can produce very different outcomes.\n\nPlayground is great for artists, developers and curious users who want a place to test ideas freely. It offers a safe and inspiring space for experimentation, prototyping and creative growth.",
       "subtitle": "Prompt-based design studio for generating and editing images with AI.",
-      "tags": ["image editor", "image generation", "templates", "design", "branding"],
+      "tags": ["ai image generator", "text to image", "prompt testing", "creators"],
       "features": [
         "Text-to-image generation with multiple styles and presets",
         "Template-driven workflows for common formats like posters, logos and social content",
@@ -766,7 +766,7 @@
       "type": "AI Art & Asset Creation Suite",
       "description": "Leonardo is an AI image generator designed for creating high quality game assets, illustrations and digital art. It focuses on style consistency, which makes it especially helpful for studios and designers who need multiple images that match the same look and feel.\n\nUsers can train custom models, upload references and refine images through simple instructions. This allows artists to generate characters, textures and environments that maintain continuity across a full project. It also speeds up early concept work before moving into detailed production.\n\nLeonardo is popular among game developers, illustrators and creative teams who want fast, reliable and cohesive visuals. It provides a powerful mix of quality and control that helps bring imaginative worlds to life.",
       "subtitle": "AI image and video generation platform built for consistent, production-ready assets.",
-      "tags": ["image generator", "game assets", "illustration", "video", "API"],
+      "tags": ["ai image generator", "text to image", "style consistency", "designers"],
       "features": [
         "Multiple image and video models with style presets for different aesthetics",
         "Token-based generation with daily or monthly allowances depending on plan",
@@ -806,7 +806,7 @@
       "type": "Writing Assistant & Paraphraser",
       "description": "QuillBot is a writing assistant that helps users improve clarity, tone and structure through paraphrasing, summarising and rewriting tools. It is designed to make writing easier for students, professionals and anyone who wants to express ideas more effectively.\n\nThe platform can adjust the tone of your text, shorten long passages or reword sentences to sound more natural. Its summariser helps condense articles, papers and reports into simple overviews, which makes reading and studying faster and more efficient.\n\nQuillBot is useful for academic writing, emails, business documents and creative projects. It helps users communicate clearly, avoid repetition and refine their voice so the final result reads smoothly and professionally.",
       "subtitle": "AI paraphrasing and editing suite for clearer, more polished writing.",
-      "tags": ["paraphrasing", "grammar", "summarization", "citation", "writing assistant"],
+      "tags": ["ai writing tool", "paraphrasing", "summarization", "students"],
       "features": [
         "Multiple paraphrasing modes to adjust clarity, fluency, tone and creativity",
         "Built-in grammar, spelling and punctuation checking",
@@ -846,7 +846,7 @@
       "type": "Process Documentation & SOP Generator",
       "description": "Scribe is a simple and powerful tool that turns everyday computer tasks into clear step by step guides. Instead of writing instructions manually, you can perform a workflow as usual and Scribe captures each click and typed input, then creates a visual tutorial with screenshots and explanations. This makes it easy to share processes with teammates or clients who need clear guidance.\n\nMany organisations use Scribe to simplify training and onboarding. New hires can follow polished guides that show real screenshots from your systems, which helps them learn faster and with less confusion. It reduces the need for repeated explanations because everyone has access to instructions that are accurate, visual and easy to follow.\n\nScribe is perfect for documenting business processes, showing how to use software or creating quick support material for coworkers. It saves time for teams that want consistent documentation without spending hours building manuals or recording long videos. Whether you work in operations, HR or customer support, Scribe helps you turn routine tasks into reliable guides that anyone can understand.",
       "subtitle": "Automatically turn clicks into step-by-step guides and SOPs.",
-      "tags": ["process documentation", "SOPs", "onboarding", "screen capture", "how-to guides"],
+      "tags": ["documentation tool", "workflow recording", "automation", "teams"],
       "features": [
         "One-click recording of on-screen workflows to auto-generate step-by-step guides",
         "Automatic screenshots, step titles and text descriptions for each action",
@@ -886,7 +886,7 @@
       "type": "Academic Paper Summariser",
       "description": "Scholarcy is a helpful tool for anyone who wants to understand academic papers more quickly. You can upload a research article and Scholarcy will identify the key points, highlight important findings and break the content into a clear summary that is easier to follow. This is ideal for students and professionals who need to work through large amounts of reading.\n\nThe platform also extracts useful details such as references, study outcomes and comparisons between different papers. This saves users time and helps them focus on what the paper is trying to say rather than struggling with dense writing. It is a simple way to understand unfamiliar topics without spending hours rereading passages.\n\nScholarcy is popular with researchers, analysts and students who want to stay organised while managing many papers at once. It makes complicated material more approachable and helps users remember the most important insights from each document. With Scholarcy, research feels less overwhelming and more structured.",
       "subtitle": "Turn research papers into quick, structured summaries and flashcards.",
-      "tags": ["paper summarizer", "research", "literature review", "flashcards", "PDF"],
+      "tags": ["research assistant", "paper summarizer", "summarization", "researchers"],
       "features": [
         "Automatically summarises academic articles, reports and chapters into key points",
         "Extracts tables, figures, references and key terms from PDFs and Word documents",
@@ -926,7 +926,7 @@
       "type": "Academic Writing Assistant",
       "description": "Paperpal is an AI assistant that helps researchers improve the quality and readability of their writing. It reviews your manuscript and highlights grammar issues, unclear sentences and sections that could be made more concise. This gives writers a clear path to strengthening their work without losing their original voice.\n\nThe tool is especially valuable for academic writing because it supports formal tone, clarity and journal readiness. Paperpal can guide you on phrasing, formatting and structural improvements that help your paper meet the standards expected by reviewers and editors. This support reduces the need for multiple revisions and speeds up the submission process.\n\nResearchers, students and professionals use Paperpal to produce clean and confident writing that communicates ideas clearly. Whether you are preparing a journal submission, a thesis or a conference paper, Paperpal makes the editing stage smoother and helps your work stand out for the right reasons.",
       "subtitle": "AI editing for research papers, tuned to academic standards and style.",
-      "tags": ["academic writing", "proofreading", "grammar", "journals", "editing"],
+      "tags": ["ai writing tool", "grammar style", "tone control", "researchers"],
       "features": [
         "Context-aware grammar and language corrections for scientific writing",
         "Suggestions to improve clarity, concision and readability",
@@ -966,7 +966,7 @@
       "type": "Writing Assistant & Rewriter",
       "description": "Wordtune is a writing tool that helps you express ideas more clearly and naturally. You can paste a sentence or paragraph into Wordtune and it will suggest new versions that are easier to read or better suited to the tone you want. This is helpful for people who know what they want to say but want to deliver it in a more effective way.\n\nThe platform offers different styles, from casual to formal, and can make text shorter, longer or more engaging. It is popular for rewriting emails, reports, essays and online content because it gives users multiple options to choose from. You stay in full control of the message while Wordtune helps refine the language.\n\nWordtune is ideal for students, professionals and content creators who want polished writing without spending extra time reworking each sentence. It improves clarity, reduces repetition and makes your communication feel more confident and professional.",
       "subtitle": "Rewrite and refine sentences to sound clearer, more natural and on tone.",
-      "tags": ["rewriting", "tone", "email", "productivity", "summarization"],
+      "tags": ["ai writing tool", "tone control", "rewriting", "professionals"],
       "features": [
         "Rewrite suggestions for sentences and paragraphs in multiple tones and styles",
         "Shorten or expand text while preserving core meaning",
@@ -1006,7 +1006,7 @@
       "type": "Market Intelligence & Document Search Platform",
       "description": "AlphaSense is a research platform that helps professionals find and interpret information across company reports, earnings calls, news and industry documents. Instead of reviewing countless pages manually, users can ask focused questions and AlphaSense highlights the most relevant content in seconds. This makes it easier to stay informed about markets and competitors.\n\nThe platform is designed for clarity and speed. It reveals trends, key risks and emerging topics so decision makers can respond quickly and with confidence. AlphaSense is widely used by analysts, investors and corporate teams who need accurate and timely insights without digging through large databases alone.\n\nBy simplifying complex research tasks, AlphaSense helps teams save time and gain a clearer understanding of the business environment. It supports strategic planning, market analysis and executive decision making in a way that feels accessible and efficient.",
       "subtitle": "Semantic search and insights across earnings calls, filings, research and more.",
-      "tags": ["market intelligence", "semantic search", "earnings calls", "filings", "research"],
+      "tags": ["finance analytics tool", "semantic search", "market intelligence", "enterprise"],
       "features": [
         "Semantic search across transcripts, filings, broker research and news sources",
         "Topic and company tracking with real-time alerts and watchlists",
@@ -1046,7 +1046,7 @@
       "type": "Crowdsourced Quant Research Platform",
       "description": "Numer AI is a unique platform that invites data scientists from around the world to build models that help forecast stock market behaviour. Participants receive cleaned and anonymised data, then create machine learning models that compete based on predictive accuracy. This approach brings many different ideas together to form stronger financial insights.\n\nFor contributors, Numer AI is a chance to improve their modelling skills while working with real market data. Successful models can earn rewards and recognition, which motivates participants to experiment and innovate. The competition format encourages collaboration and open exploration of new modelling strategies.\n\nNumer AI is valuable for both the data science community and the financial industry. It turns complex market prediction into an engaging problem solving challenge and it helps produce more reliable signals by combining the strengths of many independent models.",
       "subtitle": "ML tournament where data scientists build models that drive a live hedge fund.",
-      "tags": ["quant", "tournament", "ML models", "hedge fund", "time series"],
+      "tags": ["finance analytics tool", "machine learning", "performance analytics", "researchers"],
       "features": [
         "Regular tournaments where users submit stock market predictions from ML models",
         "Encrypted datasets designed to prevent overfitting to specific securities",
@@ -1086,7 +1086,7 @@
       "type": "FP&A Automation Platform",
       "description": "Datarails helps finance teams modernise their reporting and planning without giving up their familiar spreadsheets. It connects Excel sheets to a central system that automatically gathers data, checks for errors and updates key metrics. This means teams spend less time copying numbers and more time analysing results.\n\nFinancial planning, budgeting and forecasting become easier because everyone works from consistent and accurate data. Datarails builds dashboards and summaries that update in real time, which makes it simpler for leaders to track performance and respond quickly to changes.\n\nDatarails is ideal for growing businesses that want to improve financial accuracy and reduce the headaches of manual reporting. It gives finance teams more confidence in their numbers and helps them make better decisions with less stress.",
       "subtitle": "Bring automation and real-time data to spreadsheet-based FP&A workflows.",
-      "tags": ["FP&A", "Excel", "financial reporting", "budgeting", "forecasting"],
+      "tags": ["finance analytics tool", "automation", "integrations", "finance teams"],
       "features": [
         "Integrates Excel spreadsheets with centralised, governed financial data",
         "Automated consolidation of budgets, forecasts and actuals from multiple sources",
@@ -1126,7 +1126,7 @@
       "type": "Compliance & Reporting Platform",
       "description": "Workiva is a platform that helps large organisations manage complex reporting, compliance and audit tasks. It brings data from different departments into one workspace where teams can collaborate, review changes and prepare official documents with confidence. This reduces the confusion that often comes from working with multiple spreadsheets or email attachments.\n\nCompanies use Workiva for financial reporting, regulatory filings and internal controls because it helps them stay organised and consistent. Everyone involved can see updates in real time, which lowers the risk of errors and last minute surprises. The platform keeps teams aligned throughout the entire reporting process.\n\nWorkiva is valuable for organisations that need accuracy and transparency across their operations. It simplifies complicated workflows and supports teams that want to deliver reliable reports with less stress and better coordination.",
       "subtitle": "Connected reporting and compliance automation for enterprises.",
-      "tags": ["compliance", "reporting", "ESG", "governance", "audit"],
+      "tags": ["workflow automation tool", "compliance", "collaboration", "enterprise"],
       "features": [
         "Connected data model linking spreadsheets, documents and reports",
         "Support for financial, ESG and regulatory reporting requirements",
@@ -1166,7 +1166,7 @@
       "type": "Enterprise Knowledge & Research Search",
       "description": "Zeta Alpha is an AI powered knowledge search tool that helps teams explore large collections of research and internal documents. Instead of relying on simple keyword matches, it understands the meaning behind content, which makes it easier to discover related ideas and useful information that might otherwise be missed.\n\nResearchers and analysts can use Zeta Alpha to spot patterns across papers, track developments in their field and connect insights from different sources. It creates a more intuitive way to explore knowledge by presenting relevant materials side by side and showing how topics relate to each other.\n\nZeta Alpha is ideal for organisations that depend on research or innovation. It helps teams stay informed, avoid duplicated work and make better decisions by giving them a clearer view of the information they already have.",
       "subtitle": "AI semantic search that links insights across research and enterprise knowledge.",
-      "tags": ["enterprise search", "semantic search", "vector database", "knowledge management"],
+      "tags": ["research assistant", "semantic search", "knowledge search", "enterprise"],
       "features": [
         "Semantic search and discovery across multiple internal and external content sources",
         "Topic, entity and relationship extraction to connect related documents",
@@ -1206,7 +1206,7 @@
       "type": "AI Tutor & Teaching Assistant",
       "description": "Khanmigo is an AI tutor created by Khan Academy to support students as they learn new subjects. It offers step by step help with lessons, practice problems and writing tasks while encouraging students to think through challenges rather than giving answers immediately. This creates a more meaningful learning experience.\n\nTeachers can also use Khanmigo to create exercises, explain concepts and support classroom planning. It adapts to the student’s level and provides feedback in a friendly and helpful tone, which makes studying feel less overwhelming.\n\nKhanmigo is a great companion for learners who want personalised support at any time. It helps them stay engaged, understand difficult topics and build confidence as they work toward their academic goals.",
       "subtitle": "Khan Academy’s conversational AI tutor for students and teachers.",
-      "tags": ["tutoring", "education", "math", "writing", "Khan Academy"],
+      "tags": ["learning platform", "ai assistant", "summarization", "students"],
       "features": [
         "Step-by-step guidance for maths, science, humanities and more",
         "Socratic-style questioning to encourage reasoning rather than simple answers",
@@ -1246,7 +1246,7 @@
       "type": "AI Note-Taking & Summarization Tool",
       "description": "MindGrasp turns long content into clear and organised summaries that are easy to review. You can upload videos, lectures, PDFs or notes and the tool identifies the most important points while removing unnecessary details. This makes studying faster and helps learners focus on what truly matters.\n\nStudents appreciate MindGrasp for revision and test preparation because it condenses large amounts of information into a manageable format. It is equally helpful for professionals who want to extract key insights from meetings, training sessions or educational resources.\n\nMindGrasp gives users a smoother way to retain information without going back through hours of material. It is a practical tool for anyone who wants to learn efficiently and stay on top of their workload.",
       "subtitle": "Turn any learning content into clear notes, summaries and flashcards.",
-      "tags": ["study notes", "summarization", "flashcards", "YouTube", "lectures"],
+      "tags": ["research assistant", "summarization", "document chat", "students"],
       "features": [
         "Summarises videos, audio, PDFs and web pages into digestible notes",
         "Question answering over uploaded content for quick clarification",
@@ -1286,7 +1286,7 @@
       "type": "Reading & Comprehension Assistant",
       "description": "OpenRead is an AI reading companion that helps students and researchers understand complex study materials. Users can upload textbooks, articles or PDFs and ask questions, request explanations or highlight sections they want to explore more deeply. This turns difficult reading into a more interactive and guided experience.\n\nThe tool supports comprehension by breaking down tough concepts into simple language. It helps readers follow arguments, connect ideas and build a stronger understanding of unfamiliar topics. This reduces frustration and allows learners to move at their own pace.\n\nOpenRead is perfect for anyone working through challenging academic content. It offers a supportive way to read smarter instead of harder and helps users stay motivated throughout their studies.",
       "subtitle": "AI assistant for deeply understanding textbooks, PDFs and study materials.",
-      "tags": ["reading", "comprehension", "study", "PDFs", "Q&A"],
+      "tags": ["research assistant", "summarization", "document chat", "students"],
       "features": [
         "Upload and analyse PDFs and study materials with AI",
         "Summaries and section overviews to highlight the main ideas",
@@ -1326,7 +1326,7 @@
       "type": "Research Paper Explanation Tool",
       "description": "Explainpaper is designed to make academic papers easier to understand. You can upload a paper and highlight any confusing passage then Explainpaper rewrites that section in plain language while keeping the core meaning intact. This helps readers get past complex writing so they can focus on the research itself.\n\nStudents and early career researchers find it especially useful because it supports learning without oversimplifying. It turns dense scientific or technical text into something clearer and more approachable. This makes the reading process more productive and less intimidating.\n\nExplainpaper is ideal for anyone who wants to grasp difficult content quickly. It encourages deeper engagement with research by removing barriers that come from complicated academic language.",
       "subtitle": "Highlight confusing paper sections and get clear, plain-language explanations.",
-      "tags": ["paper explanation", "research", "reading", "students", "plain language"],
+      "tags": ["research assistant", "summarization", "writing", "researchers"],
       "features": [
         "Upload research papers and highlight specific sentences or paragraphs",
         "Instant explanations that simplify technical language and jargon",
@@ -1366,7 +1366,7 @@
       "type": "AI Research Assistant",
       "description": "AlphaFold is an AI system that predicts the three dimensional shapes of proteins based on their amino acid sequences. Understanding these shapes is important because they help explain how proteins function in the body and how they interact with other molecules including medicines.\n\nScientists use AlphaFold to explore biological questions that were previously very slow or costly to study through experiments alone. The tool provides quick and reliable predictions that guide research in fields like genetics, disease biology and drug discovery. This accelerates scientific progress and opens new paths for exploration.\n\nAlphaFold has become an essential resource for labs and research organisations around the world. It makes advanced biological insights more accessible and supports discoveries that can lead to better treatments and a deeper understanding of life at the molecular level.",
       "subtitle": "Ask research questions and get AI-curated, summarised evidence from the literature.",
-      "tags": ["literature review", "research assistant", "papers", "evidence", "summarization"],
+      "tags": ["research assistant", "summarization", "semantic search", "researchers"],
       "features": [
         "Question-based search that returns relevant papers and summaries",
         "Automatic extraction of key details like methods, outcomes and populations",
@@ -1406,7 +1406,7 @@
       "type": "Protein Structure Prediction System",
       "description": "AlphaFold is an AI system that predicts the three dimensional shapes of proteins based on their amino acid sequences. Understanding these shapes is important because they help explain how proteins function in the body and how they interact with other molecules including medicines.\n\nScientists use AlphaFold to explore biological questions that were previously very slow or costly to study through experiments alone. The tool provides quick and reliable predictions that guide research in fields like genetics, disease biology and drug discovery. This accelerates scientific progress and opens new paths for exploration.\n\nAlphaFold has become an essential resource for labs and research organisations around the world. It makes advanced biological insights more accessible and supports discoveries that can lead to better treatments and a deeper understanding of life at the molecular level.",
       "subtitle": "DeepMind’s breakthrough AI for predicting 3D protein structures.",
-      "tags": ["biology", "proteins", "drug discovery", "DeepMind", "structure prediction"],
+      "tags": ["research assistant", "data analysis", "performance analytics", "researchers"],
       "features": [
         "High-accuracy predictions of protein 3D structures from amino acid sequences",
         "Public database of predicted structures for hundreds of thousands of proteins",
@@ -1446,7 +1446,7 @@
       "type": "AI Research Reading Platform",
       "description": "SciSpace helps users understand academic papers more easily by explaining complex sentences, defining technical terms and offering clear summaries. You can upload a document and SciSpace will guide you through the content in a way that feels more conversational and supportive.\n\nThe platform also shows related papers and highlights connections between topics so you can explore a subject in greater depth. This is helpful for students, researchers and professionals who want to see the bigger picture without spending hours searching for additional resources.\n\nSciSpace gives people a friendlier way to work with dense academic material. It reduces confusion, improves comprehension and helps users learn more confidently across a variety of fields.",
       "subtitle": "Search, read and understand research papers with an AI co-pilot.",
-      "tags": ["research reading", "papers", "AI explanations", "semantic search", "students"],
+      "tags": ["research assistant", "paper summarizer", "semantic search", "students"],
       "features": [
         "Search and discovery of academic articles across fields",
         "AI explanations and summaries embedded directly into the reading experience",
@@ -1486,7 +1486,7 @@
       "type": "Electronic Lab Notebook & Lab Management Platform",
       "description": "Labguru is a digital platform that helps laboratories organise their experiments, samples and daily work. Instead of using handwritten notes or scattered spreadsheets, teams can store their protocols, data and inventory in one clean and searchable system. This improves consistency and reduces the chance of mistakes.\n\n The platform supports collaboration by making it easy for scientists to track who did what and when. Teams can review ongoing experiments, share results and plan future work together. This level of organisation is important for labs that need accuracy, safety and reproducibility.\n\nLabguru is used in academic, biotech and pharmaceutical settings where efficient workflow management matters. It helps labs stay organised, meet compliance standards and speed up research without losing critical information.",
       "subtitle": "Manage experiments, inventory and lab operations in one digital platform.",
-      "tags": ["ELN", "lab management", "inventory", "R&D", "compliance"],
+      "tags": ["data analysis tool", "automation", "collaboration", "researchers"],
       "features": [
         "Electronic lab notebook for documenting experiments and protocols",
         "Inventory and sample management with location tracking and barcodes",
@@ -1526,7 +1526,7 @@
       "type": "Managed Vector Database",
       "description": "Pinecone AI is a service that helps applications search through information based on meaning rather than exact text matches. This is important for modern AI systems because they often need to find items that are similar in concept even if the words used are different. Pinecone handles this complexity behind the scenes.\n\nDevelopers rely on Pinecone to power smart search, recommendation features and memory for chatbots. It stores data in a way that makes it easy to compare ideas or find related items quickly. This allows apps to feel more intelligent and responsive to user needs.\n\nPinecone is a strong choice for teams building AI products that require fast and meaningful search results. It simplifies a difficult technical problem and gives developers the tools to create more helpful and intuitive user experiences.",
       "subtitle": "Production-ready vector database for semantic search and RAG workloads.",
-      "tags": ["vector database", "semantic search", "RAG", "recommendations", "embeddings"],
+      "tags": ["vector database", "vector search", "integrations", "developers"],
       "features": [
         "Managed vector indexes with configurable dimensions and metadata",
         "High-performance similarity search APIs with low latency at scale",
@@ -1566,7 +1566,7 @@
       "type": "Spreadsheet AI Assistant",
       "description": "GPTexcel helps people work more easily with spreadsheets by turning natural language instructions into formulas, summaries and charts. Instead of remembering specific syntax or spending time troubleshooting errors, users can describe what they want and GPTexcel handles the technical details.\n\nThis makes everyday tasks like building financial models, analysing data or preparing reports much faster. The tool is especially valuable for people who depend on spreadsheets but want a simpler way to perform complex operations.\n\nGPTexcel is useful for analysts, accountants and office teams who want to save time and reduce mistakes. It turns spreadsheets into a more approachable environment where users can focus on insights instead of formulas.",
       "subtitle": "Describe your spreadsheet task; get formulas, explanations and automation.",
-      "tags": ["Excel", "Google Sheets", "formulas", "productivity", "no-code"],
+      "tags": ["spreadsheet ai", "automation", "data visualization", "professionals"],
       "features": [
         "Natural-language prompts that generate Excel or Sheets formulas",
         "Explanations of how formulas work and how to adapt them",
@@ -1606,7 +1606,7 @@
       "type": "Chat-Based Analytics Assistant",
       "description": "DataGPT makes data analysis feel easy by allowing users to chat directly with their information. You can ask questions in plain language and the tool responds with charts, explanations and insights drawn from the data. This removes the need to write queries or build dashboards manually.\n\nTeams across a business can use DataGPT to make quicker decisions because they no longer need to wait for a technical expert to provide answers. It turns raw data into meaningful guidance that is easy for everyone to understand.\n\nDataGPT is ideal for organisations that want to democratise analytics and help people act on data with confidence. It provides a clear and accessible way to understand trends and performance without needing specialised training.",
       "subtitle": "Ask questions about your data and get instant charts, answers and insights.",
-      "tags": ["analytics", "BI", "chat with data", "dashboards", "self-serve"],
+      "tags": ["data analysis tool", "data visualization", "summarization", "teams"],
       "features": [
         "Natural-language querying over connected data sources",
         "Automatic generation of charts, tables and narrative explanations",
@@ -1646,7 +1646,7 @@
       "type": "AI Copilot for Spreadsheets",
       "description": "Arcwise is an AI assistant built for people who spend a lot of time working in spreadsheets. Instead of wrestling with complex formulas or searching for the right syntax, users can describe what they want in simple language and Arcwise produces the correct formula or transformation. It understands the layout, headers and structure of your sheet, which makes its suggestions feel more intuitive and accurate.\n\nThis context awareness is especially useful for tasks like cleaning messy datasets, joining tables or reconciling information across different sources. Arcwise can analyse the data, suggest improvements and point out possible issues. It reduces the time spent on manual fixes and helps teams complete spreadsheet work with more confidence.\n\nArcwise sits inside Google Sheets, so users can access it without switching tools or breaking their workflow. It is a helpful companion for analysts, operations teams and anyone who uses spreadsheets daily. By removing friction and reducing repetitive work, Arcwise makes spreadsheets more approachable for beginners and more efficient for experienced users.",
       "subtitle": "Spreadsheet-aware AI copilot that understands and transforms your sheets.",
-      "tags": ["Google Sheets", "formulas", "data cleaning", "productivity", "copilot"],
+      "tags": ["spreadsheet ai", "automation", "no code", "professionals"],
       "features": [
         "Plain-English prompts that generate or fix spreadsheet formulas",
         "Context-aware understanding of sheet layout, ranges and headers",
@@ -1686,7 +1686,7 @@
       "type": "Productivity Suite with AI Features",
       "description": "Google Workspace is a cloud-based suite that helps teams create documents, share information and collaborate in real time. With AI built into apps like Gmail, Docs, Sheets and Slides, users can draft content, summarise threads, suggest edits and generate ideas more quickly. This makes everyday tasks feel easier, especially for teams working across different locations or time zones.\n\nThe platform brings communication and productivity together in one organised space. Workers can jump between writing, presenting, analysing data or running meetings without needing separate tools. AI enhancements help reduce repetitive tasks, organise information and give users the building blocks they need to produce polished work.\n\nGoogle Workspace is valued by businesses, schools and nonprofits that want smooth collaboration and simple workflows. It supports teams of all sizes by making it easier to stay aligned, share progress and keep documents up to date. With built-in security and admin controls, Workspace gives organisations a reliable foundation for their daily operations.",
       "subtitle": "Docs, Sheets, Slides and Gmail with AI built in for faster collaboration.",
-      "tags": ["Docs", "Sheets", "Slides", "Gmail", "AI productivity", "collaboration"],
+      "tags": ["workflow automation tool", "collaboration", "integrations", "teams"],
       "features": [
         "AI-assisted drafting and rewriting in Gmail, Docs and more",
         "Smart fill, formula help and insights in Sheets",
@@ -1726,7 +1726,7 @@
       "type": "Spreadsheet Formula Generator",
       "description": "Formulabot helps users turn plain language requests into working formulas for Excel and Google Sheets. Instead of searching through online examples or trial and error, you can describe what you want the spreadsheet to do and Formulabot generates the correct function. This makes spreadsheets much more approachable for people who are still learning.\n\nThe tool can also explain how a formula works, which helps users understand the logic behind each step. For those who work with data regularly, this support speeds up tasks like cleaning information, transforming text or calculating metrics. Formulabot also helps debug broken formulas, saving time that would normally be spent troubleshooting.\n\nFormulabot is a helpful companion for students, analysts and office workers who rely on spreadsheets but want a smoother experience. It reduces the learning curve for beginners while giving experienced users a faster way to build complex formulas. With this tool, spreadsheets feel less intimidating and more efficient.",
       "subtitle": "Describe your task in English, get a ready-to-use spreadsheet formula.",
-      "tags": ["Excel", "Google Sheets", "formulas", "no-code", "automation"],
+      "tags": ["spreadsheet ai", "automation", "no code", "professionals"],
       "features": [
         "Natural-language to formula generation for Excel and Sheets",
         "Support for lookups, conditionals, date logic and more",
@@ -1766,7 +1766,7 @@
       "type": "Writing Assistant",
       "description": "Grammarly AI is a writing assistant that helps people communicate more clearly and confidently across emails, documents and everyday messages. It checks grammar, tone and readability in real time, offering suggestions that make writing easier to understand. Users can rely on it to fix small mistakes while also improving the overall flow of their text.\n\nBeyond corrections, Grammarly can suggest rewrites that make sentences shorter, stronger or better suited to your audience. It can also help brainstorm or draft content based on short prompts, which gives users a smoother starting point for longer documents. This makes it helpful for both students and professionals who write often.\n\nGrammarly is used across many industries because it improves communication without requiring extra effort. Whether someone is creating a report, writing an application or refining a social media post, Grammarly provides guidance that is simple and practical. It helps users express ideas more effectively and keeps writing polished across different platforms.",
       "subtitle": "Real-time AI writing feedback and suggestions wherever you write.",
-      "tags": ["grammar", "tone", "rewrite", "email", "productivity"],
+      "tags": ["ai writing tool", "grammar style", "tone control", "professionals"],
       "features": [
         "Grammar, spelling and punctuation checks with context awareness",
         "Tone detection and suggestions (formal, confident, friendly and more)",
@@ -1806,7 +1806,7 @@
       "type": "Enterprise Generative AI Platform",
       "description": "Writer is an enterprise AI platform designed to help companies maintain consistent, brand-safe communication across all written content. Instead of generating text freely, Writer follows a company’s approved style, tone and terminology so teams can create materials that match their brand identity. This gives businesses more control over how AI is used within their organisation.\n\nThe platform supports marketing, support and internal teams with tools for drafting, editing and standardising content. It can generate product descriptions, emails, help articles and documentation that follow company guidelines. Admin controls let organisations manage permissions, review content and maintain oversight of how AI is applied across teams.\n\nWriter is ideal for companies that want the productivity benefits of AI without losing brand consistency. It helps teams produce clear and aligned content at scale while reducing manual editing. With governance and integrations built in, Writer provides a structured and reliable approach to AI-assisted writing.",
       "subtitle": "Brand-safe generative AI for teams that need control and consistency.",
-      "tags": ["enterprise AI", "style guide", "copywriting", "governance", "content"],
+      "tags": ["ai writing tool", "tone control", "brand consistency", "enterprise"],
       "features": [
         "Custom style, tone and terminology enforcement across all content",
         "AI writing assistance for marketing, sales, support and documentation",
@@ -1846,7 +1846,7 @@
       "type": "Marketing Copy Generator",
       "description": "Copysmith is a writing platform built for marketers and eCommerce teams that need to create large amounts of content quickly. It can generate product descriptions, ads, short posts and campaign ideas using simple inputs from the user. This helps teams move faster and keep messaging consistent across different channels.\n\nThe platform supports bulk content creation, which is especially helpful for online stores with many products. Marketers can generate variations of copy for testing, refine tone to match brand guidelines and collaborate with teammates on drafts. Copysmith reduces repetitive writing tasks and frees up time for strategy and creative planning.\n\nFor businesses that depend on written content, Copysmith provides a practical way to scale production. It helps teams maintain quality even when working at high volume and gives them the tools to build campaigns more efficiently. The platform is useful for both small brands and large marketing departments.",
       "subtitle": "AI content engine for product descriptions, ads and marketing campaigns.",
-      "tags": ["eCommerce", "product descriptions", "ads", "marketing", "copywriting"],
+      "tags": ["ai writing tool", "content marketing", "brand consistency", "marketers"],
       "features": [
         "Templates for product descriptions, ads, blog posts and social content",
         "Bulk content generation for large product catalogues",
@@ -1886,7 +1886,7 @@
       "type": "AI Writing Companion",
       "description": "Hyperwrite is a personal writing companion that helps users brainstorm, draft and refine their ideas. It sits in the browser and offers suggestions as you type, making everyday writing tasks feel smoother. Whether users are starting from a blank page or improving existing text, Hyperwrite provides quick, helpful feedback.\n\nThe tool can generate paragraphs, rewrite sentences and expand ideas based on short prompts. It adapts over time, learning the tone and style a user prefers. This makes it feel more like a collaborative partner that grows familiar with your writing habits.\n\nHyperwrite is popular among students, professionals and creatives who want support while writing emails, essays or long-form content. It helps overcome writer’s block and gives users a practical way to turn rough ideas into polished text. With Hyperwrite, writing becomes less stressful and more productive.",
       "subtitle": "A personal AI co-writer for ideas, drafts and everyday writing.",
-      "tags": ["brainstorming", "drafting", "writing assistant", "browser extension"],
+      "tags": ["ai writing tool", "writing", "tone control", "professionals"],
       "features": [
         "In-line suggestions and autocomplete while you type",
         "Prompt-based generation for paragraphs, outlines and ideas",
@@ -1926,7 +1926,7 @@
       "type": "SEO & Content Optimization Platform",
       "description": "Inkforall is an AI writing platform focused on helping content rank well in search engines while staying readable for human audiences. It combines writing assistance with SEO tools that guide users toward keywords, structure and clarity. This makes it easier to produce articles and web pages that perform well online.\n\nThe tool can generate drafts, refine tone and check readability while offering recommendations to improve search relevance. Content teams can build outlines, write blog posts and adjust copy to match search intent. This approach supports creators who want to balance creativity with optimisation.\n\nINK is widely used by marketers, bloggers and SEO teams who want to improve their content workflow. It saves time on research and editing while helping ensure that published pieces attract the right audience. For anyone working in digital marketing, INK offers a practical way to create stronger and more discoverable content.",
       "subtitle": "SEO-focused AI writing that balances rankings with readability.",
-      "tags": ["SEO", "content marketing", "copywriting", "optimization", "blogs"],
+      "tags": ["seo tool", "content marketing", "performance analytics", "marketers"],
       "features": [
         "AI-assisted drafting for blog posts, landing pages and web copy",
         "SEO scoring and optimisation recommendations for target keywords",
@@ -1966,7 +1966,7 @@
       "type": "Online Course Library",
       "description": "MindLuster is an online course library filled with thousands of video lessons across many subjects. It allows learners to explore topics at their own pace and complete structured modules that break concepts into simple steps. For people looking to build new skills, it offers an accessible alternative to traditional classroom study.\n\nMany courses include certificates, which learners can use to show progress in areas like technology, business or creative fields. With content organised into clear categories, MindLuster helps users find materials that match their goals without needing a formal program or expensive tuition.\n\nMindLuster is ideal for self-directed learners, professionals wanting to grow their skills or students seeking extra support alongside regular studies. It provides a flexible and affordable entry point into continuous learning.",
       "subtitle": "Large library of self-paced courses with certificates across many subjects.",
-      "tags": ["online courses", "certificates", "skills", "e-learning"],
+      "tags": ["learning platform", "courses", "skill building", "students"],
       "features": [
         "Extensive catalog of courses across technical and non-technical domains",
         "Video lessons and structured modules for each course",
@@ -2006,7 +2006,7 @@
       "type": "React UI Component Library",
       "description": "React Bits provides developers with a collection of ready-made components and UI patterns designed to improve the look and feel of web applications. Each component includes smooth animations and polished interactions that would take significant time to build from scratch. This makes it easier for teams to create modern and professional interfaces.\n\nThe library focuses on practical examples and clean implementation, giving developers components that can be customised and reused across projects. This speeds up prototyping and reduces time spent on repetitive frontend work like transitions or layout patterns.\n\nReact Bits is a helpful resource for developers who want to enhance their UI without relying on large frameworks or heavy animation tools. It brings consistency, speed and visual polish to React apps of all sizes.",
       "subtitle": "Reusable animated UI components and snippets for modern React apps.",
-      "tags": ["React", "UI components", "animation", "frontend", "design system"],
+      "tags": ["developer tooling", "ui components", "design", "developers"],
       "features": [
         "Pre-built, production-ready React components and patterns",
         "Animations and micro-interactions crafted for smooth UX",
@@ -2046,7 +2046,7 @@
       "type": "Creative & Productivity Software Suite",
       "description": "Wondershare offers a suite of digital tools that help users create, edit and manage content across different formats. Products like Filmora and PDFelement support tasks ranging from video editing to document management. This makes the ecosystem appealing to creators, students and businesses that work with multimedia every day.\n\nThe tools emphasise ease of use, allowing users to edit videos, convert files, annotate PDFs or record screens without needing complex software. Built-in templates and effects help speed up production and give content a professional appearance.\n\nWondershare is popular among educators, marketers and creative teams who want reliable tools for digital content workflows. It provides a flexible set of applications that cover both creative and office needs, making it a practical all-in-one solution for many users.",
       "subtitle": "Ecosystem of tools for video, PDFs and digital productivity.",
-      "tags": ["video editing", "PDF", "screen recording", "utilities", "creators"],
+      "tags": ["design tool", "video editing", "automation", "creators"],
       "features": [
         "Video editing and motion graphics tools for creators",
         "PDF editing, conversion and signing utilities",
@@ -2086,7 +2086,7 @@
       "type": "Online Code & Data Utilities",
       "description": "Code Beautify offers a large set of online tools that help developers and data workers clean, convert and validate their files. It supports common formats like JSON, XML and SQL and provides quick ways to format or debug them. This makes the platform a useful companion for everyday coding and data tasks.\n\nThe tools run directly in the browser, so users don’t need to install extra software. Whether someone needs to pretty-print an API response, test a regular expression or convert data from one format to another, Code Beautify provides a simple and fast solution.\n\nDevelopers, analysts and students use it as a go-to toolkit when working with structured data or learning new formats. It helps remove friction from technical tasks and offers a lightweight alternative to heavier development tools.",
       "subtitle": "One-stop toolbox for formatting, validating and converting code and data.",
-      "tags": ["formatting", "validators", "converters", "JSON", "XML"],
+      "tags": ["developer tooling", "data cleaning", "formatting", "developers"],
       "features": [
         "Code beautifiers and minifiers for many languages and formats",
         "Validators for JSON, XML, YAML and other structured data",
@@ -2126,7 +2126,7 @@
       "type": "All-in-One Online Tool Hub",
       "description": "10015.io is an online hub that brings together dozens of small, useful tools for everyday digital tasks. Instead of switching between different websites, users can access text editors, image converters, SEO tools and code utilities in one clean interface. This makes it easy to handle quick fixes without installing software.\n\nThe platform is designed for speed and convenience. Tasks like changing text case, compressing an image, generating a meta preview or converting JSON can be done instantly in the browser. Each tool is simple to use and focuses on solving a specific problem.\n\n10015.io is popular with office workers, developers and creators who want a reliable, all-in-one utility site. It works well for quick adjustments, small conversions or lightweight troubleshooting, making it a handy resource for daily work.",
       "subtitle": "Dozens of quick, free tools for text, images, SEO and development.",
-      "tags": ["utilities", "productivity", "developer tools", "SEO", "images"],
+      "tags": ["workflow automation tool", "utilities", "automation", "professionals"],
       "features": [
         "Text tools for formatting, case changes, counting and encoding",
         "Image tools for resizing, compression and conversion",
@@ -2166,7 +2166,7 @@
       "type": "Frame-by-Frame Animation Tool",
       "description": "Paperanimator is a drawing tool built for artists who enjoy traditional frame by frame animation. Instead of working in complex professional software, animators can sketch each frame in a simple digital workspace that mirrors the feel of hand-drawn animation. Features like onion skinning help artists see how their drawings progress over time.\n\nThe lightweight interface makes experimentation easy. Users can flip between frames, refine motion and adjust timing without navigating heavy menus. Once the animation is complete, it can be exported as a GIF or video, ready to share or use in larger projects.\n\nPaperanimator is ideal for students, illustrators and animators who want to study movement, practice fundamentals or create short sequences. It offers a creative and approachable environment where hand-crafted motion can come to life.",
       "subtitle": "Draw traditional-style frame-by-frame animation in a digital workspace.",
-      "tags": ["animation", "frame-by-frame", "drawing", "2D", "illustration"],
+      "tags": ["motion design tool", "animation", "design", "designers"],
       "features": [
         "Frame-by-frame drawing interface with onion-skinning",
         "Timeline controls for timing, playback and loop preview",
@@ -2206,7 +2206,7 @@
       "type": "Browser Utility Suite",
       "description": "TinyWow provides free browser-based tools for working with PDFs, images, videos and text. It allows users to compress files, remove backgrounds, merge PDFs and even generate content using simple AI tools. The platform focuses on convenience and removes the need for software installation.\n\nEach tool loads quickly and performs a specific task, making it ideal for quick fixes during work or study. Users often rely on TinyWow when they need to adjust a document, resize an image or prepare a file for upload. The interface is clear and user friendly, which helps people complete tasks with minimal effort.\n\nTinyWow is a practical choice for individuals who want fast, reliable utilities without subscriptions or complicated menus. It supports a wide range of everyday file tasks and gives users a simple way to manage content online.",
       "subtitle": "Free online tools for PDFs, images, videos and text—many powered by AI.",
-      "tags": ["PDF tools", "image tools", "converters", "AI utilities"],
+      "tags": ["document ai", "pdf tool", "file conversion", "professionals"],
       "features": [
         "PDF editing, merging, splitting and format conversion",
         "Image compression, resizing and background removal",
@@ -2246,7 +2246,7 @@
       "type": "Web App Performance & Native Integration Tool",
       "description": "Natively helps developers create web apps that feel more like native applications. It provides patterns and best practices for improving performance, enabling offline features and designing smooth interactions. This makes it easier for teams to deliver fast, responsive interfaces on the web.\n\nThe platform supports modern frameworks and encourages developers to build experiences that behave consistently across devices. By following Natively’s guidance, teams can reduce loading times, improve animations and create cleaner user journeys. This results in apps that feel more refined and trustworthy.\n\nNatively is ideal for development teams building complex interfaces or SaaS products. It helps bridge the gap between traditional web experiences and native-level performance, giving users a smoother experience across mobile and desktop environments.",
       "subtitle": "Build web experiences with native-like performance and integration.",
-      "tags": ["web apps", "performance", "PWA", "frontend", "DX"],
+      "tags": ["developer tooling", "app builder", "performance", "developers"],
       "features": [
         "Guidance and utilities for building high-performance web apps",
         "Patterns for offline support and progressive web app behaviour",
@@ -2286,7 +2286,7 @@
       "type": "Knowledge Graph & Learning Map",
       "description": "Learn Anything provides visual maps that show how topics and ideas connect to each other. Instead of a linear course, learners explore a subject through branching concepts and links to helpful resources. This approach offers a clear overview of a field and helps users decide where to start.\n\nThe maps make it easy to dive deeper into subtopics or shift to related areas. Users can follow their curiosity, explore new interests and plan learning paths that match their goals. Each topic contains curated resources that support self-directed study.\n\nLearn Anything is ideal for students, hobbyists and lifelong learners who enjoy exploring subjects at their own pace. It brings clarity to complex fields and helps users understand how ideas relate, which makes learning more intuitive and enjoyable.",
       "subtitle": "Visual knowledge maps that show how topics and ideas connect.",
-      "tags": ["knowledge graph", "mind map", "learning paths", "self-directed learning"],
+      "tags": ["learning platform", "learning paths", "knowledge mapping", "students"],
       "features": [
         "Interactive maps of topics and subtopics across many domains",
         "Links to resources such as articles, videos and documentation",
@@ -2326,7 +2326,7 @@
       "type": "AI Data Science Platform",
       "description": "Higgsfield is a platform that uses AI to support data science and analytics workflows. It helps teams prepare data, build models and create visualisations that communicate insights clearly. This reduces the amount of manual work required during early stages of analysis.\n\nUsers can explore datasets visually and quickly test different modelling approaches without writing everything from scratch. Higgsfield provides tools for version control and experiment tracking, which help keep projects organised. It also supports collaboration between technical and non-technical teams.\n\nFor organisations that want to scale their analytics capabilities, Higgsfield offers a balanced approach. It speeds up repetitive tasks while giving experts room to refine and improve models. This helps teams move from raw data to insights more efficiently.",
       "subtitle": "Automate parts of data science workflows with AI-powered tooling.",
-      "tags": ["data science", "automation", "ML", "visualization", "analytics"],
+      "tags": ["data analysis tool", "automation", "data visualization", "developers"],
       "features": [
         "Tools for preparing and exploring datasets",
         "Assisted model training and selection for common ML tasks",
@@ -2366,7 +2366,7 @@
       "type": "JavaScript Animation Library",
       "description": "AnimeJS is a lightweight animation library that helps developers create smooth and engaging motion on the web. It supports animations for CSS properties, SVGs and JavaScript objects, giving teams flexibility to design rich interactions. Because of its small size, it loads quickly and works well in modern web apps.\n\nThe library offers timelines, easing functions and controls that make it easier to choreograph complex animation sequences. Developers can animate elements on landing pages, dashboards or interfaces without relying on heavy frameworks. This results in polished visuals that improve the user experience.\n\nAnimeJS is used by developers who want professional-quality animations without adding unnecessary complexity. It brings dynamic movement to websites and applications in a simple, approachable way.",
       "subtitle": "Lightweight JS engine for smooth, composable web animations.",
-      "tags": ["JavaScript", "animation", "frontend", "SVG", "UX"],
+      "tags": ["developer tooling", "motion design", "animation", "developers"],
       "features": [
         "Animate CSS properties, transforms, SVG attributes and more",
         "Timeline system for sequencing complex animations",
@@ -2406,7 +2406,7 @@
       "type": "Creative Asset Generation Platform",
       "description": "Gambo AI helps designers and marketers create visual assets for branding, social media and storytelling. It combines generative AI with templates and editing tools so users can produce campaign-ready visuals quickly. This reduces reliance on stock libraries and speeds up the creative process.\n\nThe platform supports consistency by allowing teams to adjust style, colour and layout to match brand guidelines. Creatives can explore different concepts, generate moodboards and fine tune ideas before moving into full production. This makes Gambo AI useful during both early ideation and final asset creation.\n\nGambo AI is a valuable resource for agencies, marketing departments and solo creators. It offers a flexible way to produce attractive visuals and helps teams maintain quality across different campaigns.",
       "subtitle": "Generate and refine visual assets for branding and campaigns with AI.",
-      "tags": ["image generation", "branding", "marketing", "creative assets"],
+      "tags": ["design tool", "ai image generator", "brand design", "marketers"],
       "features": [
         "AI-assisted generation of visual assets for campaigns and brands",
         "Templates and workflows for common marketing formats",
@@ -2446,7 +2446,7 @@
       "type": "Motion Design Tool",
       "description": "Jitter is a browser-based motion design tool that helps designers create clean and modern animations without heavy software. It provides a timeline editor where users can animate UI elements, text or graphics with simple keyframe controls. The interface is approachable, which makes it easy for beginners to get started.\n\nDesigners can import assets, refine transitions and experiment with timing until the motion feels right. The finished animations can be exported as videos, GIFs or Lottie files, making them suitable for presentations, marketing content or implementation in apps.\n\nJitter is ideal for product designers, marketers and creators who want fast and flexible motion graphics. It brings professional animation capabilities to the browser and helps teams communicate ideas visually with minimal effort.",
       "subtitle": "Create UI animations and motion graphics quickly in the browser.",
-      "tags": ["motion design", "UI animation", "video", "Lottie", "product design"],
+      "tags": ["motion design tool", "animation", "design", "designers"],
       "features": [
         "Keyframe-based animation timeline for UI and graphic elements",
         "Pre-built easing curves and transitions for smooth motion",
@@ -2486,7 +2486,7 @@
       "type": "AI Development & Automation Assistant",
       "description": "Emergent is an AI assistant that helps development teams plan, automate and coordinate their work. It supports coding tasks, task generation and workflow automation, giving teams a central place to organise projects with AI guidance. This helps reduce repetitive work and brings more structure to everyday development.\n\nThe platform can review code, suggest improvements and help break down large features into actionable tasks. It connects with tools that teams already use and creates a shared environment where developers can collaborate with AI support. This improves clarity and reduces time spent on coordination.\n\nEmergent is helpful for engineering teams that want to streamline their workflow. It combines automation with practical guidance, making development processes smoother and helping teams deliver projects more efficiently.",
       "subtitle": "AI copilot for coding, planning and automating team workflows.",
-      "tags": ["AI assistant", "developer tools", "automation", "planning", "agents"],
+      "tags": ["workflow automation tool", "ai assistant", "automation", "developers"],
       "features": [
         "AI-assisted coding and code explanation capabilities",
         "Task generation and planning support for projects",
@@ -2526,7 +2526,7 @@
       "type": "AI Interview Practice Platform",
       "description": "InterviewAI helps job seekers prepare for interviews by simulating realistic interview scenarios and asking thoughtful, role-specific questions. Users can practise answering aloud or in writing, making the experience feel similar to a live interview. The tool is designed to build confidence and reduce stress before the real event.\n\nIt provides feedback on clarity, structure and communication style so users understand how their responses might be received by employers. This helps people refine their answers, highlight strengths and improve areas that feel less natural. InterviewAI also adjusts difficulty and focus depending on the user’s experience level.\n\nWhether someone is preparing for their first job, moving into a new career path or aiming for senior roles, InterviewAI offers a safe space to practise and improve. It supports applicants in presenting themselves more effectively and increases readiness for the questions they are likely to face.",
       "subtitle": "Personalised mock interviews and feedback to help you ace the real thing.",
-      "tags": ["interview prep", "mock interviews", "career", "jobs", "feedback"],
+      "tags": ["recruiting tool", "interview prep", "summarization", "students"],
       "features": [
         "Generates job-specific interview questions across industries and seniority levels",
         "Supports behavioural, technical and situational question types",
@@ -2566,7 +2566,7 @@
       "type": "AI Logo Generator",
       "description": "LogoDiffusion helps users generate professional-looking logos through simple text prompts. It uses AI to produce a wide range of visual styles so users can quickly explore different concepts without relying on complex design software. This makes it an accessible tool for entrepreneurs, freelancers and small businesses.\n\nUsers can adjust colour, layout and style until they find a logo that represents their brand. The tool can produce multiple variations in seconds, giving users a broad set of ideas to choose from. This is helpful for brands that want a fast and affordable way to develop their visual identity.\n\nLogoDiffusion is ideal for people who need a polished logo but do not have access to design resources. It offers quick experimentation, creative flexibility and a simple workflow, helping users create a strong first impression through clear branding.",
       "subtitle": "Generate distinctive, AI-powered logos and brand marks in minutes.",
-      "tags": ["logo design", "branding", "image generation", "diffusion", "visual identity"],
+      "tags": ["ai image generator", "text to image", "logo design", "designers"],
       "features": [
         "Text-to-logo generation using state-of-the-art diffusion models",
         "Support for style, colour and symbol preferences in prompts",
@@ -2606,7 +2606,7 @@
       "type": "AI Research & Collaboration Platform",
       "description": "Anara provides AI-powered creative collaboration tools that help teams produce cohesive brand visuals. Designers can explore ideas, share drafts and refine concepts with support from intelligent suggestions. This speeds up the early stages of design and helps teams stay aligned throughout a project.\n\nThe platform focuses on maintaining consistency in style, colour and layout across different assets. By analysing brand guidelines and previous work, Anara helps teams keep their visual identity coherent. This is especially valuable for agencies and growing companies with multiple contributors.\n\nAnara offers a smoother creative process by blending collaboration and AI assistance. It supports brainstorming, design reviews and content creation, helping teams deliver polished branding materials more efficiently.",
       "subtitle": "Turn documents and research into a shared, AI-assisted knowledge workspace.",
-      "tags": ["research", "knowledge base", "collaboration", "document analysis", "AI assistant"],
+      "tags": ["design tool", "collaboration", "brand design", "teams"],
       "features": [
         "Upload and organise large collections of documents and research materials",
         "Ask natural-language questions and receive answers grounded in uploaded sources",
@@ -2646,7 +2646,7 @@
       "type": "AI Image Enhancement & Generation Platform",
       "description": "Claid helps users enhance and generate visual content using AI-powered editing tools. It can upscale images, clean noise, adjust lighting and automate repetitive edits that normally take significant time. This makes it useful for creators who want fast, consistent results without advanced editing experience.\n\nThe platform is also capable of generating new imagery or extending existing visuals, giving users more freedom to experiment with creative ideas. Claid focuses on improving quality while keeping the workflow simple and approachable. Businesses often use it to refine product photos or prepare assets for e-commerce and advertising.\n\nClaid is a practical tool for photographers, designers and marketing teams. It streamlines visual production, improves image quality and supports creative exploration, helping users deliver professional visuals with minimal effort.",
       "subtitle": "Enhance, upscale and generate production-ready visuals with AI.",
-      "tags": ["image enhancement", "upscaling", "background removal", "product photos", "API"],
+      "tags": ["ai image generator", "image editing", "image upscaling", "designers"],
       "features": [
         "AI-powered upscaling and denoising for low-resolution images",
         "Background removal and replacement tuned for product photography",
@@ -2686,7 +2686,7 @@
       "type": "Recruitment Automation Platform",
       "description": "HireFlow helps companies streamline their recruitment process by automating tasks like sourcing candidates, sending outreach messages and evaluating applicant profiles. It reduces manual work and helps hiring teams identify strong matches more quickly. This gives recruiters more time to focus on relationship building and final decisions.\n\nThe platform can screen applicants, highlight relevant skills and organise candidate pipelines. It also assists with scheduling, follow-ups and communication, making the experience smoother for both companies and applicants. This is especially helpful for fast-moving teams that need to fill roles efficiently.\n\nHireFlow is valuable for startups, agencies and corporate hiring teams. It speeds up recruitment, improves consistency and helps companies connect with the right people at the right time. With automation taking care of repetitive tasks, teams can focus on finding the best possible talent.",
       "subtitle": "Automate sourcing, outreach and candidate workflows in one hiring pipeline.",
-      "tags": ["recruitment", "ATS", "sourcing", "automation", "talent"],
+      "tags": ["recruiting tool", "automation", "integrations", "recruiters"],
       "features": [
         "Automated sourcing across multiple platforms based on role criteria",
         "Personalised outreach sequences and follow-ups to candidates",
@@ -2726,7 +2726,7 @@
       "type": "Legal AI Platform for Plaintiff Firms",
       "description": "Eve is an AI platform designed for plaintiff-side law firms that want support throughout the entire case lifecycle. It helps with tasks like intake, document drafting and litigation workflows, giving legal teams a reliable assistant for repetitive or time-consuming work. Users can train Eve on their own materials so it mirrors the firm’s preferred style and process.\n\nThe platform can review documents, generate first drafts and organise case information into a clear structure. This helps teams stay consistent and reduces the time spent preparing routine paperwork. Eve also supports communication and follow-ups, helping firms manage cases more efficiently.\n\nFor busy legal practices, Eve acts as an adaptable assistant that improves speed and accuracy across daily tasks. It allows attorneys and staff to focus more of their time on strategy, client interaction and complex legal work rather than administrative chores.",
       "subtitle": "Trainable legal AI copilot for plaintiff-side case workflows.",
-      "tags": ["legal AI", "litigation", "intake", "drafting", "workflows"],
+      "tags": ["legal ai", "document drafting", "automation", "legal teams"],
       "features": [
         "Configurable AI assistant trained on firm-specific templates and matter types",
         "Support for case intake, triage and conflict checks",
@@ -2766,7 +2766,7 @@
       "type": "AI Contract Drafting & Review Assistant",
       "description": "Spellbook is an AI tool built specifically for contract drafting and review. It helps transactional lawyers analyse clauses, compare language against standards and generate clean contract text. By understanding legal structure and terminology, Spellbook assists lawyers in working more quickly without losing precision.\n\nThe tool can highlight risks, suggest alternative wording and point out inconsistencies within agreements. It also helps with benchmarking by comparing contract language to market norms. This saves time during negotiations and improves the clarity of final documents.\n\nSpellbook is popular among legal teams that manage high volumes of contracts. It supports lawyers by reducing repetitive drafting and giving them clearer insights during review. This helps firms deliver accurate work more efficiently.",
       "subtitle": "AI copilot that helps lawyers draft and review contracts in less time.",
-      "tags": ["contracts", "legal AI", "document review", "drafting", "transactional law"],
+      "tags": ["legal ai", "contract analysis", "document drafting", "legal teams"],
       "features": [
         "Clause suggestions and alternative wording tailored to context",
         "Issue spotting for risky or non-standard language in contracts",
@@ -2806,7 +2806,7 @@
       "type": "AI Prior-Art Search Tool",
       "description": "PQAI is an open-source tool that helps inventors and researchers search for prior art using simple, natural-language inputs. Instead of crafting complex search queries, users describe their invention and PQAI finds relevant patents and research papers. This makes the early stages of innovation easier to navigate.\n\nThe system analyses descriptions, identifies key concepts and surfaces materials that might relate to the proposed idea. This helps users refine their inventions, avoid duplication and improve patent quality. PQAI brings transparency to a process that can otherwise feel difficult for newcomers.\n\nInventors, students and research teams benefit from PQAI because it speeds up discovery and reduces uncertainty. It provides a practical starting point for patent exploration and helps users understand the landscape around their ideas.",
       "subtitle": "Natural-language prior-art search for patents and technical literature.",
-      "tags": ["patents", "prior art", "search", "IP", "open source"],
+     "tags": ["research assistant", "prior art search", "semantic search", "researchers"],
       "features": [
         "Accepts plain-language descriptions of inventions and ideas",
         "AI-powered semantic search over patent databases and literature",
@@ -2846,7 +2846,7 @@
       "type": "AI Meeting Notepad & Summary Tool",
       "description": "Granola is an AI-powered meeting assistant that records, transcribes and summarises discussions. It captures key points, action items and next steps so users can stay present without worrying about taking notes. This is especially helpful during back-to-back meetings.\n\nAfter each meeting, Granola generates clean summaries that can be shared with teams or added to project tools. It keeps information organised and makes follow-ups easier, reducing the chance of important details being overlooked. The tool integrates naturally into daily workflows.\n\nTeams that rely on frequent meetings use Granola to stay aligned and avoid manual note-taking. It helps create clarity, improves accountability and supports faster decision-making across projects.",
       "subtitle": "Stay present in meetings while AI turns notes into clear summaries and action items.",
-      "tags": ["meeting notes", "summaries", "productivity", "transcription", "workflows"],
+      "tags": ["meeting assistant", "transcription", "summarization", "teams"],
       "features": [
         "Automatic transcription of meetings with AI-enhanced summaries",
         "Combines raw notes and transcript into structured outcomes",
@@ -2886,7 +2886,7 @@
       "type": "Open Source Workflow Automation & AI Agent Platform",
       "description": "n8n is a visual automation platform that lets users build workflows and AI agents without writing code. With a drag-and-drop interface, users can connect hundreds of apps and automate tasks that would normally require manual effort. This makes automation accessible to both technical and non-technical teams.\n\nThe platform supports data transfers, notifications, API calls and decision-based actions. Users can build everything from simple integrations to multi-step automated processes that run on their own. It also includes features that help teams customise logic and connect with external services.\n\nn8n is valued for its flexibility and open approach. It gives organisations a powerful way to automate work, reduce repetitive tasks and build customised workflows that fit their unique processes.",
       "subtitle": "Build powerful workflows and AI agents visually, with open-source flexibility.",
-      "tags": ["automation", "workflows", "no-code", "open source", "AI agents"],
+      "tags": ["workflow automation tool", "integrations", "automation", "developers"],
       "features": [
         "Visual node-based workflow builder",
         "Hundreds of prebuilt integrations with SaaS tools and databases",
@@ -2926,7 +2926,7 @@
       "type": "No-Code Automation & Integration Platform",
       "description": "Make is a no-code automation platform that helps teams build, orchestrate and scale workflows across different apps. Users can design automations visually, connecting tools like CRMs, document systems, AI services and analytics platforms. This simplifies complex processes and reduces manual work.\n\nMake can manage data syncing, content generation, notifications and other routine tasks. It is flexible enough for simple automations but also powerful enough for large team operations. Users can drag, connect and configure steps to create workflows that run smoothly in the background.\n\nBusinesses use Make to improve efficiency across departments like sales, support, operations and marketing. It helps teams save time, reduce errors and unify their tools in a more organised way.",
       "subtitle": "Visually build and run complex automations and AI workflows across your stack.",
-      "tags": ["automation", "no-code", "integrations", "workflows", "AI agents"],
+      "tags": ["workflow automation tool", "integrations", "no code", "teams"],
       "features": [
         "Drag-and-drop scenario builder for multi-step workflows",
         "Hundreds of prebuilt integrations with SaaS tools and databases",
@@ -2966,7 +2966,7 @@
       "type": "Automation Platform with AI Integration",
       "description": "Zapier is one of the most widely used automation platforms, helping users connect apps and perform tasks across thousands of services. With AI capabilities built into the system, users can create agents, automate manual steps and streamline their daily workflow with minimal coding.\n\nThe platform allows users to build automated sequences that trigger actions across different tools. This is useful for tasks like updating spreadsheets, sending messages, managing files or coordinating customer data. Zapier’s large ecosystem makes it easy to connect almost any app combination.\n\nZapier supports individuals, small businesses and enterprise teams that want to simplify repetitive tasks. It saves time and brings consistency to everyday workflows, helping teams focus on higher-value work.",
       "subtitle": "Connect thousands of apps and add AI to automate work across your tools.",
-      "tags": ["automation", "integrations", "no-code", "AI actions", "workflows"],
+      "tags": ["workflow automation tool", "integrations", "automation", "teams"],
       "features": [
         "Prebuilt connectors for thousands of SaaS apps",
         "Simple trigger–action model (“Zaps”) for common tasks",
@@ -3006,7 +3006,7 @@
       "type": "iPaaS & Automation Platform",
       "description": "Boomi is an enterprise platform that helps organisations integrate their systems, automate processes and manage data across departments. It connects applications that do not naturally communicate with each other, reducing inefficiencies and supporting cleaner information flow.\n\nThe platform includes tools for building automated workflows, managing APIs and using AI to support decision-making. Boomi helps companies ensure that data moves consistently between systems like CRM, HR and finance, improving visibility across the organisation.\n\nLarge teams use Boomi to streamline operations and reduce the complexity of managing multiple systems. It supports reliable automation, improves data accuracy and helps businesses scale their digital processes.",
       "subtitle": "Connect, integrate and automate systems with enterprise-grade iPaaS and AI.",
-      "tags": ["integration", "iPaaS", "APIs", "automation", "data"],
+      "tags": ["workflow automation tool", "integrations", "enterprise", "developers"],
       "features": [
         "Drag-and-drop integration designer for connecting apps and data sources",
         "Prebuilt connectors for ERPs, CRMs, databases and more",
@@ -3046,7 +3046,7 @@
       "type": "AI App & Site Builder",
       "description": "Lovable is an AI platform that allows users to build websites and web apps using simple text prompts. Instead of writing code manually, users describe what they want and the system generates functional interfaces and application logic. This makes development more accessible to non-technical individuals.\n\nUsers can refine designs, adjust features and update their app through conversational instructions. Lovable speeds up prototyping and helps teams turn early ideas into working products without relying heavily on engineering resources. It supports both simple sites and more complex applications.\n\nLovable is helpful for entrepreneurs, small businesses and creators who want to launch digital products quickly. It reduces the technical barrier to building software and encourages experimentation and rapid iteration.",
       "subtitle": "Describe your idea and get a working web app you can edit and ship.",
-      "tags": ["app builder", "no-code", "full-stack", "prototyping", "AI dev"],
+      "tags": ["app builder", "no code", "code generation", "founders"],
       "features": [
         "Natural-language prompts that generate working web apps",
         "Front-end and back-end scaffolding with sensible defaults",
@@ -3086,7 +3086,7 @@
       "type": "AI Store & Site Builder for E-commerce",
       "description": "ATLAS is an AI tool that builds e-commerce stores, especially for Shopify users. It can generate themes, images, product descriptions and full store layouts from simple inputs like product links. This helps users launch shops quickly without design or coding experience.\n\nThe platform handles branding, layout and content to create a store that feels cohesive. Users can refine results, adjust styling and upload additional assets for personalisation. ATLAS is helpful for new sellers who want a strong starting point for their online presence.\n\nEntrepreneurs and small businesses use ATLAS to speed up store creation and reduce setup time. It provides an efficient way to build a polished e-commerce environment and focus more on products and customers.",
       "subtitle": "Turn product links into a fully designed, copy-complete Shopify store with AI.",
-      "tags": ["Shopify", "e-commerce", "store builder", "copywriting", "product photos"],
+      "tags": ["app builder", "no code", "automation", "marketers"],
       "features": [
         "Creates store layouts and themes based on product information",
         "Generates product descriptions, headlines and on-page copy",
@@ -3126,7 +3126,7 @@
       "type": "AI App & Internal Tool Builder",
       "description": "Base44 converts plain-language prompts into fully working software applications. Users can describe dashboards, onboarding portals or internal tools and Base44 generates the necessary components. This removes the need for coding and speeds up project delivery.\n\nThe platform allows users to refine their app by adjusting layout, behaviour and content. Teams can build prototypes or production-ready tools much faster than with traditional development. Base44 provides a simple interface for creating digital products even without technical knowledge.\n\nBusinesses and teams use Base44 to streamline internal workflows and build solutions tailored to their needs. It supports rapid development and makes it easier for organisations to create useful tools without heavy engineering investment.",
       "subtitle": "From prompt to working internal app—no code required.",
-      "tags": ["internal tools", "dashboards", "no-code", "AI builder", "operations"],
+      "tags": ["app builder", "no code", "automation", "teams"],
       "features": [
         "Prompt-based app generation for common business workflows",
         "Auto-created dashboards, forms and data views",
@@ -3166,7 +3166,7 @@
       "type": "AI Avatar & Video Generation Platform",
       "description": "HeyGen is a platform that creates AI-powered videos with realistic avatars and voice narration. Users can turn text into full video scenes without filming or using professional equipment. This makes it easier to produce content for training, marketing or communication.\n\nThe tool offers customisable avatars, language options and creative styles. Users can adjust tone, pacing and visuals until the final result matches their message. HeyGen also helps teams scale video production by generating multiple versions quickly.\n\nCreators, educators and businesses use HeyGen to deliver video content efficiently. It reduces the need for expensive filming setups and makes high-quality video more accessible to everyone.",
       "subtitle": "Turn scripts into polished avatar videos with AI voice and lip-sync.",
-      "tags": ["video", "avatars", "text-to-video", "voiceover", "content"],
+      "tags": ["video avatar", "text to video", "voice generator", "marketers"],
       "features": [
         "Library of realistic AI avatars and option for custom avatars",
         "Text-to-speech with multiple voices and languages",
@@ -3206,7 +3206,7 @@
       "type": "Royalty-Free Media & AI Tools Platform",
       "description": "Artlist is a media platform offering royalty-free music, sound effects and AI-enhanced tools for content creators. It gives users access to high-quality audio that can be used in videos, podcasts or other media projects without worrying about licensing issues.\n\nThe platform includes curated libraries, search filters and playlists to help users find the right sound quickly. With AI enhancements, Artlist can also support creative workflows by helping users match mood, pacing and style across different media types.\n\nArtlist is a trusted resource for filmmakers, YouTubers and marketers who want reliable, professional audio. It simplifies content production and gives creators more freedom to focus on storytelling.",
       "subtitle": "Royalty-free music, SFX and AI tools for modern content creators.",
-      "tags": ["music", "sound effects", "stock media", "AI tools", "licensing"],
+      "tags": ["audio editing tool", "audio generation", "content creation", "creators"],
       "features": [
         "Large catalog of royalty-free tracks and sound effects",
         "Curated footage, templates and other visual assets (depending on plan)",
@@ -3246,7 +3246,7 @@
       "type": "AI-Powered Growth & Financial Analytics Platform",
       "description": "Precision helps businesses analyse financial data through AI-driven modelling and visualisation tools. Users can forecast performance, simulate scenarios and understand how different decisions impact key outcomes. This makes planning and budgeting more accurate and informed.\n\nThe platform turns complex data into clear dashboards that show trends and potential risks. Teams can adjust assumptions and instantly see how their forecasts change, helping them make confident choices. Precision supports collaboration and encourages data-driven discussion.\n\nFinance teams, analysts and executives use Precision to strengthen decision-making and track company performance. It provides a practical way to explore financial strategy without relying solely on spreadsheets.",
       "subtitle": "Turn scattered metrics into one AI-driven scorecard for growth decisions.",
-      "tags": ["analytics", "financial modelling", "KPI tracking", "growth", "forecasting"],
+      "tags": ["finance analytics tool", "data visualization", "forecasting", "finance teams"],
       "features": [
         "Automated ingestion and consolidation of data from multiple sources",
         "Scorecards that highlight the most important KPIs and trends",
@@ -3286,7 +3286,7 @@
       "type": "AI Inbox & Workflow Assistant",
       "description": "Fyxer connects to a user’s inbox and calendar to help automate everyday communication. It drafts replies in the user’s writing style, prepares follow-up messages and records notes from meetings. This reduces the amount of manual writing and organising required during a busy workday.\n\nThe assistant can highlight important messages, suggest responses and keep track of commitments across email threads. It helps users stay organised and ensures nothing gets overlooked. This is especially useful for professionals who manage high volumes of communication.\n\nFyxer is a helpful companion for individuals who want to save time and maintain a consistent communication style. It supports productivity by managing repetitive tasks and helping users focus on work that matters most.",
       "subtitle": "An AI chief-of-staff for your inbox, meetings and follow-ups.",
-      "tags": ["email", "calendar", "assistant", "productivity", "inbox zero"],
+      "tags": ["meeting assistant", "email client", "automation", "professionals"],
       "features": [
         "Email triage to highlight important messages and de-emphasise noise",
         "Draft replies that mimic your tone and previous communication style",
@@ -3326,7 +3326,7 @@
       "type": "Web Analytics & Market Intelligence Platform",
       "description": "SimilarWeb provides insights into website traffic, online performance and competitive positioning. It uses AI to analyse how users find and engage with websites, giving businesses a clearer understanding of market trends. This helps teams identify opportunities for growth and areas that may need improvement.\n\nThe platform offers metrics such as audience behaviour, traffic sources and keyword performance. Users can compare their website to competitors and understand how they rank in their industry. This information makes marketing decisions more strategic and informed.\n\nCreators, marketers and businesses rely on SimilarWeb for planning campaigns, improving SEO and tracking digital performance. It gives teams a deeper view of the online landscape and supports smarter, data-driven strategies.",
       "subtitle": "Benchmark your digital performance and analyse competitors’ web traffic with AI insights.",
-      "tags": ["web analytics", "competitive intelligence", "traffic data", "market research"],
+      "tags": ["data analysis tool", "performance analytics", "market intelligence", "marketers"],
       "features": [
         "Traffic and engagement estimates for millions of websites and apps",
         "Breakdown of traffic sources, geographies and audiences",
@@ -3366,7 +3366,7 @@
       "type": "All-in-one AI Productivity & Presentation Workspace",
       "description": "PopAI helps creators plan and produce content faster across blogs, social media, video and more. Users can feed in ideas or themes and PopAI suggests outlines, scripts and variations that match their goals. This makes it easier to keep up with regular posting without running out of ideas.\n\nThe platform supports full workflows, from brainstorming through to draft creation. It can adapt to different formats, whether you are preparing a newsletter, a short video or a long-form article. This flexibility means teams can centralise much of their content planning in one place.\n\nPopAI is ideal for marketers, solo creators and small businesses that need to publish consistently on multiple channels. It reduces the time spent on blank-page moments and gives users a steady stream of structured, ready-to-edit content.",
       "subtitle": "Chat with docs, summarise PDFs and create AI-powered slides in one place.",
-      "tags": ["presentations", "pdf chat", "content generation", "study", "productivity"],
+      "tags": ["ai writing tool", "content marketing", "summarization", "creators"],
       "features": [
         "Chat with PDFs, slides and documents using GPT-style assistants",
         "AI presentation maker for PowerPoint-style decks from prompts or files",
@@ -3406,7 +3406,7 @@
       "type": "AI Expert & Assistant Builder",
       "description": "Buddy Pro is an AI assistant designed to support busy professionals with everyday work tasks. It can take meeting notes, summarise conversations and help draft documents or follow-up emails. This means users spend less time on admin and more time on meaningful work.\n\nBy connecting with calendars and communication tools, Buddy Pro keeps track of commitments and reminders. It helps users remember what was discussed, what was promised and what needs to happen next. This leads to smoother collaboration and fewer missed actions.\n\nBuddy Pro is helpful for managers, consultants and knowledge workers who juggle many meetings and projects. It provides a quiet layer of support that keeps information organised and workflows moving without adding extra complexity.",
       "subtitle": "Train an AI expert on your knowledge to coach, support and scale your work.",
-      "tags": ["knowledge base", "ai assistant", "coaching", "automation", "no-code"],
+      "tags": ["ai assistant", "meeting assistant", "summarization", "professionals"],
       "features": [
         "No-code setup to train AI on your own documents, notes and frameworks",
         "Customisable tone and behaviour so the assistant reflects your brand and style",
@@ -3446,7 +3446,7 @@
       "type": "Voice Agent API Platform",
       "description": "VAPI is a platform for building voice-based AI agents that can talk to users in real time. Developers can design agents that handle customer support, booking, information requests and more, all through natural speech. The focus on low latency helps conversations feel fluid and responsive.\n\nThe platform supports deployment at scale so businesses can handle many calls or interactions at once without losing quality. It also includes tools for monitoring performance and improving responses over time. This gives teams control over how their agents behave and how they evolve.\n\nVAPI is suited to companies that want to offer voice assistants or phone-based automation without building everything from scratch. It helps bring conversational AI into real-world scenarios in a practical and manageable way.",
       "subtitle": "Build production-grade voice AI agents with one configurable platform.",
-      "tags": ["voice agents", "telephony", "api", "call center", "real-time"],
+      "tags": ["voice generator", "integrations", "automation", "developers"],
       "features": [
         "Low-latency bidirectional audio for natural-feeling voice conversations",
         "Configurable routing to different LLMs and backends",
@@ -3486,7 +3486,7 @@
       "type": "Code Quality & Static Analysis Assistant",
       "description": "Codiga is a coding assistant that checks your code as you write and suggests improvements. It can catch mistakes, highlight potential issues and recommend better patterns inside your editor. This supports cleaner, safer code from the start rather than after long debugging sessions.\n\nThe tool also helps enforce style guidelines so teams can keep their codebase consistent. Developers receive instant feedback that fits naturally into their workflow instead of separate review steps. This makes learning and improvement part of everyday coding.\n\nCodiga is useful for both new and experienced developers who want to improve quality and reduce errors. It speeds up code review, encourages good habits and helps teams ship more reliable software.",
       "subtitle": "Catch bugs, smells and security issues as you code, with instant suggestions.",
-      "tags": ["code quality", "static analysis", "linting", "security", "ide plugin"],
+      "tags": ["coding assistant", "code quality", "debugging", "developers"],
       "features": [
         "Inline issue detection and suggestions inside supported IDEs",
         "Configurable rules for style, security and best practices",
@@ -3526,7 +3526,7 @@
       "type": "Reasoning-First AI Assistant & Model Suite",
       "description": "DeepSeek is an AI assistant built to handle long and detailed queries. It can read files, follow multi-step instructions and keep track of context across extended conversations. This makes it especially useful for research tasks or complex problem solving.\n\nUsers can upload documents, ask for explanations and request summaries that highlight the most important points. DeepSeek aims to stay fast and affordable while still handling large amounts of information. This balance makes it accessible for frequent use.\n\nStudents, professionals and analysts can rely on DeepSeek to explore topics in depth without getting lost. It helps turn long and heavy material into something easier to understand and work with.",
       "subtitle": "Long-context AI assistant for research, coding and deep problem-solving.",
-      "tags": ["ai assistant", "reasoning", "long context", "research", "coding"],
+      "tags": ["ai assistant", "summarization", "writing", "professionals"],
       "features": [
         "Access to DeepSeek’s latest reasoning-first models via web, app and API",
         "Long-context support for reading files, chats and datasets",
@@ -3566,7 +3566,7 @@
       "type": "Real-Time AI Assistant by xAI",
       "description": "Grok is an AI assistant designed to provide quick answers based on information from the web. It can help users stay current with news, trends and online sources while also supporting everyday tasks like writing or light coding. This combination makes it feel both informative and practical.\n\nUsers can ask open-ended questions, request summaries or get help creating content. Grok aims to respond with context that reflects what is happening now rather than only relying on older data. This helps users make decisions based on fresher information.\n\nGrok is a good fit for people who want a conversational way to explore the web, write messages or test ideas. It brings together search, chat and creativity in one place.",
       "subtitle": "A real-time, web-connected AI assistant for search, coding and content.",
-      "tags": ["ai assistant", "real-time search", "coding", "content", "xai"],
+      "tags": ["ai assistant", "web search", "summarization", "professionals"],
       "features": [
         "Real-time search integration for fresh answers on current events and web content",
         "Content generation for documents, posts, emails and creative writing",
@@ -3606,7 +3606,7 @@
       "type": "AI Presentation Maker",
       "description": "Beautiful.AI helps users create polished presentation slides without needing strong design skills. You add your content and the tool arranges it into clean layouts that follow good design principles. This keeps slides consistent and easy to read.\n\nThe platform offers smart templates that adjust as you edit. When you change text, images or data, the slides update to maintain balance and clarity. This removes the need to manually tweak spacing or alignment for every change.\n\nBeautiful.AI is ideal for teams and individuals who want professional presentations in less time. It supports sales decks, internal updates and pitches, giving users confidence that their slides look sharp and well-structured.",
       "subtitle": "Smart slide layouts that make your presentations look professionally designed.",
-      "tags": ["presentations", "slide design", "templates", "teams", "brand"],
+      "tags": ["presentation tool", "presentation generator", "design", "teams"],
       "features": [
         "Smart templates that auto-adjust layouts as you edit content",
         "AI-assisted slide generation and content suggestions",
@@ -3646,7 +3646,7 @@
       "type": "Collaborative Presentation Platform",
       "description": "Pitch is a presentation tool built for modern teams that want to create and share slides together. It offers templates, easy editing tools and collaboration features so people can contribute in real time. This keeps everyone aligned and reduces the back-and-forth that often comes with slide creation.\n\nThe platform makes it simple to add images, charts and videos, and to reuse elements across multiple decks. Teams can keep a shared library of branded slides, which helps maintain a consistent look for external and internal presentations.\n\nPitch is a strong choice for startups, agencies and remote teams that rely on visual communication. It turns presentations into a more collaborative and efficient part of daily work.",
       "subtitle": "Create, collaborate on and share modern team presentations.",
-      "tags": ["presentations", "collaboration", "templates", "pitch decks", "teams"],
+      "tags": ["presentation tool", "collaboration", "design", "teams"],
       "features": [
         "Real-time collaboration with comments, presence and version history",
         "Template gallery with on-brand, customisable slide designs",
@@ -3686,7 +3686,7 @@
       "type": "AI Add-on for Slides & PowerPoint",
       "description": "Plus helps users generate full presentations for PowerPoint or Google Slides using simple prompts. You describe the topic and goals, and Plus creates draft decks with suggested layouts, sections and visuals. This removes the initial effort of starting from a blank slide.\n\nUsers can then refine the content, adjust design choices and add their own data or branding. Plus focuses on structure and clarity so decks feel well organised from the outset. This is especially helpful when time is limited or when teams need many variations.\n\nPlus is ideal for professionals who regularly prepare reports, pitches or training materials. It speeds up the creation process and helps users focus on message and delivery rather than manual formatting.",
       "subtitle": "Generate and edit presentations with AI, right inside Slides and PowerPoint.",
-      "tags": ["presentations", "google slides", "powerpoint", "add-on", "ai decks"],
+      "tags": ["presentation tool", "presentation generator", "automation", "teams"],
       "features": [
         "Create full decks from prompts, outlines or documents",
         "Insert single AI-generated slides into existing presentations",
@@ -3726,7 +3726,7 @@
       "type": "AI Coding Assistant",
       "description": "AskCodi is an AI assistant that supports developers by turning everyday questions into code snippets and explanations. Users can ask how to perform a task in a specific language and receive ready-to-use examples. This shortens the time spent searching through documentation or forums.\n\nThe tool can also explain existing code so beginners and intermediate developers understand what each part does. This is useful for learning new technologies or revisiting older projects. AskCodi becomes a reference companion that sits alongside normal development tools.\n\nAskCodi works well for people who are still learning to code and for experienced developers who want to move faster. It helps reduce confusion, encourages exploration and makes coding feel more accessible.",
       "subtitle": "Turn natural-language questions into code, explanations and tests.",
-      "tags": ["coding assistant", "code generation", "documentation", "tests", "ide"],
+      "tags": ["coding assistant", "code generation", "code explanation", "developers"],
       "features": [
         "Code generation from natural-language instructions",
         "Explanations for unfamiliar code or APIs",
@@ -3766,7 +3766,7 @@
       "type": "AI-First Code Editor",
       "description": "Cursor is a code editor that includes AI assistance directly inside the workspace. As developers write code, Cursor can suggest completions, help fix errors and generate functions based on short prompts. This tight integration makes programming feel smoother and more interactive.\n\nThe editor supports understanding and navigation by explaining sections of code in simple terms. Developers can ask questions about their own projects and receive context-aware answers. This is helpful when working with large codebases or unfamiliar libraries.\n\nCursor is suitable for both newcomers and professionals who want a smarter editor. It combines familiar editing features with powerful AI support, helping users write, read and maintain code more efficiently.",
       "subtitle": "A code editor where AI understands your whole project and helps you ship faster.",
-      "tags": ["ide", "ai coding", "pair programming", "refactoring", "debugging"],
+      "tags": ["coding assistant", "code completion", "debugging", "developers"],
       "features": [
         "Chat interface that can see and reason about your entire codebase",
         "Inline completions and multi-line code suggestions",
@@ -3806,7 +3806,7 @@
       "type": "Collaborative Cloud IDE with AI",
       "description": "Replit is an online environment where users can write, run and share code directly from their browser. It removes the need for complex setup so people can start building projects quickly on almost any device. This makes it popular for learning and experimentation.\n\nWith built-in AI tools, Replit can assist with writing code, explaining errors and suggesting improvements. Users can collaborate in real time, which is useful for classrooms, teams or pair programming sessions. Projects can often be deployed with a few clicks, turning ideas into live apps.\n\nReplit is ideal for students, hobbyists and developers who want a simple way to code and share work. It lowers the barrier to entry and encourages creativity and collaboration.",
       "subtitle": "Code, collaborate and build apps from your browser—with AI support built in.",
-      "tags": ["cloud ide", "ai coding", "collaboration", "education", "agent"],
+      "tags": ["app builder", "coding assistant", "code generation", "developers"],
       "features": [
         "Browser-based and desktop IDE for dozens of languages and frameworks",
         "Replit Agent to build apps and sites from natural-language prompts",
@@ -3846,7 +3846,7 @@
       "type": "Enterprise AI Code Assistant",
       "description": "Tabnine is an AI-powered code completion tool that suggests the next part of a line or entire blocks of code as you type. It learns from the patterns in your projects and adapts to your personal style. This helps speed up development and reduce repetitive typing.\n\nThe tool works inside popular editors, so developers do not need to change their workflow. It supports many languages and frameworks, offering context-aware completions that fit the file being edited. This can also help prevent small errors and mismatched syntax.\n\nTabnine is useful for developers who want to move faster without sacrificing control. It acts as a quiet partner in the background, making coding feel smoother and more efficient.",
       "subtitle": "AI code completion and chat you can deploy in the cloud, on-prem or even air-gapped.",
-      "tags": ["code completion", "enterprise", "security", "ide", "ai chat"],
+      "tags": ["coding assistant", "code completion", "privacy", "developers"],
       "features": [
         "Context-aware code completions for many languages and frameworks",
         "AI chat for explaining code, generating snippets and writing tests",
@@ -3886,7 +3886,7 @@
       "type": "AI Email & Weekly Report Assistant",
       "description": "Friday is an AI assistant that creates weekly reports by gathering updates from tools your team already uses. It collects information about tasks, progress and blockers, then summarises everything into a clear overview. This saves teams time preparing status updates.\n\nThe platform can pull from project management tools, documents and communication channels. It turns scattered updates into a single, easy-to-read report that leaders and teammates can review. This improves transparency and helps everyone stay on the same page.\n\nFriday is especially helpful for remote and distributed teams who want consistent visibility into work. It reduces manual reporting work and keeps focus on what has been done and what needs attention next.",
       "subtitle": "From scattered tasks to clean weekly updates and emails—automatically.",
-      "tags": ["email", "weekly report", "status updates", "productivity", "automation"],
+      "tags": ["workflow automation tool", "summarization", "reporting", "teams"],
       "features": [
         "AI-assisted drafting of weekly reports and status emails",
         "Pulls context from tools and email (where connected)",
@@ -3926,7 +3926,7 @@
       "type": "AI Email Writing & Management Assistant",
       "description": "MailMaestro helps users write personalised emails with the support of AI. You set the tone, outline the message and provide key details, then MailMaestro generates a draft that feels polished and professional. This is useful for people who send many emails each day.\n\nThe tool can adapt to different scenarios such as sales outreach, follow-ups, internal communication or customer support. Users can tweak the text to match their voice more closely before sending. This keeps communication fast while still feeling personal.\n\nMailMaestro is a good fit for professionals who want to save time while maintaining high-quality communication. It helps reduce the effort of writing from scratch and ensures messages remain clear and appropriate for each recipient.",
       "subtitle": "Write better emails in seconds and keep your inbox organised with AI.",
-      "tags": ["email", "writing assistant", "productivity", "outlook", "gmail"],
+      "tags": ["ai writing tool", "email client", "tone control", "professionals"],
       "features": [
         "Email drafting from short notes, bullet points or instructions",
         "Tone control, rewriting and translations across multiple languages",
@@ -3966,7 +3966,7 @@
       "type": "AI-Forward Email Client",
       "description": "Shortwave is an AI-powered email client that helps users stay organised and process messages faster. It can group related emails, summarise threads and highlight the most important information. This lets users understand conversations at a glance instead of reading every message in full.\n\nThe platform also assists with drafting replies and creating quick responses for common scenarios. Users can manage tasks directly from their inbox by turning emails into follow-up items. This keeps everything in one place and reduces the chance of missing something important.\n\nShortwave is ideal for people who deal with heavy email volumes. It turns the inbox into a more focused workspace and helps users feel in control of their communication.",
       "subtitle": "Automate, summarise and reply to email with an AI-native inbox.",
-      "tags": ["email client", "ai agent", "summaries", "productivity", "gmail"],
+      "tags": ["email client", "summarization", "automation", "professionals"],
       "features": [
         "AI summaries for long conversations and threads",
         "Draft replies and instant AI responses in your own style",
@@ -4006,7 +4006,7 @@
       "type": "Premium AI Email Client",
       "description": "Superhuman is an email client designed for speed and focus. It combines keyboard shortcuts, smart triage and AI assistance to help users work through their inbox quickly. Professionals use it to cut down the time spent reading, sorting and responding to messages.\n\nAI features help draft replies, suggest next actions and surface important messages before others. The interface is streamlined and designed to minimise distractions so users can stay in a state of flow. This makes handling email feel more intentional and less draining.\n\nSuperhuman is popular among executives, founders and busy knowledge workers. It is built for people who want email to be a powerful tool rather than a constant source of friction.",
       "subtitle": "Fly through your inbox with an AI-native, keyboard-optimised email experience.",
-      "tags": ["email", "ai writing", "productivity", "inbox zero", "professional"],
+      "tags": ["email client", "writing", "automation", "professionals"],
       "features": [
         "AI-powered drafting that turns phrases into full emails in your own voice",
         "Instant reply suggestions for incoming messages",
@@ -4046,7 +4046,7 @@
       "type": "Generative AI Creative Workspace",
       "description": "Adobe Firefly is a generative AI tool that creates images and design elements from simple text prompts. It aims to produce clean, high-quality visuals that fit naturally into professional workflows. Users can generate backgrounds, illustrations and other assets in seconds.\n\nThe tool is integrated with Adobe’s creative ecosystem, which makes it easy to move from generated images into deeper editing in apps like Photoshop. Firefly also focuses on brand safety and commercial usability so creators can use assets with more confidence.\n\nDesigners, marketers and content creators use Firefly to speed up concepting and production. It provides a quick way to explore ideas visually and reduce the time spent searching for or building assets from scratch.",
       "subtitle": "Generate images, designs and more with Adobe’s brand-safe generative AI.",
-      "tags": ["text-to-image", "generative fill", "creative cloud", "design", "ai art"],
+      "tags": ["ai image generator", "text to image", "image editing", "designers"],
       "features": [
         "Text-to-image generation with multiple styles and variations",
         "Generative Fill and Expand to add, remove or extend elements in photos",
@@ -4086,7 +4086,7 @@
       "type": "Open-Weight Text-to-Image Model",
       "description": "FLUX.1 is an AI image generator known for bold and expressive visuals. It specialises in rich detail and strong artistic style, making it appealing for designers who want more character in their images. Users can experiment with different prompts to create unique and memorable artwork.\n\nThe tool supports a wide range of creative directions, from abstract scenes to stylised characters. It allows users to iterate quickly until they find a look that suits their project. This makes it useful for concept art, moodboards or visual storytelling.\n\nFLUX.1 is a strong option for artists, creatives and brands that want eye-catching visuals. It encourages experimentation and helps turn imaginative ideas into striking images.",
       "subtitle": "Next-generation text-to-image models for rich, controllable visuals.",
-      "tags": ["text-to-image", "open weights", "generative art", "api", "image generation"],
+      "tags": ["ai image generator", "text to image", "creative art", "designers"],
       "features": [
         "High-quality image generation from natural-language prompts",
         "Multiple variants balancing speed, quality and licensing needs",
@@ -4126,7 +4126,7 @@
       "type": "Text-Aware Image Generation Platform",
       "description": "Ideogram is an image generator focused on producing visuals with accurate, readable text built in. This makes it ideal for posters, social graphics, logos and other designs where typography is part of the image. Users can specify messages and see them rendered directly in the artwork.\n\nThe tool aims to combine strong layout with creative styling so that both the text and image work together. This lets creators produce shareable visuals in a single step instead of manually adding lettering later. It is especially useful for social campaigns and marketing materials.\n\nIdeogram is favoured by marketers, creators and small businesses who need quick, attractive text-based visuals. It helps users bring slogans, titles and statements to life without advanced design skills.",
       "subtitle": "Generate images with crisp, accurate text for logos, posters and social graphics.",
-      "tags": ["text-in-image", "logos", "posters", "typography", "image generation"],
+      "tags": ["ai image generator", "text to image", "typography", "designers"],
       "features": [
         "Accurate text rendering within generated images",
         "Multiple artistic and design styles from photo to vector-like art",
@@ -4166,7 +4166,7 @@
       "type": "AI Vector & Illustration Generator",
       "description": "Recraft is an AI tool built for creating vector graphics, icons and patterns. It generates clean, scalable art that can be used across websites, apps and printed materials. This is helpful for designers who need consistent visuals that look sharp at any size.\n\nUsers can define styles and themes to match a brand, then generate assets that fit into that visual system. Recraft supports pattern creation, illustration and icon sets, which saves time on manual drawing. The results are ready for editing or direct use in design tools.\n\nRecraft is ideal for product designers, brand teams and illustrators who want to speed up asset creation. It helps maintain a cohesive look across different projects and reduces the repetitive work involved in building visual libraries.",
       "subtitle": "Create editable vector illustrations, icons and patterns with AI.",
-      "tags": ["vector", "icons", "illustrations", "svg", "branding"],
+      "tags": ["ai image generator", "vector design", "brand design", "designers"],,
       "features": [
         "AI generation of vector art with SVG export",
         "Style presets and controls for consistent visual language",
@@ -4206,7 +4206,7 @@
       "type": "AI Image Generation & Model Platform",
       "description": "OpenArt is a creative hub for generating and exploring AI images. Users can type in simple prompts and see them turned into artwork in many different styles, from realistic scenes to abstract designs. This makes it a friendly place for creators who want to experiment with visual ideas without needing drawing skills.\n\nThe platform also lets users browse images made by others and learn which prompts or settings were used. This is helpful for understanding how small changes in wording can lead to very different results. Over time, users can build their own collections and refine the look they want.\n\nOpenArt is ideal for designers, content creators and hobbyists who want to play with AI art in a flexible way. It supports quick experiments, moodboards and early concept work, turning imagination into visuals that can inspire future projects.",
       "subtitle": "Generate, explore and train AI image models in one creative hub.",
-      "tags": ["text-to-image", "image generator", "fine-tuning", "models", "creative"],
+      "tags": ["ai image generator", "text to image", "prompt testing", "creators"],
       "features": [
         "Text-to-image generation with dozens of styles and model options",
         "Community gallery for inspiration and prompt ideas",
@@ -4246,7 +4246,7 @@
       "type": "AI Website & Page Builder",
       "description": "Bricks helps people build websites using a mix of simple prompts and visual tools. Instead of writing code, users drag sections into place, adjust layouts and customise content directly on the page. This makes it easy for non-developers to create professional looking sites.\n\nThe platform supports common page types like home pages, landing pages and portfolios. Users can change colours, fonts and components to match their brand or personal style. Because the interface is visual, changes are easy to understand and quick to preview.\n\nBricks is a good choice for small businesses, freelancers and teams who want a modern website without hiring a full development team. It speeds up the process from idea to live site and keeps control in the hands of the creator.",
       "subtitle": "Design and generate websites with prompts and visual editing instead of code.",
-      "tags": ["website builder", "no-code", "landing pages", "components", "AI design"],
+      "tags": ["app builder", "no code", "websites", "founders"],
       "features": [
         "Prompt-based generation of page sections, layouts and components",
         "Drag-and-drop editor to customise structure, content and styling",
@@ -4286,7 +4286,7 @@
       "type": "Big Data Spreadsheet Platform",
       "description": "Gigasheet lets users explore very large datasets in a familiar spreadsheet-style interface without needing to set up databases or write code. You can upload files with millions of rows and start filtering, sorting and grouping right away. This makes big data feel more manageable for everyday users.\n\nThe platform includes tools for finding patterns, spotting outliers and summarising information. It can reveal trends that might be hidden in raw files and helps users answer questions quickly. AI features assist with insights so you do not need to be a data expert to get value.\n\nGigasheet is useful for analysts, marketers and operations teams that regularly work with large CSVs, logs or exports. It turns heavy data into something easier to explore and share, all from the browser.",
       "subtitle": "Work with billion-row datasets in a spreadsheet-style interface, no code required.",
-      "tags": ["big data", "spreadsheet", "analytics", "no-code", "csv"],
+      "tags": ["app builder", "no code", "websites", "founders"],
       "features": [
         "Browser-based spreadsheet UI that scales to billions of rows",
         "Support for large CSV, TSV, JSON and Excel files up to hundreds of GB",
@@ -4326,7 +4326,7 @@
       "type": "AI-Enhanced Spreadsheet & Analyst",
       "description": "Rows AI brings smart features into a spreadsheet environment that feels familiar but more powerful. Users can add AI-enhanced formulas to research information, summarise text or clean data without leaving the sheet. This keeps workflows simple and centralised.\n\nThe platform also supports sharing, dashboards and automated reports. Teams can pull in live data from external services, then use AI to organise and present it. This reduces the need for separate tools and manual copy and paste work.\n\nRows AI is ideal for business users who rely on spreadsheets for planning and analysis. It combines flexible tables with built-in intelligence, helping teams move from raw information to clear results more quickly.",
       "subtitle": "A spreadsheet where AI helps you analyse, transform and connect your data.",
-      "tags": ["spreadsheet", "ai formulas", "data analysis", "automation", "dashboards"],
+      "tags": ["spreadsheet ai", "automation", "integrations", "professionals"],
       "features": [
         "AI Analyst to generate tables, models and formulas from plain-language instructions",
         "Built-in AI functions for summarising, classifying and transforming data",
@@ -4366,7 +4366,7 @@
       "type": "AI Add-on for Google Sheets",
       "description": "SheetAI adds AI functions directly to Google Sheets so users can do more with their data using simple formulas. You can ask it to summarise a paragraph, create new text from a short prompt or help with classification and tagging. All of this happens inside the sheet you already know.\n\nThe functions behave like normal spreadsheet formulas, which makes them easy to integrate into existing workflows. Users can apply AI to entire columns, build simple automations and combine results with standard spreadsheet logic. This bridges the gap between everyday tasks and advanced tools.\n\nSheetAI is a great fit for marketers, analysts and administrators who live in Google Sheets. It helps them save time on manual writing, cleaning and organising while keeping everything inside one familiar interface.",
       "subtitle": "Use AI directly in Google Sheets formulas to write, summarise and transform data.",
-      "tags": ["google sheets", "ai formulas", "text processing", "automation", "add-on"],
+      "tags": ["spreadsheet ai", "automation", "no code", "professionals"],
       "features": [
         "Custom AI functions callable from cells (e.g. summarise, rewrite, classify)",
         "Prompt-based content generation for subject lines, descriptions and more",
@@ -4406,7 +4406,7 @@
       "type": "AI Meeting Assistant & Revenue Intelligence Platform",
       "description": "Avoma is a meeting assistant that records conversations and turns them into summaries, notes and action items. It captures what was discussed so participants can stay focused instead of worrying about typing everything out. After the meeting, teams get a clear record they can review and share.\n\nThe platform organises information by topics and speakers, making it easy to jump back to specific moments. It can highlight key decisions, follow-up tasks and questions that still need answers. This reduces confusion and helps keep projects moving in the right direction.\n\nAvoma is popular with sales teams, customer success groups and internal project teams. It helps everyone stay aligned, reduces the risk of misunderstandings and saves time on manual documentation.",
       "subtitle": "From automatic meeting notes to call insights that drive revenue and alignment.",
-      "tags": ["meeting assistant", "transcription", "summaries", "revenue intelligence", "notes"],
+      "tags": ["meeting assistant", "transcription", "summarization", "teams"],
       "features": [
         "Automatic recording, transcription and AI-powered summaries of meetings",
         "Shared notes, highlights and action items synced with CRMs and tools",
@@ -4446,7 +4446,7 @@
       "type": "Meeting Participation Analytics & AI Notetaker",
       "description": "Equal Time tracks how speaking time is shared during meetings and presents simple visuals that show who is contributing and who is quiet. It runs in the background and uses AI to measure participation without recording the actual content of what is said. This shines a light on patterns that might otherwise go unnoticed.\n\nTeams can use these insights to improve balance and inclusivity in discussions. Leaders can see if certain voices dominate or if some team members rarely get a chance to speak. Over time, this awareness can lead to more thoughtful facilitation and better collaboration.\n\nEqual Time is useful for managers, facilitators and organisations that care about equitable participation. It turns an invisible dynamic into clear, gentle data that supports healthier team communication.",
       "subtitle": "See who’s talking, how often—and make your meetings more inclusive with AI insights.",
-      "tags": ["meetings", "inclusion", "analytics", "transcription", "ai notes"],
+      "tags": ["data analysis tool", "performance analytics", "meeting analytics", "teams"],
       "features": [
         "Speaking time tracking and participation metrics for each participant",
         "Inclusion scores and DEI-focused meeting analytics",
@@ -4486,7 +4486,7 @@
       "type": "AI Call Recorder & Summary Tool",
       "description": "Fathom is a call assistant that records and transcribes meetings, then highlights key moments automatically. Instead of rewatching entire calls, users can review important sections such as questions, decisions or objections. This keeps follow-ups simple and focused.\n\nThe tool integrates with popular video meeting platforms and can tag sections by topic. After each call, Fathom generates a summary that can be shared with teammates or added to a CRM or project tool. This ensures important details are captured and easy to find later.\n\nFathom is especially helpful for salespeople, account managers and customer facing teams. It reduces manual note-taking, improves recall of conversations and helps teams act quickly on what was discussed.",
       "subtitle": "Automatically record, transcribe and summarise your calls with shareable highlights.",
-      "tags": ["call recording", "transcription", "summaries", "zoom", "customer calls"],
+      "tags": ["meeting assistant", "transcription", "summarization", "professionals"],
       "features": [
         "Automatic recording and transcription of supported video calls",
         "One-click highlighting during calls to mark key moments",
@@ -4526,7 +4526,7 @@
       "type": "Meeting Management & AI Note Platform",
       "description": "Fellow is a meeting management platform that helps teams plan, run and follow up on meetings more effectively. It provides shared agendas, note spaces and feedback tools so everyone comes prepared and stays engaged. This makes meetings feel more purposeful and less chaotic.\n\nAI features can summarise discussions and highlight action items so key points are not lost. Teams can revisit past notes, track decisions and build a record of progress over time. This is helpful for recurring check-ins and long-running projects.\n\nFellow is well suited for managers, team leads and organisations that want to improve meeting culture. It encourages better preparation, clear outcomes and continuous improvement in how people collaborate.",
       "subtitle": "Structured agendas, collaborative notes and AI summaries for better meetings.",
-      "tags": ["meetings", "agendas", "notes", "feedback", "summaries"],
+      "tags": ["meeting assistant", "collaboration", "summarization", "teams"],
       "features": [
         "Shared meeting agendas linked to calendar events",
         "Collaborative note-taking with action items and assignments",
@@ -4566,7 +4566,7 @@
       "type": "AI Meeting Recorder & Conversation Intelligence",
       "description": "Fireflies is an AI assistant that joins your calls, records them and produces transcripts, summaries and task lists. Users can search through past conversations by keyword instead of trying to remember which call something was said on. This makes it easier to keep track of details across many meetings.\n\nThe platform pulls out highlights, such as questions asked or next steps agreed. Teams can share key moments, tag colleagues and connect notes to other tools they use. This reduces repetition and ensures everyone can revisit information when needed.\n\nFireflies is popular with teams that rely heavily on remote calls, including sales, recruiting and internal operations. It helps them stay organised, save time and avoid missing important follow-ups.",
       "subtitle": "Record, transcribe and analyse meetings with AI-powered insights and workflows.",
-      "tags": ["meeting recorder", "transcription", "conversation intelligence", "crm", "summaries"],
+      "tags": ["meeting assistant", "transcription", "automation", "teams"],
       "features": [
         "Bot-based recording for Zoom, Meet, Teams and other platforms",
         "Automatic transcription with speaker identification",
@@ -4606,7 +4606,7 @@
       "type": "AI Noise Cancellation & Voice Clarity Tool",
       "description": "Krisp is an audio tool that removes background noise and echo from calls so voices sound clearer. It works in real time, blocking sounds like keyboard typing, traffic or household noise. This helps users sound more professional even when they are not in a quiet environment.\n\nThe app runs alongside common meeting and calling tools and can be turned on with a simple switch. It improves the listening experience for everyone on the call, especially in busy or shared spaces. This is valuable for both sides of the conversation.\n\nKrisp is useful for remote workers, call centre agents and anyone who speaks often online. It reduces distractions, improves call quality and makes meetings feel smoother and more focused.",
       "subtitle": "One-click AI noise cancellation so you sound clear on every call.",
-      "tags": ["noise cancellation", "audio", "calls", "remote work", "clarity"],
+      "tags": ["audio enhancement tool", "noise cancellation", "real time", "professionals"],
       "features": [
         "Real-time noise removal for microphones, speakers and recordings",
         "Echo cancellation and background voice suppression",
@@ -4646,7 +4646,7 @@
       "type": "Real-Time Transcription & Meeting Notes Assistant",
       "description": "Otter is an AI transcription tool that captures spoken content from meetings, lectures and conversations in real time. It turns speech into text and organises it with speaker labels, timestamps and searchable keywords. This lets users review and share information easily after the session.\n\nThe platform can also generate summaries and highlight key points from long recordings. Students use it to capture classroom lectures while professionals use it to keep records of meetings and interviews. The notes stay stored in one place instead of being scattered across different apps.\n\nOtter is ideal for learners, teams and individuals who want accurate notes without manual typing. It helps people stay present in the moment and still walk away with clear, structured records.",
       "subtitle": "Live transcription, searchable notes and summaries for meetings and classes.",
-      "tags": ["transcription", "live captions", "meetings", "lectures", "summaries"],
+      "tags": ["meeting assistant", "transcription", "summarization", "students"],
       "features": [
         "Real-time transcription for meetings and in-person conversations",
         "Speaker identification and highlighted key phrases",
@@ -4686,7 +4686,7 @@
       "type": "One-Click Automation Platform",
       "description": "Integrately is an automation platform that lets users connect apps and set up workflows with just a few clicks. It provides thousands of ready-made automation templates so people can get started quickly without designing everything from scratch. This makes automation accessible even to those with no technical background.\n\nUsers can link tools for CRM, email, forms, spreadsheets and more. When an event happens in one app, Integrately can trigger actions in another, such as creating records, sending notifications or updating dashboards. This reduces manual copy and paste work across systems.\n\nIntegrately is helpful for small businesses, marketers and teams that want to save time on repetitive tasks. It brings together the software they already use and helps everything work together more smoothly.",
       "subtitle": "Discover and launch app automations in one click, then customise as you grow.",
-      "tags": ["automation", "integrations", "no-code", "workflows", "small business"],
+      "tags": ["workflow automation tool", "integrations", "no code", "teams"],
       "features": [
         "Library of thousands of one-click automations between popular apps",
         "Visual editor to customise triggers, actions and conditions",
@@ -4726,7 +4726,7 @@
       "type": "Enterprise Insight Engine",
       "description": "Squirro is a platform that uses AI to analyse enterprise data and surface insights for business teams. It pulls information from different systems and presents it in a way that highlights patterns, risks and opportunities. This helps decision makers move beyond raw numbers.\n\nThe tool can support areas like customer intelligence, risk management and operational efficiency. It shows relevant insights within the tools people already use, which makes it easier to act on findings. Teams can see context around key events rather than isolated metrics.\n\nSquirro is well suited for financial institutions and data-heavy organisations that want a clearer view of their information. It turns scattered data into practical guidance for strategy and daily operations.",
       "subtitle": "Turn scattered enterprise data into actionable insights for revenue, service and risk teams.",
-      "tags": ["insight engine", "enterprise search", "financial services", "nlp", "analytics"],
+      "tags": ["data analysis tool", "semantic search", "performance analytics", "enterprise"],
       "features": [
         "Semantic search across documents, emails, CRM records and more",
         "AI-driven recommendations and alerts based on relevant signals",
@@ -4766,7 +4766,7 @@
       "type": "Enterprise AI & Infrastructure Platform",
       "description": "HPE provides hardware and software solutions that help organisations run AI and data workloads at scale. It offers servers, storage and cloud services that are tuned for machine learning and analytics. This gives enterprises the infrastructure they need to support demanding AI projects.\n\nAlongside infrastructure, HPE provides tools for managing, monitoring and optimising AI systems. Teams can deploy models, move data securely and integrate AI into their existing IT landscape. This helps large organisations work with advanced technology in a reliable way.\n\nHPE is a strong partner for companies with complex environments and strict requirements. It supports long-term AI strategies by combining performance, security and manageability.",
       "subtitle": "Hardware, software and services to run enterprise AI and data workloads at scale.",
-      "tags": ["infrastructure", "hpc", "mlops", "hybrid cloud", "enterprise"],
+      "tags": ["developer tooling", "enterprise", "integrations", "developers"],
       "features": [
         "High-performance compute and storage solutions for AI and analytics",
         "Hybrid cloud platforms for running workloads across on-prem and cloud",
@@ -4806,7 +4806,7 @@
       "type": "Cross-Platform Synchronisation & Integration Tool",
       "description": "Exalate helps teams keep data in sync between platforms like Jira, ServiceNow, Salesforce and GitHub. It manages bi-directional updates so changes in one system are reflected in another automatically. This removes the need for manual copying or duplicate entry.\n\nThe platform is flexible enough to handle different workflows and mapping rules for each connection. Teams can control which fields sync, how often updates happen and how conflicts are handled. This ensures each system stays accurate while still fitting local needs.\n\nExalate is useful for organisations that rely on multiple tools across departments or partners. It keeps everyone aligned while allowing each group to continue using the software that works best for them.",
       "subtitle": "Sync issues, tickets and records across tools with customisable, bi-directional integration.",
-      "tags": ["sync", "integration", "jira", "servicenow", "salesforce"],
+      "tags": ["workflow automation tool", "integrations", "collaboration", "developers"],
       "features": [
         "Bi-directional synchronisation between multiple platforms",
         "Flexible configuration and scripting for mapping fields and rules",
@@ -4846,7 +4846,7 @@
       "type": "Enterprise Linux & AI Infrastructure Platform",
       "description": "Suse AI supports enterprise teams that want to deploy and manage AI workloads on open-source infrastructure. It builds on Suse’s experience with Linux and cloud technologies to provide a stable base for modern applications. This helps organisations run AI systems with confidence and control.\n\nThe platform focuses on reliability, security and flexibility. Teams can choose where to run their workloads, integrate with existing tools and maintain compliance with internal policies. Suse AI provides guidance and tooling rather than locking users into a single approach.\n\nFor companies that value open-source technology and hybrid environments, Suse AI offers a path to adopt AI at scale. It helps bridge the gap between innovative models and the operational demands of enterprise IT.",
       "subtitle": "Open-source foundation for running containers, data and AI workloads in production.",
-      "tags": ["linux", "kubernetes", "containers", "infrastructure", "enterprise"],
+      "tags": ["developer tooling", "enterprise", "security", "developers"],
       "features": [
         "Enterprise Linux distributions with long-term support and certifications",
         "Kubernetes and container orchestration via Rancher",
@@ -4886,7 +4886,7 @@
       "type": "AI Lesson Planning & Teaching Assistant",
       "description": "Teachmate AI helps teachers create classroom materials more quickly using simple prompts. Educators can ask for lesson plans, worksheets or quiz questions and receive ready-made content that they can adjust to match their students. This reduces preparation time while still allowing for personal teaching style.\n\nThe tool can adapt materials to different age groups and difficulty levels. It can also suggest activities that support discussion, practice and assessment. Teachers remain in control, using Teachmate AI as a starting point rather than a replacement for their expertise.\n\nTeachmate AI is valuable for busy educators who juggle many classes and responsibilities. It helps them focus more on teaching and student support while spending less time staring at a blank planning template.",
       "subtitle": "Generate ready-to-use lesson plans and classroom materials with a few prompts.",
-      "tags": ["education", "lesson plans", "worksheets", "quizzes", "teachers"],
+      "tags": ["learning platform", "lesson plans", "writing", "teachers"],
       "features": [
         "Prompt-based generation of lesson plans aligned to topics and age groups",
         "Creation of worksheets, quizzes and activities in minutes",
@@ -4926,7 +4926,7 @@
       "type": "AI App & Website Builder",
       "description": "AmpCode lets users turn text descriptions into working websites and applications. You describe what you want your app to do, and AmpCode generates the structure, layout and basic logic. This makes it much easier for non-developers to bring digital ideas to life.\n\nUsers can then refine and customise their projects through a guided interface. Teams can prototype features, gather feedback and update the app without needing to rebuild everything. This speeds up experimentation and reduces reliance on full-time engineering resources for early-stage ideas.\n\nAmpCode is ideal for founders, product managers and small teams who want to move from concept to demo quickly. It lowers the technical barrier and encourages more people to participate in software creation.",
       "subtitle": "Describe your idea and let AI generate the app or site—then customise as needed.",
-      "tags": ["app builder", "no-code", "full-stack", "web apps", "prototyping"],
+      "tags": ["app builder", "code generation", "no code", "founders"],
       "features": [
         "Prompt-based generation of websites and web apps",
         "Prebuilt components and patterns for common product flows",
@@ -4966,7 +4966,7 @@
       "type": "Work OS with AI Workflows",
       "description": "Monday.com is a work management platform that helps teams organise projects, tasks and communication in one place. AI features assist with summarising updates, generating task descriptions and highlighting what needs attention. This helps teams stay on top of their workload without reading every message in detail.\n\nThe platform supports boards, timelines and dashboards that give a clear view of progress. Teams can customise workflows for different departments such as marketing, product or operations. Automation rules take care of repetitive actions like assigning tasks or sending reminders.\n\nMonday.com is used by companies of all sizes to keep work visible and coordinated. It reduces clutter, supports collaboration and gives everyone a shared understanding of what is happening across projects.",
       "subtitle": "Plan, track and automate work across teams, now with AI assistance built in.",
-      "tags": ["project management", "work os", "automation", "dashboards", "ai assistant"],
+      "tags": ["workflow automation tool", "collaboration", "automation", "teams"],
       "features": [
         "Customisable boards for tasks, projects, CRM and operations",
         "Automation rules to move items, send notifications and update fields",
@@ -5006,7 +5006,7 @@
       "type": "AI-Enabled Project & Work Management Platform",
       "description": "Wrike is a project management platform that uses AI to help teams handle tasks, deadlines and priorities. It offers features like smart task suggestions, summaries and automated organisation to keep work flowing smoothly. This makes it easier to manage complex projects with many moving parts.\n\nTeams can create plans, assign responsibilities and track progress in real time. Wrike adapts to different workflows, from simple to-do lists to detailed campaign planning. AI powered insights can highlight risks or bottlenecks before they become bigger problems.\n\nWrike is well suited for marketing teams, agencies and operations groups that need clear coordination. It turns scattered tasks into structured plans and helps teams deliver projects more reliably.",
       "subtitle": "Plan, execute and track work with AI-powered task insights and organisation.",
-      "tags": ["project management", "work management", "ai summaries", "collaboration", "enterprise"],
+      "tags": ["workflow automation tool", "collaboration", "performance analytics", "teams"],
       "features": [
         "Task and project tracking with multiple views (list, board, Gantt, calendar)",
         "AI capabilities for task prioritisation, risk prediction and summarisation",
@@ -5046,7 +5046,7 @@
       "type": "AI Form Builder & Data Collection Platform",
       "description": "Jotform helps individuals and teams create forms, surveys and data collection workflows without needing technical skills. Its AI tools assist with generating form questions, structuring layouts and recommending fields based on what the user wants to collect, which speeds up the entire creation process.\n\nUsers can build everything from contact forms and event registrations to feedback surveys and application forms. Once responses come in, Jotform automatically organises the data into tables, reports and visual summaries that are easy to share. This removes the need to manually sort through entries or build reports from scratch.\n\nJotform is especially helpful for educators, small businesses, nonprofits and teams that regularly gather information. It turns the entire process from form creation to data analysis into a smooth, beginner friendly experience that works right in the browser.",
       "subtitle": "AI-powered form, survey and report builder for teams of any size.",
-      "tags": ["forms", "surveys", "ai form generator", "no-code", "data collection"],
+      "tags": ["workflow automation tool", "no code", "integrations", "teams"],
       "features": [
         "AI Form Generator that builds forms from plain-language descriptions",
         "Drag-and-drop editor with hundreds of templates and widgets",
@@ -5086,7 +5086,7 @@
       "type": "All-in-One AI Writing & Checking Suite",
       "description": "JustDone provides a suite of AI tools designed to help users write, research and generate ideas quickly. Whether someone needs an email draft, an article outline or a batch of content ideas, JustDone can produce helpful starting points that save time and reduce creative pressure.\n\nThe platform supports many content formats such as blog posts, summaries, product descriptions and messages for social media. It also includes tools for rewriting text, checking clarity and generating variations so users can refine their writing without starting over. This helps both beginners and experienced writers move past blank-page frustration.\n\nJustDone is a useful companion for students, marketers, freelancers and anyone who writes frequently. It accelerates brainstorming, simplifies research and supports smoother day-to-day writing across a wide range of tasks.",
       "subtitle": "Write, check, humanise and optimise content with one AI toolkit.",
-      "tags": ["writing assistant", "paraphrasing", "plagiarism check", "ai detector", "editing"],
+      "tags": ["ai writing tool", "paraphrasing", "grammar style", "students"],
       "features": [
         "AI content generation for articles, emails, posts and more",
         "Paraphrasing and rewriting tools to change style or structure",
@@ -5126,7 +5126,7 @@
       "type": "AI Marketing & Brand Content Platform",
       "description": "Jasper is a content creation platform built for businesses that need consistent, on-brand writing across marketing channels. Users can produce social posts, ad copy, blog articles and emails by describing what they want, and Jasper adjusts the tone and style to match brand guidelines.\n\nThe platform includes collaboration tools that help teams build campaigns, organise assets and maintain a unified voice across all content. Jasper can generate fresh ideas, expand rough drafts or refine existing copy, making it valuable at every stage of the creative process. It is especially helpful for fast-paced teams that publish regularly.\n\nJasper is widely used by marketing departments, agencies and growing businesses. It combines strong writing assistance with brand control features so teams can scale their content output without sacrificing quality or consistency.",
       "subtitle": "AI content automation for marketing teams who care about brand voice.",
-      "tags": ["marketing", "brand voice", "copywriting", "content automation", "teams"],
+      "tags": ["ai writing tool", "brand consistency", "content marketing", "marketers"],
       "features": [
         "Brand voice and style profiles to keep content on-message",
         "Templates for ads, landing pages, emails, social posts and long-form content",
@@ -5166,7 +5166,7 @@
       "type": "Email & Marketing Automation Platform with AI",
       "description": "MailChimp is an email marketing platform that uses AI to help users design campaigns, write engaging content and manage their audience more effectively. Its tools can generate subject lines, suggest improvements to email copy and provide insights into what resonates with subscribers.\n\nUsers can design newsletters, automated sequences and promotional emails using templates that require no design experience. MailChimp also manages contact lists, segments audiences based on behaviour and tracks performance through clear analytics. This helps teams understand what works and adjust their strategy over time.\n\nMailChimp is ideal for small businesses, creators and marketing teams that want an approachable platform for email communication. It streamlines campaign creation from idea to send and helps users reach their audience in a more organised and effective way.",
       "subtitle": "Plan, write and optimise email campaigns with AI suggestions and insights.",
-      "tags": ["email marketing", "subject lines", "content optimizer", "automation", "analytics"],
+      "tags": ["email marketing tool", "automation", "performance analytics", "marketers"],
       "features": [
         "AI-powered subject line suggestions for better open rates",
         "Content Optimizer to assess email copy, layout and structure",
@@ -5206,7 +5206,7 @@
       "type": "Presentation Template Library",
       "description": "SlidesGo provides a large library of ready-made slide templates that make presentation design quick and beginner friendly. Users can choose from themes for school, business, workshops, creative projects and more, then customise the layouts with their own content.\n\nThe templates include illustrations, icons, charts and colour palettes that help give presentations a polished look without needing design skills. This saves significant time for users who want professional results but do not want to build slides from scratch. SlidesGo also offers templates tailored to common formats like lessons, reports and proposals.\n\nTeachers, students, professionals and creators rely on SlidesGo when they need to deliver presentations that look clean and engaging. It removes design barriers and helps users focus on delivering their message.",
       "subtitle": "Ready-made presentation templates for Google Slides, PowerPoint and Canva.",
-      "tags": ["presentation templates", "google slides", "powerpoint", "education", "business"],
+      "tags": ["presentation tool", "slide templates", "design", "students"],
       "features": [
         "Hundreds of free and premium templates for different industries and topics",
         "Fully editable layouts, icons and infographics",
