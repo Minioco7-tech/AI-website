@@ -1010,6 +1010,72 @@ body:not(.home-page) #searchInput:hover {
   transform: rotate(-135deg) translateY(-1px);
 }
 
+/* ===========================
+   Tags nested groups
+   =========================== */
+
+.filter-tags-groups {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.filter-subsection {
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.filter-subsection-summary {
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0.65rem 0.9rem;
+}
+
+.filter-subsection-summary::-webkit-details-marker { display: none; }
+
+.filter-subsection-title {
+  font-size: 0.82rem;
+  font-weight: 750;
+  letter-spacing: -0.01em;
+  color: rgba(255,255,255,0.85);
+}
+
+.filter-subsection-inner {
+  padding: 0.25rem 0;
+}
+
+.filter-group {
+  padding: 0.65rem 0.9rem 0.25rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.filter-group:first-child {
+  border-top: none;
+}
+
+.filter-group-title {
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: -0.01em;
+  color: rgba(255,255,255,0.88);
+  margin-bottom: 0.35rem;
+}
+
+/* Let group pills flow naturally */
+.filter-group .filter-pills {
+  padding: 0;
+  max-height: none;
+  overflow: visible;
+}
+
+
+
+
+
+
 /* Carousel Dot Click Animation 
 .carousel-dot.clicked {
   animation: dotPop 0.25s ease;
