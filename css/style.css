@@ -575,57 +575,6 @@ body:not(.home-page) #searchInput:hover {
   align-items: center;
 }
 
-/* --- Filter Dropdown Styles --- 
-.filter-dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.filter-dropdown-toggle {
-  appearance: none;
-  padding: 0.5rem 2.5rem 0.5rem 1rem;
-  background-color: rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: white;
-  font-size: 0.875rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  min-width: 180px;
-}
-
-.filter-dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 110%;
-  left: 0;
-  background-color: rgba(10, 10, 10, 0.95);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 0.5rem;
-  z-index: 50;
-  padding: 0.75rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  width: 100%;
-  max-height: 280px;
-  overflow-y: auto;
-}
-
-.filter-dropdown.open .filter-dropdown-menu {
-  display: block;
-}
-
-.filter-dropdown-menu label {
-  display: flex;
-  align-items: center;
-  font-size: 0.875rem;
-  margin-bottom: 0.5rem;
-  cursor: pointer;
-}
-
-.filter-dropdown-menu input[type="checkbox"] {
-  accent-color: #00BFFF;
-  margin-right: 0.5rem;
-} *
-
 /* ======================= */
 /*  Filter Dropdown (v2)   */
 /* ======================= */
@@ -647,37 +596,26 @@ body:not(.home-page) #searchInput:hover {
   grid-template-columns: 1fr auto auto;
   align-items: center;
   gap: 0.6rem;
-
-  padding: 0.70rem 0.85rem;
+  padding: 0.72rem 0.85rem;
   border-radius: 0.85rem;
-
-  background: rgba(2, 6, 23, 0.65);
+  background: #020617;
   border: 1px solid rgba(255, 255, 255, 0.10);
-  box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.06);
-
+   
+  box-shadow: box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
   color: #fff;
   cursor: pointer;
   user-select: none;
-  backdrop-filter: blur(12px) saturate(140%);
-  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  transition: border-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
 }
 
 .filter-dropdown-toggle:hover {
-  border-color: rgba(255, 255, 255, 0.18);
-  box-shadow:
-    0 12px 34px rgba(0, 0, 0, 0.42),
-    0 0 0 3px rgba(0, 191, 255, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.52);
 }
 
 .filter-dropdown.open .filter-dropdown-toggle {
-  border-color: rgba(0, 191, 255, 0.35);
-  box-shadow:
-    0 14px 40px rgba(0, 0, 0, 0.45),
-    0 0 0 3px rgba(0, 191, 255, 0.18),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  border-color: rgba(0, 191, 255, 0.30);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.58);
 }
 
 .filter-dropdown-label {
@@ -724,8 +662,6 @@ body:not(.home-page) #searchInput:hover {
   transform: rotate(-135deg) translateY(-1px);
 }
 
-/* Menu panel */
-/* Closed by default */
 .filter-dropdown-menu {
   position: relative;       /* ✅ in-flow so it pushes content down */
   width: 100%;
@@ -739,14 +675,9 @@ body:not(.home-page) #searchInput:hover {
   border-radius: 1rem;
   background: rgba(2, 6, 23, 0.92);
   border: 1px solid rgba(255,255,255,0.10);
-  box-shadow:
-    0 18px 55px rgba(0, 0, 0, 0.55),
-    0 0 0 1px rgba(255,255,255,0.04);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.62);
 
-  backdrop-filter: blur(14px) saturate(150%);
-  -webkit-backdrop-filter: blur(14px) saturate(150%);
-
-  transition: max-height 260ms ease, opacity 180ms ease;
+  transition: max-height 320ms ease, opacity 200ms ease;
 }
 
 /* ✅ open state */
@@ -770,12 +701,14 @@ body:not(.home-page) #searchInput:hover {
   flex: 1;
   height: 40px;
   border-radius: 9999px;
-  font-weight: 650;
+  font-weight: 800;
   font-size: 0.88rem;
   border: 1px solid rgba(255,255,255,0.12);
   background: rgba(255,255,255,0.05);
-  color: #fff;
+  color: rgba(255,255,255,0.92);
   cursor: pointer;
+
+  transition: background 180ms ease, border-color 180ms ease;
 }
 
 .filter-btn:hover {
@@ -785,11 +718,19 @@ body:not(.home-page) #searchInput:hover {
 
 .filter-btn-ghost {
   background: transparent;
+  border-color: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.72);
+}
+
+.filter-btn-ghost:hover {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(255,255,255,0.12);
 }
 
 .filter-btn-primary {
-  border-color: rgba(0,191,255,0.35);
+  border-color: rgba(0,191,255,0.40);
   background: rgba(0,191,255,0.14);
+  color: rgba(255,255,255,0.96);
 }
 
 .filter-btn-primary:hover {
@@ -943,25 +884,25 @@ body:not(.home-page) #searchInput:hover {
   align-items: center;
   justify-content: space-between;
 
-  padding: 0.75rem 0.9rem;
+  padding: 0.65rem 0.9rem;
 }
 
 .filter-section-summary::-webkit-details-marker { display: none; }
 
 .filter-section-title {
   font-size: 0.85rem;
-  font-weight: 750;
+  font-weight: 800;
   letter-spacing: -0.01em;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255,255,255,0.92);
 }
 
 /* ✅ same bubble + arrow style as your dropdown chevron */
 .filter-section-chevron {
-  width: 34px;
-  height: 34px;
+  width: 30px;
+  height: 30px;
   border-radius: 9999px;
   border: 1px solid rgba(255,255,255,0.10);
-  background: rgba(255,255,255,0.05);
+  background: rgba(255,255,255,0.03);
   position: relative;
 }
 
@@ -970,12 +911,12 @@ body:not(.home-page) #searchInput:hover {
   position: absolute;
   inset: 0;
   margin: auto;
-  width: 10px;
-  height: 10px;
-  border-right: 2px solid rgba(255,255,255,0.8);
-  border-bottom: 2px solid rgba(255,255,255,0.8);
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid rgba(255,255,255,0.75);
+  border-bottom: 2px solid rgba(255,255,255,0.75);
   transform: rotate(45deg) translateY(-1px);
-  transition: transform 180ms ease;
+  transition: transform 220ms ease;
 }
 
 .filter-section[open] .filter-section-chevron::before {
@@ -1000,10 +941,10 @@ body:not(.home-page) #searchInput:hover {
 
 .filter-group-title {
   font-size: 0.78rem;
-  font-weight: 750;
+  font-weight: 800;
   letter-spacing: -0.01em;
   color: rgba(255,255,255,0.88);
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.40rem;
 }
 
 /* Let group pills flow naturally */
@@ -1012,22 +953,6 @@ body:not(.home-page) #searchInput:hover {
   max-height: none;
   overflow: visible;
 }
-
-
-
-
-
-
-/* Carousel Dot Click Animation 
-.carousel-dot.clicked {
-  animation: dotPop 0.25s ease;
-} 
-
-@keyframes dotPop {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.4); }
-  100% { transform: scale(1); }
-} */
 
 /* === Global ocean background (static waves) === */
 
