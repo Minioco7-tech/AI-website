@@ -4166,7 +4166,7 @@
       "type": "AI Vector & Illustration Generator",
       "description": "Recraft is an AI tool built for creating vector graphics, icons and patterns. It generates clean, scalable art that can be used across websites, apps and printed materials. This is helpful for designers who need consistent visuals that look sharp at any size.\n\nUsers can define styles and themes to match a brand, then generate assets that fit into that visual system. Recraft supports pattern creation, illustration and icon sets, which saves time on manual drawing. The results are ready for editing or direct use in design tools.\n\nRecraft is ideal for product designers, brand teams and illustrators who want to speed up asset creation. It helps maintain a cohesive look across different projects and reduces the repetitive work involved in building visual libraries.",
       "subtitle": "Create editable vector illustrations, icons and patterns with AI.",
-      "tags": ["ai image generator", "vector design", "brand design", "designers"],,
+      "tags": ["ai image generator", "vector design", "brand design", "designers"],
       "features": [
         "AI generation of vector art with SVG export",
         "Style presets and controls for consistent visual language",
