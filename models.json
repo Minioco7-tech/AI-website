@@ -5246,7 +5246,7 @@
       "type": "AI Video Clipping & Repurposing Tool",
       "description": "Clippit automatically turns long videos into short, shareable clips by identifying important moments and trimming them into highlight-ready segments. Instead of manually scrubbing through footage, users can upload a video and let the platform detect key parts such as reactions, transitions or noteworthy dialogue.\n\nThe system produces clean, ready-to-post clips that work well for social media, marketing, training or content recaps. Users can adjust length, captions and formatting to match the platform they are posting to. This makes repurposing long content into multiple smaller pieces fast and effortless.\n\nClippit is valuable for creators, brands, educators and streamers who produce long-form video but want to share quick highlights across different platforms. It cuts down editing time and helps users consistently publish engaging, short-form content.",
       "subtitle": "Automatically find highlights and turn long videos into short, shareable clips.",
-      "tags": ["video clipping", "repurposing", "shorts", "content creator", "social media"],
+      "tags": ["video editing tool", "video clipping", "content repurposing", "creators"],
       "features": [
         "AI detection of key moments and highlights in long videos",
         "Automatic clipping and trimming into short-form segments",
