@@ -133,6 +133,9 @@ function renderCategoryFilters(allModelsForPills, currentModelsForDefaults) {
     selectedTagsSet: selectedTags,
     defaultSelectedTagsSet: defaultSelectedTags,
 
+    models: allModelsForPills,
+    hideZeroTags: true,
+
     onUpdate: () => {
       currentPage = 1;
       updateFilteredModels();
