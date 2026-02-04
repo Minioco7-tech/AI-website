@@ -6,7 +6,7 @@
       "type": "Voice Generator",
       "description": "ElevenLabs is a leading AI-powered voice synthesis platform built for creators, studios and businesses that need lifelike audio. It uses advanced deep-learning models to generate expressive, natural-sounding speech in dozens of languages.\n\nWith real-time responsiveness, emotional control and industry-leading voice cloning, ElevenLabs has become a go-to solution for podcasters, filmmakers, game studios and educators seeking high-quality narration without recording equipment.\n\nThe platform combines accessibility with professional fidelity, offering beginner-friendly browser tools alongside a powerful API for developers.",
       "subtitle": "AI voice and speech synthesis for creators.",
-      "tags": ["voice", "speech", "voice cloning"],
+      "tags": ["voice generator", "voice cloning", "audio generation", "creators"],
       "features": [
         "Realistic voice generation with human-like timbre",
         "Emotion-controlled speech synthesis",
@@ -46,7 +46,7 @@
       "type": "Audio Enhancement & Podcast Production",
       "description": "Adobe Podcast is an AI-powered audio platform that helps anyone create clean, clear and professional-sounding voice recordings. Even if you only have a laptop microphone, its tools automatically remove background noise, fix unclear speech and improve overall clarity so your audio sounds polished.\n\nThe platform focuses on simplicity. Instead of using a complex timeline, you can edit your audio through a text transcript, which makes it easy to remove mistakes or rearrange content. Features like automatic volume leveling, remote guest recording and smart cleanup tools help creators save time and avoid the frustrations of traditional audio editing.\n\nAdobe Podcast is ideal for podcasters, educators, marketers and anyone who needs high quality voice content without expensive studio gear. Whether you are recording interviews, lessons or voiceovers, the platform helps you sound confident and professional with minimal effort.",
       "subtitle": "AI-enhanced audio cleanup and podcast production tools.",
-      "tags": ["audio enhancement", "speech cleanup", "podcasting", "transcription"],
+      "tags": ["audio enhancement tool", "noise cancellation", "transcription", "creators"],
       "features": [
         "AI speech enhancement for studio-quality audio",
         "Noise reduction, echo removal & leveling",
@@ -86,7 +86,7 @@
       "type": "Audio Cleanup & Editing",
       "description": "Cleanvoice AI is designed to clean up voice recordings quickly and automatically, which makes it perfect for creators who want smooth and professional audio without learning complicated editing tools. The platform removes filler words like “um” and “uh”, takes out mouth noises, reduces background sounds and smooths over awkward silences so your recordings feel natural and polished.\n\nThe tool is especially helpful for people who speak freely on camera or in podcasts. Instead of spending hours removing small mistakes by hand, Cleanvoice does the work for you, making the editing process fast and stress free. You simply upload your audio and receive a cleaner version ready for publishing.\n\nCleanvoice is a great fit for podcasters, YouTubers, interviewers and educators who want clear voice content that is easy to listen to. It helps your message stand out by removing distractions and delivering a crisp final result.",
       "subtitle": "Automatic audio cleanup powered by AI.",
-      "tags": ["audio cleanup", "podcasting", "noise removal", "editing"],
+      "tags": ["audio enhancement tool", "noise cancellation", "automation", "creators"],
       "features": [
         "Automatic filler word removal",
         "Mouth noise detection & cleanup",
@@ -126,7 +126,7 @@
       "type": "Custom Voice Generation",
       "description": "Resemble AI helps creators and businesses generate realistic synthetic voices that can express emotion and speak in multiple languages. The platform allows you to clone your own voice or create entirely new voice profiles that sound natural and engaging, which makes it ideal for storytelling, branding and interactive applications.\n\nResemble keeps the process simple. Users can upload a small set of recordings or choose from existing voice styles, then type or upload text to instantly generate lifelike speech. The voices can be calm, energetic, dramatic or anything in between, depending on the tone you choose.\n\nThe tool is a strong option for studios, game developers, marketers and creators who want unique and expressive voice content without relying on constant manual recording. Whether you are building characters, producing ads or designing an AI assistant, Resemble AI makes it easy to bring your audio to life.",
       "subtitle": "Custom voice cloning and AI speech generation.",
-      "tags": ["voice cloning", "text-to-speech", "synthetic voices", "multilingual"],
+      "tags": ["voice generator", "voice cloning", "text to speech", "developers"],
       "features": [
         "Custom voice cloning",
         "Emotion-driven speech generation",
@@ -166,7 +166,7 @@
       "type": "Podcast Creation Suite",
       "description": "Podcastle AI is an all-in-one platform for creating, editing and publishing podcasts without needing advanced audio skills. The platform offers high quality recording tools, AI voice cleanup, easy multitrack editing and natural text-to-speech voices, which means anyone can produce a full podcast episode straight from their browser.\n\nOne of its biggest strengths is simplicity. Podcastle lets you record guests remotely, edit audio by modifying the transcript and enhance your voice automatically with built-in AI tools. This helps creators focus on storytelling without worrying about complicated software or equipment.\n\nPodcastle is perfect for beginners and professionals who want an organised workflow for interviews, solo episodes or scripted content. With its mix of easy editing tools and powerful AI features, it helps you produce consistent, polished audio every time.",
       "subtitle": "All-in-one AI platform for podcast creation.",
-      "tags": ["podcasting", "recording", "audio editing", "transcription"],
+      "tags": ["audio editing tool", "voice generation", "podcast production", "creators"],
       "features": [
         "AI-powered audio enhancement",
         "Multitrack recording & editing",
