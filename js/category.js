@@ -1,4 +1,4 @@
-// category.js — Handles category page display and filtering
+// category.js — Handles category page display and filtering (APPLY-to-filter + AND logic)
 // Page: category.html
 // Uses shared logic from: utils.js, modelCard.js, breadcrumb.js
 
@@ -11,44 +11,46 @@ import {
   renderPagination,
   MODELS_PER_PAGE,
   normalizeCategories,
-  filterModelsByFacets,
-  getUniqueCategories,
-  getUniqueTags
-} from './utils.js';
+  normalizeTags,
+  getUniqueCategories
+} from "./utils.js";
 
-import { setupCategoryPillDropdown } from './dropdown.js';
-import { createModelCard } from './modelCard.js';
-import { renderBreadcrumb } from './breadcrumb.js';
+import { setupCategoryPillDropdown } from "./dropdown.js";
+import { createModelCard } from "./modelCard.js";
+import { renderBreadcrumb } from "./breadcrumb.js";
 
 // ------------------------------
 // DOM References
 // ------------------------------
-const modelsGrid = document.getElementById('modelsGrid');
-const loadingState = document.getElementById('loadingState'); // optional, not used currently
-const categoryTitle = document.getElementById('categoryTitle');
-const randomiseBtn = document.getElementById('randomiseBtn');
-const sortBySelect = document.getElementById('sortBy');
-const filterCategoriesContainer = document.getElementById('filterCategories');
+const modelsGrid = document.getElementById("modelsGrid");
+const loadingState = document.getElementById("loadingState"); // optional, not used currently
+const categoryTitle = document.getElementById("categoryTitle");
+const randomiseBtn = document.getElementById("randomiseBtn");
+const sortBySelect = document.getElementById("sortBy");
 
 // ------------------------------
-// State Variables
+// State
 // ------------------------------
-let currentModels = [];             // Full set of models for this category
-let selectedCategories = new Set(); // Checkbox filters selected
-let currentPage = 1;                // Current pagination page
-let selectedTags = new Set();
-let defaultSelectedTags = new Set();
-let defaultSelectedCategories = new Set();
+// Base result set for this page (models that should show before filters)
+let baseModels = [];
 
+// Applied filters (used for filtering results)
+let appliedCategories = new Set();
+let appliedTags = new Set();
+
+// Pending filters (user ticking pills before clicking Apply)
+let pendingCategories = new Set();
+let pendingTags = new Set();
+
+let currentPage = 1;
 
 // ------------------------------
 // ✅ Get category from URL (?category=design)
 // ------------------------------
 function getCategoryFromUrl() {
   const params = new URLSearchParams(window.location.search);
-  return params.get('category') || 'all';
+  return params.get("category") || "all";
 }
-
 
 // ------------------------------
 // ✅ Display models in paginated card grid
@@ -56,10 +58,10 @@ function getCategoryFromUrl() {
 function displayModels(models) {
   const paginated = getPaginatedModels(models, currentPage, MODELS_PER_PAGE);
 
-  modelsGrid.innerHTML = '';
-  modelsGrid.className = 'grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3';
+  modelsGrid.innerHTML = "";
+  modelsGrid.className = "grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3";
 
-  paginated.forEach(model => {
+  paginated.forEach((model) => {
     const card = createModelCard(model);
     modelsGrid.appendChild(card);
   });
@@ -73,18 +75,16 @@ function displayModels(models) {
     }
   });
 
-  // Optional: lazy-load image backgrounds (function can be moved to utils if reused)
   initLazyBackgrounds();
 }
-
 
 // ------------------------------
 // ✅ Lazy-load background images
 // ------------------------------
 function initLazyBackgrounds() {
-  const lazyBackgrounds = document.querySelectorAll('.lazy-bg');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
+  const lazyBackgrounds = document.querySelectorAll(".lazy-bg");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const el = entry.target;
         el.style.backgroundImage = `url('${el.dataset.bg}')`;
@@ -92,120 +92,167 @@ function initLazyBackgrounds() {
       }
     });
   });
-  lazyBackgrounds.forEach(el => observer.observe(el));
+  lazyBackgrounds.forEach((el) => observer.observe(el));
 }
 
+// ------------------------------
+// ✅ AND filter logic:
+// - Categories: must match ALL selected categories
+// - Tags: must match ALL selected tags
+// If none selected -> return input models unchanged
+// ------------------------------
+function filterModelsAND(models, categoriesSet, tagsSet) {
+  let out = models;
+
+  if (categoriesSet && categoriesSet.size > 0) {
+    const requiredCats = [...categoriesSet].map((x) => String(x).toLowerCase());
+    out = out.filter((m) => {
+      const cats = normalizeCategories(m.category).map((c) => String(c).toLowerCase());
+      return requiredCats.every((rc) => cats.includes(rc));
+    });
+  }
+
+  if (tagsSet && tagsSet.size > 0) {
+    const requiredTags = [...tagsSet].map((x) => String(x).toLowerCase());
+    out = out.filter((m) => {
+      const tags = normalizeTags(m.tags).map((t) => String(t).toLowerCase());
+      return requiredTags.every((rt) => tags.includes(rt));
+    });
+  }
+
+  return out;
+}
 
 // ------------------------------
-// ✅ Filter checkbox UI → filtered model list
+// ✅ Apply current applied filters to baseModels and display
 // ------------------------------
 function updateFilteredModels() {
-  const filtered = filterModelsByFacets(currentModels, selectedCategories, selectedTags);
+  const filtered = filterModelsAND(baseModels, appliedCategories, appliedTags);
   displayModels(filtered);
 }
 
-
 // ------------------------------
-// ✅ Render dynamic category filters as checkboxes
+// ✅ Render dropdown using ONLY the models that will appear (baseModels)
+// Nothing selected by default. Filtering only happens on Apply.
 // ------------------------------
-function renderCategoryFilters(allModelsForPills, currentModelsForDefaults) {
-  const allCategoryKeys = getUniqueCategories(allModelsForPills);
-  const allTagKeys = getUniqueTags(allModelsForPills);
+function renderCategoryFilters(modelsForOptions) {
+  const categoryKeys = getUniqueCategories(modelsForOptions);
 
-  const defaultSelectedCategories = new Set(getUniqueCategories(currentModelsForDefaults));
-  const defaultSelectedTags = new Set(getUniqueTags(currentModelsForDefaults));
-
-  selectedCategories = new Set(defaultSelectedCategories);
-  selectedTags = new Set(defaultSelectedTags);
+  // Start with NOTHING selected
+  pendingCategories = new Set();
+  pendingTags = new Set();
+  appliedCategories = new Set();
+  appliedTags = new Set();
 
   setupCategoryPillDropdown({
     wrapperId: "filterDropdown",
     toggleId: "filterDropdownToggle",
     menuId: "filterCategories",
 
-    // categories
-    categoryKeys: allCategoryKeys,
-    selectedCategoriesSet: selectedCategories,
-    defaultSelectedCategoriesSet: defaultSelectedCategories,
+    // Categories options from base set, none selected
+    categoryKeys,
+    selectedCategoriesSet: pendingCategories,
+    defaultSelectedCategoriesSet: new Set(),
 
-    // tags
-    tagKeys: allTagKeys,
-    selectedTagsSet: selectedTags,
-    defaultSelectedTagsSet: defaultSelectedTags,
-
-    models: allModelsForPills,
+    // Tags options from base set via filters-config.js visibility (none selected)
+    models: modelsForOptions,
     hideZeroTags: true,
+    selectedTagsSet: pendingTags,
+    defaultSelectedTagsSet: new Set(),
 
-    onUpdate: () => {
+    // Only filter when user clicks Apply
+    onApply: () => {
+      appliedCategories = new Set(pendingCategories);
+      appliedTags = new Set(pendingTags);
+
       currentPage = 1;
       updateFilteredModels();
+    },
+
+    // Clear/reset: show all base models again
+    onClear: () => {
+      appliedCategories.clear();
+      appliedTags.clear();
+      currentPage = 1;
+      displayModels(baseModels);
     }
   });
 }
 
 // ------------------------------
-// ✅ Main loader: load all models, filter to category
+// ✅ Main loader: load all models, filter to category, then show base set
 // ------------------------------
 async function loadCategoryModels() {
   const categoryKey = getCategoryFromUrl();
   const categoryName = getCategoryName(categoryKey);
 
   // Save breadcrumb info for model detail page
-  sessionStorage.setItem('breadcrumbSource', 'category');
-  sessionStorage.setItem('breadcrumbCategoryKey', categoryKey);
+  sessionStorage.setItem("breadcrumbSource", "category");
+  sessionStorage.setItem("breadcrumbCategoryKey", categoryKey);
 
   if (categoryTitle) categoryTitle.textContent = categoryName;
 
   // Render breadcrumb: Home > [Category]
-  renderBreadcrumb([
-    { label: 'Home', href: 'index.html' },
-    { label: categoryName }
-  ]);
+  renderBreadcrumb([{ label: "Home", href: "index.html" }, { label: categoryName }]);
 
   // Load models from JSON
-  const modelsData = await fetchJSON('./models.json');
+  const modelsData = await fetchJSON("./models.json");
 
   // Filter to selected category (or all if 'all')
   const filteredModels =
-    categoryKey === 'all'
+    categoryKey === "all"
       ? modelsData
-      : modelsData.filter(m => {
-          const cats = normalizeCategories(m.category).map(c => c.toLowerCase());
+      : modelsData.filter((m) => {
+          const cats = normalizeCategories(m.category).map((c) => String(c).toLowerCase());
           return cats.includes(categoryKey.toLowerCase());
         });
 
-  currentModels = filteredModels;
-  selectedCategories.clear(); // reset filters when navigating to a new category
-  renderCategoryFilters(modelsData, currentModels);  // Show filter UI based on all categories
-  updateFilteredModels();            // Show results
-}
+  // Base set = what should appear before any filters
+  baseModels = filteredModels;
 
+  // Render dropdown options from base set (NOT from all models)
+  renderCategoryFilters(baseModels);
+
+  // Show all base models initially (nothing selected)
+  currentPage = 1;
+  displayModels(baseModels);
+
+  if (window.feather) window.feather.replace();
+}
 
 // ------------------------------
 // ✅ Event Handlers
 // ------------------------------
 
 // Sorting dropdown (A→Z / Z→A)
-sortBySelect.addEventListener('change', () => {
-  if (!currentModels.length) return;
+sortBySelect?.addEventListener("change", () => {
+  if (!baseModels.length) return;
+
+  // Sort the BASE set
+  baseModels = sortModels(baseModels, sortBySelect.value);
+
+  // Re-apply currently applied filters (if any), else show base
   currentPage = 1;
-  currentModels = sortModels(currentModels, sortBySelect.value);
-  displayModels(currentModels);
+  if (appliedCategories.size || appliedTags.size) updateFilteredModels();
+  else displayModels(baseModels);
 });
 
 // Randomise button
-randomiseBtn.addEventListener('click', () => {
-  if (!currentModels.length) return;
-  currentPage = 1;
-  currentModels = shuffleArray(currentModels);
-  displayModels(currentModels);
-});
+randomiseBtn?.addEventListener("click", () => {
+  if (!baseModels.length) return;
 
+  // Shuffle the BASE set
+  baseModels = shuffleArray(baseModels);
+
+  // Re-apply currently applied filters (if any), else show base
+  currentPage = 1;
+  if (appliedCategories.size || appliedTags.size) updateFilteredModels();
+  else displayModels(baseModels);
+});
 
 // ------------------------------
 // ✅ Init page on load
 // ------------------------------
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   loadCategoryModels();
-  feather.replace(); // Feather icons
 });
