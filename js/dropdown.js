@@ -1,5 +1,7 @@
-// dropdown.js — Filter dropdown UI (category/search) + category pill rendering
-// Keeps homepage "guide accordions" in utils.js
+// dropdown.js — Filter dropdown UI (category/search) + nested tag subsections inline
+// ✅ Change: removes the "Tags" container section.
+// The 3 tag sub-dropdowns ("What the tool is", "What it does", "Who it’s for")
+// now sit inline with (as siblings of) the "Categories" dropdown section.
 
 import { categoryColors, getCategoryName } from "./utils.js";
 import { buildTagCounts, withTagVisibility } from "./filters-config.js";
@@ -103,8 +105,8 @@ function renderPills({ mountEl, keys = [], selectedSet, labelForKey, bgForKey, o
 
 // ============================================================================
 // Setup dropdown with:
-// - Categories (unchanged UI)
-// - Tags (nested sections + groups) from filters-config.js
+// - Categories section
+// - Tag subsections inline as siblings (no "Tags" wrapper)
 // - Apply/Clear buttons (filtering only on Apply)
 // ============================================================================
 export function setupCategoryPillDropdown({
@@ -124,7 +126,7 @@ export function setupCategoryPillDropdown({
   models = [],
   hideZeroTags = true,
 
-  // Selected sets (PENDING sets; filtering is triggered via onApply)
+  // Selected sets (PENDING sets; filtering triggered via onApply)
   selectedTagsSet,
   defaultSelectedTagsSet,
 
@@ -151,8 +153,8 @@ export function setupCategoryPillDropdown({
   const tagCounts = buildTagCounts(models);
   const visibleSections = withTagVisibility(tagCounts, { hideZero: hideZeroTags });
 
-  // Nested Tags HTML: 3 subsections -> group headings -> pill mounts
-  const buildTagsHTML = () => {
+  // Build inline tag subsections (details) as siblings of Categories
+  const buildTagSubsectionsHTML = () => {
     return visibleSections
       .map((section, sIdx) => {
         const groupsHTML = (section.groups || [])
@@ -169,9 +171,9 @@ export function setupCategoryPillDropdown({
           .join("");
 
         return `
-          <details class="filter-subsection" data-subsection="${sIdx}" data-section-id="${section.id}">
-            <summary class="filter-subsection-summary">
-              <span class="filter-subsection-title">${section.label}</span>
+          <details class="filter-section filter-tag-section" data-subsection="${sIdx}" data-section-id="${section.id}">
+            <summary class="filter-section-summary">
+              <span class="filter-section-title">${section.label}</span>
               <span class="filter-section-chevron" aria-hidden="true"></span>
             </summary>
             <div class="filter-subsection-inner">
@@ -183,7 +185,7 @@ export function setupCategoryPillDropdown({
       .join("");
   };
 
-  // Build menu: Categories untouched; Tags nested; footer has Apply/Clear
+  // Build menu: Categories + tag subsections inline + footer actions
   menu.innerHTML = `
     <div class="filter-menu-header">
       <div class="filter-selected-count" aria-live="polite"></div>
@@ -198,16 +200,7 @@ export function setupCategoryPillDropdown({
       <div class="filter-pills filter-pills--categories"></div>
     </details>
 
-    <details class="filter-section">
-      <summary class="filter-section-summary">
-        <span class="filter-section-title">Tags</span>
-        <span class="filter-section-chevron" aria-hidden="true"></span>
-      </summary>
-
-      <div class="filter-tags-groups">
-        ${buildTagsHTML()}
-      </div>
-    </details>
+    ${buildTagSubsectionsHTML()}
 
     <div class="filter-dropdown-footer">
       <button type="button" class="filter-btn filter-btn-ghost" data-filter-action="clear">Clear</button>
@@ -220,9 +213,7 @@ export function setupCategoryPillDropdown({
   const applyBtn = menu.querySelector('[data-filter-action="apply"]');
   const clearBtn = menu.querySelector('[data-filter-action="clear"]');
 
-  const catDetails = menu.querySelectorAll(".filter-section")[0];
-  const tagDetails = menu.querySelectorAll(".filter-section")[1];
-
+  const catDetails = menu.querySelectorAll(".filter-section")[0]; // Categories is first
   const catMount = menu.querySelector(".filter-pills--categories");
 
   // Count UI only (no filtering here)
@@ -248,8 +239,8 @@ export function setupCategoryPillDropdown({
       if (t !== keep) selectedTagsSet.delete(t);
     }
 
-    // Update DOM to reflect only one checked inside the section
-    const root = menu.querySelector(`.filter-subsection[data-section-id="${sectionId}"]`);
+    // Update DOM checkboxes in that section to reflect only one checked
+    const root = menu.querySelector(`.filter-tag-section[data-section-id="${sectionId}"]`);
     if (!root) return;
 
     root.querySelectorAll('input[type="checkbox"]').forEach((inp) => {
@@ -265,12 +256,10 @@ export function setupCategoryPillDropdown({
       selectedSet: selectedCategoriesSet,
       labelForKey: (k) => getCategoryName(k),
       bgForKey: (k) => categoryColors[k] || "bg-white/10",
-      onChange: () => {
-        updateCount(); // ✅ no auto filtering
-      }
+      onChange: () => updateCount() // ✅ no auto filtering
     });
 
-    // Tags (nested groups)
+    // Tag sections inline
     visibleSections.forEach((section) => {
       (section.groups || []).forEach((g) => {
         const mount = menu.querySelector(
@@ -340,11 +329,9 @@ export function setupCategoryPillDropdown({
     const willOpen = !wrapper.classList.contains("open");
     wrapper.classList.toggle("open");
 
-    // When opening main dropdown, start both subsections CLOSED
+    // When opening main dropdown, start ALL sections CLOSED (Categories + tag sections)
     if (willOpen) {
-      if (catDetails) catDetails.open = false;
-      if (tagDetails) tagDetails.open = false;
-      menu.querySelectorAll(".filter-subsection").forEach((d) => (d.open = false));
+      menu.querySelectorAll(".filter-section").forEach((d) => (d.open = false));
     }
 
     if (wrapper.classList.contains("open")) {
