@@ -2,8 +2,7 @@
 // Keeps homepage "guide accordions" in utils.js
 
 import { categoryColors, getCategoryName } from "./utils.js";
-import { tagDropdownSections, buildTagCounts, withTagVisibility } from "./filters-config.js";
-
+import { buildTagCounts, withTagVisibility } from "./filters-config.js";
 
 console.log("✅ dropdown.js loaded");
 
@@ -21,7 +20,7 @@ export function closeOnOutsideClick(triggerEl, dropdownEl, callback) {
 }
 
 // ============================================================================
-// Render pills
+// Render pills (Categories helper kept)
 // ============================================================================
 export function renderCategoryPills({ mountEl, categories = [], selectedSet, onChange } = {}) {
   if (!mountEl) return;
@@ -63,6 +62,9 @@ export function renderCategoryPills({ mountEl, categories = [], selectedSet, onC
   mountEl.appendChild(frag);
 }
 
+// ============================================================================
+// Internal pill renderer (used for both categories/tags)
+// ============================================================================
 function renderPills({ mountEl, keys = [], selectedSet, labelForKey, bgForKey, onChange } = {}) {
   if (!mountEl) return;
   mountEl.innerHTML = "";
@@ -100,7 +102,10 @@ function renderPills({ mountEl, keys = [], selectedSet, labelForKey, bgForKey, o
 }
 
 // ============================================================================
-// Setup dropdown with header row + reset button (inside dropdown)
+// Setup dropdown with:
+// - Categories (unchanged UI)
+// - Tags (nested sections + groups) from filters-config.js
+// - Apply/Clear buttons (filtering only on Apply)
 // ============================================================================
 export function setupCategoryPillDropdown({
   wrapperId = "filterDropdown",
@@ -112,18 +117,20 @@ export function setupCategoryPillDropdown({
   selectedCategoriesSet,
   defaultSelectedCategoriesSet,
 
-  // Tags (legacy flat list) — still accepted but no longer used for UI
+  // Legacy flat tags (ignored for UI now, kept for backwards compatibility)
   tagKeys = [],
 
-  // ✅ NEW: pass models so tags can hide when they have 0 matches
+  // Tags: config-driven visibility
   models = [],
   hideZeroTags = true,
 
-  // Tags selection (still a single Set, so your existing filterModelsByFacets works)
+  // Selected sets (PENDING sets; filtering is triggered via onApply)
   selectedTagsSet,
   defaultSelectedTagsSet,
 
-  onUpdate
+  // Callbacks
+  onApply,
+  onClear
 } = {}) {
   const wrapper = document.getElementById(wrapperId);
   const toggle = document.getElementById(toggleId);
@@ -134,43 +141,49 @@ export function setupCategoryPillDropdown({
     return null;
   }
 
+  // Safety
   selectedCategoriesSet ||= new Set();
   selectedTagsSet ||= new Set();
 
-  const titleCase = (k) =>
-    String(k).replace(/(^|\s|-)\S/g, (s) => s.toUpperCase());
+  const titleCase = (k) => String(k).replace(/(^|\s|-)\S/g, (s) => s.toUpperCase());
 
-  // Build visible config from dataset (hide 0-count tags/groups/sections)
+  // Build visible tag config based on tag counts in provided models (base result set)
   const tagCounts = buildTagCounts(models);
   const visibleSections = withTagVisibility(tagCounts, { hideZero: hideZeroTags });
 
-  // Build nested Tags HTML: sections -> groups -> pills mount
+  // Nested Tags HTML: 3 subsections -> group headings -> pill mounts
   const buildTagsHTML = () => {
-    return visibleSections.map((section, sIdx) => {
-      const groupsHTML = (section.groups || []).map((g) => `
-        <div class="filter-group">
-          <div class="filter-group-title">${g.label}</div>
-          <div class="filter-pills filter-pills--taggroup"
-               data-section-id="${section.id}"
-               data-group-id="${g.id}"></div>
-        </div>
-      `).join("");
+    return visibleSections
+      .map((section, sIdx) => {
+        const groupsHTML = (section.groups || [])
+          .map(
+            (g) => `
+              <div class="filter-group">
+                <div class="filter-group-title">${g.label}</div>
+                <div class="filter-pills filter-pills--taggroup"
+                     data-section-id="${section.id}"
+                     data-group-id="${g.id}"></div>
+              </div>
+            `
+          )
+          .join("");
 
-      return `
-        <details class="filter-subsection" data-subsection="${sIdx}" data-section-id="${section.id}">
-          <summary class="filter-subsection-summary">
-            <span class="filter-subsection-title">${section.label}</span>
-            <span class="filter-section-chevron" aria-hidden="true"></span>
-          </summary>
-          <div class="filter-subsection-inner">
-            ${groupsHTML}
-          </div>
-        </details>
-      `;
-    }).join("");
+        return `
+          <details class="filter-subsection" data-subsection="${sIdx}" data-section-id="${section.id}">
+            <summary class="filter-subsection-summary">
+              <span class="filter-subsection-title">${section.label}</span>
+              <span class="filter-section-chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="filter-subsection-inner">
+              ${groupsHTML}
+            </div>
+          </details>
+        `;
+      })
+      .join("");
   };
 
-  // Build menu (Categories unchanged; Tags now nested)
+  // Build menu: Categories untouched; Tags nested; footer has Apply/Clear
   menu.innerHTML = `
     <div class="filter-menu-header">
       <div class="filter-selected-count" aria-live="polite"></div>
@@ -195,46 +208,57 @@ export function setupCategoryPillDropdown({
         ${buildTagsHTML()}
       </div>
     </details>
+
+    <div class="filter-dropdown-footer">
+      <button type="button" class="filter-btn filter-btn-ghost" data-filter-action="clear">Clear</button>
+      <button type="button" class="filter-btn filter-btn-primary" data-filter-action="apply">Apply filters</button>
+    </div>
   `;
 
   const countEl = menu.querySelector(".filter-selected-count");
   const resetBtn = menu.querySelector(".filter-reset-btn");
+  const applyBtn = menu.querySelector('[data-filter-action="apply"]');
+  const clearBtn = menu.querySelector('[data-filter-action="clear"]');
 
   const catDetails = menu.querySelectorAll(".filter-section")[0];
   const tagDetails = menu.querySelectorAll(".filter-section")[1];
 
   const catMount = menu.querySelector(".filter-pills--categories");
 
+  // Count UI only (no filtering here)
   const updateCount = () => {
     const c = selectedCategoriesSet.size;
     const t = selectedTagsSet.size;
     if (countEl) countEl.textContent = `${c} categories · ${t} tags`;
   };
 
-  // ✅ Enforce "single" sections as radio-like behavior (without changing UI)
+  // Enforce single-select sections as radio-like (without changing pill UI)
   const enforceSingleSelect = (sectionId, keepKey) => {
-    const section = visibleSections.find(s => s.id === sectionId);
+    const section = visibleSections.find((s) => s.id === sectionId);
     if (!section || section.selection !== "single") return;
 
     const keep = String(keepKey).toLowerCase();
 
-    // remove any other tags belonging to this section from selectedTagsSet
-    const sectionTags = section.groups.flatMap(g => g.tags || []).map(t => String(t).toLowerCase());
+    // Remove other tags in this section from selectedTagsSet
+    const sectionTags = (section.groups || [])
+      .flatMap((g) => g.tags || [])
+      .map((t) => String(t).toLowerCase());
+
     for (const t of sectionTags) {
       if (t !== keep) selectedTagsSet.delete(t);
     }
 
-    // update DOM checkboxes in that section to reflect only one checked
+    // Update DOM to reflect only one checked inside the section
     const root = menu.querySelector(`.filter-subsection[data-section-id="${sectionId}"]`);
     if (!root) return;
 
-    root.querySelectorAll('input[type="checkbox"]').forEach(inp => {
-      inp.checked = (String(inp.value).toLowerCase() === keep);
+    root.querySelectorAll('input[type="checkbox"]').forEach((inp) => {
+      inp.checked = String(inp.value).toLowerCase() === keep;
     });
   };
 
   const renderAll = () => {
-    // Categories (same as you had)
+    // Categories
     renderPills({
       mountEl: catMount,
       keys: categoryKeys,
@@ -242,12 +266,11 @@ export function setupCategoryPillDropdown({
       labelForKey: (k) => getCategoryName(k),
       bgForKey: (k) => categoryColors[k] || "bg-white/10",
       onChange: () => {
-        updateCount();
-        onUpdate?.();
+        updateCount(); // ✅ no auto filtering
       }
     });
 
-    // Tags (nested)
+    // Tags (nested groups)
     visibleSections.forEach((section) => {
       (section.groups || []).forEach((g) => {
         const mount = menu.querySelector(
@@ -263,8 +286,7 @@ export function setupCategoryPillDropdown({
           bgForKey: () => "bg-white/10",
           onChange: (key, checked) => {
             if (checked) enforceSingleSelect(section.id, key);
-            updateCount();
-            onUpdate?.();
+            updateCount(); // ✅ no auto filtering
           }
         });
       });
@@ -274,7 +296,7 @@ export function setupCategoryPillDropdown({
     if (window.feather) window.feather.replace({ "stroke-width": 2.6 });
   };
 
-  // Reset button resets BOTH sets to defaults
+  // Reset button: revert to defaults (does NOT auto-apply)
   resetBtn?.addEventListener("click", (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -290,7 +312,26 @@ export function setupCategoryPillDropdown({
     }
 
     renderAll();
-    onUpdate?.();
+    onClear?.(); // treat reset as clear-from-applied
+  });
+
+  // Clear button: clear selections (does NOT auto-apply)
+  clearBtn?.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    selectedCategoriesSet.clear();
+    selectedTagsSet.clear();
+
+    renderAll();
+    onClear?.();
+  });
+
+  // Apply button: call host page
+  applyBtn?.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    onApply?.();
   });
 
   // Toggle dropdown open/close
@@ -303,7 +344,7 @@ export function setupCategoryPillDropdown({
     if (willOpen) {
       if (catDetails) catDetails.open = false;
       if (tagDetails) tagDetails.open = false;
-      menu.querySelectorAll(".filter-subsection").forEach(d => (d.open = false));
+      menu.querySelectorAll(".filter-subsection").forEach((d) => (d.open = false));
     }
 
     if (wrapper.classList.contains("open")) {
@@ -317,5 +358,5 @@ export function setupCategoryPillDropdown({
   });
 
   renderAll();
-  return { render: renderAll };
+  return { render: renderAll, sections: visibleSections };
 }
