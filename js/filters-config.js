@@ -266,19 +266,19 @@ export const audienceGroups = [individualAudience, teamAudience];
 export const tagDropdownSections = [
   {
     id: "what_it_is",
-    label: "What the tool is",
+    label: "Tool Type",
     selection: "single", // UI hint: radio-style recommended
     groups: primaryFunctionGroups
   },
   {
     id: "what_it_does",
-    label: "What it does",
+    label: "Features",
     selection: "multi", // UI hint: checkbox-style
     groups: capabilityGroups
   },
   {
     id: "who_its_for",
-    label: "Who it’s for",
+    label: "Audience",
     selection: "single", // UI hint: radio-style recommended
     groups: audienceGroups
   }
