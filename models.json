@@ -5284,7 +5284,7 @@
       "name": "Flora",
       "category": ["design", "documents", "assistants"],
       "type": "AI Creative Workspace",
-      "description": "",
+      "description": "Flora is a creative AI workspace designed to help individuals and teams explore ideas, generate content and shape concepts in one shared environment. It brings writing, visuals and collaboration together so creative work feels continuous rather than fragmented across tools. \n\nUsers can brainstorm ideas, generate text, experiment with visuals and organise thoughts on a flexible canvas. This makes it easier to see how ideas evolve over time while keeping all related context in one place. Teams can collaborate live and refine concepts together without losing momentum. \n\nFlora is especially useful for designers, marketers and creative teams working on campaigns or early-stage ideas. It supports open exploration while still helping projects move toward clear outcomes.",
       "subtitle": "A node-based infinite canvas to build repeatable creative workflows across text, image, and video.",
       "tags": [""],
       "features": [
@@ -5323,7 +5323,7 @@
       "name": "Trellis",
       "category": ["design", "development"],
       "type": "3D Model Generator",
-      "description": "",
+      "description": "Trellis is an AI-powered platform that makes working with 3D concepts more approachable for non-specialists. It allows users to generate and explore three-dimensional objects and scenes without advanced modelling skills or complex software. \n\nUsers can create and adjust 3D structures using simple inputs, which helps them visualise spatial ideas quickly. This supports rapid experimentation and makes it easier to test concepts before moving into detailed production tools. \n\nTrellis is well suited for designers, developers and product teams exploring 3D ideas early in a project. It lowers the barrier to 3D thinking and speeds up creative decision making.",
       "subtitle": "Generate 3D models from text or images using Microsoft’s TRELLIS-based 3D generation approach.",
       "tags": [""],
       "features": [
@@ -5361,7 +5361,7 @@
       "name": "The Prompting Company",
       "category": ["data", "research", "office"],
       "type": "AI Visibility & GEO Platform",
-      "description": "",
+      "description": "The Prompting Company helps users get more reliable and useful results from AI by improving how they write prompts. It focuses on teaching clear communication techniques that make AI outputs more predictable and relevant. \n\nUsers learn structured ways to describe tasks, provide context and refine instructions. This reduces guesswork and helps people understand why certain prompts work better than others. Over time, users gain confidence in using AI effectively. \n\nThe Prompting Company is valuable for professionals, educators and teams that rely on AI daily. It helps turn AI into a dependable tool rather than a source of frustration.",
       "subtitle": "Track and improve how often your brand is cited or recommended in AI-generated answers.",
       "tags": [""],
       "features": [
@@ -5399,7 +5399,7 @@
       "name": "AutoSend",
       "category": ["office", "development", "finance"],
       "type": "Email API & Marketing Platform",
-      "description": "",
+      "description": "AutoSend is a platform built to automate outbound communication such as emails and follow-ups. It removes the need to manually send routine messages while keeping outreach consistent and timely. \n\nUsers can create automated sequences that trigger based on schedules or actions. This ensures communication continues smoothly even when teams are busy. It also helps reduce missed follow-ups and delays. \n\nAutoSend is ideal for sales teams, recruiters and customer-facing roles. It saves time while keeping communication organised and professional.",
       "subtitle": "Volume-based email sending for transactional and marketing email with API, SMTP, and webhooks.",
       "tags": [""],
       "features": [
@@ -5437,7 +5437,7 @@
       "name": "DataFast",
       "category": ["data", "finance", "office"],
       "type": "Revenue Analytics",
-      "description": "",
+      "description": "DataFast helps users explore and understand datasets quickly without technical setup or complex dashboards. It is designed for people who want insights from data without deep analytical expertise. \n\nUsers upload data and immediately generate summaries, patterns and insights through guided interaction. The platform handles much of the complexity behind the scenes so results are easy to understand and act on. \n\nDataFast is useful for founders, analysts and business teams who need fast answers. It turns raw data into clear information that supports better decisions.",
       "subtitle": "Revenue-first analytics to attribute customers and payments back to acquisition channels.",
       "tags": [""],
       "features": [
@@ -5476,7 +5476,7 @@
       "name": "Timeless",
       "category": ["assistants", "design", "office"],
       "type": "All-in-One AI App",
-      "description": "",
+      "description": "Timeless is an AI-powered tool designed to help users organise ideas, notes and research in a way that stays useful over time. Instead of storing information as disconnected notes, it focuses on building structured knowledge that grows and evolves. \n\nUsers can capture thoughts from documents, conversations and research, then connect related ideas automatically. This makes it easier to revisit past work and understand it in context rather than starting from scratch each time. \n\nTimeless is well suited for researchers, writers and knowledge workers who think long term. It helps preserve insights, reduce repetition and build a personal knowledge system that improves with use.",
       "subtitle": "A multimodal AI companion for chat plus creative generation (including images and video) in one app.",
       "tags": [""],
       "features": [
@@ -5514,7 +5514,7 @@
       "name": "Polyglotta",
       "category": ["learning", "documents", "assistants"],
       "type": "AI Translation",
-      "description": "",
+      "description": "Polyglotta is a language-focused AI tool that helps users understand and work across multiple languages more effectively. It supports translation while also explaining meaning and structure in a clear and approachable way. \n\nRather than offering basic word-for-word translations, Polyglotta highlights context and differences between languages. This helps users grasp nuance and communicate more naturally when reading or writing in another language. \n\nPolyglotta is useful for students, language learners and international teams. It supports clearer communication and makes learning new languages feel less overwhelming.",
       "subtitle": "Credit-based multilingual translation tool with a free daily allowance.",
       "tags": [""],
       "features": [
@@ -5552,7 +5552,7 @@
       "name": "SpotDraft",
       "category": ["documents", "office", "finance"],
       "type": "Contract Lifecycle Management",
-      "description": "",
+      "description": "SpotDraft is an AI-powered contract lifecycle management platform built to help fast-growing companies create, review and manage legal agreements more efficiently. It brings structure and automation to contracts without requiring legal teams to rely on complex or heavyweight enterprise systems. \n\nThe platform helps teams draft contracts using templates, review language with AI assistance and track approvals and changes across the full contract lifecycle. By highlighting key clauses, risks and obligations, SpotDraft makes contracts easier to understand for both legal and non-legal stakeholders. \n\nSpotDraft is commonly used by legal, sales and operations teams that handle a high volume of agreements. It reduces turnaround time, improves consistency and helps businesses stay organised and compliant as they scale.",
       "subtitle": "AI-driven CLM to create, manage, sign, and analyze contracts in one platform.",
       "tags": [""],
       "features": [
@@ -5590,7 +5590,7 @@
       "name": "Speakly",
       "category": ["learning"],
       "type": "Language Learning App",
-      "description": "",
+      "description": "Speakly AI is a language learning platform designed to help users become comfortable speaking a new language in real-life situations. Instead of focusing heavily on memorisation or grammar drills, it prioritises practical conversation and everyday vocabulary that learners are likely to use. \n\nUsers practice through guided speaking and listening exercises that simulate natural conversations. The system adapts to the learner’s level and provides feedback that helps improve pronunciation, sentence structure and confidence over time. This approach makes progress feel more natural and less intimidating. \n\nSpeakly AI is well suited for learners who want usable language skills rather than academic knowledge. It helps students, travellers and professionals build confidence through regular, realistic practice.",
       "subtitle": "Language learning app focused on statistically relevant vocabulary and active practice.",
       "tags": [""],
       "features": [
@@ -5628,7 +5628,7 @@
       "name": "ImagineArt",
       "category": ["design", "audio", "office"],
       "type": "AI Creative Suite",
-      "description": "",
+      "description": "Imagine is an AI image generation platform that allows users to create visuals by describing ideas in plain language. It removes the need for complex design tools and makes visual creation accessible to a much wider audience. \n\nUsers can generate illustrations, concept art and creative imagery by experimenting with different prompts and styles. This makes it easy to explore ideas quickly, refine visual directions and test creative concepts without committing to a final design too early. \n\nImagine is popular with artists, designers and content creators who want fast visual inspiration. It supports experimentation and helps bring abstract ideas into a visual form that can be shared or developed further.",
       "subtitle": "Creative suite for generating and editing AI assets (including text-to-image) with subscription tiers.",
       "tags": [""],
       "features": [
@@ -5666,7 +5666,7 @@
       "name": "Caimera",
       "category": ["design", "assistants"],
       "type": "AI Image Generator",
-      "description": "",
+      "description": "Caimera is an AI-powered platform built to help teams produce visual content that stays consistent with their brand. Rather than generating random images, it focuses on controlled outputs that match defined styles, colours and design guidelines. \n\nUsers can guide how visuals are generated so that assets align with existing branding and campaign requirements. This allows teams to create large volumes of content while maintaining a cohesive look across platforms and channels. \n\nCaimera is especially useful for marketing teams and agencies managing ongoing creative work. It helps scale visual production without sacrificing quality or brand consistency.",
       "subtitle": "AI image generation platform focused on fast iteration and creator-friendly workflows.",
       "tags": [""],
       "features": [
@@ -5703,7 +5703,7 @@
       "name": "Pandada AI",
       "category": ["documents", "assistants", "office"],
       "type": "AI Writing Assistant",
-      "description": "",
+      "description": "Pandada AI is a writing assistant designed to help users generate and refine written content with minimal effort. It focuses on producing clear, structured drafts that can be easily edited rather than trying to replace the writer entirely. \n\nUsers can create articles, summaries, social posts and other written materials by providing a short prompt or topic. The platform helps organise ideas, expand rough thoughts and improve clarity, making the writing process feel faster and less overwhelming. \n\nPandada AI is useful for students, content creators and professionals who write frequently. It helps users move from blank page to workable draft while keeping them in control of the final output.",
       "subtitle": "AI writing tool for drafting, editing, and improving everyday content.",
       "tags": [""],
       "features": [
@@ -5740,7 +5740,7 @@
       "name": "OpenHands",
       "category": ["development", "assistants"],
       "type": "Coding Agent",
-      "description": "",
+      "description": "OpenHands is an open-source platform designed to help developers build and experiment with AI agents and automated workflows. It provides a flexible environment where tools, logic and AI models can work together to complete tasks. \n\nUsers can configure agents that interact with software tools, process information and perform actions with limited supervision. This allows developers to test automation ideas and explore more advanced AI-driven systems beyond simple prompts. \n\nOpenHands is best suited for developers and researchers interested in automation and agent-based workflows. It supports experimentation and learning in a transparent, open environment.",
       "subtitle": "Open-source agent that helps developers write, modify, and reason about code.",
       "tags": [""],
       "features": [
@@ -5778,7 +5778,7 @@
       "name": "Fuzzy",
       "category": ["data", "assistants", "office"],
       "type": "AI Analytics Assistant",
-      "description": "",
+      "description": "Fuzzy is an AI-powered platform designed to help teams make sense of large volumes of written feedback and text-based data. Instead of manually reading hundreds or thousands of responses, it organises feedback into clear themes that reflect what people are actually saying. \n\nUsers can upload survey responses, reviews, interview transcripts or open-ended comments and let Fuzzy group similar ideas together. This makes it easier to understand recurring concerns, positive signals and emerging trends without losing the original context of the feedback. \n\nFuzzy is especially useful for product teams, researchers and customer experience teams. It helps turn unstructured feedback into actionable insights that support prioritisation, planning and better decision making.",
       "subtitle": "AI-powered analytics assistant for extracting insights from data.",
       "tags": [""],
       "features": [
@@ -5815,7 +5815,7 @@
       "name": "Teamout",
       "category": ["office", "assistants"],
       "type": "Team Scheduling Tool",
-      "description": "",
+      "description": "TeamOut is a planning and coordination tool that helps teams manage time off, availability and scheduling more clearly. It provides a shared view of who is working, who is away and when people are available across the organisation. \n\nThe platform automatically tracks leave, holidays and working patterns, reducing the need for manual updates or repeated questions. This helps teams plan projects, meetings and deadlines more realistically without unnecessary friction. \n\nTeamOut is particularly valuable for remote and distributed teams. It improves transparency, reduces scheduling conflicts and helps teams coordinate work more smoothly as they grow.",
       "subtitle": "AI-enhanced scheduling and coordination for distributed teams.",
       "tags": [""],
       "features": [
@@ -5852,7 +5852,7 @@
       "name": "Kontentino",
       "category": ["design", "office", "assistants"],
       "type": "Social Media Management Platform",
-      "description": "",
+      "description": "Kontentino is a social media management platform designed to help teams plan, review and approve content before it is published. It focuses on bringing structure and clarity to social media workflows, especially when multiple people are involved in creating and approving posts. \n\nUsers can draft posts, organise them into content calendars and share them with teammates or clients for feedback. Comments, approvals and revisions all happen in one place, which reduces confusion and prevents last-minute changes. This makes it easier to manage campaigns across different channels while staying organised. \n\nKontentino is particularly useful for marketing teams and agencies handling multiple brands or clients. It helps teams collaborate more smoothly, keep content aligned with strategy and maintain control over what gets published and when.",
       "subtitle": "Social media planning and collaboration platform with AI-assisted workflows.",
       "tags": [""],
       "features": [
@@ -5889,7 +5889,7 @@
       "name": "Paper",
       "category": ["documents", "assistants"],
       "type": "AI Writing Tool",
-      "description": "",
+      "description": "Paper is an AI-powered writing assistant designed to help users draft, organise and refine written content in a focused workspace. It supports a wide range of writing tasks, from articles and notes to structured documents and early-stage ideas. \n\nUsers can start with a rough thought or prompt and let Paper help expand it into a clearer draft. The tool assists with outlining, rewriting and improving clarity, making it easier to move forward without staring at a blank page. \n\nPaper is useful for writers, students and professionals who work with text regularly. It helps speed up writing while keeping the user in control of the final content.",
       "subtitle": "Minimalist AI writing environment for focused drafting and editing.",
       "tags": [""],
       "features": [
@@ -5926,7 +5926,7 @@
       "name": "Pencil",
       "category": ["design", "office", "assistants"],
       "type": "AI Marketing Design Tool",
-      "description": "",
+      "description": "Pencil is an AI-powered platform built to help marketing teams create visual and written ad content more efficiently. It focuses on turning ideas and brand inputs into ready-to-use creatives without requiring constant manual design work. \n\nUsers can generate multiple versions of ads by providing a product description, campaign goal or brand guidelines. Pencil produces variations of visuals and copy that can be tested and refined, helping teams explore different directions quickly without starting from scratch each time. \n\nPencil is especially useful for marketing teams and advertisers running frequent campaigns. It helps scale creative output, reduces production time and makes experimentation easier while keeping content aligned with brand goals.",
       "subtitle": "AI-powered creative platform for performance marketing teams.",
       "tags": [""],
       "features": [
@@ -5963,7 +5963,7 @@
       "name": "Remotion",
       "category": ["design", "development"],
       "type": "AI Video Creation Tool",
-      "description": "",
+      "description": "Remotion is a video creation platform that allows developers and teams to generate videos programmatically using code and templates. Instead of editing videos manually on a timeline, Remotion lets users define how videos should look and behave using logic and reusable components. \n\nUsers can create dynamic videos driven by data, such as personalised clips, social videos or automated explainers. By changing inputs like text, images or values, Remotion can generate many video variations automatically, which saves significant production time. \n\nRemotion is especially useful for developers, product teams and content teams producing video at scale. It supports automation, consistency and flexibility in video creation without relying on traditional editing workflows.",
       "subtitle": "AI-assisted video creation for marketing and content teams.",
       "tags": [""],
       "features": [
@@ -6000,7 +6000,7 @@
       "name": "Resistant AI",
       "category": ["finance", "data", "office"],
       "type": "AI Risk & Fraud Platform",
-      "description": "",
+      "description": "Resistant AI is a platform focused on protecting financial systems from fraud, risk and manipulation using artificial intelligence. It analyses documents, transactions and data to identify suspicious patterns that may indicate fraud or compliance issues. \n\nThe platform helps organisations detect problems earlier by automatically reviewing large volumes of information that would be difficult to assess manually. This reduces risk while supporting faster and more confident decision making in sensitive environments. \n\nResistant AI is designed for financial institutions, fintech companies and compliance teams. It strengthens trust in automated processes and helps organisations operate more securely in regulated industries.",
       "subtitle": "AI-driven risk, fraud, and compliance platform for financial services.",
       "tags": [""],
       "features": [
@@ -6038,7 +6038,7 @@
       "name": "Marble",
       "category": ["assistants", "office", "finance"],
       "type": "AI Operations Assistant",
-      "description": "",
+      "description": "Marble is an AI-powered assistant designed to help teams understand users and customers more deeply. It focuses on turning conversations, feedback and research notes into clear insights that teams can actually use. \n\nUsers can upload interviews, survey responses or qualitative notes and let Marble organise the information into themes and summaries. This makes it easier to spot patterns, understand user needs and avoid manually reviewing large amounts of text. \n\nMarble is especially useful for product teams, designers and researchers. It helps teams make better decisions by keeping customer insights clear, structured and easy to revisit.",
       "subtitle": "AI assistant for handling operational and financial workflows.",
       "tags": [""],
       "features": [
@@ -6075,7 +6075,7 @@
       "name": "Dokie",
       "category": ["documents", "assistants"],
       "type": "Document AI",
-      "description": "",
+      "description": "Dokie is an AI tool designed to simplify documentation and knowledge sharing for teams. It helps turn informal notes, explanations and processes into clear, structured documents. \n\nUsers can describe a workflow or concept in simple language and Dokie helps organise it into readable documentation. This reduces the effort required to keep internal docs up to date and understandable. \n\nDokie is useful for teams that need clear internal documentation without spending hours writing it. It supports better knowledge sharing and helps information stay accessible as teams grow.",
       "subtitle": "AI-powered document drafting and collaboration tool.",
       "tags": [""],
       "features": [
@@ -6112,7 +6112,7 @@
       "name": "ChartGen AI",
       "category": ["data", "design", "office"],
       "type": "Data Visualization Tool",
-      "description": "",
+      "description": "ChartGen AI is a tool designed to help users turn data into clear charts and visuals using simple instructions. Instead of manually building graphs in spreadsheets or design tools, users can describe what they want to see and let the platform generate the chart automatically. \n\nUsers can upload data or paste values and ask for specific visual formats such as bar charts, line graphs or comparisons. This makes it easier to explore data, test different views and quickly create visuals for reports or presentations. \n\nChartGen AI is useful for analysts, students and business teams that work with data regularly. It saves time and helps users communicate insights visually without advanced charting skills.",
       "subtitle": "Generate charts and visualizations from data using AI.",
       "tags": [""],
       "features": [
@@ -6149,7 +6149,7 @@
       "name": "Seorce",
       "category": ["research", "office", "design"],
       "type": "SEO Tool",
-      "description": "",
+      "description": "Seorce is an AI-driven SEO platform built to help users improve website visibility and search performance. It focuses on analysing content, keywords and structure to highlight areas that can be improved. \n\nUsers can audit pages, receive optimisation suggestions and track how changes affect performance over time. This removes much of the guesswork from SEO and helps users focus on practical actions rather than technical complexity. \n\nSeorce is ideal for marketers, founders and content teams who want better search results. It helps guide SEO efforts with clear recommendations that are easier to understand and apply.",
       "subtitle": "AI-powered SEO and content optimization platform.",
       "tags": [""],
       "features": [
@@ -6186,7 +6186,7 @@
       "name": "MapFirst.ai",
       "category": ["data", "research"],
       "type": "Geospatial Analytics Tool",
-      "description": "",
+      "description": "MapFirst.ai is a platform designed to help users understand location-based data through clear and interactive maps. It focuses on turning raw geographic information into visuals that are easy to explore and interpret, even for users without mapping or GIS experience. \n\nUsers can upload datasets that include location details and instantly see patterns, trends and distributions displayed on maps. This makes it easier to compare regions, identify clusters and understand how data behaves across different locations without manual map building. \n\nMapFirst.ai is especially useful for analysts, planners and business teams working with regional or location-driven data. It helps teams move from spreadsheets to visual insights that support clearer decisions and presentations.",
       "subtitle": "AI-powered geospatial analysis and mapping platform.",
       "tags": [""],
       "features": [
@@ -6223,7 +6223,7 @@
       "name": "FastMCP",
       "category": ["development"],
       "type": "Developer Tooling",
-      "description": "",
+      "description": "FastMCP is a developer-focused framework created to simplify building applications that interact with large language models. It provides structure around how prompts, responses and tools are managed so AI systems behave more predictably. \n\nDevelopers can use FastMCP to connect language models with data sources, workflows and external services in a consistent way. This reduces repeated setup work and helps teams build AI-powered features that are easier to maintain over time. \n\nFastMCP is well suited for engineers building production AI systems. It supports cleaner architectures and makes it easier to scale and evolve AI functionality as projects grow.",
       "subtitle": "Tools and documentation for building with the Model Context Protocol (MCP).",
       "tags": [""],
       "features": [
@@ -6260,7 +6260,7 @@
       "name": "Fimo",
       "category": ["design", "assistants"],
       "type": "AI Design Tool",
-      "description": "",
+      "description": "Fimo is an AI-powered tool designed to help users create and manage short-form content more efficiently. It focuses on turning ideas, scripts or raw inputs into polished outputs that are ready to share across digital channels. \n\nUsers can generate content drafts, refine wording and adjust structure to suit different platforms. This helps reduce the time spent rewriting the same idea for multiple formats and keeps messaging consistent across outputs. \n\nFimo is useful for creators, marketers and teams producing frequent short-form content. It supports faster production while keeping users in control of tone, clarity and final edits.",
       "subtitle": "AI-assisted creative tool for producing visual assets.",
       "tags": [""],
       "features": [
@@ -6297,7 +6297,7 @@
       "name": "Augment Code",
       "category": ["development", "assistants"],
       "type": "AI Coding Assistant",
-      "description": "",
+      "description": "Augment Code is an AI coding assistant built to support developers while they write and review code. It focuses on understanding the context of a codebase rather than offering generic suggestions. \n\nDevelopers receive guidance, explanations and code improvements directly within their workflow. This helps catch issues earlier, understand unfamiliar code and move faster without constantly switching tools or searching for answers. \n\nAugment Code is especially valuable for professional developers working on complex projects. It improves productivity, supports learning and helps teams maintain higher code quality over time.",
       "subtitle": "AI assistant designed to help developers write and understand code.",
       "tags": [""],
       "features": [
@@ -6334,7 +6334,7 @@
       "name": "Voltagent",
       "category": ["development", "assistants"],
       "type": "AI Agent Framework",
-      "description": "",
+      "description": "Voltagent is a developer-focused platform designed to help teams build and manage AI agents that can perform tasks autonomously. It provides tools for defining agent behaviour, connecting to services and coordinating actions in a controlled way. \n\nDevelopers can configure agents to run workflows, respond to events and interact with external tools or APIs. This makes it easier to experiment with automation while keeping systems predictable and maintainable as they grow. \n\nVoltagent is well suited for engineering teams exploring agent-based automation. It helps turn experimental AI ideas into structured systems that can be tested, improved and deployed with confidence.",
       "subtitle": "Framework for building, running, and managing AI agents.",
       "tags": [""],
       "features": [
@@ -6371,7 +6371,7 @@
       "name": "Thita.ai",
       "category": ["assistants", "data"],
       "type": "AI Assistant",
-      "description": "",
+      "description": "Thita.ai is an AI platform focused on analysing complex data and extracting meaningful insights for businesses. It aims to simplify how users explore data by turning questions into clear answers and summaries. \n\nUsers can work with datasets and receive explanations, trends and observations without needing deep technical expertise. This lowers the barrier to understanding data and helps teams move from raw information to informed decisions. \n\nThita.ai is useful for analysts, managers and business teams who rely on data but want faster clarity. It supports better decision making by making insights easier to access and understand.",
       "subtitle": "AI assistant focused on data-backed answers and productivity.",
       "tags": [""],
       "features": [
@@ -6402,5 +6402,1080 @@
       ],
       "image": "Images/models/thita-ai.webp",
       "link": "https://thita.ai/"
+    },
+    {
+      "id": 163,
+      "name": "Aibrary",
+      "category": ["research", "assistants"],
+      "type": "AI Research Assistant",
+      "description": "Aibrary is a curated platform that helps users discover, compare and explore AI tools across different categories and use cases. It’s designed to make the fast-growing AI ecosystem easier to navigate for both beginners and experienced users. \n\nThe platform organises tools by purpose, features and audience, allowing users to quickly understand what each product does and where it fits. Clear descriptions and filtering help reduce overwhelm when searching for the right solution. \n\nAibrary is useful for founders, professionals and learners who want to stay informed about AI without spending hours researching. It acts as a reference point for discovering tools and understanding how they can be applied in real workflows.",
+      "subtitle": "Curated library and discovery platform for AI tools and use cases.",
+      "tags": [""],
+      "features": [
+        "Curated directory of AI tools across multiple categories",
+        "Search and filtering to discover tools by use case",
+        "Tool descriptions and summaries for quick comparison",
+        "Continuously updated catalog",
+        "Designed for exploration and research"
+      ],
+      "use_cases": [
+        {
+          "title": "AI Tool Discovery",
+          "description": "Users can explore and discover AI tools relevant to their specific needs."
+        },
+        {
+          "title": "Research & Comparison",
+          "description": "Researchers can compare tools and identify solutions for workflows."
+        },
+        {
+          "title": "Learning the AI Landscape",
+          "description": "Users can stay informed about new and emerging AI products."
+        }
+      ],
+      "pricing": "Free to use",
+      "information": [
+        { "label": "Developer", "value": "Aibrary" },
+        { "label": "Type", "value": "AI Research Assistant" }
+      ],
+      "image": "Images/models/aibrary.webp",
+      "link": "https://www.aibrary.ai/"
+    },
+    {
+      "id": 164,
+      "name": "PrepAI",
+      "category": ["jobs", "learning", "assistants"],
+      "type": "Interview Preparation Tool",
+      "description": "PrepAI is an AI-powered learning and preparation tool focused on helping users practise and improve through guided exercises. It supports structured preparation by generating questions, scenarios and feedback based on user goals. \n\nUsers can practise topics step by step, receive explanations and identify gaps in their understanding. This makes preparation more interactive and targeted compared to passive reading or static materials. \n\nPrepAI is especially helpful for students and professionals preparing for exams, interviews or assessments. It helps users build confidence by practising actively and getting feedback as they improve.",
+      "subtitle": "AI-powered interview preparation and practice platform.",
+      "tags": [""],
+      "features": [
+        "AI-generated interview questions",
+        "Mock interview practice with feedback",
+        "Role-specific and skill-based preparation",
+        "Designed for job seekers and students",
+        "Web-based interview practice environment"
+      ],
+      "use_cases": [
+        {
+          "title": "Job Interview Preparation",
+          "description": "Candidates can practice interviews tailored to specific roles."
+        },
+        {
+          "title": "Skill Assessment",
+          "description": "Users can identify strengths and areas for improvement."
+        },
+        {
+          "title": "Career Readiness",
+          "description": "Students can prepare for entry-level and graduate interviews."
+        }
+      ],
+      "pricing": "Free trial available — paid plans unlock full interview simulations",
+      "information": [
+        { "label": "Developer", "value": "PrepAI" },
+        { "label": "Type", "value": "Interview Preparation Tool" }
+      ],
+      "image": "Images/models/prepai.webp",
+      "link": "https://prepai.co.uk/"
+    },
+    {
+      "id": 165,
+      "name": "Traackr",
+      "category": ["data", "office", "design"],
+      "type": "Influencer Marketing Platform",
+      "description": "Traackr is an influencer marketing and analytics platform that helps brands discover, manage and measure creator partnerships. It focuses on giving teams clear data around reach, engagement and audience quality rather than surface-level metrics. \n\nUsers can identify relevant creators, track campaign performance and understand how influencer activity impacts brand visibility over time. The platform brings together discovery, relationship management and reporting in one place. \n\nTraackr is widely used by marketing and brand teams that run ongoing influencer programs. It helps organisations make more informed decisions, justify spend and build long-term creator relationships based on real performance data.",
+      "subtitle": "Data-driven influencer marketing and creator intelligence platform.",
+      "tags": [""],
+      "features": [
+        "Influencer discovery and relationship management",
+        "Performance analytics for creator campaigns",
+        "Audience insights and brand safety tools",
+        "Campaign reporting and ROI measurement",
+        "Designed for enterprise marketing teams"
+      ],
+      "use_cases": [
+        {
+          "title": "Influencer Campaign Management",
+          "description": "Brands can manage and analyze influencer partnerships at scale."
+        },
+        {
+          "title": "Creator Performance Analysis",
+          "description": "Marketing teams can measure the impact of creator collaborations."
+        },
+        {
+          "title": "Audience Insights",
+          "description": "Teams can understand influencer audiences and brand fit."
+        }
+      ],
+      "pricing": "Enterprise pricing — available upon request",
+      "information": [
+        { "label": "Developer", "value": "Traackr" },
+        { "label": "Type", "value": "Influencer Marketing Platform" }
+      ],
+      "image": "Images/models/traackr.webp",
+      "link": "https://www.traackr.com/"
+    },
+    {
+      "id": 166,
+      "name": "DraftAI",
+      "category": ["documents", "assistants"],
+      "type": "AI Writing Tool",
+      "description": "Draft AI is a writing and content support tool designed to help users move from ideas to structured drafts quickly. It assists with outlining, expanding concepts and refining language across different types of written content. \n\nUsers can generate first drafts, rework sections and adjust tone depending on the audience or purpose. This reduces friction at the start of the writing process and helps users maintain momentum. \n\nDraft AI is useful for professionals, marketers and creators who write frequently. It supports faster drafting while leaving creative control and final decisions in the hands of the user.",
+      "subtitle": "AI-powered drafting assistant for faster writing workflows.",
+      "tags": [""],
+      "features": [
+        "AI-assisted content drafting",
+        "Rewriting and editing support",
+        "Designed for speed and clarity",
+        "Web-based writing interface",
+        "Supports multiple writing formats"
+      ],
+      "use_cases": [
+        {
+          "title": "Content Drafting",
+          "description": "Writers can generate first drafts quickly with AI assistance."
+        },
+        {
+          "title": "Editing & Refinement",
+          "description": "Users can polish and restructure existing content."
+        },
+        {
+          "title": "Everyday Writing",
+          "description": "Professionals can speed up emails, notes, and documents."
+        }
+      ],
+      "pricing": "Free trial available — paid plans unlock extended usage",
+      "information": [
+        { "label": "Developer", "value": "Draft AI" },
+        { "label": "Type", "value": "AI Writing Tool" }
+      ],
+      "image": "Images/models/draftai.webp",
+      "link": "https://draft.co/ai"
+    },
+    {
+      "id": 167,
+      "name": "Design Arena",
+      "category": ["design", "assistants"],
+      "type": "AI Design Platform",
+      "description": "Design Arena is a collaborative platform built to support creative teams working on visual and design-focused projects. It helps designers organise ideas, share feedback and iterate on concepts within a single workspace. \n\nTeams can collect references, explore design directions and discuss changes without long feedback loops or scattered tools. This keeps creative conversations focused and makes it easier to move projects forward together. \n\nDesign Arena is useful for agencies, product teams and freelancers who collaborate on design work. It improves clarity, reduces back-and-forth and helps teams align faster on visual decisions.",
+      "subtitle": "AI-assisted platform for generating and exploring design concepts.",
+      "tags": [""],
+      "features": [
+        "AI-driven design concept generation",
+        "Supports visual exploration and ideation",
+        "Designed for designers and creative teams",
+        "Web-based design workspace",
+        "Focus on early-stage design thinking"
+      ],
+      "use_cases": [
+        {
+          "title": "Design Ideation",
+          "description": "Designers can explore multiple creative directions quickly."
+        },
+        {
+          "title": "Creative Brainstorming",
+          "description": "Teams can use AI to spark new visual ideas."
+        },
+        {
+          "title": "Concept Validation",
+          "description": "Creators can refine concepts before production."
+        }
+      ],
+      "pricing": "Free access available — paid plans may apply for extended usage",
+      "information": [
+        { "label": "Developer", "value": "Design Arena" },
+        { "label": "Type", "value": "AI Design Platform" }
+      ],
+      "image": "Images/models/design-arena.webp",
+      "link": "https://www.designarena.ai/"
+    },
+    {
+      "id": 168,
+      "name": "MAI",
+      "category": ["assistants", "office"],
+      "type": "AI Productivity Assistant",
+      "description": "MAI is an AI-powered assistant designed to support everyday work tasks through conversation and automation. It helps users organise information, generate content and manage small workflows more efficiently. \n\nUsers can ask questions, draft text and receive summaries or suggestions without switching between multiple tools. This makes MAI a lightweight productivity layer that fits naturally into daily work. \n\nMAI is suited for professionals who want simple AI assistance without complexity. It helps save time on routine tasks while keeping users in control of outcomes.",
+      "subtitle": "AI assistant designed to support everyday productivity and workflows.",
+      "tags": [""],
+      "features": [
+        "General-purpose AI assistant for work tasks",
+        "Supports planning, writing, and organization",
+        "Designed for individual productivity",
+        "Web-based assistant interface",
+        "Focus on simplicity and usability"
+      ],
+      "use_cases": [
+        {
+          "title": "Daily Task Support",
+          "description": "Users can manage tasks, ideas, and questions in one assistant."
+        },
+        {
+          "title": "Workplace Productivity",
+          "description": "Professionals can streamline routine work activities."
+        },
+        {
+          "title": "Information Assistance",
+          "description": "Users can get quick answers and explanations."
+        }
+      ],
+      "pricing": "Free tier available — paid plans unlock additional usage",
+      "information": [
+        { "label": "Developer", "value": "MAI" },
+        { "label": "Type", "value": "AI Productivity Assistant" }
+      ],
+      "image": "Images/models/mai.webp",
+      "link": "https://www.mai.co/"
+    },
+    {
+      "id": 169,
+      "name": "SkillsMP",
+      "category": ["learning", "jobs"],
+      "type": "Skills Development Platform",
+      "description": "SkillsMP is an AI-powered learning and skills development platform designed to help individuals and teams identify skill gaps and build targeted learning paths. It focuses on mapping existing capabilities and recommending next steps for growth. \n\nUsers can assess their current skills, explore role-based requirements and receive guidance on what to learn next. This helps turn vague career goals into structured, actionable development plans. \n\nSkillsMP is useful for professionals, educators and organisations investing in upskilling. It supports continuous learning by aligning training efforts with real-world skill demands.",
+      "subtitle": "Platform for learning, skill-building, and career development.",
+      "tags": [""],
+      "features": [
+        "Skill-focused learning pathways",
+        "Career-oriented training programs",
+        "Designed for professional development",
+        "Web-based learning platform",
+        "Supports upskilling and reskilling"
+      ],
+      "use_cases": [
+        {
+          "title": "Professional Upskilling",
+          "description": "Users can build new skills aligned with career goals."
+        },
+        {
+          "title": "Career Transition",
+          "description": "Professionals can prepare for role changes or new industries."
+        },
+        {
+          "title": "Continuous Learning",
+          "description": "Learners can develop skills over time with structured content."
+        }
+      ],
+      "pricing": "Pricing varies by program — details available on request",
+      "information": [
+        { "label": "Developer", "value": "SkillsMP" },
+        { "label": "Type", "value": "Skills Development Platform" }
+      ],
+      "image": "Images/models/skillsmp.webp",
+      "link": "https://skillsmp.com/"
+    },
+    {
+      "id": 170,
+      "name": "Superdesign",
+      "category": ["design", "assistants"],
+      "type": "AI Design Workspace",
+      "description": "Superdesign is an AI-assisted design tool that helps users generate visual designs, layouts and creative assets quickly. It is built to accelerate early-stage design work and reduce the time spent starting from a blank canvas. \n\nUsers can explore design ideas, generate components and iterate on visuals with AI support. This makes it easier to prototype concepts and experiment with different styles without deep design expertise. \n\nSuperdesign is well suited to founders, marketers and designers who need fast visual output. It helps streamline creative workflows while maintaining flexibility and control over the final design.",
+      "subtitle": "AI-powered design workspace for generating UI and visual concepts.",
+      "tags": [""],
+      "features": [
+        "AI-generated UI and visual designs",
+        "Supports rapid design exploration",
+        "Designed for designers and product teams",
+        "Web-based collaborative workspace",
+        "Focus on speed and creativity"
+      ],
+      "use_cases": [
+        {
+          "title": "UI Design Exploration",
+          "description": "Designers can generate and compare UI concepts quickly."
+        },
+        {
+          "title": "Product Design Ideation",
+          "description": "Teams can explore visual directions early in the product lifecycle."
+        },
+        {
+          "title": "Creative Acceleration",
+          "description": "Creators can reduce time spent on early design drafts."
+        }
+      ],
+      "pricing": "Free tier available — paid plans unlock advanced features",
+      "information": [
+        { "label": "Developer", "value": "Superdesign" },
+        { "label": "Type", "value": "AI Design Workspace" }
+      ],
+      "image": "Images/models/superdesign.webp",
+      "link": "https://app.superdesign.dev/"
+    },
+    {
+      "id": 171,
+      "name": "Collegize",
+      "category": ["learning", "office", "assistants"],
+      "type": "Student Collaboration Platform",
+      "description": "Collegize is an AI-powered community and engagement platform designed for students, alumni and educational organisations. It helps institutions create private digital spaces where members can connect, share resources and collaborate more easily. \n\nAI features support content moderation, personalised recommendations and smarter communication within the community. This helps keep discussions relevant and ensures users see updates, events and opportunities that matter to them. \n\nCollegize is commonly used by universities, student groups and alumni networks. It strengthens engagement by turning fragmented communication into a structured, ongoing community experience.",
+      "subtitle": "AI-enabled platform for student communities and collaboration.",
+      "tags": [""],
+      "features": [
+        "Community spaces for students and organizations",
+        "AI-assisted engagement and support tools",
+        "Event and resource sharing features",
+        "Designed for educational institutions",
+        "Web-based collaboration platform"
+      ],
+      "use_cases": [
+        {
+          "title": "Student Engagement",
+          "description": "Universities can foster stronger student communities."
+        },
+        {
+          "title": "Campus Collaboration",
+          "description": "Students can collaborate, share resources, and organize events."
+        },
+        {
+          "title": "Educational Support",
+          "description": "Institutions can provide AI-assisted student resources."
+        }
+      ],
+      "pricing": "Pricing available on request — institution-based plans",
+      "information": [
+        { "label": "Developer", "value": "Collegize" },
+        { "label": "Type", "value": "Student Collaboration Platform" }
+      ],
+      "image": "Images/models/collegize.webp",
+      "link": "https://www.collegize.ai/"
+    },
+    {
+      "id": 172,
+      "name": "PostSyncer",
+      "category": ["office", "design"],
+      "type": "Workflow Automation Tool",
+      "description": "PostSyncer is an AI-assisted social media scheduling and content management tool built to simplify multi-platform publishing. It helps users plan, write and distribute posts consistently across different social channels. \n\nThe platform uses AI to assist with caption writing, hashtag suggestions and post optimisation. This reduces the manual effort required to maintain an active and coherent social presence. \n\nPostSyncer is well suited to creators, small businesses and marketing teams. It streamlines social workflows and helps users stay consistent without spending excessive time on daily posting.",
+      "subtitle": "Tool for synchronizing and automating content posting workflows.",
+      "tags": [""],
+      "features": [
+        "Automated content posting across platforms",
+        "Workflow synchronization tools",
+        "Designed for content and marketing teams",
+        "Reduces manual publishing effort",
+        "Web-based automation interface"
+      ],
+      "use_cases": [
+        {
+          "title": "Content Distribution",
+          "description": "Teams can automate posting content to multiple platforms."
+        },
+        {
+          "title": "Marketing Workflow Automation",
+          "description": "Marketers can streamline repetitive publishing tasks."
+        },
+        {
+          "title": "Cross-Platform Consistency",
+          "description": "Organizations can ensure consistent posting schedules."
+        }
+      ],
+      "pricing": "Free trial available — paid plans unlock advanced automation",
+      "information": [
+        { "label": "Developer", "value": "PostSyncer" },
+        { "label": "Type", "value": "Workflow Automation Tool" }
+      ],
+      "image": "Images/models/postsyncer.webp",
+      "link": "https://postsyncer.com/"
+    },
+    {
+      "id": 173,
+      "name": "Mockin",
+      "category": ["jobs", "learning", "assistants"],
+      "type": "Mock Interview Platform",
+      "description": "Mockin is an AI-powered mock interview and career preparation platform designed to help users practice real-world interview scenarios. It simulates interviews across different roles and industries, providing structured questions and guided practice sessions. \n\nUsers receive feedback on their responses, communication style and clarity, helping them identify areas for improvement. This allows candidates to refine answers and build confidence before facing live interviews. \n\nMockin is especially useful for job seekers, students and career switchers. It turns interview preparation into a repeatable, low-pressure process that supports measurable improvement.",
+      "subtitle": "AI-powered mock interviews with feedback for job seekers.",
+      "tags": [""],
+      "features": [
+        "AI-driven mock interview simulations",
+        "Role-specific and skill-based interview questions",
+        "Automated feedback on answers and delivery",
+        "Practice sessions designed to mirror real interviews",
+        "Web-based interview environment"
+      ],
+      "use_cases": [
+        {
+          "title": "Interview Practice",
+          "description": "Job seekers can rehearse interviews in a realistic environment before real interviews."
+        },
+        {
+          "title": "Skill Gap Identification",
+          "description": "Users can identify strengths and weaknesses through structured feedback."
+        },
+        {
+          "title": "Career Preparation",
+          "description": "Candidates can improve confidence and readiness for job opportunities."
+        }
+      ],
+      "pricing": "Free trial available — paid plans unlock full interview simulations",
+      "information": [
+        { "label": "Developer", "value": "Mockin" },
+        { "label": "Type", "value": "Mock Interview Platform" }
+      ],
+      "image": "Images/models/mockin.webp",
+      "link": "https://mockin.work/"
+    },
+    {
+      "id": 174,
+      "name": "Success AI",
+      "category": ["office", "assistants", "finance"],
+      "type": "AI Sales & Outreach Platform",
+      "description": "Success AI is a platform focused on helping users grow businesses and online presence through AI-driven content and outreach tools. It supports tasks such as lead generation, email campaigns and performance tracking. \n\nThe platform uses AI to create and optimise messages, personalise outreach and analyse results. This helps users scale communication efforts while keeping messaging relevant and targeted. \n\nSuccess AI is aimed at founders, marketers and sales teams. It reduces manual workload while improving consistency and effectiveness across growth-focused workflows.",
+      "subtitle": "AI-powered cold email, lead generation, and sales automation platform.",
+      "tags": [""],
+      "features": [
+        "AI-generated cold email copy",
+        "Built-in lead database for prospecting",
+        "Automated email sending and follow-ups",
+        "Campaign analytics and performance tracking",
+        "Designed for sales and growth teams"
+      ],
+      "use_cases": [
+        {
+          "title": "Cold Email Outreach",
+          "description": "Sales teams can generate and send personalized outreach emails at scale."
+        },
+        {
+          "title": "Lead Generation",
+          "description": "Founders and marketers can discover and contact new prospects."
+        },
+        {
+          "title": "Sales Pipeline Growth",
+          "description": "Teams can automate outreach to consistently feed the sales pipeline."
+        }
+      ],
+      "pricing": "Plans start around $35/month — higher tiers available for teams and agencies",
+      "information": [
+        { "label": "Developer", "value": "Success AI" },
+        { "label": "Type", "value": "AI Sales & Outreach Platform" }
+      ],
+      "image": "Images/models/success-ai.webp",
+      "link": "https://www.success.ai/"
+    },
+    {
+      "id": 175,
+      "name": "Mentorbook",
+      "category": ["learning", "jobs"],
+      "type": "Mentorship & Learning Platform",
+      "description": "Mentorbook is an AI-powered personal development platform that helps users learn from mentors, experts and curated knowledge across business, career and personal growth topics. It combines short-form insights with structured learning paths to make self-improvement easier to follow. \n\nUsers can explore bite-sized lessons, frameworks and advice drawn from experienced professionals, with AI helping surface relevant content based on goals and interests. This makes it easier to focus on what matters without being overwhelmed by long courses or books. \n\nMentorbook is designed for entrepreneurs, professionals and lifelong learners who want practical guidance. It works well as a daily learning companion that supports steady progress rather than one-off learning sessions.",
+      "subtitle": "AI-supported mentorship and learning platform for personal growth.",
+      "tags": [""],
+      "features": [
+        "Access to mentors and learning resources",
+        "AI-assisted recommendations for growth paths",
+        "Content focused on personal and professional development",
+        "Designed for self-improvement and career growth",
+        "Web-based learning platform"
+      ],
+      "use_cases": [
+        {
+          "title": "Personal Development",
+          "description": "Users can follow structured growth paths guided by mentors and AI suggestions."
+        },
+        {
+          "title": "Career Guidance",
+          "description": "Professionals can gain insights and advice to advance their careers."
+        },
+        {
+          "title": "Continuous Learning",
+          "description": "Learners can build habits around ongoing education and improvement."
+        }
+      ],
+      "pricing": "Free access available — premium mentorship features available on paid plans",
+      "information": [
+        { "label": "Developer", "value": "Mentorbook" },
+        { "label": "Type", "value": "Mentorship & Learning Platform" }
+      ],
+      "image": "Images/models/mentorbook.webp",
+      "link": "https://www.mentorbook.ai/"
+    },
+    {
+      "id": 176,
+      "name": "Medo",
+      "category": ["development"],
+      "type": "Developer Tooling",
+      "description": "Medo is a developer-focused AI tool that helps teams understand, document and maintain complex codebases more efficiently. It uses AI to analyse projects and generate clear explanations of how systems work and how components connect. \n\nBy turning unfamiliar code into readable summaries and structured documentation, Medo helps reduce onboarding time for new developers and lowers the risk of knowledge being trapped with a few team members. This makes collaboration easier across growing teams. \n\nMedo is especially useful for startups and engineering teams managing fast-moving projects. It supports long-term maintainability by keeping technical knowledge accessible and up to date.",
+      "subtitle": "Developer tooling for building, testing, and shipping software faster.",
+      "tags": [""],
+      "features": [
+        "Developer-focused tooling for productivity",
+        "Supports modern software development workflows",
+        "Designed for speed and simplicity",
+        "Web-based developer platform",
+        "Focused on reducing development friction"
+      ],
+      "use_cases": [
+        {
+          "title": "Developer Productivity",
+          "description": "Engineers can streamline development tasks and reduce repetitive work."
+        },
+        {
+          "title": "Workflow Optimization",
+          "description": "Teams can improve development velocity with better tooling."
+        },
+        {
+          "title": "Rapid Iteration",
+          "description": "Developers can test and ship changes more efficiently."
+        }
+      ],
+      "pricing": "Free tier available — paid plans unlock advanced features",
+      "information": [
+        { "label": "Developer", "value": "Medo" },
+        { "label": "Type", "value": "Developer Tooling" }
+      ],
+      "image": "Images/models/medo.webp",
+      "link": "https://medo.dev/"
+    },
+    {
+      "id": 177,
+      "name": "Flova AI",
+      "category": ["design", "audio", "assistants"],
+      "type": "AI Avatar Platform",
+      "description": "Flova AI is a data and analytics platform that helps businesses turn complex datasets into clear insights through AI-driven analysis. It focuses on simplifying data exploration so users can understand trends, patterns and performance without advanced technical skills. \n\nUsers can connect data sources, ask questions in plain language and receive visual outputs that explain what is happening and why it matters. This reduces reliance on manual analysis and speeds up decision-making across teams. \n\nFlova AI is suited to business teams, analysts and decision-makers who want faster access to insights. It bridges the gap between raw data and actionable understanding in everyday workflows.",
+      "subtitle": "AI avatars and media generation for presentations and video content.",
+      "tags": [""],
+      "features": [
+        "AI-generated avatars for video content",
+        "Text-to-video workflows with avatars",
+        "Supports voice and visual customization",
+        "Designed for presentations and explainers",
+        "Web-based avatar creation platform"
+      ],
+      "use_cases": [
+        {
+          "title": "Presentation Videos",
+          "description": "Teams can create avatar-led presentations without recording live video."
+        },
+        {
+          "title": "Training & Onboarding",
+          "description": "Organizations can produce training videos with consistent presenters."
+        },
+        {
+          "title": "Marketing Explainers",
+          "description": "Marketers can generate explainer videos quickly using AI avatars."
+        }
+      ],
+      "pricing": "Free trial available — paid plans unlock video length and export options",
+      "information": [
+        { "label": "Developer", "value": "Flova AI" },
+        { "label": "Type", "value": "AI Avatar Platform" }
+      ],
+      "image": "Images/models/flova-ai.webp",
+      "link": "https://www.flova.ai/en/"
+    },
+    {
+      "id": 178,
+      "name": "ZeroGPT",
+      "category": ["research", "documents", "office"],
+      "type": "AI Content Detection Tool",
+      "description": "ZeroGPT is an AI-detection and content analysis tool designed to evaluate whether text was likely written by a human or generated by AI. It scans content and provides probability-based assessments to support transparency and review. \n\nThe tool is commonly used by educators, recruiters and publishers who need to verify originality or understand how AI may have influenced written work. It offers clear results without requiring technical expertise. \n\nZeroGPT fits into review and moderation workflows where trust and authenticity matter. It supports responsible AI usage by helping users assess and manage generated content.",
+      "subtitle": "Tool for detecting AI-generated text and analyzing content authenticity.",
+      "tags": [""],
+      "features": [
+        "AI-generated text detection",
+        "Supports multiple languages",
+        "Probability-based detection scoring",
+        "Designed for educators and publishers",
+        "Web-based analysis interface"
+      ],
+      "use_cases": [
+        {
+          "title": "Academic Integrity",
+          "description": "Educators can assess whether student submissions may be AI-generated."
+        },
+        {
+          "title": "Content Verification",
+          "description": "Publishers can evaluate authenticity of written content."
+        },
+        {
+          "title": "Editorial Review",
+          "description": "Editors can flag content for further review."
+        }
+      ],
+      "pricing": "Free plan available — paid plans unlock higher limits and API access",
+      "information": [
+        { "label": "Developer", "value": "ZeroGPT" },
+        { "label": "Type", "value": "AI Content Detection Tool" },
+        { "label": "API", "value": "Available on paid plans" }
+      ],
+      "image": "Images/models/zerogpt.webp",
+      "link": "https://www.zerogpt.com/"
+    },
+    {
+      "id": 179,
+      "name": "LiveDocs",
+      "category": ["documents", "development"],
+      "type": "AI Documentation Tool",
+      "description": "LiveDocs is an AI-powered document workspace designed for creating, editing and collaborating on living documents that evolve over time. It combines traditional document editing with AI assistance to help users draft, refine and maintain content more efficiently. \n\nThe platform supports real-time collaboration, structured knowledge and AI-powered suggestions that help clarify ideas, summarise sections and keep documents consistent as they grow. This makes it easier to manage complex or long-term documentation without losing context. \n\nLiveDocs is well suited for teams, researchers and knowledge workers who rely on shared documents. It turns static files into continuously updated resources that remain useful long after they are first created.",
+      "subtitle": "AI-powered documentation generation and management platform.",
+      "tags": [""],
+      "features": [
+        "AI-assisted documentation creation",
+        "Designed for technical and product documentation",
+        "Supports structured documentation workflows",
+        "Web-based documentation platform",
+        "Focus on keeping docs up to date"
+      ],
+      "use_cases": [
+        {
+          "title": "Technical Documentation",
+          "description": "Developers can generate and maintain accurate documentation faster."
+        },
+        {
+          "title": "Product Docs",
+          "description": "Teams can keep user-facing documentation aligned with product changes."
+        },
+        {
+          "title": "Knowledge Management",
+          "description": "Organizations can centralize documentation in one platform."
+        }
+      ],
+      "pricing": "Free tier available — paid plans unlock advanced features",
+      "information": [
+        { "label": "Developer", "value": "LiveDocs" },
+        { "label": "Type", "value": "AI Documentation Tool" }
+      ],
+      "image": "Images/models/livedocs.webp",
+      "link": "https://livedocs.com/docs/ai"
+    },
+    {
+      "id": 180,
+      "name": "Eye2.ai",
+      "category": ["research", "data"],
+      "type": "AI Research Tool",
+      "description": "Eye2.ai is an AI-driven computer vision platform focused on analysing visual data such as images and video to extract meaningful insights. It helps organisations understand what is happening in visual content without manual review. \n\nThe system can be trained to recognise patterns, objects or behaviours relevant to specific use cases, allowing teams to automate monitoring and analysis tasks. This reduces human effort while improving speed and consistency. \n\nEye2.ai is commonly used in security, operations and analytics contexts. It supports businesses that need scalable visual understanding as part of their data and decision-making processes.",
+      "subtitle": "AI-driven visual analysis and research platform.",
+      "tags": [""],
+      "features": [
+        "AI-based visual and data analysis",
+        "Designed for research and investigation workflows",
+        "Supports complex data interpretation",
+        "Web-based research interface",
+        "Focus on insight discovery"
+      ],
+      "use_cases": [
+        {
+          "title": "Research Analysis",
+          "description": "Researchers can analyze complex datasets and visual information."
+        },
+        {
+          "title": "Insight Discovery",
+          "description": "Teams can uncover patterns and trends using AI-assisted analysis."
+        },
+        {
+          "title": "Exploratory Research",
+          "description": "Users can investigate data visually to generate hypotheses."
+        }
+      ],
+      "pricing": "Pricing available on request",
+      "information": [
+        { "label": "Developer", "value": "Eye2.ai" },
+        { "label": "Type", "value": "AI Research Tool" }
+      ],
+      "image": "Images/models/eye2-ai.webp",
+      "link": "https://www.eye2.ai/"
+    },
+    {
+      "id": 181,
+      "name": "Koke AI",
+      "category": ["assistants", "office"],
+      "type": "AI Assistant",
+      "description": "Koke AI is a conversational AI platform designed to help businesses deploy chat-based assistants for customer support, sales and internal workflows. It allows teams to build assistants that can answer questions, guide users and automate common interactions. \n\nThe platform focuses on ease of setup, enabling non-technical users to configure conversational flows while still supporting more advanced customisation. AI responses are designed to stay clear, relevant and aligned with business goals. \n\nKoke AI is useful for companies looking to reduce support workload and improve response times. It helps teams scale conversations while maintaining a consistent user experience.",
+      "subtitle": "General-purpose AI assistant for workplace productivity.",
+      "tags": [""],
+      "features": [
+        "General-purpose AI assistant",
+        "Supports writing, planning, and task assistance",
+        "Designed for everyday work scenarios",
+        "Web-based assistant interface",
+        "Focus on ease of use"
+      ],
+      "use_cases": [
+        {
+          "title": "Workplace Assistance",
+          "description": "Professionals can get help with routine tasks and questions."
+        },
+        {
+          "title": "Content Support",
+          "description": "Users can draft and refine written content."
+        },
+        {
+          "title": "Task Organization",
+          "description": "Individuals can manage tasks and ideas with AI help."
+        }
+      ],
+      "pricing": "Free tier available — paid plans unlock extended usage",
+      "information": [
+        { "label": "Developer", "value": "Koke AI" },
+        { "label": "Type", "value": "AI Assistant" }
+      ],
+      "image": "Images/models/koke-ai.webp",
+      "link": "https://www.koke.ai/"
+    },
+    {
+      "id": 182,
+      "name": "Glue",
+      "category": ["assistants", "office"],
+      "type": "AI Collaboration Assistant",
+      "description": "Glue is an AI-powered knowledge and collaboration platform that connects people, documents and conversations in one workspace. It helps teams organise information and surface relevant context when it is needed. \n\nBy analysing content across tools, Glue highlights relationships between projects, discussions and resources, reducing time spent searching or switching between apps. This supports smoother collaboration and better decision-making. \n\nGlue is designed for modern teams that work across multiple tools and channels. It acts as a connective layer that keeps knowledge accessible and aligned across the organisation.",
+      "subtitle": "AI assistant designed to support meetings and team collaboration.",
+      "tags": [""],
+      "features": [
+        "AI support for meetings and collaboration",
+        "Designed to assist team communication",
+        "Supports note-taking and summaries",
+        "Integrates into team workflows",
+        "Web-based collaboration assistant"
+      ],
+      "use_cases": [
+        {
+          "title": "Meeting Assistance",
+          "description": "Teams can capture notes and summaries automatically."
+        },
+        {
+          "title": "Team Collaboration",
+          "description": "Organizations can improve communication and alignment."
+        },
+        {
+          "title": "Knowledge Sharing",
+          "description": "Meeting outputs can be shared and reused across teams."
+        }
+      ],
+      "pricing": "Free tier available — paid plans unlock advanced collaboration features",
+      "information": [
+        { "label": "Developer", "value": "Glue AI" },
+        { "label": "Type", "value": "AI Collaboration Assistant" }
+      ],
+      "image": "Images/models/glue.webp",
+      "link": "https://glue.ai/"
+    },
+    {
+      "id": 183,
+      "name": "Groas",
+      "category": ["data", "assistants"],
+      "type": "AI Analytics Platform",
+      "description": "Groas is an AI-powered growth and analytics platform designed to help businesses understand what drives user engagement and conversions. It focuses on turning behavioural data into clear insights that teams can act on. \n\nThe platform analyses user interactions, highlights patterns and suggests areas for optimisation across products or marketing funnels. By presenting findings in plain language and visual summaries, it helps non-technical teams make informed decisions faster. \n\nGroas is well suited to product teams, marketers and founders who want to improve performance without digging through raw analytics. It supports continuous experimentation and data-informed growth strategies.",
+      "subtitle": "AI-powered analytics platform for extracting insights from business data.",
+      "tags": [""],
+      "features": [
+        "AI-driven data analysis and insight generation",
+        "Natural-language interaction with datasets",
+        "Designed to simplify analytics for non-technical users",
+        "Supports business intelligence workflows",
+        "Web-based analytics interface"
+      ],
+      "use_cases": [
+        {
+          "title": "Business Intelligence",
+          "description": "Teams can generate insights from data without building complex dashboards."
+        },
+        {
+          "title": "Decision Support",
+          "description": "Leaders can use AI-generated summaries to support strategic decisions."
+        },
+        {
+          "title": "Data Exploration",
+          "description": "Users can explore datasets using conversational queries."
+        }
+      ],
+      "pricing": "Pricing available on request",
+      "information": [
+        { "label": "Developer", "value": "Groas" },
+        { "label": "Type", "value": "AI Analytics Platform" }
+      ],
+      "image": "Images/models/groas.webp",
+      "link": "https://groas.ai/"
+    },
+    {
+      "id": 184,
+      "name": "Spatial AI",
+      "category": ["design", "research", "data"],
+      "type": "Spatial Intelligence Platform",
+      "description": "Spatial AI uses artificial intelligence to analyse location-based data and turn it into actionable insights. It helps organisations understand movement patterns, geographic behaviour and spatial trends at scale. \n\nBy combining spatial data with AI models, the platform supports use cases such as urban planning, logistics optimisation and market analysis. This allows teams to see how physical space impacts decisions and outcomes. \n\nSpatial AI is designed for enterprises and researchers working with geographic data. It bridges the gap between raw location information and practical understanding that informs planning and strategy.",
+      "subtitle": "AI-powered spatial analytics for understanding movement, places, and environments.",
+      "tags": [""],
+      "features": [
+        "Spatial data analysis and enrichment",
+        "AI models focused on location and movement intelligence",
+        "Supports geospatial and behavioral insights",
+        "Designed for enterprise and research use cases",
+        "API-first architecture for integrations"
+      ],
+      "use_cases": [
+        {
+          "title": "Location Intelligence",
+          "description": "Organizations can analyze how people move through physical spaces."
+        },
+        {
+          "title": "Urban & Mobility Research",
+          "description": "Researchers can study spatial patterns and environmental behavior."
+        },
+        {
+          "title": "Enterprise Analytics",
+          "description": "Businesses can integrate spatial insights into decision-making systems."
+        }
+      ],
+      "pricing": "Enterprise pricing — available upon request",
+      "information": [
+        { "label": "Developer", "value": "Spatial AI" },
+        { "label": "Type", "value": "Spatial Intelligence Platform" },
+        { "label": "API", "value": "Available" }
+      ],
+      "image": "Images/models/spatial-ai.webp",
+      "link": "https://www.spaitial.ai/"
+    },
+    {
+      "id": 185,
+      "name": "Layer AI",
+      "category": ["design", "development"],
+      "type": "AI Asset Generation Platform",
+      "description": "Layer AI is a platform designed to help developers and teams manage, version and deploy machine learning models more efficiently. It focuses on making ML workflows easier to organise, track and reproduce as projects grow. \n\nThe platform provides tools for handling datasets, experiments and model versions in a structured way. This helps teams understand what changed, why results improved or degraded and how models evolve over time. \n\nLayer AI is well suited for engineering and data science teams working on production AI systems. It reduces operational complexity and supports collaboration by keeping machine learning work transparent and well documented.",
+      "subtitle": "AI platform for generating and managing visual assets at scale.",
+      "tags": [""],
+      "features": [
+        "AI-generated visual assets for creative workflows",
+        "Designed for scalable asset production",
+        "Supports integration into production pipelines",
+        "Focus on consistency and efficiency",
+        "Web-based management interface"
+      ],
+      "use_cases": [
+        {
+          "title": "Creative Asset Production",
+          "description": "Teams can generate large volumes of visual assets efficiently."
+        },
+        {
+          "title": "Design Systems",
+          "description": "Organizations can maintain consistent visual styles across outputs."
+        },
+        {
+          "title": "Pipeline Automation",
+          "description": "Studios can integrate AI asset generation into existing workflows."
+        }
+      ],
+      "pricing": "Pricing available on request",
+      "information": [
+        { "label": "Developer", "value": "Layer AI" },
+        { "label": "Type", "value": "AI Asset Generation Platform" }
+      ],
+      "image": "Images/models/layer-ai.webp",
+      "link": "https://www.layerai.org/"
+    },
+    {
+      "id": 186,
+      "name": "Dropstone",
+      "category": ["development", "data"],
+      "type": "Developer Platform",
+      "description": "Dropstone is an AI-powered product analytics and insight platform built to help teams understand user behaviour and product performance. It turns usage data into clear explanations rather than raw dashboards. \n\nBy analysing events, funnels and trends, Dropstone surfaces insights about how users interact with products and where improvements can be made. The platform emphasises clarity so that insights are accessible to both technical and non-technical stakeholders. \n\nDropstone is useful for product managers, founders and growth teams. It helps guide decisions by connecting user behaviour directly to product strategy and outcomes.",
+      "subtitle": "Platform for building, deploying, and managing software systems.",
+      "tags": [""],
+      "features": [
+        "Developer platform for managing application workflows",
+        "Supports scalable backend and data-driven systems",
+        "Designed for engineering teams",
+        "Focus on reliability and performance",
+        "Web-based management dashboard"
+      ],
+      "use_cases": [
+        {
+          "title": "Application Infrastructure",
+          "description": "Developers can manage and scale backend systems."
+        },
+        {
+          "title": "Engineering Operations",
+          "description": "Teams can streamline operational aspects of software delivery."
+        },
+        {
+          "title": "System Management",
+          "description": "Organizations can centralize control over technical systems."
+        }
+      ],
+      "pricing": "Pricing available on request",
+      "information": [
+        { "label": "Developer", "value": "Dropstone" },
+        { "label": "Type", "value": "Developer Platform" }
+      ],
+      "image": "Images/models/dropstone.webp",
+      "link": "https://www.dropstone.io/"
+    },
+    {
+      "id": 187,
+      "name": "Coauthor",
+      "category": ["documents", "assistants"],
+      "type": "AI Writing Assistant",
+      "description": "Coauthor is an AI-powered writing and collaboration tool designed to help individuals and teams create long-form content more efficiently. It supports drafting, editing and refining text while keeping structure and clarity intact. \n\nThe platform assists users throughout the writing process, from outlining ideas to improving flow and coherence across sections. By offering contextual suggestions, it helps writers stay focused without interrupting their creative process. \n\nCoauthor is useful for professionals, researchers and content teams working on reports, articles or documentation. It acts as a steady writing companion that improves quality while reducing time spent revising.",
+      "subtitle": "AI co-writing tool for drafting and refining written content.",
+      "tags": [""],
+      "features": [
+        "AI-assisted writing and editing",
+        "Designed for collaboration between humans and AI",
+        "Supports long-form and short-form writing",
+        "Focus on clarity and flow",
+        "Web-based writing environment"
+      ],
+      "use_cases": [
+        {
+          "title": "Collaborative Writing",
+          "description": "Writers can co-create content with AI assistance."
+        },
+        {
+          "title": "Draft Refinement",
+          "description": "Users can improve tone, structure, and clarity."
+        },
+        {
+          "title": "Content Creation",
+          "description": "Teams can accelerate writing workflows."
+        }
+      ],
+      "pricing": "Free tier available — paid plans unlock extended usage",
+      "information": [
+        { "label": "Developer", "value": "Coauthor" },
+        { "label": "Type", "value": "AI Writing Assistant" }
+      ],
+      "image": "Images/models/coauthor.webp",
+      "link": "https://coauthor.ai/"
+    },
+    {
+      "id": 188,
+      "name": "LLM Pulse",
+      "category": ["research", "development", "data"],
+      "type": "AI Research & Monitoring Tool",
+      "description": "LLM Pulse is a monitoring and analytics platform focused on tracking the performance and reliability of large language model applications. It helps teams understand how AI systems behave once they are deployed in real-world environments. \n\nThe platform provides visibility into usage patterns, response quality and potential issues, allowing teams to identify problems early and improve system performance over time. This supports safer and more predictable AI deployments. \n\nLLM Pulse is aimed at developers and organisations building products on top of language models. It helps ensure AI-powered features remain reliable, measurable and aligned with business expectations.",
+      "subtitle": "Platform for tracking trends, updates, and performance in the LLM ecosystem.",
+      "tags": [""],
+      "features": [
+        "Monitoring of large language model developments",
+        "Insights into AI tooling and ecosystem changes",
+        "Designed for researchers and developers",
+        "Web-based research dashboard",
+        "Focus on ecosystem awareness"
+      ],
+      "use_cases": [
+        {
+          "title": "AI Research",
+          "description": "Researchers can track changes and trends in LLM technology."
+        },
+        {
+          "title": "Developer Awareness",
+          "description": "Engineers can stay informed about model updates and tools."
+        },
+        {
+          "title": "Ecosystem Analysis",
+          "description": "Teams can understand how the AI landscape is evolving."
+        }
+      ],
+      "pricing": "Free access available — premium insights may be offered",
+      "information": [
+        { "label": "Developer", "value": "LLM Pulse" },
+        { "label": "Type", "value": "AI Research & Monitoring Tool" }
+      ],
+      "image": "Images/models/llm-pulse.webp",
+      "link": "https://llmpulse.ai/"
+    },
+    {
+      "id": 189,
+      "name": "2-B.ai",
+      "category": ["assistants", "office"],
+      "type": "AI Assistant",
+      "description": "2-b.ai is an AI platform focused on helping teams explore ideas, scenarios and decisions through structured reasoning and analysis. It supports problem-solving by breaking complex questions into clearer components that are easier to evaluate. \n\nUsers can input challenges or concepts and receive guided exploration that highlights options, trade-offs and implications. This makes it easier to think through decisions without jumping straight to conclusions. \n\n2-b.ai is useful for strategists, founders and teams working on planning or innovation. It acts as a thinking partner that helps clarify direction and reduce uncertainty in early-stage decisions.",
+      "subtitle": "General-purpose AI assistant for work and productivity tasks.",
+      "tags": [""],
+      "features": [
+        "General-purpose AI assistant",
+        "Supports writing, planning, and ideation",
+        "Designed for workplace productivity",
+        "Web-based assistant interface",
+        "Focus on simplicity and speed"
+      ],
+      "use_cases": [
+        {
+          "title": "Everyday Work Assistance",
+          "description": "Users can get help with common work-related tasks."
+        },
+        {
+          "title": "Content Support",
+          "description": "Professionals can draft and refine text quickly."
+        },
+        {
+          "title": "Idea Generation",
+          "description": "Users can brainstorm and organize ideas."
+        }
+      ],
+      "pricing": "Free tier available — paid plans unlock additional usage",
+      "information": [
+        { "label": "Developer", "value": "2-B.ai" },
+        { "label": "Type", "value": "AI Assistant" }
+      ],
+      "image": "Images/models/2-b-ai.webp",
+      "link": "https://2-b.ai/"
+    },
+    {
+      "id": 190,
+      "name": "Process Street",
+      "category": ["office", "finance", "assistants"],
+      "type": "Workflow Automation Platform",
+      "description": "Process Street is a workflow and process management platform that helps teams document, run and automate recurring tasks. It uses AI to assist with building workflows, improving documentation and identifying inefficiencies. \n\nTeams can create structured checklists, automate steps and ensure processes are followed consistently across the organisation. AI features help generate procedures faster and keep them up to date as operations evolve. \n\nProcess Street is designed for operations, compliance and project teams. It helps businesses scale reliably by turning best practices into repeatable, trackable workflows.",
+      "subtitle": "Process management and workflow automation platform with AI assistance.",
+      "tags": [""],
+      "features": [
+        "Workflow and process automation",
+        "AI-assisted checklist and process creation",
+        "Designed for operations and compliance teams",
+        "Supports approvals and audits",
+        "Integrates with business tools"
+      ],
+      "use_cases": [
+        {
+          "title": "Process Standardization",
+          "description": "Teams can document and automate recurring workflows."
+        },
+        {
+          "title": "Operational Compliance",
+          "description": "Organizations can ensure processes are followed consistently."
+        },
+        {
+          "title": "Team Efficiency",
+          "description": "Businesses can reduce manual process management."
+        }
+      ],
+      "pricing": "Plans start around $100/month — enterprise plans available",
+      "information": [
+        { "label": "Developer", "value": "Process Street" },
+        { "label": "Type", "value": "Workflow Automation Platform" }
+      ],
+      "image": "Images/models/process-street.webp",
+      "link": "https://www.process.st/"
+    },
+    {
+      "id": 191,
+      "name": "Runable",
+      "category": ["development", "office", "assistants"],
+      "type": "Agentic Workflow Platform",
+      "description": "Runable is an AI-driven workflow and execution platform designed to help teams turn ideas into repeatable, automated processes. It focuses on connecting tasks, tools and logic into clear, runnable workflows. \n\nUsers can define processes, trigger actions and coordinate steps across systems without heavy engineering effort. AI helps simplify setup, reduce manual work and keep workflows understandable as they grow more complex. \n\nRunable is suited to operations, product and engineering teams that want reliable execution without constant oversight. It supports scaling work by making processes predictable, automated and easy to maintain.",
+      "subtitle": "Platform for running and managing agent-based and automated workflows.",
+      "tags": [""],
+      "features": [
+        "Agent-based workflow execution",
+        "Designed for automation and orchestration",
+        "Supports complex multi-step runs",
+        "Developer-focused platform",
+        "Web-based control interface"
+      ],
+      "use_cases": [
+        {
+          "title": "Workflow Automation",
+          "description": "Teams can automate complex processes using agent-based logic."
+        },
+        {
+          "title": "Agent Orchestration",
+          "description": "Developers can manage and run AI-driven workflows."
+        },
+        {
+          "title": "Operational Automation",
+          "description": "Organizations can reduce manual execution of repeatable tasks."
+        }
+      ],
+      "pricing": "Pricing available on request",
+      "information": [
+        { "label": "Developer", "value": "Runable" },
+        { "label": "Type", "value": "Agentic Workflow Platform" }
+      ],
+      "image": "Images/models/runable.webp",
+      "link": "https://runable.com/"
     }
   ]
