@@ -5660,5 +5660,377 @@
       ],
       "image": "Images/models/imagineart.webp",
       "link": "https://www.imagine.art/"
+    },
+    {
+      "id": 143,
+      "name": "Caimera",
+      "category": ["design", "assistants"],
+      "type": "AI Image Generator",
+      "description": "",
+      "subtitle": "AI image generation platform focused on fast iteration and creator-friendly workflows.",
+      "tags": [""],
+      "features": [
+        "Text-to-image generation with multiple artistic styles",
+        "Prompt-based image refinement and variation tools",
+        "Designed for rapid creative iteration and experimentation",
+        "Web-based interface with account-based history",
+        "Supports commercial use under paid plans"
+      ],
+      "use_cases": [
+        {
+          "title": "Concept Art & Ideation",
+          "description": "Designers can quickly explore visual concepts and styles before committing to final artwork."
+        },
+        {
+          "title": "Marketing & Social Assets",
+          "description": "Teams can generate on-brand visuals for ads, landing pages, and social media campaigns."
+        },
+        {
+          "title": "Creative Experimentation",
+          "description": "Creators can test prompts and styles rapidly to discover new visual directions."
+        }
+      ],
+      "pricing": "Free usage available — paid plans unlock higher generation limits and commercial usage",
+      "information": [
+        { "label": "Developer", "value": "Caimera" },
+        { "label": "Type", "value": "AI Image Generator" }
+      ],
+      "image": "Images/models/caimera.webp",
+      "link": "https://www.caimera.ai/"
+    },
+    {
+      "id": 144,
+      "name": "Pandada AI",
+      "category": ["documents", "assistants", "office"],
+      "type": "AI Writing Assistant",
+      "description": "",
+      "subtitle": "AI writing tool for drafting, editing, and improving everyday content.",
+      "tags": [""],
+      "features": [
+        "AI-assisted content drafting and rewriting",
+        "Tone and clarity improvements for written text",
+        "Designed for short-form and long-form writing tasks",
+        "Web-based editor with instant suggestions",
+        "Supports multiple common writing use cases"
+      ],
+      "use_cases": [
+        {
+          "title": "Professional Writing",
+          "description": "Users can improve emails, reports, and internal documents with clearer and more polished language."
+        },
+        {
+          "title": "Content Creation",
+          "description": "Writers can draft blog posts, articles, and marketing copy faster with AI assistance."
+        },
+        {
+          "title": "Editing & Proofreading",
+          "description": "Users can refine existing text for grammar, tone, and readability."
+        }
+      ],
+      "pricing": "Free trial available — paid plans unlock extended usage and premium features",
+      "information": [
+        { "label": "Developer", "value": "Pandada AI" },
+        { "label": "Type", "value": "AI Writing Assistant" }
+      ],
+      "image": "Images/models/pandada-ai.webp",
+      "link": "https://pandada.ai/"
+    },
+    {
+      "id": 145,
+      "name": "OpenHands",
+      "category": ["development", "assistants"],
+      "type": "Coding Agent",
+      "description": "",
+      "subtitle": "Open-source agent that helps developers write, modify, and reason about code.",
+      "tags": [""],
+      "features": [
+        "Agentic coding assistant capable of multi-step reasoning",
+        "Can read, modify, and generate code across repositories",
+        "Supports iterative development and debugging workflows",
+        "Open-source with active community development",
+        "Designed for integration into developer environments"
+      ],
+      "use_cases": [
+        {
+          "title": "Autonomous Code Tasks",
+          "description": "Developers can delegate coding tasks like refactors or feature scaffolding to an AI agent."
+        },
+        {
+          "title": "Debugging & Exploration",
+          "description": "Engineers can use OpenHands to investigate unfamiliar codebases and suggest fixes."
+        },
+        {
+          "title": "Developer Productivity",
+          "description": "Teams can accelerate routine coding work while keeping humans in the loop."
+        }
+      ],
+      "pricing": "Open-source — free to use; hosting and compute costs depend on deployment",
+      "information": [
+        { "label": "Developer", "value": "OpenHands Contributors" },
+        { "label": "Type", "value": "Coding Agent" },
+        { "label": "License", "value": "Open-source" }
+      ],
+      "image": "Images/models/openhands.webp",
+      "link": "https://openhands.dev/"
+    },
+    {
+      "id": 146,
+      "name": "Fuzzy",
+      "category": ["data", "assistants", "office"],
+      "type": "AI Analytics Assistant",
+      "description": "",
+      "subtitle": "AI-powered analytics assistant for extracting insights from data.",
+      "tags": [""],
+      "features": [
+        "Natural-language querying of data sources",
+        "Automated insight generation and summaries",
+        "Designed for non-technical users and teams",
+        "Connects to common data sources and workflows",
+        "Focus on decision support rather than raw dashboards"
+      ],
+      "use_cases": [
+        {
+          "title": "Business Insights",
+          "description": "Teams can ask questions in plain language and receive actionable insights from their data."
+        },
+        {
+          "title": "Reporting Support",
+          "description": "Analysts can speed up reporting by using AI-generated summaries and explanations."
+        },
+        {
+          "title": "Data-Driven Decisions",
+          "description": "Leaders can quickly understand trends and metrics without deep technical expertise."
+        }
+      ],
+      "pricing": "Pricing available on request — plans tailored to team and data needs",
+      "information": [
+        { "label": "Developer", "value": "Fuzzy AI" },
+        { "label": "Type", "value": "AI Analytics Assistant" }
+      ],
+      "image": "Images/models/fuzzy.webp",
+      "link": "https://fuzzy-ai.com/"
+    },
+    {
+      "id": 147,
+      "name": "Teamout",
+      "category": ["office", "assistants"],
+      "type": "Team Scheduling Tool",
+      "description": "",
+      "subtitle": "AI-enhanced scheduling and coordination for distributed teams.",
+      "tags": [""],
+      "features": [
+        "Shared team calendars and availability tracking",
+        "AI-assisted scheduling recommendations",
+        "Designed for hybrid and remote teams",
+        "Integrates with existing calendar tools",
+        "Focus on reducing coordination overhead"
+      ],
+      "use_cases": [
+        {
+          "title": "Team Availability Planning",
+          "description": "Managers can understand team availability at a glance and avoid scheduling conflicts."
+        },
+        {
+          "title": "Meeting Coordination",
+          "description": "Teams can find optimal meeting times faster using AI-assisted suggestions."
+        },
+        {
+          "title": "Remote Team Management",
+          "description": "Distributed teams can stay aligned across time zones."
+        }
+      ],
+      "pricing": "Free tier available — paid plans unlock advanced team features",
+      "information": [
+        { "label": "Developer", "value": "Teamout" },
+        { "label": "Type", "value": "Team Scheduling Tool" }
+      ],
+      "image": "Images/models/teamout.webp",
+      "link": "https://app.teamout.com/ai?ref=thistools"
+    },
+    {
+      "id": 148,
+      "name": "Kontentino",
+      "category": ["design", "office", "assistants"],
+      "type": "Social Media Management Platform",
+      "description": "",
+      "subtitle": "Social media planning and collaboration platform with AI-assisted workflows.",
+      "tags": [""],
+      "features": [
+        "Social media content planning and scheduling",
+        "Team collaboration with approvals and feedback",
+        "AI assistance for content creation and optimization",
+        "Analytics and performance tracking",
+        "Supports multiple social platforms"
+      ],
+      "use_cases": [
+        {
+          "title": "Social Media Planning",
+          "description": "Marketing teams can plan and schedule posts across platforms from one workspace."
+        },
+        {
+          "title": "Collaborative Content Review",
+          "description": "Teams can streamline approvals and feedback before publishing."
+        },
+        {
+          "title": "Performance Optimization",
+          "description": "Marketers can analyze results and refine social strategies over time."
+        }
+      ],
+      "pricing": "Plans start at €49/month — pricing scales by users and features",
+      "information": [
+        { "label": "Developer", "value": "Kontentino" },
+        { "label": "Type", "value": "Social Media Management Platform" }
+      ],
+      "image": "Images/models/kontentino.webp",
+      "link": "https://www.kontentino.com/"
+    },
+    {
+      "id": 149,
+      "name": "Paper",
+      "category": ["documents", "assistants"],
+      "type": "AI Writing Tool",
+      "description": "",
+      "subtitle": "Minimalist AI writing environment for focused drafting and editing.",
+      "tags": [""],
+      "features": [
+        "Distraction-free writing interface",
+        "AI-assisted drafting and rewriting",
+        "Designed for long-form writing workflows",
+        "Quick iteration and refinement tools",
+        "Web-based access with account persistence"
+      ],
+      "use_cases": [
+        {
+          "title": "Long-Form Writing",
+          "description": "Writers can draft essays, articles, and documents in a focused environment."
+        },
+        {
+          "title": "Idea Development",
+          "description": "Authors can expand rough ideas into structured drafts using AI support."
+        },
+        {
+          "title": "Editing & Polishing",
+          "description": "Users can refine tone and clarity during revision."
+        }
+      ],
+      "pricing": "Free trial available — paid plans unlock extended usage",
+      "information": [
+        { "label": "Developer", "value": "Paper AI" },
+        { "label": "Type", "value": "AI Writing Tool" }
+      ],
+      "image": "Images/models/thepaperai.webp",
+      "link": "https://www.thepaperai.com/"
+    },
+    {
+      "id": 150,
+      "name": "Pencil",
+      "category": ["design", "office", "assistants"],
+      "type": "AI Marketing Design Tool",
+      "description": "",
+      "subtitle": "AI-powered creative platform for performance marketing teams.",
+      "tags": [""],
+      "features": [
+        "AI-generated ad creatives and variations",
+        "Designed for paid media and performance marketing",
+        "Learns from past performance data to optimize creatives",
+        "Collaboration features for marketing teams",
+        "Integrates with ad platforms and workflows"
+      ],
+      "use_cases": [
+        {
+          "title": "Paid Advertising Creative",
+          "description": "Marketing teams can generate and test ad creatives at scale."
+        },
+        {
+          "title": "Creative Optimization",
+          "description": "Teams can iterate on designs based on performance insights."
+        },
+        {
+          "title": "Campaign Scaling",
+          "description": "Brands can scale creative output without linear increases in design effort."
+        }
+      ],
+      "pricing": "Pricing available on request — tailored to ad spend and usage",
+      "information": [
+        { "label": "Developer", "value": "Pencil" },
+        { "label": "Type", "value": "AI Marketing Design Tool" }
+      ],
+      "image": "Images/models/pencil.webp",
+      "link": "https://trypencil.com/"
+    },
+    {
+      "id": 151,
+      "name": "Remotion",
+      "category": ["design", "development"],
+      "type": "AI Video Creation Tool",
+      "description": "",
+      "subtitle": "AI-assisted video creation for marketing and content teams.",
+      "tags": [""],
+      "features": [
+        "AI-driven video creation and editing workflows",
+        "Designed for short-form and promotional video content",
+        "Web-based interface for fast iteration",
+        "Focus on automation and speed over manual editing",
+        "Supports export-ready video outputs"
+      ],
+      "use_cases": [
+        {
+          "title": "Marketing Videos",
+          "description": "Teams can generate promotional videos for products, ads, and social media."
+        },
+        {
+          "title": "Content Repurposing",
+          "description": "Creators can turn existing content into video formats quickly."
+        },
+        {
+          "title": "Scalable Video Production",
+          "description": "Organizations can produce video content without dedicated editing teams."
+        }
+      ],
+      "pricing": "Subscription-based pricing — details available upon sign-up",
+      "information": [
+        { "label": "Developer", "value": "Remotion AI" },
+        { "label": "Type", "value": "AI Video Creation Tool" }
+      ],
+      "image": "Images/models/remotionai.webp",
+      "link": "https://www.remotionai.com/"
+    },
+    {
+      "id": 152,
+      "name": "Resistant AI",
+      "category": ["finance", "data", "office"],
+      "type": "AI Risk & Fraud Platform",
+      "description": "",
+      "subtitle": "AI-driven risk, fraud, and compliance platform for financial services.",
+      "tags": [""],
+      "features": [
+        "AI models for fraud detection and risk assessment",
+        "Designed for regulated financial environments",
+        "Model explainability and transparency features",
+        "Supports compliance and audit workflows",
+        "Enterprise-grade deployment options"
+      ],
+      "use_cases": [
+        {
+          "title": "Fraud Detection",
+          "description": "Financial institutions can detect and prevent fraudulent activity using AI-driven risk analysis."
+        },
+        {
+          "title": "Model Risk Management",
+          "description": "Teams can ensure AI models meet regulatory and governance standards."
+        },
+        {
+          "title": "Compliance & Auditing",
+          "description": "Organizations can document and explain AI decisions for regulators and audits."
+        }
+      ],
+      "pricing": "Enterprise pricing — available upon request",
+      "information": [
+        { "label": "Developer", "value": "Resistant AI" },
+        { "label": "Type", "value": "AI Risk & Fraud Platform" },
+        { "label": "Target Market", "value": "Financial institutions and enterprises" }
+      ],
+      "image": "Images/models/resistant-ai.webp",
+      "link": "https://resistant.ai/"
     }
   ]
