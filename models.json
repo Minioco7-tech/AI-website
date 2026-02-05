@@ -5278,5 +5278,387 @@
       ],
       "image": "Images/models/clippit.webp",
       "link": "https://clippit.ai/"
+    },
+    {
+      "id": 133,
+      "name": "Flora",
+      "category": ["design", "documents", "assistants"],
+      "type": "AI Creative Workspace",
+      "description": "",
+      "subtitle": "A node-based infinite canvas to build repeatable creative workflows across text, image, and video.",
+      "tags": [""],
+      "features": [
+        "Infinite canvas workspace for connecting prompts, models, and outputs into visual workflows",
+        "Access to all models, downloads, and exports on every plan (credit-based usage)",
+        "AI image generation and other creative capabilities inside a unified canvas",
+        "Repeatable, node-based workflows to codify and reuse creative processes",
+        "Usage-based credit system with optional credit packs that do not expire"
+      ],
+      "use_cases": [
+        {
+          "title": "Creative Workflow Building",
+          "description": "Designers can chain multiple steps (prompt → variations → refinements → exports) into a visual workflow, making creative exploration structured and repeatable."
+        },
+        {
+          "title": "Team Creative Production",
+          "description": "Creative teams can standardize brand outputs by reusing established workflow graphs, ensuring consistency across deliverables while iterating quickly."
+        },
+        {
+          "title": "Rapid Visual Experimentation",
+          "description": "Creators can run fast rounds of experimentation on an infinite canvas, keeping context and outputs connected instead of scattered across separate tools."
+        }
+    ],
+      "pricing": "Free plan includes 1,000 credits — paid credit subscriptions available (Explorer/Pro/Max) + optional non-expiring credit packs",
+      "information": [
+        { "label": "Developer", "value": "Flora" },
+        { "label": "Type", "value": "AI Creative Workspace" },
+        { "label": "Pricing Model", "value": "Usage-based credits" },
+        { "label": "Features Limited by Plan", "value": "No — all models/features available on every plan" }
+      ],
+      "image": "Images/models/flora.webp",
+      "link": "https://flora.ai/"
+    },
+    {
+      "id": 134,
+      "name": "Trellis",
+      "category": ["design", "development"],
+      "type": "3D Model Generator",
+      "description": "",
+      "subtitle": "Generate 3D models from text or images using Microsoft’s TRELLIS-based 3D generation approach.",
+      "tags": [""],
+      "features": [
+        "Text-to-3D and image-to-3D generation workflows",
+        "TRELLIS model approach generates 3D assets in formats including radiance fields, 3D Gaussians, and meshes",
+        "Built on a large-scale 3D asset dataset (TRELLIS-500K) as described by the tool",
+        "Self-serve paid plans with credit allocations and queue priority",
+        "Private creations and customer-owned outputs included in paid tiers"
+      ],
+      "use_cases": [
+        {
+          "title": "Game & AR/VR Asset Prototyping",
+          "description": "Teams can rapidly generate 3D asset drafts from concept images or text prompts to speed up early prototyping."
+        },
+        {
+          "title": "Product & Industrial Visualization",
+          "description": "Designers can turn sketches or reference images into 3D representations for review and iteration."
+        },
+        {
+          "title": "3D Content Creation Pipelines",
+          "description": "Creators can generate and iterate on 3D objects in multiple output formats suitable for downstream rendering or editing workflows."
+        }
+      ],
+      "pricing": "Free to start — paid plans from $13.90/month (Base) with higher tiers available",
+      "information": [
+        { "label": "Developer", "value": "Microsoft (TRELLIS model) / Trellis tool implementation" },
+        { "label": "Type", "value": "3D Model Generator" },
+        { "label": "Input Modes", "value": "Text-to-3D and Image-to-3D" }
+      ],
+      "image": "Images/models/trellis.webp",
+      "link": "https://trellis3d.ai/"
+    },
+    {
+      "id": 135,
+      "name": "The Prompting Company",
+      "category": ["data", "research", "office"],
+      "type": "AI Visibility & GEO Platform",
+      "description": "",
+      "subtitle": "Track and improve how often your brand is cited or recommended in AI-generated answers.",
+      "tags": [""],
+      "features": [
+        "Measures AI visibility using a proprietary 'Visibility Score'",
+        "Identifies key customer questions and tracks how AI models respond over time",
+        "Supports prompt tracking (e.g., Basic plan includes tracking for 25 prompts)",
+        "Provides a structured approach to improving AI discoverability via content optimized for AI answers",
+        "Team-oriented plans designed for ongoing monitoring and iteration"
+      ],
+      "use_cases": [
+        {
+          "title": "AI Mention Monitoring",
+          "description": "Marketing teams can track whether (and how) their brand appears in responses across common customer prompts, then measure progress over time."
+        },
+        {
+          "title": "Answer-Engine Content Strategy",
+          "description": "Teams can identify gaps in how AI systems understand their product, then publish clearer, more structured pages designed to be cited."
+        },
+        {
+          "title": "Competitive AI Visibility Benchmarking",
+          "description": "Brands can compare prompt-level outcomes and focus GEO efforts on prompts that matter for revenue-driving user intent."
+        }
+      ],
+      "pricing": "Plans start at $99/month (Basic) including tracking for 25 prompts",
+      "information": [
+        { "label": "Developer", "value": "The Prompting Company" },
+        { "label": "Type", "value": "AI Visibility & GEO Platform" },
+        { "label": "Key Metric", "value": "Visibility Score" }
+      ],
+      "image": "Images/models/the-prompting-company.webp",
+      "link": "https://promptingcompany.com/"
+    },
+    {
+      "id": 136,
+      "name": "AutoSend",
+      "category": ["office", "development", "finance"],
+      "type": "Email API & Marketing Platform",
+      "description": "",
+      "subtitle": "Volume-based email sending for transactional and marketing email with API, SMTP, and webhooks.",
+      "tags": [""],
+      "features": [
+        "RESTful Email API for sending and tracking transactional emails",
+        "SMTP relay option for transactional sending",
+        "Webhooks for real-time event notifications (email/contact events)",
+        "Supports both transactional and marketing emails in one platform",
+        "Pricing is volume-based: pay for emails sent (not contact list size)"
+      ],
+      "use_cases": [
+        {
+          "title": "Transactional Product Emails",
+          "description": "Developers can send verification codes, magic links, receipts, and confirmations via API or SMTP with tracking and logs."
+        },
+        {
+          "title": "Marketing Campaigns & Newsletters",
+          "description": "Teams can run marketing campaigns with analytics, lists/segments, and campaign features under marketing-enabled plans."
+        },
+        {
+          "title": "Event-Driven Automations",
+          "description": "Apps can subscribe to webhook events to trigger downstream actions when messages bounce, deliver, open, or click."
+        }
+      ],
+      "pricing": "From $1/month (3k transactional) or $5/month (3k marketing+transactional); scales by monthly email volume; enterprise custom",
+      "information": [
+        { "label": "Developer", "value": "Peerlist Inc." },
+        { "label": "Type", "value": "Email API & Marketing Platform" },
+        { "label": "API", "value": "Available (Email API) + SMTP + Webhooks" }
+      ],
+      "image": "Images/models/autosend.webp",
+      "link": "https://autosend.com/"
+    },
+    {
+      "id": 137,
+      "name": "DataFast",
+      "category": ["data", "finance", "office"],
+      "type": "Revenue Analytics",
+      "description": "",
+      "subtitle": "Revenue-first analytics to attribute customers and payments back to acquisition channels.",
+      "tags": [""],
+      "features": [
+        "Revenue attribution to identify which channels drive paying customers",
+        "Goals, funnels, and journey tracking to understand conversion paths",
+        "Live visitor intelligence with real-time insights",
+        "Lightweight tracking script and simple analytics dashboard",
+        "API support including a Payment API for attributing revenue from custom/unsupported providers"
+      ],
+      "use_cases": [
+        {
+          "title": "Marketing Channel ROI",
+          "description": "Founders can see which traffic sources produce real revenue (not just visits), enabling smarter spend allocation."
+        },
+        {
+          "title": "Funnel Optimization",
+          "description": "Teams can use conversion funnels to identify where users drop off and improve onboarding or checkout to lift revenue."
+        },
+        {
+          "title": "Revenue Attribution for Custom Billing",
+          "description": "SaaS companies with custom payment flows can send payment events via the Payment API to keep attribution accurate."
+        }
+      ],
+      "pricing": "14-day free trial (no card required) — Starter $9/month; Growth $19/month (traffic/event-based plans)",
+      "information": [
+        { "label": "Developer", "value": "Marc Lou" },
+        { "label": "Type", "value": "Revenue Analytics" },
+        { "label": "Privacy", "value": "GDPR-compliant (per FAQ)" },
+        { "label": "API", "value": "Available (including Payment API)" }
+      ],
+      "image": "Images/models/datafast.webp",
+      "link": "https://datafa.st/"
+    },
+    {
+      "id": 138,
+      "name": "Timeless",
+      "category": ["assistants", "design", "office"],
+      "type": "All-in-One AI App",
+      "description": "",
+      "subtitle": "A multimodal AI companion for chat plus creative generation (including images and video) in one app.",
+      "tags": [""],
+      "features": [
+        "All-in-one AI companion designed to help users create, organize, plan, and explore ideas",
+        "Supports multimodal usage (includes image and video experiences as positioned on the site/app)",
+        "Includes in-app subscriptions and credit packs",
+        "Mobile availability via iOS App Store listing",
+        "Includes multiple modes surfaced in the product (e.g., chat/image/video areas shown behind login)"
+      ],
+      "use_cases": [
+        {
+          "title": "Everyday AI Assistant",
+          "description": "Users can use a single app for general assistance and planning workflows rather than switching between multiple tools."
+        },
+        {
+          "title": "Creative Asset Generation",
+          "description": "Creators can generate and iterate on visuals/videos inside an all-in-one environment with subscription/credit access."
+        },
+        {
+          "title": "Organize Ideas and Outputs",
+          "description": "Users can capture prompts, outputs, and notes in one place to support repeatable personal workflows."
+        }
+      ],
+      "pricing": "In-app purchases include Monthly Premium ($9.99) and Monthly Premium+ ($19.99), plus optional credit packs",
+      "information": [
+        { "label": "Developer", "value": "Timeless (App Store publisher)" },
+        { "label": "Type", "value": "All-in-One AI App" },
+        { "label": "Platform", "value": "iOS (and Android listing available)" }
+      ],
+      "image": "Images/models/timeless.webp",
+      "link": "https://timelessapp.ai/"
+    },
+    {
+      "id": 139,
+      "name": "Polyglotta",
+      "category": ["learning", "documents", "assistants"],
+      "type": "AI Translation",
+      "description": "",
+      "subtitle": "Credit-based multilingual translation tool with a free daily allowance.",
+      "tags": [""],
+      "features": [
+        "Credit-based usage model with a free daily credit allowance",
+        "Free plan includes 100 credits/day (as stated on the site snippet)",
+        "Access to core translation features on the free tier (as described on the site snippet)",
+        "Multiple plan options beyond free (per the site snippet describing three plans)",
+        "Designed for multilingual workflows (translate content across languages)"
+       ],
+      "use_cases": [
+        {
+          "title": "Content Localization",
+          "description": "Creators and teams can translate marketing pages, documentation, or product copy into multiple languages using a credit system."
+        },
+        {
+          "title": "Multilingual Writing Support",
+          "description": "Writers can draft in one language and translate to others to support newsletters, blogs, and social content."
+        },
+        {
+          "title": "Cross-Language Collaboration",
+          "description": "International teams can quickly translate messages and documents to reduce friction in collaboration."
+        }
+      ],
+      "pricing": "Free plan includes 100 credits/day — additional paid plans available (credit-based)",
+      "information": [
+        { "label": "Developer", "value": "Polyglotta" },
+        { "label": "Type", "value": "AI Translation" },
+        { "label": "Pricing Model", "value": "Credits (free daily allowance + paid tiers)" }
+      ],
+      "image": "Images/models/polyglotta.webp",
+      "link": "https://polyglotta.app"
+    },
+    {
+      "id": 140,
+      "name": "SpotDraft",
+      "category": ["documents", "office", "finance"],
+      "type": "Contract Lifecycle Management",
+      "description": "",
+      "subtitle": "AI-driven CLM to create, manage, sign, and analyze contracts in one platform.",
+      "tags": [""],
+      "features": [
+        "End-to-end CLM: create, manage, sign, and analyze contracts in one place",
+        "AI integrated across the contract lifecycle to accelerate workflows from creation to close",
+        "Contract analytics and reporting modules for extracting insights from agreements",
+        "Repository-style single source of truth for contracts (product navigation lists repository/reporting)",
+        "Integrations available within business tools (SpotDraft product navigation highlights integrations)"
+      ],
+      "use_cases": [
+        {
+          "title": "Sales Contract Automation",
+          "description": "Sales teams can generate contracts from templates, route approvals, collect signatures, and reduce turnaround time."
+        },
+        {
+          "title": "Legal Ops Efficiency",
+          "description": "Legal teams can standardize review workflows with AI assistance and track obligations, renewals, and bottlenecks."
+        },
+        {
+          "title": "Contract Analytics & Reporting",
+          "description": "Operations teams can analyze contract metadata and generate reports to support forecasting and compliance oversight."
+        }
+      ],
+      "pricing": "Pricing is packaged for companies and enterprises — request a demo for a quote",
+      "information": [
+        { "label": "Developer", "value": "SpotDraft" },
+        { "label": "Type", "value": "Contract Lifecycle Management" },
+        { "label": "AI Product", "value": "SpotDraft AI (AI across lifecycle)" }
+      ],
+      "image": "Images/models/spotdraft.webp",
+      "link": "https://www.spotdraft.com/products/spotdraft-ai"
+    },
+    {
+      "id": 141,
+      "name": "Speakly",
+      "category": ["learning"],
+      "type": "Language Learning App",
+      "description": "",
+      "subtitle": "Language learning app focused on statistically relevant vocabulary and active practice.",
+      "tags": [""],
+      "features": [
+        "Teaches the 4,000 most-used words ordered by real-life statistical relevance",
+        "Writing and speaking exercises that use whole sentences from day one",
+        "Dedicated grammar section focused on essential, practical grammar",
+        "Challenges and listening exercises designed around real-life situations",
+        "Personal support available via language specialists (as stated on pricing page)"
+      ],
+      "use_cases": [
+        {
+          "title": "Practical Conversation Skills",
+          "description": "Learners can prioritize high-frequency vocabulary and practice complete sentences to build real-world speaking ability faster."
+         },
+        {
+          "title": "Travel & Relocation Preparation",
+          "description": "Users can build functional language skills for everyday situations (ordering, directions, workplace basics) through structured practice."
+        },
+        {
+          "title": "Long-Term Retention",
+          "description": "Learners can reinforce vocabulary and grammar with repeated practice and challenges to retain knowledge and improve confidence."
+        }
+      ],
+      "pricing": "Try 7 days free — annual plan noted at €47.99 and lifetime option noted at €69.99 (pricing pages / app listings)",
+      "information": [
+        { "label": "Developer", "value": "SPEAKLY OÜ" },
+        { "label": "Type", "value": "Language Learning App" },
+        { "label": "Support", "value": "Language specialist support (email-based)" }
+      ],
+      "image": "Images/models/speakly.webp",
+      "link": "https://www.speakly.ai/en"
+     },
+     {
+      "id": 142,
+      "name": "ImagineArt",
+      "category": ["design", "audio", "office"],
+      "type": "AI Creative Suite",
+      "description": "",
+      "subtitle": "Creative suite for generating and editing AI assets (including text-to-image) with subscription tiers.",
+      "tags": [""],
+      "features": [
+        "Text-to-image generation inside an Image Studio workflow",
+        "Feature catalog includes multiple creative tools (image generation and additional creation workflows)",
+        "Subscription tiers available for different creator needs",
+        "Help documentation covers usage and feature access within the dashboard",
+        "Designed as a broader creative suite beyond single-purpose generation"
+      ],
+      "use_cases": [
+        {
+          "title": "Marketing Visuals",
+          "description": "Marketers can generate campaign visuals, thumbnails, and social assets from prompts, iterating quickly across styles."
+        },
+        {
+          "title": "Concept Art & Ideation",
+          "description": "Creators can turn rough ideas into multiple image directions, then refine the best concepts into final outputs."
+        },
+        {
+          "title": "Content Production at Scale",
+           "description": "Teams can use subscription tiers to support steady asset production for blogs, product pages, and social channels."
+        }
+      ],
+      "pricing": "Subscription plans listed from $9/month (Basic) and $25/month (Standard), with higher tiers available",
+      "information": [
+        { "label": "Developer", "value": "ImagineArt" },
+        { "label": "Type", "value": "AI Creative Suite" },
+        { "label": "Docs", "value": "Help documentation available" }
+      ],
+      "image": "Images/models/imagineart.webp",
+      "link": "https://www.imagine.art/"
     }
-]
+  ]
