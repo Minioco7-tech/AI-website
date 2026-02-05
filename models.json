@@ -6032,5 +6032,375 @@
       ],
       "image": "Images/models/resistant-ai.webp",
       "link": "https://resistant.ai/"
-    }
+    },
+    {
+      "id": 153,
+      "name": "Marble",
+      "category": ["assistants", "office", "finance"],
+      "type": "AI Operations Assistant",
+      "description": "",
+      "subtitle": "AI assistant for handling operational and financial workflows.",
+      "tags": [""],
+      "features": [
+        "AI-powered assistance for operational decision-making",
+        "Designed to support finance and operations teams",
+        "Workflow-focused interface for recurring tasks",
+        "Supports structured inputs and repeatable processes",
+        "Built to reduce manual operational overhead"
+      ],
+      "use_cases": [
+        {
+          "title": "Operations Support",
+          "description": "Teams can automate and streamline routine operational tasks using an AI assistant."
+        },
+        {
+          "title": "Financial Workflow Assistance",
+          "description": "Finance teams can use Marble to support analysis and operational coordination."
+        },
+        {
+          "title": "Process Standardization",
+          "description": "Organizations can codify repeatable workflows and reduce dependency on manual effort."
+        }
+      ],
+      "pricing": "Pricing available on request — tailored to organizational needs",
+      "information": [
+        { "label": "Developer", "value": "Marble AI" },
+        { "label": "Type", "value": "AI Operations Assistant" }
+      ],
+      "image": "Images/models/marbleai.webp",
+      "link": "https://marbleai.io/"
+    },
+    {
+      "id": 154,
+      "name": "Dokie",
+      "category": ["documents", "assistants"],
+      "type": "Document AI",
+      "description": "",
+      "subtitle": "AI-powered document drafting and collaboration tool.",
+      "tags": [""],
+      "features": [
+        "AI-assisted document creation and editing",
+        "Designed for collaborative writing workflows",
+        "Supports structured and unstructured documents",
+        "Real-time editing and iteration",
+        "Web-based document workspace"
+      ],
+      "use_cases": [
+        {
+          "title": "Business Documentation",
+          "description": "Teams can draft internal documents, proposals, and reports with AI support."
+        },
+        {
+          "title": "Collaborative Writing",
+          "description": "Multiple contributors can work together on documents with AI assistance."
+        },
+        {
+          "title": "Document Refinement",
+          "description": "Users can improve clarity, tone, and structure during revisions."
+        }
+      ],
+      "pricing": "Free plan available — paid plans unlock advanced collaboration and usage limits",
+      "information": [
+        { "label": "Developer", "value": "Dokie" },
+        { "label": "Type", "value": "Document AI" }
+      ],
+      "image": "Images/models/dokie.webp",
+      "link": "https://dokie.ai/"
+    },
+    {
+      "id": 155,
+      "name": "ChartGen AI",
+      "category": ["data", "design", "office"],
+      "type": "Data Visualization Tool",
+      "description": "",
+      "subtitle": "Generate charts and visualizations from data using AI.",
+      "tags": [""],
+      "features": [
+        "AI-generated charts from structured data inputs",
+        "Supports common chart types for reports and presentations",
+        "Simple input workflow for non-technical users",
+        "Export-ready visuals for documents and slides",
+        "Designed for speed and clarity"
+      ],
+      "use_cases": [
+        {
+          "title": "Reporting & Dashboards",
+          "description": "Teams can quickly generate charts for internal and external reports."
+        },
+        {
+          "title": "Presentations",
+          "description": "Professionals can create clean data visuals for slides without manual chart building."
+        },
+        {
+          "title": "Data Communication",
+          "description": "Users can turn raw numbers into clear visual stories."
+        }
+      ],
+      "pricing": "Free usage available — paid plans unlock higher limits and exports",
+      "information": [
+        { "label": "Developer", "value": "ChartGen AI" },
+        { "label": "Type", "value": "Data Visualization Tool" }
+      ],
+      "image": "Images/models/chartgen-ai.webp",
+      "link": "https://chartgen.ai/"
+    },
+    {
+      "id": 156,
+      "name": "Seorce",
+      "category": ["research", "office", "design"],
+      "type": "SEO Tool",
+      "description": "",
+      "subtitle": "AI-powered SEO and content optimization platform.",
+      "tags": [""],
+      "features": [
+        "SEO analysis and optimization recommendations",
+        "AI-assisted keyword and content insights",
+        "Designed to improve search visibility",
+        "Supports on-page optimization workflows",
+        "Web-based SEO dashboard"
+      ],
+      "use_cases": [
+        {
+          "title": "SEO Optimization",
+          "description": "Content teams can improve rankings with AI-driven recommendations."
+        },
+        {
+          "title": "Content Strategy",
+          "description": "Marketers can align content creation with search intent."
+        },
+        {
+          "title": "Website Audits",
+          "description": "Teams can identify SEO gaps and opportunities across pages."
+        }
+      ],
+      "pricing": "Pricing available on request — plans based on usage and features",
+      "information": [
+        { "label": "Developer", "value": "Seorce" },
+        { "label": "Type", "value": "SEO Tool" }
+      ],
+      "image": "Images/models/seorce.webp",
+      "link": "https://seorce.com/"
+    },
+    {
+      "id": 157,
+      "name": "MapFirst.ai",
+      "category": ["data", "research"],
+      "type": "Geospatial Analytics Tool",
+      "description": "",
+      "subtitle": "AI-powered geospatial analysis and mapping platform.",
+      "tags": [""],
+      "features": [
+        "Geospatial data visualization and analysis",
+        "AI-assisted insights from location-based data",
+        "Supports map-based exploration workflows",
+        "Designed for research and planning use cases",
+        "Web-based interactive mapping interface"
+      ],
+      "use_cases": [
+        {
+          "title": "Location Intelligence",
+          "description": "Teams can analyze geographic data to uncover spatial trends."
+        },
+        {
+          "title": "Urban & Market Planning",
+          "description": "Researchers can use maps to support planning and decision-making."
+        },
+        {
+          "title": "Data Exploration",
+          "description": "Users can visually explore complex datasets through maps."
+        }
+      ],
+      "pricing": "Pricing available on request — tailored to project scope",
+      "information": [
+        { "label": "Developer", "value": "MapFirst.ai" },
+        { "label": "Type", "value": "Geospatial Analytics Tool" }
+      ],
+      "image": "Images/models/mapfirst-ai.webp",
+      "link": "https://www.mapfirst.ai/"
+    },
+    {
+      "id": 158,
+      "name": "FastMCP",
+      "category": ["development"],
+      "type": "Developer Tooling",
+      "description": "",
+      "subtitle": "Tools and documentation for building with the Model Context Protocol (MCP).",
+      "tags": [""],
+      "features": [
+        "Guides and tooling for working with MCP servers",
+        "Developer-focused documentation and examples",
+        "Designed to accelerate agent and tool integrations",
+        "Supports modern AI application workflows",
+        "Open documentation available publicly"
+      ],
+      "use_cases": [
+        {
+          "title": "AI Tool Integration",
+          "description": "Developers can use FastMCP resources to integrate tools with AI agents."
+        },
+        {
+          "title": "Agent Infrastructure",
+          "description": "Teams can build MCP-compatible services for AI applications."
+        },
+        {
+          "title": "Developer Onboarding",
+          "description": "Engineers can learn MCP concepts quickly through structured docs."
+        }
+      ],
+      "pricing": "Free — documentation and resources publicly available",
+      "information": [
+        { "label": "Developer", "value": "FastMCP" },
+        { "label": "Type", "value": "Developer Tooling" }
+      ],
+      "image": "Images/models/fastmcp.webp",
+      "link": "https://fastmcp.wiki/en/getting-started/welcome"
+    },
+    {
+      "id": 159,
+      "name": "Fimo",
+      "category": ["design", "assistants"],
+      "type": "AI Design Tool",
+      "description": "",
+      "subtitle": "AI-assisted creative tool for producing visual assets.",
+      "tags": [""],
+      "features": [
+        "AI-assisted visual content creation",
+        "Designed for designers and creators",
+        "Supports fast iteration on creative assets",
+        "Web-based creative workspace",
+        "Focus on simplicity and speed"
+      ],
+      "use_cases": [
+        {
+          "title": "Visual Asset Creation",
+          "description": "Creators can generate visuals for marketing and digital content."
+        },
+        {
+          "title": "Creative Iteration",
+          "description": "Designers can explore multiple variations quickly."
+        },
+        {
+          "title": "Brand Content Production",
+          "description": "Teams can produce consistent visuals at scale."
+        }
+      ],
+      "pricing": "Free tier available — paid plans unlock higher usage",
+      "information": [
+        { "label": "Developer", "value": "Fimo" },
+        { "label": "Type", "value": "AI Design Tool" }
+      ],
+      "image": "Images/models/fimo.webp",
+      "link": "https://fimo.ai/"
+    },
+    {
+      "id": 160,
+      "name": "Augment Code",
+      "category": ["development", "assistants"],
+      "type": "AI Coding Assistant",
+      "description": "",
+      "subtitle": "AI assistant designed to help developers write and understand code.",
+      "tags": [""],
+      "features": [
+        "AI-assisted code generation and explanations",
+        "Designed to integrate into developer workflows",
+        "Supports multiple programming languages",
+        "Helps with debugging and refactoring",
+        "Focus on improving developer productivity"
+      ],
+      "use_cases": [
+        {
+          "title": "Code Generation",
+          "description": "Developers can scaffold features and functions faster."
+        },
+        {
+          "title": "Code Understanding",
+          "description": "Engineers can understand unfamiliar codebases more easily."
+        },
+        {
+          "title": "Refactoring Support",
+          "description": "Teams can improve code quality with AI assistance."
+        }
+      ],
+      "pricing": "Free trial available — paid plans for individuals and teams",
+      "information": [
+        { "label": "Developer", "value": "Augment Code" },
+        { "label": "Type", "value": "AI Coding Assistant" }
+      ],
+      "image": "Images/models/augmentcode.webp",
+      "link": "https://www.augmentcode.com/"
+    },
+    {
+      "id": 161,
+      "name": "Voltagent",
+      "category": ["development", "assistants"],
+      "type": "AI Agent Framework",
+      "description": "",
+      "subtitle": "Framework for building, running, and managing AI agents.",
+      "tags": [""],
+      "features": [
+        "Framework for building autonomous AI agents",
+        "Supports multi-step agent workflows",
+        "Designed for developers and engineers",
+        "Open-source components available",
+        "Extensible architecture for custom agents"
+      ],
+      "use_cases": [
+        {
+          "title": "Agent Development",
+          "description": "Developers can build and deploy custom AI agents."
+        },
+        {
+          "title": "Workflow Automation",
+          "description": "Teams can automate complex workflows using agent-based logic."
+        },
+        {
+          "title": "AI Experimentation",
+          "description": "Engineers can prototype agent behaviors quickly."
+        }
+      ],
+      "pricing": "Free to use — open-source framework",
+      "information": [
+        { "label": "Developer", "value": "Voltagent" },
+        { "label": "Type", "value": "AI Agent Framework" }
+      ],
+      "image": "Images/models/voltagent.webp",
+      "link": "https://voltagent.dev/"
+    },
+    {
+      "id": 162,
+      "name": "Thita.ai",
+      "category": ["assistants", "data"],
+      "type": "AI Assistant",
+      "description": "",
+      "subtitle": "AI assistant focused on data-backed answers and productivity.",
+      "tags": [""],
+      "features": [
+        "AI assistant for answering questions with structured data support",
+        "Designed to improve decision-making with data context",
+        "Supports analytical and productivity tasks",
+        "Web-based interface",
+        "Focus on clarity and explainability"
+      ],
+      "use_cases": [
+        {
+          "title": "Data-Driven Q&A",
+          "description": "Users can ask questions and receive answers grounded in data."
+        },
+        {
+          "title": "Analytical Support",
+          "description": "Teams can use Thita.ai to support research and analysis workflows."
+        },
+        {
+          "title": "Knowledge Assistance",
+          "description": "Professionals can get clear explanations for complex topics."
+        }
+      ],
+      "pricing": "Pricing available on request",
+      "information": [
+        { "label": "Developer", "value": "Thita.ai" },
+        { "label": "Type", "value": "AI Assistant" }
+      ],
+      "image": "Images/models/thita-ai.webp",
+      "link": "https://thita.ai/"
+    },
   ]
