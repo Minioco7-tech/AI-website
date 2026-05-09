@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        script-src 'self' https://cdn.tailwindcss.com https://unpkg.com https://cdn.jsdelivr.net;
+        style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com;
+        img-src 'self' data: https:;
+        font-src 'self' https://fonts.gstatic.com;
+        connect-src 'self';
+        frame-ancestors 'none';
+        base-uri 'self';
+        form-action 'self';
+      ">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIviary — Saved Models</title>
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body data-page="saved" class="bg-[#0A0C10] text-white flex flex-col min-h-screen">
+  <!-- Header -->
+  <header id="header"></header>
+
+  <main class="flex-grow pt-24 pb-16 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Breadcrumb -->
+    <nav id="breadcrumb" class="flex flex-wrap text-sm text-gray-400 mt-4 mb-6 bg-transparent">
+      <!-- Populated dynamically -->
+    </nav>
+
+    <!-- Page Header -->
+    <section class="mb-8">
+      <p class="text-xs font-semibold tracking-[0.25em] uppercase text-[#38BDF8]/80">
+        Your saved tools
+      </p>
+
+      <h1 class="text-3xl md:text-4xl font-bold mt-2 text-white">
+        Saved Models
+      </h1>
+
+      <p class="mt-2 text-sm md:text-base text-gray-400 max-w-2xl">
+        Your favourite AI tools are saved locally in this browser.
+      </p>
+    </section>
+
+    <!-- Saved Models Grid -->
+    <div id="savedModelsGrid" class="grid w-full gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Saved model cards injected by saved-models.js -->
+    </div>
+
+    <!-- Empty State -->
+    <div id="emptySavedModels" class="hidden text-center text-gray-400 mt-12">
+      <p class="text-lg text-white font-semibold mb-2">No saved models yet</p>
+      <p class="text-sm text-gray-400 mb-5">
+        Click the heart icon on any model card to save it here.
+      </p>
+
+      <a href="category.html?category=all" class="btn-primary px-4 py-2 text-sm font-medium">
+        Browse all models
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer"></footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script type="module" src="js/background.js"></script>
+  <script type="module" src="js/header.js"></script>
+  <script type="module" src="js/footer.js"></script>
+  <script type="module" src="js/saved-models.js"></script>
+</body>
+</html>
