@@ -47,10 +47,11 @@ export function createBookmarkButton(model, options = {}) {
 
   function updateState() {
     const saved = isModelSaved(model.id);
-
+  
+    btn.classList.toggle('is-saved', saved);
     btn.innerHTML = `<i data-feather="heart"></i>`;
-
-    feather.replace();
+  
+    if (window.feather) feather.replace();
   }
 
   btn.addEventListener('click', e => {
