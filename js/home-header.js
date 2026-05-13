@@ -30,6 +30,12 @@ document.addEventListener("DOMContentLoaded", () => {
             <a href="category.html?category=all" rel="noopener noreferrer" class="btn-primary px-4 py-2 rounded-lg text-sm font-medium shadow-lg transition hover:scale-105">
               All Models
             </a>
+            
+            <!-- Favourites Section -->
+            <a href="favourites.html" class="inline-flex items-center gap-1 text-white hover:text-[#00BFFF] transition-colors">
+              <i data-feather="heart" class="w-4 h-4"></i>
+              <span>Favourites</span>
+            </a>
           </div>
 
         </div>
