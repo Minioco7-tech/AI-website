@@ -10,8 +10,6 @@ import {
   scoreModelRelevance
 } from './utils.js';
 
-import { createModelCard } from './modelCard.js';
-import { renderBreadcrumb } from './breadcrumb.js';
 import {
   section,
   renderFeatureList,
@@ -20,6 +18,10 @@ import {
   renderProsCons,
   renderScreenshots
 } from './modelSections.js';
+
+import { createModelCard } from './modelCard.js';
+import { renderBreadcrumb } from './breadcrumb.js';
+import { createBookmarkButton } from './bookmark.js
 
 let relatedModels = [];
 let currentIndex = 0;
@@ -110,7 +112,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         <div class="lg:col-span-3 rounded-3xl border border-white/15 bg-[#020617] p-6 sm:p-7 flex flex-col gap-6">
           <div class="space-y-3">
             <p class="text-[11px] tracking-[0.3em] uppercase text-gray-400">AI Tool Overview</p>
-            <h1 class="text-3xl sm:text-4xl font-bold text-white">${model.name}</h1>
+            <div class="model-detail-title-row">
+              <h1 class="text-3xl sm:text-4xl font-bold text-white">${model.name}</h1>
+              <div id="modelBookmarkMount"></div>
+            </div>
             ${model.subtitle ? `<p class="text-sm sm:text-base text-gray-300 leading-relaxed">${model.subtitle}</p>` : ''}
             ${model.image ? `
               <div class="lg:hidden mt-4">
@@ -185,6 +190,12 @@ document.addEventListener('DOMContentLoaded', async () => {
       </section>` : ''}
     </div>
   `;
+  const bookmarkMount = document.getElementById("modelBookmarkMount");
+
+  if (bookmarkMount) {
+    bookmarkMount.appendChild(createBookmarkButton(model, { large: true }));
+  }
+  
   // ------------------------------
   // ✅ Related Models Carousel (DRY, page-based, fixed dot window)
   // ------------------------------
