@@ -1,4 +1,4 @@
-// header.js
+// home-header.js
 document.addEventListener("DOMContentLoaded", () => {
   const headerContainer = document.getElementById("home-header");
 
@@ -20,22 +20,58 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
     
           <!-- Right section: nav + button -->
-          <div class="flex items-center space-x-6">
-            <!-- Nav links -->
-            <nav class="flex space-x-4 backdrop-blur-lg px-4 py-1 rounded-lg flex-row md:space-x-4 space-y-2 md:space-y-0">
-              <a href="about.html" rel="noopener noreferrer" class="text-white hover:text-[#00BFFF] transition-colors">About</a>
+          <!-- Desktop Nav -->
+          <div class="hidden md:flex items-center space-x-5">
+          
+            <nav class="flex items-center space-x-4">
+              <a href="about.html"
+                 class="text-white hover:text-[#00BFFF] transition-colors">
+                 About
+              </a>
+          
+              <a href="favourites.html"
+                 class="header-icon-btn"
+                 aria-label="Favourite models">
+                <i data-feather="heart" class="w-5 h-5"></i>
+              </a>
             </nav>
-    
-            <!-- All Models Button -->
-            <a href="category.html?category=all" rel="noopener noreferrer" class="btn-primary px-4 py-2 rounded-lg text-sm font-medium shadow-lg transition hover:scale-105">
+          
+            <a href="category.html?category=all"
+               class="btn-primary px-4 py-2 rounded-lg text-sm font-medium shadow-lg transition hover:scale-105">
               All Models
             </a>
-            
-            <!-- Favourites Section -->
-            <a href="favourites.html" class="inline-flex items-center gap-1 text-white hover:text-[#00BFFF] transition-colors">
-              <i data-feather="heart" class="w-4 h-4"></i>
-              <span>Favourites</span>
+          
+          </div>
+
+          <!-- Mobile Dropdown -->
+          <div id="mobileMenu"
+               class="hidden md:hidden flex-col gap-2 py-4 border-t border-white/10">
+          
+            <a href="about.html"
+               class="text-white hover:text-[#00BFFF] transition-colors px-2 py-2">
+               About
             </a>
+          
+            <a href="category.html?category=all"
+               class="text-white hover:text-[#00BFFF] transition-colors px-2 py-2">
+               All Models
+            </a>
+          
+          </div>
+          
+          <!-- Mobile Actions -->
+          <div class="flex md:hidden items-center gap-3">
+          
+            <a href="favourites.html"
+               class="header-icon-btn"
+               aria-label="Favourite models">
+              <i data-feather="heart" class="w-5 h-5"></i>
+            </a>
+          
+            <button id="mobileMenuBtn" class="header-icon-btn">
+              <i data-feather="menu" class="w-5 h-5"></i>
+            </button>
+          
           </div>
 
         </div>
@@ -47,4 +83,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Activate Feather icons after inserting header
   if (window.feather) feather.replace();
+
+  // ------------------------------
+  // Mobile Menu
+  // ------------------------------
+  const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  mobileMenuBtn?.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+    mobileMenu.classList.toggle("flex");
+  });
 });
