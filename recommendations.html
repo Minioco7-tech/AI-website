@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy"
+    content="
+      default-src 'self';
+      script-src 'self' https://cdn.tailwindcss.com https://unpkg.com https://cdn.jsdelivr.net;
+      style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com;
+      img-src 'self' data: https:;
+      font-src 'self' https://fonts.gstatic.com;
+      connect-src 'self';
+      frame-ancestors 'none';
+      base-uri 'self';
+      form-action 'self';
+    ">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your AI Recommendations — AIviary</title>
+
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/recommendations.css" />
+</head>
+
+<body data-page="recommendations" class="bg-[#0A0C10] text-white flex flex-col min-h-screen">
+  <header id="home-header"></header>
+
+  <main class="recommendations-page flex-grow">
+    <section class="recommendations-hero">
+      <div class="container mx-auto px-4">
+        <div class="recommendations-hero-card">
+          <p class="recommendations-eyebrow">Personalised discovery</p>
+          <h1>Recommended for You</h1>
+          <p>
+            Based on your goals, workflow and experience level, these tools are the strongest matches for you.
+          </p>
+
+          <div id="recommendation-summary" class="recommendation-summary"></div>
+
+          <a href="index.html#recommendation-wizard" class="recommendation-reset-link">
+            Retake the recommendation flow
+            <i data-feather="refresh-cw"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mx-auto px-4 pb-20">
+      <div id="recommendation-results" class="recommendation-results"></div>
+    </section>
+  </main>
+
+  <footer id="footer"></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
+  <script type="module" src="js/utils.js"></script>
+  <script type="module" src="js/home-header.js"></script>
+  <script type="module" src="js/footer.js"></script>
+  <script type="module" src="js/recommendations.js"></script>
+</body>
+</html>
