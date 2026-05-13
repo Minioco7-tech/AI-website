@@ -10,6 +10,10 @@ import {
   scoreModelRelevance
 } from './utils.js';
 
+import { createModelCard } from './modelCard.js';
+import { renderBreadcrumb } from './breadcrumb.js';
+import { createBookmarkButton } from './bookmark.js'; 
+
 import {
   section,
   renderFeatureList,
@@ -18,10 +22,6 @@ import {
   renderProsCons,
   renderScreenshots
 } from './modelSections.js';
-
-import { createModelCard } from './modelCard.js';
-import { renderBreadcrumb } from './breadcrumb.js';
-import { createBookmarkButton } from './bookmark.js';
 
 let relatedModels = [];
 let currentIndex = 0;
