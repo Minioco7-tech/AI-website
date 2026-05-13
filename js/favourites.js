@@ -13,7 +13,7 @@ import {
 
 import { createModelCard } from "./modelCard.js";
 import { renderBreadcrumb } from "./breadcrumb.js";
-import { getSavedModelIds } from "./bookmarks.js";
+import { getSavedModelIds } from "./bookmark.js";
 
 // ------------------------------
 // DOM References
