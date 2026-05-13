@@ -44,25 +44,11 @@ export function createBookmarkButton(model, options = {}) {
   const btn = document.createElement('button');
 
   btn.type = 'button';
-  btn.className = `
-    bookmark-btn
-    flex items-center justify-center
-    w-9 h-9
-    rounded-full
-    border border-white/10
-    bg-black/40
-    backdrop-blur-md
-    text-white
-    transition-all duration-300
-    hover:scale-110
-  `;
 
   function updateState() {
     const saved = isModelSaved(model.id);
 
-    btn.innerHTML = saved
-      ? `<i data-feather="heart" class="fill-red-500 text-red-500 w-4 h-4"></i>`
-      : `<i data-feather="heart" class="w-4 h-4"></i>`;
+    btn.innerHTML = `<i data-feather="heart"></i>`;
 
     feather.replace();
   }
