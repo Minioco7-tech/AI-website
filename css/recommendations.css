@@ -610,44 +610,22 @@
   }
 
   .recommendation-featured .recommended-card-wrap {
-    width: 420px;
+    width: 75%;
+    max-width: 520px;
     margin: 0 auto;
   }
 
-  .recommendations-page .model-tile {
+  .recommendation-featured .recommendation-reason {
     width: 100%;
-    transform: scale(0.92);
-    transform-origin: top center;
-  }
-
-  .recommendations-page .model-tile:hover {
-    transform: scale(0.95);
-  }
-
-  .recommendations-page .model-tile .thumb-wrapper {
-    aspect-ratio: 16 / 8.5;
-  }
-
-  .recommendations-page .model-tile h3 {
-    font-size: 1rem;
-  }
-
-  .recommendations-page .model-tile p {
-    font-size: 0.82rem;
-    line-height: 1.45;
-  }
-
-  .recommendations-page .model-card-badges span {
-    font-size: 0.68rem;
-    padding: 0.25rem 0.55rem;
+    margin-top: 1rem;
   }
 
   .recommendation-grid {
-    max-width: 1050px;
+    max-width: 1100px;
     margin: 0 auto;
     grid-template-columns: repeat(3, minmax(0, 300px));
     justify-content: center;
-    gap: 1.25rem;
+    gap: 1.5rem;
   }
 
   .recommendation-grid .recommended-card-wrap {
