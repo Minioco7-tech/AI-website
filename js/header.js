@@ -38,21 +38,58 @@ document.addEventListener("DOMContentLoaded", () => {
           </form>
 
           <!-- Nav (desktop) -->
-          <div id="navActions" class="flex sm:flex items-center space-x-6">
-            <nav class="flex space-x-4 backdrop-blur-lg px-4 py-1 rounded-lg">
-              <a href="about.html" rel="noopener noreferrer" class="text-white hover:text-[#00BFFF] transition-colors">About</a>
-            </nav>
-            <a href="index.html" rel="noopener noreferrer" class="btn-primary px-4 py-2 rounded-lg text-sm font-medium shadow-lg transition hover:scale-105">Home</a>
-            <a href="favourites.html" class="inline-flex items-center gap-1 text-white hover:text-[#00BFFF] transition-colors">
-              <i data-feather="heart" class="w-4 h-4"></i>
-              <span>Favourites</span>
+          <!-- Desktop Nav -->
+          <div id="navActions" class="hidden md:flex items-center space-x-5">
+          
+            <a href="about.html"
+               class="text-white hover:text-[#00BFFF] transition-colors">
+               About
             </a>
+          
+            <a href="favourites.html"
+               class="header-icon-btn"
+               aria-label="Favourite models">
+              <i data-feather="heart" class="w-5 h-5"></i>
+            </a>
+          
+            <a href="index.html"
+               class="btn-primary px-4 py-2 rounded-lg text-sm font-medium shadow-lg transition hover:scale-105">
+               Home
+            </a>
+          
           </div>
 
-          <!-- Search icon (mobile) -->
-          <button id="mobileSearchIcon" class="sm:hidden text-white">
-            <i data-feather="search"></i>
-          </button>
+          <!-- Mobile Actions -->
+          <div class="flex md:hidden items-center gap-3">
+          
+            <a href="favourites.html"
+               class="header-icon-btn"
+               aria-label="Favourite models">
+              <i data-feather="heart" class="w-5 h-5"></i>
+            </a>
+          
+            <button id="mobileSearchIcon" class="header-icon-btn">
+              <i data-feather="search" class="w-5 h-5"></i>
+            </button>
+          
+            <button id="mobileMenuBtn" class="header-icon-btn">
+              <i data-feather="menu" class="w-5 h-5"></i>
+            </button>
+          
+          </div>
+          <div id="mobileMenu"
+               class="hidden md:hidden flex-col gap-2 py-4 border-t border-white/10">
+          
+            <a href="index.html"
+               class="text-white hover:text-[#00BFFF] transition-colors px-2 py-2">
+               Home
+            </a>
+          
+            <a href="about.html"
+               class="text-white hover:text-[#00BFFF] transition-colors px-2 py-2">
+               About
+            </a>
+          </div>
         </div>
 
         <!-- Mobile search bar -->
@@ -75,6 +112,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Replace feather icons
   if (window.feather) feather.replace();
+  const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  
+  mobileMenuBtn?.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+    mobileMenu.classList.toggle("flex");
+  });
 
   // Desktop search submit
   const searchForm = document.getElementById("searchForm");
