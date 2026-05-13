@@ -77,21 +77,21 @@ document.addEventListener("DOMContentLoaded", () => {
             </button>
           
           </div>
-          <div id="mobileMenu"
-               class="hidden md:hidden flex-col gap-2 py-4 border-t border-white/10">
-          
-            <a href="index.html"
-               class="text-white hover:text-[#00BFFF] transition-colors px-2 py-2">
-               Home
-            </a>
-          
-            <a href="about.html"
-               class="text-white hover:text-[#00BFFF] transition-colors px-2 py-2">
-               About
-            </a>
-          </div>
         </div>
-
+        
+        <div id="mobileMenu"
+             class="hidden md:hidden flex-col gap-2 py-4 border-t border-white/10">
+        
+          <a href="index.html"
+             class="text-white hover:text-[#00BFFF] transition-colors px-2 py-2">
+             Home
+          </a>
+        
+          <a href="about.html"
+             class="text-white hover:text-[#00BFFF] transition-colors px-2 py-2">
+             About
+          </a>
+        </div>
         <!-- Mobile search bar -->
         <div id="mobileSearchContainer" class="sm:hidden w-full items-center gap-2 mt-3" style="display: none;">
           <button id="closeSearchBtn" class="text-white">
@@ -115,7 +115,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileMenuBtn = document.getElementById("mobileMenuBtn");
   const mobileMenu = document.getElementById("mobileMenu");
   
-  mobileMenuBtn?.addEventListener("click", () => {
+  mobileMenuBtn?.addEventListener("click", (e) => {
+    e.stopPropagation();
     mobileMenu.classList.toggle("hidden");
     mobileMenu.classList.toggle("flex");
   });
