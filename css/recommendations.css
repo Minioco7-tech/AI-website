@@ -5,10 +5,8 @@
 .recommendation-section {
   position: relative;
   z-index: 5;
-  background:
-    radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.12), transparent 38%),
-    linear-gradient(to bottom, #000000, #020617 55%, rgba(2, 6, 23, 0.96));
-  padding: 5rem 1rem;
+  background: transparent;
+  padding: 4rem 0;
 }
 
 .recommendation-shell {
