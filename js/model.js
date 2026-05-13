@@ -112,9 +112,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         <div class="lg:col-span-3 rounded-3xl border border-white/15 bg-[#020617] p-6 sm:p-7 flex flex-col gap-6">
           <div class="space-y-3">
             <p class="text-[11px] tracking-[0.3em] uppercase text-gray-400">AI Tool Overview</p>
-            <div class="model-detail-title-row">
-              <h1 class="text-3xl sm:text-4xl font-bold text-white">${model.name}</h1>
-              <div id="modelBookmarkMount"></div>
+            <div class="flex items-start justify-between gap-4">
+              <h1 class="text-3xl sm:text-4xl font-bold text-white leading-tight">
+                ${model.name}
+              </h1>
+            
+              <div
+                id="modelBookmarkMount"
+                class="flex-shrink-0 pt-1"
+              ></div>
             </div>
             ${model.subtitle ? `<p class="text-sm sm:text-base text-gray-300 leading-relaxed">${model.subtitle}</p>` : ''}
             ${model.image ? `
