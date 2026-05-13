@@ -143,7 +143,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function showMobileSearch() {
     mobileSearchContainer.style.display = "flex"; // overrides display: none
-    navActions.classList.add("hidden");
   
     setTimeout(() => {
       mobileSearchContainer.classList.add("mobile-search-active");
@@ -157,7 +156,6 @@ document.addEventListener("DOMContentLoaded", () => {
   
     setTimeout(() => {
       mobileSearchContainer.style.display = "none";
-      navActions.classList.remove("hidden");
     }, 250);
   }
 
