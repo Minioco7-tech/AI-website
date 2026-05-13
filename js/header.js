@@ -139,7 +139,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const mobileSearchContainer = document.getElementById("mobileSearchContainer");
   const closeSearchBtn = document.getElementById("closeSearchBtn");
   const mobileSearchInput = document.getElementById("mobileSearchInput");
-  const navActions = document.getElementById("navActions");
 
   function showMobileSearch() {
     mobileSearchContainer.style.display = "flex"; // overrides display: none
