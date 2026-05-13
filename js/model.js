@@ -21,7 +21,7 @@ import {
 
 import { createModelCard } from './modelCard.js';
 import { renderBreadcrumb } from './breadcrumb.js';
-import { createBookmarkButton } from './bookmark.js';
+import { createBookmarkButton } from './bookmarks.js';
 
 let relatedModels = [];
 let currentIndex = 0;
