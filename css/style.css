@@ -1065,10 +1065,16 @@ body:not(.home-page) #searchInput:hover {
   border-color: rgba(255,255,255,0.10);
 }
 
-.bookmark-btn.is-saved i,
 .bookmark-btn.is-saved svg {
-  fill: currentColor;
-  stroke: currentColor;
+  stroke: #ef4444;
+  fill: #ef4444;
+}
+
+.bookmark-btn svg {
+  transition:
+    fill 0.2s ease,
+    stroke 0.2s ease,
+    color 0.2s ease;
 }
 
 .bookmark-btn--large {
