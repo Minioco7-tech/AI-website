@@ -601,3 +601,56 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (min-width: 901px) {
+  .recommendation-featured {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .recommendation-featured .recommended-card-wrap {
+    width: 420px;
+    margin: 0 auto;
+  }
+
+  .recommendations-page .model-tile {
+    width: 100%;
+    transform: scale(0.92);
+    transform-origin: top center;
+  }
+
+  .recommendations-page .model-tile:hover {
+    transform: scale(0.95);
+  }
+
+  .recommendations-page .model-tile .thumb-wrapper {
+    aspect-ratio: 16 / 8.5;
+  }
+
+  .recommendations-page .model-tile h3 {
+    font-size: 1rem;
+  }
+
+  .recommendations-page .model-tile p {
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  .recommendations-page .model-card-badges span {
+    font-size: 0.68rem;
+    padding: 0.25rem 0.55rem;
+  }
+
+  .recommendation-grid {
+    max-width: 1050px;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, minmax(0, 300px));
+    justify-content: center;
+    gap: 1.25rem;
+  }
+
+  .recommendation-grid .recommended-card-wrap {
+    width: 300px;
+  }
+}
