@@ -994,3 +994,90 @@ body:not(.home-page) #searchInput:hover {
     filter: blur(0.25px);
   }
 }
+
+/* ================================ */
+/* Bookmark / Favourite Buttons */
+/* ================================ */
+
+.model-title-row,
+.model-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.model-detail-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.bookmark-btn {
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9999px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(0,0,0,0.40);
+  backdrop-filter: blur(12px);
+
+  color: rgba(255,255,255,0.78);
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.bookmark-btn:hover {
+  color: #ffffff;
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.16);
+  transform: scale(1.08);
+}
+
+.bookmark-btn:focus,
+.bookmark-btn:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+.bookmark-btn i,
+.bookmark-btn svg {
+  width: 1rem;
+  height: 1rem;
+  stroke: currentColor;
+}
+
+.bookmark-btn.is-saved {
+  color: #ef4444;
+  background: rgba(0,0,0,0.40);
+  border-color: rgba(255,255,255,0.10);
+}
+
+.bookmark-btn.is-saved i,
+.bookmark-btn.is-saved svg {
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+.bookmark-btn--large {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+.bookmark-btn--large i,
+.bookmark-btn--large svg {
+  width: 1.35rem;
+  height: 1.35rem;
+}
