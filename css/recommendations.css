@@ -650,7 +650,7 @@
 
 .recommendation-grid .model-tile {
   height: 100%;
-  min-height: 430px;
+  min-height: 350px;
 }
 
 .recommendation-grid .model-tile > .flex {
