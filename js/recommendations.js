@@ -584,23 +584,30 @@ function renderResultsSection(container, title, items, grid = false) {
   container.appendChild(section);
 }
 
-function createRecommendedCard(item) {
+function createRecommendedCard(item, showReason = false) {
   const wrapper = document.createElement('div');
   wrapper.className = 'recommended-card-wrap';
 
+  const cardHolder = document.createElement('div');
+  cardHolder.className = 'recommended-model-card-holder';
+
   const card = createModelCard(item.model);
+  cardHolder.appendChild(card);
 
-  const reason = document.createElement('div');
-  reason.className = 'recommendation-reason';
-  reason.innerHTML = `
-    <div>
-      <span>Why this was chosen</span>
-      <p>${item.reason}</p>
-    </div>
-  `;
+  wrapper.appendChild(cardHolder);
 
-  wrapper.appendChild(card);
-  wrapper.appendChild(reason);
+  if (showReason) {
+    const reason = document.createElement('div');
+    reason.className = 'recommendation-reason';
+    reason.innerHTML = `
+      <div>
+        <span>Why this was chosen</span>
+        <p>${item.reason}</p>
+      </div>
+    `;
+
+    wrapper.appendChild(reason);
+  }
 
   return wrapper;
 }
