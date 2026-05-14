@@ -570,7 +570,9 @@ function renderResultsSection(container, title, items, grid = false, showReason 
 
   section.innerHTML = `
     <div class="recommendation-result-heading">
-      <h2>${title}</h2>
+      <h2 class="text-3xl md:text-4xl font-bold mt-2 text-white">
+        ${title}
+      </h2>
     </div>
     <div class="${grid ? 'recommendation-grid' : 'recommendation-featured'}"></div>
   `;
