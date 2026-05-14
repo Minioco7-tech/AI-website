@@ -632,9 +632,10 @@
     gap: 1.5rem;
   }
 
-  .recommendation-grid .recommended-card-wrap {
-    width: 320px;
-  }
+.recommendation-grid .recommended-card-wrap {
+  width: 320px;
+  height: 100%;
+}
 
   .recommendation-grid .recommended-model-card-holder {
     width: 100%;
