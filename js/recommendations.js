@@ -593,7 +593,7 @@ function buildRecommendationSections(scoredModels, answers) {
   };
 }
 
-function renderResultsSection(container, title, items, grid = false, showReason = false) {
+function renderResultsSection(container, title, subtitle = '', items, grid = false, showReason = false) {
   if (!items || items.length === 0) return;
 
   const section = document.createElement('section');
