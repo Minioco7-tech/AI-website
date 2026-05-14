@@ -405,10 +405,41 @@ async function initRecommendationResults() {
   const sections = buildRecommendationSections(scoredModels, answers);
 
   resultsMount.innerHTML = '';
-  renderResultsSection(resultsMount, 'Best Overall Match', sections.bestOverall, false, true);
-  renderResultsSection(resultsMount, 'Best Free Option', sections.bestFree);
-  renderResultsSection(resultsMount, 'Best for Ease of Use', sections.bestEase);
-  renderResultsSection(resultsMount, 'Worth Exploring', sections.worthExploring, true);
+renderResultsSection(
+  resultsMount,
+  'Best Overall Match',
+  sections.bestOverall,
+  false,
+  true,
+  'The strongest overall match based on your selected goal, workflow, budget and experience level.'
+);
+
+renderResultsSection(
+  resultsMount,
+  'Best Free Option',
+  sections.bestFree,
+  false,
+  false,
+  'A strong choice if you want to try something useful without committing to a paid plan.'
+);
+
+renderResultsSection(
+  resultsMount,
+  'Best for Ease of Use',
+  sections.bestEase,
+  false,
+  false,
+  'Prioritised because it is approachable, quick to start with, and less technical.'
+);
+
+renderResultsSection(
+  resultsMount,
+  'Worth Exploring',
+  sections.worthExploring,
+  true,
+  false,
+  'Other useful tools that also match parts of your workflow.'
+);
 
   if (window.feather) feather.replace({ width: 20, height: 20 });
 }
@@ -573,7 +604,14 @@ function renderResultsSection(container, title, items, grid = false, showReason 
       <h2 class="text-3xl md:text-4xl font-bold mt-2 text-white">
         ${title}
       </h2>
+  
+      ${subtitle ? `
+        <p class="mt-2 text-sm md:text-base text-gray-400 max-w-2xl">
+          ${subtitle}
+        </p>
+      ` : ''}
     </div>
+  
     <div class="${grid ? 'recommendation-grid' : 'recommendation-featured'}"></div>
   `;
 
