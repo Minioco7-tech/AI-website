@@ -641,3 +641,23 @@
     max-width: 100%;
   }
 }
+
+.recommendation-grid .recommended-card-wrap,
+.recommendation-grid .recommended-model-card-holder {
+  height: 100%;
+}
+
+.recommendation-grid .model-tile {
+  height: 100%;
+  min-height: 430px;
+}
+
+.recommendation-grid .model-tile > .flex {
+  flex: 1;
+}
+
+.recommendation-grid .model-card-badges {
+  margin-top: auto;
+  min-height: 4.25rem;
+  align-content: flex-start;
+}
