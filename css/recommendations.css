@@ -650,7 +650,7 @@
 
 .recommendation-grid .model-tile {
   height: 100%;
-  min-height: 250px;
+  min-height: 350px;
 }
 
 .recommendation-grid .model-tile > .flex {
@@ -659,6 +659,6 @@
 
 .recommendation-grid .model-card-badges {
   margin-top: auto;
-  min-height: 4.25rem;
+  min-height: 3rem;
   align-content: flex-start;
 }
