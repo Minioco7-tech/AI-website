@@ -405,7 +405,7 @@ async function initRecommendationResults() {
   const sections = buildRecommendationSections(scoredModels, answers);
 
   resultsMount.innerHTML = '';
-  renderResultsSection(resultsMount, 'Best Overall Match', sections.bestOverall);
+  renderResultsSection(resultsMount, 'Best Overall Match', sections.bestOverall, false, true);
   renderResultsSection(resultsMount, 'Best Free Option', sections.bestFree);
   renderResultsSection(resultsMount, 'Best for Ease of Use', sections.bestEase);
   renderResultsSection(resultsMount, 'Worth Exploring', sections.worthExploring, true);
@@ -562,7 +562,7 @@ function buildRecommendationSections(scoredModels, answers) {
   };
 }
 
-function renderResultsSection(container, title, items, grid = false) {
+function renderResultsSection(container, title, items, grid = false, showReason = false) {
   if (!items || items.length === 0) return;
 
   const section = document.createElement('section');
@@ -578,7 +578,7 @@ function renderResultsSection(container, title, items, grid = false) {
   const gridMount = section.querySelector(grid ? '.recommendation-grid' : '.recommendation-featured');
 
   items.forEach(item => {
-    gridMount.appendChild(createRecommendedCard(item));
+    gridMount.appendChild(createRecommendedCard(item, showReason));
   });
 
   container.appendChild(section);
