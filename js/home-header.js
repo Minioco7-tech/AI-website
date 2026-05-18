@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <!-- Desktop Nav -->
           <div class="hidden md:flex items-center space-x-5">
           
-            <nav class="flex items-center space-x-4">
+            <nav class="flex items-center space-x-4 bg-transparent">
               <a href="about.html"
                  class="text-white hover:text-[#00BFFF] transition-colors">
                  About
