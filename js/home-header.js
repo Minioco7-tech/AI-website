@@ -23,18 +23,18 @@ document.addEventListener("DOMContentLoaded", () => {
           <!-- Desktop Nav -->
           <div class="hidden md:flex items-center space-x-5">
           
-            <nav class="flex items-center space-x-4 bg-transparent">
-              <a href="about.html"
-                 class="text-white hover:text-[#00BFFF] transition-colors">
-                 About
-              </a>
-          
-              <a href="favourites.html"
-                 class="header-icon-btn"
-                 aria-label="Favourite models">
-                <i data-feather="heart" class="w-5 h-5"></i>
-              </a>
-            </nav>
+            <!-- <nav class="flex items-center space-x-4 bg-transparent"> -->
+            <a href="about.html"
+               class="text-white hover:text-[#00BFFF] transition-colors">
+               About
+            </a>
+        
+            <a href="favourites.html"
+               class="header-icon-btn"
+               aria-label="Favourite models">
+              <i data-feather="heart" class="w-5 h-5"></i>
+            </a>
+            <!-- </nav> -->
           
             <a href="category.html?category=all"
                class="btn-primary px-4 py-2 rounded-lg text-sm font-medium shadow-lg transition hover:scale-105">
