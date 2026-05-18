@@ -741,10 +741,10 @@ function goalPhrase(value) {
   const map = {
     'save-time': 'save time',
     'create-content': 'create better content',
-    'organize-work': 'organise their work',
+    'organize-work': 'organise your work',
     'learn-faster': 'learn faster',
     'automate-tasks': 'automate repetitive tasks',
-    'grow-business': 'grow their business'
+    'grow-business': 'grow your business'
   };
 
   return map[value] || 'improve their workflow';
