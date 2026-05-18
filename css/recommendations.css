@@ -393,6 +393,10 @@
   letter-spacing: -0.035em;
 }
 
+.recommendation-result-heading p {
+  max-width: 780px;
+}
+
 .recommendation-featured {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
