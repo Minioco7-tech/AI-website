@@ -662,23 +662,36 @@ function createRecommendedCard(item, showReason = false) {
 }
 
 function cleanFeatureText(text = '') {
-  let cleaned = text.trim();
+  let cleaned = text.trim().replace(/[.]+$/, '');
 
-  // Remove trailing punctuation
-  cleaned = cleaned.replace(/[.]+$/, '');
+  const lower = cleaned.toLowerCase();
 
-  // Convert common verb forms into smoother sentence fragments
-  cleaned = cleaned.replace(/^automatically\s+/i, 'automated ');
-  cleaned = cleaned.replace(/^realistic\s+/i, 'realistic ');
-  cleaned = cleaned.replace(/^custom\s+/i, 'custom ');
-  cleaned = cleaned.replace(/^browser-based\s+/i, 'browser-based ');
+  // Common rewrites for smoother premium copy
+  if (lower.includes('summarises academic articles')) {
+    return 'automated summaries of academic articles, reports and chapters';
+  }
 
-  // Convert verbs into gerunds where needed
-  cleaned = cleaned.replace(/^summarises/i, 'summarising');
-  cleaned = cleaned.replace(/^summarizes/i, 'summarising');
-  cleaned = cleaned.replace(/^generates/i, 'generating');
-  cleaned = cleaned.replace(/^creates/i, 'creating');
-  cleaned = cleaned.replace(/^helps/i, 'helping');
+  if (lower.includes('voice generation')) {
+    return 'realistic AI voice generation';
+  }
+
+  if (lower.includes('voice cloning')) {
+    return 'high-quality voice cloning';
+  }
+
+  if (lower.includes('browser-based editor')) {
+    return 'a simple browser-based workflow';
+  }
+
+  if (lower.includes('multilingual support')) {
+    return 'multilingual content creation';
+  }
+
+  // Generic fallback cleanup
+  cleaned = cleaned
+    .replace(/^automatically\s+/i, '')
+    .replace(/^realistic\s+/i, '')
+    .replace(/^custom\s+/i, '');
 
   return cleaned.charAt(0).toLowerCase() + cleaned.slice(1);
 }
