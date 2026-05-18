@@ -661,10 +661,32 @@ function createRecommendedCard(item, showReason = false) {
   return wrapper;
 }
 
+function cleanFeatureText(text = '') {
+  let cleaned = text.trim();
+
+  // Remove trailing punctuation
+  cleaned = cleaned.replace(/[.]+$/, '');
+
+  // Convert common verb forms into smoother sentence fragments
+  cleaned = cleaned.replace(/^automatically\s+/i, 'automated ');
+  cleaned = cleaned.replace(/^realistic\s+/i, 'realistic ');
+  cleaned = cleaned.replace(/^custom\s+/i, 'custom ');
+  cleaned = cleaned.replace(/^browser-based\s+/i, 'browser-based ');
+
+  // Convert verbs into gerunds where needed
+  cleaned = cleaned.replace(/^summarises/i, 'summarising');
+  cleaned = cleaned.replace(/^summarizes/i, 'summarising');
+  cleaned = cleaned.replace(/^generates/i, 'generating');
+  cleaned = cleaned.replace(/^creates/i, 'creating');
+  cleaned = cleaned.replace(/^helps/i, 'helping');
+
+  return cleaned.charAt(0).toLowerCase() + cleaned.slice(1);
+}
+
 function generateReason(model, answers, reasonType = 'overall') {
   const modelType = model.type || 'AI tool';
   const subtitle = model.subtitle || '';
-  const firstFeature = model.features?.[0] || '';
+  const firstFeature = cleanFeatureText(model.features?.[0] || '');
   const firstUseCase = model.use_cases?.[0]?.title || '';
 
   const pain = painPhrase(answers.painPoint);
@@ -675,7 +697,7 @@ function generateReason(model, answers, reasonType = 'overall') {
   }
 
   if (reasonType === 'ease') {
-    return `${model.name} should feel easy to get started with because it is built around ${subtitle.toLowerCase() || modelType.toLowerCase()}. It is useful if you want help with ${pain} without adding more complexity to your workflow.`;
+    return `${model.name} should feel easy to get started with because it is built around ${(subtitle || modelType).replace(/[.]+$/, '').toLowerCase()}. It is useful if you want help with ${pain} without adding more complexity to your workflow.`;
   }
 
   if (firstFeature) {
