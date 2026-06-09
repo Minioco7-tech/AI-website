@@ -1766,7 +1766,7 @@ body:not(.home-page) #searchInput:hover {
 }
 
 /* ===============================
-   33. Miscellaneous
+   33. Theme toggle button
 ================================ */
 
 .theme-toggle-btn {
@@ -1775,4 +1775,45 @@ body:not(.home-page) #searchInput:hover {
   padding: 0 0.9rem;
   font-size: 0.78rem;
   font-weight: 700;
+}
+
+/* ===============================
+   34. Home hero section styling
+================================ */
+
+.hero-section {
+  background: var(--color-bg-page);
+  color: var(--color-text-primary);
+}
+
+.hero-title {
+  background: var(--gradient-hero-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  color: var(--color-text-soft);
+}
+
+.hero-search-input {
+  background: var(--color-surface-white-08);
+  border: 1px solid var(--color-border-white-18);
+  color: var(--color-text-primary);
+}
+
+.hero-search-input::placeholder {
+  color: var(--color-white-65);
+}
+
+.hero-search-input:focus {
+  box-shadow: 0 0 0 2px var(--color-accent);
+}
+
+.hero-search-button {
+  color: var(--color-white-70);
+}
+
+.hero-search-button:hover {
+  color: var(--color-text-primary);
 }
