@@ -712,6 +712,19 @@ footer p {
   display: none;
 }
 
+.section-kicker {
+  color: var(--color-accent);
+  opacity: 0.8;
+}
+
+.section-title {
+  color: var(--color-text-primary);
+}
+
+.section-description {
+  color: var(--color-text-muted);
+}
+
 
 /* =========================================================
    12. Model-Tile / Unified Tile Design
