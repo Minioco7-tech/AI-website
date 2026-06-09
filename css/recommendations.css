@@ -719,17 +719,9 @@
   }
 
   .recommendation-option-icon {
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 0.9rem;
-   
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-   
     color: var(--color-recommendation-icon);
-    background: var(--color-accent-soft);
-    border: 1px solid var(--color-accent-border);
+    background: var(--color-recommendation-icon-bg);
+    border: 1px solid var(--color-recommendation-icon-border);
   }
 
   .recommendation-option-icon svg {
