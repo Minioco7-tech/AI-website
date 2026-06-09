@@ -1,6 +1,80 @@
-/* ================================
-   AIviary Recommendation Wizard
-   ================================ */
+/* =========================================================
+   AIviary Recommendations Stylesheet
+   =========================================================
+
+   CONTENTS
+
+   01. Recommendation Section Wrapper
+       - Homepage section spacing
+       - Main wizard shell
+
+   02. Wizard Tone Gradients
+       - Step-specific outer gradient wrappers
+
+   03. Wizard Inner Panel
+       - Main frosted container
+       - Border and shadow styling
+
+   04. Wizard Heading
+       - Eyebrow text
+       - Title
+       - Supporting copy
+
+   05. Wizard Card
+       - Question card
+       - Step label
+       - Step count bubble
+
+   06. Wizard Options
+       - Option grid
+       - Option buttons
+       - Hover and selected states
+       - Option icons
+
+   07. Wizard Footer
+       - Back button
+       - Progress bar
+
+   08. Compound Final Step
+       - Budget / skill groups
+       - Final CTA button
+       - Loading spinner
+
+   09. Results Page Hero
+       - Results page wrapper
+       - Hero card
+       - Answer summary pills
+       - Reset link
+
+   10. Results Sections
+       - Section headings
+       - Featured and grid layouts
+       - Recommended card wrappers
+
+   11. Recommendation Reason Cards
+       - Why-this-was-chosen cards
+       - Reason labels and text
+
+   12. Empty State
+       - No profile fallback
+
+   13. Responsive Rules
+       - Tablet layout
+       - Mobile layout
+       - Desktop result layout
+
+   NOTES
+   - Existing class names have been preserved.
+   - Colours now use variables from style.css where possible.
+   - Recommendation-specific gradients should live in style.css variables.
+   - This file controls recommendation layout and component styling only.
+   ========================================================= */
+
+
+/* =========================================================
+   01. Recommendation Section Wrapper
+   Homepage section spacing and main shell.
+   ========================================================= */
 
 .recommendation-section {
   position: relative;
@@ -17,33 +91,52 @@
   transition: background 400ms ease;
 }
 
+
+/* =========================================================
+   02. Wizard Tone Gradients
+   Step-specific outer gradient wrappers.
+   These variables should be defined in style.css.
+   ========================================================= */
+
 .recommendation-tone-1 {
-  background: linear-gradient(135deg, rgba(30, 64, 175, 0.55), rgba(2, 6, 23, 0.9));
+  background: var(--gradient-recommendation-tone-1);
 }
 
 .recommendation-tone-2 {
-  background: linear-gradient(135deg, rgba(14, 116, 144, 0.5), rgba(2, 6, 23, 0.88));
+  background: var(--gradient-recommendation-tone-2);
 }
 
 .recommendation-tone-3 {
-  background: linear-gradient(135deg, rgba(56, 189, 248, 0.38), rgba(2, 6, 23, 0.86));
+  background: var(--gradient-recommendation-tone-3);
 }
 
 .recommendation-tone-4 {
-  background: linear-gradient(135deg, rgba(125, 211, 252, 0.34), rgba(15, 23, 42, 0.88));
+  background: var(--gradient-recommendation-tone-4);
 }
+
+
+/* =========================================================
+   03. Wizard Inner Panel
+   Main frosted panel inside the outer gradient shell.
+   ========================================================= */
 
 .recommendation-inner {
   border-radius: 2rem;
   padding: 2rem;
-  background:
-    radial-gradient(circle at top right, rgba(56, 189, 248, 0.14), transparent 34%),
-    rgba(2, 6, 23, 0.92);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: var(--gradient-recommendation-inner);
+  border: 1px solid var(--color-border-white-08);
+
   box-shadow:
-    0 24px 80px rgba(0, 0, 0, 0.45),
-    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    var(--shadow-filter-menu),
+    var(--shadow-card-highlight);
 }
+
+
+/* =========================================================
+   04. Wizard Heading
+   Heading block above the question card.
+   ========================================================= */
 
 .recommendation-heading {
   text-align: center;
@@ -56,38 +149,43 @@
   font-weight: 800;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: rgba(56, 189, 248, 0.9);
+  color: var(--color-accent);
   margin-bottom: 0.75rem;
 }
 
 .recommendation-heading h2 {
   font-size: clamp(2rem, 5vw, 3rem);
-  color: #ffffff;
+  color: var(--color-text-primary);
   letter-spacing: -0.04em;
   margin-bottom: 0.75rem;
 }
 
 .recommendation-heading p {
-  color: #e5e7eb;
+  color: var(--color-text-soft);
   font-size: 1rem;
   margin-bottom: 0.25rem;
 }
 
 .recommendation-heading span {
-  color: #9ca3af;
+  color: var(--color-text-muted);
   font-size: 0.95rem;
 }
+
+
+/* =========================================================
+   05. Wizard Card
+   Main question card and top row.
+   ========================================================= */
 
 .recommendation-card {
   max-width: 880px;
   margin: 0 auto;
   border-radius: 1.75rem;
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.025)),
-    rgba(2, 6, 23, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 1.5rem;
   overflow: hidden;
+
+  background: var(--gradient-recommendation-card);
+  border: 1px solid var(--color-border-white-10);
 }
 
 .recommendation-card-top {
@@ -99,7 +197,7 @@
 }
 
 .recommendation-step-label {
-  color: rgba(125, 211, 252, 0.85);
+  color: var(--color-accent);
   font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.18em;
@@ -109,13 +207,13 @@
 
 .recommendation-card-top h3 {
   font-size: clamp(1.5rem, 4vw, 2.25rem);
-  color: white;
+  color: var(--color-text-primary);
   letter-spacing: -0.035em;
   margin-bottom: 0.35rem;
 }
 
 .recommendation-card-top p {
-  color: #9ca3af;
+  color: var(--color-text-muted);
   font-size: 0.95rem;
 }
 
@@ -124,17 +222,29 @@
   width: 3.25rem;
   height: 3.25rem;
   border-radius: 9999px;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #e0f2fe;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  color: var(--color-accent);
+  background: var(--color-surface-white-06);
+  border: 1px solid var(--color-border-white-10);
+
   font-weight: 800;
   font-size: 0.85rem;
 }
 
+
+/* =========================================================
+   06. Wizard Options
+   Option grid, buttons, icons, hover and selected states.
+   ========================================================= */
+
 .recommendation-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
   animation: recommendationFade 260ms ease both;
 }
 
@@ -150,28 +260,26 @@
   }
 }
 
-.recommendation-options {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.9rem;
-}
-
 .recommendation-option {
   min-height: 6.5rem;
   padding: 1rem;
   border-radius: 1.25rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.025));
-  color: white;
+
+  border: 1px solid var(--color-border-white-10);
+  background: var(--gradient-recommendation-option);
+
+  color: var(--color-text-primary);
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   gap: 0.75rem;
+
   text-align: left;
   font-weight: 750;
   letter-spacing: -0.01em;
+
   transition:
     transform 180ms ease,
     border-color 180ms ease,
@@ -181,30 +289,37 @@
 
 .recommendation-option:hover {
   transform: translateY(-3px);
-  border-color: rgba(56, 189, 248, 0.45);
-  background:
-    linear-gradient(135deg, rgba(56, 189, 248, 0.14), rgba(255, 255, 255, 0.035));
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+  border-color: var(--color-accent-border);
+  background: var(--gradient-recommendation-option-hover);
+  box-shadow: var(--shadow-pill-selected);
 }
 
 .recommendation-option.is-selected {
-  border-color: rgba(56, 189, 248, 0.75);
+  border-color: var(--color-accent);
   box-shadow:
-    0 0 0 3px rgba(56, 189, 248, 0.16),
-    0 18px 45px rgba(0, 0, 0, 0.35);
+    0 0 0 3px var(--color-accent-shadow),
+    var(--shadow-pill-selected);
 }
 
 .recommendation-option-icon {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 0.9rem;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #e0f2fe;
-  background: rgba(56, 189, 248, 0.12);
-  border: 1px solid rgba(56, 189, 248, 0.16);
+
+  color: var(--color-accent);
+  background: var(--color-accent-soft);
+  border: 1px solid var(--color-accent-border);
 }
+
+
+/* =========================================================
+   07. Wizard Footer
+   Back button and progress bar.
+   ========================================================= */
 
 .recommendation-footer {
   margin-top: 1.35rem;
@@ -217,9 +332,11 @@
   height: 2.5rem;
   padding: 0 1rem;
   border-radius: 9999px;
-  color: #e5e7eb;
-  background: rgba(255, 255, 255, 0.055);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  color: var(--color-text-soft);
+  background: var(--color-surface-white-05);
+  border: 1px solid var(--color-border-white-10);
+
   font-weight: 700;
   font-size: 0.85rem;
 }
@@ -237,15 +354,21 @@
   height: 0.45rem;
   border-radius: 9999px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--color-surface-white-08);
 }
 
 .recommendation-progress-bar div {
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, #38bdf8, #7dd3fc, #e0f2fe);
+  background: var(--gradient-recommendation-progress);
   transition: width 320ms ease;
 }
+
+
+/* =========================================================
+   08. Compound Final Step
+   Budget/skill groups and final CTA.
+   ========================================================= */
 
 .recommendation-compound {
   grid-column: 1 / -1;
@@ -255,7 +378,7 @@
 
 .recommendation-group p {
   font-size: 0.8rem;
-  color: #9ca3af;
+  color: var(--color-text-muted);
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -276,14 +399,19 @@
   min-height: 3.35rem;
   border-radius: 9999px;
   padding: 0 1.4rem;
-  background: linear-gradient(135deg, #38bdf8, #2563eb);
-  color: white;
+
+  background: var(--gradient-recommendation-cta);
+  color: #ffffff;
+
   font-weight: 850;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.55rem;
-  box-shadow: 0 18px 45px rgba(37, 99, 235, 0.34);
+
+  box-shadow: 0 18px 45px var(--color-accent-shadow);
+
   transition:
     transform 180ms ease,
     filter 180ms ease,
@@ -310,9 +438,11 @@
   }
 }
 
-/* ================================
-   Results Page
-   ================================ */
+
+/* =========================================================
+   09. Results Page Hero
+   Results page wrapper, hero card, summary pills and reset link.
+   ========================================================= */
 
 .recommendations-page {
   background: transparent;
@@ -328,22 +458,22 @@
   text-align: center;
   border-radius: 2rem;
   padding: 3rem 1.5rem;
-  background:
-    radial-gradient(circle at top right, rgba(56, 189, 248, 0.16), transparent 34%),
-    rgba(2, 6, 23, 0.86);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  background: var(--gradient-recommendation-inner);
+  border: 1px solid var(--color-border-white-10);
 }
 
 .recommendations-hero-card h1 {
   font-size: clamp(2.4rem, 6vw, 4.25rem);
   letter-spacing: -0.055em;
   margin-bottom: 1rem;
+  color: var(--color-text-primary);
 }
 
 .recommendations-hero-card > p {
   max-width: 680px;
   margin: 0 auto;
-  color: #cbd5e1;
+  color: var(--color-text-soft);
   font-size: 1rem;
 }
 
@@ -358,19 +488,23 @@
 .recommendation-summary span {
   border-radius: 9999px;
   padding: 0.45rem 0.75rem;
+
   font-size: 0.78rem;
   font-weight: 750;
-  color: #e0f2fe;
-  background: rgba(56, 189, 248, 0.1);
-  border: 1px solid rgba(56, 189, 248, 0.18);
+
+  color: var(--color-accent);
+  background: var(--color-accent-soft);
+  border: 1px solid var(--color-accent-border);
 }
 
 .recommendation-reset-link {
   margin-top: 1.4rem;
+
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  color: #93c5fd;
+
+  color: var(--color-accent);
   font-size: 0.9rem;
   font-weight: 700;
 }
@@ -379,6 +513,12 @@
   width: 1rem;
   height: 1rem;
 }
+
+
+/* =========================================================
+   10. Results Sections
+   Results headings, featured card layout and grid layout.
+   ========================================================= */
 
 .recommendation-result-section {
   margin-top: 3rem;
@@ -391,10 +531,12 @@
 .recommendation-result-heading h2 {
   font-size: clamp(1.5rem, 4vw, 2.25rem);
   letter-spacing: -0.035em;
+  color: var(--color-text-primary);
 }
 
 .recommendation-result-heading p {
   max-width: 780px;
+  color: var(--color-text-muted);
 }
 
 .recommendation-featured {
@@ -414,30 +556,44 @@
   border-radius: 1rem;
 }
 
+
+/* =========================================================
+   11. Recommendation Reason Cards
+   "Why this was chosen" explanation cards.
+   ========================================================= */
+
 .recommendation-reason {
   margin-top: 0.75rem;
   border-radius: 1rem;
   padding: 1rem;
-  background:
-    linear-gradient(135deg, rgba(56, 189, 248, 0.11), rgba(255, 255, 255, 0.035));
-  border: 1px solid rgba(56, 189, 248, 0.16);
+
+  background: var(--gradient-recommendation-option-hover);
+  border: 1px solid var(--color-accent-border);
 }
 
 .recommendation-reason span {
   display: block;
-  color: #7dd3fc;
+
+  color: var(--color-accent);
   font-size: 0.72rem;
   font-weight: 850;
   letter-spacing: 0.18em;
   text-transform: uppercase;
+
   margin-bottom: 0.35rem;
 }
 
 .recommendation-reason p {
-  color: #dbeafe;
+  color: var(--color-text-soft);
   font-size: 0.9rem;
   line-height: 1.55;
 }
+
+
+/* =========================================================
+   12. Empty State
+   Fallback shown if no recommendation profile exists.
+   ========================================================= */
 
 .recommendation-empty {
   max-width: 720px;
@@ -445,24 +601,29 @@
   text-align: center;
   border-radius: 1.5rem;
   padding: 2rem;
-  background: rgba(2, 6, 23, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  background: var(--color-bg-card-glass);
+  border: 1px solid var(--color-border-white-10);
 }
 
 .recommendation-empty h2 {
   font-size: 2rem;
   margin-bottom: 0.75rem;
+  color: var(--color-text-primary);
 }
 
 .recommendation-empty p {
-  color: #9ca3af;
+  color: var(--color-text-muted);
   margin-bottom: 1.25rem;
 }
 
-/* ================================
-   Responsive
-   ================================ */
 
+/* =========================================================
+   13. Responsive Rules
+   Tablet, mobile and desktop-specific layouts.
+   ========================================================= */
+
+/* Tablet: reduce wizard/result grids to two columns. */
 @media (max-width: 900px) {
   .recommendation-options,
   .recommendation-group-options,
@@ -475,6 +636,7 @@
   }
 }
 
+/* Mobile: compact wizard cards and one-column result grid. */
 @media (max-width: 640px) {
   .recommendation-section {
     padding: 2.5rem 0;
@@ -604,6 +766,7 @@
   }
 }
 
+/* Desktop: larger featured result card and centred result grid. */
 @media (min-width: 901px) {
   .recommendation-featured {
     width: 100%;
@@ -636,10 +799,10 @@
     gap: 1.5rem;
   }
 
-.recommendation-grid .recommended-card-wrap {
-  width: 320px;
-  height: 100%;
-}
+  .recommendation-grid .recommended-card-wrap {
+    width: 320px;
+    height: 100%;
+  }
 
   .recommendation-grid .recommended-model-card-holder {
     width: 100%;
@@ -647,6 +810,7 @@
   }
 }
 
+/* Keeps all result grid cards visually aligned. */
 .recommendation-grid .recommended-card-wrap,
 .recommendation-grid .recommended-model-card-holder {
   height: 100%;
@@ -665,4 +829,4 @@
   margin-top: auto;
   min-height: 3rem;
   align-content: flex-start;
-}
+}   
