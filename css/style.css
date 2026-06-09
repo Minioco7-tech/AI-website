@@ -284,7 +284,7 @@
   --gradient-hero-text: linear-gradient(
     to right,
     var(--color-text-primary),
-    var(--color-blue-soft)
+    var(--color-accent-soft)
   );
 
   --gradient-text-accent: linear-gradient(
@@ -378,7 +378,7 @@ body.theme-natural {
   --gradient-hero-text: linear-gradient(
     to right,
     var(--color-text-primary),
-    var(--color-blue-soft)
+    var(--color-accent-soft)
   );
 
   --gradient-text-accent: linear-gradient(
