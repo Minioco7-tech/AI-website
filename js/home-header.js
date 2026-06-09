@@ -22,6 +22,15 @@ document.addEventListener("DOMContentLoaded", () => {
           <!-- Right section: nav + button -->
           <!-- Desktop Nav -->
           <div class="hidden md:flex items-center space-x-5">
+
+            <button type="button"
+              class="header-icon-btn theme-toggle-btn"
+              data-theme-toggle
+              aria-label="Toggle colour theme"
+              aria-pressed="false"
+            >
+              Natural Theme
+            </button>
           
             <!-- <nav class="flex items-center space-x-4 bg-transparent"> -->
             <a href="about.html"
@@ -46,6 +55,15 @@ document.addEventListener("DOMContentLoaded", () => {
           <!-- Mobile Dropdown -->
           <div id="mobileMenu"
                class="hidden md:hidden flex-col gap-2 py-4 border-t border-white/10">
+
+            <button type="button"
+              class="header-icon-btn theme-toggle-btn"
+              data-theme-toggle
+              aria-label="Toggle colour theme"
+              aria-pressed="false"
+            >
+              Natural Theme
+            </button>
           
             <a href="about.html"
                class="text-white hover:text-[#00BFFF] transition-colors px-2 py-2">
