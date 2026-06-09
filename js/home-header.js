@@ -23,13 +23,14 @@ document.addEventListener("DOMContentLoaded", () => {
           <!-- Desktop Nav -->
           <div class="hidden md:flex items-center space-x-5">
 
-            <button type="button"
+            <button
+              type="button"
               class="header-icon-btn theme-toggle-btn"
               data-theme-toggle
               aria-label="Toggle colour theme"
               aria-pressed="false"
             >
-              Natural Theme
+              Natural theme
             </button>
           
             <!-- <nav class="flex items-center space-x-4 bg-transparent"> -->
