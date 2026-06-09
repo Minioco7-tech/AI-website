@@ -507,7 +507,7 @@
   font-weight: 750;
 
   color: var(--color-accent);
-  background: var(--color-accent-soft);
+  background: transparent;
   border: 1px solid var(--color-accent-border);
 }
 
