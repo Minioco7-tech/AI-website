@@ -1573,6 +1573,7 @@ body:not(.home-page) #searchInput:hover {
   background: var(--color-bg-page);
 }
 
+/*
 .site-bg-glow {
   position: absolute;
   left: 50%;
@@ -1595,6 +1596,10 @@ body:not(.home-page) #searchInput:hover {
   height: 1400px;
   background: var(--color-accent-faint);
   filter: blur(230px);
+}
+*/
+.site-bg-glow {
+  display: none !important;
 }
 
 .ocean-wave {
