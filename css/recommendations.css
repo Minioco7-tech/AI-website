@@ -718,19 +718,19 @@
     min-height: 4.2rem;
   }
 
-   .recommendation-option-icon {
-     width: 2.5rem;
-     height: 2.5rem;
-     border-radius: 0.9rem;
+  .recommendation-option-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.9rem;
    
-     display: inline-flex;
-     align-items: center;
-     justify-content: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
    
-     color: var(--color-recommendation-icon);
-     background: var(--color-accent-soft);
-     border: 1px solid var(--color-accent-border);
-   }
+    color: var(--color-recommendation-icon);
+    background: var(--color-accent-soft);
+    border: 1px solid var(--color-accent-border);
+  }
 
   .recommendation-option-icon svg {
     width: 1rem;
