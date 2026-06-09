@@ -324,7 +324,7 @@
 
 /* Hero animations colours */
   --color-hero-particle: #00BFFF;
-  --color-hero-particle-line: #00BFFF;
+  --color-hero-particle-line-rgb: 0, 191, 255
 }
 
 /* Optional second theme */
@@ -449,7 +449,7 @@ body.theme-natural {
   --color-recommendation-icon-border: rgba(47, 111, 78, 0.16);
 /* Hero animations colours */
   --color-hero-particle: #2f6f4e;
-  --color-hero-particle-line: #2f6f4e;
+  --color-hero-particle-line-rgb: 47, 111, 78;
 }
 
 /* =========================================================
