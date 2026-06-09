@@ -12,6 +12,7 @@
        - Border colours
        - Shadow tokens
        - Gradient tokens
+       - Second colour theme (Cream/Forest green)
 
    02. Fonts & Globals
        - html/body base layout
@@ -209,9 +210,9 @@
   --color-accent-button-bg-hover: rgba(0, 191, 255, 0.20);
 
   /* Gradient accent colours */
-  --color-purple-soft: #d8b4fe;
-  --color-gradient-purple: #a855f7;
-  --color-gradient-pink: #ec4899;
+  --color-blue-soft: #6AB4FC;
+  --color-gradient-blue: #002782;
+  --color-gradient-teal: #00BFFF;
 
   /* Status colours */
   --color-favourite: #ef4444;
@@ -277,16 +278,107 @@
   --gradient-hero-text: linear-gradient(
     to right,
     var(--color-text-primary),
-    var(--color-purple-soft)
+    var(--color-blue-soft)
   );
 
   --gradient-text-accent: linear-gradient(
     to right,
-    var(--color-gradient-purple),
-    var(--color-gradient-pink)
+    var(--color-gradient-blue),
+    var(--color-gradient-teal)
   );
 }
+/* Optional second theme */
+body.theme-natural {
+  --color-bg-page: #f7f1e6;
+  --color-bg-card: rgba(255, 250, 240, 0.96);
+  --color-bg-card-glass: rgba(255, 250, 240, 0.92);
 
+  --color-text-primary: #1f2a24;
+  --color-text-soft: #42524a;
+  --color-text-muted: #66736b;
+  --color-text-dim: #7a877f;
+  --color-text-divider: #a9b1aa;
+
+  --color-accent: #2f6f4e;
+  --color-accent-hover: #25583e;
+  --color-accent-border: rgba(47, 111, 78, 0.28);
+  --color-accent-shadow: rgba(47, 111, 78, 0.18);
+  --color-accent-soft: rgba(47, 111, 78, 0.10);
+  --color-accent-faint: rgba(47, 111, 78, 0.05);
+  --color-accent-button-border: rgba(47, 111, 78, 0.38);
+  --color-accent-button-bg: rgba(47, 111, 78, 0.12);
+  --color-accent-button-bg-hover: rgba(47, 111, 78, 0.20);
+
+  --color-purple-soft: #6b8f71;
+  --color-gradient-purple: #2f6f4e;
+  --color-gradient-pink: #b9855a;
+
+  --color-favourite: #c2410c;
+
+  --color-surface-nav: rgba(255, 250, 240, 0.72);
+  --color-surface-footer: rgba(238, 226, 207, 0.65);
+  --color-surface-dark-glass: rgba(255, 250, 240, 0.72);
+  --color-surface-category: rgba(230, 218, 198, 0.55);
+
+  --color-surface-white-02: rgba(47, 111, 78, 0.02);
+  --color-surface-white-03: rgba(47, 111, 78, 0.03);
+  --color-surface-white-04: rgba(47, 111, 78, 0.04);
+  --color-surface-white-05: rgba(47, 111, 78, 0.05);
+  --color-surface-white-06: rgba(47, 111, 78, 0.06);
+  --color-surface-white-07: rgba(47, 111, 78, 0.07);
+  --color-surface-white-08: rgba(47, 111, 78, 0.08);
+
+  --color-border-white-06: rgba(47, 111, 78, 0.06);
+  --color-border-white-08: rgba(47, 111, 78, 0.08);
+  --color-border-white-10: rgba(47, 111, 78, 0.10);
+  --color-border-white-12: rgba(47, 111, 78, 0.12);
+  --color-border-white-14: rgba(47, 111, 78, 0.14);
+  --color-border-white-15: rgba(47, 111, 78, 0.15);
+  --color-border-white-16: rgba(47, 111, 78, 0.16);
+  --color-border-white-18: rgba(47, 111, 78, 0.18);
+  --color-border-white-22: rgba(47, 111, 78, 0.22);
+  --color-border-white-28: rgba(47, 111, 78, 0.28);
+
+  --color-white-65: rgba(31, 42, 36, 0.65);
+  --color-white-70: rgba(31, 42, 36, 0.70);
+  --color-white-72: rgba(31, 42, 36, 0.72);
+  --color-white-75: rgba(31, 42, 36, 0.75);
+  --color-white-78: rgba(31, 42, 36, 0.78);
+  --color-white-80: rgba(31, 42, 36, 0.80);
+  --color-white-85: rgba(31, 42, 36, 0.85);
+  --color-white-88: rgba(31, 42, 36, 0.88);
+  --color-white-90: rgba(31, 42, 36, 0.90);
+  --color-white-92: rgba(31, 42, 36, 0.92);
+  --color-white-96: rgba(31, 42, 36, 0.96);
+
+  --shadow-soft: 0 4px 12px rgba(55, 48, 38, 0.12);
+  --shadow-card: 0 10px 28px rgba(55, 48, 38, 0.14);
+  --shadow-card-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.70);
+  --shadow-filter-default: 0 10px 26px rgba(55, 48, 38, 0.14);
+  --shadow-filter-hover: 0 12px 30px rgba(55, 48, 38, 0.18);
+  --shadow-filter-open: 0 14px 34px rgba(55, 48, 38, 0.22);
+  --shadow-filter-menu: 0 18px 50px rgba(55, 48, 38, 0.22);
+  --shadow-pill-selected: 0 10px 26px rgba(55, 48, 38, 0.14);
+
+  --gradient-main-overlay: linear-gradient(
+    to bottom,
+    rgba(247, 241, 230, 0.88),
+    rgba(47, 111, 78, 0.08),
+    rgba(185, 133, 90, 0.05)
+  );
+
+  --gradient-hero-text: linear-gradient(
+    to right,
+    #1f2a24,
+    #2f6f4e
+  );
+
+  --gradient-text-accent: linear-gradient(
+    to right,
+    #2f6f4e,
+    #b9855a
+  );
+}
 
 /* =========================================================
    02. Fonts & Globals
