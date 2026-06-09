@@ -1,1 +1,1674 @@
+/* =========================================================
+   AIviary Website Stylesheet
+   =========================================================
 
+   CONTENTS
+
+   01. Theme Variables
+       - Global colour tokens
+       - Text colours
+       - Accent colours
+       - Surface colours
+       - Border colours
+       - Shadow tokens
+       - Gradient tokens
+
+   02. Fonts & Globals
+       - html/body base layout
+       - Global font family
+       - Page background fallback
+       - Prevent horizontal overflow
+
+   03. Typography
+       - h1, h2, h3 weights and letter spacing
+       - Paragraph line height
+
+   04. Main Background / Overlay Gradients
+       - .main-gradient
+       - Subtle overlay behind page sections
+
+   05. Global Transitions and Focus States
+       - Shared transition behaviour
+       - Accessible focus outlines
+       - Bookmark button focus exception
+
+   06. Navbar
+       - nav background blur
+       - nav link sizing/alignment
+
+   07. Hero Section
+       - Header title gradient text
+       - Header form input/button text sizing
+
+   08. Buttons
+       - button base
+       - .btn
+       - .btn-primary
+
+   09. Footer
+       - Footer background
+       - Footer link colours
+       - Footer paragraph text
+
+   10. Animations
+       - .fade-in
+       - @keyframes fadeIn
+
+   11. Utility Classes
+       - .text-gradient
+       - .shadow-soft
+       - .scrollbar-hide
+
+   12. Model Tiles / Tool Cards
+       - .model-tile
+       - Tile hover behaviour
+       - Thumbnail wrapper
+       - Tile text
+       - Icon circles
+       - Badge wrapping
+
+   13. Category Images
+       - .category-thumb-wrapper
+       - .category-thumb
+       - Category image hover zoom
+
+   14. Screenshot Frames
+       - .sshot-frame
+       - .sshot-img
+       - Cover/contain image variants
+
+   15. Related Models Carousel
+       - #carousel-grid
+       - Desktop card sizing
+       - Carousel-specific card scaling
+       - Mobile carousel behaviour
+
+   16. Carousel Arrows
+       - .carousel-arrow
+       - .left-arrow
+       - .right-arrow
+       - Hover, active and disabled states
+
+   17. Carousel Dots
+       - .carousel-dots
+       - .carousel-dot
+       - Dot hover and active states
+
+   18. Reduced Motion
+       - Removes carousel transitions for users who prefer reduced motion
+
+   19. Home Page Guide Accordions
+       - .guide-summary
+       - .guide-accordion[open]
+
+   20. Search Bar and Mobile Search
+       - Non-home search input glow
+       - Mobile search open/close animation
+
+   21. Breadcrumb Navigation
+       - #breadcrumb
+       - Breadcrumb links
+       - Current breadcrumb item
+       - Separators
+
+   22. Filter Dropdown
+       - Dropdown wrapper
+       - Toggle button
+       - Label/meta text
+       - Chevron
+       - Dropdown menu open/closed states
+       - Dropdown footer
+
+   23. Filter Buttons
+       - Apply/reset/ghost filter buttons
+       - Hover states
+
+   24. Filter Pills
+       - Checkbox pill wrapper
+       - Hidden checkbox
+       - Visible pill UI
+       - Selected and hover states
+
+   25. Filter Menu Header
+       - Header row inside dropdown
+       - Selected count label
+
+   26. Filter Pill Scroll Area
+       - Scrollable pill container
+       - Custom scrollbar styling
+
+   27. Expandable Filter Sections
+       - Details/summary filter sections
+       - Section title
+       - Section chevron
+       - Open/closed chevron rotation
+
+   28. Nested Filter Groups / Tags
+       - Nested group spacing
+       - Group titles
+       - Nested pill layout overrides
+
+   29. Global Ocean Background
+       - JS-injected ocean wave wrappers
+       - Wave positioning
+       - SVG sizing
+       - Desktop softening
+
+   30. Bookmark / Favourite Buttons
+       - Model title rows
+       - Card header row
+       - Detail page title row
+       - Bookmark button
+       - Saved state
+       - Large bookmark variant
+
+   31. Header Icon Buttons
+       - Circular header buttons
+       - Hover/focus states
+
+   32. Responsive / Media Query Rules
+       - Mobile filter dropdown width
+       - Note: component-specific media queries are kept near the component
+
+   NOTES
+   - Existing class names and IDs have been preserved.
+   - Most repeated colours now use global variables.
+   - If you want to change the theme, edit section 01 first.
+   - Long-term: avoid styling plain `nav`, because breadcrumbs also use nav.
+   ========================================================= */
+
+
+/* =========================================================
+   01. Theme Variables
+   Global colour, shadow and gradient tokens.
+   Edit these values first when changing the visual theme.
+   ========================================================= */
+
+:root {
+  /* Core backgrounds */
+  --color-bg-page: #020617;
+  --color-bg-card: rgba(2, 6, 23, 1);
+  --color-bg-card-glass: rgba(2, 6, 23, 0.92);
+
+  /* Text colours */
+  --color-text-primary: #ffffff;
+  --color-text-soft: #E0E0E0;
+  --color-text-muted: #ccc;
+  --color-text-dim: #888;
+  --color-text-divider: #666;
+
+  /* Brand / accent colours */
+  --color-accent: #00BFFF;
+  --color-accent-hover: #0099e6;
+  --color-accent-border: rgba(0, 191, 255, 0.30);
+  --color-accent-shadow: rgba(0, 191, 255, 0.16);
+  --color-accent-soft: rgba(0, 191, 255, 0.10);
+  --color-accent-faint: rgba(0, 191, 255, 0.05);
+  --color-accent-button-border: rgba(0, 191, 255, 0.40);
+  --color-accent-button-bg: rgba(0, 191, 255, 0.14);
+  --color-accent-button-bg-hover: rgba(0, 191, 255, 0.20);
+
+  /* Gradient accent colours */
+  --color-purple-soft: #d8b4fe;
+  --color-gradient-purple: #a855f7;
+  --color-gradient-pink: #ec4899;
+
+  /* Status colours */
+  --color-favourite: #ef4444;
+
+  /* Dark/glass surfaces */
+  --color-surface-nav: rgba(0, 0, 0, 0.25);
+  --color-surface-footer: rgba(0, 0, 0, 0.20);
+  --color-surface-dark-glass: rgba(0, 0, 0, 0.40);
+  --color-surface-category: rgba(42, 42, 42, 0.35);
+
+  /* White overlay surfaces */
+  --color-surface-white-02: rgba(255, 255, 255, 0.02);
+  --color-surface-white-03: rgba(255, 255, 255, 0.03);
+  --color-surface-white-04: rgba(255, 255, 255, 0.04);
+  --color-surface-white-05: rgba(255, 255, 255, 0.05);
+  --color-surface-white-06: rgba(255, 255, 255, 0.06);
+  --color-surface-white-07: rgba(255, 255, 255, 0.07);
+  --color-surface-white-08: rgba(255, 255, 255, 0.08);
+
+  /* White border strengths */
+  --color-border-white-06: rgba(255, 255, 255, 0.06);
+  --color-border-white-08: rgba(255, 255, 255, 0.08);
+  --color-border-white-10: rgba(255, 255, 255, 0.10);
+  --color-border-white-12: rgba(255, 255, 255, 0.12);
+  --color-border-white-14: rgba(255, 255, 255, 0.14);
+  --color-border-white-15: rgba(255, 255, 255, 0.15);
+  --color-border-white-16: rgba(255, 255, 255, 0.16);
+  --color-border-white-18: rgba(255, 255, 255, 0.18);
+  --color-border-white-22: rgba(255, 255, 255, 0.22);
+  --color-border-white-28: rgba(255, 255, 255, 0.28);
+
+  /* Transparent white text/controls */
+  --color-white-65: rgba(255, 255, 255, 0.65);
+  --color-white-70: rgba(255, 255, 255, 0.70);
+  --color-white-72: rgba(255, 255, 255, 0.72);
+  --color-white-75: rgba(255, 255, 255, 0.75);
+  --color-white-78: rgba(255, 255, 255, 0.78);
+  --color-white-80: rgba(255, 255, 255, 0.80);
+  --color-white-85: rgba(255, 255, 255, 0.85);
+  --color-white-88: rgba(255, 255, 255, 0.88);
+  --color-white-90: rgba(255, 255, 255, 0.90);
+  --color-white-92: rgba(255, 255, 255, 0.92);
+  --color-white-96: rgba(255, 255, 255, 0.96);
+
+  /* Shadows */
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.20);
+  --shadow-card: 0 8px 20px rgba(0, 0, 0, 0.40);
+  --shadow-card-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  --shadow-filter-default: 0 10px 26px rgba(0, 0, 0, 0.45);
+  --shadow-filter-hover: 0 12px 30px rgba(0, 0, 0, 0.52);
+  --shadow-filter-open: 0 14px 34px rgba(0, 0, 0, 0.58);
+  --shadow-filter-menu: 0 18px 50px rgba(0, 0, 0, 0.62);
+  --shadow-pill-selected: 0 10px 26px rgba(0, 0, 0, 0.35);
+
+  /* Gradients */
+  --gradient-main-overlay: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.80),
+    var(--color-accent-soft),
+    var(--color-accent-faint)
+  );
+
+  --gradient-hero-text: linear-gradient(
+    to right,
+    var(--color-text-primary),
+    var(--color-purple-soft)
+  );
+
+  --gradient-text-accent: linear-gradient(
+    to right,
+    var(--color-gradient-purple),
+    var(--color-gradient-pink)
+  );
+}
+
+
+/* =========================================================
+   02. Fonts & Globals
+   Global document setup and page-level layout.
+   ========================================================= */
+
+/*
+  Previous body styling kept for reference.
+
+  This was your older full-page gradient background.
+  It is commented out so it does not affect the current design.
+*/
+/*
+body {
+  font-family: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont,'Segoe UI', Roboto, sans-serif;
+  color: #fff;
+  background: linear-gradient(
+    to bottom, 
+    rgba(0, 0, 0, 1.0) 0%,
+    rgba(0, 191, 255, 0.025) 25%,
+    rgba(0, 191, 255, 0.05) 50%,
+    rgba(0, 191, 255, 0.075) 75%,
+    rgba(0, 191, 255, 0.1) 100%
+  );
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+*/
+
+/* Keep the document at least full height and prevent sideways scrolling. */
+html,
+body {
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+/* Main site font, text colour, background fallback and flex page structure. */
+body {
+  font-family: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, sans-serif;
+
+  color: var(--color-text-primary);
+
+  /* Simple fallback only. Page-specific background layers are injected separately. */
+  background: var(--color-bg-page);
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================================================
+   03. Typography
+   Base heading and paragraph styling.
+   ========================================================= */
+
+h1 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+p {
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   04. Main Background / Overlay Gradients
+   Subtle overlay gradient for main content sections.
+   ========================================================= */
+
+.main-gradient {
+  position: absolute;   /* Sits behind content */
+  inset: 0;             /* top/right/bottom/left = 0 */
+  pointer-events: none; /* Does not block clicks */
+  background: var(--gradient-main-overlay);
+  z-index: 0;           /* Behind all content */
+}
+
+
+/* =========================================================
+   05. Global Transitions and Focus States
+   Shared interaction behaviour across clickable/form elements.
+   ========================================================= */
+
+/* Smooth transitions for UI elements. */
+a,
+button,
+input,
+select {
+  transition: all 0.3s ease;
+}
+
+/*
+  Accessible focus outline.
+
+  Bookmark buttons are excluded because they have their own custom
+  no-outline treatment later in the file.
+*/
+button:not(.bookmark-btn):focus,
+input:focus,
+select:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   06. Navbar
+   Global nav styling.
+   Note: this affects all <nav> elements, including breadcrumbs.
+   ========================================================= */
+
+nav {
+  backdrop-filter: blur(12px);
+  background: var(--color-surface-nav);
+}
+
+/* Standard nav link sizing and vertical alignment. */
+nav a {
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.5rem; /* 24px */
+  display: inline-flex;
+  align-items: center;
+}
+
+
+/* =========================================================
+   07. Hero Section
+   Header title gradient and hero form details.
+   ========================================================= */
+
+/* Gradient text effect for hero/header h1 elements. */
+header h1 {
+  background: var(--gradient-hero-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Keeps hero search input text at a comfortable size. */
+header form input {
+  font-size: 1rem;
+}
+
+/* Gives hero search button stronger emphasis. */
+header form button {
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   08. Buttons
+   Reusable button styles.
+   ========================================================= */
+
+/* Shared button base. */
+button,
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Main blue CTA button. */
+.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-text-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent-hover);
+}
+
+
+/* =========================================================
+   09. Footer
+   Footer surface, text and link styling.
+   ========================================================= */
+
+footer {
+  background: var(--color-surface-footer);
+  backdrop-filter: blur(10px);
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--color-text-soft);
+}
+
+footer a:hover {
+  color: var(--color-text-primary);
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   10. Animations
+   Reusable entrance animations.
+   ========================================================= */
+
+/* Simple fade/slide entrance effect. */
+.fade-in {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   11. Utility Classes
+   Small reusable helpers.
+   ========================================================= */
+
+/* Purple/pink gradient text utility. */
+.text-gradient {
+  background: var(--gradient-text-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Soft shadow utility. */
+.shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+
+/* Hides scrollbars where horizontal scrolling is used visually. */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================================================
+   12. Model-Tile / Unified Tile Design
+   Reusable model/tool card styling.
+   ========================================================= */
+
+.model-tile {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-white-10);
+  border-radius: 0.75rem;
+  overflow: hidden;
+
+  /*
+    Frosted glass option kept for reference.
+    Re-enable if you want cards to look more translucent.
+  */
+  /* backdrop-filter: blur(12px) saturate(140%); */
+  /* -webkit-backdrop-filter: blur(12px) saturate(140%); */
+
+  box-shadow:
+    var(--shadow-card),           /* Soft shadow for depth */
+    var(--shadow-card-highlight); /* Faint top highlight for 3D effect */
+
+  transition: transform 0.3s ease;
+  cursor: pointer;
+
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* Optional hover state used where cards should lift/scale. */
+.model-tile.is-hoverable:hover {
+  transform: scale(1.03);
+  z-index: 10;
+  overflow: visible;
+}
+
+/* Image wrapper inside a model tile. */
+.model-tile .thumb-wrapper {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  padding: 0.50rem;
+  background: var(--color-bg-page);
+  box-shadow: none;
+}
+
+/*
+  Previous .thumb class kept for reference.
+
+  This is currently commented out because your cards use screenshot/image
+  wrapper classes instead.
+*/
+/*
+.model-tile .thumb {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0.75rem;
+  transition: transform 0.3s ease;
+}
+*/
+
+/* Model/tool title inside card. */
+.model-tile h3 {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0.25rem;
+}
+
+/* Model/tool description inside card. */
+.model-tile p {
+  font-size: 0.875rem;
+  color: var(--color-text-soft);
+}
+
+/* Circular icon holder used inside cards. */
+.model-tile .icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;  /* 48px */
+  height: 3rem; /* 48px */
+  border-radius: 9999px;
+  margin-bottom: 0.75rem;
+}
+
+/* Card content area. */
+.model-tile .flex-1 {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+/* Pushes badges/tags to the bottom of the tile. */
+.model-tile .flex-wrap {
+  margin-top: auto;
+  gap: 0.25rem;
+}
+
+/* Prevents badges/text spans from overflowing card width. */
+.model-tile span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+
+/* =========================================================
+   13. Category Image / Inset Style
+   Category tile image container and hover behaviour.
+   ========================================================= */
+
+.category-thumb-wrapper {
+  background-color: var(--color-surface-category); /* Same idea as tile background */
+  border-radius: 0.75rem;                          /* Matches tile rounding */
+  padding: 6px;                                    /* Uniform gap between tile and image */
+  aspect-ratio: 16 / 9;                            /* Keeps consistent shape */
+  width: 100%;
+  overflow: visible;                               /* Respects rounded corners */
+  margin-bottom: 0.75rem;                          /* Spacing between image and icon */
+
+  /* Frosted glass inset effect. */
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+}
+
+.category-thumb {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.75rem;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+  transform-origin: center center;
+}
+
+/* Subtle zoom on category image hover. */
+.category-thumb:hover {
+  transform: scale(1.05);
+}
+
+
+/* =========================================================
+   14. Screenshot Frames
+   Screenshot/image framing used inside cards.
+   ========================================================= */
+
+/* Frame around screenshots to keep consistent 16:9 layout. */
+.sshot-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: var(--color-bg-page);
+  border: 1px solid var(--color-border-white-08);
+}
+
+/* Image is pinned to all edges so no gaps appear. */
+.sshot-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Crops image to fill the frame. */
+.sshot-img--cover {
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+/* Shows entire image without cropping. */
+.sshot-img--contain {
+  object-fit: contain;
+  object-position: center;
+}
+
+
+/* =========================================================
+   15. Related Models Carousel
+   model.html related models carousel.
+   Reuses model cards but adjusts sizing/scale inside carousel.
+   ========================================================= */
+
+/* Carousel track. */
+#carousel-grid {
+  display: flex;
+  gap: 1rem; /* Keeps Tailwind gap-4 parity */
+  transition: transform 0.5s ease;
+  will-change: transform;
+  align-items: stretch; /* Same height cards */
+}
+
+/* Center cards when there are not enough models to scroll. */
+#carousel-grid.is-centered {
+  justify-content: center;
+}
+
+/* Exactly 3 cards per view on desktop. */
+#carousel-grid .model-tile {
+  flex: 0 0 calc((100% - 2rem) / 3); /* 2 gaps of 1rem */
+  max-width: calc((100% - 2rem) / 3);
+}
+
+/* Mobile: 1 card per view. */
+@media (max-width: 768px) {
+  #carousel-grid .model-tile {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/*
+  Carousel hover behaviour.
+  Prevents the card from popping out of the carousel viewport.
+*/
+#related-models .model-tile:hover {
+  overflow: hidden;
+  z-index: 2;
+}
+
+/* Clip hover growth inside the carousel viewport. */
+#related-models .overflow-hidden {
+  overflow: hidden;
+}
+
+/* Scale carousel cards down uniformly. */
+#carousel-grid .model-tile {
+  transform: scale(0.94);
+  transform-origin: center center;
+  transition: transform 0.25s ease;
+}
+
+/* Hover: gently scale up while staying smaller than normal cards. */
+#carousel-grid .model-tile:hover {
+  transform: scale(0.98);
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Mobile: slightly less reduction because cards are already tall. */
+@media (max-width: 768px) {
+  #carousel-grid .model-tile {
+    transform: scale(0.97);
+  }
+
+  #carousel-grid .model-tile:hover {
+    transform: scale(1.0);
+  }
+}
+
+
+/* =========================================================
+   16. Carousel Arrows
+   Previous/next buttons for related models carousel.
+   ========================================================= */
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 9999px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+  color: var(--color-white-70);
+
+  cursor: pointer;
+  z-index: 10;
+
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+/* Arrows sit slightly outside the inner container so they do not overlap cards. */
+.left-arrow {
+  left: -0.75rem;
+}
+
+.right-arrow {
+  right: -0.75rem;
+}
+
+/* Slightly pull arrows in on mobile. */
+@media (max-width: 768px) {
+  .left-arrow {
+    left: -0.5rem;
+  }
+
+  .right-arrow {
+    right: -0.5rem;
+  }
+}
+
+.carousel-arrow:hover {
+  color: var(--color-text-primary);
+  filter: brightness(1.15);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.carousel-arrow:active {
+  transform: translateY(-50%) scale(0.96);
+  filter: brightness(0.95);
+}
+
+.carousel-arrow.is-disabled,
+.carousel-arrow:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  filter: none;
+}
+
+
+/* =========================================================
+   17. Carousel Dots
+   Dot pagination for related models carousel.
+   ========================================================= */
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background: var(--color-border-white-28); /* Faded grey */
+  border: 1px solid var(--color-border-white-10);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, filter 0.2s ease;
+}
+
+.carousel-dot:hover {
+  background: var(--color-white-85);
+  transform: scale(1.25);
+  filter: brightness(1.1);
+}
+
+.carousel-dot.active {
+  background: var(--color-text-primary);
+  transform: scale(1.25);
+}
+
+
+/* =========================================================
+   18. Reduced Motion
+   Accessibility support for users who prefer reduced motion.
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  #carousel-grid,
+  .carousel-dot,
+  .carousel-arrow {
+    transition: none !important;
+  }
+}
+
+
+/* =========================================================
+   19. Home Page Guide Accordions
+   Home page information dropdown styling.
+   ========================================================= */
+
+/* Remove default triangle marker from guide summaries. */
+.guide-summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Subtle open/close polish for guide accordions. */
+.guide-accordion[open] {
+  border-color: var(--color-border-white-16);
+}
+
+
+/* =========================================================
+   20. Search Bar and Mobile Search
+   Search input glow and mobile search container animation.
+   ========================================================= */
+
+/*
+  Apply search glow only when body does NOT have .home-page.
+  This prevents the home hero search from receiving this page-level treatment.
+*/
+body:not(.home-page) #searchInput {
+  transition: all 0.3s ease;
+}
+
+body:not(.home-page) #searchInput:hover {
+  box-shadow: 0 0 8px var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+/* Mobile search bar hidden state. */
+#mobileSearchContainer {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+/* Mobile search bar visible/open state. */
+#mobileSearchContainer.mobile-search-active {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+
+/* =========================================================
+   21. Breadcrumb Navigation
+   Breadcrumb styling for category, model, favourites and saved pages.
+   ========================================================= */
+
+#breadcrumb {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  text-align: left;
+  justify-content: flex-start; /* Align left */
+  margin-top: 0.25rem;         /* Consistent spacing */
+  margin-bottom: 1rem;
+  background-color: transparent;
+}
+
+/* Inactive breadcrumb links. */
+#breadcrumb a {
+  color: var(--color-text-dim);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center; /* Ensures vertical alignment */
+}
+
+#breadcrumb a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+/* Active breadcrumb item/current page. */
+#breadcrumb span {
+  color: var(--color-text-primary);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+/* Separator slash. */
+#breadcrumb span.separator {
+  color: var(--color-text-divider);
+  padding: 0 0.25rem;
+  display: flex;
+  align-items: center;
+}
+
+
+/* =========================================================
+   22. Filter Dropdown
+   Custom category/tag filter dropdown.
+   ========================================================= */
+
+.filter-dropdown {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+/* Main dropdown toggle button. */
+.filter-dropdown-toggle {
+  appearance: none;
+  width: 100%;
+  min-width: 220px;
+  max-width: 320px;
+
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.72rem 0.85rem;
+  border-radius: 0.85rem;
+
+  background: var(--color-bg-page);
+  border: 1px solid var(--color-border-white-10);
+  box-shadow: var(--shadow-filter-default);
+
+  color: var(--color-text-primary);
+  cursor: pointer;
+  user-select: none;
+
+  transition:
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    transform 220ms ease;
+}
+
+.filter-dropdown-toggle:hover {
+  border-color: var(--color-border-white-16);
+  box-shadow: var(--shadow-filter-hover);
+}
+
+/* Stronger visual state when dropdown is open. */
+.filter-dropdown.open .filter-dropdown-toggle {
+  border-color: var(--color-accent-border);
+  box-shadow: var(--shadow-filter-open);
+}
+
+/* Main text label inside dropdown toggle. */
+.filter-dropdown-label {
+  font-size: 0.9rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  opacity: 0.95;
+  text-align: left;
+  min-width: 0;
+}
+
+/* Small metadata pill inside dropdown toggle. */
+.filter-dropdown-meta {
+  font-size: 0.78rem;
+  color: var(--color-white-70);
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  border: 1px solid var(--color-border-white-10);
+  background: var(--color-surface-white-05);
+}
+
+/* Circular chevron button inside dropdown toggle. */
+.filter-dropdown-chevron {
+  width: 34px;
+  height: 34px;
+  border-radius: 9999px;
+  border: 1px solid var(--color-border-white-10);
+  background: var(--color-surface-white-05);
+  position: relative;
+}
+
+/* CSS-drawn chevron. */
+.filter-dropdown-chevron::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid var(--color-white-80);
+  border-bottom: 2px solid var(--color-white-80);
+  transform: rotate(45deg) translateY(-1px);
+  transition: transform 180ms ease;
+}
+
+/* Rotate chevron when dropdown is open. */
+.filter-dropdown.open .filter-dropdown-chevron::before {
+  transform: rotate(-135deg) translateY(-1px);
+}
+
+/* Dropdown menu panel. */
+.filter-dropdown-menu {
+  position: relative; /* In-flow so it pushes content down */
+  width: 100%;
+  margin-top: 0.75rem;
+
+  /* Closed state */
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+
+  border-radius: 1rem;
+  background: var(--color-bg-card-glass);
+  border: 1px solid var(--color-border-white-10);
+  box-shadow: var(--shadow-filter-menu);
+
+  transition: max-height 320ms ease, opacity 200ms ease;
+}
+
+/* Open state. */
+.filter-dropdown.open .filter-dropdown-menu {
+  max-height: 1400px; /* Large enough for category and tag sections */
+  opacity: 1;
+}
+
+/* Footer actions inside dropdown menu. */
+.filter-dropdown-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+
+  padding: 0.75rem 0.85rem;
+  border-top: 1px solid var(--color-border-white-08);
+  background: var(--color-surface-white-02);
+}
+
+
+/* =========================================================
+   23. Filter Buttons
+   Buttons used inside the filter dropdown.
+   ========================================================= */
+
+.filter-btn {
+  flex: 1;
+  height: 40px;
+  border-radius: 9999px;
+  font-weight: 800;
+  font-size: 0.88rem;
+  border: 1px solid var(--color-border-white-12);
+  background: var(--color-surface-white-05);
+  color: var(--color-white-92);
+  cursor: pointer;
+
+  transition: background 180ms ease, border-color 180ms ease;
+}
+
+.filter-btn:hover {
+  border-color: var(--color-border-white-18);
+  background: var(--color-surface-white-07);
+}
+
+/* Secondary/ghost filter button. */
+.filter-btn-ghost {
+  background: transparent;
+  border-color: var(--color-border-white-08);
+  color: var(--color-white-72);
+}
+
+.filter-btn-ghost:hover {
+  background: var(--color-surface-white-04);
+  border-color: var(--color-border-white-12);
+}
+
+/* Primary filter action button. */
+.filter-btn-primary {
+  border-color: var(--color-accent-button-border);
+  background: var(--color-accent-button-bg);
+  color: var(--color-white-96);
+}
+
+.filter-btn-primary:hover {
+  background: var(--color-accent-button-bg-hover);
+}
+
+/* Reset button inside dropdown. */
+.filter-reset-btn {
+  height: 36px;
+  padding: 0 0.85rem;
+  border-radius: 9999px;
+
+  background: var(--color-surface-white-05);
+  border: 1px solid var(--color-border-white-12);
+  color: var(--color-white-90);
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+
+  transition:
+    transform 150ms ease,
+    background 150ms ease,
+    border-color 150ms ease;
+}
+
+.filter-reset-btn:hover {
+  background: var(--color-surface-white-08);
+  border-color: var(--color-border-white-18);
+  transform: translateY(-1px);
+}
+
+.filter-reset-btn:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   24. Filter Pills
+   Checkbox pills used inside #filterCategories.
+   ========================================================= */
+
+/* filterCategories is the menu root now — it must not be a pill grid. */
+#filterCategories {
+  display: block;
+  padding: 0;
+}
+
+/* Pill wrapper. */
+.filter-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Hide the actual checkbox while keeping the label clickable. */
+.filter-pill input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Visible pill UI. */
+.filter-pill .pill-ui {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 0.45rem 0.85rem;
+  border-radius: 9999px;
+
+  color: var(--color-text-primary);
+  font-size: 0.875rem;
+  font-weight: 650;
+
+  border: 1px solid var(--color-border-white-14);
+  box-shadow: inset 0 1px 0 var(--color-border-white-10);
+
+  opacity: 0.55; /* Unchecked pills look inactive */
+  transform: translateY(0);
+
+  transition:
+    transform 150ms ease,
+    opacity 150ms ease,
+    box-shadow 150ms ease,
+    border-color 150ms ease;
+}
+
+.filter-pill:hover .pill-ui {
+  opacity: 0.85;
+  transform: translateY(-1px);
+  border-color: var(--color-border-white-22);
+}
+
+/* Selected pill state. */
+.filter-pill input:checked + .pill-ui {
+  opacity: 1;
+  border-color: var(--color-border-white-28);
+  box-shadow:
+    var(--shadow-pill-selected),
+    0 0 0 3px var(--color-accent-shadow),
+    inset 0 1px 0 var(--color-border-white-12);
+}
+
+
+/* =========================================================
+   25. Filter Menu Header
+   Header row inside dropdown menu above the pills.
+   ========================================================= */
+
+.filter-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+
+  padding: 0.75rem 0.9rem;
+  border-bottom: 1px solid var(--color-border-white-08);
+  background: var(--color-surface-white-02);
+}
+
+/* Shows how many filters are currently selected. */
+.filter-selected-count {
+  font-size: 0.8rem;
+  color: var(--color-white-65);
+  font-weight: 650;
+}
+
+
+/* =========================================================
+   26. Filter Pill Scroll Area
+   Scrollable pill container inside dropdown menu.
+   ========================================================= */
+
+.filter-pills {
+  max-height: 320px;
+  overflow: auto;
+  padding: 0.9rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+/* Custom scrollbar width. */
+.filter-pills::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Custom scrollbar thumb. */
+.filter-pills::-webkit-scrollbar-thumb {
+  background: var(--color-border-white-10);
+  border-radius: 9999px;
+  border: 2px solid var(--color-bg-card-glass);
+}
+
+
+/* =========================================================
+   27. Expandable Filter Sections
+   Details/summary sections inside the filter dropdown.
+   ========================================================= */
+
+.filter-section {
+  border-top: 1px solid var(--color-border-white-08);
+}
+
+.filter-section-summary {
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0.65rem 0.9rem;
+}
+
+/* Remove default details triangle marker. */
+.filter-section-summary::-webkit-details-marker {
+  display: none;
+}
+
+.filter-section-title {
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--color-white-92);
+}
+
+/* Same bubble + arrow style as the main dropdown chevron. */
+.filter-section-chevron {
+  width: 30px;
+  height: 30px;
+  border-radius: 9999px;
+  border: 1px solid var(--color-border-white-10);
+  background: var(--color-surface-white-03);
+  position: relative;
+}
+
+/* CSS-drawn chevron for nested filter sections. */
+.filter-section-chevron::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 9px;
+  height: 9px;
+  border-right: 2px solid var(--color-white-75);
+  border-bottom: 2px solid var(--color-white-75);
+  transform: rotate(45deg) translateY(-1px);
+  transition: transform 220ms ease;
+}
+
+/* Rotate nested chevron when section is open. */
+.filter-section[open] .filter-section-chevron::before {
+  transform: rotate(-135deg) translateY(-1px);
+}
+
+
+/* =========================================================
+   28. Nested Filter Groups / Tags
+   Tag groups inside expandable filter sections.
+   ========================================================= */
+
+.filter-subsection-inner {
+  padding: 0.25rem 0;
+}
+
+.filter-group {
+  padding: 0.65rem 0.9rem 0.25rem;
+  border-top: 1px solid var(--color-border-white-06);
+}
+
+.filter-group:first-child {
+  border-top: none;
+}
+
+.filter-group-title {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--color-white-88);
+  margin-bottom: 0.40rem;
+}
+
+/* Let group pills flow naturally inside nested groups. */
+.filter-group .filter-pills {
+  padding: 0;
+  max-height: none;
+  overflow: visible;
+}
+
+
+/* =========================================================
+   29. Global Ocean Background
+   Static wave background injected by background.js.
+   ========================================================= */
+
+/* Shared wave wrapper: extends past viewport to avoid visible edges. */
+.ocean-wave {
+  position: absolute;
+  left: -10%;
+  width: 120%;
+  overflow: hidden;
+}
+
+/* Top wave position and size. */
+.ocean-wave--top {
+  top: 18%;
+  height: 26%;
+}
+
+/* Middle wave position and size. */
+.ocean-wave--mid {
+  top: 45%;
+  height: 28%;
+}
+
+/* Deep/lower wave position and size. */
+.ocean-wave--deep {
+  top: 70%;
+  height: 30%;
+}
+
+/* SVG oversized for a smoother background look. */
+.ocean-wave svg {
+  width: 220%;
+  height: 100%;
+  display: block;
+  transform-origin: center;
+}
+
+/* Slight softening on large screens. */
+@media (min-width: 1024px) {
+  .ocean-wave path {
+    filter: blur(0.25px);
+  }
+}
+
+
+/* =========================================================
+   30. Bookmark / Favourite Buttons
+   Favourite/save UI used on model cards and model detail pages.
+   ========================================================= */
+
+/* Title/header row used in cards so title and bookmark sit apart. */
+.model-title-row,
+.model-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Larger title row used on the model detail page. */
+.model-detail-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Circular bookmark button. */
+.bookmark-btn {
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9999px;
+  border: 1px solid var(--color-border-white-10);
+  background: var(--color-surface-dark-glass);
+  backdrop-filter: blur(12px);
+
+  color: var(--color-white-78);
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.bookmark-btn:hover {
+  color: var(--color-text-primary);
+  background: var(--color-surface-white-06);
+  border-color: var(--color-border-white-16);
+  transform: scale(1.08);
+}
+
+/* Remove default focus styling for bookmark button. */
+.bookmark-btn:focus,
+.bookmark-btn:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Icon sizing inside bookmark buttons. */
+.bookmark-btn i,
+.bookmark-btn svg {
+  width: 1rem;
+  height: 1rem;
+  stroke: currentColor;
+  fill: none;
+  pointer-events: none;
+}
+
+/* Saved/favourited state. */
+.bookmark-btn.is-saved {
+  color: var(--color-favourite);
+}
+
+/* Filled heart when saved. */
+.bookmark-btn.is-saved svg {
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+/* Force-remove all outline/shadow states from bookmark buttons. */
+.bookmark-btn,
+.bookmark-btn:focus,
+.bookmark-btn:focus-visible,
+.bookmark-btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Smooth heart icon fill/stroke transitions. */
+.bookmark-btn svg {
+  transition:
+    fill 0.2s ease,
+    stroke 0.2s ease,
+    color 0.2s ease;
+}
+
+/* Larger bookmark button used on model detail pages. */
+.bookmark-btn--large {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+/* Larger icon for larger bookmark button. */
+.bookmark-btn--large svg {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+
+/* =========================================================
+   31. Header Icon Buttons
+   Circular icon buttons in the site header.
+   ========================================================= */
+
+.header-icon-btn {
+  width: 2.4rem;
+  height: 2.4rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9999px;
+
+  background: var(--color-surface-white-05);
+  border: 1px solid var(--color-border-white-08);
+
+  color: var(--color-white-85);
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.header-icon-btn:hover {
+  background: var(--color-surface-white-08);
+  border-color: var(--color-border-white-15);
+  color: var(--color-text-primary);
+  transform: scale(1.05);
+}
+
+.header-icon-btn:focus,
+.header-icon-btn:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   32. Responsive / Media Query Rules
+   General responsive overrides.
+   Component-specific media queries are mostly kept near components.
+   ========================================================= */
+
+/* Filter dropdown becomes full width on mobile. */
+@media (max-width: 640px) {
+  .filter-dropdown-toggle {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
