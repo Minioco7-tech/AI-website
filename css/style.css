@@ -171,6 +171,10 @@
        - Mobile filter dropdown width
        - Note: component-specific media queries are kept near the component
 
+   33. Theme toggle button
+   
+   34. Home hero section styling
+
    NOTES
    - Existing class names and IDs have been preserved.
    - Most repeated colours now use global variables.
@@ -210,9 +214,9 @@
   --color-accent-button-bg-hover: rgba(0, 191, 255, 0.20);
 
   /* Gradient accent colours */
-  --color-blue-soft: #6AB4FC;
-  --color-gradient-blue: #002782;
-  --color-gradient-teal: #00BFFF;
+  --color-accent-soft: #6AB4FC;       /* light blue */
+  --color-gradient-start: #002782;    /* dark blue */
+  --color-gradient-end: #00BFFF;      /* teal */
 
   /* Status colours */
   --color-favourite: #ef4444;
@@ -283,8 +287,8 @@
 
   --gradient-text-accent: linear-gradient(
     to right,
-    var(--color-gradient-blue),
-    var(--color-gradient-teal)
+    var(--color-gradient-start),
+    var(--color-gradient-end)
   );
 }
 /* Optional second theme */
@@ -309,9 +313,9 @@ body.theme-natural {
   --color-accent-button-bg: rgba(47, 111, 78, 0.12);
   --color-accent-button-bg-hover: rgba(47, 111, 78, 0.20);
 
-  --color-purple-soft: #6b8f71;
-  --color-gradient-purple: #2f6f4e;
-  --color-gradient-pink: #b9855a;
+  --color-accent-soft: #6b8f71;      /* pale green */
+  --color-gradient-start: #2f6f4e;   /* dark green */
+  --color-gradient-end: #b9855a;     /* light green */
 
   --color-favourite: #c2410c;
 
@@ -362,21 +366,21 @@ body.theme-natural {
 
   --gradient-main-overlay: linear-gradient(
     to bottom,
-    rgba(247, 241, 230, 0.88),
-    rgba(47, 111, 78, 0.08),
-    rgba(185, 133, 90, 0.05)
+    rgba(0, 0, 0, 0.80),
+    var(--color-accent-soft),
+    var(--color-accent-faint)
   );
 
   --gradient-hero-text: linear-gradient(
     to right,
-    #1f2a24,
-    #2f6f4e
+    var(--color-text-primary),
+    var(--color-blue-soft)
   );
 
   --gradient-text-accent: linear-gradient(
     to right,
-    #2f6f4e,
-    #b9855a
+    var(--color-gradient-start),
+    var(--color-gradient-end)
   );
 }
 
