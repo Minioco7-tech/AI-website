@@ -3,7 +3,8 @@ const STORAGE_KEY = "aiviary-theme";
 function applyTheme(theme) {
   document.body.classList.toggle("theme-natural", theme === "natural");
   localStorage.setItem(STORAGE_KEY, theme);
-
+  window.dispatchEvent(new CustomEvent("aiviary-theme-change"));
+  
   document.querySelectorAll("[data-theme-toggle]").forEach((button) => {
     button.setAttribute("aria-pressed", theme === "natural" ? "true" : "false");
     button.textContent = theme === "natural" ? "Dark theme" : "Natural theme";
