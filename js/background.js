@@ -11,15 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const base = `
     <div class="site-bg-base ${page === 'model' ? 'site-bg-base--model' : ''}"></div>
-
-    ${
-      page !== 'model'
-        ? `
-          <div class="site-bg-glow site-bg-glow--top"></div>
-          <div class="site-bg-glow site-bg-glow--bottom"></div>
-        `
-        : ''
-    }
   `;
 
   const waves = `
