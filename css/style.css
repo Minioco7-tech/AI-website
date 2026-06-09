@@ -305,7 +305,21 @@
     var(--color-gradient-start),
     var(--color-gradient-end)
   );
+
+/* Recommendation section imports for recommendation.css */
+ --gradient-recommendation-tone-1: linear-gradient(135deg, rgba(30, 64, 175, 0.55), rgba(2, 6, 23, 0.9));
+ --gradient-recommendation-tone-2: linear-gradient(135deg, rgba(14, 116, 144, 0.5), rgba(2, 6, 23, 0.88));
+ --gradient-recommendation-tone-3: linear-gradient(135deg, rgba(56, 189, 248, 0.38), rgba(2, 6, 23, 0.86));
+ --gradient-recommendation-tone-4: linear-gradient(135deg, rgba(125, 211, 252, 0.34), rgba(15, 23, 42, 0.88));
+   
+ --gradient-recommendation-inner: radial-gradient(circle at top right, rgba(56, 189, 248, 0.14), transparent 34%), rgba(2, 6, 23, 0.92);
+ --gradient-recommendation-card: linear-gradient(135deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.025)), rgba(2, 6, 23, 0.9);
+ --gradient-recommendation-option: linear-gradient(135deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.025));
+ --gradient-recommendation-option-hover: linear-gradient(135deg, rgba(56, 189, 248, 0.14), rgba(255, 255, 255, 0.035));
+ --gradient-recommendation-progress: linear-gradient(90deg, #38bdf8, #7dd3fc, #e0f2fe);
+ --gradient-recommendation-cta: linear-gradient(135deg, #38bdf8, #2563eb);
 }
+
 /* Optional second theme */
 body.theme-natural {
   --color-bg-page: #f7f1e6;
@@ -411,6 +425,18 @@ body.theme-natural {
     var(--color-gradient-start),
     var(--color-gradient-end)
   );
+/* Recommendation section imports for recommendation.css */
+ --gradient-recommendation-tone-1: linear-gradient(135deg, rgba(47, 111, 78, 0.35), rgba(255, 250, 240, 0.92));
+ --gradient-recommendation-tone-2: linear-gradient(135deg, rgba(107, 143, 113, 0.35), rgba(255, 250, 240, 0.92));
+ --gradient-recommendation-tone-3: linear-gradient(135deg, rgba(185, 133, 90, 0.28), rgba(255, 250, 240, 0.92));
+ --gradient-recommendation-tone-4: linear-gradient(135deg, rgba(47, 111, 78, 0.28), rgba(255, 250, 240, 0.94));
+
+ --gradient-recommendation-inner: radial-gradient(circle at top right, rgba(47, 111, 78, 0.12), transparent 34%), rgba(255, 250, 240, 0.92);
+ --gradient-recommendation-card: linear-gradient(135deg, rgba(47, 111, 78, 0.06), rgba(185, 133, 90, 0.03)), rgba(255, 250, 240, 0.88);
+ --gradient-recommendation-option: linear-gradient(135deg, rgba(47, 111, 78, 0.06), rgba(185, 133, 90, 0.025));
+ --gradient-recommendation-option-hover: linear-gradient(135deg, rgba(47, 111, 78, 0.12), rgba(185, 133, 90, 0.04));
+ --gradient-recommendation-progress: linear-gradient(90deg, #2f6f4e, #8aa38c, #c49a6c);
+ --gradient-recommendation-cta: linear-gradient(135deg, #2f6f4e, #25583e);
 }
 
 /* =========================================================
