@@ -271,6 +271,8 @@
   --shadow-filter-menu: 0 18px 50px rgba(0, 0, 0, 0.62);
   --shadow-pill-selected: 0 10px 26px rgba(0, 0, 0, 0.35);
 
+  /* Background wave color */
+  --color-wave-stroke: rgba(255, 255, 255, 0.70);
   /* Gradients */
   --gradient-main-overlay: linear-gradient(
     to bottom,
@@ -318,6 +320,8 @@ body.theme-natural {
   --color-gradient-end: #b9855a;     /* light green */
 
   --color-favourite: #c2410c;
+
+  --color-wave-stroke: rgba(31, 42, 36, 0.55);
 
   --color-surface-nav: rgba(255, 250, 240, 0.72);
   --color-surface-footer: rgba(238, 226, 207, 0.65);
@@ -1556,10 +1560,43 @@ body:not(.home-page) #searchInput:hover {
 
 /* =========================================================
    29. Global Ocean Background
-   Static wave background injected by background.js.
+   Static background and wave layers injected by background.js.
    ========================================================= */
 
-/* Shared wave wrapper: extends past viewport to avoid visible edges. */
+.site-bg-base {
+  position: absolute;
+  inset: 0;
+  background: var(--color-bg-page);
+}
+
+.site-bg-base--model {
+  background: var(--color-bg-page);
+}
+
+.site-bg-glow {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 9999px;
+  pointer-events: none;
+}
+
+.site-bg-glow--top {
+  top: -20%;
+  width: 1200px;
+  height: 1200px;
+  background: var(--color-accent-soft);
+  filter: blur(190px);
+}
+
+.site-bg-glow--bottom {
+  bottom: -35%;
+  width: 1400px;
+  height: 1400px;
+  background: var(--color-accent-faint);
+  filter: blur(230px);
+}
+
 .ocean-wave {
   position: absolute;
   left: -10%;
@@ -1567,25 +1604,21 @@ body:not(.home-page) #searchInput:hover {
   overflow: hidden;
 }
 
-/* Top wave position and size. */
 .ocean-wave--top {
   top: 18%;
   height: 26%;
 }
 
-/* Middle wave position and size. */
 .ocean-wave--mid {
   top: 45%;
   height: 28%;
 }
 
-/* Deep/lower wave position and size. */
 .ocean-wave--deep {
   top: 70%;
   height: 30%;
 }
 
-/* SVG oversized for a smoother background look. */
 .ocean-wave svg {
   width: 220%;
   height: 100%;
@@ -1593,13 +1626,31 @@ body:not(.home-page) #searchInput:hover {
   transform-origin: center;
 }
 
-/* Slight softening on large screens. */
+.ocean-wave-path {
+  fill: none;
+  stroke: var(--color-wave-stroke);
+}
+
+.ocean-wave-path--top {
+  opacity: 0.23;
+  stroke-width: 1.2;
+}
+
+.ocean-wave-path--mid {
+  opacity: 0.21;
+  stroke-width: 1.1;
+}
+
+.ocean-wave-path--deep {
+  opacity: 0.19;
+  stroke-width: 1;
+}
+
 @media (min-width: 1024px) {
   .ocean-wave path {
     filter: blur(0.25px);
   }
 }
-
 
 /* =========================================================
    30. Bookmark / Favourite Buttons
