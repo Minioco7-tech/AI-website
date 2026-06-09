@@ -1764,3 +1764,15 @@ body:not(.home-page) #searchInput:hover {
     max-width: 100%;
   }
 }
+
+/* ===============================
+   33. Miscellaneous
+================================ */
+
+.theme-toggle-btn {
+  width: auto;
+  min-width: 7.5rem;
+  padding: 0 0.9rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
