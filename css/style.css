@@ -321,6 +321,10 @@
   --color-recommendation-icon: #e0f2fe;
   --color-recommendation-icon-bg: transparent;
   --color-recommendation-icon-border: rgba(56, 189, 248, 0.16);
+
+/* Hero animations colours */
+  --color-hero-particle: #00BFFF;
+  --color-hero-particle-line: #00BFFF;
 }
 
 /* Optional second theme */
@@ -443,6 +447,9 @@ body.theme-natural {
   --color-recommendation-icon: var(--color-accent);
   --color-recommendation-icon-bg: rgba(47, 111, 78, 0.12);
   --color-recommendation-icon-border: rgba(47, 111, 78, 0.16);
+/* Hero animations colours */
+  --color-hero-particle: #2f6f4e;
+  --color-hero-particle-line: #2f6f4e;
 }
 
 /* =========================================================
