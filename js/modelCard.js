@@ -60,7 +60,9 @@ export function createModelCard(model) {
           ${model.name}
         </h3>
       </div>
-      <p class="model-card-description text-sm sm:text-base font-normal leading-normal mb-3 line-clamp-2"></p>
+      <p class="model-card-description text-sm sm:text-base font-normal leading-normal mb-3 line-clamp-2">
+        ${model.description}
+      </p>
       <div class="model-card-badges flex flex-wrap gap-2 mt-auto">
         ${badges}
       </div>
