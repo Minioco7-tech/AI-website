@@ -58,15 +58,6 @@ document.addEventListener("DOMContentLoaded", () => {
           <!-- Mobile Dropdown -->
           <div id="mobileMenu"
                class="hidden md:hidden flex-col gap-2 py-4 border-t border-white/10">
-
-            <button type="button"
-              class="header-icon-btn theme-toggle-btn"
-              data-theme-toggle
-              aria-label="Toggle colour theme"
-              aria-pressed="false"
-            >
-              Natural Theme
-            </button>
           
             <a href="about.html"
                class="text-white hover:text-[#00BFFF] transition-colors px-2 py-2">
@@ -82,6 +73,18 @@ document.addEventListener("DOMContentLoaded", () => {
           
           <!-- Mobile Actions -->
           <div class="flex md:hidden items-center gap-3">
+
+            <button
+              type="button"
+              class="theme-switch"
+              data-theme-toggle
+              aria-label="Toggle colour theme"
+              aria-pressed="false"
+            >
+              <span class="theme-switch-track">
+                <span class="theme-switch-thumb"></span>
+              </span>
+            </button>
           
             <a href="favourites.html"
                class="header-icon-btn"
