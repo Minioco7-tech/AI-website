@@ -184,6 +184,10 @@
    
    35. Home hero section styling
 
+   36. Pagination
+       -  .pagination-next
+       - pagination ellipsis
+
 
    NOTES
    - Existing class names and IDs have been preserved.
@@ -2109,4 +2113,61 @@ body.theme-natural .theme-switch:hover .theme-switch-thumb {
 
 .main-top-fade {
   background: var(--gradient-main-top-fade);
+}
+
+/* =========================================================
+   36. Pagination
+   Shared pagination controls for category and search pages.
+   ========================================================= */
+
+.pagination-next {
+  border: 1px solid var(--color-border-white-15);
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.pagination-next-active {
+  background: var(--color-surface-white-08);
+  color: var(--color-text-primary);
+}
+
+.pagination-next-active:hover {
+  background: var(--color-surface-white-07);
+  border-color: var(--color-border-white-18);
+}
+
+.pagination-next-disabled {
+  background: var(--color-surface-white-04);
+  color: var(--color-text-dim);
+  border-color: var(--color-border-white-10);
+  cursor: not-allowed;
+}
+
+.pagination-ellipsis,
+.pagination-meta {
+  color: var(--color-text-dim);
+}
+
+.pagination-chevron {
+  color: var(--color-text-muted);
+}
+
+.pagination-chevron-active:hover {
+  color: var(--color-text-primary);
+}
+
+.pagination-chevron-disabled {
+  color: var(--color-text-dim);
+}
+
+.pagination-page {
+  color: var(--color-text-muted);
+}
+
+.pagination-page-inactive:hover {
+  color: var(--color-text-primary);
+}
+
+.pagination-page-active {
+  background: var(--color-text-primary);
+  color: var(--color-bg-page);
 }
