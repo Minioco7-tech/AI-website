@@ -26,7 +26,6 @@ export function createModelCard(model) {
     flex flex-col
     rounded-lg 
     overflow-hidden 
-    border border-white/10
     transition duration-300 
   `;
 
