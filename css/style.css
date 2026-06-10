@@ -456,7 +456,7 @@ body.theme-natural {
   --color-hero-particle-line-rgb: 47, 111, 78;
    
 /* Model card border color*/
-  --color-card-border: rgba(47, 111, 78, 0.25);
+  --color-card-border: rgba(47, 111, 78, 0.50);
 }
 
 /* =========================================================
