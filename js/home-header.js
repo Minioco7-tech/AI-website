@@ -55,22 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
           
           </div>
 
-          <!-- Mobile Dropdown -->
-          <div id="mobileMenu"
-               class="hidden md:hidden flex-col gap-2 py-4 border-t border-white/10">
-          
-            <a href="about.html"
-               class="text-white hover:text-[#00BFFF] transition-colors px-2 py-2">
-               About
-            </a>
-          
-            <a href="category.html?category=all"
-               class="text-white hover:text-[#00BFFF] transition-colors px-2 py-2">
-               All Models
-            </a>
-          
-          </div>
-          
           <!-- Mobile Actions -->
           <div class="flex md:hidden items-center gap-3">
 
@@ -98,6 +82,20 @@ document.addEventListener("DOMContentLoaded", () => {
           
           </div>
 
+        </div>
+        <!-- Mobile Dropdown -->
+        <div id="mobileMenu"
+             class="hidden md:hidden flex-col gap-2 py-4 border-t border-white/10">
+        
+          <a href="about.html"
+             class="text-white hover:text-[#00BFFF] transition-colors px-2 py-2">
+             About
+          </a>
+        
+          <a href="category.html?category=all"
+             class="text-white hover:text-[#00BFFF] transition-colors px-2 py-2">
+             All Models
+          </a>
         </div>
         <!-- Subtle Separator -->
         <div class="border-t border-white border-opacity-10"></div>
