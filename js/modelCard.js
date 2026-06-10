@@ -34,10 +34,10 @@ export function createModelCard(model) {
 
   // Create category badges
   const badges = categories.map(cat => {
-    const colorClass = categoryColors[cat.toLowerCase()] || 'bg-black/20';
-    return `<span class="inline-block px-3 py-1 text-xs font-medium rounded-full text-white ${colorClass}">
-              ${getCategoryName(cat)}
-            </span>`;
+  const colorClass = categoryColors[cat.toLowerCase()] || 'category-badge-default';
+  return `<span class="category-badge inline-block px-3 py-1 text-xs font-medium rounded-full ${colorClass}">
+            ${getCategoryName(cat)}
+          </span>`;
   }).join('');
 
   // Set inner card HTML <h3 class="text-purple-400 text-lg sm:text-xl font-bold leading-snug mb-2">${model.name}</h3>
@@ -56,11 +56,11 @@ export function createModelCard(model) {
     
     <div class="flex flex-col flex-1 p-4">
       <div class="flex items-start justify-between gap-3 mb-2 model-card-header"> 
-        <h3 class="text-purple-400 text-lg sm:text-xl font-bold leading-snug">
+        <h3 class="model-card-title text-lg sm:text-xl font-bold leading-snug">
           ${model.name}
         </h3>
       </div>
-      <p class="text-gray-200 text-sm sm:text-base font-normal leading-normal mb-3 line-clamp-2">${model.description}</p>
+      <p class="model-card-description text-sm sm:text-base font-normal leading-normal mb-3 line-clamp-2"></p>
       <div class="model-card-badges flex flex-wrap gap-2 mt-auto">
         ${badges}
       </div>
