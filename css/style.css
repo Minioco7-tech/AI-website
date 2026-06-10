@@ -41,26 +41,30 @@
        - Header title gradient text
        - Header form input/button text sizing
 
-   08. Buttons
+   08. AI guides section
+       - Feature card styling
+       - Accordion wrap
+
+   09. Buttons
        - button base
        - .btn
        - .btn-primary
 
-   09. Footer
+   10. Footer
        - Footer background
        - Footer link colours
        - Footer paragraph text
 
-   10. Animations
+   11. Animations
        - .fade-in
        - @keyframes fadeIn
 
-   11. Utility Classes
+   12. Utility Classes
        - .text-gradient
        - .shadow-soft
        - .scrollbar-hide
 
-   12. Model Tiles / Tool Cards
+   13. Model Tiles / Tool Cards
        - .model-tile
        - Tile hover behaviour
        - Thumbnail wrapper
@@ -68,51 +72,51 @@
        - Icon circles
        - Badge wrapping
 
-   13. Category Images
+   14. Category Images
        - .category-thumb-wrapper
        - .category-thumb
        - Category image hover zoom
 
-   14. Screenshot Frames
+   15. Screenshot Frames
        - .sshot-frame
        - .sshot-img
        - Cover/contain image variants
 
-   15. Related Models Carousel
+   16. Related Models Carousel
        - #carousel-grid
        - Desktop card sizing
        - Carousel-specific card scaling
        - Mobile carousel behaviour
 
-   16. Carousel Arrows
+   17. Carousel Arrows
        - .carousel-arrow
        - .left-arrow
        - .right-arrow
        - Hover, active and disabled states
 
-   17. Carousel Dots
+   18. Carousel Dots
        - .carousel-dots
        - .carousel-dot
        - Dot hover and active states
 
-   18. Reduced Motion
+   19. Reduced Motion
        - Removes carousel transitions for users who prefer reduced motion
 
-   19. Home Page Guide Accordions
+   20. Home Page Guide Accordions
        - .guide-summary
        - .guide-accordion[open]
 
-   20. Search Bar and Mobile Search
+   21. Search Bar and Mobile Search
        - Non-home search input glow
        - Mobile search open/close animation
 
-   21. Breadcrumb Navigation
+   22. Breadcrumb Navigation
        - #breadcrumb
        - Breadcrumb links
        - Current breadcrumb item
        - Separators
 
-   22. Filter Dropdown
+   23. Filter Dropdown
        - Dropdown wrapper
        - Toggle button
        - Label/meta text
@@ -120,42 +124,42 @@
        - Dropdown menu open/closed states
        - Dropdown footer
 
-   23. Filter Buttons
+   24. Filter Buttons
        - Apply/reset/ghost filter buttons
        - Hover states
 
-   24. Filter Pills
+   25. Filter Pills
        - Checkbox pill wrapper
        - Hidden checkbox
        - Visible pill UI
        - Selected and hover states
 
-   25. Filter Menu Header
+   26. Filter Menu Header
        - Header row inside dropdown
        - Selected count label
 
-   26. Filter Pill Scroll Area
+   27. Filter Pill Scroll Area
        - Scrollable pill container
        - Custom scrollbar styling
 
-   27. Expandable Filter Sections
+   28. Expandable Filter Sections
        - Details/summary filter sections
        - Section title
        - Section chevron
        - Open/closed chevron rotation
 
-   28. Nested Filter Groups / Tags
+   29. Nested Filter Groups / Tags
        - Nested group spacing
        - Group titles
        - Nested pill layout overrides
 
-   29. Global Ocean Background
+   30. Global Ocean Background
        - JS-injected ocean wave wrappers
        - Wave positioning
        - SVG sizing
        - Desktop softening
 
-   30. Bookmark / Favourite Buttons
+   31. Bookmark / Favourite Buttons
        - Model title rows
        - Card header row
        - Detail page title row
@@ -163,17 +167,17 @@
        - Saved state
        - Large bookmark variant
 
-   31. Header Icon Buttons
+   32. Header Icon Buttons
        - Circular header buttons
        - Hover/focus states
 
-   32. Responsive / Media Query Rules
+   33. Responsive / Media Query Rules
        - Mobile filter dropdown width
        - Note: component-specific media queries are kept near the component
 
-   33. Theme toggle button
+   34. Theme toggle button
    
-   34. Home hero section styling
+   35. Home hero section styling
 
    NOTES
    - Existing class names and IDs have been preserved.
@@ -619,9 +623,99 @@ header form button {
   font-weight: 600;
 }
 
+/* =========================================================
+   8. Learn AI Guides Section
+   Homepage guide cards and centred accordion layout.
+   ========================================================= */
+
+.learn-ai-layout {
+  width: 100%;
+}
+
+.learn-ai-top-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 8fr) minmax(0, 4fr);
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.learn-ai-feature-card,
+.learn-ai-side-card {
+  height: 100%;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-card-border, var(--color-border-white-10));
+  color: var(--color-text-primary);
+}
+
+.learn-ai-feature-card {
+  background: linear-gradient(
+    to bottom right,
+    var(--color-bg-card),
+    var(--color-bg-card-glass),
+    var(--color-bg-page)
+  );
+}
+
+.learn-ai-side-card {
+  background: var(--color-bg-card);
+}
+
+.learn-ai-card-glow,
+.learn-ai-side-glow {
+  background: var(--color-accent-soft);
+}
+
+.learn-ai-pill {
+  background: var(--color-surface-dark-glass);
+  border: 1px solid var(--color-border-white-10);
+  color: var(--color-text-soft);
+}
+
+.learn-ai-success-dot {
+  background: var(--color-success, #22C55E);
+}
+
+.learn-ai-card-title {
+  color: var(--color-text-primary);
+}
+
+.learn-ai-card-text {
+  color: var(--color-text-soft);
+}
+
+.learn-ai-list {
+  color: var(--color-text-soft);
+}
+
+.learn-ai-muted,
+.learn-ai-label {
+  color: var(--color-text-muted);
+}
+
+.learn-ai-bullet {
+  background: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.learn-ai-accordion-wrap {
+  max-width: 66.666667%;
+  margin: 2rem auto 0;
+}
+
+/* Tablet/mobile: stack cards and make accordion full width */
+@media (max-width: 1024px) {
+  .learn-ai-top-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .learn-ai-accordion-wrap {
+    max-width: 100%;
+  }
+}
+
 
 /* =========================================================
-   08. Buttons
+   09. Buttons
    Reusable button styles.
    ========================================================= */
 
@@ -654,7 +748,7 @@ button,
 
 
 /* =========================================================
-   09. Footer
+   10. Footer
    Footer surface, text and link styling.
    ========================================================= */
 
@@ -678,7 +772,7 @@ footer p {
 
 
 /* =========================================================
-   10. Animations
+   11. Animations
    Reusable entrance animations.
    ========================================================= */
 
@@ -698,7 +792,7 @@ footer p {
 
 
 /* =========================================================
-   11. Utility Classes
+   12. Utility Classes
    Small reusable helpers.
    ========================================================= */
 
@@ -734,7 +828,7 @@ footer p {
 
 
 /* =========================================================
-   12. Model-Tile / Unified Tile Design
+   13. Model-Tile / Unified Tile Design
    Reusable model/tool card styling.
    ========================================================= */
 
@@ -837,7 +931,7 @@ footer p {
 
 
 /* =========================================================
-   13. Category Image / Inset Style
+   14. Category Image / Inset Style
    Category tile image container and hover behaviour.
    ========================================================= */
 
@@ -872,7 +966,7 @@ footer p {
 
 
 /* =========================================================
-   14. Screenshot Frames
+   15. Screenshot Frames
    Screenshot/image framing used inside cards.
    ========================================================= */
 
@@ -910,7 +1004,7 @@ footer p {
 
 
 /* =========================================================
-   15. Related Models Carousel
+   16. Related Models Carousel
    model.html related models carousel.
    Reuses model cards but adjusts sizing/scale inside carousel.
    ========================================================= */
@@ -984,7 +1078,7 @@ footer p {
 
 
 /* =========================================================
-   16. Carousel Arrows
+   17. Carousel Arrows
    Previous/next buttons for related models carousel.
    ========================================================= */
 
@@ -1053,7 +1147,7 @@ footer p {
 
 
 /* =========================================================
-   17. Carousel Dots
+   18. Carousel Dots
    Dot pagination for related models carousel.
    ========================================================= */
 
@@ -1087,7 +1181,7 @@ footer p {
 
 
 /* =========================================================
-   18. Reduced Motion
+   19. Reduced Motion
    Accessibility support for users who prefer reduced motion.
    ========================================================= */
 
@@ -1101,7 +1195,7 @@ footer p {
 
 
 /* =========================================================
-   19. Home Page Guide Accordions
+   20. Home Page Guide Accordions
    Home page information dropdown styling.
    ========================================================= */
 
@@ -1117,7 +1211,7 @@ footer p {
 
 
 /* =========================================================
-   20. Search Bar and Mobile Search
+   21. Search Bar and Mobile Search
    Search input glow and mobile search container animation.
    ========================================================= */
 
@@ -1151,7 +1245,7 @@ body:not(.home-page) #searchInput:hover {
 
 
 /* =========================================================
-   21. Breadcrumb Navigation
+   22. Breadcrumb Navigation
    Breadcrumb styling for category, model, favourites and saved pages.
    ========================================================= */
 
@@ -1200,7 +1294,7 @@ body:not(.home-page) #searchInput:hover {
 
 
 /* =========================================================
-   22. Filter Dropdown
+   23. Filter Dropdown
    Custom category/tag filter dropdown.
    ========================================================= */
 
@@ -1336,7 +1430,7 @@ body:not(.home-page) #searchInput:hover {
 
 
 /* =========================================================
-   23. Filter Buttons
+   24. Filter Buttons
    Buttons used inside the filter dropdown.
    ========================================================= */
 
@@ -1414,7 +1508,7 @@ body:not(.home-page) #searchInput:hover {
 
 
 /* =========================================================
-   24. Filter Pills
+   25. Filter Pills
    Checkbox pills used inside #filterCategories.
    ========================================================= */
 
@@ -1484,7 +1578,7 @@ body:not(.home-page) #searchInput:hover {
 
 
 /* =========================================================
-   25. Filter Menu Header
+   26. Filter Menu Header
    Header row inside dropdown menu above the pills.
    ========================================================= */
 
@@ -1508,7 +1602,7 @@ body:not(.home-page) #searchInput:hover {
 
 
 /* =========================================================
-   26. Filter Pill Scroll Area
+   27. Filter Pill Scroll Area
    Scrollable pill container inside dropdown menu.
    ========================================================= */
 
@@ -1536,7 +1630,7 @@ body:not(.home-page) #searchInput:hover {
 
 
 /* =========================================================
-   27. Expandable Filter Sections
+   28. Expandable Filter Sections
    Details/summary sections inside the filter dropdown.
    ========================================================= */
 
@@ -1599,7 +1693,7 @@ body:not(.home-page) #searchInput:hover {
 
 
 /* =========================================================
-   28. Nested Filter Groups / Tags
+   29. Nested Filter Groups / Tags
    Tag groups inside expandable filter sections.
    ========================================================= */
 
@@ -1633,7 +1727,7 @@ body:not(.home-page) #searchInput:hover {
 
 
 /* =========================================================
-   29. Global Ocean Background
+   30. Global Ocean Background
    Static background and wave layers injected by background.js.
    ========================================================= */
 
@@ -1703,7 +1797,7 @@ body:not(.home-page) #searchInput:hover {
 }
 
 /* =========================================================
-   30. Bookmark / Favourite Buttons
+   31. Bookmark / Favourite Buttons
    Favourite/save UI used on model cards and model detail pages.
    ========================================================= */
 
@@ -1816,7 +1910,7 @@ body:not(.home-page) #searchInput:hover {
 
 
 /* =========================================================
-   31. Header Icon Buttons
+   32. Header Icon Buttons
    Circular icon buttons in the site header.
    ========================================================= */
 
@@ -1857,7 +1951,7 @@ body:not(.home-page) #searchInput:hover {
 
 
 /* =========================================================
-   32. Responsive / Media Query Rules
+   33. Responsive / Media Query Rules
    General responsive overrides.
    Component-specific media queries are mostly kept near components.
    ========================================================= */
@@ -1871,7 +1965,7 @@ body:not(.home-page) #searchInput:hover {
 }
 
 /* ===============================
-   33. Theme toggle button
+   34. Theme toggle button
 ================================ */
 
 .theme-toggle-btn {
@@ -1883,7 +1977,7 @@ body:not(.home-page) #searchInput:hover {
 }
 
 /* ===============================
-   34. Home hero section styling
+   35. Home hero section styling
 ================================ */
 
 .hero-section {
