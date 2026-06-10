@@ -40,6 +40,18 @@ document.addEventListener("DOMContentLoaded", () => {
           <!-- Nav (desktop) -->
           <!-- Desktop Nav -->
           <div id="navActions" class="hidden md:flex items-center space-x-5">
+
+            <button
+              type="button"
+              class="theme-switch"
+              data-theme-toggle
+              aria-label="Toggle colour theme"
+              aria-pressed="false"
+            >
+              <span class="theme-switch-track">
+                <span class="theme-switch-thumb"></span>
+              </span>
+            </button>
           
             <a href="about.html"
                class="text-white hover:text-[#00BFFF] transition-colors">
@@ -61,6 +73,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
           <!-- Mobile Actions -->
           <div class="flex md:hidden items-center gap-3">
+
+            <button
+              type="button"
+              class="theme-switch"
+              data-theme-toggle
+              aria-label="Toggle colour theme"
+              aria-pressed="false"
+            >
+              <span class="theme-switch-track">
+                <span class="theme-switch-thumb"></span>
+              </span>
+            </button>
           
             <a href="favourites.html"
                class="header-icon-btn"
