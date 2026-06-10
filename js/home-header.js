@@ -25,12 +25,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
             <button
               type="button"
-              class="header-icon-btn theme-toggle-btn"
+              class="theme-switch"
               data-theme-toggle
               aria-label="Toggle colour theme"
               aria-pressed="false"
             >
-              Natural theme
+              <span class="theme-switch-track">
+                <span class="theme-switch-thumb"></span>
+              </span>
             </button>
           
             <!-- <nav class="flex items-center space-x-4 bg-transparent"> -->
