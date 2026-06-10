@@ -125,98 +125,105 @@
               </p>
             </div>
           </div>
-    
-          <!-- Guides + right-side highlight (clean 2-col layout) -->
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mt-8 text-left">
-  
-            <!-- Highlight card moves here (same width as dropdowns) -->
-            <aside class="lg:col-span-12 mt-2 order-1">
-              <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[#020617] via-[#021827] to-[#0B1120] p-5 shadow-xl">
-                <div class="pointer-events-none absolute -top-10 -right-10 w-32 h-32 rounded-full bg-[#38BDF8]/20 blur-3xl opacity-70"></div>
-        
-                <div class="relative space-y-4">
-                  <div class="inline-flex items-center gap-2 rounded-full bg-black/40 border border-white/10 px-3 py-1 text-[11px] font-medium text-gray-200">
-                    <span class="w-2 h-2 rounded-full bg-[#22C55E]"></span>
-                    <span>Practical, non-technical tips</span>
-                  </div>
-        
-                  <h3 class="text-xl font-semibold text-white">
-                    New to AI? Start with the basics.
-                  </h3>
-                  <p class="text-sm text-gray-300">
-                    Before you dive into dozens of tools, learn how to think about prompts, safety,
-                    and choosing the right AI for the job.
-                  </p>
-        
-                  <ul class="space-y-3 text-sm text-gray-200">
-                    <li class="flex gap-2">
-                      <span class="mt-[6px] w-1.5 h-1.5 rounded-full bg-[#38BDF8] flex-shrink-0"></span>
-                      <span>How to write prompts that actually get useful results.</span>
-                    </li>
-                    <li class="flex gap-2">
-                      <span class="mt-[6px] w-1.5 h-1.5 rounded-full bg-[#38BDF8] flex-shrink-0"></span>
-                      <span>What to look for when choosing an AI tool.</span>
-                    </li>
-                    <li class="flex gap-2">
-                      <span class="mt-[6px] w-1.5 h-1.5 rounded-full bg-[#38BDF8] flex-shrink-0"></span>
-                      <span>Simple rules for using AI safely at work and school.</span>
-                    </li>
-                  </ul>
-        
-                  <div class="mt-4 flex flex-wrap items-center gap-3">
-                    <a href="#aiGuidesContainer" class="btn-primary px-4 py-2 text-xs font-medium inline-flex items-center gap-1">
-                      Start reading the guides
-                      <i data-feather="arrow-right" class="w-4 h-4"></i>
-                    </a>
-        
-                    <div class="text-[11px] text-gray-400">
-                      ~10 minute read • No jargon
+          <!-- Guides layout -->
+          <div class="learn-ai-layout mt-8 text-left">
+          
+            <!-- Top two cards -->
+            <div class="learn-ai-top-grid">
+              
+              <!-- New to AI card -->
+              <aside>
+                <div class="learn-ai-feature-card relative overflow-hidden rounded-2xl p-5 shadow-xl">
+                  <div class="learn-ai-card-glow pointer-events-none absolute -top-10 -right-10 w-32 h-32 rounded-full blur-3xl opacity-70"></div>
+          
+                  <div class="relative space-y-4">
+                    <div class="learn-ai-pill inline-flex items-center gap-2 rounded-full px-3 py-1 text-[11px] font-medium">
+                      <span class="learn-ai-success-dot w-2 h-2 rounded-full"></span>
+                      <span>Practical, non-technical tips</span>
+                    </div>
+          
+                    <h3 class="learn-ai-card-title text-xl font-semibold">
+                      New to AI? Start with the basics.
+                    </h3>
+          
+                    <p class="learn-ai-card-text text-sm">
+                      Before you dive into dozens of tools, learn how to think about prompts, safety,
+                      and choosing the right AI for the job.
+                    </p>
+          
+                    <ul class="space-y-3 text-sm learn-ai-list">
+                      <li class="flex gap-2">
+                        <span class="learn-ai-bullet mt-[6px] w-1.5 h-1.5 rounded-full flex-shrink-0"></span>
+                        <span>How to write prompts that actually get useful results.</span>
+                      </li>
+                      <li class="flex gap-2">
+                        <span class="learn-ai-bullet mt-[6px] w-1.5 h-1.5 rounded-full flex-shrink-0"></span>
+                        <span>What to look for when choosing an AI tool.</span>
+                      </li>
+                      <li class="flex gap-2">
+                        <span class="learn-ai-bullet mt-[6px] w-1.5 h-1.5 rounded-full flex-shrink-0"></span>
+                        <span>Simple rules for using AI safely at work and school.</span>
+                      </li>
+                    </ul>
+          
+                    <div class="mt-4 flex flex-wrap items-center gap-3">
+                      <a href="#aiGuidesContainer" class="btn-primary px-4 py-2 text-xs font-medium inline-flex items-center gap-1">
+                        Start reading the guides
+                        <i data-feather="arrow-right" class="w-4 h-4"></i>
+                      </a>
+          
+                      <div class="learn-ai-muted text-[11px]">
+                        ~10 minute read • No jargon
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </aside>
-  
-            <!-- Left: dropdowns + highlight card stacked -->
-            <div class="lg:col-span-8 space-y-6 order-3 lg:order-2">
+              </aside>
+          
+              <!-- Learn AI faster card -->
+              <aside>
+                <div class="learn-ai-side-card relative rounded-3xl overflow-hidden p-6">
+                  <div class="learn-ai-side-glow absolute inset-0 opacity-40 blur-3xl"></div>
+          
+                  <div class="relative space-y-4">
+                    <p class="learn-ai-label text-[11px] tracking-[0.3em] uppercase">AI Guides</p>
+          
+                    <h3 class="learn-ai-card-title text-xl font-semibold leading-tight">
+                      Learn AI faster in 10 minutes
+                    </h3>
+          
+                    <p class="learn-ai-card-text text-sm leading-relaxed">
+                      Practical, no-fluff guidance. Open the sections you care about — save the rest for later.
+                    </p>
+          
+                    <div class="space-y-2 text-sm learn-ai-list">
+                      <div class="flex gap-3">
+                        <span class="learn-ai-bullet mt-2 w-2 h-2 rounded-full"></span>
+                        <p><strong>Prompting:</strong> get better outputs immediately</p>
+                      </div>
+                      <div class="flex gap-3">
+                        <span class="learn-ai-bullet mt-2 w-2 h-2 rounded-full"></span>
+                        <p><strong>Choosing tools:</strong> avoid wasting time + money</p>
+                      </div>
+                      <div class="flex gap-3">
+                        <span class="learn-ai-bullet mt-2 w-2 h-2 rounded-full"></span>
+                        <p><strong>Safety:</strong> avoid common privacy mistakes</p>
+                      </div>
+                    </div>
+          
+                    <div class="pt-2 text-xs learn-ai-muted">
+                      Tip: click a guide to expand. Skim the examples.
+                    </div>
+                  </div>
+                </div>
+              </aside>
+            </div>
+          
+            <!-- Centred accordion below -->
+            <div class="learn-ai-accordion-wrap">
               <section id="aiGuidesContainer" class="space-y-3"></section>
             </div>
           
-            <!-- Right: callout -->
-            <aside class="lg:col-span-4 order-2 lg:order-3">
-              <div class="relative rounded-3xl border border-white/10 overflow-hidden bg-[#020617] p-6 sticky top-24">
-                <div class="absolute inset-0 opacity-40 blur-3xl bg-gradient-to-br from-cyan-500/25 via-blue-600/10 to-transparent"></div>
-          
-                <div class="relative space-y-4">
-                  <p class="text-[11px] tracking-[0.3em] uppercase text-gray-400">AI Guides</p>
-                  <h3 class="text-xl font-semibold text-white leading-tight">
-                    Learn AI faster in 10 minutes
-                  </h3>
-                  <p class="text-sm text-gray-300 leading-relaxed">
-                    Practical, no-fluff guidance. Open the sections you care about — save the rest for later.
-                  </p>
-          
-                  <div class="space-y-2 text-sm text-gray-200">
-                    <div class="flex gap-3">
-                      <span class="mt-2 w-2 h-2 rounded-full bg-cyan-400"></span>
-                      <p><strong>Prompting:</strong> get better outputs immediately</p>
-                    </div>
-                    <div class="flex gap-3">
-                      <span class="mt-2 w-2 h-2 rounded-full bg-cyan-400"></span>
-                      <p><strong>Choosing tools:</strong> avoid wasting time + money</p>
-                    </div>
-                    <div class="flex gap-3">
-                      <span class="mt-2 w-2 h-2 rounded-full bg-cyan-400"></span>
-                      <p><strong>Safety:</strong> avoid common privacy mistakes</p>
-                    </div>
-                  </div>
-          
-                  <div class="pt-2 text-xs text-gray-400">
-                    Tip: click a guide to expand. Skim the examples.
-                  </div>
-                </div>
-              </div>
-            </aside>
           </div>
         </section>
       </section>
