@@ -184,14 +184,13 @@ export function renderPagination({
   // ✅ Fixed size (adjust w-72 if you want wider/narrower)
   nextPill.className =
     'w-72 h-11 rounded-full px-6 text-sm font-semibold ' +
-    'bg-white/10 text-white border border-white/15 ' +
-    'hover:bg-white/15 transition-colors';
+    'pagination-next pagination-next-active';
 
   if (p === Y) {
     nextPill.disabled = true;
     nextPill.className =
       'w-72 h-11 rounded-full px-6 text-sm font-semibold ' +
-      'bg-white/5 text-gray-500 border border-white/10 cursor-not-allowed';
+      'pagination-next pagination-next-disabled';
   } else {
     nextPill.addEventListener('click', () => {
       onPageChange?.(p + 1);
@@ -214,7 +213,7 @@ export function renderPagination({
   const makeEllipsis = () => {
     const span = document.createElement('span');
     span.textContent = '...';
-    span.className = 'text-gray-500 text-sm';
+    span.className = 'pagination-ellipsis text-sm';
     return span;
   };
 
@@ -224,8 +223,8 @@ export function renderPagination({
     btn.setAttribute('aria-label', direction === 'left' ? 'Previous page' : 'Next page');
 
     btn.className = disabled
-      ? 'w-8 h-8 inline-flex items-center justify-center text-gray-700 cursor-default'
-      : 'w-8 h-8 inline-flex items-center justify-center text-gray-300 hover:text-white transition-colors';
+      ? 'pagination-chevron pagination-chevron-disabled w-8 h-8 inline-flex items-center justify-center cursor-default'
+      : 'pagination-chevron pagination-chevron-active w-8 h-8 inline-flex items-center justify-center transition-colors';
 
     btn.innerHTML = `<i data-feather="chevron-${direction}" style="width:22px;height:22px;"></i>`;
 
@@ -246,8 +245,8 @@ export function renderPagination({
     const isActive = page === p;
 
     btn.className = isActive
-      ? 'w-8 h-8 inline-flex items-center justify-center rounded-full bg-white text-black text-sm font-semibold'
-      : 'w-8 h-8 inline-flex items-center justify-center rounded-full text-sm text-gray-300 hover:text-white transition-colors';
+      ? 'pagination-page pagination-page-active w-8 h-8 inline-flex items-center justify-center rounded-full text-sm font-semibold'
+      : 'pagination-page pagination-page-inactive w-8 h-8 inline-flex items-center justify-center rounded-full text-sm transition-colors';
 
     if (!isActive) {
       btn.addEventListener('click', () => {
@@ -298,7 +297,7 @@ export function renderPagination({
   const end = Math.min(currentPage * perPage, totalItems);
   
   const meta = document.createElement('div');
-  meta.className = 'mt-3 text-xs text-gray-500 text-center';
+  meta.className = 'pagination-meta mt-3 text-xs text-center';
   meta.textContent = `Showing models ${start}–${end} of ${totalItems}`;
 
   // Mount
