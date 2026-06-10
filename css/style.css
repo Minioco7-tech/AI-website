@@ -575,7 +575,7 @@ select {
   Bookmark buttons are excluded because they have their own custom
   no-outline treatment later in the file.
 */
-button:not(.bookmark-btn):focus,
+button:not(.bookmark-btn)not(.theme-switch):focus,
 input:focus,
 select:focus {
   outline: 2px solid var(--color-accent);
@@ -2043,9 +2043,11 @@ body.theme-natural .theme-switch:hover .theme-switch-thumb {
 
 .theme-switch:focus,
 .theme-switch:focus-visible {
-  outline: none;
-  box-shadow: none;
+  outline: none !important;
+  box-shadow: none !important;
 }
+
+
 
 /* ===============================
    35. Home hero section styling
