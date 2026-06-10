@@ -743,21 +743,11 @@ footer p {
   border: 1px solid var(--color-card-border);
   border-radius: 0.75rem;
   overflow: hidden;
-
-  /*
-    Frosted glass option kept for reference.
-    Re-enable if you want cards to look more translucent.
-  */
-  /* backdrop-filter: blur(12px) saturate(140%); */
-  /* -webkit-backdrop-filter: blur(12px) saturate(140%); */
-
   box-shadow:
     var(--shadow-card),           /* Soft shadow for depth */
     var(--shadow-card-highlight); /* Faint top highlight for 3D effect */
-
   transition: transform 0.3s ease;
   cursor: pointer;
-
   display: flex;
   flex-shrink: 0;
   flex-direction: column;
