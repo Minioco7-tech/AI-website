@@ -7,7 +7,6 @@ function applyTheme(theme) {
   
   document.querySelectorAll("[data-theme-toggle]").forEach((button) => {
     button.setAttribute("aria-pressed", theme === "natural" ? "true" : "false");
-    button.textContent = theme === "natural" ? "Dark theme" : "Natural theme";
   });
 
   console.log("Theme applied:", theme);
