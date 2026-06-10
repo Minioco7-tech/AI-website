@@ -284,6 +284,11 @@
   --shadow-filter-open: 0 14px 34px rgba(0, 0, 0, 0.58);
   --shadow-filter-menu: 0 18px 50px rgba(0, 0, 0, 0.62);
   --shadow-pill-selected: 0 10px 26px rgba(0, 0, 0, 0.35);
+   
+  /* Filter by dropdown pills */
+  --color-pill-border: rgba(255,255,255,0.14);
+  --color-pill-border-hover: rgba(255,255,255,0.22);
+  --color-pill-border-selected: rgba(255,255,255,0.28);
 
   /* Background wave color */
   --color-wave-stroke: rgba(255, 255, 255, 0.70);
@@ -418,6 +423,12 @@ body.theme-natural {
   --shadow-filter-open: 0 14px 34px rgba(55, 48, 38, 0.22);
   --shadow-filter-menu: 0 18px 50px rgba(55, 48, 38, 0.22);													
   --shadow-pill-selected: 0 10px 26px rgba(55, 48, 38, 0.14);
+
+  /* Filter by dropdown pills */
+  --color-pill-border: rgba(47,111,78,0.28);
+  --color-pill-border-hover: rgba(47,111,78,0.38);
+  --color-pill-border-selected: rgba(47,111,78,0.50); 
+   
   /* Top of main & bottom of hero gradients */
   --gradient-hero-bottom-fade: linear-gradient(
     to top,
@@ -1566,7 +1577,7 @@ body:not(.home-page) #searchInput:hover {
   font-size: 0.875rem;
   font-weight: 650;
 
-  border: 1px solid var(--color-border-white-14);
+  border: 1px solid var(--color-pill-border);
   box-shadow: inset 0 1px 0 var(--color-border-white-10);
 
   opacity: 0.55; /* Unchecked pills look inactive */
@@ -1582,13 +1593,13 @@ body:not(.home-page) #searchInput:hover {
 .filter-pill:hover .pill-ui {
   opacity: 0.85;
   transform: translateY(-1px);
-  border-color: var(--color-border-white-22);
+  border-color: var(--color-pill-border-hover);
 }
 
 /* Selected pill state. */
 .filter-pill input:checked + .pill-ui {
   opacity: 1;
-  border-color: var(--color-border-white-28);
+  border-color: var(--color-pill-border-selected);
   box-shadow:
     var(--shadow-pill-selected),
     0 0 0 3px var(--color-accent-shadow),
