@@ -85,16 +85,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 <span class="theme-switch-thumb"></span>
               </span>
             </button>
+
+            <button id="mobileSearchIcon" class="header-icon-btn">
+              <i data-feather="search" class="w-5 h-5"></i>
+            </button>
           
             <a href="favourites.html"
                class="header-icon-btn"
                aria-label="Favourite models">
               <i data-feather="heart" class="w-5 h-5"></i>
             </a>
-          
-            <button id="mobileSearchIcon" class="header-icon-btn">
-              <i data-feather="search" class="w-5 h-5"></i>
-            </button>
           
             <button id="mobileMenuBtn" class="header-icon-btn">
               <i data-feather="menu" class="w-5 h-5"></i>
