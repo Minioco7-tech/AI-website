@@ -21,39 +21,62 @@
   <script src="https://unpkg.com/feather-icons"></script>
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="bg-[#0A0C10] text-white flex flex-col min-h-screen">
+<body data-page="legal" class="flex flex-col min-h-screen">
 
-  <!-- Header -->
-  <header id="header"></header>
+<header id="header"></header>
 
-  <main class="flex-grow pt-24 px-4 sm:px-6 lg:px-8 space-y-8 max-w-4xl mx-auto">
-    <h1 class="text-4xl font-bold text-center bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">DMCA Notice</h1>
-    <p class="text-gray-300 text-lg leading-relaxed">
-      AIviary respects the intellectual property rights of others. If you believe your copyrighted work has been used on our website without permission, please provide a DMCA takedown notice.
+<main class="legal-page flex-1 pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+  <section class="legal-card">
+    <p class="section-kicker text-xs font-semibold tracking-[0.25em] uppercase text-center">
+      Legal
     </p>
-    <p class="text-gray-300 text-lg leading-relaxed">
-      Your notice must include:
-      <ul class="list-disc list-inside text-gray-300 space-y-2">
-        <li>Identification of the copyrighted work.</li>
-        <li>Identification of the infringing material on AIviary.</li>
-        <li>Your contact information.</li>
-        <li>A statement that you believe in good faith the use is unauthorized.</li>
-        <li>Your electronic signature.</li>
+
+    <h1 class="section-title text-3xl sm:text-4xl font-bold text-center mt-3">
+      Copyright & DMCA Policy
+    </h1>
+
+    <div class="legal-content mt-8">
+      <!-- Page content goes here -->
+      <p>
+        AIviary respects the intellectual property rights of others and expects users and contributors to do the same.
+      </p>
+
+      <p>
+        If you believe that content appearing on AIviary infringes your copyright, please notify us with the following information:
+      </p>
+
+      <ul>
+        <li>Your name and contact information</li>
+        <li>Identification of the copyrighted work claimed to have been infringed</li>
+        <li>Identification of the content that you believe infringes your copyright</li>
+        <li>A statement that you have a good-faith belief that the use is not authorised by the copyright owner, agent or law</li>
+        <li>A statement that the information provided is accurate</li>
+        <li>Your electronic or physical signature</li>
       </ul>
-    </p>
-    <p class="text-gray-300 text-lg leading-relaxed">
-      Send DMCA notices to: <a href="mailto:legal@aiviary.com" class="text-[#00BFFF] hover:underline">legal@aiviary.com</a>. We will respond promptly to remove or disable access to infringing content.
-    </p>
-  </main>
 
+      <p>
+        Upon receiving a valid copyright complaint, we will review the request and, where appropriate, remove or modify the relevant content.
+      </p>
 
+      <p>
+        Submitting false or misleading copyright claims may result in liability under applicable law.
+      </p>
 
-  <!-- Footer -->
-  <footer id="footer"></footer>
+      <p>
+        For copyright-related concerns, please contact us using the contact information provided on the website.
+      </p>
+    </div>
+  </section>
+</main>
 
-  <script type="module" src="js/header.js"></script>
-  <script type="module" src="js/footer.js"></script>
+<footer id="footer"></footer>
 
-  <script>feather.replace();</script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script type="module" src="js/header.js"></script>
+<script type="module" src="js/background.js"></script>
+<script src="js/theme.js"></script>
+<script type="module" src="js/footer.js"></script>
+<script>
+  feather.replace();
+</script>
 </body>
-</html>
