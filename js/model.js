@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', async () => {
               <p><span class="text-gray-400">Category:</span> ${getCategoryName(firstCategory)}</p>
               ${model.tags?.length ? `<p><span class="text-gray-400">Tags:</span> ${model.tags.slice(0, 3).join(', ')}</p>` : ''}
             </div>
-            ${model.pricing ? `<div class="rounded-2xl bg-black/30 border border-white/10 px-4 py-3 space-y-1">
+            ${model.pricing ? `<div class="model-inner-panel rounded-2xl px-4 py-3 space-y-1">
                 <p class="text-[11px] uppercase tracking-[0.2em] text-gray-400">Pricing snapshot</p>
                 <p class="text-gray-100 leading-relaxed">${model.pricing}</p>
               </div>` : ''}
@@ -173,23 +173,23 @@ document.addEventListener('DOMContentLoaded', async () => {
       </section>
       <!-- DESCRIPTION + FEATURES -->
       <section class="grid grid-cols-1 lg:grid-cols-7 gap-8 lg:gap-10">
-        <div class="lg:col-span-4 rounded-3xl border border-white/15 bg-[#020617] p-6 sm:p-7">
+        <div class="model-panel lg:col-span-4 rounded-3xl p-6 sm:p-7">
           <h3 class="text-xl sm:text-2xl font-semibold mb-3">Description</h3>
-          <p class="text-gray-200 leading-relaxed whitespace-pre-line">${model.description}</p>
+          <p class="model-text leading-relaxed whitespace-pre-line">${model.description}</p>
         </div>
         <div class="lg:col-span-3 space-y-5">
-          ${model.features?.length ? `<div class="rounded-3xl border border-white/15 bg-[#020617] p-6 sm:p-7">
-            <h3 class="text-lg sm:text-xl font-semibold mb-3">Key features</h3>
-            <ul class="space-y-3">${model.features.map(f => `<li class="flex gap-3"><span class="mt-[6px] w-2 h-2 rounded-full bg-cyan-400 flex-shrink-0"></span><span class="text-sm text-gray-200">${f}</span></li>`).join('')}</ul></div>` : ''}
+          ${model.features?.length ? `<div class="model-panel rounded-3xl p-6 sm:p-7">
+            <h3 class="model-heading text-xl sm:text-2xl font-semibold mb-3">Key features</h3>
+            <ul class="space-y-3">${model.features.map(f => `<li class="flex gap-3"><span class="mt-[6px] w-2 h-2 rounded-full model-bullet flex-shrink-0"></span><span class="text-sm text-gray-200">${f}</span></li>`).join('')}</ul></div>` : ''}
           ${model.information?.length ? `<div class="rounded-3xl border border-white/15 bg-[#020617] p-6 sm:p-7">
             <h3 class="text-lg sm:text-xl font-semibold mb-3">Model information</h3>
             <ul class="space-y-2 text-sm text-gray-200">${model.information.map(item => `<li class="flex gap-2"><span class="mt-[6px] w-1.5 h-1.5 rounded-full bg-gray-400 flex-shrink-0"></span><p class="leading-relaxed"><strong class="text-gray-100">${item.label}:</strong>${typeof item.value === "string" && item.value.startsWith("http") ? `<a href="${item.value}" target="_blank" rel="noopener noreferrer" class="text-blue-400 underline">${item.value}</a>` : item.value}</p></li>`).join('')}</ul></div>` : ''}
         </div>
       </section>
       <!-- USE CASES -->
-      ${model.use_cases?.length ? `<section class="rounded-3xl border border-white/15 bg-[#020617] p-6 sm:p-7">
+      ${model.use_cases?.length ? `<section class="model-panel rounded-3xl p-6 sm:p-7">
         <h3 class="text-xl sm:text-2xl font-semibold mb-4">Use cases</h3>
-        <div class="space-y-5">${model.use_cases.map(u => `<article class="flex gap-3"><span class="mt-2 w-2 h-2 rounded-full bg-cyan-400 flex-shrink-0"></span><div><h4 class="text-base sm:text-lg font-semibold text-white">${u.title}</h4><p class="text-sm text-gray-200 leading-relaxed">${u.description}</p></div></article>`).join('')}</div>
+        <div class="space-y-5">${model.use_cases.map(u => `<article class="flex gap-3"><span class="mt-2 w-2 h-2 rounded-full model-bullet flex-shrink-0"></span><div><h4 class="text-base sm:text-lg font-semibold text-white">${u.title}</h4><p class="text-sm text-gray-200 leading-relaxed">${u.description}</p></div></article>`).join('')}</div>
       </section>` : ''}
     </div>
   `;
