@@ -39,6 +39,7 @@
    07. Navbar
        - nav background blur
        - nav link sizing/alignment
+       - header navigation
 
    08. Hero Section
        - Header title gradient text
@@ -682,6 +683,17 @@ nav a {
   line-height: 1.5rem; /* 24px */
   display: inline-flex;
   align-items: center;
+}
+
+/* Header text navigation links */
+
+.header-nav-link {
+  color: var(--color-text-primary);
+  transition: color 0.2s ease;
+}
+
+.header-nav-link:hover {
+  color: var(--color-accent);
 }
 
 
