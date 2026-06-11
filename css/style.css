@@ -721,6 +721,31 @@ nav a {
   color: var(--color-accent);
 }
 
+.desktop-search-input {
+  background: var(--color-surface-white-08);
+  border: 1px solid var(--color-border-white-18);
+  color: var(--color-text-primary);
+  backdrop-filter: blur(12px);
+}
+
+.desktop-search-input::placeholder {
+  color: var(--color-white-65);
+}
+
+.desktop-search-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px var(--color-accent-soft);
+}
+
+.desktop-search-button {
+  color: var(--color-white-70);
+}
+
+.desktop-search-button:hover {
+  color: var(--color-text-primary);
+}
+
 
 /* =========================================================
    08. Hero Section
