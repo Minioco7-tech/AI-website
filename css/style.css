@@ -188,6 +188,9 @@
        -  .pagination-next
        - pagination ellipsis
 
+   37. Model.html page
+       - Model detail
+       - Model carousel
 
    NOTES
    - Existing class names and IDs have been preserved.
@@ -2181,4 +2184,79 @@ body.theme-natural .theme-switch:hover .theme-switch-thumb {
 .pagination-page-active {
   background: var(--color-text-primary);
   color: var(--color-bg-page);
+}
+
+/* =========================================================
+   37. Model Detail Page
+   Theme-aware panels used by model.html/model.js.
+   ========================================================= */
+
+.model-panel {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-card-border, var(--color-border-white-15));
+  color: var(--color-text-primary);
+}
+
+.model-panel-soft {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-card-border, var(--color-border-white-10));
+  color: var(--color-text-primary);
+}
+
+.model-panel-tinted {
+  background: var(--gradient-recommendation-card);
+  border: 1px solid var(--color-card-border, var(--color-border-white-10));
+  color: var(--color-text-primary);
+}
+
+.model-inner-panel {
+  background: var(--color-surface-dark-glass);
+  border: 1px solid var(--color-border-white-10);
+}
+
+.model-label,
+.model-muted {
+  color: var(--color-text-muted);
+}
+
+.model-title,
+.model-heading {
+  color: var(--color-text-primary);
+}
+
+.model-text {
+  color: var(--color-text-soft);
+}
+
+.model-text-strong {
+  color: var(--color-text-primary);
+}
+
+.model-bullet {
+  background: var(--color-accent);
+}
+
+.model-type-pill,
+.model-tag-pill {
+  background: var(--color-surface-white-05);
+  border: 1px solid var(--color-border-white-10);
+  color: var(--color-text-soft);
+}
+
+.model-type-dot {
+  background: var(--color-success, #22C55E);
+}
+
+.model-link {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.model-overview-glow {
+  background: var(--gradient-text-accent);
+}
+
+.model-carousel-panel {
+  background: var(--color-surface-dark-glass);
+  border: 1px solid var(--color-border-white-10);
 }
