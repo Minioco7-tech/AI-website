@@ -86,19 +86,17 @@ document.addEventListener('DOMContentLoaded', async () => {
   // ------------------------------
   // ✅ Build Category Pills & Tags
   // ------------------------------
-  const accentGradient = categoryColors[firstCategory] || 'bg-gradient-to-br from-[#0F172A] to-[#020617]';
+  const accentGradient = 'model-overview-glow';
 
   const categoryPills = modelCategories.map(cat => {
-    const colorClass = categoryColors[cat] || 'bg-black/20';
-    return `<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium text-white ${colorClass}">
+    const colorClass = categoryColors[cat] || 'category-badge-default';
+    return `<span class="category-badge inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${colorClass}">
               ${getCategoryName(cat)}
             </span>`;
   }).join('');
 
   const tagPills = (model.tags && model.tags.length)
-    ? model.tags.map(tag => `<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium 
-                     bg-white/5 text-gray-200 border border-white/10">#${tag}</span>`).join('')
-    : '';
+    ? model.tags.map(tag => `<span class="model-tag-pill inline-flex items-center px-3 py-1 rounded-full text-xs font-medium">#${tag}</span>`).join(''): '';
 
   const overviewText = model.subtitle || (model.description ? model.description.split('\n\n')[0] : '');
 
@@ -109,11 +107,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     <div class="w-full space-y-10">
       <!-- TOP HERO ROW -->
       <section class="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10">
-        <div class="lg:col-span-3 rounded-3xl border border-white/15 bg-[#020617] p-6 sm:p-7 flex flex-col gap-6">
+        <div class="model-panel lg:col-span-3 rounded-3xl p-6 sm:p-7 flex flex-col gap-6">
           <div class="space-y-3">
-            <p class="text-[11px] tracking-[0.3em] uppercase text-gray-400">AI Tool Overview</p>
+            <p class="model-label text-[11px] tracking-[0.3em] uppercase">AI Tool Overview</p>
             <div class="flex items-start justify-between gap-4">
-              <h1 class="text-3xl sm:text-4xl font-bold text-white leading-tight">
+              <h1 class="model-title text-3xl sm:text-4xl font-bold leading-tight">
                 ${model.name}
               </h1>
             
@@ -122,7 +120,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 class="flex-shrink-0 pt-1"
               ></div>
             </div>
-            ${model.subtitle ? `<p class="text-sm sm:text-base text-gray-300 leading-relaxed">${model.subtitle}</p>` : ''}
+            ${model.subtitle ? `<p class="model-text text-sm sm:text-base leading-relaxed">${model.subtitle}</p>` : ''}
             ${model.image ? `
               <div class="lg:hidden mt-4">
                 <div class="sshot-frame h-full" style="border-radius: 1rem;">
@@ -131,9 +129,8 @@ document.addEventListener('DOMContentLoaded', async () => {
               </div>
             ` : ''}
             <div class="flex flex-wrap items-center gap-3 mt-2">
-              ${model.type ? `<span class="inline-flex items-center rounded-full bg-white/5 border border-white/10 
-                               px-3 py-1 text-xs font-medium text-gray-200">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-2"></span>${model.type}</span>` : ''}
+              ${model.type ? `<span class="model-type-pill inline-flex items-center rounded-full px-3 py-1 text-xs font-medium">
+                              <span class="model-type-dot w-1.5 h-1.5 rounded-full mr-2"></span>` : ''}
               ${categoryPills}
             </div>
             ${tagPills ? `<div class="flex flex-wrap gap-2 mt-2">${tagPills}</div>` : ''}
@@ -145,20 +142,20 @@ document.addEventListener('DOMContentLoaded', async () => {
             </a>
           </div>
         </div>
-        <div class="hidden lg:block lg:col-span-2 model-tile model-hero-image rounded-3xl overflow-hidden border border-white/10">
+        <div class="hidden lg:block lg:col-span-2 model-tile model-hero-image rounded-3xl overflow-hidden">
           <div class="sshot-frame h-full" style="border-radius: 1rem;">
             <img class="sshot-img sshot-img--cover" src="${model.image}" alt="${model.name} screenshot" loading="lazy" fetchpriority="high" decoding="async">
           </div>
         </div>
       </section>
       <!-- COLORED OVERVIEW CARD -->
-      <section class="relative rounded-3xl border border-white/10 bg-[#020617] overflow-hidden p-6 sm:p-7">
+      <section class="model-panel-tinted relative rounded-3xl overflow-hidden p-6 sm:p-7">
         <div class="absolute inset-0 opacity-40 blur-3xl ${accentGradient}"></div>
         <div class="relative flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
           <div class="space-y-3 max-w-2xl">
-            <p class="text-[11px] tracking-[0.3em] uppercase text-gray-300/90">At a glance</p>
-            <h2 class="text-xl sm:text-2xl font-semibold text-white">What ${model.name} is best at</h2>
-            ${overviewText ? `<p class="text-sm sm:text-base text-gray-100 leading-relaxed">${overviewText}</p>` : ''}
+            <p class="model-label text-[11px] tracking-[0.3em] uppercase">At a glance</p>
+            <h2 class="model-heading text-xl sm:text-2xl font-semibold">What ${model.name} is best at</h2>
+            ${overviewText ? `<p class="model-text text-sm sm:text-base leading-relaxed">${overviewText}</p>` : ''}
           </div>
           <div class="grid grid-cols-1 gap-4 text-sm text-gray-100 sm:w-72">
             <div class="rounded-2xl bg-black/30 border border-white/10 px-4 py-3 space-y-1">
