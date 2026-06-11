@@ -21,31 +21,111 @@
   <script src="https://unpkg.com/feather-icons"></script>
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="bg-[#0A0C10] text-white flex flex-col min-h-screen">
+<body data-page="legal" class="flex flex-col min-h-screen">
 
-  <!-- Header -->
-  <header id="header"></header>
-  <main class="flex-grow pt-24 px-4 sm:px-6 lg:px-8 space-y-8 max-w-4xl mx-auto">
-    <h1 class="text-4xl font-bold text-center bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">Terms of Use</h1>
-    <p class="text-gray-300 text-lg leading-relaxed">
-      Welcome to AIviary. By accessing or using this website, you agree to comply with these Terms of Use. If you do not agree, please do not use the site.
+<header id="header"></header>
+
+<main class="legal-page flex-1 pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+  <section class="legal-card">
+    <p class="section-kicker text-xs font-semibold tracking-[0.25em] uppercase text-center">
+      Legal
     </p>
-    <p class="text-gray-300 text-lg leading-relaxed">
-      AIviary provides a curated directory of AI tools. We do not host, develop, or operate any AI models listed. All content is for informational purposes only.
-    </p>
-    <p class="text-gray-300 text-lg leading-relaxed">
-      You agree not to misuse the site, including attempting to disrupt services, copy content for commercial purposes without permission, or engage in unlawful activity. AIviary reserves the right to update these terms at any time.
-    </p>
-  </main>
 
+    <h1 class="section-title text-3xl sm:text-4xl font-bold text-center mt-3">
+      Terms of Use
+    </h1>
 
-  <!-- Footer -->
-  <footer id="footer"></footer>
+    <div class="legal-content mt-8">
+      <!-- Page content goes here -->
+      <p>
+        Last Updated: June 2026
+      </p>
 
-  <script type="module" src="js/header.js"></script>
-  <script src="js/theme.js"></script>
-  <script type="module" src="js/footer.js"></script>
+      <h2>
+        Acceptance of Terms
+      </h2>
+      <p>
+        By accessing and using AIviary, you agree to these Terms of Use.
+      </p>
+      <p>
+        If you do not agree with these terms, please do not use the website.
+      </p>
 
-  <script>feather.replace();</script>
+      <h2>
+        Purpose of the Website
+      </h2>
+      <p>
+        AIviary provides information about artificial intelligence tools, products and services for discovery and educational purposes.
+      </p>
+      <p>
+        AIviary does not provide professional advice and does not guarantee the performance, suitability or reliability of any third-party service listed on the website.
+      </p>
+
+      <h2>
+        Intellectual Property
+      </h2>
+      <p>
+        Unless otherwise stated, all content on AIviary, including text, design, graphics, branding and website functionality, is the property of AIviary and may not be copied, reproduced or redistributed without permission.
+      </p>
+      <p>
+        Third-party trademarks, company names and product names remain the property of their respective owners.
+      </p>
+
+      <h2>
+        Third-Party Links
+      </h2>
+      <p>
+        AIviary contains links to external websites.
+      </p>
+      <p>
+        We do not control these websites and are not responsible for their content, security, availability or practices.
+      </p>
+
+      <h2>
+        Prohibited Use
+      </h2>
+      <p>
+        Users agree not to:
+      </p>
+      <ul>
+        <li>Use the website for unlawful purposes</li>
+        <li>Attempt to disrupt or interfere with website operation</li>
+        <li>Copy substantial portions of content without permission</li>
+        <li>Misrepresent AIviary or its content</li>
+      </ul>
+
+      <h2>
+        Availability
+      </h2>
+      <p>
+        We reserve the right to modify, suspend or discontinue any part of the website at any time without notice.
+      </p>
+
+      <h2>
+        Limitation of Liability
+      </h2>
+      <p>
+        To the maximum extent permitted by law, AIviary shall not be liable for any indirect, incidental or consequential losses resulting from the use of the website or any third-party services linked from it.
+      </p>
+
+      <h2>
+        Changes to These Terms
+      </h2>
+      <p>
+        We may update these Terms of Use periodically. Continued use of the website constitutes acceptance of any updated terms.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer id="footer"></footer>
+
+<script src="https://unpkg.com/feather-icons"></script>
+<script type="module" src="js/header.js"></script>
+<script type="module" src="js/background.js"></script>
+<script src="js/theme.js"></script>
+<script type="module" src="js/footer.js"></script>
+<script>
+  feather.replace();
+</script>
 </body>
-</html>
