@@ -24,13 +24,11 @@ document.addEventListener("DOMContentLoaded", () => {
               type="text"
               id="searchInput"
               placeholder="Search AI tools... or try 'All'"
-              class="w-full px-5 py-2 pr-12 rounded-full bg-white/10 backdrop-blur-md border border-white/20 
-                     text-white placeholder-white/60 shadow-md
-                     focus:outline-none focus:ring-2 focus:ring-[#00BFFF] transition-all duration-300"
+              class="desktop-search-input w-full px-5 py-2 pr-12 rounded-full shadow-md transition-all duration-300"
             >
             <button
               type="submit"
-              class="absolute right-3 top-1/2 -translate-y-1/2 text-white/70 hover:text-white focus:outline-none"
+              class="desktop-search-button absolute right-3 top-1/2 -translate-y-1/2 focus:outline-none"
               aria-label="Search"
             >
               <i data-feather="search" class="w-5 h-5"></i>
