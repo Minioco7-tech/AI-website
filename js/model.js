@@ -128,10 +128,17 @@ document.addEventListener('DOMContentLoaded', async () => {
                 </div>
               </div>
             ` : ''}
-            <div class="model-pill-row flex flex-wrap items-center gap-3 mt-2">
-              ${model.type ? `<span class="model-type-pill inline-flex items-center rounded-full px-3 py-1 text-xs font-medium">
-                              <span class="model-type-dot w-1.5 h-1.5 rounded-full mr-2"></span>` : ''}
+            <div class="model-pill-row flex flex-wrap gap-3 mt-2">
+            
+              ${model.type ? `
+                <span class="model-type-pill inline-flex items-center rounded-full px-3 py-1 text-xs font-medium">
+                  <span class="model-type-dot w-1.5 h-1.5 rounded-full mr-2"></span>
+                  ${model.type}
+                </span>
+              ` : ''}
+            
               ${categoryPills}
+            
             </div>
             ${tagPills ? `<div class="flex flex-wrap gap-2 mt-2">${tagPills}</div>` : ''}
           </div>
@@ -159,14 +166,14 @@ document.addEventListener('DOMContentLoaded', async () => {
           </div>
           <div class="grid grid-cols-1 gap-4 text-sm text-gray-100 sm:w-72">
             <div class="rounded-2xl bg-black/30 border border-white/10 px-4 py-3 space-y-1">
-              <p class="text-[11px] uppercase tracking-[0.2em] text-gray-400">Highlights</p>
+              <p class="model-label text-[11px] uppercase tracking-[0.2em]">Highlights</p>
               ${model.type ? `<p><span class="text-gray-400">Type:</span> ${model.type}</p>` : ''}
               <p><span class="text-gray-400">Category:</span> ${getCategoryName(firstCategory)}</p>
               ${model.tags?.length ? `<p><span class="text-gray-400">Tags:</span> ${model.tags.slice(0, 3).join(', ')}</p>` : ''}
             </div>
             ${model.pricing ? `<div class="model-inner-panel rounded-2xl px-4 py-3 space-y-1">
-                <p class="text-[11px] uppercase tracking-[0.2em] text-gray-400">Pricing snapshot</p>
-                <p class="text-gray-100 leading-relaxed">${model.pricing}</p>
+                <p class="model-label text-[11px] uppercase tracking-[0.2em]">Pricing snapshot</p>
+                <p class="model-text leading-relaxed">${model.pricing}</p>
               </div>` : ''}
           </div>
         </div>
