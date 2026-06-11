@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // ------------------------------
   // ✅ Build Category Pills & Tags
   // ------------------------------
-  const accentGradient = 'model-overview-glow';
+  const accentGradient = categoryColors[firstCategory] || 'bg-gradient-to-br from-[#0F172A] to-[#020617]';
 
   const categoryPills = modelCategories.map(cat => {
     const colorClass = categoryColors[cat] || 'category-badge-default';
@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       </section>
       <!-- COLORED OVERVIEW CARD -->
       <section class="model-panel-tinted relative rounded-3xl overflow-hidden p-6 sm:p-7">
-        <div class="absolute inset-0 opacity-40 blur-3xl ${accentGradient}"></div>
+        <div class="model-overview-glow absolute inset-0 opacity-40 blur-3xl ${accentGradient}"></div>
         <div class="relative flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
           <div class="space-y-3 max-w-2xl">
             <p class="model-label text-[11px] tracking-[0.3em] uppercase">At a glance</p>
