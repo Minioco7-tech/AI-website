@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <div>
             <h4 class="text-lg font-semibold text-white mb-4">Legal</h4>
             <div class="space-y-2">
+              <a href="how_it_works.html" rel="noopener noreferrer" class"block text-[#E0E0E0] hover:text-white transition-colors duration-200">How it works</a>
               <a href="disclaimer.html" rel="noopener noreferrer" class="block text-[#E0E0E0] hover:text-white transition-colors duration-200">Disclaimer</a>
               <a href="privacy.html" rel="noopener noreferrer" class="block text-[#E0E0E0] hover:text-white transition-colors duration-200">Privacy Policy</a>
               <a href="terms.html" rel="noopener noreferrer" class="block text-[#E0E0E0] hover:text-white transition-colors duration-200">Terms of Use</a>
