@@ -2290,3 +2290,7 @@ body.theme-natural .model-overview-glow {
   background: var(--color-accent-soft) !important;
 }
 
+#carousel-grid .model-tile {
+  box-shadow: none;
+}
+
