@@ -23,12 +23,12 @@
   
 </head>
 
-<body data-page="model" class="bg-[#0A0C10] text-white flex flex-col min-h-screen">
+<body data-page="model" class="flex flex-col min-h-screen">
   <!-- Header -->
   <header id="header"></header>
 
   <main class="pt-28 pb-12 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 fade-in">
-    <nav id="breadcrumb" class="flex flex-wrap text-sm text-gray-400 mt-4 mb-6 bg-transparent">
+    <nav id="breadcrumb" class="flex flex-wrap text-sm mt-4 mb-6 bg-transparent">
       <!-- Populated dynamically -->
     </nav>
     <!-- Model Detail Section -->
@@ -37,16 +37,16 @@
     <section id="related-models" class="mt-16">
       <div class="flex items-end justify-between gap-4 mb-5">
         <div>
-          <p class="text-[11px] tracking-[0.3em] uppercase text-[#38BDF8]/80">More like this</p>
-          <h2 class="text-2xl font-bold text-white">Related Models</h2>
+          <p class="section-kicker text-[11px] tracking-[0.3em] uppercase">More like this</p>
+          <h2 class="section-title text-2xl font-bold">Related Models</h2>
         </div>
     
-        <div class="hidden sm:block text-xs text-gray-400">
+        <div class="model-muted hidden sm:block text-xs">
           Swipe on mobile • Use arrows on desktop
         </div>
       </div>
     
-      <div class="relative rounded-3xl border border-white/10 bg-black/20 p-4 sm:p-6">
+      <div class="model-carousel-panel relative rounded-3xl p-4 sm:p-6">
         <!-- Arrows -->
         <button class="carousel-arrow left-arrow" type="button" aria-label="Previous related models">
           <i data-feather="chevron-left" class="w-5 h-5"></i>
