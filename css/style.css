@@ -191,6 +191,7 @@
    37. Model.html page
        - Model detail
        - Model carousel
+       - body.theme-natural .model-overview-glow => for pill matched color box on dark theme but not on neutral theme
 
    NOTES
    - Existing class names and IDs have been preserved.
@@ -2260,3 +2261,8 @@ body.theme-natural .theme-switch:hover .theme-switch-thumb {
   background: var(--color-surface-dark-glass);
   border: 1px solid var(--color-border-white-10);
 }
+
+body.theme-natural .model-overview-glow {
+  background: var(--color-accent-soft) !important;
+}
+
