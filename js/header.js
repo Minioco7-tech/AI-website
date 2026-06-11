@@ -118,14 +118,14 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
         <!-- Mobile search bar -->
         <div id="mobileSearchContainer" class="sm:hidden w-full items-center gap-2 mt-3" style="display: none;">
-          <button id="closeSearchBtn" class="text-white">
+          <button id="closeSearchBtn" class="mobile-search-close">
             <i data-feather="x"></i>
           </button>
           <input
             type="text"
             id="mobileSearchInput"
             placeholder="Search AI tools..."
-            class="flex-grow px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-[#00BFFF]"
+            class="mobile-search-input flex-grow px-4 py-2 rounded-full"
           />
         </div>
 
