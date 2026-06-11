@@ -21,31 +21,121 @@
   <script src="https://unpkg.com/feather-icons"></script>
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body class="bg-[#0A0C10] text-white flex flex-col min-h-screen">
+<body data-page="legal" class="flex flex-col min-h-screen">
 
-  <!-- Header -->
-  <header id="header"></header>
+<header id="header"></header>
 
-  <main class="flex-grow pt-24 px-4 sm:px-6 lg:px-8 space-y-8 max-w-4xl mx-auto">
-    <h1 class="text-4xl font-bold text-center bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">Privacy Policy</h1>
-    <p class="text-gray-300 text-lg leading-relaxed">
-      At AIviary, your privacy is important to us. We collect minimal information necessary to provide a seamless experience, such as cookies to enhance usability and optional email sign-ups for updates.
+<main class="legal-page flex-1 pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+  <section class="legal-card">
+    <p class="section-kicker text-xs font-semibold tracking-[0.25em] uppercase text-center">
+      Legal
     </p>
-    <p class="text-gray-300 text-lg leading-relaxed">
-      We do not sell, share, or distribute personal data to third parties except as required to operate the website or comply with legal obligations. Usage data and analytics may be collected anonymously to improve site performance.
-    </p>
-    <p class="text-gray-300 text-lg leading-relaxed">
-      By using AIviary, you consent to our use of cookies and data collection practices described here. You can manage cookie preferences through your browser or our site’s cookie banner.
-    </p>
-  </main>
 
+    <h1 class="section-title text-3xl sm:text-4xl font-bold text-center mt-3">
+      Privacy Policy
+    </h1>
 
-  <!-- Footer -->
-  <footer id="footer"></footer>
+    <div class="legal-content mt-8">
+      <!-- Page content goes here -->
+      <p>
+        Last Updated: June 2026
+      </p>
 
-  <script type="module" src="js/header.js"></script>
-  <script src="js/theme.js"></script>
-  <script type="module" src="js/footer.js"></script>
-  <script>feather.replace();</script>
+      <h2>
+        Introduction
+      </h2>
+      <p>
+        AIviary respects your privacy and is committed to being transparent about how information is handled when you use this website.
+      </p>
+
+      <h2>
+        Information We Collect
+      </h2>
+      <p>
+        At present, AIviary does not require users to create accounts and does not intentionally collect personally identifiable information.
+      </p>
+
+      <p>
+        The website currently stores limited information within your browser, including:
+      </p>
+
+      <ul>
+        <li>Saved or favourited tools</li>
+        <li>Basic website preferences</li>
+      </ul>
+
+      <p>
+        This information is stored locally on your device and is not transmitted to AIviary servers.
+      </p>
+
+      <h2>
+        Third-Party Websites
+      </h2>
+      <p>
+        AIviary contains links to third-party websites and services.
+      </p>
+
+      <p>
+        When you click a link and leave AIviary, you are subject to the privacy policies and practices of the third-party website you visit. We are not responsible for the privacy practices of external websites.
+      </p>
+
+      <h2>
+        Future Features
+      </h2>
+      <p>
+        AIviary may introduce additional functionality in the future, including:
+      </p>
+
+      <ul>
+        <li>User accounts</li>
+        <li>Personalised recommendations</li>
+        <li>Analytics and usage reporting</li>
+        <li>Preference syncing across devices</li>
+      </ul>
+
+      <p>
+        If such features are introduced, this Privacy Policy will be updated accordingly.
+      </p>
+
+      <h2>
+        Data Security
+      </h2>
+      <p>
+        We take reasonable steps to maintain the security and integrity of the website. However, no website or online service can guarantee absolute security.
+      </p>
+
+      <h2>
+        Children's Privacy
+      </h2>
+      <p>
+        AIviary is not directed toward children under the age of 13.
+      </p>
+
+      <h2>
+        Changes to This Policy
+      </h2>
+      <p>
+        This Privacy Policy may be updated from time to time. Any changes will be posted on this page.
+      </p>
+
+      <h2>
+        Contact
+      </h2>
+      <p>
+        For privacy-related questions, please contact us through the contact information provided on the website.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer id="footer"></footer>
+
+<script src="https://unpkg.com/feather-icons"></script>
+<script type="module" src="js/header.js"></script>
+<script type="module" src="js/background.js"></script>
+<script src="js/theme.js"></script>
+<script type="module" src="js/footer.js"></script>
+<script>
+  feather.replace();
+</script>
 </body>
-</html>
