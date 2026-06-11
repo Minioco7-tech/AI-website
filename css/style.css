@@ -25,48 +25,50 @@
        - Paragraph line height
        - Empty state (No reults)
 
-   04. Main Background / Overlay Gradients
+   04. Legal Pages Layout
+
+   05. Main Background / Overlay Gradients
        - .main-gradient
        - Subtle overlay behind page sections
 
-   05. Global Transitions and Focus States
+   06. Global Transitions and Focus States
        - Shared transition behaviour
        - Accessible focus outlines
        - Bookmark button focus exception
 
-   06. Navbar
+   07. Navbar
        - nav background blur
        - nav link sizing/alignment
 
-   07. Hero Section
+   08. Hero Section
        - Header title gradient text
        - Header form input/button text sizing
 
-   08. AI guides section
+   09. AI guides section
        - Feature card styling
        - Accordion wrap
 
-   09. Buttons
+   10. Buttons
        - button base
        - .btn
        - .btn-primary
        - Randomise buton
 
-   10. Footer
+   11. Footer
        - Footer background
        - Footer link colours
        - Footer paragraph text
 
-   11. Animations
+   12. Animations
        - .fade-in
        - @keyframes fadeIn
 
-   12. Utility Classes
+   13. Utility Classes
        - .text-gradient
        - .shadow-soft
        - .scrollbar-hide
 
-   13. Model Tiles / Tool Cards
+   14. Model Tiles / Tool Cards
        - .model-tile
        - Tile hover behaviour
        - Thumbnail wrapper
@@ -75,51 +77,51 @@
        - Badge wrapping
        - Card text colors
 
-   14. Category Images
+   15. Category Images
        - .category-thumb-wrapper
        - .category-thumb
        - Category image hover zoom
 
-   15. Screenshot Frames
+   16. Screenshot Frames
        - .sshot-frame
        - .sshot-img
        - Cover/contain image variants
 
-   16. Related Models Carousel
+   17. Related Models Carousel
        - #carousel-grid
        - Desktop card sizing
        - Carousel-specific card scaling
        - Mobile carousel behaviour
 
-   17. Carousel Arrows
+   18. Carousel Arrows
        - .carousel-arrow
        - .left-arrow
        - .right-arrow
        - Hover, active and disabled states
 
-   18. Carousel Dots
+   19. Carousel Dots
        - .carousel-dots
        - .carousel-dot
        - Dot hover and active states
 
-   19. Reduced Motion
+   20. Reduced Motion
        - Removes carousel transitions for users who prefer reduced motion
 
-   20. Home Page Guide Accordions
+   21. Home Page Guide Accordions
        - .guide-summary
        - .guide-accordion[open]
 
-   21. Search Bar and Mobile Search
+   22. Search Bar and Mobile Search
        - Non-home search input glow
        - Mobile search open/close animation
 
-   22. Breadcrumb Navigation
+   23. Breadcrumb Navigation
        - #breadcrumb
        - Breadcrumb links
        - Current breadcrumb item
        - Separators
 
-   23. Filter Dropdown
+   24. Filter Dropdown
        - Dropdown wrapper
        - Toggle button
        - Label/meta text
@@ -128,42 +130,42 @@
        - Dropdown footer
        - Sort / select chevron dropdown
 
-   24. Filter Buttons
+   25. Filter Buttons
        - Apply/reset/ghost filter buttons
        - Hover states
 
-   25. Filter Pills
+   26. Filter Pills
        - Checkbox pill wrapper
        - Hidden checkbox
        - Visible pill UI
        - Selected and hover states
 
-   26. Filter Menu Header
+   27. Filter Menu Header
        - Header row inside dropdown
        - Selected count label
 
-   27. Filter Pill Scroll Area
+   28. Filter Pill Scroll Area
        - Scrollable pill container
        - Custom scrollbar styling
 
-   28. Expandable Filter Sections
+   29. Expandable Filter Sections
        - Details/summary filter sections
        - Section title
        - Section chevron
        - Open/closed chevron rotation
 
-   29. Nested Filter Groups / Tags
+   30. Nested Filter Groups / Tags
        - Nested group spacing
        - Group titles
        - Nested pill layout overrides
 
-   30. Global Ocean Background
+   31. Global Ocean Background
        - JS-injected ocean wave wrappers
        - Wave positioning
        - SVG sizing
        - Desktop softening
 
-   31. Bookmark / Favourite Buttons
+   32. Bookmark / Favourite Buttons
        - Model title rows
        - Card header row
        - Detail page title row
@@ -171,24 +173,24 @@
        - Saved state
        - Large bookmark variant
 
-   32. Header Icon Buttons
+   33. Header Icon Buttons
        - Circular header buttons
        - Hover/focus states
 
-   33. Responsive / Media Query Rules
+   34. Responsive / Media Query Rules
        - Mobile filter dropdown width
        - Note: component-specific media queries are kept near the component
 
-   34. Theme toggle button
+   35. Theme toggle button
        - Theme switch toggle
    
-   35. Home hero section styling
+   36. Home hero section styling
 
-   36. Pagination
+   37. Pagination
        -  .pagination-next
        - pagination ellipsis
 
-   37. Model.html page
+   38. Model.html page
        - Model detail
        - Model carousel
        - body.theme-natural .model-overview-glow => for pill matched color box on dark theme but not on neutral theme
@@ -549,9 +551,61 @@ p {
   font-weight: 700;
 }
 
+/* =========================================================
+   04. Legal / Static Content Pages
+   About, Privacy, Terms, DMCA and informational pages.
+   ========================================================= */
+
+.legal-page {
+  width: 100%;
+}
+
+.legal-card {
+  background: var(--color-bg-card-glass);
+  border: 1px solid var(--color-card-border, var(--color-border-white-10));
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: var(--shadow-card), var(--shadow-card-highlight);
+}
+
+.legal-content {
+  color: var(--color-text-soft);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.legal-content p {
+  margin-bottom: 1.25rem;
+}
+
+.legal-content ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.legal-content li {
+  margin-bottom: 0.5rem;
+}
+
+.legal-content strong {
+  color: var(--color-text-primary);
+}
+
+.legal-content a {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+@media (min-width: 640px) {
+  .legal-card {
+    padding: 2.75rem;
+  }
+}
+
 
 /* =========================================================
-   04. Main Background / Overlay Gradients
+   05. Main Background / Overlay Gradients
    Subtle overlay gradient for main content sections.
    ========================================================= */
 
@@ -565,7 +619,7 @@ p {
 
 
 /* =========================================================
-   05. Global Transitions and Focus States
+   06. Global Transitions and Focus States
    Shared interaction behaviour across clickable/form elements.
    ========================================================= */
 
@@ -592,7 +646,7 @@ select:focus {
 
 
 /* =========================================================
-   06. Navbar
+   07. Navbar
    Global nav styling.
    Note: this affects all <nav> elements, including breadcrumbs.
    ========================================================= */
@@ -612,7 +666,7 @@ nav a {
 
 
 /* =========================================================
-   07. Hero Section
+   08. Hero Section
    Header title gradient and hero form details.
    ========================================================= */
 
@@ -634,7 +688,7 @@ header form button {
 }
 
 /* =========================================================
-   8. Learn AI Guides Section
+   09. Learn AI Guides Section
    Homepage guide cards and centred accordion layout.
    ========================================================= */
 
@@ -725,7 +779,7 @@ header form button {
 
 
 /* =========================================================
-   09. Buttons
+   10. Buttons
    Reusable button styles.
    ========================================================= */
 
@@ -767,7 +821,7 @@ button,
 
 
 /* =========================================================
-   10. Footer
+   11. Footer
    Footer surface, text and link styling.
    ========================================================= */
 
@@ -791,7 +845,7 @@ footer p {
 
 
 /* =========================================================
-   11. Animations
+   12. Animations
    Reusable entrance animations.
    ========================================================= */
 
@@ -811,7 +865,7 @@ footer p {
 
 
 /* =========================================================
-   12. Utility Classes
+   13. Utility Classes
    Small reusable helpers.
    ========================================================= */
 
@@ -847,7 +901,7 @@ footer p {
 
 
 /* =========================================================
-   13. Model-Tile / Unified Tile Design
+   14. Model-Tile / Unified Tile Design
    Reusable model/tool card styling.
    ========================================================= */
 
@@ -950,7 +1004,7 @@ footer p {
 
 
 /* =========================================================
-   14. Category Image / Inset Style
+   15. Category Image / Inset Style
    Category tile image container and hover behaviour.
    ========================================================= */
 
@@ -985,7 +1039,7 @@ footer p {
 
 
 /* =========================================================
-   15. Screenshot Frames
+   16. Screenshot Frames
    Screenshot/image framing used inside cards.
    ========================================================= */
 
@@ -1023,7 +1077,7 @@ footer p {
 
 
 /* =========================================================
-   16. Related Models Carousel
+   17. Related Models Carousel
    model.html related models carousel.
    Reuses model cards but adjusts sizing/scale inside carousel.
    ========================================================= */
@@ -1097,7 +1151,7 @@ footer p {
 
 
 /* =========================================================
-   17. Carousel Arrows
+   18. Carousel Arrows
    Previous/next buttons for related models carousel.
    ========================================================= */
 
@@ -1166,7 +1220,7 @@ footer p {
 
 
 /* =========================================================
-   18. Carousel Dots
+   19. Carousel Dots
    Dot pagination for related models carousel.
    ========================================================= */
 
@@ -1200,7 +1254,7 @@ footer p {
 
 
 /* =========================================================
-   19. Reduced Motion
+   20. Reduced Motion
    Accessibility support for users who prefer reduced motion.
    ========================================================= */
 
@@ -1214,7 +1268,7 @@ footer p {
 
 
 /* =========================================================
-   20. Home Page Guide Accordions
+   21. Home Page Guide Accordions
    Home page information dropdown styling.
    ========================================================= */
 
@@ -1230,7 +1284,7 @@ footer p {
 
 
 /* =========================================================
-   21. Search Bar and Mobile Search
+   22. Search Bar and Mobile Search
    Search input glow and mobile search container animation.
    ========================================================= */
 
@@ -1264,7 +1318,7 @@ body:not(.home-page) #searchInput:hover {
 
 
 /* =========================================================
-   22. Breadcrumb Navigation
+   23. Breadcrumb Navigation
    Breadcrumb styling for category, model, favourites and saved pages.
    ========================================================= */
 
@@ -1313,7 +1367,7 @@ body:not(.home-page) #searchInput:hover {
 
 
 /* =========================================================
-   23. Filter Dropdown
+   24. Filter Dropdown
    Custom category/tag filter dropdown.
    ========================================================= */
 
@@ -1464,7 +1518,7 @@ body:not(.home-page) #searchInput:hover {
 
 
 /* =========================================================
-   24. Filter Buttons
+   25. Filter Buttons
    Buttons used inside the filter dropdown.
    ========================================================= */
 
@@ -1542,7 +1596,7 @@ body:not(.home-page) #searchInput:hover {
 
 
 /* =========================================================
-   25. Filter Pills
+   26. Filter Pills
    Checkbox pills used inside #filterCategories.
    ========================================================= */
 
@@ -1612,7 +1666,7 @@ body:not(.home-page) #searchInput:hover {
 
 
 /* =========================================================
-   26. Filter Menu Header
+   27. Filter Menu Header
    Header row inside dropdown menu above the pills.
    ========================================================= */
 
@@ -1636,7 +1690,7 @@ body:not(.home-page) #searchInput:hover {
 
 
 /* =========================================================
-   27. Filter Pill Scroll Area
+   28. Filter Pill Scroll Area
    Scrollable pill container inside dropdown menu.
    ========================================================= */
 
@@ -1664,7 +1718,7 @@ body:not(.home-page) #searchInput:hover {
 
 
 /* =========================================================
-   28. Expandable Filter Sections
+   29. Expandable Filter Sections
    Details/summary sections inside the filter dropdown.
    ========================================================= */
 
@@ -1727,7 +1781,7 @@ body:not(.home-page) #searchInput:hover {
 
 
 /* =========================================================
-   29. Nested Filter Groups / Tags
+   30. Nested Filter Groups / Tags
    Tag groups inside expandable filter sections.
    ========================================================= */
 
@@ -1761,7 +1815,7 @@ body:not(.home-page) #searchInput:hover {
 
 
 /* =========================================================
-   30. Global Ocean Background
+   31. Global Ocean Background
    Static background and wave layers injected by background.js.
    ========================================================= */
 
@@ -1831,7 +1885,7 @@ body:not(.home-page) #searchInput:hover {
 }
 
 /* =========================================================
-   31. Bookmark / Favourite Buttons
+   32. Bookmark / Favourite Buttons
    Favourite/save UI used on model cards and model detail pages.
    ========================================================= */
 
@@ -1944,7 +1998,7 @@ body:not(.home-page) #searchInput:hover {
 
 
 /* =========================================================
-   32. Header Icon Buttons
+   33. Header Icon Buttons
    Circular icon buttons in the site header.
    ========================================================= */
 
@@ -1985,7 +2039,7 @@ body:not(.home-page) #searchInput:hover {
 
 
 /* =========================================================
-   33. Responsive / Media Query Rules
+   34. Responsive / Media Query Rules
    General responsive overrides.
    Component-specific media queries are mostly kept near components.
    ========================================================= */
@@ -1999,7 +2053,7 @@ body:not(.home-page) #searchInput:hover {
 }
 
 /* ===============================
-   34. Theme toggle button
+   35. Theme toggle button
 ================================ */
 
 .theme-switch {
@@ -2082,7 +2136,7 @@ body.theme-natural .theme-switch:hover .theme-switch-thumb {
 
 
 /* ===============================
-   35. Home hero section styling
+   36. Home hero section styling
 ================================ */
 
 .hero-section {
@@ -2131,7 +2185,7 @@ body.theme-natural .theme-switch:hover .theme-switch-thumb {
 }
 
 /* =========================================================
-   36. Pagination
+   37. Pagination
    Shared pagination controls for category and search pages.
    ========================================================= */
 
@@ -2188,7 +2242,7 @@ body.theme-natural .theme-switch:hover .theme-switch-thumb {
 }
 
 /* =========================================================
-   37. Model Detail Page
+   38. Model Detail Page
    Theme-aware panels used by model.html/model.js.
    ========================================================= */
 
