@@ -22,70 +22,74 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body data-page="category" class="bg-[#0A0C10] text-white flex flex-col min-h-screen">
+<body data-page="about" class="flex flex-col min-h-screen">
 
   <!-- Header -->
   <header id="header"></header>
 
   <!-- Main Content -->
-  <main class="flex-1 pt-20 px-4 sm:px-6 lg:px-8 space-y-12 max-w-5xl mx-auto">
+  <main class="legal-page flex-1 pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
 
-    <!-- About Section -->
-    <section class="space-y-6 pt-4">
-      <h1 class="text-3xl sm:text-4xl font-bold text-center bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">
+    <section class="legal-card">
+      <p class="section-kicker text-xs font-semibold tracking-[0.25em] uppercase text-center">
+        About
+      </p>
+
+      <h1 class="section-title text-3xl sm:text-4xl font-bold text-center mt-3">
         About AIviary
       </h1>
-      <p class="text-gray-300 text-center text-base sm:text-lg leading-relaxed">
-        AIviary is your one-stop platform for discovering the world’s smartest AI tools. Whether you’re a creator, student, or business professional, AIviary makes it simple to explore and find AI models tailored to your needs. We aggregate models from multiple sources into a single, easy-to-browse library.
-      </p>
-    </section>
 
-    <!-- How It Works -->
-    <section class="space-y-6">
-      <h2 class="text-2xl sm:text-3xl font-semibold text-center">How It Works</h2>
-      <p class="text-gray-300 text-center text-base sm:text-lg leading-relaxed">
-        Browse categories, search for a task, or explore random models to find the perfect AI tool. Each model links directly to its source—whether it’s a dedicated website or a platform like Hugging Face—so you can start using it immediately. AIviary does not host or run any AI models; we provide a curated directory to simplify your discovery process.
-      </p>
-    </section>
+      <div class="legal-content mt-8">
+        <p>
+          AIviary was created to make discovering AI tools simple.
+        </p>
 
-    <!-- Future Updates & Version History -->
-    <section class="space-y-6">
-      <h2 class="text-2xl sm:text-3xl font-semibold text-center">Future Updates & Version History</h2>
-      <p class="text-gray-300 text-center text-base sm:text-lg">
-        AIviary is constantly evolving. Here’s a glimpse of what’s coming and what we’ve already launched:
-      </p>
-      <ul class="list-disc list-inside text-gray-300 space-y-2 max-w-2xl mx-auto text-sm sm:text-base">
-        <li><strong>v1.0</strong> – Initial public launch: core categories, search, random model discovery.</li>
-        <li><strong>v1.1</strong> – Improved search relevance and category filtering, minor UI tweaks.</li>
-        <li><strong>v1.2</strong> – Added new AI categories and expanded model dataset.</li>
-        <li><strong>v2.0 (Planned)</strong> – Personalized recommendations, user accounts, and bookmarking models.</li>
-        <li><strong>v2.1 (Planned)</strong> – Monetization features: affiliate links, ads, and optional premium content.</li>
-      </ul>
-      <p class="text-gray-400 text-sm text-center">
-        Future updates are designed to be simple to use while improving the discovery experience. Stay tuned!
-      </p>
-    </section>
+        <p>
+          The AI landscape is growing rapidly, with new tools appearing every week across writing, design, coding, research, productivity, data analysis, audio, video and many other areas. Finding the right tool can often be overwhelming, particularly for people who are not deeply involved in technology.
+        </p>
 
-    <!-- Contact Section -->
-    <section class="space-y-6 pb-12">
-      <h2 class="text-2xl sm:text-3xl font-semibold text-center">Contact & Connect</h2>
-      <p class="text-gray-300 text-center text-base sm:text-lg leading-relaxed">
-        Have questions, suggestions, or just want to say hello? Reach out via our social channels or email. We’d love to hear from you!
-      </p>
+        <p>
+          AIviary aims to solve this problem by providing a curated directory of AI tools in a simple, accessible format.
+        </p>
+
+        <p>Our goal is to help users:</p>
+
+        <ul>
+          <li>Discover AI tools by category</li>
+          <li>Compare tools for different tasks and workflows</li>
+          <li>Learn how AI tools can be used effectively</li>
+          <li>Explore new technologies without needing technical expertise</li>
+        </ul>
+
+        <p>
+          AIviary does not provide AI services directly. Instead, we help users discover and learn about third-party AI products and services.
+        </p>
+
+        <p>
+          Tool descriptions, categories and recommendations are created for informational purposes only. Users should always evaluate any third-party product independently before using it.
+        </p>
+
+        <p>
+          As AI continues to evolve, AIviary will continue expanding with new tools, guides, educational content and features designed to help users navigate the AI ecosystem with confidence.
+        </p>
+
+        <p>
+          Thank you for visiting AIviary.
+        </p>
+      </div>
     </section>
 
   </main>
 
   <!-- Footer -->
   <footer id="footer"></footer>
+
   <script src="https://unpkg.com/feather-icons"></script>
   <script type="module" src="js/header.js"></script>
-  <script type="module" src="js/background.js"></script> 
+  <script type="module" src="js/background.js"></script>
   <script src="js/theme.js"></script>
   <script type="module" src="js/footer.js"></script>
   <script>
     feather.replace();
   </script>
 </body>
-</html>
-
