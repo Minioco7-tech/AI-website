@@ -21,31 +21,65 @@
   <script src="https://unpkg.com/feather-icons"></script>
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body data-page="category" class="bg-[#0A0C10] text-white flex flex-col min-h-screen">
+<body data-page="legal" class="flex flex-col min-h-screen">
 
-  <!-- Header -->
-  <header id="header"></header>
-  <main class="flex-grow pt-24 px-4 sm:px-6 lg:px-8 space-y-8 max-w-4xl mx-auto">
-    <h1 class="text-4xl font-bold text-center bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent">Disclaimer</h1>
-    <p class="text-gray-300 text-lg leading-relaxed">
-      AIviary is a curated directory of AI tools and models. We do not develop, host, or operate any of the AI models listed on this site. Links provided on AIviary direct users to third-party platforms or official sources.
-    </p>
-    <p class="text-gray-300 text-lg leading-relaxed">
-      While we strive for accuracy, we cannot guarantee the completeness, reliability, or timeliness of information. Use any AI tool at your own risk. AIviary is not responsible for any outcomes, losses, or damages resulting from the use of these tools.
-    </p>
-    <p class="text-gray-300 text-lg leading-relaxed">
-      This site may include affiliate links or advertisements, which help support maintenance of AIviary. We may earn a commission for purchases made through these links at no extra cost to you.
-    </p>
-  </main>
+<header id="header"></header>
 
-  <!-- Footer -->
-  <footer id="footer"></footer>
-  <script src="https://unpkg.com/feather-icons"></script>
-  <script type="module" src="js/header.js"></script>
-  <script type="module" src="js/header.js"></script>
-  <script src="js/theme.js"></script>
-  <script type="module" src="js/footer.js"></script>
+<main class="legal-page flex-1 pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+  <section class="legal-card">
+    <p class="section-kicker text-xs font-semibold tracking-[0.25em] uppercase text-center">
+      Legal
+    </p>
 
-  <script>feather.replace();</script>
+    <h1 class="section-title text-3xl sm:text-4xl font-bold text-center mt-3">
+      Disclaimer
+    </h1>
+
+    <div class="legal-content mt-8">
+      <!-- Page content goes here -->
+      <p>
+        The information provided on AIviary is for general informational and educational purposes only.
+      </p>
+
+      <p>
+        While we make reasonable efforts to keep information accurate and up to date, AIviary makes no guarantees regarding the completeness, accuracy, reliability, suitability or availability of any information presented on this website.
+      </p>
+
+      <p>
+        AIviary is an independent directory and discovery platform. We do not own, operate or control the third-party tools, services or websites featured on the platform unless explicitly stated otherwise.
+      </p>
+
+      <p>
+        References to products, companies or services do not constitute endorsements or guarantees of performance.
+      </p>
+
+      <p>
+        Users should independently evaluate any third-party product before relying on it for business, educational, legal, financial, medical or other important purposes.
+      </p>
+
+      <p>
+        AI-generated technologies can produce inaccurate, incomplete or misleading outputs. Users remain responsible for verifying information and making their own decisions.
+      </p>
+
+      <p>
+        Under no circumstances shall AIviary be liable for any loss or damage arising from the use of information, links or third-party services accessed through this website.
+      </p>
+
+      <p>
+        Your use of AIviary is entirely at your own risk.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer id="footer"></footer>
+
+<script src="https://unpkg.com/feather-icons"></script>
+<script type="module" src="js/header.js"></script>
+<script type="module" src="js/background.js"></script>
+<script src="js/theme.js"></script>
+<script type="module" src="js/footer.js"></script>
+<script>
+  feather.replace();
+</script>
 </body>
-</html>
