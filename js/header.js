@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </button>
           
             <a href="about.html"
-               class="text-white hover:text-[#00BFFF] transition-colors">
+               class="header-nav-link">
                About
             </a>
           
@@ -107,12 +107,12 @@ document.addEventListener("DOMContentLoaded", () => {
              class="hidden md:hidden flex-col gap-2 py-4 border-t border-white/10">
         
           <a href="index.html"
-             class="text-white hover:text-[#00BFFF] transition-colors px-2 py-2">
+             class="header-nav-link px-2 py-2">
              Home
           </a>
         
           <a href="about.html"
-             class="text-white hover:text-[#00BFFF] transition-colors px-2 py-2">
+             class="header-nav-link px-2 py-2">
              About
           </a>
         </div>
