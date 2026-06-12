@@ -1600,6 +1600,40 @@ body:not(.home-page) #searchInput:hover {
   color: var(--color-text-muted);
 }
 
+@media (min-width: 768px) {
+  .sort-select {
+    min-width: 10.5rem;
+    height: 2.55rem;
+    border-radius: 9999px;
+    font-weight: 700;
+
+    background:
+      linear-gradient(
+        135deg,
+        var(--color-surface-white-06),
+        var(--color-surface-white-02)
+      ),
+      var(--color-bg-card-glass);
+
+    border-color: var(--color-border-white-14);
+
+    box-shadow:
+      var(--shadow-soft),
+      inset 0 1px 0 var(--color-border-white-10);
+  }
+
+  .sort-select:hover {
+    border-color: var(--color-border-white-22);
+    transform: translateY(-1px);
+  }
+
+  .sort-select:focus {
+    box-shadow:
+      0 0 0 3px var(--color-accent-shadow),
+      var(--shadow-soft);
+  }
+}
+
 
 /* =========================================================
    25. Filter Buttons
