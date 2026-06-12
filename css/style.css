@@ -1617,10 +1617,6 @@ body:not(.home-page) #searchInput:hover {
       var(--color-bg-card-glass);
 
     border-color: var(--color-border-white-14);
-
-    box-shadow:
-      var(--shadow-soft),
-      inset 0 1px 0 var(--color-border-white-10);
   }
 
   .sort-select:hover {
@@ -1632,6 +1628,7 @@ body:not(.home-page) #searchInput:hover {
     box-shadow:
       0 0 0 3px var(--color-accent-shadow),
       var(--shadow-soft);
+    border-color: var(--color-accent)
   }
 }
 
