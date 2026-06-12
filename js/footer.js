@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="md:col-span-2">
             <div class="flex items-center space-x-3 mb-4">
               <div class="w-8 h-8 bg-gradient-to-r from-[#00BFFF] to-blue-400 rounded-lg flex items-center justify-center">
-                <i data-feather="zap" class="w-4 h-4"></i>
+                <i data-feather="zap" class="w-4 h-4 text-white"></i>
               </div>
               <span class="text-xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                 AIviary
