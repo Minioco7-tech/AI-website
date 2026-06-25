@@ -6141,7 +6141,7 @@
         { "label": "Developer", "value": "ChartGen AI" },
         { "label": "Type", "value": "Data Visualization Tool" }
       ],
-      "image": "Images/models/chartgen-ai.webp",
+      "image": "Images/models/chartgen.webp",
       "link": "https://chartgen.ai/"
     },
     {
