@@ -1151,7 +1151,7 @@ footer p {
 /* Crops image to fill the frame. */
 .sshot-img--cover {
   object-fit: cover;
-  object-position: center 35%;
+  object-position: top center;
 }
 
 /* Shows entire image without cropping. */
