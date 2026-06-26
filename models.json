@@ -6548,7 +6548,7 @@
         { "label": "Developer", "value": "Draft AI" },
         { "label": "Type", "value": "AI Writing Tool" }
       ],
-      "image": "Images/models/draftai.webp",
+      "image": "Images/models/draft.webp",
       "link": "https://draft.co/ai"
     },
     {
@@ -6585,7 +6585,7 @@
         { "label": "Developer", "value": "Design Arena" },
         { "label": "Type", "value": "AI Design Platform" }
       ],
-      "image": "Images/models/design-arena.webp",
+      "image": "Images/models/designarena.webp",
       "link": "https://www.designarena.ai/"
     },
     {
@@ -6955,7 +6955,7 @@
         { "label": "Developer", "value": "Flova AI" },
         { "label": "Type", "value": "AI Avatar Platform" }
       ],
-      "image": "Images/models/flova-ai.webp",
+      "image": "Images/models/flova.webp",
       "link": "https://www.flova.ai/en/"
     },
     {
@@ -7067,7 +7067,7 @@
         { "label": "Developer", "value": "Eye2.ai" },
         { "label": "Type", "value": "AI Research Tool" }
       ],
-      "image": "Images/models/eye2-ai.webp",
+      "image": "Images/models/eye2.webp",
       "link": "https://www.eye2.ai/"
     },
     {
