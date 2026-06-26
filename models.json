@@ -7104,7 +7104,7 @@
         { "label": "Developer", "value": "Koke AI" },
         { "label": "Type", "value": "AI Assistant" }
       ],
-      "image": "Images/models/koke-ai.webp",
+      "image": "Images/models/koke.webp",
       "link": "https://www.koke.ai/"
     },
     {
@@ -7253,7 +7253,7 @@
         { "label": "Developer", "value": "Layer AI" },
         { "label": "Type", "value": "AI Asset Generation Platform" }
       ],
-      "image": "Images/models/layerai.webp",
+      "image": "Images/models/layer.webp",
       "link": "https://www.layer.ai/"
     },
     {
@@ -7364,7 +7364,7 @@
         { "label": "Developer", "value": "LLM Pulse" },
         { "label": "Type", "value": "AI Research & Monitoring Tool" }
       ],
-      "image": "Images/models/llm-pulse.webp",
+      "image": "Images/models/llmpulse.webp",
       "link": "https://llmpulse.ai/"
     },
     {
