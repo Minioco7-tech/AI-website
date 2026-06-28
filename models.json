@@ -5992,8 +5992,8 @@
         { "label": "Developer", "value": "Remotion AI" },
         { "label": "Type", "value": "AI Video Creation Tool" }
       ],
-      "image": "Images/models/remotionai.webp",
-      "link": "https://www.remotionai.com/"
+      "image": "Images/models/remotion.webp",
+      "link": "https://www.remotion.dev/"
     },
     {
       "id": 152,
