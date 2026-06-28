@@ -5732,7 +5732,7 @@
         { "label": "Developer", "value": "Pandada AI" },
         { "label": "Type", "value": "AI Writing Assistant" }
       ],
-      "image": "Images/models/pandada-ai.webp",
+      "image": "Images/models/pandada.webp",
       "link": "https://pandada.ai/"
     },
     {
@@ -5918,7 +5918,7 @@
         { "label": "Developer", "value": "Paper AI" },
         { "label": "Type", "value": "AI Writing Tool" }
       ],
-      "image": "Images/models/thepaperai.webp",
+      "image": "Images/models/thepaper.webp",
       "link": "https://www.thepaperai.com/"
     },
     {
@@ -6030,7 +6030,7 @@
         { "label": "Type", "value": "AI Risk & Fraud Platform" },
         { "label": "Target Market", "value": "Financial institutions and enterprises" }
       ],
-      "image": "Images/models/resistant-ai.webp",
+      "image": "Images/models/resistant.webp",
       "link": "https://resistant.ai/"
     },
     {
@@ -6215,7 +6215,7 @@
         { "label": "Developer", "value": "MapFirst.ai" },
         { "label": "Type", "value": "Geospatial Analytics Tool" }
       ],
-      "image": "Images/models/mapfirst-ai.webp",
+      "image": "Images/models/mapfirst.webp",
       "link": "https://www.mapfirst.ai/"
     },
     {
@@ -7216,7 +7216,7 @@
         { "label": "Type", "value": "Spatial Intelligence Platform" },
         { "label": "API", "value": "Available" }
       ],
-      "image": "Images/models/spatial-ai.webp",
+      "image": "Images/models/spaitial.webp",
       "link": "https://www.spaitial.ai/"
     },
     {
@@ -7438,7 +7438,7 @@
         { "label": "Developer", "value": "Process Street" },
         { "label": "Type", "value": "Workflow Automation Platform" }
       ],
-      "image": "Images/models/process-street.webp",
+      "image": "Images/models/processstreet.webp",
       "link": "https://www.process.st/"
     },
     {
