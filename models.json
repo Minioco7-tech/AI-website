@@ -6067,8 +6067,8 @@
         { "label": "Developer", "value": "Marble AI" },
         { "label": "Type", "value": "AI Operations Assistant" }
       ],
-      "image": "Images/models/marbleai.webp",
-      "link": "https://marbleai.io/"
+      "image": "Images/models/marble.webp",
+      "link": "https://marble.ai/"
     },
     {
       "id": 154,
