@@ -2241,10 +2241,10 @@
     },
     {
       "id": 57,
-      "name": "Natively",
+      "name": "Newly",
       "category": ["development", "design"],
       "type": "Web App Performance & Native Integration Tool",
-      "description": "Natively is an AI-powered meeting and interview assistant that provides real-time transcription, note-taking and conversational support during live calls. Unlike many cloud-based meeting assistants, the platform is built around a local-first approach, processing information on a user’s device rather than relying entirely on external servers. This emphasis on privacy and real-time assistance has helped it stand out in a growing market of AI meeting tools.\n\nThe platform can generate live transcripts, create structured meeting notes, summarise discussions and surface contextual suggestions while conversations are taking place. Natively supports video conferencing platforms such as Zoom, Microsoft Teams and Google Meet, and can provide specialised assistance for interviews, sales calls, system design discussions and other professional conversations. It also offers searchable meeting records, export options and support for local AI models for organisations with strict privacy requirements.\n\nNatively is used by professionals, job seekers, sales teams, consultants and businesses looking to capture and organise information from meetings more effectively. Its local-first architecture appeals to users handling sensitive information, while its straightforward interface makes advanced AI-assisted meeting workflows accessible without extensive technical knowledge.",
+      "description": "Newly is an AI-powered meeting and interview assistant that provides real-time transcription, note-taking and conversational support during live calls. Unlike many cloud-based meeting assistants, the platform is built around a local-first approach, processing information on a user’s device rather than relying entirely on external servers. This emphasis on privacy and real-time assistance has helped it stand out in a growing market of AI meeting tools.\n\nThe platform can generate live transcripts, create structured meeting notes, summarise discussions and surface contextual suggestions while conversations are taking place. Newly supports video conferencing platforms such as Zoom, Microsoft Teams and Google Meet, and can provide specialised assistance for interviews, sales calls, system design discussions and other professional conversations. It also offers searchable meeting records, export options and support for local AI models for organisations with strict privacy requirements.\n\nNewly is used by professionals, job seekers, sales teams, consultants and businesses looking to capture and organise information from meetings more effectively. Its local-first architecture appeals to users handling sensitive information, while its straightforward interface makes advanced AI-assisted meeting workflows accessible without extensive technical knowledge.",
       "subtitle": "Build web experiences with native-like performance and integration.",
       "tags": ["developer tooling", "app builder", "performance", "developers"],
       "features": [
@@ -2257,7 +2257,7 @@
       "use_cases": [
         {
           "title": "App-Like SaaS Products",
-          "description": "Teams building rich SaaS interfaces use Natively to improve perceived performance and UX."
+          "description": "Teams building rich SaaS interfaces use Newly to improve perceived performance and UX."
         },
         {
           "title": "Cross-Platform Web Apps",
@@ -2265,19 +2265,19 @@
         },
         {
           "title": "Performance Optimisation",
-          "description": "Engineering teams apply Natively’s patterns to reduce jank, load times and UX friction."
+          "description": "Engineering teams apply Newly’s patterns to reduce jank, load times and UX friction."
         }
       ],
       "pricing": "May offer free resources or tools; details vary by product offering.",
       "information": [
-        { "label": "Developer", "value": "Natively" },
+        { "label": "Developer", "value": "Newly" },
         { "label": "Founded", "value": "N/A" },
         { "label": "Type", "value": "Developer-focused toolkit and guidance for native-feeling web apps" },
         { "label": "Privacy", "value": "Mostly documentation and developer tools; minimal personal data usage" },
         { "label": "API", "value": "Depends on specific tools; generally code- or framework-based integration" }
       ],
-      "image": "Images/models/natively.webp",
-      "link": "https://natively.dev"
+      "image": "Images/models/newly.webp",
+      "link": "https://newly.app"
     },
     {
       "id": 58,
