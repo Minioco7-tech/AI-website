@@ -5391,7 +5391,7 @@
         { "label": "Type", "value": "AI Visibility & GEO Platform" },
         { "label": "Key Metric", "value": "Visibility Score" }
       ],
-      "image": "Images/models/the-prompting-company.webp",
+      "image": "Images/models/promptingcompany.webp",
       "link": "https://promptingcompany.com/"
     },
     {
@@ -5918,7 +5918,7 @@
         { "label": "Developer", "value": "Paper AI" },
         { "label": "Type", "value": "AI Writing Tool" }
       ],
-      "image": "Images/models/thepaper.webp",
+      "image": "Images/models/paper.webp",
       "link": "https://www.thepaperai.com/"
     },
     {
@@ -6400,7 +6400,7 @@
         { "label": "Developer", "value": "Thita.ai" },
         { "label": "Type", "value": "AI Assistant" }
       ],
-      "image": "Images/models/thita-ai.webp",
+      "image": "Images/models/thita.webp",
       "link": "https://thita.ai/"
     },
     {
@@ -6844,7 +6844,7 @@
         { "label": "Developer", "value": "Success AI" },
         { "label": "Type", "value": "AI Sales & Outreach Platform" }
       ],
-      "image": "Images/models/success-ai.webp",
+      "image": "Images/models/success.webp",
       "link": "https://www.success.ai/"
     },
     {
