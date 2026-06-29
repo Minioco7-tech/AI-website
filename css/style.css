@@ -360,6 +360,7 @@
 /* =================
 Natural colour pallet
 ===================*/
+html.theme-natural,
 body.theme-natural {
   --color-bg-page: #f7f1e6;
   --color-bg-card: rgba(255, 250, 240, 0.96);
@@ -2222,11 +2223,13 @@ body:not(.home-page) #searchInput:hover {
     box-shadow 0.25s ease;
 }
 
+html.theme-natural .theme-switch-track,
 body.theme-natural .theme-switch-track {
   background: rgba(247, 241, 230, 0.95);
   border-color: rgba(47, 111, 78, 0.28);
 }
 
+html.theme-natural .theme-switch-thumb,
 body.theme-natural .theme-switch-thumb {
   background: linear-gradient(135deg, #2f6f4e, #8AA38C);
   transform: translate(1.45rem, -50%);
@@ -2239,6 +2242,7 @@ body.theme-natural .theme-switch-thumb {
   transform: translateY(-50%) scale(1.05);
 }
 
+html.theme-natural .theme-switch:hover .theme-switch-thumb
 body.theme-natural .theme-switch:hover .theme-switch-thumb {
   transform: translate(1.45rem, -50%) scale(1.05);
 }
@@ -2456,6 +2460,7 @@ body.theme-natural .theme-switch:hover .theme-switch-thumb {
   box-shadow: var(--shadow-card), var(--shadow-card-highlight);
 }
 
+html.theme-natural .model-overview-glow 
 body.theme-natural .model-overview-glow {
   background: var(--color-accent-soft) !important;
 }
