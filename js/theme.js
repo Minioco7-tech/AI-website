@@ -2,7 +2,7 @@ const STORAGE_KEY = "aiviary-theme";
 
 function applyTheme(theme) {
   document.documentElement.classList.toggle("theme-natural", theme === "natural");
-document.body.classList.toggle("theme-natural", theme === "natural");
+  document.body.classList.toggle("theme-natural", theme === "natural");
   localStorage.setItem(STORAGE_KEY, theme);
   window.dispatchEvent(new CustomEvent("aiviary-theme-change"));
   
@@ -26,7 +26,7 @@ document.addEventListener("click", (event) => {
 
   console.log("Theme toggle clicked");
 
-  const currentTheme = document.body.classList.contains("theme-natural")
+  const currentTheme = document.documentElement.classList.contains("theme-natural")
     ? "natural"
     : "dark";
 
