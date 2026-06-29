@@ -19,6 +19,15 @@
   <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/feather-icons"></script>
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem("aiviary-theme");
+  
+      if (savedTheme === "natural") {
+        document.documentElement.classList.add("theme-natural");
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
