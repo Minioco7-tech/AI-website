@@ -1637,7 +1637,7 @@
         { "label": "API", "value": "APIs and integrations focused on data connectors and embedding" }
       ],
       "image": "Images/models/datagpt.webp",
-      "link": "https://datagpt.com/"
+      "link": "https://data-gpt.co/"
     },
     {
       "id": 42,
@@ -2197,7 +2197,7 @@
         { "label": "API", "value": "No API; used as a standalone creative tool" }
       ],
       "image": "Images/models/paperanimator.webp",
-      "link": "https://www.paperanimator.org/"
+      "link": "https://www.paperanimator.com/"
     },
     {
       "id": 56,
@@ -2241,10 +2241,10 @@
     },
     {
       "id": 57,
-      "name": "Natively",
+      "name": "Newly",
       "category": ["development", "design"],
       "type": "Web App Performance & Native Integration Tool",
-      "description": "Natively is an AI-powered meeting and interview assistant that provides real-time transcription, note-taking and conversational support during live calls. Unlike many cloud-based meeting assistants, the platform is built around a local-first approach, processing information on a user’s device rather than relying entirely on external servers. This emphasis on privacy and real-time assistance has helped it stand out in a growing market of AI meeting tools.\n\nThe platform can generate live transcripts, create structured meeting notes, summarise discussions and surface contextual suggestions while conversations are taking place. Natively supports video conferencing platforms such as Zoom, Microsoft Teams and Google Meet, and can provide specialised assistance for interviews, sales calls, system design discussions and other professional conversations. It also offers searchable meeting records, export options and support for local AI models for organisations with strict privacy requirements.\n\nNatively is used by professionals, job seekers, sales teams, consultants and businesses looking to capture and organise information from meetings more effectively. Its local-first architecture appeals to users handling sensitive information, while its straightforward interface makes advanced AI-assisted meeting workflows accessible without extensive technical knowledge.",
+      "description": "Newly is an AI-powered meeting and interview assistant that provides real-time transcription, note-taking and conversational support during live calls. Unlike many cloud-based meeting assistants, the platform is built around a local-first approach, processing information on a user’s device rather than relying entirely on external servers. This emphasis on privacy and real-time assistance has helped it stand out in a growing market of AI meeting tools.\n\nThe platform can generate live transcripts, create structured meeting notes, summarise discussions and surface contextual suggestions while conversations are taking place. Newly supports video conferencing platforms such as Zoom, Microsoft Teams and Google Meet, and can provide specialised assistance for interviews, sales calls, system design discussions and other professional conversations. It also offers searchable meeting records, export options and support for local AI models for organisations with strict privacy requirements.\n\nNewly is used by professionals, job seekers, sales teams, consultants and businesses looking to capture and organise information from meetings more effectively. Its local-first architecture appeals to users handling sensitive information, while its straightforward interface makes advanced AI-assisted meeting workflows accessible without extensive technical knowledge.",
       "subtitle": "Build web experiences with native-like performance and integration.",
       "tags": ["developer tooling", "app builder", "performance", "developers"],
       "features": [
@@ -2257,7 +2257,7 @@
       "use_cases": [
         {
           "title": "App-Like SaaS Products",
-          "description": "Teams building rich SaaS interfaces use Natively to improve perceived performance and UX."
+          "description": "Teams building rich SaaS interfaces use Newly to improve perceived performance and UX."
         },
         {
           "title": "Cross-Platform Web Apps",
@@ -2265,19 +2265,19 @@
         },
         {
           "title": "Performance Optimisation",
-          "description": "Engineering teams apply Natively’s patterns to reduce jank, load times and UX friction."
+          "description": "Engineering teams apply Newly’s patterns to reduce jank, load times and UX friction."
         }
       ],
       "pricing": "May offer free resources or tools; details vary by product offering.",
       "information": [
-        { "label": "Developer", "value": "Natively" },
+        { "label": "Developer", "value": "Newly" },
         { "label": "Founded", "value": "N/A" },
         { "label": "Type", "value": "Developer-focused toolkit and guidance for native-feeling web apps" },
         { "label": "Privacy", "value": "Mostly documentation and developer tools; minimal personal data usage" },
         { "label": "API", "value": "Depends on specific tools; generally code- or framework-based integration" }
       ],
-      "image": "Images/models/natively.webp",
-      "link": "https://natively.dev"
+      "image": "Images/models/newly.webp",
+      "link": "https://newly.app"
     },
     {
       "id": 58,
@@ -5391,7 +5391,7 @@
         { "label": "Type", "value": "AI Visibility & GEO Platform" },
         { "label": "Key Metric", "value": "Visibility Score" }
       ],
-      "image": "Images/models/the-prompting-company.webp",
+      "image": "Images/models/promptingcompany.webp",
       "link": "https://promptingcompany.com/"
     },
     {
@@ -5732,7 +5732,7 @@
         { "label": "Developer", "value": "Pandada AI" },
         { "label": "Type", "value": "AI Writing Assistant" }
       ],
-      "image": "Images/models/pandada-ai.webp",
+      "image": "Images/models/pandada.webp",
       "link": "https://pandada.ai/"
     },
     {
@@ -5918,7 +5918,7 @@
         { "label": "Developer", "value": "Paper AI" },
         { "label": "Type", "value": "AI Writing Tool" }
       ],
-      "image": "Images/models/thepaperai.webp",
+      "image": "Images/models/paper.webp",
       "link": "https://www.thepaperai.com/"
     },
     {
@@ -5992,8 +5992,8 @@
         { "label": "Developer", "value": "Remotion AI" },
         { "label": "Type", "value": "AI Video Creation Tool" }
       ],
-      "image": "Images/models/remotionai.webp",
-      "link": "https://www.remotionai.com/"
+      "image": "Images/models/remotion.webp",
+      "link": "https://www.remotion.dev/"
     },
     {
       "id": 152,
@@ -6030,7 +6030,7 @@
         { "label": "Type", "value": "AI Risk & Fraud Platform" },
         { "label": "Target Market", "value": "Financial institutions and enterprises" }
       ],
-      "image": "Images/models/resistant-ai.webp",
+      "image": "Images/models/resistant.webp",
       "link": "https://resistant.ai/"
     },
     {
@@ -6067,8 +6067,8 @@
         { "label": "Developer", "value": "Marble AI" },
         { "label": "Type", "value": "AI Operations Assistant" }
       ],
-      "image": "Images/models/marbleai.webp",
-      "link": "https://marbleai.io/"
+      "image": "Images/models/marble.webp",
+      "link": "https://marble.ai/"
     },
     {
       "id": 154,
@@ -6141,7 +6141,7 @@
         { "label": "Developer", "value": "ChartGen AI" },
         { "label": "Type", "value": "Data Visualization Tool" }
       ],
-      "image": "Images/models/chartgen-ai.webp",
+      "image": "Images/models/chartgen.webp",
       "link": "https://chartgen.ai/"
     },
     {
@@ -6215,7 +6215,7 @@
         { "label": "Developer", "value": "MapFirst.ai" },
         { "label": "Type", "value": "Geospatial Analytics Tool" }
       ],
-      "image": "Images/models/mapfirst-ai.webp",
+      "image": "Images/models/mapfirst.webp",
       "link": "https://www.mapfirst.ai/"
     },
     {
@@ -6400,7 +6400,7 @@
         { "label": "Developer", "value": "Thita.ai" },
         { "label": "Type", "value": "AI Assistant" }
       ],
-      "image": "Images/models/thita-ai.webp",
+      "image": "Images/models/thita.webp",
       "link": "https://thita.ai/"
     },
     {
@@ -6548,7 +6548,7 @@
         { "label": "Developer", "value": "Draft AI" },
         { "label": "Type", "value": "AI Writing Tool" }
       ],
-      "image": "Images/models/draftai.webp",
+      "image": "Images/models/draft.webp",
       "link": "https://draft.co/ai"
     },
     {
@@ -6585,7 +6585,7 @@
         { "label": "Developer", "value": "Design Arena" },
         { "label": "Type", "value": "AI Design Platform" }
       ],
-      "image": "Images/models/design-arena.webp",
+      "image": "Images/models/designarena.webp",
       "link": "https://www.designarena.ai/"
     },
     {
@@ -6844,7 +6844,7 @@
         { "label": "Developer", "value": "Success AI" },
         { "label": "Type", "value": "AI Sales & Outreach Platform" }
       ],
-      "image": "Images/models/success-ai.webp",
+      "image": "Images/models/success.webp",
       "link": "https://www.success.ai/"
     },
     {
@@ -6955,7 +6955,7 @@
         { "label": "Developer", "value": "Flova AI" },
         { "label": "Type", "value": "AI Avatar Platform" }
       ],
-      "image": "Images/models/flova-ai.webp",
+      "image": "Images/models/flova.webp",
       "link": "https://www.flova.ai/en/"
     },
     {
@@ -7031,7 +7031,7 @@
         { "label": "Type", "value": "AI Documentation Tool" }
       ],
       "image": "Images/models/livedocs.webp",
-      "link": "https://livedocs.com/docs/ai"
+      "link": "https://livedocs.com"
     },
     {
       "id": 180,
@@ -7067,7 +7067,7 @@
         { "label": "Developer", "value": "Eye2.ai" },
         { "label": "Type", "value": "AI Research Tool" }
       ],
-      "image": "Images/models/eye2-ai.webp",
+      "image": "Images/models/eye2.webp",
       "link": "https://www.eye2.ai/"
     },
     {
@@ -7104,7 +7104,7 @@
         { "label": "Developer", "value": "Koke AI" },
         { "label": "Type", "value": "AI Assistant" }
       ],
-      "image": "Images/models/koke-ai.webp",
+      "image": "Images/models/koke.webp",
       "link": "https://www.koke.ai/"
     },
     {
@@ -7216,7 +7216,7 @@
         { "label": "Type", "value": "Spatial Intelligence Platform" },
         { "label": "API", "value": "Available" }
       ],
-      "image": "Images/models/spatial-ai.webp",
+      "image": "Images/models/spaitial.webp",
       "link": "https://www.spaitial.ai/"
     },
     {
@@ -7253,8 +7253,8 @@
         { "label": "Developer", "value": "Layer AI" },
         { "label": "Type", "value": "AI Asset Generation Platform" }
       ],
-      "image": "Images/models/layer-ai.webp",
-      "link": "https://www.layerai.org/"
+      "image": "Images/models/layer.webp",
+      "link": "https://www.layer.ai/"
     },
     {
       "id": 186,
@@ -7364,7 +7364,7 @@
         { "label": "Developer", "value": "LLM Pulse" },
         { "label": "Type", "value": "AI Research & Monitoring Tool" }
       ],
-      "image": "Images/models/llm-pulse.webp",
+      "image": "Images/models/llmpulse.webp",
       "link": "https://llmpulse.ai/"
     },
     {
@@ -7438,7 +7438,7 @@
         { "label": "Developer", "value": "Process Street" },
         { "label": "Type", "value": "Workflow Automation Platform" }
       ],
-      "image": "Images/models/process-street.webp",
+      "image": "Images/models/processstreet.webp",
       "link": "https://www.process.st/"
     },
     {
