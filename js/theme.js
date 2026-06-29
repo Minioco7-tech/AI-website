@@ -1,7 +1,8 @@
 const STORAGE_KEY = "aiviary-theme";
 
 function applyTheme(theme) {
-  document.body.classList.toggle("theme-natural", theme === "natural");
+  document.documentElement.classList.toggle("theme-natural", theme === "natural");
+document.body.classList.toggle("theme-natural", theme === "natural");
   localStorage.setItem(STORAGE_KEY, theme);
   window.dispatchEvent(new CustomEvent("aiviary-theme-change"));
   
