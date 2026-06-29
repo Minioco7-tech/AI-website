@@ -20,6 +20,15 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/feather-icons"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem("aiviary-theme");
+  
+      if (savedTheme === "natural") {
+        document.documentElement.classList.add("theme-natural");
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
