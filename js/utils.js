@@ -403,158 +403,379 @@ export function filterModelsByFacets(models, selectedCategories, selectedTags) {
 
 
 // ============================================================================
-// ✅ Advanced Semantic Relevance Scoring
+// ✅ Natural Language Search Helpers
+// Used in: search.js
 // ============================================================================
-export function scoreModelRelevance(model, tokens, rawQuery = "") {
+
+const SEARCH_STOPWORDS = new Set([
+  "i", "me", "my", "we", "our", "you", "your",
+  "a", "an", "the", "and", "or", "but",
+  "to", "for", "of", "in", "on", "at", "by", "with", "from",
+  "is", "are", "am", "be", "being", "been",
+  "need", "want", "would", "could", "should", "can",
+  "help", "helps", "using", "use", "find", "looking",
+  "tool", "model", "ai", "something", "someone", "please"
+]);
+
+const SEARCH_INTENTS = {
+  image: {
+    queryTerms: [
+      "image", "images", "photo", "photos", "picture", "pictures",
+      "visual", "visuals", "graphic", "graphics", "poster", "banner",
+      "thumbnail", "logo", "advert", "ad", "ads", "advertisement",
+      "advertisements", "marketing visual", "product visual",
+      "product image", "social media creative"
+    ],
+    modelTerms: [
+      "image", "image generation", "design", "visual", "graphics",
+      "poster", "logo", "advertising", "marketing", "product visuals",
+      "brand assets", "creative", "media"
+    ],
+    categories: ["design"],
+    boost: 45
+  },
+
+  website: {
+    queryTerms: [
+      "website", "webpage", "web page", "site", "landing page",
+      "build website", "make website", "web design", "frontend"
+    ],
+    modelTerms: [
+      "website", "website builder", "web design", "landing page",
+      "frontend", "html", "css", "no-code website"
+    ],
+    categories: ["development", "design"],
+    boost: 35
+  },
+
+  writing: {
+    queryTerms: [
+      "write", "writing", "copy", "copywriting", "caption",
+      "blog", "article", "email", "rewrite", "proofread",
+      "grammar", "document", "documents", "summarise", "summarize"
+    ],
+    modelTerms: [
+      "writing", "copywriting", "content", "grammar", "documents",
+      "summarisation", "summarization", "email", "caption"
+    ],
+    categories: ["documents", "office"],
+    boost: 40
+  },
+
+  audio: {
+    queryTerms: [
+      "audio", "voice", "speech", "podcast", "sound",
+      "transcribe", "transcription", "voiceover", "narration",
+      "text to speech", "voice cloning"
+    ],
+    modelTerms: [
+      "audio", "voice", "speech", "podcast", "transcription",
+      "voice generator", "voice cloning", "text-to-speech", "narration"
+    ],
+    categories: ["audio"],
+    boost: 45
+  },
+
+  video: {
+    queryTerms: [
+      "video", "videos", "animation", "animate", "editing",
+      "youtube", "tiktok", "reel", "shorts"
+    ],
+    modelTerms: [
+      "video", "animation", "editing", "youtube", "tiktok",
+      "media", "short-form"
+    ],
+    categories: ["design"],
+    boost: 40
+  },
+
+  code: {
+    queryTerms: [
+      "code", "coding", "programming", "developer", "debug",
+      "software", "app", "api", "javascript", "python", "react"
+    ],
+    modelTerms: [
+      "code", "coding", "developer", "programming", "debugging",
+      "software", "api", "javascript", "python"
+    ],
+    categories: ["development"],
+    boost: 42
+  },
+
+  data: {
+    queryTerms: [
+      "data", "analytics", "analyse", "analyze", "spreadsheet",
+      "excel", "dashboard", "chart", "sql", "database", "forecast"
+    ],
+    modelTerms: [
+      "data", "analytics", "spreadsheet", "excel", "dashboard",
+      "sql", "database", "visualisation", "visualization"
+    ],
+    categories: ["data", "finance"],
+    boost: 42
+  },
+
+  research: {
+    queryTerms: [
+      "research", "paper", "papers", "academic", "journal",
+      "literature", "citation", "citations", "study", "sources"
+    ],
+    modelTerms: [
+      "research", "academic", "papers", "citations",
+      "literature", "study", "science"
+    ],
+    categories: ["research", "learning"],
+    boost: 40
+  },
+
+  jobs: {
+    queryTerms: [
+      "job", "jobs", "cv", "resume", "interview",
+      "career", "application", "cover letter", "recruitment"
+    ],
+    modelTerms: [
+      "jobs", "career", "cv", "resume", "interview",
+      "application", "cover letter"
+    ],
+    categories: ["jobs"],
+    boost: 42
+  }
+};
+
+function cleanSearchText(value) {
+  return String(value || "")
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/[-_/]/g, " ")
+    .replace(/[^\w\s]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function getModelTextBundle(model) {
+  const categories = normalizeCategories(model.category).join(" ");
+  const tags = normalizeTags(model.tags).join(" ");
+  const features = Array.isArray(model.features) ? model.features.join(" ") : "";
+  const useCases = Array.isArray(model.use_cases)
+    ? model.use_cases.map(uc => `${uc.title || ""} ${uc.description || ""}`).join(" ")
+    : "";
+
+  return {
+    name: cleanSearchText(model.name),
+    type: cleanSearchText(model.type),
+    subtitle: cleanSearchText(model.subtitle),
+    categories: cleanSearchText(categories),
+    tags: cleanSearchText(tags),
+    description: cleanSearchText(model.description),
+    features: cleanSearchText(features),
+    useCases: cleanSearchText(useCases),
+    all: cleanSearchText([
+      model.name,
+      model.type,
+      model.subtitle,
+      categories,
+      tags,
+      model.description,
+      features,
+      useCases
+    ].join(" "))
+  };
+}
+
+function searchTokens(rawInput) {
+  return cleanSearchText(rawInput)
+    .split(" ")
+    .filter(Boolean)
+    .filter(word => word.length > 1)
+    .filter(word => !SEARCH_STOPWORDS.has(word));
+}
+
+function containsPhrase(text, phrase) {
+  return text.includes(cleanSearchText(phrase));
+}
+
+function detectSearchIntents(rawQuery, tokens) {
+  const query = cleanSearchText(rawQuery);
+
+  return Object.entries(SEARCH_INTENTS)
+    .map(([name, config]) => {
+      let confidence = 0;
+
+      config.queryTerms.forEach(term => {
+        const cleaned = cleanSearchText(term);
+
+        if (query.includes(cleaned)) {
+          confidence += cleaned.includes(" ") ? 4 : 2;
+        }
+
+        if (tokens.includes(cleaned)) {
+          confidence += 1;
+        }
+      });
+
+      return { name, confidence };
+    })
+    .filter(intent => intent.confidence > 0)
+    .sort((a, b) => b.confidence - a.confidence);
+}
+
+function modelMatchesIntent(modelText, intentName) {
+  const config = SEARCH_INTENTS[intentName];
+  if (!config) return false;
+
+  return (
+    config.categories.some(cat => modelText.categories.includes(cat)) ||
+    config.modelTerms.some(term => modelText.tags.includes(cleanSearchText(term))) ||
+    config.modelTerms.some(term => modelText.type.includes(cleanSearchText(term))) ||
+    config.modelTerms.some(term => modelText.subtitle.includes(cleanSearchText(term))) ||
+    config.modelTerms.some(term => modelText.features.includes(cleanSearchText(term)))
+  );
+}
+
+function scoreIntent(modelText, intent, index) {
+  const config = SEARCH_INTENTS[intent.name];
+  const isPrimary = index === 0;
   let score = 0;
 
-  const name = model.name.toLowerCase();
-  const desc = model.description.toLowerCase();
-  const categories = normalizeCategories(model.category).map(c => c.toLowerCase());
-  rawQuery = rawQuery.toLowerCase();
-
-  // ------------------------------
-  // Weight configuration (tweakable)
-  // ------------------------------
-  const WEIGHTS = {
-    exactNameMatch: 12,
-    exactPhraseMatch: 10,
-    nameWordMatch: 4,
-    descriptionWordMatch: 2,
-    categoryMatch: 3,
-    synonymMatch: 3,
-    categorySynonymAffinity: 4,
-    multiTokenAffinity: 3,
-    partialWordMatch: 1
-  };
-
-  // ------------------------------
-  // Synonym affinity map (aligned with expandQueryTokens)
-  // ------------------------------
-  const semanticKeywords = {
-    design: ["video", "image", "visual", "brand", "creative", "logo", "animation", "poster", "art", "media"],
-    documents: ["writing", "text", "document", "grammar", "paraphrase", "summarise", "pdf", "edit", "content"],
-    learning: ["study", "learn", "course", "tutor", "lesson", "training", "education"],
-    research: ["paper", "study", "analysis", "experiment", "summary", "insight", "science"],
-    development: ["code", "developer", "script", "function", "api", "automation", "software", "build"],
-    data: ["spreadsheet", "chart", "analysis", "dataset", "numbers", "data", "visualisation", "analytics"],
-    assistants: ["assistant", "chat", "conversation", "helper", "ideation", "task", "prompt"],
-    finance: ["budget", "stock", "money", "accounting", "report", "financial", "compliance"],
-    office: ["productivity", "spreadsheet", "presentation", "workflow", "document", "team"],
-    audio: ["voice", "audio", "sound", "record", "speech", "transcription", "podcast"],
-    jobs: ["career", "resume", "interview", "job", "application", "writing", "cover"]
-  };
-
-  // ------------------------------
-  // ✅ Exact phrase match boost
-  // ------------------------------
-  if (rawQuery && desc.includes(rawQuery)) {
-    score += WEIGHTS.exactPhraseMatch;
-  }
-
-  // ------------------------------
-  // ✅ Exact model name match
-  // ------------------------------
-  if (rawQuery && name === rawQuery) {
-    score += WEIGHTS.exactNameMatch;
-  }
-
-  // ------------------------------
-  // ✅ Per-token matching
-  // ------------------------------
-  tokens.forEach(token => {
-    // Name contains token
-    if (name.includes(token)) score += WEIGHTS.nameWordMatch;
-
-    // Description contains token
-    if (desc.includes(token)) score += WEIGHTS.descriptionWordMatch;
-
-    // Category contains token
-    if (categories.includes(token)) score += WEIGHTS.categoryMatch;
-
-    // Partial word affinity
-    if (token.length > 3 && (name.includes(token.slice(0,3)) || desc.includes(token.slice(0,3)))) {
-      score += WEIGHTS.partialWordMatch;
-    }
+  config.categories.forEach(cat => {
+    if (modelText.categories.includes(cat)) score += config.boost * (isPrimary ? 1.2 : 0.55);
   });
 
-  // ------------------------------
-  // ✅ Semantic category affinity (synonym alignment)
-  // ------------------------------
-  for (const [cat, keywords] of Object.entries(semanticKeywords)) {
-    const catMatch = categories.includes(cat);
+  config.modelTerms.forEach(term => {
+    const cleanTerm = cleanSearchText(term);
 
-    const tokenMatch = tokens.some(t => keywords.includes(t));
-    if (catMatch && tokenMatch) score += WEIGHTS.categorySynonymAffinity;
-  }
+    if (modelText.tags.includes(cleanTerm)) score += config.boost * (isPrimary ? 1.4 : 0.65);
+    if (modelText.type.includes(cleanTerm)) score += config.boost * (isPrimary ? 1.1 : 0.5);
+    if (modelText.subtitle.includes(cleanTerm)) score += config.boost * (isPrimary ? 0.9 : 0.4);
+    if (modelText.features.includes(cleanTerm)) score += config.boost * (isPrimary ? 0.7 : 0.3);
+    if (modelText.description.includes(cleanTerm)) score += config.boost * (isPrimary ? 0.45 : 0.2);
+    if (modelText.useCases.includes(cleanTerm)) score += config.boost * (isPrimary ? 0.65 : 0.3);
+  });
 
-  // ------------------------------
-  // ✅ Multiple overlapping categories
-  // ------------------------------
-  const matches = categories.filter(cat => tokens.includes(cat));
-  score += matches.length * 1.5;
-
-  // ------------------------------
-  // ✅ Multi-token affinity (compound intent)
-  // e.g. "design marketing video" should boost design tools capable of video output
-  // ------------------------------
-  if (tokens.length > 2) {
-    score += WEIGHTS.multiTokenAffinity;
-  }
+  score += intent.confidence * (isPrimary ? 10 : 4);
 
   return score;
 }
 
+function applyIntentPenalties(modelText, primaryIntent) {
+  if (!primaryIntent) return 0;
 
-// ============================================================================
-// ✅ Smart Query Expansion: Stemming, Plurals, Synonyms
-// Used in: search.js
-// ============================================================================
-const synonymMap = {
-  learn: ["teaching", "education", "study", "tutor"],
-  video: ["videos", "media", "movie", "clip"],
-  audio: ["sound", "voice", "speech", "podcast"],
-  design: ["visual", "logo", "branding", "creative", "poster", "art"],
-  document: ["writing", "grammar", "paraphrase", "summarise", "text"],
-  job: ["career", "work", "interview", "resume", "application"],
-  research: ["paper", "insight", "study", "experiment", "analysis"],
-  data: ["spreadsheet", "numbers", "analytics", "visualisation"],
-  finance: ["budget", "money", "stock", "report", "accounting"],
-  assistant: ["chat", "helper", "bot", "task", "prompt"],
-  development: ["code", "developer", "script", "automation", "software"]
-};
+  let penalty = 0;
 
-// Basic stemmer and plural reducer
-function stemWord(word) {
-  return word.replace(/(ing|ed|es|s)$/, '');
+  const imageMatch = modelMatchesIntent(modelText, "image");
+  const websiteMatch = modelMatchesIntent(modelText, "website");
+  const codeMatch = modelMatchesIntent(modelText, "code");
+  const writingMatch = modelMatchesIntent(modelText, "writing");
+  const dataMatch = modelMatchesIntent(modelText, "data");
+  const audioMatch = modelMatchesIntent(modelText, "audio");
+
+  if (primaryIntent === "image" && websiteMatch && !imageMatch) penalty += 55;
+  if (primaryIntent === "image" && codeMatch && !imageMatch) penalty += 65;
+  if (primaryIntent === "image" && dataMatch && !imageMatch) penalty += 45;
+
+  if (primaryIntent === "website" && imageMatch && !websiteMatch) penalty += 35;
+  if (primaryIntent === "code" && !codeMatch && (imageMatch || writingMatch || audioMatch)) penalty += 45;
+  if (primaryIntent === "data" && !dataMatch && (imageMatch || writingMatch || audioMatch)) penalty += 45;
+  if (primaryIntent === "audio" && !audioMatch && (imageMatch || writingMatch || websiteMatch)) penalty += 45;
+
+  return penalty;
 }
 
-// Expand tokens with synonyms and stems
-export function expandQueryTokens(rawInput) {
-  const stopwords = [
-    "i", "want", "to", "a", "the", "and", "for", "of", "in", "on", "is",
-    "with", "my", "you", "it", "this", "that", "at", "how", "can"
-  ];
+// ============================================================================
+// ✅ Improved Semantic Relevance Scoring
+// Used in: search.js
+// ============================================================================
+export function scoreModelRelevance(model, tokens, rawQuery = "") {
+  const modelText = getModelTextBundle(model);
+  const queryTokens = tokens?.length ? tokens : searchTokens(rawQuery);
+  const detectedIntents = detectSearchIntents(rawQuery, queryTokens);
+  const primaryIntent = detectedIntents[0]?.name || null;
 
-  const tokens = rawInput
-    .toLowerCase()
-    .split(/[^a-z0-9]+/g)
-    .filter(Boolean)
-    .filter(word => !stopwords.includes(word))
-    .map(stemWord);
+  let score = 0;
 
-  const expanded = new Set(tokens);
+  // Direct word scoring
+  queryTokens.forEach(token => {
+    if (modelText.name.includes(token)) score += 18;
+    if (modelText.type.includes(token)) score += 14;
+    if (modelText.tags.includes(token)) score += 16;
+    if (modelText.categories.includes(token)) score += 14;
+    if (modelText.subtitle.includes(token)) score += 10;
+    if (modelText.features.includes(token)) score += 8;
+    if (modelText.useCases.includes(token)) score += 8;
+    if (modelText.description.includes(token)) score += 5;
+  });
 
-  for (const token of tokens) {
-    for (const [base, synonyms] of Object.entries(synonymMap)) {
-      if (base === token || synonyms.includes(token)) {
-        expanded.add(base);
-        synonyms.forEach(syn => expanded.add(syn));
-      }
-    }
+  // Intent scoring
+  detectedIntents.forEach((intent, index) => {
+    score += scoreIntent(modelText, intent, index);
+  });
+
+  // Exact phrase boost
+  const cleanQuery = cleanSearchText(rawQuery);
+  if (cleanQuery && cleanQuery.length > 3) {
+    if (modelText.name === cleanQuery) score += 80;
+    if (modelText.name.includes(cleanQuery)) score += 45;
+    if (modelText.tags.includes(cleanQuery)) score += 40;
+    if (modelText.subtitle.includes(cleanQuery)) score += 30;
+    if (modelText.description.includes(cleanQuery)) score += 20;
   }
 
-  return Array.from(expanded);
+  // Useful compound intent boosts
+  const query = cleanSearchText(rawQuery);
+
+  if (
+    primaryIntent === "image" &&
+    (
+      query.includes("advert") ||
+      query.includes("ad ") ||
+      query.includes("ads") ||
+      query.includes("marketing") ||
+      query.includes("product")
+    )
+  ) {
+    if (containsPhrase(modelText.tags, "advertising")) score += 35;
+    if (containsPhrase(modelText.tags, "marketing")) score += 35;
+    if (containsPhrase(modelText.tags, "product")) score += 25;
+    if (containsPhrase(modelText.useCases, "advert")) score += 25;
+    if (containsPhrase(modelText.useCases, "marketing")) score += 25;
+    if (containsPhrase(modelText.description, "marketing")) score += 15;
+  }
+
+  score -= applyIntentPenalties(modelText, primaryIntent);
+
+  return Math.max(0, Math.round(score));
+}
+
+// ============================================================================
+// ✅ Smart Query Expansion
+// Used in: search.js
+// ============================================================================
+export function expandQueryTokens(rawInput) {
+  const baseTokens = searchTokens(rawInput);
+  const expanded = new Set(baseTokens);
+
+  const synonymGroups = [
+    ["image", "images", "visual", "visuals", "graphic", "graphics", "picture", "photo"],
+    ["advert", "ad", "ads", "advertisement", "advertising", "marketing", "campaign"],
+    ["website", "site", "webpage", "landing", "frontend"],
+    ["write", "writing", "copy", "copywriting", "content", "caption"],
+    ["audio", "voice", "speech", "podcast", "sound"],
+    ["video", "animation", "editing", "youtube", "tiktok"],
+    ["code", "coding", "programming", "developer", "software"],
+    ["data", "analytics", "spreadsheet", "excel", "dashboard"],
+    ["research", "paper", "academic", "citation", "literature"],
+    ["job", "career", "cv", "resume", "interview", "application"]
+  ];
+
+  baseTokens.forEach(token => {
+    synonymGroups.forEach(group => {
+      if (group.includes(token)) {
+        group.forEach(word => expanded.add(word));
+      }
+    });
+  });
+
+  return [...expanded];
 }
 
 // =====================================================
