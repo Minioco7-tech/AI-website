@@ -106,8 +106,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   modelDetailsEl.innerHTML = `
     <div class="w-full space-y-10">
       <!-- TOP HERO ROW -->
-      <section class="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10">
-        <div class="model-panel lg:col-span-3 rounded-3xl p-6 sm:p-7 flex flex-col gap-6">
+      <section class="grid grid-cols-1 lg:grid-cols-7 gap-8 lg:gap-10">
+        <div class="model-panel lg:col-span-4 rounded-3xl p-6 sm:p-7 flex flex-col gap-6">
           <div class="space-y-3">
             <p class="model-label text-[11px] tracking-[0.3em] uppercase">AI Tool Overview</p>
             <div class="flex items-start justify-between gap-4">
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             </a>
           </div>
       </div>
-      <div class="hidden lg:block lg:col-span-2 model-tile model-hero-image rounded-3xl overflow-hidden items-center">
+      <div class="hidden lg:block lg:col-span-3 model-tile model-hero-image rounded-3xl overflow-hidden items-center">
         <div class="sshot-frame" style="border-radius: 1rem;">
           <img class="sshot-img sshot-img--cover" src="${model.image}" alt="${model.name} screenshot" loading="lazy" fetchpriority="high" decoding="async">
         </div>
