@@ -148,12 +148,12 @@ document.addEventListener('DOMContentLoaded', async () => {
                Try ${model.name}
             </a>
           </div>
+      </div>
+      <div class="hidden lg:block lg:col-span-2 model-tile model-hero-image rounded-3xl overflow-hidden">
+        <div class="sshot-frame" style="border-radius: 1rem;">
+          <img class="sshot-img sshot-img--cover" src="${model.image}" alt="${model.name} screenshot" loading="lazy" fetchpriority="high" decoding="async">
         </div>
-        <div class="hidden lg:block lg:col-span-2 model-tile model-hero-image rounded-3xl overflow-hidden">
-          <div class="sshot-frame h-full" style="border-radius: 1rem;">
-            <img class="sshot-img sshot-img--cover" src="${model.image}" alt="${model.name} screenshot" loading="lazy" fetchpriority="high" decoding="async">
-          </div>
-        </div>
+      </div>
       </section>
       <!-- COLORED OVERVIEW CARD -->
       <section class="model-panel-tinted relative rounded-3xl overflow-hidden p-6 sm:p-7">
