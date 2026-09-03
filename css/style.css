@@ -1159,6 +1159,17 @@ footer p {
   object-position: center;
 }
 
+.model-mobile-hero-image {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.model-mobile-hero-image .sshot-img {
+  border-radius: inherit;
+}
+
 /* =========================================================
    17. Related Models Carousel
    model.html related models carousel.
