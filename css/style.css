@@ -1129,38 +1129,35 @@ footer p {
    Screenshot/image framing used inside cards.
    ========================================================= */
 
-/* Frame around screenshots to keep consistent 16:9 layout. */
-.sshot-frame {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  border-radius: 0.75rem;
-  background: var(--color-bg-page);
-  border: 1px solid var(--color-border-white-08);
+.model-hero-row {
+  display: flex;
+  gap: 8rem;
+  height: 360px;
 }
 
-/* Image is pinned to all edges so no gaps appear. */
-.sshot-img {
-  position: absolute;
-  inset: 0;
+.model-hero-info {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.model-hero-image {
+  flex: 0 0 auto;
+  height: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.model-hero-image .sshot-frame {
   width: 100%;
   height: 100%;
-  display: block;
+  aspect-ratio: 16 / 9;
 }
 
-/* Crops image to fill the frame. */
-.sshot-img--cover {
+.model-hero-image .sshot-img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  object-position: center center;
-}
-
-/* Shows entire image without cropping. */
-.sshot-img--contain {
-  object-fit: contain;
   object-position: center;
 }
-
 
 /* =========================================================
    17. Related Models Carousel
