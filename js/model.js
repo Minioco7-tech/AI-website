@@ -123,8 +123,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             ${model.subtitle ? `<p class="model-text text-sm sm:text-base leading-relaxed">${model.subtitle}</p>` : ''}
             ${model.image ? `
               <div class="lg:hidden mt-4">
-                <div class="sshot-frame" style="border-radius: 1rem;">
-                  <img class="sshot-img sshot-img--cover" src="${model.image}" alt="${model.name} screenshot" loading="lazy" decoding="async">
+                <div class="sshot-frame model-mobile-hero-image">
+                  <img class="sshot-img sshot-img--cover"
+                       src="${model.image}"
+                       alt="${model.name} screenshot"
+                       loading="lazy"
+                       decoding="async">
                 </div>
               </div>
             ` : ''}
